@@ -35,6 +35,7 @@ function render(){
   renderDonuts();
   renderPipeline();
   renderGroups();
+  renderMilestones();
   renderRecent();
   renderRate();
   renderCumulative();
@@ -99,6 +100,15 @@ function renderPipeline(){
 function renderGroups(){
   const rows=normalizedGroups(DATA.groups_week), total=rows.reduce((a,b)=>a+b.count,0)||1;
   el('group-table').innerHTML=rows.map(x=>`<div class="table-row"><strong>${x.group}</strong><span>${fmt(x.count)}</span><span>${fmt1(100*x.count/total)}%</span></div>`).join('');
+}
+
+function renderMilestones(){
+  const rows=DATA.milestones||[];
+  const target=el('milestone-table');
+  if(!target) return;
+  target.innerHTML=rows.length
+    ? rows.map(x=>`<div class="table-row milestone-row"><strong>${fmt(x.threshold)}</strong><span class="milestone-date">${new Date(x.date+'T12:00:00').toLocaleDateString([], {year:'numeric',month:'short',day:'numeric'})}</span><span></span></div>`).join('')
+    : '<p class="note">No milestones recorded yet.</p>';
 }
 
 function renderRecent(){
