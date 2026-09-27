@@ -20,7 +20,8 @@ CACHE_DIR = ROOT / "cache"
 SRA_CACHE = CACHE_DIR / "sra_biosample_centers.json"
 ROR_CACHE = CACHE_DIR / "ror_center_countries.json"
 
-SRA_RUNINFO_URL = "https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi"
+ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
+EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 ROR_URL = "https://api.ror.org/v2/organizations"
 UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repository)"
 RATE_WINDOW_DAYS = 30
@@ -105,22 +106,7 @@ def normalize_assembly(report):
     }
 
 
-def query_sra_runinfo(biosamples):
-    if not biosamples:
-        return {}
-    term = " OR ".join(f'"{x}"[BioSample]' for x in biosamples)
-    params = {
-        "save": "efetch",
-        "db": "sra",
-        "rettype": "runinfo",
-        "term": term,
-    }
-    r = S.get(SRA_RUNINFO_URL, params=params, timeout=120)
-    r.raise_for_status()
-    text = r.text
-    if not text.strip():
-        return {x: [] for x in biosamples}
-
+def parse_runinfo(text, biosamples):
     reader = csv.DictReader(io.StringIO(text))
     fields = set(reader.fieldnames or [])
     bs_field = next(
@@ -141,11 +127,55 @@ def query_sra_runinfo(biosamples):
     wanted = set(biosamples)
     for row in reader:
         bs = str(row.get(bs_field, "") or "").strip()
-        center = re.sub(r"\s+", " ", str(row.get(center_field, "") or "")).strip()
+        center = re.sub(r"\\s+", " ", str(row.get(center_field, "") or "")).strip()
         if bs in wanted and center and center.casefold() not in {
             "not provided", "not applicable", "missing", "unknown", "na", "n/a"
         }:
             found[bs].add(center)
+    return found
+
+
+def query_sra_runinfo(biosamples):
+    if not biosamples:
+        return {}
+
+    term = " OR ".join(f'"{x}"[BioSample]' for x in biosamples)
+    search = S.get(
+        ESEARCH_URL,
+        params={
+            "db": "sra",
+            "term": term,
+            "retmode": "json",
+            "retmax": "100000",
+            "tool": "EukaryoteGenomeWatch",
+        },
+        timeout=120,
+    )
+    search.raise_for_status()
+    ids = ((search.json().get("esearchresult") or {}).get("idlist") or [])
+    if not ids:
+        return {x: [] for x in biosamples}
+
+    found = defaultdict(set)
+    for start in range(0, len(ids), 500):
+        chunk = ids[start:start + 500]
+        time.sleep(0.36)
+        fetch = S.post(
+            EFETCH_URL,
+            data={
+                "db": "sra",
+                "id": ",".join(chunk),
+                "rettype": "runinfo",
+                "retmode": "text",
+                "tool": "EukaryoteGenomeWatch",
+            },
+            timeout=180,
+        )
+        fetch.raise_for_status()
+        parsed = parse_runinfo(fetch.text, biosamples)
+        for bs, centers in parsed.items():
+            found[bs].update(centers)
+
     return {x: sorted(found.get(x, set())) for x in biosamples}
 
 
