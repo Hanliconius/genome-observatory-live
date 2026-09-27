@@ -25,7 +25,7 @@ EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 ROR_URL = "https://api.ror.org/v2/organizations"
 UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repository)"
 RATE_WINDOW_DAYS = 30
-SRA_BATCH_SIZE = 250
+SRA_BATCH_SIZE = 500
 
 S = requests.Session()
 S.headers.update({"User-Agent": UA})
@@ -158,8 +158,8 @@ def query_sra_runinfo(biosamples):
         return {x: [] for x in biosamples}
 
     found = defaultdict(set)
-    for start in range(0, len(ids), 500):
-        chunk = ids[start:start + 500]
+    for start in range(0, len(ids), 5000):
+        chunk = ids[start:start + 5000]
         time.sleep(0.36)
         fetch = S.post(
             EFETCH_URL,
