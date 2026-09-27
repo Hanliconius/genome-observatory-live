@@ -36,12 +36,14 @@ def first(d,*paths,default=None):
 def normalise(r):
     acc=first(r,'accession','assembly.accession','assembly_info.assembly_accession',default='')
     org=first(r,'organism.organism_name','organism_name','organism.name',default='Unknown')
-    taxid=first(r,'organism.tax_id','tax_id','organism.taxid')
+    common=first(r,'organism.common_name','organism.commonName','common_name','commonName')
+    taxid=first(r,'organism.tax_id','organism.taxId','tax_id','organism.taxid')
     release=str(first(r,'assembly_info.release_date','assembly.release_date','release_date',default=''))[:10]
     level=first(r,'assembly_info.assembly_level','assembly_level',default='')
     name=first(r,'assembly_info.assembly_name','assembly_name',default='')
-    length=first(r,'assembly_stats.total_sequence_length','assembly_stats.total_sequence_length_bp','total_sequence_length',default=0) or 0
-    return {'accession':acc,'organism_name':org,'tax_id':taxid,'release_date':release,'assembly_level':level,'assembly_name':name,'total_sequence_length':int(length or 0)}
+    length=first(r,'assembly_stats.total_sequence_length','assemblyStats.totalSequenceLength','assembly_stats.total_sequence_length_bp','total_sequence_length',default=0) or 0
+    chromosomes=first(r,'assembly_stats.total_number_of_chromosomes','assemblyStats.totalNumberOfChromosomes','total_number_of_chromosomes',default=0) or 0
+    return {'accession':acc,'organism_name':org,'common_name':common,'tax_id':taxid,'release_date':release,'assembly_level':level,'assembly_name':name,'total_sequence_length':int(length or 0),'chromosome_count':int(chromosomes or 0)}
 
 def taxonomy(taxid):
     if not taxid:return {}
@@ -142,7 +144,8 @@ def main():
     cutoff=(today-timedelta(days=DAYS_RECENT)).isoformat()
     old_recent=old.get('recent_assemblies',[])
     oldest=min((x.get('release_date','9999-99-99') for x in old_recent),default='9999-99-99')
-    need_year_backfill=(not old_recent) or oldest>(today-timedelta(days=DAYS_RECENT-30)).isoformat()
+    metadata_version=int(old.get('metadata_schema_version',0) or 0)
+    need_year_backfill=(not old_recent) or oldest>(today-timedelta(days=DAYS_RECENT-30)).isoformat() or metadata_version<2
     query_after=cutoff if need_year_backfill else after
     incoming=[normalise(r) for r in get_reports(query_after)]
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
@@ -195,6 +198,26 @@ def main():
         'species':len(first_seen),
         'first_time_species':len(first_seen)
     }
+    # Choose the newest recent assembly for which an image can be found.
+    # Search each candidate at species -> genus -> family level, then move down the
+    # chronological list if all three fail.
+    featured=None
+    for x in recent[:40]:
+        key=x['organism_name']
+        tx={k:x.get(k) for k in ('genus','family','phylum') if x.get(k)}
+        if not tx.get('genus') or not tx.get('family'):
+            tid=str(x.get('tax_id') or '')
+            if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
+            tx={**tax_cache.get(tid,{}),**tx}
+            x.update({k:tx.get(k) for k in ('genus','family','phylum') if tx.get(k)})
+            if not x.get('group'): x['group']=broad_group(tx)
+        if not image_cache.get(key):
+            image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
+        x['image']=image_cache.get(key)
+        if x.get('image'):
+            featured=x
+            break
+
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
     groups_all=old.get('groups_all')
     if not groups_all:
@@ -208,6 +231,6 @@ def main():
             {'group':'Fungi','count':fungi},
             {'group':'Other','count':max(0,total-animals-plants-fungi)}
         ]
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
