@@ -126,11 +126,22 @@ def main():
         y=r['date'][:4];yearly_map[y]['assemblies']+=r['assemblies'];yearly_map[y]['species']+=r['species'];yearly_map[y]['first_time_species']+=r['first_time_species']
     yearly=[{'year':y,**v} for y,v in sorted(yearly_map.items())]
 
-    def smry(days=None):
-        rr=daily_rows if days is None else [r for r in daily_rows if r['date']>=(today-timedelta(days=days-1)).isoformat()]
-        return {'assemblies':sum(r['assemblies'] for r in rr),'species':sum(r['species'] for r in rr),'first_time_species':sum(r['first_time_species'] for r in rr)}
+    def period_summary(days):
+        cutoff_date=(today-timedelta(days=days-1)).isoformat()
+        rr=[r for r in daily_rows if r['date']>=cutoff_date]
+        xs=[x for x in recent if x['release_date']>=cutoff_date]
+        return {
+            'assemblies':sum(r['assemblies'] for r in rr),
+            'species':len({x['organism_name'] for x in xs}),
+            'first_time_species':sum(r['first_time_species'] for r in rr)
+        }
 
+    all_summary={
+        'assemblies':sum(r['assemblies'] for r in daily_rows),
+        'species':len(first_seen),
+        'first_time_species':len(first_seen)
+    }
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'summary':{'week':smry(7),'year':smry(365),'all':smry()},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries")
 if __name__=='__main__':main()
