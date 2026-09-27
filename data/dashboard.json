@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T18:48:30.977112+00:00",
+  "generated_at": "2026-09-27T18:53:52.956565+00:00",
   "summary": {
     "week": {
       "assemblies": 71,
@@ -48162,11 +48162,11 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 35
+      "count": 34
     },
     {
       "group": "Fungi",
-      "count": 18
+      "count": 19
     },
     {
       "group": "Plants",
@@ -48236,7 +48236,12 @@
       "family": "Temnopleuridae",
       "phylum": "Echinodermata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Mespilia globulus"
+      }
     },
     {
       "accession": "GCA_061617325.1",
@@ -48326,10 +48331,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "mAplRuf1.hap1",
       "total_sequence_length": 3256114483,
-      "genus": "Aplodontia",
-      "family": "Aplodontiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48340,10 +48345,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "mAplRuf1.hap2",
       "total_sequence_length": 3199400031,
-      "genus": "Aplodontia",
-      "family": "Aplodontiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48522,10 +48527,10 @@
       "assembly_level": "Complete Genome",
       "assembly_name": "ASM61611885v1",
       "total_sequence_length": 40751606,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cercospora",
+      "family": "Mycosphaerellaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -48755,7 +48760,12 @@
       "family": "Gobionidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/FMIB_47470_Zezera_rathbuni.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_47470_Zezera_rathbuni.jpeg",
+        "credit": "David Starr Jordan / Alvin Seale · Public domain",
+        "matched_name": "Coreius heterodon"
+      }
     },
     {
       "accession": "GCA_061597785.1",
@@ -49065,10 +49075,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "LU_Pmuan_2.1",
       "total_sequence_length": 1539255591,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Podarcis",
+      "family": "Lacertidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20210612_Podarcis_muralis_03.jpg/960px-20210612_Podarcis_muralis_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:20210612_Podarcis_muralis_03.jpg",
@@ -49322,7 +49332,12 @@
       "family": "Clavicipitaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Metarhizium_anisopliae_infected_cockroach_%28PLoS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Metarhizium_anisopliae_infected_cockroach_(PLoS).jpg",
+        "credit": "Chengshu Wang and Yuxian Xia · CC BY 2.5",
+        "matched_name": "Metarhizium anisopliae"
+      }
     },
     {
       "accession": "GCA_061476855.1",
@@ -49416,10 +49431,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "xgPleSpea1.1",
       "total_sequence_length": 809961982,
-      "genus": "Pleurobranchus",
-      "family": "Pleurobranchidae",
-      "phylum": "Mollusca",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/FMIB_48614_Jaws_of_A%2C_Chromodoris_gracilis_Ther%3B_B%2C_Scyllaea_pelagica_L%3B_C%2C_Pleurobranchus_plumula_Mont%3B_Pleurobranchaea_meckelii_Lam.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_48614_Jaws_of_A,_Chromodoris_gracilis_Ther;_B,_Scyllaea_pelagica_L;_C,_Pleurobranchus_plumula_Mont;_Pleurobranchaea_meckelii_Lam.jpeg",
@@ -49463,10 +49478,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "ilCatDisj1.hap1.1",
       "total_sequence_length": 574666244,
-      "genus": "Catocala",
-      "family": "Erebidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Catocala_disjuncta.jpg/960px-Catocala_disjuncta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Catocala_disjuncta.jpg",
@@ -49886,10 +49901,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "Aphareus rutilans_haplotype_1_assembly",
       "total_sequence_length": 1153639611,
-      "genus": "Aphareus",
-      "family": "Lutjanidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -49947,10 +49962,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "Aphareus rutilans_haplotype_2_assembly",
       "total_sequence_length": 1153002625,
-      "genus": "Aphareus",
-      "family": "Lutjanidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -50060,10 +50075,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "Pristis zijsron_haplotype_2_assembly",
       "total_sequence_length": 2373393783,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50107,10 +50122,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "Pristis zijsron_haplotype_1_assembly",
       "total_sequence_length": 2433300514,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50468,10 +50483,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "ddCarPrat1.hap1.1",
       "total_sequence_length": 716163919,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cardamine",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Cardamine_pratensis_TK_2021-05-08_1.jpg/960px-Cardamine_pratensis_TK_2021-05-08_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cardamine_pratensis_TK_2021-05-08_1.jpg",
@@ -50487,10 +50502,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "bPruMod1.hap1.1",
       "total_sequence_length": 1393560632,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Prunella",
+      "family": "Prunellidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Alpenbraunelle_%28Prunella_collaris%29.jpg/960px-Alpenbraunelle_%28Prunella_collaris%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Alpenbraunelle_(Prunella_collaris).jpg",
@@ -50633,7 +50648,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Coris_auricuaris_m_King_wrasse_PC079049.JPG/960px-Coris_auricuaris_m_King_wrasse_PC079049.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Coris_auricuaris_m_King_wrasse_PC079049.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Coris auricularis"
+      }
     },
     {
       "accession": "GCA_988280625.1",
@@ -50703,7 +50723,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Coris_auricuaris_m_King_wrasse_PC079049.JPG/960px-Coris_auricuaris_m_King_wrasse_PC079049.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Coris_auricuaris_m_King_wrasse_PC079049.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Coris auricularis"
+      }
     },
     {
       "accession": "GCA_061372825.1",
@@ -50867,10 +50892,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "ASM6134643v1",
       "total_sequence_length": 23461531,
-      "genus": "Trichophyton",
-      "family": "Arthrodermataceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Microscope_view_of_Trichophyton_rubrum_04.jpg/960px-Microscope_view_of_Trichophyton_rubrum_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Microscope_view_of_Trichophyton_rubrum_04.jpg",
@@ -51349,7 +51374,12 @@
       "family": "Merlucciidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG/960px-Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG",
+        "credit": "Fernando Losada Rodríguez · CC BY-SA 4.0",
+        "matched_name": "Merluccius merluccius"
+      }
     },
     {
       "accession": "GCA_988279885.1",
@@ -51387,10 +51417,10 @@
       "assembly_level": "Chromosome",
       "assembly_name": "hrPseMaxi1.1",
       "total_sequence_length": 2461570786,
-      "genus": "Pseudoceros",
-      "family": "Pseudocerotidae",
-      "phylum": "Platyhelminthes",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -51733,7 +51763,12 @@
       "family": "Nitidulidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png/960px-Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Omosita_discoidea_(Fabricius,_1775)_(29131983133).png",
+        "credit": "Udo Schmidt from Deutschland · CC BY-SA 2.0",
+        "matched_name": "Omosita discoidea"
+      }
     },
     {
       "accession": "GCA_988265035.1",
@@ -51775,7 +51810,12 @@
       "family": "Cortinariaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cortinarius_hemitrichus_-_Lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cortinarius_hemitrichus_-_Lindsey.jpg",
+        "credit": "James Lindsey · CC BY-SA 3.0",
+        "matched_name": "Cortinarius hemitrichus"
+      }
     },
     {
       "accession": "GCA_988264985.1",
@@ -51855,7 +51895,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146975.1",
@@ -51869,7 +51914,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146905.1",
@@ -51883,7 +51933,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146685.1",
@@ -51897,7 +51952,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146225.1",
@@ -51911,7 +51971,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146205.1",
@@ -51925,7 +51990,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146135.1",
@@ -51939,7 +52009,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146115.1",
@@ -51953,7 +52028,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975146005.1",
@@ -51967,7 +52047,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975145855.1",
@@ -51981,7 +52066,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975145825.1",
@@ -51995,7 +52085,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975143815.1",
@@ -52009,7 +52104,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975143785.1",
@@ -52023,7 +52123,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975143475.1",
@@ -52037,7 +52142,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_975143455.1",
@@ -52051,7 +52161,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+        "credit": "Public domain",
+        "matched_name": "Arabidopsis lyrata"
+      }
     },
     {
       "accession": "GCA_061291985.1",
@@ -118141,7 +118256,12 @@
       "matched_name": "Aphareus rutilans"
     },
     "Aplodontia rufa pacifica": null,
-    "Arabidopsis lyrata": null,
+    "Arabidopsis lyrata": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
+      "credit": "Public domain",
+      "matched_name": "Arabidopsis lyrata"
+    },
     "Aureoumbra sp. RCC10688": null,
     "Bathyraja eatonii": null,
     "Blarina brevicauda": null,
@@ -118205,9 +118325,24 @@
     "Colias eurytheme": null,
     "Colias philodice": null,
     "Coreius guichenoti": null,
-    "Coreius heterodon": null,
-    "Coris auricularis": null,
-    "Cortinarius hemitrichus": null,
+    "Coreius heterodon": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/FMIB_47470_Zezera_rathbuni.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_47470_Zezera_rathbuni.jpeg",
+      "credit": "David Starr Jordan / Alvin Seale · Public domain",
+      "matched_name": "Coreius heterodon"
+    },
+    "Coris auricularis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Coris_auricuaris_m_King_wrasse_PC079049.JPG/960px-Coris_auricuaris_m_King_wrasse_PC079049.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Coris_auricuaris_m_King_wrasse_PC079049.JPG",
+      "credit": "Peter Southwood · CC BY-SA 3.0",
+      "matched_name": "Coris auricularis"
+    },
+    "Cortinarius hemitrichus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cortinarius_hemitrichus_-_Lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cortinarius_hemitrichus_-_Lindsey.jpg",
+      "credit": "James Lindsey · CC BY-SA 3.0",
+      "matched_name": "Cortinarius hemitrichus"
+    },
     "Cromileptes altivelis x Epinephelus fuscoguttatus": null,
     "Cronartium quercuum f. sp. fusiforme": null,
     "Cryptopygus clavatus": null,
@@ -118281,10 +118416,30 @@
     "Mechanitis mazaeus": null,
     "Megacarpaea megalocarpa": null,
     "Melilotus altissimus": null,
-    "Merluccius merluccius": null,
-    "Mespilia globulus": null,
-    "Metarhizium anisopliae": null,
-    "Omosita discoidea": null,
+    "Merluccius merluccius": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG/960px-Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Merluccius_merluccius.002_-_Aquarium_Finisterrae.JPG",
+      "credit": "Fernando Losada Rodríguez · CC BY-SA 4.0",
+      "matched_name": "Merluccius merluccius"
+    },
+    "Mespilia globulus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Mespilia globulus"
+    },
+    "Metarhizium anisopliae": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Metarhizium_anisopliae_infected_cockroach_%28PLoS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Metarhizium_anisopliae_infected_cockroach_(PLoS).jpg",
+      "credit": "Chengshu Wang and Yuxian Xia · CC BY 2.5",
+      "matched_name": "Metarhizium anisopliae"
+    },
+    "Omosita discoidea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png/960px-Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Omosita_discoidea_(Fabricius,_1775)_(29131983133).png",
+      "credit": "Udo Schmidt from Deutschland · CC BY-SA 2.0",
+      "matched_name": "Omosita discoidea"
+    },
     "Oncorhynchus clarkii henshawi": null,
     "Opheodesoma grisea": null,
     "Ostrea lurida": null,
