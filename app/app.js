@@ -71,11 +71,15 @@ function normalizedGroups(rows){
 }
 
 function renderDonuts(){
-  drawDonut('donut-week','donut-week-legend',normalizedGroups(DATA.groups_week),'assemblies');
-  drawDonut('donut-all','donut-all-legend',normalizedGroups(DATA.groups_all),'assemblies');
+  const useYear=range==='year';
+  const currentRows=useYear ? normalizedGroups(DATA.groups_year) : normalizedGroups(DATA.groups_week);
+  const currentLabel=useYear ? 'Past year' : 'Past week';
+  el('donut-current-label').textContent=currentLabel;
+  drawDonut('donut-week','donut-week-legend',currentRows,'assemblies',currentLabel);
+  drawDonut('donut-all','donut-all-legend',normalizedGroups(DATA.groups_all),'assemblies','All time');
 }
 
-function drawDonut(svgId,legendId,rows,unit){
+function drawDonut(svgId,legendId,rows,unit,periodLabel){
   const svg=el(svgId), legend=el(legendId);
   const total=rows.reduce((a,b)=>a+b.count,0);
   const r=86,c=2*Math.PI*r;
@@ -84,12 +88,37 @@ function drawDonut(svgId,legendId,rows,unit){
   rows.forEach(x=>{
     const frac=total?x.count/total:0;
     const dash=frac*c;
-    html+=`<circle class="donut-seg" cx="120" cy="120" r="${r}" stroke="${COLORS[x.group]}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
+    html+=`<circle class="donut-seg" data-group="${esc(x.group)}" data-count="${x.count}" data-total="${total}" data-period="${esc(periodLabel)}" cx="120" cy="120" r="${r}" stroke="${COLORS[x.group]}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
     offset+=dash;
   });
   html+=`<text class="donut-center-main" x="120" y="116">${fmt(total)}</text><text class="donut-center-sub" x="120" y="137">${unit}</text>`;
   svg.innerHTML=html;
   legend.innerHTML=rows.map(x=>`<div class="donut-row"><i class="dot" style="background:${COLORS[x.group]}"></i><span>${x.group}</span><span class="n">${fmt(x.count)}</span><span class="pct">${total?fmt1(100*x.count/total):'0.0'}%</span></div>`).join('');
+  attachDonutHover(svg);
+}
+
+function attachDonutHover(svg){
+  const tip=el('chart-tooltip');
+  if(!tip) return;
+  svg.querySelectorAll('.donut-seg').forEach(seg=>{
+    const show=(ev)=>{
+      const count=Number(seg.dataset.count||0);
+      const total=Number(seg.dataset.total||0);
+      const pct=total?100*count/total:0;
+      tip.innerHTML=`<strong>${esc(seg.dataset.group)}</strong><span>${fmt(count)} assemblies</span><span>${fmt1(pct)}% · ${esc(seg.dataset.period)}</span>`;
+      tip.hidden=false;
+      seg.classList.add('is-hovered');
+      let left=ev.clientX+16, top=ev.clientY+16;
+      const tw=tip.offsetWidth, th=tip.offsetHeight, pad=14;
+      if(left+tw+pad>window.innerWidth) left=ev.clientX-tw-16;
+      if(top+th+pad>window.innerHeight) top=ev.clientY-th-16;
+      tip.style.left=left+'px'; tip.style.top=top+'px';
+    };
+    const hide=()=>{tip.hidden=true;seg.classList.remove('is-hovered');};
+    seg.onpointerenter=show;
+    seg.onpointermove=show;
+    seg.onpointerleave=hide;
+  });
 }
 
 function renderPipeline(){
