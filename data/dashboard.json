@@ -1,0 +1,16 @@
+{
+  "demo_seed": true,
+  "generated_at": "2026-09-27T00:00:00+00:00",
+  "summary": {
+    "week": {"assemblies": 0, "species": 0, "first_time_species": 0},
+    "year": {"assemblies": 0, "species": 0, "first_time_species": 0},
+    "all": {"assemblies": 0, "species": 0, "first_time_species": 0}
+  },
+  "daily": [],
+  "yearly": [],
+  "groups_week": [],
+  "recent_assemblies": [],
+  "annotations": {"in_progress": [], "recent_completed": []},
+  "species_first_seen": {},
+  "image_cache": {}
+}
