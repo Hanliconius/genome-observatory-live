@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d1613" />
+  <title>Eukaryote Genome Watch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-head">
+    <div>
+      <p class="eyebrow">NCBI · LIVE PUBLIC GENOME ACTIVITY</p>
+      <h1>Eukaryote Genome Watch</h1>
+      <p class="lede">A compact view of chromosome-scale eukaryote genomes arriving in GenBank and moving through NCBI RefSeq annotation.</p>
+    </div>
+    <div class="status"><span class="pulse"></span><span id="updated">loading data…</span></div>
+  </header>
+
+  <main>
+    <nav class="range-tabs" aria-label="Time range">
+      <button class="tab active" data-range="week">This week</button>
+      <button class="tab" data-range="year">Past year</button>
+      <button class="tab" data-range="all">All time</button>
+    </nav>
+
+    <section class="grid hero-grid">
+      <article class="tile hero span-2">
+        <p class="label" id="primary-label">NEW CHROMOSOME-SCALE ASSEMBLIES</p>
+        <div class="big-number" id="assemblies-count">—</div>
+        <p class="subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
+        <div class="mini-bars" id="daily-bars" aria-label="Daily assembly counts"></div>
+      </article>
+
+      <article class="tile annotation-live">
+        <p class="label">REFSEQ · IN THE PIPELINE</p>
+        <div class="big-number small" id="pipeline-count">—</div>
+        <p class="subline">eukaryotic annotation runs currently listed by NCBI</p>
+        <div class="pipeline-list" id="pipeline-list"></div>
+      </article>
+
+      <article class="tile taxon-tile">
+        <p class="label">NEWEST ARRIVAL</p>
+        <div id="newest-card" class="newest-card">
+          <div class="image-placeholder"></div>
+          <div><h2>Loading…</h2></div>
+        </div>
+      </article>
+
+      <article class="tile span-2 chart-tile">
+        <div class="tile-head">
+          <div><p class="label">DEPOSITION RATE</p><h2 id="rate-title">Chromosome-scale genomes per day</h2></div>
+          <div class="stat-pair"><span id="rate7">—</span><small>7-day rate</small></div>
+        </div>
+        <svg id="rate-chart" class="chart" viewBox="0 0 800 260" preserveAspectRatio="none" role="img"></svg>
+      </article>
+
+      <article class="tile composition">
+        <p class="label">THIS WEEK · MAJOR GROUPS</p>
+        <div id="group-bars"></div>
+      </article>
+
+      <article class="tile span-2 chart-tile">
+        <div class="tile-head">
+          <div><p class="label">CUMULATIVE COVERAGE</p><h2>Assemblies and species entering the chromosome era</h2></div>
+        </div>
+        <svg id="cumulative-chart" class="chart" viewBox="0 0 800 260" preserveAspectRatio="none" role="img"></svg>
+        <div class="legend"><span><i class="swatch a"></i>assemblies</span><span><i class="swatch b"></i>first-time species</span></div>
+      </article>
+
+      <article class="tile annotation-recent">
+        <p class="label">RECENT REFSEQ ANNOTATIONS</p>
+        <div class="big-number small" id="completed-count">—</div>
+        <p class="subline">completed in the last six weeks</p>
+        <div id="recent-annotation-list" class="pipeline-list"></div>
+      </article>
+    </section>
+
+    <section class="latest-section">
+      <div class="section-head"><p class="label">RECENT DEPOSITS</p><p class="quiet">Only a rolling recent window is retained at assembly level.</p></div>
+      <div id="recent-list" class="recent-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assembly metadata: NCBI Datasets (GenBank, Eukaryota, chromosome + complete). Annotation status: NCBI RefSeq. Images: Wikimedia Commons/Wikidata, with original credits retained.</p>
+    <p>This site counts public assembly deposits, not raw sequencing output. Source code and data are designed for scheduled static deployment.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
