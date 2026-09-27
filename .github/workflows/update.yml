@@ -1,0 +1,79 @@
+name: Refresh genome dashboard
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: genome-watch-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install NCBI Datasets
+        run: |
+          curl -fsSL https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets -o /usr/local/bin/datasets
+          chmod +x /usr/local/bin/datasets
+          datasets version
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Bootstrap lifetime history on first run
+        shell: bash
+        run: |
+          if grep -q '"demo_seed": true' data/dashboard.json; then
+            python scripts/bootstrap_history.py
+          fi
+
+      - name: Refresh recent assemblies, annotations and images
+        run: python scripts/update.py
+        env:
+          RECENT_DAYS: '90'
+          OVERLAP_DAYS: '14'
+
+      - name: Commit changed data
+        run: |
+          git config user.name 'genome-watch-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/dashboard.json
+          git diff --cached --quiet || git commit -m 'data: refresh NCBI genome activity'
+          git push
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
+          cp -R app _site/app
+          cp -R data _site/data
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: refresh
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
