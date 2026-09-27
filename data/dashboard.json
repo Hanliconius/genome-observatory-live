@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T19:17:47.022881+00:00",
+  "generated_at": "2026-09-27T19:21:42.521585+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48166,16 +48166,34 @@
       "count": 27
     },
     {
-      "group": "Fungi",
+      "group": "Other",
       "count": 17
     },
     {
-      "group": "Other",
+      "group": "Fungi",
       "count": 15
     },
     {
       "group": "Plants",
       "count": 12
+    }
+  ],
+  "groups_year": [
+    {
+      "group": "Animals",
+      "count": 4093
+    },
+    {
+      "group": "Plants",
+      "count": 1685
+    },
+    {
+      "group": "Fungi",
+      "count": 431
+    },
+    {
+      "group": "Other",
+      "count": 125
     }
   ],
   "groups_all": [
@@ -48435,7 +48453,12 @@
       "family": "Soricidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blarina_brevicauda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Blarina_brevicauda.jpg",
+        "credit": "Gilles Gonthier from Canada · CC BY 2.0",
+        "matched_name": "Blarina brevicauda"
+      }
     },
     {
       "accession": "GCA_061613695.1",
@@ -48451,7 +48474,12 @@
       "family": "Soricidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blarina_brevicauda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Blarina_brevicauda.jpg",
+        "credit": "Gilles Gonthier from Canada · CC BY 2.0",
+        "matched_name": "Blarina brevicauda"
+      }
     },
     {
       "accession": "GCA_057917895.2",
@@ -48527,10 +48555,10 @@
       "assembly_name": "ASM61613165v1",
       "total_sequence_length": 25523718,
       "chromosome_count": 7,
-      "genus": "Trichosporon",
-      "family": "Trichosporonaceae",
-      "phylum": "Basidiomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -49098,10 +49126,10 @@
       "assembly_name": "AD6C_Chr",
       "total_sequence_length": 662379437,
       "chromosome_count": 24,
-      "genus": "Hippoglossoides",
-      "family": "Pleuronectidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/FMIB_33695_Hippoglossoides_Elassodon_Jordan%3B_Gilbert.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_33695_Hippoglossoides_Elassodon_Jordan;_Gilbert.jpeg",
@@ -49283,7 +49311,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Iberis_amara_flower_%2815%29.jpg/960px-Iberis_amara_flower_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Iberis_amara_flower_(15).jpg",
+        "credit": "Hugues Tinguy · CC BY-SA 2.0 fr",
+        "matched_name": "Iberis"
+      }
     },
     {
       "accession": "GCA_061538905.1",
@@ -49316,10 +49349,10 @@
       "assembly_name": "FOE",
       "total_sequence_length": 48975907,
       "chromosome_count": 13,
-      "genus": "Fusarium",
-      "family": "Nectriaceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -49369,10 +49402,10 @@
       "assembly_name": "xbOstLuri2 USDA-ARS PSRF primary",
       "total_sequence_length": 1028839577,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Ostrea",
+      "family": "Ostreidae",
+      "phylum": "Mollusca",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49469,7 +49502,12 @@
       "family": "Ptinidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg/960px-40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg",
+        "credit": "Harold Maxwell-Lefroy · CC0",
+        "matched_name": "Lasioderma"
+      }
     },
     {
       "accession": "GCA_014706415.2",
@@ -49587,10 +49625,10 @@
       "assembly_name": "ASM6147699v1",
       "total_sequence_length": 42627817,
       "chromosome_count": 9,
-      "genus": "Metarhizium",
-      "family": "Clavicipitaceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Metarhizium_anisopliae_infected_cockroach_%28PLoS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Metarhizium_anisopliae_infected_cockroach_(PLoS).jpg",
@@ -49677,10 +49715,10 @@
       "assembly_name": "ehOphGris1.1",
       "total_sequence_length": 1283655933,
       "chromosome_count": 19,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Opheodesoma",
+      "family": "Synaptidae",
+      "phylum": "Echinodermata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49836,10 +49874,10 @@
       "assembly_name": "tfGorSpea1.hap1.1",
       "total_sequence_length": 234099683,
       "chromosome_count": 9,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gordius",
+      "family": "Gordiidae",
+      "phylum": "Nematomorpha",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50064,10 +50102,10 @@
       "assembly_name": "daVerOffc1.hap1.1",
       "total_sequence_length": 1826602402,
       "chromosome_count": 36,
-      "genus": "Veronica",
-      "family": "Plantaginaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Veronica_officinalis_1544.JPG/960px-Veronica_officinalis_1544.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Veronica_officinalis_1544.JPG",
@@ -50582,10 +50620,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_1_assembly",
       "total_sequence_length": 3067276070,
       "chromosome_count": 73,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carcharhinus",
+      "family": "Carcharhinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50603,10 +50641,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_2_assembly",
       "total_sequence_length": 2887078191,
       "chromosome_count": 50,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carcharhinus",
+      "family": "Carcharhinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50862,7 +50900,12 @@
       "family": "Incurvariidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg/960px-Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg",
+        "credit": "Leiobunum · CC0",
+        "matched_name": "Incurvaria pectinea"
+      }
     },
     {
       "accession": "GCA_988280845.1",
@@ -50874,10 +50917,10 @@
       "assembly_name": "qlCryClav9.1",
       "total_sequence_length": 209530444,
       "chromosome_count": 8,
-      "genus": "Cryptopygus",
-      "family": "Isotomidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50922,10 +50965,10 @@
       "assembly_name": "ddCarPrat1.hap1.1",
       "total_sequence_length": 716163919,
       "chromosome_count": 15,
-      "genus": "Cardamine",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Cardamine_pratensis_TK_2021-05-08_1.jpg/960px-Cardamine_pratensis_TK_2021-05-08_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cardamine_pratensis_TK_2021-05-08_1.jpg",
@@ -50943,10 +50986,10 @@
       "assembly_name": "bPruMod1.hap1.1",
       "total_sequence_length": 1393560632,
       "chromosome_count": 40,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Prunella",
+      "family": "Prunellidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Alpenbraunelle_%28Prunella_collaris%29.jpg/960px-Alpenbraunelle_%28Prunella_collaris%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Alpenbraunelle_(Prunella_collaris).jpg",
@@ -50980,10 +51023,10 @@
       "assembly_name": "bCerFam1.hap1.1",
       "total_sequence_length": 1161732700,
       "chromosome_count": 38,
-      "genus": "Certhia",
-      "family": "Certhiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50996,10 +51039,10 @@
       "assembly_name": "Plectropomus leopardus_haplotype_2_assembly",
       "total_sequence_length": 866029822,
       "chromosome_count": 28,
-      "genus": "Plectropomus",
-      "family": "Serranidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
@@ -51059,10 +51102,10 @@
       "assembly_name": "Plectropomus leopardus_haplotype_1_assembly",
       "total_sequence_length": 888354634,
       "chromosome_count": 24,
-      "genus": "Plectropomus",
-      "family": "Serranidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
@@ -51382,10 +51425,10 @@
       "assembly_name": "ASM6134649v1",
       "total_sequence_length": 460651048,
       "chromosome_count": 28,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hypomesus",
+      "family": "Osmeridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -51451,10 +51494,10 @@
       "assembly_name": "ASM6134611v1",
       "total_sequence_length": 460001772,
       "chromosome_count": 22,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippocampus",
+      "family": "Syngnathidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg/960px-Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Caballito_de_mar_com%C3%BAn_(Hippocampus_hippocampus),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_74.jpg",
@@ -52131,9 +52174,9 @@
       "assembly_name": "uoGomSpea1.1",
       "total_sequence_length": 129863551,
       "chromosome_count": 16,
-      "genus": "Gomphonema",
-      "family": "Gomphonemataceae",
-      "phylum": "Bacillariophyta",
+      "genus": null,
+      "family": null,
+      "phylum": null,
       "group": "Other",
       "image": null
     },
@@ -52545,10 +52588,10 @@
       "assembly_name": "fUmbCan1.1",
       "total_sequence_length": 672265990,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Umbrina",
+      "family": "Sciaenidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -131272,7 +131315,12 @@
       "credit": "NOAA/MBARI · Public domain",
       "matched_name": "Bathyraja"
     },
-    "Blarina brevicauda": null,
+    "Blarina brevicauda": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blarina_brevicauda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Blarina_brevicauda.jpg",
+      "credit": "Gilles Gonthier from Canada · CC BY 2.0",
+      "matched_name": "Blarina brevicauda"
+    },
     "Boechera arcuata": null,
     "Boechera perennans": null,
     "Bornmuellera tymphaea": null,
@@ -131459,9 +131507,24 @@
     },
     "Homo sapiens": null,
     "Hypomesus nipponensis": null,
-    "Iberis sempervirens": null,
-    "Incurvaria pectinea": null,
-    "Lasioderma serricorne": null,
+    "Iberis sempervirens": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Iberis_amara_flower_%2815%29.jpg/960px-Iberis_amara_flower_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Iberis_amara_flower_(15).jpg",
+      "credit": "Hugues Tinguy · CC BY-SA 2.0 fr",
+      "matched_name": "Iberis"
+    },
+    "Incurvaria pectinea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg/960px-Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg",
+      "credit": "Leiobunum · CC0",
+      "matched_name": "Incurvaria pectinea"
+    },
+    "Lasioderma serricorne": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg/960px-40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:40-Indian-Insect-Life_-_Harold_Maxwell-Lefroy_-_Lasioderma-testaceum.jpg",
+      "credit": "Harold Maxwell-Lefroy · CC0",
+      "matched_name": "Lasioderma"
+    },
     "Leishmania donovani": null,
     "Lepidopleurus cajetanus": null,
     "Lespedeza danxiaensis": null,
