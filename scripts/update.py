@@ -24,6 +24,11 @@ def count_all(taxon:str):
     out=run(*cmd)
     return sum(1 for x in out.splitlines() if x.strip())
 
+def count_since(taxon:str, after:str):
+    cmd=['datasets','summary','genome','taxon',taxon,'--assembly-source','GenBank','--assembly-level','chromosome,complete','--released-after',after,'--as-json-lines']
+    out=run(*cmd)
+    return sum(1 for x in out.splitlines() if x.strip())
+
 def first(d,*paths,default=None):
     for path in paths:
         x=d
@@ -233,6 +238,19 @@ def main():
             break
 
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
+
+    year_cutoff=(today-timedelta(days=364)).isoformat()
+    year_total=period_summary(365)['assemblies']
+    year_animals=count_since('Metazoa',year_cutoff)
+    year_plants=count_since('Viridiplantae',year_cutoff)
+    year_fungi=count_since('Fungi',year_cutoff)
+    groups_year=[
+        {'group':'Animals','count':year_animals},
+        {'group':'Plants','count':year_plants},
+        {'group':'Fungi','count':year_fungi},
+        {'group':'Other','count':max(0,year_total-year_animals-year_plants-year_fungi)}
+    ]
+
     groups_all=old.get('groups_all')
     if not groups_all:
         animals=count_all('Metazoa')
@@ -245,6 +263,6 @@ def main():
             {'group':'Fungi','count':fungi},
             {'group':'Other','count':max(0,total-animals-plants-fungi)}
         ]
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
