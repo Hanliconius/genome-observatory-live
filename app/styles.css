@@ -128,3 +128,35 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .status-stats{margin-top:0;border-top:0}
 @media(max-width:900px){.status-intro{grid-template-columns:1fr;gap:20px}}
 @media(max-width:600px){.status-tabs{width:100%}.status-tab{flex:1}}
+
+
+#countries-view{margin-top:22px}
+.country-map-panel{background:var(--panel);border:1px solid var(--line-dark);padding:24px}
+.country-map-head{align-items:end}
+.country-map-head h2,.country-search-panel h2{font-size:clamp(1.6rem,3vw,2.5rem);letter-spacing:-.035em;margin:5px 0 8px;font-weight:620}
+.country-map{width:100%;height:auto;display:block;margin-top:18px;background:#fafbf9;border:1px solid var(--line)}
+.map-ocean{fill:#fafbf9;stroke:none}
+.country-shape{stroke:#fff;stroke-width:.55;vector-effect:non-scaling-stroke;cursor:pointer;transition:opacity .12s ease,stroke-width .12s ease}
+.country-shape.is-hovered{stroke:var(--ink);stroke-width:1.4}
+.country-shape.is-selected{stroke:var(--ink);stroke-width:2}
+.country-map-status{margin:10px 0 0;color:var(--muted);font-size:.78rem}
+.country-map-legend{min-width:220px;color:var(--muted);font-size:.76rem}
+.country-map-legend>span{display:block;margin-bottom:6px}
+.map-gradient{height:10px;border:1px solid var(--line-dark);background:linear-gradient(90deg,#f7fbff,#deebf7,#9ecae1,#4292c6,#084594)}
+.map-legend-ticks{display:flex;justify-content:space-between;margin-top:3px;font-variant-numeric:tabular-nums}
+.country-search-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,.9fr);gap:42px;align-items:end;background:var(--panel);border:1px solid var(--line-dark);border-top:0;padding:24px}
+#country-search{width:100%;appearance:none;border:1px solid var(--line-dark);border-radius:6px;background:#fff;color:var(--ink);padding:13px 14px;font:inherit;font-size:1rem;outline:none}
+#country-search:focus{border-color:var(--ink);box-shadow:0 0 0 2px rgba(17,24,21,.07)}
+.country-heading{border-top:0}
+.country-stats{grid-template-columns:repeat(4,1fr);margin:0;border-top:0}
+.country-history-panel{border:1px solid var(--line-dark);border-top:0}
+@media(max-width:900px){
+  .country-map-head{display:block}
+  .country-map-legend{margin-top:18px;max-width:300px}
+  .country-search-panel{grid-template-columns:1fr;gap:20px}
+  .country-stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .country-stats{grid-template-columns:1fr}
+  .country-map-panel{padding:14px}
+}
