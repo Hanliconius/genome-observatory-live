@@ -113,82 +113,136 @@ def download_iucn():
         return r.read()
 
 
-def iter_archive_rows(blob):
-    with zipfile.ZipFile(io.BytesIO(blob)) as zf:
-        names = [n for n in zf.namelist() if n.lower().endswith((".txt", ".tsv", ".csv"))]
-        preferred = sorted(
-            names,
-            key=lambda n: (
-                0 if Path(n).name.casefold() in {"taxon.txt", "taxa.txt", "species.txt"} else 1,
-                0 if "taxon" in Path(n).name.casefold() else 1,
-                n,
-            ),
-        )
-        for name in preferred:
-            with zf.open(name) as raw:
-                text = io.TextIOWrapper(raw, encoding="utf-8-sig", errors="replace", newline="")
-                sample = text.read(4096)
-                text.seek(0)
-                delimiter = "\t" if "\t" in sample else ","
-                reader = csv.DictReader(text, delimiter=delimiter)
-                if not reader.fieldnames:
-                    continue
-                mapped = {f: canonical_header(f) for f in reader.fieldnames}
-                normalized_headers = set(mapped.values())
-                if not normalized_headers.intersection(
-                    {"threatstatus", "redlistcategory", "iucnredlistcategory", "conservationstatus", "category", "status"}
-                ):
-                    continue
-                if not normalized_headers.intersection(
-                    {"scientificname", "acceptednameusage", "canonicalname", "species"}
-                ):
-                    continue
-                for row in reader:
-                    yield {mapped[k]: v for k, v in row.items() if k is not None}
+def iter_table_rows(zf, name):
+    with zf.open(name) as raw:
+        text = io.TextIOWrapper(raw, encoding="utf-8-sig", errors="replace", newline="")
+        sample = text.read(4096)
+        text.seek(0)
+        delimiter = "\t" if "\t" in sample else ","
+        reader = csv.DictReader(text, delimiter=delimiter)
+        if not reader.fieldnames:
+            return
+        mapped = {f: canonical_header(f) for f in reader.fieldnames}
+        for row in reader:
+            yield {mapped[k]: v for k, v in row.items() if k is not None}
+
+
+def table_headers(zf, name):
+    with zf.open(name) as raw:
+        text = io.TextIOWrapper(raw, encoding="utf-8-sig", errors="replace", newline="")
+        sample = text.read(4096)
+        text.seek(0)
+        delimiter = "\t" if "\t" in sample else ","
+        reader = csv.reader(text, delimiter=delimiter)
+        try:
+            header = next(reader)
+        except StopIteration:
+            return set()
+        return {canonical_header(x) for x in header}
 
 
 def load_iucn_names():
     blob = download_iucn()
     by_name = {}
     counts = Counter()
+    taxa = {}
 
-    def store(name, payload):
+    def store(name, payload, allow_binomial=False):
         key = norm_name(name).casefold()
         if not key:
             return
         old = by_name.get(key)
         if old is None or STATUS_PRIORITY.get(payload["status"], 0) > STATUS_PRIORITY.get(old["status"], 0):
             by_name[key] = payload
+        if allow_binomial:
+            skey = species_key(name)
+            if skey:
+                old = by_name.get(skey)
+                if old is None or STATUS_PRIORITY.get(payload["status"], 0) > STATUS_PRIORITY.get(old["status"], 0):
+                    by_name[skey] = payload
 
-    for row in iter_archive_rows(blob):
-        status = category_from_row(row)
-        if status not in THREATENED | EXTINCT:
-            continue
-        accepted = (
-            row.get("acceptednameusage")
-            or row.get("scientificname")
-            or row.get("canonicalname")
-            or row.get("species")
-        )
-        scientific = row.get("scientificname") or row.get("canonicalname") or accepted
-        species = row.get("species") or accepted or scientific
-        payload = {
-            "status": status,
-            "accepted_name": norm_name(accepted),
-            "group": broad_group(row),
-        }
-        rank = str(row.get("taxonrank") or row.get("rank") or "").strip().casefold()
-        for name in (accepted, scientific, species):
-            store(name, payload)
-            words = norm_name(name).split()
-            if rank == "species" or len(words) == 2:
-                skey = species_key(name)
-                if skey:
-                    store(skey, payload)
-        counts[status] += 1
+    with zipfile.ZipFile(io.BytesIO(blob)) as zf:
+        names = [n for n in zf.namelist() if n.lower().endswith((".txt", ".tsv", ".csv"))]
+
+        # Pass 1: index the taxon core (or any taxon-like table) by taxonID.
+        for name in names:
+            headers = table_headers(zf, name)
+            if not headers.intersection({"scientificname", "canonicalname", "species"}):
+                continue
+            if not headers.intersection({"taxonid", "id"}):
+                continue
+            for row in iter_table_rows(zf, name):
+                tid = str(row.get("taxonid") or row.get("id") or "").strip()
+                if not tid:
+                    continue
+                if tid not in taxa:
+                    taxa[tid] = row
+                else:
+                    # Prefer the row with an explicit scientific name/rank/classification.
+                    score_new = sum(bool(row.get(k)) for k in ("scientificname", "taxonrank", "kingdom", "phylum", "class"))
+                    score_old = sum(bool(taxa[tid].get(k)) for k in ("scientificname", "taxonrank", "kingdom", "phylum", "class"))
+                    if score_new > score_old:
+                        taxa[tid] = row
+
+        # Pass 2: read IUCN status from distribution/status extensions and join to taxon core.
+        status_rows = 0
+        for name in names:
+            headers = table_headers(zf, name)
+            if not headers.intersection(
+                {"threatstatus", "iucnredlistcategory", "redlistcategory", "conservationstatus", "category", "status"}
+            ):
+                continue
+            for row in iter_table_rows(zf, name):
+                status = category_from_row(row)
+                if status not in THREATENED | EXTINCT:
+                    continue
+                tid = str(
+                    row.get("taxonid")
+                    or row.get("coreid")
+                    or row.get("id")
+                    or row.get("taxonkey")
+                    or ""
+                ).strip()
+                taxon = taxa.get(tid, {})
+                merged = {**taxon, **row}
+                accepted = (
+                    taxon.get("acceptednameusage")
+                    or taxon.get("scientificname")
+                    or taxon.get("canonicalname")
+                    or taxon.get("species")
+                    or row.get("acceptednameusage")
+                    or row.get("scientificname")
+                    or row.get("species")
+                )
+                scientific = taxon.get("scientificname") or taxon.get("canonicalname") or accepted
+                species = taxon.get("species") or accepted or scientific
+                if not any((accepted, scientific, species)):
+                    continue
+                payload = {
+                    "status": status,
+                    "accepted_name": norm_name(accepted),
+                    "group": broad_group(merged),
+                }
+                rank = str(taxon.get("taxonrank") or taxon.get("rank") or "").strip().casefold()
+                for nm in (accepted, scientific, species):
+                    words = norm_name(nm).split()
+                    allow_binomial = rank == "species" or len(words) == 2
+                    store(nm, payload, allow_binomial=allow_binomial)
+                counts[status] += 1
+                status_rows += 1
+
+        if not status_rows:
+            archive_summary = {
+                Path(n).name: sorted(table_headers(zf, n))
+                for n in names[:25]
+            }
+            raise RuntimeError(
+                "No threatened/extinct distribution rows were parsed from the IUCN archive. "
+                + json.dumps(archive_summary, ensure_ascii=False)[:12000]
+            )
 
     if not by_name:
-        raise RuntimeError("No threatened/extinct names were parsed from the IUCN archive")
+        raise RuntimeError("IUCN status rows were found but no scientific names could be joined")
     return by_name, counts
 
 
