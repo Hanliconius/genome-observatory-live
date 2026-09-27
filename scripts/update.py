@@ -8,8 +8,8 @@ import requests
 from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'; DATA.mkdir(exist_ok=True)
-DASH=DATA/'dashboard.json'; DAYS_RECENT=int(os.getenv('RECENT_DAYS','90')); OVERLAP=int(os.getenv('OVERLAP_DAYS','14'))
-UA='EukaryoteGenomeWatch/0.1 (public research dashboard; contact via repository)'
+DASH=DATA/'dashboard.json'; DAYS_RECENT=int(os.getenv('RECENT_DAYS','370')); OVERLAP=int(os.getenv('OVERLAP_DAYS','14'))
+UA='EukaryoteGenomeWatch/0.3 (public research dashboard; contact via repository)'
 S=requests.Session(); S.headers.update({'User-Agent':UA})
 
 def run(*args):
@@ -18,6 +18,11 @@ def run(*args):
 def get_reports(after:str):
     cmd=['datasets','summary','genome','taxon','Eukaryota','--assembly-source','GenBank','--assembly-level','chromosome,complete','--released-after',after,'--as-json-lines']
     out=run(*cmd); return [json.loads(x) for x in out.splitlines() if x.strip()]
+
+def count_all(taxon:str):
+    cmd=['datasets','summary','genome','taxon',taxon,'--assembly-source','GenBank','--assembly-level','chromosome,complete','--as-json-lines']
+    out=run(*cmd)
+    return sum(1 for x in out.splitlines() if x.strip())
 
 def first(d,*paths,default=None):
     for path in paths:
@@ -55,20 +60,58 @@ def broad_group(tx):
     if 'fungi' in lineage:return 'Fungi'
     return 'Other'
 
-def commons_image(names):
+def commons_file_info(title):
     api='https://commons.wikimedia.org/w/api.php'
+    try:
+        q=S.get(api,params={'action':'query','titles':title,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'},timeout=25).json()
+        for p in ((q.get('query') or {}).get('pages') or {}).values():
+            ii=(p.get('imageinfo') or [{}])[0]; thumb=ii.get('thumburl')
+            if not thumb: continue
+            meta=ii.get('extmetadata') or {}
+            lic=(meta.get('LicenseShortName') or {}).get('value','')
+            artist=re.sub('<[^>]+>','',(meta.get('Artist') or {}).get('value','')).strip()
+            return {'thumb_url':thumb,'page_url':ii.get('descriptionurl',''),'credit':' · '.join(x for x in [artist,lic] if x),'matched_name':title}
+    except Exception: pass
+    return None
+
+def wikidata_image(name):
+    if not name: return None
+    api='https://www.wikidata.org/w/api.php'
+    try:
+        hits=S.get(api,params={'action':'wbsearchentities','search':name,'language':'en','type':'item','limit':5,'format':'json'},timeout=25).json().get('search',[])
+        for hit in hits:
+            qid=hit.get('id')
+            if not qid: continue
+            ent=(S.get(api,params={'action':'wbgetentities','ids':qid,'props':'claims','format':'json'},timeout=25).json().get('entities') or {}).get(qid) or {}
+            p18=(ent.get('claims') or {}).get('P18') or []
+            filename=first(p18[0],'mainsnak.datavalue.value') if p18 else None
+            if filename:
+                info=commons_file_info('File:'+filename)
+                if info:
+                    info['matched_name']=name
+                    return info
+    except Exception: pass
+    return None
+
+def commons_search(name):
+    api='https://commons.wikimedia.org/w/api.php'
+    try:
+        q=S.get(api,params={'action':'query','generator':'search','gsrsearch':f'intitle:"{name}" filetype:bitmap','gsrnamespace':6,'gsrlimit':6,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'},timeout=25).json()
+        for p in ((q.get('query') or {}).get('pages') or {}).values():
+            ii=(p.get('imageinfo') or [{}])[0]; thumb=ii.get('thumburl')
+            if not thumb: continue
+            meta=ii.get('extmetadata') or {}
+            lic=(meta.get('LicenseShortName') or {}).get('value','')
+            artist=re.sub('<[^>]+>','',(meta.get('Artist') or {}).get('value','')).strip()
+            return {'thumb_url':thumb,'page_url':ii.get('descriptionurl',''),'credit':' · '.join(x for x in [artist,lic] if x),'matched_name':name}
+    except Exception: pass
+    return None
+
+def commons_image(names):
     for name in [n for n in names if n]:
-        try:
-            q=S.get(api,params={'action':'query','generator':'search','gsrsearch':f'intitle:"{name}" filetype:bitmap','gsrnamespace':6,'gsrlimit':6,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'},timeout=25).json()
-            pages=(q.get('query') or {}).get('pages') or {}
-            for p in pages.values():
-                ii=(p.get('imageinfo') or [{}])[0]; meta=ii.get('extmetadata') or {}; thumb=ii.get('thumburl')
-                if not thumb: continue
-                lic=(meta.get('LicenseShortName') or {}).get('value',''); artist=re.sub('<[^>]+>','',(meta.get('Artist') or {}).get('value','')).strip()
-                credit=' · '.join(x for x in [artist,lic] if x)
-                return {'thumb_url':thumb,'page_url':ii.get('descriptionurl',''),'credit':credit,'matched_name':name}
-        except Exception: pass
-        time.sleep(.15)
+        info=wikidata_image(name) or commons_search(name)
+        if info: return info
+        time.sleep(.1)
     return None
 
 def annotation_status():
@@ -96,16 +139,27 @@ def write(d): DASH.write_text(json.dumps(d,indent=2,ensure_ascii=False)+"\n")
 
 def main():
     old=load(); today=date.today(); after=(today-timedelta(days=OVERLAP)).isoformat()
-    incoming=[normalise(r) for r in get_reports(after)]
+    cutoff=(today-timedelta(days=DAYS_RECENT)).isoformat()
+    old_recent=old.get('recent_assemblies',[])
+    oldest=min((x.get('release_date','9999-99-99') for x in old_recent),default='9999-99-99')
+    need_year_backfill=(not old_recent) or oldest>(today-timedelta(days=DAYS_RECENT-30)).isoformat()
+    query_after=cutoff if need_year_backfill else after
+    incoming=[normalise(r) for r in get_reports(query_after)]
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
-    byacc={x['accession']:x for x in old.get('recent_assemblies',[]) if x.get('release_date','')<after}
+    byacc={x['accession']:x for x in old_recent if x.get('release_date','')<query_after}
     image_cache=old.get('image_cache',{})
+    tax_cache={}
     for x in incoming:
-        tx=taxonomy(x.get('tax_id')); x.update({k:tx.get(k) for k in ('genus','family','phylum')});x['group']=broad_group(tx)
-        key=x['organism_name']
-        if key not in image_cache: image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
-        x['image']=image_cache.get(key);byacc[x['accession']]=x
-    cutoff=(today-timedelta(days=DAYS_RECENT)).isoformat(); recent=sorted([x for x in byacc.values() if x['release_date']>=cutoff],key=lambda z:(z['release_date'],z['accession']),reverse=True)
+        if x['release_date']>=after:
+            tid=str(x.get('tax_id') or '')
+            if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
+            tx=tax_cache[tid]
+            x.update({k:tx.get(k) for k in ('genus','family','phylum')});x['group']=broad_group(tx)
+            key=x['organism_name']
+            if not image_cache.get(key): image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
+            x['image']=image_cache.get(key)
+        byacc[x['accession']]=x
+    recent=sorted([x for x in byacc.values() if x['release_date']>=cutoff],key=lambda z:(z['release_date'],z['accession']),reverse=True)
 
     daily={r['date']:r for r in old.get('daily',[]) if r['date']<after}
     grouped=defaultdict(list)
@@ -142,6 +196,18 @@ def main():
         'first_time_species':len(first_seen)
     }
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
-    write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries")
+    groups_all=old.get('groups_all')
+    if not groups_all:
+        animals=count_all('Metazoa')
+        plants=count_all('Viridiplantae')
+        fungi=count_all('Fungi')
+        total=all_summary['assemblies']
+        groups_all=[
+            {'group':'Animals','count':animals},
+            {'group':'Plants','count':plants},
+            {'group':'Fungi','count':fungi},
+            {'group':'Other','count':max(0,total-animals-plants-fungi)}
+        ]
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
