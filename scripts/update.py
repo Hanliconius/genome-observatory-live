@@ -38,9 +38,9 @@ def normalise(r):
     org=first(r,'organism.organism_name','organism_name','organism.name',default='Unknown')
     common=first(r,'organism.common_name','organism.commonName','common_name','commonName')
     taxid=first(r,'organism.tax_id','organism.taxId','tax_id','organism.taxid')
-    release=str(first(r,'assembly_info.release_date','assembly.release_date','release_date',default=''))[:10]
-    level=first(r,'assembly_info.assembly_level','assembly_level',default='')
-    name=first(r,'assembly_info.assembly_name','assembly_name',default='')
+    release=str(first(r,'assembly_info.release_date','assemblyInfo.releaseDate','assembly.release_date','release_date',default=''))[:10]
+    level=first(r,'assembly_info.assembly_level','assemblyInfo.assemblyLevel','assembly_level',default='')
+    name=first(r,'assembly_info.assembly_name','assemblyInfo.assemblyName','assembly_name',default='')
     length=first(r,'assembly_stats.total_sequence_length','assemblyStats.totalSequenceLength','assembly_stats.total_sequence_length_bp','total_sequence_length',default=0) or 0
     chromosomes=first(r,'assembly_stats.total_number_of_chromosomes','assemblyStats.totalNumberOfChromosomes','total_number_of_chromosomes',default=0) or 0
     return {'accession':acc,'organism_name':org,'common_name':common,'tax_id':taxid,'release_date':release,'assembly_level':level,'assembly_name':name,'total_sequence_length':int(length or 0),'chromosome_count':int(chromosomes or 0)}
