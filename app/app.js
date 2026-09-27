@@ -1,11 +1,13 @@
 const D='../data/dashboard.json';
 const TAXA_INDEX_URL='../data/taxa/index.json';
+const IUCN_URL='../data/status/iucn.json';
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null;
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened';
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
+const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
 const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
@@ -21,12 +23,24 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   const view=b.dataset.view;
   el('overview-view').hidden=view!=='overview';
   el('taxa-view').hidden=view!=='taxa';
+  el('status-view').hidden=view!=='status';
   if(view==='taxa'){
     el('range-label').textContent='Taxa explorer';
     loadTaxaIndex();
+  }else if(view==='status'){
+    el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
+    loadIucn();
   }else if(DATA){
     el('range-label').textContent=RANGE[range].label;
   }
+}));
+
+document.querySelectorAll('.status-tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.status-tab').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  statusMode=b.dataset.status;
+  el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
+  renderStatus();
 }));
 
 el('taxon-search').addEventListener('input',e=>renderTaxonMatches(e.target.value));
@@ -72,9 +86,9 @@ function prettyDate(ds){
   return Number.isNaN(d.getTime())?ds:d.toLocaleDateString([], {year:'numeric',month:'short',day:'numeric'});
 }
 
-function renderMiniBars(rows){
+function renderMiniBars(rows,targetId='daily-bars'){
   const m=Math.max(1,...rows.map(x=>x.assemblies||0));
-  el('daily-bars').innerHTML=rows.map(x=>`<i title="${esc(x.date)}: ${x.assemblies}" style="height:${Math.max(4,100*(x.assemblies||0)/m)}%"></i>`).join('');
+  el(targetId).innerHTML=rows.map(x=>`<i title="${esc(x.date)}: ${x.assemblies}" style="height:${Math.max(4,100*(x.assemblies||0)/m)}%"></i>`).join('');
 }
 
 function renderNewest(){
@@ -114,7 +128,7 @@ function renderDonuts(){
   drawDonut('donut-all','donut-all-legend',normalizedGroups(DATA.groups_all),'assemblies','All time');
 }
 
-function drawDonut(svgId,legendId,rows,unit,periodLabel){
+function drawDonut(svgId,legendId,rows,unit,periodLabel,palette=COLORS){
   const svg=el(svgId), legend=el(legendId);
   const total=rows.reduce((a,b)=>a+b.count,0);
   const r=86,c=2*Math.PI*r;
@@ -123,12 +137,12 @@ function drawDonut(svgId,legendId,rows,unit,periodLabel){
   rows.forEach(x=>{
     const frac=total?x.count/total:0;
     const dash=frac*c;
-    html+=`<circle class="donut-seg" data-group="${esc(x.group)}" data-count="${x.count}" data-total="${total}" data-period="${esc(periodLabel)}" cx="120" cy="120" r="${r}" stroke="${COLORS[x.group]}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
+    html+=`<circle class="donut-seg" data-group="${esc(x.group)}" data-count="${x.count}" data-total="${total}" data-period="${esc(periodLabel)}" cx="120" cy="120" r="${r}" stroke="${palette[x.group]||COLORS.Other}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
     offset+=dash;
   });
   html+=`<text class="donut-center-main" x="120" y="116">${fmt(total)}</text><text class="donut-center-sub" x="120" y="137">${unit}</text>`;
   svg.innerHTML=html;
-  legend.innerHTML=rows.map(x=>`<div class="donut-row"><i class="dot" style="background:${COLORS[x.group]}"></i><span>${x.group}</span><span class="n">${fmt(x.count)}</span><span class="pct">${total?fmt1(100*x.count/total):'0.0'}%</span></div>`).join('');
+  legend.innerHTML=rows.map(x=>`<div class="donut-row"><i class="dot" style="background:${palette[x.group]||COLORS.Other}"></i><span>${x.group}</span><span class="n">${fmt(x.count)}</span><span class="pct">${total?fmt1(100*x.count/total):'0.0'}%</span></div>`).join('');
   attachDonutHover(svg);
 }
 
@@ -183,6 +197,111 @@ function renderCumulative(){
   let a=0,f=0;
   const rows=(DATA.yearly||[]).map(x=>({year:String(x.year),assemblies:(a+=Number(x.assemblies||0)),first:(f+=Number(x.first_time_species||0))}));
   drawDualChart('cumulative-chart',rows);
+}
+
+async function loadIucn(){
+  if(IUCN_DATA){renderStatus();return;}
+  if(IUCN_LOADING)return IUCN_LOADING;
+  el('status-loading').textContent='Loading IUCN genome history…';
+  el('status-loading').hidden=false;
+  el('status-content').hidden=true;
+  IUCN_LOADING=fetch(IUCN_URL)
+    .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
+    .then(d=>{IUCN_DATA=d;renderStatus();})
+    .catch(err=>{
+      console.error(err);
+      el('status-loading').textContent='IUCN-derived genome history is unavailable until the next data refresh.';
+    })
+    .finally(()=>{IUCN_LOADING=null;});
+  return IUCN_LOADING;
+}
+
+function dailyWindow(rows,days,generatedAt){
+  const sparse=new Map((rows||[]).map(x=>[x.date,Number(x.assemblies||0)]));
+  const anchor=generatedAt?new Date(generatedAt):new Date();
+  const end=new Date(Date.UTC(anchor.getUTCFullYear(),anchor.getUTCMonth(),anchor.getUTCDate()));
+  const out=[];
+  for(let i=days-1;i>=0;i--){
+    const d=new Date(end);d.setUTCDate(end.getUTCDate()-i);
+    const ds=d.toISOString().slice(0,10);
+    out.push({date:ds,assemblies:sparse.get(ds)||0});
+  }
+  return out;
+}
+
+function renderStatus(){
+  if(!IUCN_DATA)return;
+  const s=IUCN_DATA[statusMode];
+  if(!s)return;
+  const label=statusMode==='threatened'?'Threatened':'Extinct';
+  const last7=dailyWindow(s.recent_daily,7,IUCN_DATA.generated_at);
+  el('status-loading').hidden=true;
+  el('status-content').hidden=false;
+  el('status-primary-label').textContent=label+' · all time';
+  el('status-assemblies').textContent=fmt(s.summary.assemblies);
+  el('status-species').textContent=fmt(s.summary.species);
+  el('status-first').textContent=fmt(s.summary.first_time_species);
+  el('status-pipeline').textContent=fmt(s.annotations?.in_progress?.length||0);
+  el('status-completed').textContent=fmt(s.annotations?.recent_completed?.length||0);
+  el('status-rate').textContent=fmt1(last7.reduce((a,b)=>a+(b.assemblies||0),0)/7);
+  el('status-hero-count').textContent=fmt(s.summary.assemblies);
+  el('status-hero-species').textContent=fmt(s.summary.species);
+  el('status-hero-first').textContent=fmt(s.summary.first_time_species);
+  el('status-hero-title').textContent=label+' species genome deposits';
+  renderMiniBars(last7,'status-daily-bars');
+
+  const x=(s.recent_assemblies||[]).find(x=>x.image?.thumb_url)||(s.recent_assemblies||[])[0];
+  if(!x){
+    el('status-newest-card').innerHTML='<div class="image-placeholder">No recent matching assembly metadata available</div>';
+  }else{
+    const image=x.image?.thumb_url
+      ? `<img class="taxon-image" src="${x.image.thumb_url}" alt="${esc(x.organism_name)}" loading="lazy">`
+      : '<div class="image-placeholder">No cached Wikimedia image available</div>';
+    const details=[
+      x.common_name?esc(x.common_name):null,
+      x.chromosome_count?fmt(x.chromosome_count)+' chromosomes':null,
+      x.total_sequence_length?fmt1(x.total_sequence_length/1e6)+' Mb genome':null
+    ].filter(Boolean).join(' · ');
+    el('status-newest-card').innerHTML=`${image}<div>
+      <h3>${esc(x.organism_name)}</h3>
+      ${details?`<p class="featured-details">${details}</p>`:''}
+      <p>${esc(x.iucn_status||label)} · ${esc(x.assembly_level||'Assembly')} · ${esc(x.accession||'')}</p>
+      <p>Released ${esc(x.release_date||'')}</p>
+      ${x.image?.credit?`<p class="credit">Image credit: ${x.image.credit}</p>`:''}
+    </div>`;
+  }
+
+  drawDonut('status-donut-iucn','status-donut-iucn-legend',s.iucn_breakdown||[],'assemblies','IUCN status',IUCN_COLORS);
+  drawDonut('status-donut-groups','status-donut-groups-legend',normalizedGroups(s.groups_all),'assemblies','All time',COLORS);
+
+  const yearly=(s.yearly||[]).map(x=>({date:String(x.year),assemblies:Number(x.assemblies||0)}));
+  drawLineChart('status-rate-chart',yearly,'assemblies',yearly.map(x=>x.date),'all');
+
+  let a=0,f=0;
+  const cumulative=(s.yearly||[]).map(x=>({
+    year:String(x.year),
+    assemblies:(a+=Number(x.assemblies||0)),
+    first:(f+=Number(x.first_time_species||0))
+  }));
+  drawDualChart('status-cumulative-chart',cumulative);
+
+  el('status-pipeline-list').innerHTML=(s.annotations?.in_progress||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.status||'')}</span></div>`).join('')||'<p class="note">No matching annotation runs listed.</p>';
+  el('status-recent-annotation-list').innerHTML=(s.annotations?.recent_completed||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.release_date||'')}</span></div>`).join('')||'<p class="note">No matching recent annotations listed.</p>';
+
+  const groups=normalizedGroups(s.groups_all),gtotal=groups.reduce((a,b)=>a+b.count,0)||1;
+  el('status-group-table').innerHTML=groups.map(x=>`<div class="table-row"><strong>${x.group}</strong><span>${fmt(x.count)}</span><span>${fmt1(100*x.count/gtotal)}%</span></div>`).join('');
+
+  const milestones=s.milestones||[];
+  el('status-milestone-table').innerHTML=milestones.length
+    ? milestones.map(x=>`<div class="table-row milestone-row"><strong>${fmt(x.threshold)}</strong><span class="milestone-date">${prettyDate(x.date)}</span><span></span></div>`).join('')
+    : '<p class="note">No assembly-count milestones crossed yet.</p>';
+
+  const recent=s.recent_assemblies||[];
+  el('status-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>IUCN status</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
+    recent.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.iucn_status||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+
+  const source=IUCN_DATA.source||{};
+  el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
 }
 
 async function loadTaxaIndex(){
