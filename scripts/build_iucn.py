@@ -8,6 +8,7 @@ import re
 import subprocess
 import tempfile
 import zipfile
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -113,32 +114,76 @@ def download_iucn():
         return r.read()
 
 
-def iter_table_rows(zf, name):
-    with zf.open(name) as raw:
-        text = io.TextIOWrapper(raw, encoding="utf-8-sig", errors="replace", newline="")
-        sample = text.read(4096)
-        text.seek(0)
-        delimiter = "\t" if "\t" in sample else ","
-        reader = csv.DictReader(text, delimiter=delimiter)
-        if not reader.fieldnames:
-            return
-        mapped = {f: canonical_header(f) for f in reader.fieldnames}
-        for row in reader:
-            yield {mapped[k]: v for k, v in row.items() if k is not None}
+def meta_char(value, default="\t"):
+    if value is None:
+        return default
+    return (
+        value.replace("\\t", "\t")
+        .replace("\\n", "\n")
+        .replace("\\r", "\r")
+    )
 
 
-def table_headers(zf, name):
-    with zf.open(name) as raw:
-        text = io.TextIOWrapper(raw, encoding="utf-8-sig", errors="replace", newline="")
-        sample = text.read(4096)
-        text.seek(0)
-        delimiter = "\t" if "\t" in sample else ","
-        reader = csv.reader(text, delimiter=delimiter)
-        try:
-            header = next(reader)
-        except StopIteration:
-            return set()
-        return {canonical_header(x) for x in header}
+def archive_layout(zf):
+    root = ET.fromstring(zf.read("meta.xml"))
+    components = []
+    for node in list(root):
+        kind = node.tag.rsplit("}", 1)[-1].casefold()
+        if kind not in {"core", "extension"}:
+            continue
+        files = next((x for x in list(node) if x.tag.rsplit("}", 1)[-1] == "files"), None)
+        if files is None:
+            continue
+        location_node = next((x for x in list(files) if x.tag.rsplit("}", 1)[-1] == "location"), None)
+        if location_node is None or not (location_node.text or "").strip():
+            continue
+        location = (location_node.text or "").strip()
+        fields = {}
+        id_index = None
+        coreid_index = None
+        for child in list(node):
+            tag = child.tag.rsplit("}", 1)[-1].casefold()
+            if tag == "id":
+                id_index = int(child.attrib["index"])
+            elif tag == "coreid":
+                coreid_index = int(child.attrib["index"])
+            elif tag == "field":
+                fields[int(child.attrib["index"])] = canonical_header(child.attrib.get("term", ""))
+        components.append({
+            "kind": kind,
+            "location": location,
+            "fields": fields,
+            "id_index": id_index,
+            "coreid_index": coreid_index,
+            "delimiter": meta_char(node.attrib.get("fieldsTerminatedBy"), "\t"),
+            "ignore": int(node.attrib.get("ignoreHeaderLines", "0") or 0),
+            "encoding": node.attrib.get("encoding", "UTF-8"),
+        })
+    return components
+
+
+def iter_component_rows(zf, component):
+    with zf.open(component["location"]) as raw:
+        text = io.TextIOWrapper(
+            raw,
+            encoding=component["encoding"] or "utf-8",
+            errors="replace",
+            newline="",
+        )
+        reader = csv.reader(text, delimiter=component["delimiter"])
+        for _ in range(component["ignore"]):
+            next(reader, None)
+        for values in reader:
+            row = {}
+            for idx, term in component["fields"].items():
+                row[term] = values[idx] if idx < len(values) else ""
+            if component["id_index"] is not None:
+                idx = component["id_index"]
+                row["_id"] = values[idx] if idx < len(values) else ""
+            if component["coreid_index"] is not None:
+                idx = component["coreid_index"]
+                row["_coreid"] = values[idx] if idx < len(values) else ""
+            yield row
 
 
 def load_iucn_names():
@@ -162,47 +207,38 @@ def load_iucn_names():
                     by_name[skey] = payload
 
     with zipfile.ZipFile(io.BytesIO(blob)) as zf:
-        names = [n for n in zf.namelist() if n.lower().endswith((".txt", ".tsv", ".csv"))]
+        layout = archive_layout(zf)
+        core = next((x for x in layout if x["kind"] == "core"), None)
+        if core is None:
+            raise RuntimeError("IUCN Darwin Core archive has no core table in meta.xml")
 
-        # Pass 1: index the taxon core (or any taxon-like table) by taxonID.
-        for name in names:
-            headers = table_headers(zf, name)
-            if not headers.intersection({"scientificname", "canonicalname", "species"}):
-                continue
-            if not headers.intersection({"taxonid", "id"}):
-                continue
-            for row in iter_table_rows(zf, name):
-                tid = str(row.get("taxonid") or row.get("id") or "").strip()
-                if not tid:
-                    continue
-                if tid not in taxa:
-                    taxa[tid] = row
-                else:
-                    # Prefer the row with an explicit scientific name/rank/classification.
-                    score_new = sum(bool(row.get(k)) for k in ("scientificname", "taxonrank", "kingdom", "phylum", "class"))
-                    score_old = sum(bool(taxa[tid].get(k)) for k in ("scientificname", "taxonrank", "kingdom", "phylum", "class"))
-                    if score_new > score_old:
-                        taxa[tid] = row
+        for row in iter_component_rows(zf, core):
+            tid = str(row.get("_id") or row.get("taxonid") or "").strip()
+            if tid:
+                taxa[tid] = row
 
-        # Pass 2: read IUCN status from distribution/status extensions and join to taxon core.
+        status_components = [
+            x for x in layout
+            if set(x["fields"].values()).intersection(
+                {"threatstatus", "iucnredlistcategory", "redlistcategory", "conservationstatus"}
+            )
+        ]
+        if not status_components:
+            raise RuntimeError(
+                "IUCN archive has no status extension; meta.xml components="
+                + json.dumps([
+                    {"file": x["location"], "fields": sorted(set(x["fields"].values()))}
+                    for x in layout
+                ], ensure_ascii=False)[:12000]
+            )
+
         status_rows = 0
-        for name in names:
-            headers = table_headers(zf, name)
-            if not headers.intersection(
-                {"threatstatus", "iucnredlistcategory", "redlistcategory", "conservationstatus", "category", "status"}
-            ):
-                continue
-            for row in iter_table_rows(zf, name):
+        for component in status_components:
+            for row in iter_component_rows(zf, component):
                 status = category_from_row(row)
                 if status not in THREATENED | EXTINCT:
                     continue
-                tid = str(
-                    row.get("taxonid")
-                    or row.get("coreid")
-                    or row.get("id")
-                    or row.get("taxonkey")
-                    or ""
-                ).strip()
+                tid = str(row.get("_coreid") or row.get("taxonid") or row.get("_id") or "").strip()
                 taxon = taxa.get(tid, {})
                 merged = {**taxon, **row}
                 accepted = (
@@ -232,13 +268,8 @@ def load_iucn_names():
                 status_rows += 1
 
         if not status_rows:
-            archive_summary = {
-                Path(n).name: sorted(table_headers(zf, n))
-                for n in names[:25]
-            }
             raise RuntimeError(
-                "No threatened/extinct distribution rows were parsed from the IUCN archive. "
-                + json.dumps(archive_summary, ensure_ascii=False)[:12000]
+                "Status extension was found but no VU/EN/CR/EW/EX rows were recognized"
             )
 
     if not by_name:
