@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T19:21:42.521585+00:00",
+  "generated_at": "2026-09-27T20:08:56.954994+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48163,19 +48163,19 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 27
-    },
-    {
-      "group": "Other",
-      "count": 17
+      "count": 32
     },
     {
       "group": "Fungi",
-      "count": 15
+      "count": 16
+    },
+    {
+      "group": "Other",
+      "count": 13
     },
     {
       "group": "Plants",
-      "count": 12
+      "count": 10
     }
   ],
   "groups_year": [
@@ -48233,24 +48233,24 @@
     }
   ],
   "featured_assembly": {
-    "accession": "GCA_062000183.1",
-    "organism_name": "Mespilia globulus",
+    "accession": "GCA_062001637.1",
+    "organism_name": "Leishmania donovani",
     "common_name": null,
-    "tax_id": 39342,
-    "release_date": "2026-09-24",
+    "tax_id": 5661,
+    "release_date": "2026-09-25",
     "assembly_level": "Chromosome",
-    "assembly_name": "Mglob_BlMal_v1f",
-    "total_sequence_length": 977011201,
-    "chromosome_count": 21,
+    "assembly_name": "IGS_Ld1S_Pro.1.0",
+    "total_sequence_length": 33102059,
+    "chromosome_count": 36,
     "genus": null,
     "family": null,
     "phylum": null,
     "group": "Other",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
-      "credit": "Diego Delso · CC BY-SA 4.0",
-      "matched_name": "Mespilia globulus"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Amastogotes_of_Leishmania_donovani.jpg/960px-Amastogotes_of_Leishmania_donovani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Amastogotes_of_Leishmania_donovani.jpg",
+      "credit": "Ajay Kumar Chaurasiya · CC BY-SA 4.0",
+      "matched_name": "Leishmania donovani"
     }
   },
   "recent_assemblies": [
@@ -48264,11 +48264,16 @@
       "assembly_name": "IGS_Ld1S_Pro.1.0",
       "total_sequence_length": 33102059,
       "chromosome_count": 36,
-      "genus": "Leishmania",
-      "family": "Trypanosomatidae",
-      "phylum": "Euglenozoa",
+      "genus": null,
+      "family": null,
+      "phylum": null,
       "group": "Other",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Amastogotes_of_Leishmania_donovani.jpg/960px-Amastogotes_of_Leishmania_donovani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Amastogotes_of_Leishmania_donovani.jpg",
+        "credit": "Ajay Kumar Chaurasiya · CC BY-SA 4.0",
+        "matched_name": "Leishmania donovani"
+      }
     },
     {
       "accession": "GCA_022750525.2",
@@ -48280,10 +48285,10 @@
       "assembly_name": "UoM_Hdest_v2",
       "total_sequence_length": 48636580,
       "chromosome_count": 9,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Halotydeus",
+      "family": "Penthaleidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48296,10 +48301,10 @@
       "assembly_name": "Mglob_BlMal_v1f",
       "total_sequence_length": 977011201,
       "chromosome_count": 21,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Mespilia",
+      "family": "Temnopleuridae",
+      "phylum": "Echinodermata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
@@ -48317,10 +48322,10 @@
       "assembly_name": "ASM61617325v1",
       "total_sequence_length": 14381553938,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48338,10 +48343,10 @@
       "assembly_name": "ASM61617285v1",
       "total_sequence_length": 14463317234,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48491,10 +48496,10 @@
       "assembly_name": "bTroAed1.hap1 v2",
       "total_sequence_length": 1224968293,
       "chromosome_count": 40,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48507,10 +48512,10 @@
       "assembly_name": "bTroAed1.hap2 v2",
       "total_sequence_length": 1147004143,
       "chromosome_count": 38,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48523,10 +48528,10 @@
       "assembly_name": "rOncCla1.1.pri",
       "total_sequence_length": 2506013150,
       "chromosome_count": 32,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Oncorhynchus",
+      "family": "Salmonidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49349,10 +49354,10 @@
       "assembly_name": "FOE",
       "total_sequence_length": 48975907,
       "chromosome_count": 13,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Fusarium",
+      "family": "Nectriaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -49604,10 +49609,10 @@
       "assembly_name": "ASM6148185v1",
       "total_sequence_length": 14644421470,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -49625,10 +49630,10 @@
       "assembly_name": "ASM6147699v1",
       "total_sequence_length": 42627817,
       "chromosome_count": 9,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Metarhizium",
+      "family": "Clavicipitaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Metarhizium_anisopliae_infected_cockroach_%28PLoS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Metarhizium_anisopliae_infected_cockroach_(PLoS).jpg",
@@ -49682,7 +49687,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Boechera_drummondii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Boechera_drummondii.jpg",
+        "credit": "Public domain",
+        "matched_name": "Boechera"
+      }
     },
     {
       "accession": "GCA_061474665.1",
@@ -49694,10 +49704,10 @@
       "assembly_name": "IPPCAAS_Hvar_1.0",
       "total_sequence_length": 344003133,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippodamia",
+      "family": "Coccinellidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/000692-asteroid_shape_model_%28692%29_Hippodamia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:000692-asteroid_shape_model_(692)_Hippodamia.png",
@@ -49800,10 +49810,10 @@
       "assembly_name": "ilCatDisj1.hap1.1",
       "total_sequence_length": 574666244,
       "chromosome_count": 32,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Catocala",
+      "family": "Erebidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Catocala_disjuncta.jpg/960px-Catocala_disjuncta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Catocala_disjuncta.jpg",
@@ -49948,10 +49958,10 @@
       "assembly_name": "WHYC_v1.0",
       "total_sequence_length": 1128618594,
       "chromosome_count": 37,
-      "genus": "Gallus",
-      "family": "Phasianidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50102,10 +50112,10 @@
       "assembly_name": "daVerOffc1.hap1.1",
       "total_sequence_length": 1826602402,
       "chromosome_count": 36,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Veronica",
+      "family": "Plantaginaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Veronica_officinalis_1544.JPG/960px-Veronica_officinalis_1544.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Veronica_officinalis_1544.JPG",
@@ -50498,10 +50508,10 @@
       "assembly_name": "Pristis zijsron_haplotype_2_assembly",
       "total_sequence_length": 2373393783,
       "chromosome_count": 51,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50551,10 +50561,10 @@
       "assembly_name": "Pristis zijsron_haplotype_1_assembly",
       "total_sequence_length": 2433300514,
       "chromosome_count": 52,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50917,10 +50927,10 @@
       "assembly_name": "qlCryClav9.1",
       "total_sequence_length": 209530444,
       "chromosome_count": 8,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cryptopygus",
+      "family": "Isotomidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50986,10 +50996,10 @@
       "assembly_name": "bPruMod1.hap1.1",
       "total_sequence_length": 1393560632,
       "chromosome_count": 40,
-      "genus": "Prunella",
-      "family": "Prunellidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Alpenbraunelle_%28Prunella_collaris%29.jpg/960px-Alpenbraunelle_%28Prunella_collaris%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Alpenbraunelle_(Prunella_collaris).jpg",
@@ -51023,10 +51033,10 @@
       "assembly_name": "bCerFam1.hap1.1",
       "total_sequence_length": 1161732700,
       "chromosome_count": 38,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Certhia",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -51039,10 +51049,10 @@
       "assembly_name": "Plectropomus leopardus_haplotype_2_assembly",
       "total_sequence_length": 866029822,
       "chromosome_count": 28,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Plectropomus",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
@@ -51102,10 +51112,10 @@
       "assembly_name": "Plectropomus leopardus_haplotype_1_assembly",
       "total_sequence_length": 888354634,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Plectropomus",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
@@ -51254,7 +51264,12 @@
       "family": null,
       "phylum": null,
       "group": "Other",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Akha_cropped_hires.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Akha_cropped_hires.JPG",
+        "credit": "Weltenbummler84 · CC BY-SA 2.0 de",
+        "matched_name": "Homo sapiens"
+      }
     },
     {
       "accession": "GCA_061372785.1",
@@ -51270,7 +51285,12 @@
       "family": null,
       "phylum": null,
       "group": "Other",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Akha_cropped_hires.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Akha_cropped_hires.JPG",
+        "credit": "Weltenbummler84 · CC BY-SA 2.0 de",
+        "matched_name": "Homo sapiens"
+      }
     },
     {
       "accession": "GCA_061372305.1",
@@ -51425,11 +51445,16 @@
       "assembly_name": "ASM6134649v1",
       "total_sequence_length": 460651048,
       "chromosome_count": 28,
-      "genus": "Hypomesus",
-      "family": "Osmeridae",
-      "phylum": "Chordata",
-      "group": "Animals",
-      "image": null
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG/960px-Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC06856.JPG",
+        "credit": "Daderot · CC0",
+        "matched_name": "Hypomesus nipponensis"
+      }
     },
     {
       "accession": "GCA_061346435.1",
@@ -51515,10 +51540,10 @@
       "assembly_name": "ASM6133621v1",
       "total_sequence_length": 34242889,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichoderma",
+      "family": "Hypocreaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -51536,10 +51561,10 @@
       "assembly_name": "ASM6133560v1",
       "total_sequence_length": 34726479,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichoderma",
+      "family": "Hypocreaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -52174,9 +52199,9 @@
       "assembly_name": "uoGomSpea1.1",
       "total_sequence_length": 129863551,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
+      "genus": "Gomphonema",
+      "family": "Gomphonemataceae",
+      "phylum": "Bacillariophyta",
       "group": "Other",
       "image": null
     },
@@ -52301,10 +52326,10 @@
       "assembly_name": "xpLepCaje1.1",
       "total_sequence_length": 1739177086,
       "chromosome_count": 12,
-      "genus": "Lepidopleurus",
-      "family": "Lepidopleuridae",
-      "phylum": "Mollusca",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52333,10 +52358,10 @@
       "assembly_name": "fGadMor3.1.hap2",
       "total_sequence_length": 709428025,
       "chromosome_count": 23,
-      "genus": "Gadus",
-      "family": "Gadidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52514,10 +52539,10 @@
       "assembly_name": "icOmoDisc4.hap1.1",
       "total_sequence_length": 942355721,
       "chromosome_count": 11,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Omosita",
+      "family": "Nitidulidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png/960px-Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Omosita_discoidea_(Fabricius,_1775)_(29131983133).png",
@@ -52620,10 +52645,10 @@
       "assembly_name": "ilGraCaec1.hap1.1",
       "total_sequence_length": 682324071,
       "chromosome_count": 29,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Grapholita",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/-1241-_Grapholita_compositella_%2841027756310%29.jpg/960px--1241-_Grapholita_compositella_%2841027756310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:-1241-_Grapholita_compositella_(41027756310).jpg",
@@ -131321,7 +131346,12 @@
       "credit": "Gilles Gonthier from Canada · CC BY 2.0",
       "matched_name": "Blarina brevicauda"
     },
-    "Boechera arcuata": null,
+    "Boechera arcuata": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Boechera_drummondii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Boechera_drummondii.jpg",
+      "credit": "Public domain",
+      "matched_name": "Boechera"
+    },
     "Boechera perennans": null,
     "Bornmuellera tymphaea": null,
     "Bucculatrix nigricomella": null,
@@ -131505,8 +131535,18 @@
       "credit": "Dmitry Makeev · CC BY-SA 4.0",
       "matched_name": "Hippophae"
     },
-    "Homo sapiens": null,
-    "Hypomesus nipponensis": null,
+    "Homo sapiens": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Akha_cropped_hires.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Akha_cropped_hires.JPG",
+      "credit": "Weltenbummler84 · CC BY-SA 2.0 de",
+      "matched_name": "Homo sapiens"
+    },
+    "Hypomesus nipponensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG/960px-Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC06856.JPG",
+      "credit": "Daderot · CC0",
+      "matched_name": "Hypomesus nipponensis"
+    },
     "Iberis sempervirens": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Iberis_amara_flower_%2815%29.jpg/960px-Iberis_amara_flower_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Iberis_amara_flower_(15).jpg",
@@ -131525,7 +131565,12 @@
       "credit": "Harold Maxwell-Lefroy · CC0",
       "matched_name": "Lasioderma"
     },
-    "Leishmania donovani": null,
+    "Leishmania donovani": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Amastogotes_of_Leishmania_donovani.jpg/960px-Amastogotes_of_Leishmania_donovani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Amastogotes_of_Leishmania_donovani.jpg",
+      "credit": "Ajay Kumar Chaurasiya · CC BY-SA 4.0",
+      "matched_name": "Leishmania donovani"
+    },
     "Lepidopleurus cajetanus": null,
     "Lespedeza danxiaensis": null,
     "Lomaspilis marginata": null,
