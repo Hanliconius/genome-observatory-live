@@ -177,11 +177,14 @@ def load_iucn_names():
             "accepted_name": norm_name(accepted),
             "group": broad_group(row),
         }
+        rank = str(row.get("taxonrank") or row.get("rank") or "").strip().casefold()
         for name in (accepted, scientific, species):
             store(name, payload)
-            skey = species_key(name)
-            if skey:
-                store(skey, payload)
+            words = norm_name(name).split()
+            if rank == "species" or len(words) == 2:
+                skey = species_key(name)
+                if skey:
+                    store(skey, payload)
         counts[status] += 1
 
     if not by_name:
