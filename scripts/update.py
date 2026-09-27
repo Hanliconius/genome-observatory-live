@@ -198,6 +198,20 @@ def main():
         'species':len(first_seen),
         'first_time_species':len(first_seen)
     }
+    # Historical assembly-count milestones. Start with 10, 100, 1,000 and
+    # 10,000, then add each further 10,000 automatically as it is crossed.
+    total_assemblies=all_summary['assemblies']
+    milestone_targets=[x for x in (10,100,1000,10000) if x<=total_assemblies]
+    milestone_targets += list(range(20000,(total_assemblies//10000)*10000+1,10000))
+    milestones=[]
+    cumulative=0
+    target_i=0
+    for row in daily_rows:
+        cumulative += int(row.get('assemblies',0) or 0)
+        while target_i<len(milestone_targets) and cumulative>=milestone_targets[target_i]:
+            milestones.append({'threshold':milestone_targets[target_i],'date':row['date']})
+            target_i += 1
+
     # Choose the newest recent assembly for which an image can be found.
     # Search each candidate at species -> genus -> family level, then move down the
     # chronological list if all three fail.
@@ -231,6 +245,6 @@ def main():
             {'group':'Fungi','count':fungi},
             {'group':'Other','count':max(0,total-animals-plants-fungi)}
         ]
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
