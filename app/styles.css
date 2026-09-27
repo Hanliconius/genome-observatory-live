@@ -68,3 +68,6 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .byline strong{color:var(--ink);font-weight:600}
 .byline a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line-dark)}
 .byline a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+.donut-seg{cursor:pointer;transition:stroke-width .12s ease,opacity .12s ease}
+.donut-seg.is-hovered{stroke-width:34;opacity:.9}
