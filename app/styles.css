@@ -160,3 +160,15 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .country-stats{grid-template-columns:1fr}
   .country-map-panel{padding:14px}
 }
+
+.country-map-tools{display:grid;gap:14px;justify-items:end;min-width:320px}
+.country-facet-tabs{justify-self:end}
+.country-facet-tabs .status-tab{min-width:150px;text-align:center}
+@media(max-width:900px){
+  .country-map-tools{justify-items:start;min-width:0;margin-top:18px}
+  .country-facet-tabs{justify-self:start}
+}
+@media(max-width:600px){
+  .country-facet-tabs{width:100%}
+  .country-facet-tabs .status-tab{min-width:0}
+}
