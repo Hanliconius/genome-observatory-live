@@ -2,11 +2,12 @@ const D='../data/dashboard.json';
 const TAXA_INDEX_URL='../data/taxa/index.json';
 const IUCN_URL='../data/status/iucn.json';
 const COUNTRY_URL='../data/countries.json';
+const SEQUENCING_COUNTRY_URL='../data/sequencing_countries.json';
 const WORLD_URL='https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, WORLD_DATA=null, selectedCountry=null;
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, WORLD_DATA=null, selectedCountry=null, countryFacet='origin';
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
@@ -41,12 +42,27 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   }
 }));
 
-document.querySelectorAll('.status-tab').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('.status-tab[data-status]').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.status-tab').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');
   statusMode=b.dataset.status;
   el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
   renderStatus();
+}));
+
+document.querySelectorAll('.country-facet-tab').forEach(b=>b.addEventListener('click',async()=>{
+  document.querySelectorAll('.country-facet-tab').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  countryFacet=b.dataset.countryFacet;
+  selectedCountry=null;
+  el('country-search').value='';
+  el('country-content').hidden=true;
+  el('country-empty').hidden=false;
+  updateCountryFacetText();
+  if(countryFacet==='sequencing') await loadSequencingCountries();
+  renderCountryMap();
+  renderCountryMatches('');
+  updateCountryCoverageText();
 }));
 
 el('country-search').addEventListener('input',e=>renderCountryMatches(e.target.value));
@@ -320,11 +336,56 @@ function renderStatus(){
   el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
 }
 
+function activeCountryData(){
+  return countryFacet==='sequencing' ? SEQ_COUNTRY_DATA : COUNTRY_DATA;
+}
+
+function updateCountryFacetText(){
+  const sequencing=countryFacet==='sequencing';
+  el('country-facet-description').textContent=sequencing
+    ? 'Country is assigned from SRA CenterName, linked through each assembly BioSample and resolved to an organization country with ROR. Colour shows the trailing 30-day mean. Assemblies can count in more than one country when sequencing centers span countries.'
+    : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.';
+  el('country-search-description').textContent=sequencing
+    ? 'Search a country, or click it on the map, to see the cumulative history of assemblies with sequencing data from SRA centers in that country.'
+    : 'Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.';
+  el('country-all-label').textContent=sequencing?'All-time linked assemblies':'All-time assemblies';
+  el('country-assembly-legend').textContent=sequencing?'Assemblies with sequencing centers in country':'Assemblies';
+  el('country-species-legend').textContent=sequencing?'First-time species linked to country':'First-time species in country';
+}
+
+function updateCountryCoverageText(){
+  const data=activeCountryData();
+  if(!data)return;
+  const c=data.coverage||{};
+  if(countryFacet==='sequencing'){
+    const resolved=Number(c.assemblies_with_resolved_center_country||0);
+    const total=Number(c.assemblies_scanned||0);
+    const pct=total?100*resolved/total:0;
+    const centers=Number(c.distinct_centers_resolved_to_country||0);
+    const totalCenters=Number(c.distinct_sra_centers||0);
+    el('country-map-status').textContent=
+      fmt(resolved)+' of '+fmt(total)+' assemblies linked to a resolved sequencing-center country ('+
+      fmt1(pct)+'%). '+fmt(centers)+' of '+fmt(totalCenters)+' distinct SRA center names resolved via ROR.'+
+      (Number(c.assemblies_with_multiple_center_countries||0)
+        ? ' '+fmt(c.assemblies_with_multiple_center_countries)+' assemblies link to centers in multiple countries.'
+        : '');
+  }else{
+    const pct=100*Number(c.fraction_assigned||0);
+    el('country-map-status').textContent=
+      fmt(c.assemblies_assigned_to_country)+' of '+
+      fmt(c.assemblies_scanned)+' assemblies assigned to a country ('+
+      fmt1(pct)+'%).';
+  }
+}
+
 async function loadCountries(){
+  updateCountryFacetText();
   if(COUNTRY_DATA && WORLD_DATA){
+    if(countryFacet==='sequencing'&&!SEQ_COUNTRY_DATA) await loadSequencingCountries();
     renderCountryMap();
     renderCountryMatches(el('country-search').value);
     if(selectedCountry) renderCountryDetail(selectedCountry);
+    updateCountryCoverageText();
     return;
   }
   if(COUNTRY_LOADING)return COUNTRY_LOADING;
@@ -335,16 +396,13 @@ async function loadCountries(){
       ? d3.json(WORLD_URL)
       : Promise.reject(new Error('Map libraries unavailable'))
   ])
-    .then(([countries,world])=>{
+    .then(async([countries,world])=>{
       COUNTRY_DATA=countries;
       WORLD_DATA=world;
+      if(countryFacet==='sequencing') await loadSequencingCountries();
       renderCountryMap();
       renderCountryMatches(el('country-search').value);
-      const pct=100*Number(countries.coverage?.fraction_assigned||0);
-      el('country-map-status').textContent=
-        fmt(countries.coverage?.assemblies_assigned_to_country)+' of '+
-        fmt(countries.coverage?.assemblies_scanned)+' assemblies assigned to a country ('+
-        fmt1(pct)+'%).';
+      updateCountryCoverageText();
     })
     .catch(err=>{
       console.error(err);
@@ -354,9 +412,26 @@ async function loadCountries(){
   return COUNTRY_LOADING;
 }
 
+async function loadSequencingCountries(){
+  if(SEQ_COUNTRY_DATA)return SEQ_COUNTRY_DATA;
+  if(SEQ_COUNTRY_LOADING)return SEQ_COUNTRY_LOADING;
+  el('country-map-status').textContent='Loading sequencing-center country data…';
+  SEQ_COUNTRY_LOADING=fetch(SEQUENCING_COUNTRY_URL)
+    .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
+    .then(d=>{SEQ_COUNTRY_DATA=d;return d;})
+    .catch(err=>{
+      console.error(err);
+      el('country-map-status').textContent='Sequencing-center country data are unavailable until the next data refresh.';
+      throw err;
+    })
+    .finally(()=>{SEQ_COUNTRY_LOADING=null;});
+  return SEQ_COUNTRY_LOADING;
+}
+
 function countryByNumeric(id){
+  const data=activeCountryData();
   const key=String(id??'').padStart(3,'0');
-  return COUNTRY_DATA?.countries?.find(x=>String(x.iso_n3).padStart(3,'0')===key)||null;
+  return data?.countries?.find(x=>String(x.iso_n3).padStart(3,'0')===key)||null;
 }
 
 function countryRateLabel(v){
@@ -365,14 +440,15 @@ function countryRateLabel(v){
 }
 
 function renderCountryMap(){
-  if(!COUNTRY_DATA||!WORLD_DATA||!window.d3||!window.topojson)return;
+  const data=activeCountryData();
+  if(!data||!WORLD_DATA||!window.d3||!window.topojson)return;
   const svg=d3.select('#country-map');
   svg.selectAll('*').remove();
   const width=1100,height=570;
   const geo=topojson.feature(WORLD_DATA,WORLD_DATA.objects.countries);
   const projection=d3.geoNaturalEarth1().fitExtent([[8,8],[width-8,height-8]],geo);
   const path=d3.geoPath(projection);
-  const maxRate=Math.max(0,...COUNTRY_DATA.countries.map(x=>Number(x.genomes_per_day||0)));
+  const maxRate=Math.max(0,...data.countries.map(x=>Number(x.genomes_per_day||0)));
   const scale=d3.scaleSequentialSqrt([0,Math.max(maxRate,0.01)],d3.interpolateBlues);
   const tip=el('chart-tooltip');
 
@@ -396,9 +472,15 @@ function renderCountryMap(){
       const c=countryByNumeric(d.id);
       d3.select(this).classed('is-hovered',true);
       const name=c?.name||d.properties?.name||'Country';
-      tip.innerHTML=c
-        ? `<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`
-        : `<strong>${esc(name)}</strong><span>No country-assigned genome records</span>`;
+      if(c){
+        const base=`<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`;
+        const centers=countryFacet==='sequencing' && c.top_centers?.length
+          ? '<span>Top centers: '+c.top_centers.slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
+          : '';
+        tip.innerHTML=base+centers;
+      }else{
+        tip.innerHTML=`<strong>${esc(name)}</strong><span>No ${countryFacet==='sequencing'?'resolved sequencing-center':'country-assigned'} genome records</span>`;
+      }
       tip.hidden=false;positionTooltip(ev,tip);
     })
     .on('pointerleave',function(){
@@ -410,17 +492,17 @@ function renderCountryMap(){
       if(c)selectCountry(c);
     });
 
-  const ticks=[0,maxRate*.25,maxRate*.5,maxRate*.75,maxRate].filter((v,i,a)=>i===0||v>a[i-1]+1e-9);
   el('country-map-legend').innerHTML=
-    '<span>Genomes per day · past 30 days</span>'+
+    '<span>Genomes per day · trailing 30-day average</span>'+
     '<div class="map-gradient"></div>'+
     '<div class="map-legend-ticks"><span>0</span><span>'+countryRateLabel(maxRate)+'</span></div>';
 }
 
 function renderCountryMatches(raw){
-  if(!COUNTRY_DATA?.countries?.length)return;
+  const data=activeCountryData();
+  if(!data?.countries?.length)return;
   const q=String(raw||'').trim().toLowerCase();
-  let rows=COUNTRY_DATA.countries.slice();
+  let rows=data.countries.slice();
   if(q){
     rows=rows.filter(x=>
       x.name.toLowerCase().includes(q)||
@@ -438,10 +520,11 @@ function renderCountryMatches(raw){
   }
   rows=rows.slice(0,12);
   const box=el('country-results');
-  box.innerHTML=(q?'':'<div class="taxon-results-label">Most active this week</div>')+
-    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} all-time assemblies</small></span><span>${countryRateLabel(x.genomes_per_day)}/day</span></button>`).join('');
+  const context=countryFacet==='sequencing'?'linked assemblies':'all-time assemblies';
+  box.innerHTML=(q?'':'<div class="taxon-results-label">Most active · trailing 30 days</div>')+
+    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryRateLabel(x.genomes_per_day)}/day</span></button>`).join('');
   box.querySelectorAll('button[data-iso3]').forEach(btn=>btn.addEventListener('click',()=>{
-    const meta=COUNTRY_DATA.countries.find(x=>x.iso3===btn.dataset.iso3);
+    const meta=data.countries.find(x=>x.iso3===btn.dataset.iso3);
     if(meta)selectCountry(meta);
   }));
 }
@@ -463,7 +546,7 @@ function renderCountryDetail(c){
   el('country-empty').hidden=true;
   el('country-content').hidden=false;
   el('country-name').textContent=c.name;
-  el('country-code').textContent=c.iso3;
+  el('country-code').textContent=(countryFacet==='sequencing'?'Sequencing center · ':'Sample origin · ')+c.iso3;
   el('country-rate').textContent=countryRateLabel(c.genomes_per_day);
   el('country-week').textContent=fmt(c.window_assemblies);
   el('country-assemblies').textContent=fmt(c.assemblies);
