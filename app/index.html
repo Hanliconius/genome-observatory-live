@@ -25,6 +25,7 @@
     <nav class="section-tabs" aria-label="Dashboard section">
       <button class="section-tab active" data-view="overview">Overview</button>
       <button class="section-tab" data-view="status">Endangered</button>
+      <button class="section-tab" data-view="countries">By country</button>
       <button class="section-tab" data-view="taxa">Taxa explorer</button>
     </nav>
 
@@ -41,7 +42,7 @@
         <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="top-first">—</span></div>
         <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="top-pipeline">—</span></div>
         <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="top-completed">—</span></div>
-        <div class="stat-box"><span class="stat-label">7-day rate</span><span class="stat-value" id="top-rate">—</span></div>
+        <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="top-rate">—</span></div>
       </section>
 
       <section class="layout-grid">
@@ -163,7 +164,7 @@
           <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="status-first">—</span></div>
           <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="status-pipeline">—</span></div>
           <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="status-completed">—</span></div>
-          <div class="stat-box"><span class="stat-label">7-day rate</span><span class="stat-value" id="status-rate">—</span></div>
+          <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="status-rate">—</span></div>
         </section>
 
         <section class="layout-grid">
@@ -244,6 +245,62 @@
       </section>
     </section>
 
+    <section id="countries-view" hidden>
+      <article class="country-map-panel">
+        <div class="panel-head country-map-head">
+          <div>
+            <p class="panel-kicker">Geographic activity</p>
+            <h2>Genome deposition by country</h2>
+            <p class="taxon-intro">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the past 7 days.</p>
+          </div>
+          <div id="country-map-legend" class="country-map-legend"></div>
+        </div>
+        <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per day by country"></svg>
+        <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
+      </article>
+
+      <article class="country-search-panel">
+        <div>
+          <p class="panel-kicker">Country history</p>
+          <h2>Explore all-time genome deposition by country</h2>
+          <p class="taxon-intro">Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.</p>
+        </div>
+        <div class="taxon-search-wrap">
+          <input id="country-search" type="search" autocomplete="off" placeholder="Try United States, Brazil, Kenya…" aria-label="Search country">
+          <div id="country-results" class="taxon-results"></div>
+        </div>
+      </article>
+
+      <section id="country-empty" class="taxon-empty">
+        <p>Choose a country from the map or search box to see its genome-deposition history.</p>
+      </section>
+
+      <section id="country-content" hidden>
+        <article class="taxon-heading country-heading">
+          <p class="panel-kicker" id="country-code">Country</p>
+          <h2 id="country-name">—</h2>
+        </article>
+
+        <section class="stat-strip country-stats">
+          <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="country-rate">—</span></div>
+          <div class="stat-box"><span class="stat-label">Past 7 days</span><span class="stat-value" id="country-week">—</span></div>
+          <div class="stat-box"><span class="stat-label">All-time assemblies</span><span class="stat-value" id="country-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label">Species represented</span><span class="stat-value" id="country-species">—</span></div>
+        </section>
+
+        <article class="panel chart-panel country-history-panel">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">All time</p>
+              <h2 class="panel-title">Cumulative assemblies and first-time species</h2>
+            </div>
+          </div>
+          <svg id="country-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species in country</span></div>
+        </article>
+      </section>
+    </section>
+
     <section id="taxa-view" hidden>
       <article class="taxon-search-panel">
         <div>
@@ -306,9 +363,11 @@
 
   <footer class="site-foot">
     <p>Assembly metadata: NCBI Datasets, restricted to GenBank eukaryote assemblies at chromosome or complete level. Annotation status: NCBI RefSeq.</p>
-    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
+    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. Country view: NCBI BioSample geographic location, aggregated to ISO countries. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
   </footer>
 
-  <script src="app.js?v=20260927h"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+  <script src="app.js?v=20260927i"></script>
 </body>
 </html>
