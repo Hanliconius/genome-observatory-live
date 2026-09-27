@@ -1,10 +1,12 @@
 const D='../data/dashboard.json';
 const TAXA_INDEX_URL='../data/taxa/index.json';
 const IUCN_URL='../data/status/iucn.json';
+const COUNTRY_URL='../data/countries.json';
+const WORLD_URL='https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened';
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, WORLD_DATA=null, selectedCountry=null;
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
@@ -24,12 +26,16 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   el('overview-view').hidden=view!=='overview';
   el('taxa-view').hidden=view!=='taxa';
   el('status-view').hidden=view!=='status';
+  el('countries-view').hidden=view!=='countries';
   if(view==='taxa'){
     el('range-label').textContent='Taxa explorer';
     loadTaxaIndex();
   }else if(view==='status'){
     el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
     loadIucn();
+  }else if(view==='countries'){
+    el('range-label').textContent='By country';
+    loadCountries();
   }else if(DATA){
     el('range-label').textContent=RANGE[range].label;
   }
@@ -42,6 +48,14 @@ document.querySelectorAll('.status-tab').forEach(b=>b.addEventListener('click',(
   el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
   renderStatus();
 }));
+
+el('country-search').addEventListener('input',e=>renderCountryMatches(e.target.value));
+el('country-search').addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+    const firstResult=el('country-results').querySelector('button[data-iso3]');
+    if(firstResult){e.preventDefault();firstResult.click();}
+  }
+});
 
 el('taxon-search').addEventListener('input',e=>renderTaxonMatches(e.target.value));
 el('taxon-search').addEventListener('keydown',e=>{
@@ -302,6 +316,164 @@ function renderStatus(){
 
   const source=IUCN_DATA.source||{};
   el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
+}
+
+async function loadCountries(){
+  if(COUNTRY_DATA && WORLD_DATA){
+    renderCountryMap();
+    renderCountryMatches(el('country-search').value);
+    if(selectedCountry) renderCountryDetail(selectedCountry);
+    return;
+  }
+  if(COUNTRY_LOADING)return COUNTRY_LOADING;
+  el('country-map-status').textContent='Loading country data and map…';
+  COUNTRY_LOADING=Promise.all([
+    fetch(COUNTRY_URL).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
+    (window.d3 && window.topojson)
+      ? d3.json(WORLD_URL)
+      : Promise.reject(new Error('Map libraries unavailable'))
+  ])
+    .then(([countries,world])=>{
+      COUNTRY_DATA=countries;
+      WORLD_DATA=world;
+      renderCountryMap();
+      renderCountryMatches(el('country-search').value);
+      const pct=100*Number(countries.coverage?.fraction_assigned||0);
+      el('country-map-status').textContent=
+        fmt(countries.coverage?.assemblies_assigned_to_country)+' of '+
+        fmt(countries.coverage?.assemblies_scanned)+' assemblies assigned to a country ('+
+        fmt1(pct)+'%).';
+    })
+    .catch(err=>{
+      console.error(err);
+      el('country-map-status').textContent='Country data or map unavailable.';
+    })
+    .finally(()=>{COUNTRY_LOADING=null;});
+  return COUNTRY_LOADING;
+}
+
+function countryByNumeric(id){
+  const key=String(id??'').padStart(3,'0');
+  return COUNTRY_DATA?.countries?.find(x=>String(x.iso_n3).padStart(3,'0')===key)||null;
+}
+
+function countryRateLabel(v){
+  const n=Number(v||0);
+  return n<1?n.toFixed(2):n.toFixed(1);
+}
+
+function renderCountryMap(){
+  if(!COUNTRY_DATA||!WORLD_DATA||!window.d3||!window.topojson)return;
+  const svg=d3.select('#country-map');
+  svg.selectAll('*').remove();
+  const width=1100,height=570;
+  const geo=topojson.feature(WORLD_DATA,WORLD_DATA.objects.countries);
+  const projection=d3.geoNaturalEarth1().fitExtent([[8,8],[width-8,height-8]],geo);
+  const path=d3.geoPath(projection);
+  const maxRate=Math.max(0,...COUNTRY_DATA.countries.map(x=>Number(x.genomes_per_day||0)));
+  const scale=d3.scaleSequentialSqrt([0,Math.max(maxRate,0.01)],d3.interpolateBlues);
+  const tip=el('chart-tooltip');
+
+  svg.append('path')
+    .datum({type:'Sphere'})
+    .attr('class','map-ocean')
+    .attr('d',path);
+
+  svg.append('g')
+    .selectAll('path')
+    .data(geo.features)
+    .join('path')
+    .attr('class','country-shape')
+    .attr('d',path)
+    .attr('fill',d=>{
+      const c=countryByNumeric(d.id);
+      return c?scale(Number(c.genomes_per_day||0)):'#edf0ed';
+    })
+    .attr('data-country-id',d=>String(d.id??''))
+    .on('pointerenter pointermove',function(ev,d){
+      const c=countryByNumeric(d.id);
+      d3.select(this).classed('is-hovered',true);
+      const name=c?.name||d.properties?.name||'Country';
+      tip.innerHTML=c
+        ? `<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.week_assemblies)} assemblies · past 7 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`
+        : `<strong>${esc(name)}</strong><span>No country-assigned genome records</span>`;
+      tip.hidden=false;positionTooltip(ev,tip);
+    })
+    .on('pointerleave',function(){
+      d3.select(this).classed('is-hovered',false);
+      tip.hidden=true;
+    })
+    .on('click',function(ev,d){
+      const c=countryByNumeric(d.id);
+      if(c)selectCountry(c);
+    });
+
+  const ticks=[0,maxRate*.25,maxRate*.5,maxRate*.75,maxRate].filter((v,i,a)=>i===0||v>a[i-1]+1e-9);
+  el('country-map-legend').innerHTML=
+    '<span>Genomes per day · past 7 days</span>'+
+    '<div class="map-gradient"></div>'+
+    '<div class="map-legend-ticks"><span>0</span><span>'+countryRateLabel(maxRate)+'</span></div>';
+}
+
+function renderCountryMatches(raw){
+  if(!COUNTRY_DATA?.countries?.length)return;
+  const q=String(raw||'').trim().toLowerCase();
+  let rows=COUNTRY_DATA.countries.slice();
+  if(q){
+    rows=rows.filter(x=>
+      x.name.toLowerCase().includes(q)||
+      x.iso2.toLowerCase()===q||
+      x.iso3.toLowerCase()===q
+    );
+    rows.sort((a,b)=>{
+      const an=a.name.toLowerCase(),bn=b.name.toLowerCase();
+      const ae=an===q?0:an.startsWith(q)?1:2;
+      const be=bn===q?0:bn.startsWith(q)?1:2;
+      return ae-be||Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||an.localeCompare(bn);
+    });
+  }else{
+    rows.sort((a,b)=>Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||Number(b.assemblies||0)-Number(a.assemblies||0));
+  }
+  rows=rows.slice(0,12);
+  const box=el('country-results');
+  box.innerHTML=(q?'':'<div class="taxon-results-label">Most active this week</div>')+
+    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} all-time assemblies</small></span><span>${countryRateLabel(x.genomes_per_day)}/day</span></button>`).join('');
+  box.querySelectorAll('button[data-iso3]').forEach(btn=>btn.addEventListener('click',()=>{
+    const meta=COUNTRY_DATA.countries.find(x=>x.iso3===btn.dataset.iso3);
+    if(meta)selectCountry(meta);
+  }));
+}
+
+function selectCountry(meta){
+  selectedCountry=meta;
+  el('country-search').value=meta.name;
+  el('country-results').innerHTML='';
+  renderCountryDetail(meta);
+  document.querySelectorAll('.country-shape').forEach(p=>p.classList.remove('is-selected'));
+  const target=[...document.querySelectorAll('.country-shape')].find(p=>{
+    const c=countryByNumeric(p.dataset.countryId);
+    return c?.iso3===meta.iso3;
+  });
+  if(target)target.classList.add('is-selected');
+}
+
+function renderCountryDetail(c){
+  el('country-empty').hidden=true;
+  el('country-content').hidden=false;
+  el('country-name').textContent=c.name;
+  el('country-code').textContent=c.iso3;
+  el('country-rate').textContent=countryRateLabel(c.genomes_per_day);
+  el('country-week').textContent=fmt(c.week_assemblies);
+  el('country-assemblies').textContent=fmt(c.assemblies);
+  el('country-species').textContent=fmt(c.species);
+
+  let a=0,f=0;
+  const rows=(c.yearly||[]).map(x=>({
+    year:String(x.year),
+    assemblies:(a+=Number(x.assemblies||0)),
+    first:(f+=Number(x.first_time_species||0))
+  }));
+  drawDualChart('country-cumulative-chart',rows);
 }
 
 async function loadTaxaIndex(){
