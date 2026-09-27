@@ -75,7 +75,8 @@ function render(){
   el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
   el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
   const last7=DATA.daily.slice(-7);
-  el('top-rate').textContent=fmt1(last7.reduce((a,b)=>a+(b.assemblies||0),0)/Math.max(1,last7.length));
+  const last30=DATA.daily.slice(-30);
+  el('top-rate').textContent=fmt1(last30.reduce((a,b)=>a+(b.assemblies||0),0)/Math.max(1,last30.length));
   el('primary-label').textContent=RANGE[range].label;
   el('assemblies-count').textContent=fmt(s.assemblies);
   el('species-count').textContent=fmt(s.species);
@@ -249,6 +250,7 @@ function renderStatus(){
   if(!s)return;
   const label=statusMode==='threatened'?'Threatened':'Extinct';
   const last7=dailyWindow(s.recent_daily,7,IUCN_DATA.generated_at);
+  const last30=dailyWindow(s.recent_daily,30,IUCN_DATA.generated_at);
   el('status-loading').hidden=true;
   el('status-content').hidden=false;
   el('status-primary-label').textContent=label+' · all time';
@@ -257,7 +259,7 @@ function renderStatus(){
   el('status-first').textContent=fmt(s.summary.first_time_species);
   el('status-pipeline').textContent=fmt(s.annotations?.in_progress?.length||0);
   el('status-completed').textContent=fmt(s.annotations?.recent_completed?.length||0);
-  el('status-rate').textContent=fmt1(last7.reduce((a,b)=>a+(b.assemblies||0),0)/7);
+  el('status-rate').textContent=fmt1(last30.reduce((a,b)=>a+(b.assemblies||0),0)/30);
   el('status-hero-count').textContent=fmt(s.summary.assemblies);
   el('status-hero-species').textContent=fmt(s.summary.species);
   el('status-hero-first').textContent=fmt(s.summary.first_time_species);
@@ -395,7 +397,7 @@ function renderCountryMap(){
       d3.select(this).classed('is-hovered',true);
       const name=c?.name||d.properties?.name||'Country';
       tip.innerHTML=c
-        ? `<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.week_assemblies)} assemblies · past 7 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`
+        ? `<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`
         : `<strong>${esc(name)}</strong><span>No country-assigned genome records</span>`;
       tip.hidden=false;positionTooltip(ev,tip);
     })
@@ -410,7 +412,7 @@ function renderCountryMap(){
 
   const ticks=[0,maxRate*.25,maxRate*.5,maxRate*.75,maxRate].filter((v,i,a)=>i===0||v>a[i-1]+1e-9);
   el('country-map-legend').innerHTML=
-    '<span>Genomes per day · past 7 days</span>'+
+    '<span>Genomes per day · past 30 days</span>'+
     '<div class="map-gradient"></div>'+
     '<div class="map-legend-ticks"><span>0</span><span>'+countryRateLabel(maxRate)+'</span></div>';
 }
@@ -463,7 +465,7 @@ function renderCountryDetail(c){
   el('country-name').textContent=c.name;
   el('country-code').textContent=c.iso3;
   el('country-rate').textContent=countryRateLabel(c.genomes_per_day);
-  el('country-week').textContent=fmt(c.week_assemblies);
+  el('country-week').textContent=fmt(c.window_assemblies);
   el('country-assemblies').textContent=fmt(c.assemblies);
   el('country-species').textContent=fmt(c.species);
 
