@@ -25,10 +25,32 @@ EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 ROR_URL = "https://api.ror.org/v2/organizations"
 UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repository)"
 RATE_WINDOW_DAYS = 30
-SRA_BATCH_SIZE = 500
+SRA_BATCH_SIZE = 250
 
 S = requests.Session()
 S.headers.update({"User-Agent": UA})
+
+
+def request_with_retries(method, url, *, attempts=5, **kwargs):
+    last = None
+    for attempt in range(attempts):
+        try:
+            r = S.request(method, url, **kwargs)
+            if r.status_code == 429 or 500 <= r.status_code < 600:
+                last = requests.HTTPError(
+                    f"{r.status_code} transient response for {url}",
+                    response=r,
+                )
+                time.sleep(min(8.0, 0.75 * (2 ** attempt)))
+                continue
+            r.raise_for_status()
+            return r
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            last = exc
+            time.sleep(min(8.0, 0.75 * (2 ** attempt)))
+    if last is not None:
+        raise last
+    raise RuntimeError(f"request failed without response: {url}")
 
 
 def first(d, *paths, default=None):
@@ -141,7 +163,8 @@ def query_sra_runinfo(biosamples):
 
     term = " OR ".join(f'"{x}"[BioSample]' for x in biosamples)
     time.sleep(0.36)
-    search = S.post(
+    search = request_with_retries(
+        "POST",
         ESEARCH_URL,
         data={
             "db": "sra",
@@ -152,7 +175,6 @@ def query_sra_runinfo(biosamples):
         },
         timeout=120,
     )
-    search.raise_for_status()
     ids = ((search.json().get("esearchresult") or {}).get("idlist") or [])
     if not ids:
         return {x: [] for x in biosamples}
@@ -161,7 +183,8 @@ def query_sra_runinfo(biosamples):
     for start in range(0, len(ids), 5000):
         chunk = ids[start:start + 5000]
         time.sleep(0.36)
-        fetch = S.post(
+        fetch = request_with_retries(
+            "POST",
             EFETCH_URL,
             data={
                 "db": "sra",
@@ -172,7 +195,6 @@ def query_sra_runinfo(biosamples):
             },
             timeout=180,
         )
-        fetch.raise_for_status()
         parsed = parse_runinfo(fetch.text, biosamples)
         for bs, centers in parsed.items():
             found[bs].update(centers)
@@ -192,16 +214,24 @@ def backfill_sra_cache(biosamples, cache):
             result = query_sra_runinfo(batch)
         except requests.HTTPError as exc:
             # If a query is rejected because it is too large, retry this batch
-            # as smaller chunks before failing the build.
+            # as smaller chunks. Persistent transient failures are left
+            # uncached so a later scheduled run can retry only those BioSamples.
             if exc.response is not None and exc.response.status_code in {400, 414} and len(batch) > 10:
                 result = {}
                 step = max(10, len(batch) // 3)
                 for j in range(0, len(batch), step):
                     small = batch[j:j + step]
-                    result.update(query_sra_runinfo(small))
+                    try:
+                        result.update(query_sra_runinfo(small))
+                    except requests.RequestException as subexc:
+                        print(f"SRA batch deferred after retries ({len(small)} BioSamples): {subexc}")
                     time.sleep(0.34)
             else:
-                raise
+                print(f"SRA batch deferred after retries ({len(batch)} BioSamples): {exc}")
+                result = {}
+        except requests.RequestException as exc:
+            print(f"SRA batch deferred after retries ({len(batch)} BioSamples): {exc}")
+            result = {}
         cache.update(result)
         if start % (SRA_BATCH_SIZE * 10) == 0:
             write_json(SRA_CACHE, cache)
