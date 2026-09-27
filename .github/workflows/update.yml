@@ -63,6 +63,10 @@ jobs:
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_taxa.py
 
+      - name: Build country explorer
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
+        run: python scripts/build_countries.py
+
       - name: Build IUCN threatened and extinct views
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_iucn.py
@@ -72,7 +76,7 @@ jobs:
         run: |
           git config user.name 'genome-watch-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/dashboard.json data/taxa data/status
+          git add data/dashboard.json data/taxa data/status data/countries.json
           git diff --cached --quiet || git commit -m 'data: refresh NCBI genome activity'
           git push
 
