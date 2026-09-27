@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T19:11:10.248715+00:00",
+  "generated_at": "2026-09-27T19:17:47.022881+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48163,19 +48163,19 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 35
+      "count": 27
     },
     {
       "group": "Fungi",
-      "count": 18
-    },
-    {
-      "group": "Plants",
-      "count": 10
+      "count": 17
     },
     {
       "group": "Other",
-      "count": 8
+      "count": 15
+    },
+    {
+      "group": "Plants",
+      "count": 12
     }
   ],
   "groups_all": [
@@ -48224,10 +48224,10 @@
     "assembly_name": "Mglob_BlMal_v1f",
     "total_sequence_length": 977011201,
     "chromosome_count": 21,
-    "genus": "Mespilia",
-    "family": "Temnopleuridae",
-    "phylum": "Echinodermata",
-    "group": "Animals",
+    "genus": null,
+    "family": null,
+    "phylum": null,
+    "group": "Other",
     "image": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
@@ -48262,10 +48262,10 @@
       "assembly_name": "UoM_Hdest_v2",
       "total_sequence_length": 48636580,
       "chromosome_count": 9,
-      "genus": "Halotydeus",
-      "family": "Penthaleidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48278,10 +48278,10 @@
       "assembly_name": "Mglob_BlMal_v1f",
       "total_sequence_length": 977011201,
       "chromosome_count": 21,
-      "genus": "Mespilia",
-      "family": "Temnopleuridae",
-      "phylum": "Echinodermata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
@@ -48299,10 +48299,10 @@
       "assembly_name": "ASM61617325v1",
       "total_sequence_length": 14381553938,
       "chromosome_count": 21,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Triticum",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48320,10 +48320,10 @@
       "assembly_name": "ASM61617285v1",
       "total_sequence_length": 14463317234,
       "chromosome_count": 21,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Triticum",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48357,10 +48357,10 @@
       "assembly_name": "CBS151398v1",
       "total_sequence_length": 30165745,
       "chromosome_count": 8,
-      "genus": "Verweija",
+      "genus": null,
       "family": null,
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48389,10 +48389,10 @@
       "assembly_name": "mAplRuf1.hap1",
       "total_sequence_length": 3256114483,
       "chromosome_count": 24,
-      "genus": "Aplodontia",
-      "family": "Aplodontiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Aplodontia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aplodontia.jpg",
@@ -48410,10 +48410,10 @@
       "assembly_name": "mAplRuf1.hap2",
       "total_sequence_length": 3199400031,
       "chromosome_count": 22,
-      "genus": "Aplodontia",
-      "family": "Aplodontiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Aplodontia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aplodontia.jpg",
@@ -48463,10 +48463,10 @@
       "assembly_name": "bTroAed1.hap1 v2",
       "total_sequence_length": 1224968293,
       "chromosome_count": 40,
-      "genus": "Troglodytes",
-      "family": "Certhiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48479,10 +48479,10 @@
       "assembly_name": "bTroAed1.hap2 v2",
       "total_sequence_length": 1147004143,
       "chromosome_count": 38,
-      "genus": "Troglodytes",
-      "family": "Certhiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48527,10 +48527,10 @@
       "assembly_name": "ASM61613165v1",
       "total_sequence_length": 25523718,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichosporon",
+      "family": "Trichosporonaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -48623,10 +48623,10 @@
       "assembly_name": "ASM61611885v1",
       "total_sequence_length": 40751606,
       "chromosome_count": 12,
-      "genus": "Cercospora",
-      "family": "Mycosphaerellaceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48744,7 +48744,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603715.1",
@@ -48760,7 +48765,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603705.1",
@@ -48776,7 +48786,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603655.1",
@@ -48792,7 +48807,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603605.1",
@@ -48808,7 +48828,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603565.1",
@@ -48824,7 +48849,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603495.1",
@@ -48840,7 +48870,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061603445.1",
@@ -48856,7 +48891,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+        "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+        "matched_name": "Fusarium poae"
+      }
     },
     {
       "accession": "GCA_061598105.1",
@@ -48909,7 +48949,12 @@
       "family": "Arhynchobatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Bathyraja_abyssicola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Bathyraja_abyssicola.jpg",
+        "credit": "NOAA/MBARI · Public domain",
+        "matched_name": "Bathyraja"
+      }
     },
     {
       "accession": "GCA_988289045.1",
@@ -49250,10 +49295,10 @@
       "assembly_name": "LU_Pmuan_2.1",
       "total_sequence_length": 1539255591,
       "chromosome_count": 19,
-      "genus": "Podarcis",
-      "family": "Lacertidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20210612_Podarcis_muralis_03.jpg/960px-20210612_Podarcis_muralis_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:20210612_Podarcis_muralis_03.jpg",
@@ -49324,10 +49369,10 @@
       "assembly_name": "xbOstLuri2 USDA-ARS PSRF primary",
       "total_sequence_length": 1028839577,
       "chromosome_count": 10,
-      "genus": "Ostrea",
-      "family": "Ostreidae",
-      "phylum": "Mollusca",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -49521,10 +49566,10 @@
       "assembly_name": "ASM6148185v1",
       "total_sequence_length": 14644421470,
       "chromosome_count": 21,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Triticum",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -49791,10 +49836,10 @@
       "assembly_name": "tfGorSpea1.hap1.1",
       "total_sequence_length": 234099683,
       "chromosome_count": 9,
-      "genus": "Gordius",
-      "family": "Gordiidae",
-      "phylum": "Nematomorpha",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50234,7 +50279,12 @@
       "family": "Dasyatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Dasyatidae%2C_Sunshine_Aquarium.jpg/960px-Dasyatidae%2C_Sunshine_Aquarium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dasyatidae,_Sunshine_Aquarium.jpg",
+        "credit": "Motokoka · CC BY-SA 4.0",
+        "matched_name": "Dasyatidae"
+      }
     },
     {
       "accession": "GCA_988281385.1",
@@ -50532,10 +50582,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_1_assembly",
       "total_sequence_length": 3067276070,
       "chromosome_count": 73,
-      "genus": "Carcharhinus",
-      "family": "Carcharhinidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50553,10 +50603,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_2_assembly",
       "total_sequence_length": 2887078191,
       "chromosome_count": 50,
-      "genus": "Carcharhinus",
-      "family": "Carcharhinidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50606,10 +50656,10 @@
       "assembly_name": "Cephalopholis miniata_haplotype_1_assembly",
       "total_sequence_length": 1089202513,
       "chromosome_count": 28,
-      "genus": "Cephalopholis",
-      "family": "Serranidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg/960px-Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cierva_coral_(Cephalopholis_miniata),_Zanz%C3%ADbar,_Tanzania,_2024-05-30,_DD_14.jpg",
@@ -50627,10 +50677,10 @@
       "assembly_name": "Pseudolabrus biserialis_haplotype_1_assembly",
       "total_sequence_length": 858918278,
       "chromosome_count": 25,
-      "genus": "Pseudolabrus",
-      "family": "Labridae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50643,10 +50693,10 @@
       "assembly_name": "Pseudolabrus biserialis_haplotype_2_assembly",
       "total_sequence_length": 865797395,
       "chromosome_count": 24,
-      "genus": "Pseudolabrus",
-      "family": "Labridae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -50659,10 +50709,10 @@
       "assembly_name": "Cephalopholis miniata_haplotype_2_assembly",
       "total_sequence_length": 1066352700,
       "chromosome_count": 26,
-      "genus": "Cephalopholis",
-      "family": "Serranidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg/960px-Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cierva_coral_(Cephalopholis_miniata),_Zanz%C3%ADbar,_Tanzania,_2024-05-30,_DD_14.jpg",
@@ -51221,10 +51271,10 @@
       "assembly_name": "Cqf v.1.0",
       "total_sequence_length": 86876455,
       "chromosome_count": 18,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cronartium",
+      "family": "Coleosporiaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -51237,10 +51287,10 @@
       "assembly_name": "ASM6137023v1",
       "total_sequence_length": 177597589,
       "chromosome_count": 16,
-      "genus": "Greyia",
-      "family": "Francoaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg/960px-Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_sutherlandii,_bloeiwyse,_Manie_van_der_Schijff_BT,_d.jpg",
@@ -51279,10 +51329,10 @@
       "assembly_name": "ASM6137015v1",
       "total_sequence_length": 175276884,
       "chromosome_count": 16,
-      "genus": "Greyia",
-      "family": "Francoaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Greyia_radlkoferi_01.jpg/960px-Greyia_radlkoferi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_radlkoferi_01.jpg",
@@ -51332,10 +51382,10 @@
       "assembly_name": "ASM6134649v1",
       "total_sequence_length": 460651048,
       "chromosome_count": 28,
-      "genus": "Hypomesus",
-      "family": "Osmeridae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -51348,10 +51398,10 @@
       "assembly_name": "ASM6134643v1",
       "total_sequence_length": 23461531,
       "chromosome_count": 3,
-      "genus": "Trichophyton",
-      "family": "Arthrodermataceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Microscope_view_of_Trichophyton_rubrum_04.jpg/960px-Microscope_view_of_Trichophyton_rubrum_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Microscope_view_of_Trichophyton_rubrum_04.jpg",
@@ -51401,10 +51451,10 @@
       "assembly_name": "ASM6134611v1",
       "total_sequence_length": 460001772,
       "chromosome_count": 22,
-      "genus": "Hippocampus",
-      "family": "Syngnathidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg/960px-Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Caballito_de_mar_com%C3%BAn_(Hippocampus_hippocampus),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_74.jpg",
@@ -51422,10 +51472,10 @@
       "assembly_name": "ASM6133621v1",
       "total_sequence_length": 34242889,
       "chromosome_count": 7,
-      "genus": "Trichoderma",
-      "family": "Hypocreaceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -51443,10 +51493,10 @@
       "assembly_name": "ASM6133560v1",
       "total_sequence_length": 34726479,
       "chromosome_count": 7,
-      "genus": "Trichoderma",
-      "family": "Hypocreaceae",
-      "phylum": "Ascomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -51468,7 +51518,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061312055.1",
@@ -51521,7 +51576,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311535.1",
@@ -51537,7 +51597,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311525.1",
@@ -51553,7 +51618,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311445.1",
@@ -51569,7 +51639,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311405.1",
@@ -51585,7 +51660,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311355.1",
@@ -51601,7 +51681,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311265.1",
@@ -51617,7 +51702,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311255.1",
@@ -51633,7 +51723,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311225.1",
@@ -51649,7 +51744,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311145.1",
@@ -51665,7 +51765,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311125.1",
@@ -51681,7 +51786,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061311055.1",
@@ -51697,7 +51807,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061310985.1",
@@ -51713,7 +51828,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061310975.1",
@@ -51729,7 +51849,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061310925.1",
@@ -51745,7 +51870,12 @@
       "family": "Nectriaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+        "credit": "Plant pests and diseases · CC0",
+        "matched_name": "Fusarium"
+      }
     },
     {
       "accession": "GCA_061310445.1",
@@ -51953,10 +52083,10 @@
       "assembly_name": "hrPseMaxi1.1",
       "total_sequence_length": 2461570786,
       "chromosome_count": 9,
-      "genus": "Pseudoceros",
-      "family": "Pseudocerotidae",
-      "phylum": "Platyhelminthes",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -51969,10 +52099,10 @@
       "assembly_name": "ucHalCyli1.1",
       "total_sequence_length": 28400975,
       "chromosome_count": 14,
-      "genus": "Halimeda",
-      "family": "Halimedaceae",
-      "phylum": "Chlorophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -51985,8 +52115,8 @@
       "assembly_name": "uoAurSpea1.1",
       "total_sequence_length": 42781333,
       "chromosome_count": 5,
-      "genus": "Aureoumbra",
-      "family": "Sarcinochrysidaceae",
+      "genus": null,
+      "family": null,
       "phylum": null,
       "group": "Other",
       "image": null
@@ -52224,10 +52354,10 @@
       "assembly_name": "gfPsaPilu1.hap1.1",
       "total_sequence_length": 40971153,
       "chromosome_count": 12,
-      "genus": "Psathyrella",
-      "family": "Psathyrellaceae",
-      "phylum": "Basidiomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Coprinellus_micaceus_%28Psathyrellaceae%29_%2816677534455%29.jpg/960px-Coprinellus_micaceus_%28Psathyrellaceae%29_%2816677534455%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Coprinellus_micaceus_(Psathyrellaceae)_(16677534455).jpg",
@@ -52394,10 +52524,10 @@
       "assembly_name": "gfCorHemi3.1",
       "total_sequence_length": 94097817,
       "chromosome_count": 13,
-      "genus": "Cortinarius",
-      "family": "Cortinariaceae",
-      "phylum": "Basidiomycota",
-      "group": "Fungi",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cortinarius_hemitrichus_-_Lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cortinarius_hemitrichus_-_Lindsey.jpg",
@@ -52415,10 +52545,10 @@
       "assembly_name": "fUmbCan1.1",
       "total_sequence_length": 672265990,
       "chromosome_count": 24,
-      "genus": "Umbrina",
-      "family": "Sciaenidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52447,10 +52577,10 @@
       "assembly_name": "ilGraCaec1.hap1.1",
       "total_sequence_length": 682324071,
       "chromosome_count": 29,
-      "genus": "Grapholita",
-      "family": "Tortricidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/-1241-_Grapholita_compositella_%2841027756310%29.jpg/960px--1241-_Grapholita_compositella_%2841027756310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:-1241-_Grapholita_compositella_(41027756310).jpg",
@@ -52468,10 +52598,10 @@
       "assembly_name": "xbCenAcul1.1",
       "total_sequence_length": 3766919424,
       "chromosome_count": 15,
-      "genus": "Centrocardita",
-      "family": "Carditidae",
-      "phylum": "Mollusca",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Carditidae_-_Venericardia_ameliae.JPG/960px-Carditidae_-_Venericardia_ameliae.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carditidae_-_Venericardia_ameliae.JPG",
@@ -52489,10 +52619,10 @@
       "assembly_name": "AL08_v2",
       "total_sequence_length": 188201232,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52510,10 +52640,10 @@
       "assembly_name": "WS1_v3",
       "total_sequence_length": 206829103,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52531,10 +52661,10 @@
       "assembly_name": "PU6_v3",
       "total_sequence_length": 211275725,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52552,10 +52682,10 @@
       "assembly_name": "LPT_v1",
       "total_sequence_length": 194812019,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52573,10 +52703,10 @@
       "assembly_name": "TSS_v1",
       "total_sequence_length": 206016960,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52594,10 +52724,10 @@
       "assembly_name": "NT12_v2",
       "total_sequence_length": 214002386,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52615,10 +52745,10 @@
       "assembly_name": "NT8_v2",
       "total_sequence_length": 212115726,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52636,10 +52766,10 @@
       "assembly_name": "NT9_v2",
       "total_sequence_length": 212511195,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52657,10 +52787,10 @@
       "assembly_name": "TE4_v1",
       "total_sequence_length": 211662212,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52678,10 +52808,10 @@
       "assembly_name": "BAM12_v2",
       "total_sequence_length": 208798158,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52699,10 +52829,10 @@
       "assembly_name": "TE8_v1",
       "total_sequence_length": 210562927,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52720,10 +52850,10 @@
       "assembly_name": "BOR_v1",
       "total_sequence_length": 191474027,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52741,10 +52871,10 @@
       "assembly_name": "al1_v2.1",
       "total_sequence_length": 209638215,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52762,10 +52892,10 @@
       "assembly_name": "AL27_v1",
       "total_sequence_length": 189131157,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -52783,10 +52913,10 @@
       "assembly_name": "PTP_v0",
       "total_sequence_length": 197866433,
       "chromosome_count": 8,
-      "genus": "Arabidopsis",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton%2C_N.L.%2C_and_A._Brown._1913.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Arabis_lyrata_L._-_lyrate_rockcress_-_ARLY2_-_Britton,_N.L.,_and_A._Brown._1913.jpg",
@@ -131136,7 +131266,12 @@
       "matched_name": "Arabidopsis lyrata"
     },
     "Aureoumbra sp. RCC10688": null,
-    "Bathyraja eatonii": null,
+    "Bathyraja eatonii": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Bathyraja_abyssicola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bathyraja_abyssicola.jpg",
+      "credit": "NOAA/MBARI · Public domain",
+      "matched_name": "Bathyraja"
+    },
     "Blarina brevicauda": null,
     "Boechera arcuata": null,
     "Boechera perennans": null,
@@ -131234,9 +131369,19 @@
     "Fraxinus excelsior": null,
     "Frenulina sanguinolenta": null,
     "Fromia indica": null,
-    "Fusarium graminearum": null,
+    "Fusarium graminearum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
+      "credit": "Plant pests and diseases · CC0",
+      "matched_name": "Fusarium"
+    },
     "Fusarium oxysporum f. sp. elaeidis": null,
-    "Fusarium poae": null,
+    "Fusarium poae": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fusarium_poae.jpg/960px-Fusarium_poae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Fusarium_poae.jpg",
+      "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
+      "matched_name": "Fusarium poae"
+    },
     "Gadus morhua": null,
     "Gallus gallus": null,
     "Glaucosoma hebraicum": {
