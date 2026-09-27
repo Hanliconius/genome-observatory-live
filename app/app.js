@@ -109,7 +109,7 @@ function renderRecent(){
 
 function renderRate(){
   let rows, labels;
-  if(range==='week'){rows=DATA.daily.slice(-7); labels=rows.map(x=>new Date(x.date).toLocaleDateString([], {weekday:'short'}));}
+  if(range==='week'){rows=DATA.daily.slice(-7); labels=rows.map(x=>new Date(x.date+'T12:00:00').toLocaleDateString([], {weekday:'short'}));}
   else if(range==='year'){rows=DATA.daily.slice(-365); labels=rows.map(x=>x.date);}
   else {rows=(DATA.yearly||[]).map(x=>({date:String(x.year),assemblies:x.assemblies})); labels=rows.map(x=>x.date);}
   el('rate-title').textContent=RANGE[range].rate;
@@ -139,7 +139,7 @@ function xTicks(n,mode){
 
 function xLabel(mode,label){
   if(mode==='week'||mode==='all')return label;
-  const d=new Date(label); return Number.isNaN(d.getTime())?label:d.toLocaleDateString([], {month:'short',day:'numeric'});
+  const d=new Date(label+'T12:00:00'); return Number.isNaN(d.getTime())?label:d.toLocaleDateString([], {month:'short',day:'numeric'});
 }
 
 function drawLineChart(id,rows,key,labels,mode){
@@ -197,9 +197,9 @@ function attachChartHover(svg,rows,keys,labels,mode,geom){
     });
 
     const title=mode==='week'
-      ? new Date(rows[i].date).toLocaleDateString([], {weekday:'long',month:'short',day:'numeric'})
+      ? new Date(rows[i].date+'T12:00:00').toLocaleDateString([], {weekday:'long',month:'short',day:'numeric'})
       : mode==='year'
-        ? new Date(rows[i].date).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
+        ? new Date(rows[i].date+'T12:00:00').toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
         : labels[i];
 
     tip.innerHTML=keys.length===1
