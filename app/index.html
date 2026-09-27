@@ -251,9 +251,15 @@
           <div>
             <p class="panel-kicker">Geographic activity</p>
             <h2>Genome deposition by country</h2>
-            <p class="taxon-intro">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.</p>
+            <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.</p>
           </div>
-          <div id="country-map-legend" class="country-map-legend"></div>
+          <div class="country-map-tools">
+            <nav class="status-tabs country-facet-tabs" aria-label="Country facet">
+              <button class="status-tab country-facet-tab active" data-country-facet="origin">Sample origin</button>
+              <button class="status-tab country-facet-tab" data-country-facet="sequencing">Sequencing institute</button>
+            </nav>
+            <div id="country-map-legend" class="country-map-legend"></div>
+          </div>
         </div>
         <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per day by country"></svg>
         <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
@@ -263,7 +269,7 @@
         <div>
           <p class="panel-kicker">Country history</p>
           <h2>Explore all-time genome deposition by country</h2>
-          <p class="taxon-intro">Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.</p>
+          <p class="taxon-intro" id="country-search-description">Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.</p>
         </div>
         <div class="taxon-search-wrap">
           <input id="country-search" type="search" autocomplete="off" placeholder="Try United States, Brazil, Kenya…" aria-label="Search country">
@@ -283,8 +289,8 @@
 
         <section class="stat-strip country-stats">
           <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="country-rate">—</span></div>
-          <div class="stat-box"><span class="stat-label">Past 30 days</span><span class="stat-value" id="country-week">—</span></div>
-          <div class="stat-box"><span class="stat-label">All-time assemblies</span><span class="stat-value" id="country-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label" id="country-window-label">Past 30 days</span><span class="stat-value" id="country-week">—</span></div>
+          <div class="stat-box"><span class="stat-label" id="country-all-label">All-time assemblies</span><span class="stat-value" id="country-assemblies">—</span></div>
           <div class="stat-box"><span class="stat-label">Species represented</span><span class="stat-value" id="country-species">—</span></div>
         </section>
 
@@ -296,7 +302,7 @@
             </div>
           </div>
           <svg id="country-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-          <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species in country</span></div>
+          <div class="legend"><span><i class="swatch swatch-a"></i><span id="country-assembly-legend">Assemblies</span></span><span><i class="swatch swatch-b"></i><span id="country-species-legend">First-time species in country</span></span></div>
         </article>
       </section>
     </section>
@@ -368,6 +374,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20260927j"></script>
+  <script src="app.js?v=20260927k"></script>
 </body>
 </html>
