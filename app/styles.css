@@ -71,3 +71,45 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 
 .donut-seg{cursor:pointer;transition:stroke-width .12s ease,opacity .12s ease}
 .donut-seg.is-hovered{stroke-width:34;opacity:.9}
+
+.section-tabs{display:flex;gap:20px;margin-top:22px;border-bottom:1px solid var(--line-dark)}
+.section-tab{appearance:none;border:0;border-bottom:3px solid transparent;background:transparent;padding:0 0 10px;color:var(--muted);font:inherit;font-size:.94rem;font-weight:560;cursor:pointer}
+.section-tab.active{color:var(--ink);border-bottom-color:var(--ink)}
+.section-tab:hover{color:var(--ink)}
+
+#taxa-view{margin-top:22px}
+.taxon-search-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,.9fr);gap:42px;align-items:end;background:var(--panel);border:1px solid var(--line-dark);padding:24px}
+.taxon-search-panel h2{font-size:clamp(1.6rem,3vw,2.5rem);letter-spacing:-.035em;margin:5px 0 8px;font-weight:620}
+.taxon-intro{margin:0;color:var(--muted);line-height:1.5;max-width:650px}
+.taxon-search-wrap{position:relative}
+#taxon-search{width:100%;appearance:none;border:1px solid var(--line-dark);border-radius:6px;background:#fff;color:var(--ink);padding:13px 14px;font:inherit;font-size:1rem;outline:none}
+#taxon-search:focus{border-color:var(--ink);box-shadow:0 0 0 2px rgba(17,24,21,.07)}
+.taxon-results{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;background:var(--panel);border:1px solid var(--line-dark);box-shadow:0 14px 30px rgba(17,24,21,.12);max-height:430px;overflow:auto}
+.taxon-results:empty{display:none}
+.taxon-results-label,.taxon-loading{padding:9px 12px;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--line)}
+.taxon-result{width:100%;appearance:none;border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--ink);display:flex;justify-content:space-between;gap:18px;text-align:left;padding:10px 12px;font:inherit;cursor:pointer}
+.taxon-result:last-child{border-bottom:0}
+.taxon-result:hover,.taxon-result:focus{background:var(--soft);outline:none}
+.taxon-result span:first-child{display:grid;gap:2px}
+.taxon-result strong{font-size:.91rem;font-weight:600}
+.taxon-result small{color:var(--muted);font-size:.75rem}
+.taxon-result>span:last-child{color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
+
+.taxon-empty{border:1px solid var(--line-dark);border-top:0;background:var(--panel);padding:42px 24px;color:var(--muted)}
+.taxon-heading{background:var(--panel);border:1px solid var(--line-dark);border-top:0;padding:24px}
+.taxon-heading h2{font-size:clamp(2.3rem,5vw,4.6rem);line-height:.95;letter-spacing:-.055em;margin:6px 0 8px;font-weight:650}
+.taxon-lineage{margin:0;color:var(--muted)}
+.taxon-stats{grid-template-columns:repeat(5,1fr);margin:0;border-top:0}
+.stat-date{font-size:1.08rem;line-height:1.2;letter-spacing:-.02em}
+.taxon-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-top:0}
+.taxon-grid .panel{min-width:0}
+
+@media(max-width:900px){
+  .taxon-search-panel{grid-template-columns:1fr;gap:20px}
+  .taxon-stats{grid-template-columns:repeat(2,1fr)}
+  .taxon-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .taxon-stats{grid-template-columns:1fr}
+  .section-tabs{gap:14px}
+}
