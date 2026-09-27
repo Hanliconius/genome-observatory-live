@@ -43,7 +43,7 @@ jobs:
       - name: Refresh recent assemblies, annotations and images
         run: python scripts/update.py
         env:
-          RECENT_DAYS: '90'
+          RECENT_DAYS: '370'
           OVERLAP_DAYS: '14'
 
       - name: Commit changed data
