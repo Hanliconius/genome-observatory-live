@@ -1,25 +1,170 @@
 const D='../data/dashboard.json';
-const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const el=id=>document.getElementById(id);
-let DATA,range='week';
+const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
+const fmt1=n=>Number(n||0).toFixed(1);
+let DATA, range='week';
 
-fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{el('updated').textContent='data unavailable';console.error(err)});
+const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
+const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
 
-document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');range=b.dataset.range;render()}));
+fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); range=b.dataset.range; render();
+}));
 
 function render(){
- const s=DATA.summary[range];
- el('updated').textContent=(DATA.demo_seed?'awaiting first live refresh · ':'updated ')+new Date(DATA.generated_at).toLocaleString([], {dateStyle:'medium',timeStyle:'short'});
- el('primary-label').textContent=range==='week'?'NEW CHROMOSOME-SCALE ASSEMBLIES':range==='year'?'CHROMOSOME-SCALE ASSEMBLIES · PAST YEAR':'CHROMOSOME-SCALE ASSEMBLIES · ALL TIME';
- el('assemblies-count').textContent=fmt(s.assemblies); el('species-count').textContent=fmt(s.species); el('first-count').textContent=fmt(s.first_time_species);
- el('pipeline-count').textContent=fmt(DATA.annotations.in_progress.length); el('completed-count').textContent=fmt(DATA.annotations.recent_completed.length);
- renderMiniBars(DATA.daily.slice(-7)); renderPipeline(); renderNewest(); renderGroups(); renderRecent(); renderRate(); renderCumulative();
+  const s=DATA.summary[range];
+  el('updated').textContent=new Date(DATA.generated_at).toLocaleString([], {dateStyle:'medium',timeStyle:'short'});
+  el('range-label').textContent=RANGE[range].label;
+  el('top-assemblies').textContent=fmt(s.assemblies);
+  el('top-species').textContent=fmt(s.species);
+  el('top-first').textContent=fmt(s.first_time_species);
+  el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
+  el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
+  const last7=DATA.daily.slice(-7);
+  el('top-rate').textContent=fmt1(last7.reduce((a,b)=>a+(b.assemblies||0),0)/Math.max(1,last7.length));
+  el('primary-label').textContent=RANGE[range].label;
+  el('assemblies-count').textContent=fmt(s.assemblies);
+  el('species-count').textContent=fmt(s.species);
+  el('first-count').textContent=fmt(s.first_time_species);
+
+  renderMiniBars(last7);
+  renderNewest();
+  renderDonuts();
+  renderPipeline();
+  renderGroups();
+  renderRecent();
+  renderRate();
+  renderCumulative();
 }
-function renderMiniBars(rows){const m=Math.max(1,...rows.map(x=>x.assemblies));el('daily-bars').innerHTML=rows.map(x=>`<i title="${x.date}: ${x.assemblies}" style="height:${Math.max(4,100*x.assemblies/m)}%"></i>`).join('')}
-function renderPipeline(){el('pipeline-list').innerHTML=DATA.annotations.in_progress.slice(0,6).map(x=>`<div class="pipeline-row"><span><em>${x.species}</em></span><span>${x.status}</span></div>`).join('');el('recent-annotation-list').innerHTML=DATA.annotations.recent_completed.slice(0,5).map(x=>`<div class="pipeline-row"><span><em>${x.species}</em></span><span>${x.release_date}</span></div>`).join('')}
-function renderNewest(){const x=DATA.recent_assemblies[0]; if(!x){el('newest-card').innerHTML='<div class="image-placeholder"></div><div><h2>Waiting for live data</h2></div>';return;}const img=x.image?.thumb_url?`<img class="taxon-image" src="${x.image.thumb_url}" alt="${x.organism_name}" loading="lazy">`:'<div class="image-placeholder"></div>';el('newest-card').innerHTML=`${img}<div><h2>${x.organism_name}</h2><p>${x.assembly_level} · ${x.accession} · ${(x.total_sequence_length/1e6).toFixed(1)} Mb</p><p>${x.family||x.genus||''}</p>${x.image?.credit?`<p class="credit">${x.image.credit}</p>`:''}</div>`}
-function renderGroups(){const rows=DATA.groups_week||[];const m=Math.max(1,...rows.map(x=>x.count));el('group-bars').innerHTML=rows.map(x=>`<div class="group-row"><span>${x.group}</span><span class="group-track"><i class="group-fill" style="width:${100*x.count/m}%"></i></span><b>${x.count}</b></div>`).join('')}
-function renderRecent(){el('recent-list').innerHTML=DATA.recent_assemblies.slice(0,16).map(x=>`<div class="recent-row"><span class="meta">${x.release_date}</span><span class="species">${x.organism_name}</span><span class="meta">${x.assembly_name||''}</span><span>${x.assembly_level}</span><span class="meta">${x.accession}</span></div>`).join('')}
-function points(rows,key,w=800,h=220,pad=18){if(!rows.length)return'';const vals=rows.map(r=>Number(r[key]||0)),max=Math.max(1,...vals),min=Math.min(0,...vals);return rows.map((r,i)=>{const x=pad+(w-pad*2)*(i/Math.max(1,rows.length-1));const y=pad+(h-pad*2)*(1-(vals[i]-min)/(max-min||1));return `${x.toFixed(1)},${y.toFixed(1)}`}).join(' ')}
-function renderRate(){let rows=range==='week'?DATA.daily.slice(-7):range==='year'?DATA.daily.slice(-365):DATA.yearly;const p=points(rows,'assemblies');el('rate-chart').innerHTML=`<line class="grid-line" x1="18" y1="220" x2="782" y2="220"/><polygon class="area-a" points="18,220 ${p} 782,220"/><polyline class="series-a" points="${p}"/>`;const last7=DATA.daily.slice(-7);el('rate7').textContent=(last7.reduce((a,b)=>a+b.assemblies,0)/Math.max(1,last7.length)).toFixed(1);el('rate-title').textContent=range==='all'?'Assemblies deposited per year':'Chromosome-scale genomes deposited per day'}
-function renderCumulative(){const rows=DATA.yearly;let ca=0,cf=0;const cum=rows.map(r=>({year:r.year,a:(ca+=r.assemblies),f:(cf+=r.first_time_species)}));el('cumulative-chart').innerHTML=`<line class="grid-line" x1="18" y1="220" x2="782" y2="220"/><polyline class="series-a" points="${points(cum,'a')}"/><polyline class="series-b" points="${points(cum,'f')}"/>`}
+
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+function renderMiniBars(rows){
+  const m=Math.max(1,...rows.map(x=>x.assemblies||0));
+  el('daily-bars').innerHTML=rows.map(x=>`<i title="${esc(x.date)}: ${x.assemblies}" style="height:${Math.max(4,100*(x.assemblies||0)/m)}%"></i>`).join('');
+}
+
+function renderNewest(){
+  const x=DATA.recent_assemblies?.[0];
+  if(!x){el('newest-card').innerHTML='<div class="image-placeholder">No recent assembly metadata available</div>';return;}
+  const image=x.image?.thumb_url
+    ? `<img class="taxon-image" src="${x.image.thumb_url}" alt="${esc(x.organism_name)}" loading="lazy">`
+    : '<div class="image-placeholder">No Wikimedia image found for species, genus, or family</div>';
+  const taxon=[x.family,x.genus].filter(Boolean).join(' · ');
+  el('newest-card').innerHTML=`${image}<div>
+    <h3>${esc(x.organism_name)}</h3>
+    <p>${esc(x.assembly_level||'Assembly')} · ${esc(x.accession||'')} · ${x.total_sequence_length?fmt1(x.total_sequence_length/1e6)+' Mb':'size unavailable'}</p>
+    ${taxon?`<p>${esc(taxon)}</p>`:''}
+    <p>Released ${esc(x.release_date||'')}</p>
+    ${x.image?.credit?`<p class="credit">Image credit: ${x.image.credit}</p>`:''}
+  </div>`;
+}
+
+function normalizedGroups(rows){
+  const map={Animals:0,Plants:0,Fungi:0,Other:0};
+  (rows||[]).forEach(x=>{map[x.group in map?x.group:'Other']+=(x.count||0)});
+  return Object.entries(map).map(([group,count])=>({group,count}));
+}
+
+function renderDonuts(){
+  drawDonut('donut-week','donut-week-legend',normalizedGroups(DATA.groups_week),'assemblies');
+  drawDonut('donut-all','donut-all-legend',normalizedGroups(DATA.groups_all),'assemblies');
+}
+
+function drawDonut(svgId,legendId,rows,unit){
+  const svg=el(svgId), legend=el(legendId);
+  const total=rows.reduce((a,b)=>a+b.count,0);
+  const r=86,c=2*Math.PI*r;
+  let offset=0;
+  let html=`<circle class="donut-bg" cx="120" cy="120" r="${r}"></circle>`;
+  rows.forEach(x=>{
+    const frac=total?x.count/total:0;
+    const dash=frac*c;
+    html+=`<circle class="donut-seg" cx="120" cy="120" r="${r}" stroke="${COLORS[x.group]}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
+    offset+=dash;
+  });
+  html+=`<text class="donut-center-main" x="120" y="116">${fmt(total)}</text><text class="donut-center-sub" x="120" y="137">${unit}</text>`;
+  svg.innerHTML=html;
+  legend.innerHTML=rows.map(x=>`<div class="donut-row"><i class="dot" style="background:${COLORS[x.group]}"></i><span>${x.group}</span><span class="n">${fmt(x.count)}</span><span class="pct">${total?fmt1(100*x.count/total):'0.0'}%</span></div>`).join('');
+}
+
+function renderPipeline(){
+  el('pipeline-list').innerHTML=(DATA.annotations.in_progress||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.status||'')}</span></div>`).join('')||'<p class="note">No annotation runs listed.</p>';
+  el('recent-annotation-list').innerHTML=(DATA.annotations.recent_completed||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.release_date||'')}</span></div>`).join('')||'<p class="note">No recent annotations listed.</p>';
+}
+
+function renderGroups(){
+  const rows=normalizedGroups(DATA.groups_week), total=rows.reduce((a,b)=>a+b.count,0)||1;
+  el('group-table').innerHTML=rows.map(x=>`<div class="table-row"><strong>${x.group}</strong><span>${fmt(x.count)}</span><span>${fmt1(100*x.count/total)}%</span></div>`).join('');
+}
+
+function renderRecent(){
+  const rows=DATA.recent_assemblies||[];
+  el('recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
+  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+}
+
+function renderRate(){
+  let rows, labels;
+  if(range==='week'){rows=DATA.daily.slice(-7); labels=rows.map(x=>new Date(x.date).toLocaleDateString([], {weekday:'short'}));}
+  else if(range==='year'){rows=DATA.daily.slice(-365); labels=rows.map(x=>x.date);}
+  else {rows=(DATA.yearly||[]).map(x=>({date:String(x.year),assemblies:x.assemblies})); labels=rows.map(x=>x.date);}
+  el('rate-title').textContent=RANGE[range].rate;
+  drawLineChart('rate-chart',rows,'assemblies',labels,range);
+}
+
+function renderCumulative(){
+  let a=0,f=0;
+  const rows=(DATA.yearly||[]).map(x=>({year:String(x.year),assemblies:(a+=Number(x.assemblies||0)),first:(f+=Number(x.first_time_species||0))}));
+  drawDualChart('cumulative-chart',rows);
+}
+
+function niceMax(v){
+  if(v<=0)return 1;
+  const p=Math.pow(10,Math.floor(Math.log10(v))),s=v/p;
+  return (s<=1?1:s<=2?2:s<=5?5:10)*p;
+}
+
+function xTicks(n,mode){
+  if(n<=1)return[0];
+  if(mode==='week')return [...Array(n).keys()];
+  const target=mode==='year'?5:6,step=Math.max(1,Math.floor((n-1)/(target-1))),out=[];
+  for(let i=0;i<n;i+=step)out.push(i);
+  if(out[out.length-1]!==n-1)out.push(n-1);
+  return [...new Set(out)];
+}
+
+function xLabel(mode,label){
+  if(mode==='week'||mode==='all')return label;
+  const d=new Date(label); return Number.isNaN(d.getTime())?label:d.toLocaleDateString([], {month:'short',day:'numeric'});
+}
+
+function drawLineChart(id,rows,key,labels,mode){
+  const svg=el(id); if(!rows.length){svg.innerHTML='';return;}
+  const w=860,h=320,L=60,R=18,T=12,B=42,iw=w-L-R,ih=h-T-B;
+  const vals=rows.map(x=>Number(x[key]||0)),max=niceMax(Math.max(...vals));
+  const pts=rows.map((x,i)=>[L+iw*(rows.length===1?.5:i/(rows.length-1)),T+ih*(1-Number(x[key]||0)/max)]);
+  let html='';
+  for(let i=0;i<=4;i++){const val=max*i/4,y=T+ih*(1-i/4);html+=`<line class="gridline" x1="${L}" y1="${y}" x2="${w-R}" y2="${y}"></line><text class="tick-label" x="${L-8}" y="${y+4}" text-anchor="end">${fmt(Math.round(val))}</text>`;}
+  html+=`<line class="axis" x1="${L}" y1="${T}" x2="${L}" y2="${h-B}"></line><line class="axis" x1="${L}" y1="${h-B}" x2="${w-R}" y2="${h-B}"></line>`;
+  xTicks(rows.length,mode).forEach(i=>{const x=L+iw*(rows.length===1?.5:i/(rows.length-1));html+=`<line class="axis" x1="${x}" y1="${h-B}" x2="${x}" y2="${h-B+5}"></line><text class="tick-label" x="${x}" y="${h-18}" text-anchor="middle">${esc(xLabel(mode,labels[i]))}</text>`;});
+  const poly=pts.map(p=>p.map(v=>v.toFixed(1)).join(',')).join(' ');
+  html+=`<polygon class="area-a" points="${L},${h-B} ${poly} ${w-R},${h-B}"></polygon><polyline class="series-a" points="${poly}"></polyline>`;
+  svg.innerHTML=html;
+}
+
+function drawDualChart(id,rows){
+  const svg=el(id); if(!rows.length){svg.innerHTML='';return;}
+  const w=860,h=320,L=60,R=18,T=12,B=42,iw=w-L-R,ih=h-T-B;
+  const max=niceMax(Math.max(...rows.flatMap(x=>[Number(x.assemblies||0),Number(x.first||0)])));
+  let html='';
+  for(let i=0;i<=4;i++){const val=max*i/4,y=T+ih*(1-i/4);html+=`<line class="gridline" x1="${L}" y1="${y}" x2="${w-R}" y2="${y}"></line><text class="tick-label" x="${L-8}" y="${y+4}" text-anchor="end">${fmt(Math.round(val))}</text>`;}
+  html+=`<line class="axis" x1="${L}" y1="${T}" x2="${L}" y2="${h-B}"></line><line class="axis" x1="${L}" y1="${h-B}" x2="${w-R}" y2="${h-B}"></line>`;
+  xTicks(rows.length,'all').forEach(i=>{const x=L+iw*(rows.length===1?.5:i/(rows.length-1));html+=`<line class="axis" x1="${x}" y1="${h-B}" x2="${x}" y2="${h-B+5}"></line><text class="tick-label" x="${x}" y="${h-18}" text-anchor="middle">${esc(rows[i].year)}</text>`;});
+  const make=k=>rows.map((r,i)=>[L+iw*(rows.length===1?.5:i/(rows.length-1)),T+ih*(1-Number(r[k]||0)/max)].map(v=>v.toFixed(1)).join(',')).join(' ');
+  html+=`<polyline class="series-a" points="${make('assemblies')}"></polyline><polyline class="series-b" points="${make('first')}"></polyline>`;
+  svg.innerHTML=html;
+}
