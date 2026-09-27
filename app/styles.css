@@ -58,3 +58,8 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .hover-guide{stroke:#7c8882;stroke-width:1;stroke-dasharray:3 4;vector-effect:non-scaling-stroke}
 .hover-dot{stroke:#fff;stroke-width:2;vector-effect:non-scaling-stroke}.hover-dot-a{fill:var(--ink)}.hover-dot-b{fill:var(--accent)}
 .chart{cursor:crosshair}
+
+.milestone-section{margin-top:28px;padding-top:18px;border-top:1px solid var(--line-dark)}
+.milestone-table{margin-top:10px}
+.milestone-row{grid-template-columns:90px 1fr 0!important}
+.milestone-date{color:var(--muted)}
