@@ -48,7 +48,7 @@ function renderMiniBars(rows){
 }
 
 function renderNewest(){
-  const x=DATA.recent_assemblies?.[0];
+  const x=DATA.featured_assembly || DATA.recent_assemblies?.find(x=>x.image?.thumb_url) || DATA.recent_assemblies?.[0];
   if(!x){el('newest-card').innerHTML='<div class="image-placeholder">No recent assembly metadata available</div>';return;}
   const image=x.image?.thumb_url
     ? `<img class="taxon-image" src="${x.image.thumb_url}" alt="${esc(x.organism_name)}" loading="lazy">`
@@ -103,8 +103,8 @@ function renderGroups(){
 
 function renderRecent(){
   const rows=DATA.recent_assemblies||[];
-  el('recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
-  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+  el('recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
+  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
 }
 
 function renderRate(){
@@ -153,7 +153,9 @@ function drawLineChart(id,rows,key,labels,mode){
   xTicks(rows.length,mode).forEach(i=>{const x=L+iw*(rows.length===1?.5:i/(rows.length-1));html+=`<line class="axis" x1="${x}" y1="${h-B}" x2="${x}" y2="${h-B+5}"></line><text class="tick-label" x="${x}" y="${h-18}" text-anchor="middle">${esc(xLabel(mode,labels[i]))}</text>`;});
   const poly=pts.map(p=>p.map(v=>v.toFixed(1)).join(',')).join(' ');
   html+=`<polygon class="area-a" points="${L},${h-B} ${poly} ${w-R},${h-B}"></polygon><polyline class="series-a" points="${poly}"></polyline>`;
+  html+=`<line class="hover-guide" x1="0" y1="${T}" x2="0" y2="${h-B}" visibility="hidden"></line><circle class="hover-dot hover-dot-a" cx="0" cy="0" r="4" visibility="hidden"></circle>`;
   svg.innerHTML=html;
+  attachChartHover(svg,rows,[key],labels,mode,{L,R,T,B,w,h,max});
 }
 
 function drawDualChart(id,rows){
@@ -166,5 +168,59 @@ function drawDualChart(id,rows){
   xTicks(rows.length,'all').forEach(i=>{const x=L+iw*(rows.length===1?.5:i/(rows.length-1));html+=`<line class="axis" x1="${x}" y1="${h-B}" x2="${x}" y2="${h-B+5}"></line><text class="tick-label" x="${x}" y="${h-18}" text-anchor="middle">${esc(rows[i].year)}</text>`;});
   const make=k=>rows.map((r,i)=>[L+iw*(rows.length===1?.5:i/(rows.length-1)),T+ih*(1-Number(r[k]||0)/max)].map(v=>v.toFixed(1)).join(',')).join(' ');
   html+=`<polyline class="series-a" points="${make('assemblies')}"></polyline><polyline class="series-b" points="${make('first')}"></polyline>`;
+  html+=`<line class="hover-guide" x1="0" y1="${T}" x2="0" y2="${h-B}" visibility="hidden"></line><circle class="hover-dot hover-dot-a" cx="0" cy="0" r="4" visibility="hidden"></circle><circle class="hover-dot hover-dot-b" cx="0" cy="0" r="4" visibility="hidden"></circle>`;
   svg.innerHTML=html;
+  attachChartHover(svg,rows,['assemblies','first'],rows.map(x=>x.year),'all',{L,R,T,B,w,h,max});
+}
+
+function attachChartHover(svg,rows,keys,labels,mode,geom){
+  const tip=el('chart-tooltip');
+  if(!tip || !rows.length) return;
+  const {L,R,T,B,w,h,max}=geom;
+  const guide=svg.querySelector('.hover-guide');
+  const dots=[...svg.querySelectorAll('.hover-dot')];
+
+  const move=(ev)=>{
+    const rect=svg.getBoundingClientRect();
+    const px=(ev.clientX-rect.left)/rect.width*w;
+    const innerW=w-L-R;
+    const frac=Math.max(0,Math.min(1,(px-L)/innerW));
+    const i=Math.round(frac*(rows.length-1));
+    const x=L+innerW*(rows.length===1?.5:i/(rows.length-1));
+    guide.setAttribute('x1',x); guide.setAttribute('x2',x); guide.setAttribute('visibility','visible');
+
+    const values=keys.map((key,j)=>{
+      const v=Number(rows[i][key]||0);
+      const y=T+(h-T-B)*(1-v/(max||1));
+      if(dots[j]){dots[j].setAttribute('cx',x);dots[j].setAttribute('cy',y);dots[j].setAttribute('visibility','visible');}
+      return v;
+    });
+
+    const title=mode==='week'
+      ? new Date(rows[i].date).toLocaleDateString([], {weekday:'long',month:'short',day:'numeric'})
+      : mode==='year'
+        ? new Date(rows[i].date).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
+        : labels[i];
+
+    tip.innerHTML=keys.length===1
+      ? `<strong>${esc(title)}</strong><span>${fmt(values[0])} assemblies</span>`
+      : `<strong>${esc(title)}</strong><span>${fmt(values[0])} cumulative assemblies</span><span>${fmt(values[1])} first-time species</span>`;
+    tip.hidden=false;
+
+    const pad=14;
+    let left=ev.clientX+16, top=ev.clientY+16;
+    const tw=tip.offsetWidth, th=tip.offsetHeight;
+    if(left+tw+pad>window.innerWidth) left=ev.clientX-tw-16;
+    if(top+th+pad>window.innerHeight) top=ev.clientY-th-16;
+    tip.style.left=left+'px'; tip.style.top=top+'px';
+  };
+
+  const leave=()=>{
+    guide.setAttribute('visibility','hidden');
+    dots.forEach(d=>d.setAttribute('visibility','hidden'));
+    tip.hidden=true;
+  };
+
+  svg.onpointermove=move;
+  svg.onpointerleave=leave;
 }
