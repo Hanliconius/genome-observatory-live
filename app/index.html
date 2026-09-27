@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f6f7f4" />
   <title>Eukaryote Genome Watch</title>
-  <link rel="stylesheet" href="styles.css?v=20260927g" />
+  <link rel="stylesheet" href="styles.css?v=20260927h" />
 </head>
 <body>
   <header class="site-head">
@@ -24,6 +24,7 @@
   <main>
     <nav class="section-tabs" aria-label="Dashboard section">
       <button class="section-tab active" data-view="overview">Overview</button>
+      <button class="section-tab" data-view="status">Endangered</button>
       <button class="section-tab" data-view="taxa">Taxa explorer</button>
     </nav>
 
@@ -140,6 +141,109 @@
       </section>
     </section>
 
+    <section id="status-view" hidden>
+      <article class="status-intro">
+        <div>
+          <p class="panel-kicker">IUCN Red List</p>
+          <h2>Genome deposition for threatened and extinct species</h2>
+          <p class="taxon-intro">Chromosome-scale and complete GenBank assemblies, restricted to taxa carrying current IUCN Red List categories.</p>
+        </div>
+        <nav class="status-tabs" aria-label="IUCN category group">
+          <button class="status-tab active" data-status="threatened">Threatened <span>VU · EN · CR</span></button>
+          <button class="status-tab" data-status="extinct">Extinct <span>EW · EX</span></button>
+        </nav>
+      </article>
+
+      <div id="status-loading" class="status-loading">Loading IUCN genome history…</div>
+
+      <section id="status-content" hidden>
+        <section class="stat-strip status-stats">
+          <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="status-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="status-species">—</span></div>
+          <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="status-first">—</span></div>
+          <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="status-pipeline">—</span></div>
+          <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="status-completed">—</span></div>
+          <div class="stat-box"><span class="stat-label">7-day rate</span><span class="stat-value" id="status-rate">—</span></div>
+        </section>
+
+        <section class="layout-grid">
+          <article class="panel hero-panel span-2">
+            <p class="panel-kicker" id="status-primary-label">Threatened · all time</p>
+            <h2 class="panel-title" id="status-hero-title">Threatened species genome deposits</h2>
+            <div class="hero-number" id="status-hero-count">—</div>
+            <p class="hero-subline"><span id="status-hero-species">—</span> species represented · <span id="status-hero-first">—</span> first-time species</p>
+            <div class="sparkline-wrap">
+              <div class="sparkline-labels"><span>Daily activity</span><span>last 7 days</span></div>
+              <div class="mini-bars" id="status-daily-bars" aria-label="Daily matching assembly counts"></div>
+            </div>
+          </article>
+
+          <article class="panel photo-panel">
+            <p class="panel-kicker">Newest arrival</p>
+            <h2 class="panel-title">Most recent matching deposited genome</h2>
+            <div id="status-newest-card" class="newest-card"></div>
+          </article>
+
+          <article class="panel full-width composition-panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Composition</p>
+                <h2 class="panel-title">Red List category and broad taxonomic composition</h2>
+              </div>
+            </div>
+            <div class="donut-pair">
+              <div class="donut-block">
+                <h3>IUCN category</h3>
+                <div class="donut-wrap"><svg id="status-donut-iucn" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+                <div id="status-donut-iucn-legend" class="donut-legend"></div>
+              </div>
+              <div class="donut-block">
+                <h3>Broad groups</h3>
+                <div class="donut-wrap"><svg id="status-donut-groups" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+                <div id="status-donut-groups-legend" class="donut-legend"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel chart-panel span-2">
+            <div class="panel-head"><div><p class="panel-kicker">Assemblies over time</p><h2 class="panel-title">Deposits per year</h2></div></div>
+            <svg id="status-rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          </article>
+
+          <article class="panel list-panel">
+            <p class="panel-kicker">RefSeq</p>
+            <h2 class="panel-title">Matching annotation activity</h2>
+            <div class="subsection"><h3>In progress</h3><div id="status-pipeline-list" class="list-table"></div></div>
+            <div class="subsection"><h3>Recently completed</h3><div id="status-recent-annotation-list" class="list-table"></div></div>
+          </article>
+
+          <article class="panel chart-panel span-2">
+            <div class="panel-head"><div><p class="panel-kicker">Cumulative coverage</p><h2 class="panel-title">Assemblies and first-time species through time</h2></div></div>
+            <svg id="status-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+          </article>
+
+          <article class="panel summary-panel">
+            <p class="panel-kicker">All time</p>
+            <h2 class="panel-title">Broad groups</h2>
+            <div id="status-group-table" class="simple-table"></div>
+            <div class="subsection milestone-section">
+              <p class="panel-kicker">Milestones</p><h2 class="panel-title">When did we cross each total?</h2>
+              <div id="status-milestone-table" class="simple-table milestone-table"></div>
+            </div>
+          </article>
+
+          <article class="panel full-width">
+            <div class="panel-head">
+              <div><p class="panel-kicker">Recent deposits</p><h2 class="panel-title">Rolling matching assembly metadata</h2></div>
+              <p class="note" id="status-source-note">IUCN Red List categories · species-name matching</p>
+            </div>
+            <div id="status-recent-list" class="recent-table"></div>
+          </article>
+        </section>
+      </section>
+    </section>
+
     <section id="taxa-view" hidden>
       <article class="taxon-search-panel">
         <div>
@@ -202,9 +306,9 @@
 
   <footer class="site-foot">
     <p>Assembly metadata: NCBI Datasets, restricted to GenBank eukaryote assemblies at chromosome or complete level. Annotation status: NCBI RefSeq.</p>
-    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
+    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
   </footer>
 
-  <script src="app.js?v=20260927g"></script>
+  <script src="app.js?v=20260927h"></script>
 </body>
 </html>
