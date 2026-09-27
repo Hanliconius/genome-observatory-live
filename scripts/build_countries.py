@@ -186,7 +186,8 @@ def normalize(report):
 
 def main():
     today = date.today()
-    week_cutoff = (today - timedelta(days=6)).isoformat()
+    rate_window_days = 30
+    window_cutoff = (today - timedelta(days=rate_window_days - 1)).isoformat()
 
     countries = {}
     unassigned = 0
@@ -202,7 +203,7 @@ def main():
                 "iso_n3": c["iso_n3"],
                 "name": c["name"],
                 "assemblies": 0,
-                "week_assemblies": 0,
+                "window_assemblies": 0,
                 "species": set(),
                 "first_seen": {},
                 "yearly_assemblies": defaultdict(int),
@@ -225,8 +226,8 @@ def main():
         rec["assemblies"] += 1
         rec["species"].add(x["organism_name"])
         rec["yearly_assemblies"][x["release_date"][:4]] += 1
-        if x["release_date"] >= week_cutoff:
-            rec["week_assemblies"] += 1
+        if x["release_date"] >= window_cutoff:
+            rec["window_assemblies"] += 1
 
         org = x["organism_name"]
         old = rec["first_seen"].get(org)
@@ -257,8 +258,8 @@ def main():
             "assemblies": rec["assemblies"],
             "species": len(rec["species"]),
             "first_time_species": len(rec["first_seen"]),
-            "week_assemblies": rec["week_assemblies"],
-            "genomes_per_day": rec["week_assemblies"] / 7.0,
+            "window_assemblies": rec["window_assemblies"],
+            "genomes_per_day": rec["window_assemblies"] / float(rate_window_days),
             "yearly": yearly,
         })
 
@@ -277,6 +278,7 @@ def main():
             "assemblies_unassigned": unassigned,
             "fraction_assigned": assigned / reports if reports else 0,
         },
+        "rate_window_days": rate_window_days,
         "countries": out_rows,
     }
     OUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n")
