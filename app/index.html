@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f6f7f4" />
   <title>Eukaryote Genome Watch</title>
-  <link rel="stylesheet" href="styles.css?v=20260927f" />
+  <link rel="stylesheet" href="styles.css?v=20260927g" />
 </head>
 <body>
   <header class="site-head">
@@ -22,124 +22,189 @@
   </header>
 
   <main>
-    <nav class="range-tabs" aria-label="Time range">
-      <button class="tab active" data-range="week">Past week</button>
-      <button class="tab" data-range="year">Past year</button>
-      <button class="tab" data-range="all">All time</button>
+    <nav class="section-tabs" aria-label="Dashboard section">
+      <button class="section-tab active" data-view="overview">Overview</button>
+      <button class="section-tab" data-view="taxa">Taxa explorer</button>
     </nav>
 
-    <section class="stat-strip">
-      <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="top-assemblies">—</span></div>
-      <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="top-species">—</span></div>
-      <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="top-first">—</span></div>
-      <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="top-pipeline">—</span></div>
-      <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="top-completed">—</span></div>
-      <div class="stat-box"><span class="stat-label">7-day rate</span><span class="stat-value" id="top-rate">—</span></div>
+    <section id="overview-view">
+      <nav class="range-tabs" aria-label="Time range">
+        <button class="tab active" data-range="week">Past week</button>
+        <button class="tab" data-range="year">Past year</button>
+        <button class="tab" data-range="all">All time</button>
+      </nav>
+
+      <section class="stat-strip">
+        <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="top-assemblies">—</span></div>
+        <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="top-species">—</span></div>
+        <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="top-first">—</span></div>
+        <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="top-pipeline">—</span></div>
+        <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="top-completed">—</span></div>
+        <div class="stat-box"><span class="stat-label">7-day rate</span><span class="stat-value" id="top-rate">—</span></div>
+      </section>
+
+      <section class="layout-grid">
+        <article class="panel hero-panel span-2">
+          <p class="panel-kicker" id="primary-label">Past week</p>
+          <h2 class="panel-title">Chromosome-scale genome deposits</h2>
+          <div class="hero-number" id="assemblies-count">—</div>
+          <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
+          <div class="sparkline-wrap">
+            <div class="sparkline-labels"><span>Daily activity</span><span>last 7 days</span></div>
+            <div class="mini-bars" id="daily-bars" aria-label="Daily assembly counts"></div>
+          </div>
+        </article>
+
+        <article class="panel photo-panel">
+          <p class="panel-kicker">Newest arrival</p>
+          <h2 class="panel-title">Most recent deposited genome with an image</h2>
+          <div id="newest-card" class="newest-card"></div>
+        </article>
+
+        <article class="panel full-width composition-panel">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Composition</p>
+              <h2 class="panel-title">What is being sequenced now compared with the long run?</h2>
+            </div>
+          </div>
+          <div class="donut-pair">
+            <div class="donut-block">
+              <h3 id="donut-current-label">Past week</h3>
+              <div class="donut-wrap"><svg id="donut-week" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+              <div id="donut-week-legend" class="donut-legend"></div>
+            </div>
+            <div class="donut-block">
+              <h3>All time</h3>
+              <div class="donut-wrap"><svg id="donut-all" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+              <div id="donut-all-legend" class="donut-legend"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel span-2">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Assemblies over time</p>
+              <h2 class="panel-title" id="rate-title">Deposits per day</h2>
+            </div>
+          </div>
+          <svg id="rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+        </article>
+
+        <article class="panel list-panel">
+          <p class="panel-kicker">RefSeq</p>
+          <h2 class="panel-title">Annotation activity</h2>
+          <div class="subsection">
+            <h3>In progress</h3>
+            <div id="pipeline-list" class="list-table"></div>
+          </div>
+          <div class="subsection">
+            <h3>Recently completed</h3>
+            <div id="recent-annotation-list" class="list-table"></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel span-2">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Cumulative coverage</p>
+              <h2 class="panel-title">Assemblies and first-time species through time</h2>
+            </div>
+          </div>
+          <svg id="cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+        </article>
+
+        <article class="panel summary-panel">
+          <p class="panel-kicker">Past week</p>
+          <h2 class="panel-title">Broad groups</h2>
+          <div id="group-table" class="simple-table"></div>
+          <div class="subsection milestone-section">
+            <p class="panel-kicker">Milestones</p>
+            <h2 class="panel-title">When did we cross each total?</h2>
+            <div id="milestone-table" class="simple-table milestone-table"></div>
+          </div>
+        </article>
+
+        <article class="panel full-width">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Recent deposits</p>
+              <h2 class="panel-title">Rolling assembly metadata</h2>
+            </div>
+            <p class="note">Recent per-assembly metadata only; lifetime history is stored as compact aggregates.</p>
+          </div>
+          <div id="recent-list" class="recent-table"></div>
+        </article>
+      </section>
     </section>
 
-    <section class="layout-grid">
-      <article class="panel hero-panel span-2">
-        <p class="panel-kicker" id="primary-label">Past week</p>
-        <h2 class="panel-title">Chromosome-scale genome deposits</h2>
-        <div class="hero-number" id="assemblies-count">—</div>
-        <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
-        <div class="sparkline-wrap">
-          <div class="sparkline-labels"><span>Daily activity</span><span>last 7 days</span></div>
-          <div class="mini-bars" id="daily-bars" aria-label="Daily assembly counts"></div>
+    <section id="taxa-view" hidden>
+      <article class="taxon-search-panel">
+        <div>
+          <p class="panel-kicker">Searchable taxonomic history</p>
+          <h2>Explore chromosome-scale sequencing by phylum or order</h2>
+          <p class="taxon-intro">Search only phyla and orders to keep the site small, static and free to host.</p>
+        </div>
+        <div class="taxon-search-wrap">
+          <input id="taxon-search" type="search" autocomplete="off" placeholder="Try Lepidoptera, Arthropoda, Ascomycota…" aria-label="Search phylum or order">
+          <div id="taxon-results" class="taxon-results"></div>
         </div>
       </article>
 
-      <article class="panel photo-panel">
-        <p class="panel-kicker">Newest arrival</p>
-        <h2 class="panel-title">Most recent deposited genome</h2>
-        <div id="newest-card" class="newest-card"></div>
-      </article>
+      <section id="taxon-empty" class="taxon-empty">
+        <p>Choose a phylum or order to see its genome-deposition history.</p>
+      </section>
 
-      <article class="panel full-width composition-panel">
-        <div class="panel-head">
-          <div>
-            <p class="panel-kicker">Composition</p>
-            <h2 class="panel-title">What is being sequenced now compared with the long run?</h2>
-          </div>
-        </div>
-        <div class="donut-pair">
-          <div class="donut-block">
-            <h3 id="donut-current-label">Past week</h3>
-            <div class="donut-wrap"><svg id="donut-week" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
-            <div id="donut-week-legend" class="donut-legend"></div>
-          </div>
-          <div class="donut-block">
-            <h3>All time</h3>
-            <div class="donut-wrap"><svg id="donut-all" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
-            <div id="donut-all-legend" class="donut-legend"></div>
-          </div>
-        </div>
-      </article>
+      <section id="taxon-content" hidden>
+        <article class="taxon-heading">
+          <p class="panel-kicker" id="taxon-rank">Taxon</p>
+          <h2 id="taxon-name">—</h2>
+          <p id="taxon-lineage" class="taxon-lineage"></p>
+        </article>
 
-      <article class="panel chart-panel span-2">
-        <div class="panel-head">
-          <div>
-            <p class="panel-kicker">Assemblies over time</p>
-            <h2 class="panel-title" id="rate-title">Deposits per day</h2>
-          </div>
-        </div>
-        <svg id="rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-      </article>
+        <section class="stat-strip taxon-stats">
+          <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="taxon-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="taxon-species">—</span></div>
+          <div class="stat-box"><span class="stat-label">First deposit</span><span class="stat-value stat-date" id="taxon-first">—</span></div>
+          <div class="stat-box"><span class="stat-label">Past year assemblies</span><span class="stat-value" id="taxon-year-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label">Past year species</span><span class="stat-value" id="taxon-year-species">—</span></div>
+        </section>
 
-      <article class="panel list-panel">
-        <p class="panel-kicker">RefSeq</p>
-        <h2 class="panel-title">Annotation activity</h2>
-        <div class="subsection">
-          <h3>In progress</h3>
-          <div id="pipeline-list" class="list-table"></div>
-        </div>
-        <div class="subsection">
-          <h3>Recently completed</h3>
-          <div id="recent-annotation-list" class="list-table"></div>
-        </div>
-      </article>
+        <section class="taxon-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Lifetime</p>
+                <h2 class="panel-title">Cumulative assemblies and first-time species</h2>
+              </div>
+            </div>
+            <svg id="taxon-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+          </article>
 
-      <article class="panel chart-panel span-2">
-        <div class="panel-head">
-          <div>
-            <p class="panel-kicker">Cumulative coverage</p>
-            <h2 class="panel-title">Assemblies and first-time species through time</h2>
-          </div>
-        </div>
-        <svg id="cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-        <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
-      </article>
-
-      <article class="panel summary-panel">
-        <p class="panel-kicker">Past week</p>
-        <h2 class="panel-title">Broad groups</h2>
-        <div id="group-table" class="simple-table"></div>
-        <div class="subsection milestone-section">
-          <p class="panel-kicker">Milestones</p>
-          <h2 class="panel-title">When did we cross each total?</h2>
-          <div id="milestone-table" class="simple-table milestone-table"></div>
-        </div>
-      </article>
-
-      <article class="panel full-width">
-        <div class="panel-head">
-          <div>
-            <p class="panel-kicker">Recent deposits</p>
-            <h2 class="panel-title">Rolling assembly metadata</h2>
-          </div>
-          <p class="note">Recent per-assembly metadata only; lifetime history is stored as compact aggregates.</p>
-        </div>
-        <div id="recent-list" class="recent-table"></div>
-        <div id="chart-tooltip" class="chart-tooltip" hidden></div>
-      </article>
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Past year</p>
+                <h2 class="panel-title">Assemblies deposited per day</h2>
+              </div>
+            </div>
+            <svg id="taxon-recent-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          </article>
+        </section>
+      </section>
     </section>
+
+    <div id="chart-tooltip" class="chart-tooltip" hidden></div>
   </main>
 
   <footer class="site-foot">
     <p>Assembly metadata: NCBI Datasets, restricted to GenBank eukaryote assemblies at chromosome or complete level. Annotation status: NCBI RefSeq.</p>
-    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
+    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
   </footer>
 
-  <script src="app.js?v=20260927f"></script>
+  <script src="app.js?v=20260927g"></script>
 </body>
 </html>
