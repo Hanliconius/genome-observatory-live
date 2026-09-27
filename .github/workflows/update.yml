@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: genome-watch-refresh
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh:
