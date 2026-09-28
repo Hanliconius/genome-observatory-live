@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T18:06:03.066888+00:00",
+  "generated_at": "2026-09-28T18:10:43.825957+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -50918,7 +50918,12 @@
       "family": "Sparidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Sargo_com%C3%BAn_%28Diplodus_sargus%29%2C_Madeira%2C_Portugal%2C_2019-05-31%2C_DD_29.jpg/960px-Sargo_com%C3%BAn_%28Diplodus_sargus%29%2C_Madeira%2C_Portugal%2C_2019-05-31%2C_DD_29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sargo_com%C3%BAn_(Diplodus_sargus),_Madeira,_Portugal,_2019-05-31,_DD_29.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Diplodus sargus"
+      }
     },
     {
       "accession": "GCA_988281025.1",
@@ -51587,7 +51592,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Derris_elliptica_%28DITSL%29.JPG/960px-Derris_elliptica_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Derris_elliptica_(DITSL).JPG",
+        "credit": "James Steakley · CC BY-SA 3.0",
+        "matched_name": "Derris elliptica"
+      }
     },
     {
       "accession": "GCA_061353195.1",
@@ -131717,8 +131727,18 @@
     "Cypho purpurascens": null,
     "Cyprinus carpio haematopterus": null,
     "Dendroctonus ponderosae": null,
-    "Derris elliptica": null,
-    "Diplodus sargus": null,
+    "Derris elliptica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Derris_elliptica_%28DITSL%29.JPG/960px-Derris_elliptica_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Derris_elliptica_(DITSL).JPG",
+      "credit": "James Steakley · CC BY-SA 3.0",
+      "matched_name": "Derris elliptica"
+    },
+    "Diplodus sargus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Sargo_com%C3%BAn_%28Diplodus_sargus%29%2C_Madeira%2C_Portugal%2C_2019-05-31%2C_DD_29.jpg/960px-Sargo_com%C3%BAn_%28Diplodus_sargus%29%2C_Madeira%2C_Portugal%2C_2019-05-31%2C_DD_29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sargo_com%C3%BAn_(Diplodus_sargus),_Madeira,_Portugal,_2019-05-31,_DD_29.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Diplodus sargus"
+    },
     "Emergomyces africanus": null,
     "Emergomyces canadensis": null,
     "Emergomyces europaeus": null,
@@ -133291,7 +133311,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3706531": {},
     "64176": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Common wall lizard",
@@ -133570,7 +133589,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3272347": {},
     "37727": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "ascomycete fungi",
@@ -133706,7 +133724,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3680444": {},
     "105273": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Asian particolored bat",
@@ -133751,6 +133768,9 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
-    }
+    },
+    "3706531": {},
+    "3272347": {},
+    "3680444": {}
   }
 }
