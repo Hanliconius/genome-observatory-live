@@ -24,7 +24,7 @@ CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 VIRIDIPLANTAE=33090
-BATCH_SIZE=100
+BATCH_SIZE=250
 SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
 EUTILS_BASE="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 ACCESSION_RE=re.compile(r"\bGC[AF]_\d+(?:\.\d+)?\b")
@@ -140,9 +140,9 @@ def sequence_report_page(batch,page_token=None):
         body["page_token"]=page_token
 
     last=None
-    for attempt in range(8):
+    for attempt in range(10):
         try:
-            time.sleep(0.38)
+            time.sleep(0.5)
             resp=requests.post(
                 SEQUENCE_REPORT_URL,
                 json=body,
@@ -157,11 +157,11 @@ def sequence_report_page(batch,page_token=None):
                 if resp.status_code==429:
                     retry=resp.headers.get("Retry-After")
                     try:
-                        delay=max(2.0,float(retry)) if retry else 2.0*(attempt+1)
+                        delay=max(3.0,float(retry)) if retry else min(30.0,3.0*(attempt+1))
                     except ValueError:
-                        delay=2.0*(attempt+1)
+                        delay=min(30.0,3.0*(attempt+1))
                 else:
-                    delay=1.5*(attempt+1)
+                    delay=min(20.0,2.0*(attempt+1))
                 time.sleep(delay)
                 continue
             resp.raise_for_status()
@@ -357,27 +357,23 @@ def build_sex_cache(accessions,cache):
         return cache
 
     batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
-    workers=1
     print(
         f"sex labels: filtered NCBI sequence-report API for "
-        f"{len(missing)} assemblies in {len(batches)} batches"
+        f"{len(missing)} assemblies in {len(batches)} paced batches"
     )
     completed=0
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futures={ex.submit(resolve_sex_batch,b):b for b in batches}
-        for fut in as_completed(futures):
-            batch=futures[fut]
-            try:
-                cache.update(fut.result())
-            except Exception as exc:
-                raise RuntimeError(
-                    f"sex-label batch failed for {batch[0]}..{batch[-1]} "
-                    f"({len(batch)} accessions): {exc}"
-                ) from exc
-            completed+=1
-            if completed%20==0 or completed==len(batches):
-                print(f"sex labels: completed {completed}/{len(batches)} batches")
-                write_json(CACHE,cache)
+    for batch in batches:
+        try:
+            cache.update(resolve_sex_batch(batch))
+        except Exception as exc:
+            raise RuntimeError(
+                f"sex-label batch failed for {batch[0]}..{batch[-1]} "
+                f"({len(batch)} accessions): {exc}"
+            ) from exc
+        completed+=1
+        if completed%10==0 or completed==len(batches):
+            print(f"sex labels: completed {completed}/{len(batches)} batches")
+            write_json(CACHE,cache)
     return cache
 
 
