@@ -26,6 +26,8 @@ UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository
 VIRIDIPLANTAE=33090
 BATCH_SIZE=100
 SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
+EUTILS_BASE="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+ACCESSION_RE=re.compile(r"\\bGC[AF]_\\d+(?:\\.\\d+)?\\b")
 SEX_CHROMOSOME_QUERY=(
     ["X","Y","Z","W","U","V"]
     + [f"{base}{i}" for base in ("X","Y","Z","W","U","V") for i in range(1,10)]
