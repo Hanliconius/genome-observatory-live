@@ -248,7 +248,12 @@ def normalize(report):
 def main():
     today = date.today()
     rate_window_days = 30
-    window_cutoff = (today - timedelta(days=rate_window_days - 1)).isoformat()
+    window_start = today - timedelta(days=rate_window_days - 1)
+    window_cutoff = window_start.isoformat()
+    business_days_in_window = sum(
+        1 for i in range(rate_window_days)
+        if (window_start + timedelta(days=i)).weekday() < 5
+    )
 
     countries = {}
     unassigned = 0
@@ -327,7 +332,9 @@ def main():
             "species": len(rec["species"]),
             "first_time_species": len(rec["first_seen"]),
             "window_assemblies": rec["window_assemblies"],
+            "business_days_in_window": business_days_in_window,
             "genomes_per_day": rec["window_assemblies"] / float(rate_window_days),
+            "genomes_per_business_day": rec["window_assemblies"] / float(max(1, business_days_in_window)),
             "yearly": yearly,
         })
 
