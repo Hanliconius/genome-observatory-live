@@ -22,5 +22,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Test Entrez chromosome-to-assembly linkage
-        run: python scripts/audit_sex_eutils.py
+      - name: Install NCBI Datasets
+        run: |
+          curl -fsSL https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets -o /usr/local/bin/datasets
+          chmod +x /usr/local/bin/datasets
+          datasets version
+      - name: Test chromosome-filtered accession package
+        run: python scripts/audit_datasets_chrom_filter.py
