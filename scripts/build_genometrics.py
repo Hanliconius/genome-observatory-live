@@ -9,6 +9,9 @@ import subprocess
 import tarfile
 import time
 import tempfile
+import xml.etree.ElementTree as ET
+import urllib.request
+import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -193,14 +196,169 @@ def resolve_sex_batch(batch):
     return out
 
 
+def eutils_json(endpoint,params,post=False):
+    encoded=urllib.parse.urlencode(params).encode()
+    if post:
+        req=urllib.request.Request(
+            EUTILS_BASE+endpoint,data=encoded,headers={"User-Agent":UA}
+        )
+    else:
+        req=urllib.request.Request(
+            EUTILS_BASE+endpoint+"?"+encoded.decode(),headers={"User-Agent":UA}
+        )
+    with urllib.request.urlopen(req,timeout=180) as resp:
+        return json.loads(resp.read().decode())
+
+
+def eutils_xml(endpoint,params):
+    encoded=urllib.parse.urlencode(params).encode()
+    req=urllib.request.Request(
+        EUTILS_BASE+endpoint,data=encoded,headers={"User-Agent":UA}
+    )
+    with urllib.request.urlopen(req,timeout=180) as resp:
+        return ET.fromstring(resp.read())
+
+
+def collect_accession_strings(value,out):
+    if isinstance(value,dict):
+        for v in value.values():
+            collect_accession_strings(v,out)
+    elif isinstance(value,list):
+        for v in value:
+            collect_accession_strings(v,out)
+    elif isinstance(value,str):
+        out.update(ACCESSION_RE.findall(value))
+
+
+def search_nucleotide_ids(title_terms):
+    clauses=[f'"{term}"[Title]' for term in title_terms]
+    term="Eukaryota[Organism] AND ("+" OR ".join(clauses)+")"
+    page=eutils_json(
+        "esearch.fcgi",
+        {
+            "db":"nuccore","term":term,"retmode":"json",
+            "retmax":"100000","tool":"GenomeObservatoryLive"
+        }
+    )
+    result=page.get("esearchresult") or {}
+    ids=list(result.get("idlist") or [])
+    count=int(result.get("count") or 0)
+    for offset in range(len(ids),count,100000):
+        time.sleep(.36)
+        extra=eutils_json(
+            "esearch.fcgi",
+            {
+                "db":"nuccore","term":term,"retmode":"json",
+                "retmax":"100000","retstart":str(offset),
+                "tool":"GenomeObservatoryLive"
+            }
+        )
+        ids.extend((extra.get("esearchresult") or {}).get("idlist") or [])
+    return ids
+
+
+def linked_assembly_ids(nucleotide_ids):
+    out=set()
+    for i in range(0,len(nucleotide_ids),400):
+        time.sleep(.36)
+        root=eutils_xml(
+            "elink.fcgi",
+            {
+                "dbfrom":"nuccore","db":"assembly",
+                "id":",".join(nucleotide_ids[i:i+400]),
+                "tool":"GenomeObservatoryLive"
+            }
+        )
+        for block in root.findall(".//LinkSetDb"):
+            name=(block.findtext("LinkName") or "").casefold()
+            dbto=(block.findtext("DbTo") or "").casefold()
+            if "assembly" not in name and dbto!="assembly":
+                continue
+            for node in block.findall("./Link/Id"):
+                if node.text:
+                    out.add(node.text.strip())
+    return sorted(out)
+
+
+def assembly_aliases(assembly_ids):
+    aliases=set()
+    for i in range(0,len(assembly_ids),400):
+        time.sleep(.36)
+        d=eutils_json(
+            "esummary.fcgi",
+            {
+                "db":"assembly","id":",".join(assembly_ids[i:i+400]),
+                "retmode":"json","tool":"GenomeObservatoryLive"
+            },
+            post=True
+        )
+        result=d.get("result") or {}
+        for uid in result.get("uids",[]) or []:
+            collect_accession_strings(result.get(str(uid)) or {},aliases)
+    return aliases
+
+
+def bootstrap_sex_cache_entrez(accessions):
+    tracked=set(accessions)
+    tokens=defaultdict(set)
+    audits={}
+    queries={
+        "X":["chromosome X","chromosome X1","chromosome X2"],
+        "Y":["chromosome Y","chromosome Y1","chromosome Y2"],
+        "Z":["chromosome Z","chromosome Z1","chromosome Z2"],
+        "W":["chromosome W","chromosome W1","chromosome W2"],
+        "U":["chromosome U","chromosome U1","chromosome U2"],
+        "V":["chromosome V","chromosome V1","chromosome V2"],
+        "OTHER":["sex chromosome","gonosome"],
+    }
+
+    for token,title_terms in queries.items():
+        ids=search_nucleotide_ids(title_terms)
+        assembly_ids=linked_assembly_ids(ids) if ids else []
+        aliases=assembly_aliases(assembly_ids) if assembly_ids else set()
+        hits=tracked & aliases
+        for acc in hits:
+            tokens[acc].add(token)
+        audits[token]={
+            "nucleotide_records":len(ids),
+            "linked_assembly_ids":len(assembly_ids),
+            "tracked_genbank_assemblies":len(hits),
+        }
+        print(
+            f"sex labels: {token} -> {len(ids)} nucleotide records, "
+            f"{len(assembly_ids)} linked assemblies, {len(hits)} tracked GenBank assemblies"
+        )
+
+    out={}
+    for acc in accessions:
+        toks=sorted(tokens.get(acc,set()))
+        out[acc]={
+            "category":classify_tokens(toks),
+            "tokens":toks,
+            "candidate_labels":toks,
+        }
+    print("sex labels: Entrez bootstrap audit",json.dumps(audits,sort_keys=True))
+    return out
+
+
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
     if not missing:
         return cache
 
+    # First historical fill: use NCBI's nucleotide title index to locate only
+    # X/Y/Z/W/U/V/generic sex-chromosome records, follow their Assembly links,
+    # and intersect with the tracked GenBank collection.
+    if len(missing)>1000:
+        print(f"sex labels: Entrez-index bootstrap for {len(missing)} assemblies")
+        cache.update(bootstrap_sex_cache_entrez(accessions))
+        write_json(CACHE,cache)
+        return cache
+
+    # Daily incremental fill: sequence reports only for genuinely new assemblies.
     batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
     workers=min(5,len(batches))
-    print(f"sex labels: resolving {len(missing)} assemblies in {len(batches)} accession batches with {workers} workers")
+    print(f"sex labels: resolving {len(missing)} new assemblies in {len(batches)} accession batches")
     completed=0
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(resolve_sex_batch,b):b for b in batches}
@@ -210,10 +368,10 @@ def build_sex_cache(accessions,cache):
                 cache.update(fut.result())
             except Exception as exc:
                 raise RuntimeError(
-                    f"sex-label batch failed for {batch[0]}..{batch[-1]} ({len(batch)} accessions): {exc}"
+                    f"sex-label batch failed for {batch[0]}..{batch[-1]} "
+                    f"({len(batch)} accessions): {exc}"
                 ) from exc
             completed+=1
-            print(f"sex labels: completed {completed}/{len(batches)} batches")
             if completed%3==0 or completed==len(batches):
                 write_json(CACHE,cache)
     return cache
