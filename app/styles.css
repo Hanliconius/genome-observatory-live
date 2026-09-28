@@ -365,3 +365,84 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .site-head::after{left:12px;right:12px}
   .tab-icon{width:15px;height:15px}
 }
+
+
+/* Genometrics */
+#genometrics-view{margin-top:22px}
+.genometrics-intro{
+  display:flex;
+  justify-content:space-between;
+  gap:36px;
+  align-items:end;
+  background:var(--panel);
+  border:1px solid var(--line-dark);
+  padding:24px;
+}
+.genometrics-intro h2{
+  font-size:clamp(1.6rem,3vw,2.5rem);
+  letter-spacing:-.035em;
+  margin:5px 0 8px;
+  font-weight:620;
+}
+.genometrics-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1px;
+  background:var(--line-dark);
+  border:1px solid var(--line-dark);
+  border-top:0;
+}
+.genometric-card{
+  min-height:650px;
+  display:flex;
+  flex-direction:column;
+  padding:24px;
+  background:
+    linear-gradient(rgba(46,110,166,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(46,110,166,.025) 1px,transparent 1px),
+    var(--panel);
+  background-size:32px 32px,32px 32px,auto;
+}
+.genometric-intro{
+  color:var(--muted);
+  line-height:1.48;
+  font-size:.86rem;
+  min-height:64px;
+  margin:9px 0 0;
+}
+.genometric-donut-wrap{
+  width:240px;
+  height:240px;
+  margin:28px auto 10px;
+}
+.genometric-donut{width:240px;height:240px}
+.metric-center-main{font-size:28px}
+.genometric-n{
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+  font-size:.83rem;
+  color:var(--muted);
+  margin:0 0 22px;
+}
+.genometric-legend{margin-top:0}
+.metric-donut-row{
+  grid-template-columns:16px minmax(0,1fr) auto auto;
+}
+.genometric-note{
+  color:var(--muted);
+  font-size:.76rem;
+  line-height:1.5;
+  margin:auto 0 0;
+  padding-top:18px;
+}
+.genometric-note code,.site-foot code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.94em;
+}
+@media(max-width:1050px){
+  .genometrics-grid{grid-template-columns:1fr}
+  .genometric-card{min-height:0}
+  .genometric-intro{min-height:0}
+  .genometrics-intro{display:block}
+  .genometrics-intro>.note{margin-top:16px}
+}
