@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T17:58:17.058920+00:00",
+  "generated_at": "2026-09-28T18:06:03.066888+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48235,7 +48235,7 @@
   "featured_assembly": {
     "accession": "GCA_062001637.1",
     "organism_name": "Leishmania donovani",
-    "common_name": null,
+    "common_name": "kinetoplastids",
     "tax_id": 5661,
     "release_date": "2026-09-25",
     "assembly_level": "Chromosome",
@@ -48257,7 +48257,7 @@
     {
       "accession": "GCA_062001637.1",
       "organism_name": "Leishmania donovani",
-      "common_name": null,
+      "common_name": "kinetoplastids",
       "tax_id": 5661,
       "release_date": "2026-09-25",
       "assembly_level": "Chromosome",
@@ -48278,7 +48278,7 @@
     {
       "accession": "GCA_022750525.2",
       "organism_name": "Halotydeus destructor",
-      "common_name": null,
+      "common_name": "mites & ticks",
       "tax_id": 2874060,
       "release_date": "2026-09-25",
       "assembly_level": "Chromosome",
@@ -48294,7 +48294,7 @@
     {
       "accession": "GCA_062000183.1",
       "organism_name": "Mespilia globulus",
-      "common_name": null,
+      "common_name": "sea urchins",
       "tax_id": 39342,
       "release_date": "2026-09-24",
       "assembly_level": "Chromosome",
@@ -48389,7 +48389,7 @@
     {
       "accession": "GCA_061613905.1",
       "organism_name": "Talaromyces marneffei",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 37727,
       "release_date": "2026-09-24",
       "assembly_level": "Chromosome",
@@ -48405,7 +48405,7 @@
     {
       "accession": "GCA_061613735.1",
       "organism_name": "Aplodontia rufa pacifica",
-      "common_name": null,
+      "common_name": "rodents",
       "tax_id": 1334829,
       "release_date": "2026-09-24",
       "assembly_level": "Chromosome",
@@ -48426,7 +48426,7 @@
     {
       "accession": "GCA_061613725.1",
       "organism_name": "Aplodontia rufa pacifica",
-      "common_name": null,
+      "common_name": "rodents",
       "tax_id": 1334829,
       "release_date": "2026-09-24",
       "assembly_level": "Chromosome",
@@ -48537,7 +48537,7 @@
     {
       "accession": "GCA_988290205.1",
       "organism_name": "Staurosirella pinnata",
-      "common_name": null,
+      "common_name": "diatoms",
       "tax_id": 214434,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48553,7 +48553,7 @@
     {
       "accession": "GCA_061613165.1",
       "organism_name": "Trichosporon asahii var. asahii",
-      "common_name": null,
+      "common_name": "basidiomycete fungi",
       "tax_id": 189963,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48622,7 +48622,7 @@
     {
       "accession": "GCA_061612785.1",
       "organism_name": "Hesperophylax consimilis",
-      "common_name": null,
+      "common_name": "caddisflies",
       "tax_id": 2566765,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48638,7 +48638,7 @@
     {
       "accession": "GCA_061612335.1",
       "organism_name": "Pyricularia pennisetigena",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 1578925,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48654,7 +48654,7 @@
     {
       "accession": "GCA_061611885.1",
       "organism_name": "Cercospora sojina",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 438356,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48670,7 +48670,7 @@
     {
       "accession": "GCA_061611865.1",
       "organism_name": "Emergomyces europaeus",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 2060908,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48686,7 +48686,7 @@
     {
       "accession": "GCA_061611855.1",
       "organism_name": "Emergomyces canadensis",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 2060907,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48702,7 +48702,7 @@
     {
       "accession": "GCA_061611845.1",
       "organism_name": "[Emmonsia] soli",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 2248776,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48723,7 +48723,7 @@
     {
       "accession": "GCA_061611825.1",
       "organism_name": "Emergomyces pasteurianus",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 1955774,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48739,7 +48739,7 @@
     {
       "accession": "GCA_061611815.1",
       "organism_name": "Emergomyces africanus",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 1955775,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48755,7 +48755,7 @@
     {
       "accession": "GCA_061607135.1",
       "organism_name": "Taxus wallichiana",
-      "common_name": "Himalayan yew",
+      "common_name": "seed plants",
       "tax_id": 147273,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48771,7 +48771,7 @@
     {
       "accession": "GCA_061603755.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48792,7 +48792,7 @@
     {
       "accession": "GCA_061603715.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48813,7 +48813,7 @@
     {
       "accession": "GCA_061603705.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48834,7 +48834,7 @@
     {
       "accession": "GCA_061603655.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48855,7 +48855,7 @@
     {
       "accession": "GCA_061603605.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48876,7 +48876,7 @@
     {
       "accession": "GCA_061603565.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48897,7 +48897,7 @@
     {
       "accession": "GCA_061603495.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Complete Genome",
@@ -48918,7 +48918,7 @@
     {
       "accession": "GCA_061603445.1",
       "organism_name": "Fusarium poae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 36050,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48939,7 +48939,7 @@
     {
       "accession": "GCA_061598105.1",
       "organism_name": "Coreius guichenoti",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 328532,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48955,7 +48955,7 @@
     {
       "accession": "GCA_061598095.1",
       "organism_name": "Coreius heterodon",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 171525,
       "release_date": "2026-09-23",
       "assembly_level": "Chromosome",
@@ -48997,7 +48997,7 @@
     {
       "accession": "GCA_988289045.1",
       "organism_name": "Sorbus sitchensis",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 1284347,
       "release_date": "2026-09-22",
       "assembly_level": "Chromosome",
@@ -49013,7 +49013,7 @@
     {
       "accession": "GCA_988288955.1",
       "organism_name": "Sisymbrium orientale",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 203583,
       "release_date": "2026-09-22",
       "assembly_level": "Chromosome",
@@ -49029,7 +49029,7 @@
     {
       "accession": "GCA_061603475.1",
       "organism_name": "Hemadas nubilipennis",
-      "common_name": null,
+      "common_name": "wasps, ants & bees",
       "tax_id": 2867824,
       "release_date": "2026-09-22",
       "assembly_level": "Chromosome",
@@ -49288,7 +49288,7 @@
     {
       "accession": "GCA_061547655.1",
       "organism_name": "Bornmuellera tymphaea",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 457784,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49325,7 +49325,7 @@
     {
       "accession": "GCA_061547615.1",
       "organism_name": "Iberis sempervirens",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 359854,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49367,7 +49367,7 @@
     {
       "accession": "GCA_061535745.1",
       "organism_name": "Fusarium oxysporum f. sp. elaeidis",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 654390,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49383,7 +49383,7 @@
     {
       "accession": "GCA_061535625.1",
       "organism_name": "Hippophae goniocarpa",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 193520,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49425,7 +49425,7 @@
     {
       "accession": "GCA_061535525.1",
       "organism_name": "Ostrea lurida",
-      "common_name": null,
+      "common_name": "bivalves",
       "tax_id": 627230,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49436,7 +49436,12 @@
       "family": "Ostreidae",
       "phylum": "Mollusca",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Oly_Oyster.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Oly_Oyster.JPG",
+        "credit": "MaggieFreeman · CC BY 3.0",
+        "matched_name": "Ostrea lurida"
+      }
     },
     {
       "accession": "GCA_061535455.1",
@@ -49478,7 +49483,7 @@
     {
       "accession": "GCA_061535335.1",
       "organism_name": "Schizopygopsis younghusbandi",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 263521,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49510,7 +49515,7 @@
     {
       "accession": "GCA_061535275.1",
       "organism_name": "Zoysia sinica",
-      "common_name": null,
+      "common_name": "monocots",
       "tax_id": 1043351,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49552,7 +49557,7 @@
     {
       "accession": "GCA_014706415.2",
       "organism_name": "Podarcis muralis nigriventris",
-      "common_name": null,
+      "common_name": "lizards & snakes",
       "tax_id": 1534827,
       "release_date": "2026-09-21",
       "assembly_level": "Chromosome",
@@ -49589,7 +49594,7 @@
     {
       "accession": "GCA_988284935.1",
       "organism_name": "Rhombosepion orbignyanum",
-      "common_name": null,
+      "common_name": "cephalopods",
       "tax_id": 3251964,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49605,7 +49610,7 @@
     {
       "accession": "GCA_061495365.1",
       "organism_name": "Cromileptes altivelis x Epinephelus fuscoguttatus",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 3711059,
       "release_date": "2026-09-20",
       "assembly_level": "Complete Genome",
@@ -49616,12 +49621,17 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg/960px-Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg",
+        "credit": "Raimond Spekking · CC BY-SA 4.0",
+        "matched_name": "Serranidae"
+      }
     },
     {
       "accession": "GCA_061495325.1",
       "organism_name": "Cromileptes altivelis x Epinephelus fuscoguttatus",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 3711059,
       "release_date": "2026-09-20",
       "assembly_level": "Complete Genome",
@@ -49632,7 +49642,12 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg/960px-Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg",
+        "credit": "Raimond Spekking · CC BY-SA 4.0",
+        "matched_name": "Serranidae"
+      }
     },
     {
       "accession": "GCA_061481855.1",
@@ -49658,7 +49673,7 @@
     {
       "accession": "GCA_061476995.1",
       "organism_name": "Metarhizium anisopliae",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5530,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49679,7 +49694,7 @@
     {
       "accession": "GCA_061476855.1",
       "organism_name": "Rosa bracteata",
-      "common_name": "Macartny rose",
+      "common_name": "eudicots",
       "tax_id": 74653,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49700,7 +49715,7 @@
     {
       "accession": "GCA_061476585.1",
       "organism_name": "Boechera perennans",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 115922,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49721,7 +49736,7 @@
     {
       "accession": "GCA_061476505.1",
       "organism_name": "Boechera arcuata",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 486422,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49742,7 +49757,7 @@
     {
       "accession": "GCA_061474665.1",
       "organism_name": "Hippodamia variegata",
-      "common_name": null,
+      "common_name": "beetles",
       "tax_id": 703264,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
@@ -49763,7 +49778,7 @@
     {
       "accession": "GCA_988282945.1",
       "organism_name": "Opheodesoma grisea",
-      "common_name": null,
+      "common_name": "sea cucumbers",
       "tax_id": 2790589,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49774,12 +49789,17 @@
       "family": "Synaptidae",
       "phylum": "Echinodermata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Conspicuous_Sea_Cucumber%2C_Coconut_Island%2C_Hawaii.JPG/960px-Conspicuous_Sea_Cucumber%2C_Coconut_Island%2C_Hawaii.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Conspicuous_Sea_Cucumber,_Coconut_Island,_Hawaii.JPG",
+        "credit": "Wmpearl · Public domain",
+        "matched_name": "Opheodesoma"
+      }
     },
     {
       "accession": "GCA_988282475.1",
       "organism_name": "Tegula excavata",
-      "common_name": null,
+      "common_name": "gastropods",
       "tax_id": 80348,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49832,7 +49852,7 @@
     {
       "accession": "GCA_988282205.1",
       "organism_name": "Hermenia verruculosa",
-      "common_name": null,
+      "common_name": "segmented worms",
       "tax_id": 1210419,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49848,7 +49868,7 @@
     {
       "accession": "GCA_988282195.1",
       "organism_name": "Catocala disjuncta",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 3441413,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49869,7 +49889,7 @@
     {
       "accession": "GCA_988282165.1",
       "organism_name": "Acleris aspersana",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 758704,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49890,7 +49910,7 @@
     {
       "accession": "GCA_988282155.1",
       "organism_name": "Lomaspilis marginata",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 722666,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49911,7 +49931,7 @@
     {
       "accession": "GCA_988282115.1",
       "organism_name": "Choriorhabditis dudichi",
-      "common_name": null,
+      "common_name": "nematodes",
       "tax_id": 96657,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49927,7 +49947,7 @@
     {
       "accession": "GCA_988282105.1",
       "organism_name": "Gordius sp. MW1",
-      "common_name": null,
+      "common_name": "horsehair worms",
       "tax_id": 2991509,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -49985,7 +50005,7 @@
     {
       "accession": "GCA_959347395.2",
       "organism_name": "Mechanitis mazaeus",
-      "common_name": null,
+      "common_name": "butterflies",
       "tax_id": 471061,
       "release_date": "2026-09-18",
       "assembly_level": "Chromosome",
@@ -50080,7 +50100,7 @@
     {
       "accession": "GCA_988282055.1",
       "organism_name": "Anyphaena accentuata",
-      "common_name": null,
+      "common_name": "spiders",
       "tax_id": 1155750,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50101,7 +50121,7 @@
     {
       "accession": "GCA_988282045.1",
       "organism_name": "Cheilodactylus nigripes",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 82893,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50122,7 +50142,7 @@
     {
       "accession": "GCA_988282015.1",
       "organism_name": "Sphagnum fimbriatum",
-      "common_name": null,
+      "common_name": "mosses",
       "tax_id": 128199,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50149,12 +50169,17 @@
       "family": "Zanclidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zanclus_cornutus_in_Kona.jpg/960px-Zanclus_cornutus_in_Kona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Zanclus_cornutus_in_Kona.jpg",
+        "credit": "Brocken Inaglory · CC BY-SA 3.0",
+        "matched_name": "Zanclus"
+      }
     },
     {
       "accession": "GCA_988281995.1",
       "organism_name": "Aphareus furca",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 396779,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50175,7 +50200,7 @@
     {
       "accession": "GCA_988281955.1",
       "organism_name": "Veronica officinalis",
-      "common_name": "common speedwell",
+      "common_name": "eudicots",
       "tax_id": 160511,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50238,7 +50263,7 @@
     {
       "accession": "GCA_988281905.1",
       "organism_name": "Frenulina sanguinolenta",
-      "common_name": null,
+      "common_name": "brachiopods",
       "tax_id": 93906,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50254,7 +50279,7 @@
     {
       "accession": "GCA_988281895.1",
       "organism_name": "Cheilodactylus nigripes",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 82893,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50296,7 +50321,7 @@
     {
       "accession": "GCA_988281685.1",
       "organism_name": "Aphareus furca",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 396779,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50338,7 +50363,7 @@
     {
       "accession": "GCA_988281425.1",
       "organism_name": "Pseudophycis breviuscula",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 2485022,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50438,7 +50463,7 @@
     {
       "accession": "GCA_988281375.1",
       "organism_name": "Pseudophycis breviuscula",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 2485022,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50475,7 +50500,7 @@
     {
       "accession": "GCA_988281345.1",
       "organism_name": "Cettia cetti",
-      "common_name": null,
+      "common_name": "birds",
       "tax_id": 68486,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50755,7 +50780,7 @@
     {
       "accession": "GCA_988281175.1",
       "organism_name": "Cochleoceps spatula",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 2740755,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50771,7 +50796,7 @@
     {
       "accession": "GCA_988281165.1",
       "organism_name": "Cochleoceps spatula",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 2740755,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50808,7 +50833,7 @@
     {
       "accession": "GCA_988281145.1",
       "organism_name": "Pseudolabrus biserialis",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 98380,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50824,7 +50849,7 @@
     {
       "accession": "GCA_988281135.1",
       "organism_name": "Pseudolabrus biserialis",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 98380,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -50861,7 +50886,7 @@
     {
       "accession": "GCA_988281055.1",
       "organism_name": "Phycis blennoides",
-      "common_name": null,
+      "common_name": "ray-finned fishes",
       "tax_id": 163115,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51019,7 +51044,7 @@
     {
       "accession": "GCA_988280855.1",
       "organism_name": "Incurvaria pectinea",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 753191,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51040,7 +51065,7 @@
     {
       "accession": "GCA_988280845.1",
       "organism_name": "Cryptopygus clavatus",
-      "common_name": null,
+      "common_name": "springtails",
       "tax_id": 3042125,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51056,7 +51081,7 @@
     {
       "accession": "GCA_988280795.1",
       "organism_name": "Melilotus altissimus",
-      "common_name": "tall yellow sweet-clover",
+      "common_name": "eudicots",
       "tax_id": 1155344,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51093,7 +51118,7 @@
     {
       "accession": "GCA_988280775.1",
       "organism_name": "Cardamine pratensis",
-      "common_name": "cuckoo flower",
+      "common_name": "eudicots",
       "tax_id": 50465,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51114,7 +51139,7 @@
     {
       "accession": "GCA_988280745.1",
       "organism_name": "Prunella modularis",
-      "common_name": null,
+      "common_name": "birds",
       "tax_id": 181117,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51135,7 +51160,7 @@
     {
       "accession": "GCA_988280725.1",
       "organism_name": "Regulus regulus",
-      "common_name": null,
+      "common_name": "birds",
       "tax_id": 68468,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51467,7 +51492,7 @@
     {
       "accession": "GCA_061372115.1",
       "organism_name": "Cronartium quercuum f. sp. fusiforme",
-      "common_name": null,
+      "common_name": "rust fungi & allies",
       "tax_id": 136831,
       "release_date": "2026-09-17",
       "assembly_level": "Complete Genome",
@@ -51478,12 +51503,17 @@
       "family": "Coleosporiaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Cronartium_ribicola1.jpg/960px-Cronartium_ribicola1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cronartium_ribicola1.jpg",
+        "credit": "Public domain",
+        "matched_name": "Cronartium"
+      }
     },
     {
       "accession": "GCA_061370235.1",
       "organism_name": "Greyia sutherlandii",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 1167264,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51504,7 +51534,7 @@
     {
       "accession": "GCA_061370165.1",
       "organism_name": "Greyia flanaganii",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 377273,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51525,7 +51555,7 @@
     {
       "accession": "GCA_061370155.1",
       "organism_name": "Greyia radlkoferi",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 23282,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51546,7 +51576,7 @@
     {
       "accession": "GCA_061356575.1",
       "organism_name": "Derris elliptica",
-      "common_name": "tubaroot",
+      "common_name": "eudicots",
       "tax_id": 56063,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51599,7 +51629,7 @@
     {
       "accession": "GCA_061346435.1",
       "organism_name": "Trichophyton mentagrophytes",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 523103,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51620,7 +51650,7 @@
     {
       "accession": "GCA_061346225.1",
       "organism_name": "Lespedeza danxiaensis",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 2853716,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51641,7 +51671,7 @@
     {
       "accession": "GCA_061346215.1",
       "organism_name": "Megacarpaea megalocarpa",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 537173,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51678,7 +51708,7 @@
     {
       "accession": "GCA_061336215.1",
       "organism_name": "Trichoderma reesei",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 51453,
       "release_date": "2026-09-17",
       "assembly_level": "Complete Genome",
@@ -51699,7 +51729,7 @@
     {
       "accession": "GCA_061335605.1",
       "organism_name": "Trichoderma reesei",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 51453,
       "release_date": "2026-09-17",
       "assembly_level": "Complete Genome",
@@ -51720,7 +51750,7 @@
     {
       "accession": "GCA_061335555.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
@@ -51741,7 +51771,7 @@
     {
       "accession": "GCA_061312055.1",
       "organism_name": "Zea mays",
-      "common_name": "maize",
+      "common_name": "monocots",
       "tax_id": 4577,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
@@ -51762,7 +51792,7 @@
     {
       "accession": "GCA_061311715.1",
       "organism_name": "Amphicrossus lewisi",
-      "common_name": null,
+      "common_name": "beetles",
       "tax_id": 2748399,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
@@ -51783,7 +51813,7 @@
     {
       "accession": "GCA_061311545.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51804,7 +51834,7 @@
     {
       "accession": "GCA_061311535.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51825,7 +51855,7 @@
     {
       "accession": "GCA_061311525.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51846,7 +51876,7 @@
     {
       "accession": "GCA_061311445.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51867,7 +51897,7 @@
     {
       "accession": "GCA_061311405.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51888,7 +51918,7 @@
     {
       "accession": "GCA_061311355.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51909,7 +51939,7 @@
     {
       "accession": "GCA_061311265.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51930,7 +51960,7 @@
     {
       "accession": "GCA_061311255.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51951,7 +51981,7 @@
     {
       "accession": "GCA_061311225.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51972,7 +52002,7 @@
     {
       "accession": "GCA_061311145.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -51993,7 +52023,7 @@
     {
       "accession": "GCA_061311125.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -52014,7 +52044,7 @@
     {
       "accession": "GCA_061311055.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -52035,7 +52065,7 @@
     {
       "accession": "GCA_061310985.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -52056,7 +52086,7 @@
     {
       "accession": "GCA_061310975.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -52077,7 +52107,7 @@
     {
       "accession": "GCA_061310925.1",
       "organism_name": "Fusarium graminearum",
-      "common_name": null,
+      "common_name": "ascomycete fungi",
       "tax_id": 5518,
       "release_date": "2026-09-16",
       "assembly_level": "Complete Genome",
@@ -52098,7 +52128,7 @@
     {
       "accession": "GCA_061310445.1",
       "organism_name": "Rosa lucieae",
-      "common_name": "memorial rose",
+      "common_name": "eudicots",
       "tax_id": 74648,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
@@ -52119,7 +52149,7 @@
     {
       "accession": "GCA_061310315.1",
       "organism_name": "Rosa lucieae",
-      "common_name": "memorial rose",
+      "common_name": "eudicots",
       "tax_id": 74648,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
@@ -52156,7 +52186,7 @@
     {
       "accession": "GCA_061291855.1",
       "organism_name": "Camellia sinensis",
-      "common_name": "black tea",
+      "common_name": "eudicots",
       "tax_id": 4442,
       "release_date": "2026-09-15",
       "assembly_level": "Chromosome",
@@ -52293,7 +52323,7 @@
     {
       "accession": "GCA_988278555.1",
       "organism_name": "Fromia indica",
-      "common_name": null,
+      "common_name": "starfish",
       "tax_id": 109180,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52309,7 +52339,7 @@
     {
       "accession": "GCA_988278295.1",
       "organism_name": "Pseudoceros maximus",
-      "common_name": null,
+      "common_name": "flatworms",
       "tax_id": 3465981,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52325,7 +52355,7 @@
     {
       "accession": "GCA_988277115.1",
       "organism_name": "Halimeda cylindracea",
-      "common_name": null,
+      "common_name": "green algae",
       "tax_id": 170411,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52341,7 +52371,7 @@
     {
       "accession": "GCA_988277065.1",
       "organism_name": "Aureoumbra sp. RCC10688",
-      "common_name": null,
+      "common_name": "pelagophytes",
       "tax_id": 3451515,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52357,7 +52387,7 @@
     {
       "accession": "GCA_988277055.1",
       "organism_name": "Gomphonema sp. RCC431",
-      "common_name": null,
+      "common_name": "diatoms",
       "tax_id": 1764964,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52373,7 +52403,7 @@
     {
       "accession": "GCA_988277015.1",
       "organism_name": "Oxypteryx atrella",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 3112342,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52394,7 +52424,7 @@
     {
       "accession": "GCA_988276995.1",
       "organism_name": "Carex bigelowii",
-      "common_name": null,
+      "common_name": "monocots",
       "tax_id": 241200,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52415,7 +52445,7 @@
     {
       "accession": "GCA_988276965.1",
       "organism_name": "Eriocrania salopiella",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 2561294,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52431,7 +52461,7 @@
     {
       "accession": "GCA_988276955.1",
       "organism_name": "Carex bigelowii",
-      "common_name": null,
+      "common_name": "monocots",
       "tax_id": 241200,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52452,7 +52482,7 @@
     {
       "accession": "GCA_988276855.1",
       "organism_name": "Tinodes waeneri",
-      "common_name": null,
+      "common_name": "caddisflies",
       "tax_id": 177916,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52473,7 +52503,7 @@
     {
       "accession": "GCA_988276825.1",
       "organism_name": "Sapyga quinquepunctata",
-      "common_name": null,
+      "common_name": "wasps, ants & bees",
       "tax_id": 1507361,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52494,7 +52524,7 @@
     {
       "accession": "GCA_988276805.1",
       "organism_name": "Lepidopleurus cajetanus",
-      "common_name": null,
+      "common_name": "chitons",
       "tax_id": 120438,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52515,7 +52545,7 @@
     {
       "accession": "GCA_988265315.1",
       "organism_name": "Celtodoryx ciocalyptoides",
-      "common_name": null,
+      "common_name": "sponges",
       "tax_id": 2991936,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52552,7 +52582,7 @@
     {
       "accession": "GCA_988265225.1",
       "organism_name": "Tephritis neesii",
-      "common_name": null,
+      "common_name": "flies",
       "tax_id": 594117,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52610,7 +52640,7 @@
     {
       "accession": "GCA_988265185.1",
       "organism_name": "Psathyrella piluliformis",
-      "common_name": null,
+      "common_name": "basidiomycete fungi",
       "tax_id": 230822,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52652,7 +52682,7 @@
     {
       "accession": "GCA_988265165.1",
       "organism_name": "Quercus ithaburensis",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 407999,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52673,7 +52703,7 @@
     {
       "accession": "GCA_988265155.1",
       "organism_name": "Macrophya ribis",
-      "common_name": null,
+      "common_name": "hymenopterans",
       "tax_id": 1384909,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52689,7 +52719,7 @@
     {
       "accession": "GCA_988265145.1",
       "organism_name": "Pelochrista infidana",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 2561588,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52705,7 +52735,7 @@
     {
       "accession": "GCA_988265135.1",
       "organism_name": "Phaonia gobertii",
-      "common_name": null,
+      "common_name": "flies",
       "tax_id": 1511666,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52726,7 +52756,7 @@
     {
       "accession": "GCA_988265115.1",
       "organism_name": "Quercus ithaburensis",
-      "common_name": null,
+      "common_name": "eudicots",
       "tax_id": 407999,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52747,7 +52777,7 @@
     {
       "accession": "GCA_988265085.1",
       "organism_name": "Omosita discoidea",
-      "common_name": null,
+      "common_name": "beetles",
       "tax_id": 577170,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52768,7 +52798,7 @@
     {
       "accession": "GCA_988265035.1",
       "organism_name": "Satyrium spini",
-      "common_name": null,
+      "common_name": "butterflies",
       "tax_id": 876076,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52789,7 +52819,7 @@
     {
       "accession": "GCA_988265005.1",
       "organism_name": "Bucculatrix nigricomella",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 1594241,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52810,7 +52840,7 @@
     {
       "accession": "GCA_988264995.1",
       "organism_name": "Cortinarius hemitrichus",
-      "common_name": null,
+      "common_name": "basidiomycete fungi",
       "tax_id": 304823,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52847,7 +52877,7 @@
     {
       "accession": "GCA_988264955.1",
       "organism_name": "Phaonia palpata",
-      "common_name": null,
+      "common_name": "flies",
       "tax_id": 2882607,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52868,7 +52898,7 @@
     {
       "accession": "GCA_988264945.1",
       "organism_name": "Grapholita caecana",
-      "common_name": null,
+      "common_name": "moths & butterflies",
       "tax_id": 1391528,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52889,7 +52919,7 @@
     {
       "accession": "GCA_988264935.1",
       "organism_name": "Centrocardita aculeata",
-      "common_name": null,
+      "common_name": "bivalves",
       "tax_id": 1582122,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52910,7 +52940,7 @@
     {
       "accession": "GCA_976986575.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52931,7 +52961,7 @@
     {
       "accession": "GCA_975146975.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52952,7 +52982,7 @@
     {
       "accession": "GCA_975146905.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Complete Genome",
@@ -52973,7 +53003,7 @@
     {
       "accession": "GCA_975146685.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -52994,7 +53024,7 @@
     {
       "accession": "GCA_975146225.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53015,7 +53045,7 @@
     {
       "accession": "GCA_975146205.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53036,7 +53066,7 @@
     {
       "accession": "GCA_975146135.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53057,7 +53087,7 @@
     {
       "accession": "GCA_975146115.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53078,7 +53108,7 @@
     {
       "accession": "GCA_975146005.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53099,7 +53129,7 @@
     {
       "accession": "GCA_975145855.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53120,7 +53150,7 @@
     {
       "accession": "GCA_975145825.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53141,7 +53171,7 @@
     {
       "accession": "GCA_975143815.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53162,7 +53192,7 @@
     {
       "accession": "GCA_975143785.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53183,7 +53213,7 @@
     {
       "accession": "GCA_975143475.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Complete Genome",
@@ -53204,7 +53234,7 @@
     {
       "accession": "GCA_975143455.1",
       "organism_name": "Arabidopsis lyrata",
-      "common_name": "lyrate rockcress",
+      "common_name": "eudicots",
       "tax_id": 59689,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -53225,7 +53255,7 @@
     {
       "accession": "GCA_061291985.1",
       "organism_name": "Stropharia rugosoannulata",
-      "common_name": "wine cap",
+      "common_name": "basidiomycete fungi",
       "tax_id": 68746,
       "release_date": "2026-09-14",
       "assembly_level": "Complete Genome",
@@ -53246,7 +53276,7 @@
     {
       "accession": "GCA_061291925.1",
       "organism_name": "Stropharia rugosoannulata",
-      "common_name": "wine cap",
+      "common_name": "basidiomycete fungi",
       "tax_id": 68746,
       "release_date": "2026-09-14",
       "assembly_level": "Complete Genome",
@@ -53267,7 +53297,7 @@
     {
       "accession": "GCA_061240095.1",
       "organism_name": "Lycodon rosozonatus",
-      "common_name": null,
+      "common_name": "snakes",
       "tax_id": 2483678,
       "release_date": "2026-09-14",
       "assembly_level": "Chromosome",
@@ -131671,8 +131701,18 @@
       "credit": "James Lindsey · CC BY-SA 3.0",
       "matched_name": "Cortinarius hemitrichus"
     },
-    "Cromileptes altivelis x Epinephelus fuscoguttatus": null,
-    "Cronartium quercuum f. sp. fusiforme": null,
+    "Cromileptes altivelis x Epinephelus fuscoguttatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg/960px-Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg",
+      "credit": "Raimond Spekking · CC BY-SA 4.0",
+      "matched_name": "Serranidae"
+    },
+    "Cronartium quercuum f. sp. fusiforme": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Cronartium_ribicola1.jpg/960px-Cronartium_ribicola1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cronartium_ribicola1.jpg",
+      "credit": "Public domain",
+      "matched_name": "Cronartium"
+    },
     "Cryptopygus clavatus": null,
     "Cypho purpurascens": null,
     "Cyprinus carpio haematopterus": null,
@@ -131879,8 +131919,18 @@
       "matched_name": "Omosita discoidea"
     },
     "Oncorhynchus clarkii henshawi": null,
-    "Opheodesoma grisea": null,
-    "Ostrea lurida": null,
+    "Opheodesoma grisea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Conspicuous_Sea_Cucumber%2C_Coconut_Island%2C_Hawaii.JPG/960px-Conspicuous_Sea_Cucumber%2C_Coconut_Island%2C_Hawaii.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Conspicuous_Sea_Cucumber,_Coconut_Island,_Hawaii.JPG",
+      "credit": "Wmpearl · Public domain",
+      "matched_name": "Opheodesoma"
+    },
+    "Ostrea lurida": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Oly_Oyster.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oly_Oyster.JPG",
+      "credit": "MaggieFreeman · CC BY 3.0",
+      "matched_name": "Ostrea lurida"
+    },
     "Oxypteryx atrella": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Oxypteryx_atrella_%2851355388361%29.jpg/960px-Oxypteryx_atrella_%2851355388361%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Oxypteryx_atrella_(51355388361).jpg",
@@ -132158,1203 +132208,1549 @@
   },
   "taxonomy_cache": {
     "2248776": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Emergomyces",
       "family": "Ajellomycetaceae",
-      "genus": "Emergomyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "80948": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "scissortail sergeant",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Abudefduf",
       "family": "Pomacentridae",
-      "genus": "Abudefduf"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1603565": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "lesser redpoll",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Acanthis",
       "family": "Fringillidae",
-      "genus": "Acanthis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "175431": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "whitecheek surgeonfish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Acanthurus",
       "family": "Acanthuridae",
-      "genus": "Acanthurus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "758704": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Acleris",
       "family": "Tortricidae",
-      "genus": "Acleris"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "2748399": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "beetles",
+      "fallback_common_name_source": "group_name",
+      "genus": "Amphicrossus",
       "family": "Nitidulidae",
-      "genus": "Amphicrossus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "1155750": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "spiders",
+      "fallback_common_name_source": "group_name",
+      "genus": "Anyphaena",
       "family": "Anyphaenidae",
-      "genus": "Anyphaena"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "396779": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Aphareus",
       "family": "Lutjanidae",
-      "genus": "Aphareus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "443676": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "rusty jobfish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Aphareus",
       "family": "Lutjanidae",
-      "genus": "Aphareus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1334829": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "rodents",
+      "fallback_common_name_source": "group_name",
+      "genus": "Aplodontia",
       "family": "Aplodontiidae",
-      "genus": "Aplodontia"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "59689": {
-      "fallback_common_name": "lyrate rockcress",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Arabidopsis",
       "family": "Brassicaceae",
-      "genus": "Arabidopsis"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "3451515": {
-      "family": "Sarcinochrysidaceae",
-      "genus": "Aureoumbra"
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "pelagophytes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Aureoumbra",
+      "family": "Sarcinochrysidaceae"
     },
     "298348": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Eaton's skate",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Bathyraja",
       "family": "Arhynchobatidae",
-      "genus": "Bathyraja"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "9387": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "short-tailed shrew",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Blarina",
       "family": "Soricidae",
-      "genus": "Blarina"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "486422": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Boechera",
       "family": "Brassicaceae",
-      "genus": "Boechera"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "115922": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Boechera",
       "family": "Brassicaceae",
-      "genus": "Boechera"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "457784": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Bornmuellera",
       "family": "Brassicaceae",
-      "genus": "Bornmuellera"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1594241": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Bucculatrix",
       "family": "Bucculatricidae",
-      "genus": "Bucculatrix"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "4442": {
-      "fallback_common_name": "black tea",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Camellia",
       "family": "Theaceae",
-      "genus": "Camellia"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1156094": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "black jack",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Caranx",
       "family": "Carangidae",
-      "genus": "Caranx"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "443757": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "nervous shark",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Carcharhinus",
       "family": "Carcharhinidae",
-      "genus": "Carcharhinus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "50465": {
-      "fallback_common_name": "cuckoo flower",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cardamine",
       "family": "Brassicaceae",
-      "genus": "Cardamine"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "241200": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "monocots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Carex",
       "family": "Cyperaceae",
-      "genus": "Carex"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "3441413": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Catocala",
       "family": "Erebidae",
-      "genus": "Catocala"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "2991936": {
-      "kingdom": "Metazoa",
-      "phylum": "Porifera",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "sponges",
+      "fallback_common_name_source": "group_name",
+      "genus": "Celtodoryx",
       "family": "Coelospheridae",
-      "genus": "Celtodoryx"
+      "phylum": "Porifera",
+      "kingdom": "Metazoa"
     },
     "1582122": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "bivalves",
+      "fallback_common_name_source": "group_name",
+      "genus": "Centrocardita",
       "family": "Carditidae",
-      "genus": "Centrocardita"
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
     },
     "334914": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "coral hind",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Cephalopholis",
       "family": "Serranidae",
-      "genus": "Cephalopholis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "438356": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cercospora",
       "family": "Mycosphaerellaceae",
-      "genus": "Cercospora"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "73333": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Eurasian tree-creeper",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Certhia",
       "family": "Certhiidae",
-      "genus": "Certhia"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "68486": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cettia",
       "family": "Sylviidae",
-      "genus": "Cettia"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "371911": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Common ringed plover",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Charadrius",
       "family": "Charadriidae",
-      "genus": "Charadrius"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "82893": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cheilodactylus",
       "family": "Cheilodactylidae",
-      "genus": "Cheilodactylus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "96657": {
-      "kingdom": "Metazoa",
-      "phylum": "Nematoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "nematodes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Choriorhabditis",
       "family": "Rhabditidae",
-      "genus": "Choriorhabditis"
+      "phylum": "Nematoda",
+      "kingdom": "Metazoa"
     },
     "2740755": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cochleoceps",
       "family": "Gobiesocidae",
-      "genus": "Cochleoceps"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "411919": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Yangtse grenadier anchovy",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Coilia",
       "family": "Engraulidae",
-      "genus": "Coilia"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "42296": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "orange sulphur",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Colias",
       "family": "Pieridae",
-      "genus": "Colias"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "72851": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "clouded sulphur butterfly",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Colias",
       "family": "Pieridae",
-      "genus": "Colias"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "328532": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Coreius",
       "family": "Gobionidae",
-      "genus": "Coreius"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "171525": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Coreius",
       "family": "Gobionidae",
-      "genus": "Coreius"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1182148": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "western king wrasse",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Coris",
       "family": "Labridae",
-      "genus": "Coris"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "304823": {
-      "kingdom": "Fungi",
-      "phylum": "Basidiomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "basidiomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cortinarius",
       "family": "Cortinariaceae",
-      "genus": "Cortinarius"
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
     },
     "3711059": {
-      "kingdom": "Metazoa",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "family": "Serranidae",
       "phylum": "Chordata",
-      "family": "Serranidae"
+      "kingdom": "Metazoa"
     },
     "136831": {
-      "kingdom": "Fungi",
-      "phylum": "Basidiomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "rust fungi & allies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cronartium",
       "family": "Coleosporiaceae",
-      "genus": "Cronartium"
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
     },
     "3042125": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "springtails",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cryptopygus",
       "family": "Isotomidae",
-      "genus": "Cryptopygus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "646043": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "oblique-lined dottyback",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Cypho",
       "family": "Pseudochromidae",
-      "genus": "Cypho"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1045269": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Amur carp",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Cyprinus",
       "family": "Cyprinidae",
-      "genus": "Cyprinus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "77166": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "mountain pine beetle",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Dendroctonus",
       "family": "Curculionidae",
-      "genus": "Dendroctonus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "56063": {
-      "fallback_common_name": "tubaroot",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Derris",
       "family": "Fabaceae",
-      "genus": "Derris"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "38941": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "white seabream",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Diplodus",
       "family": "Sparidae",
-      "genus": "Diplodus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1955775": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Emergomyces",
       "family": "Ajellomycetaceae",
-      "genus": "Emergomyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "2060907": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Emergomyces",
       "family": "Ajellomycetaceae",
-      "genus": "Emergomyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "2060908": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Emergomyces",
       "family": "Ajellomycetaceae",
-      "genus": "Emergomyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "1955774": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Emergomyces",
       "family": "Ajellomycetaceae",
-      "genus": "Emergomyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "160718": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "blacktip grouper",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Epinephelus",
       "family": "Serranidae",
-      "genus": "Epinephelus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "2561294": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Eriocrania",
       "family": "Eriocraniidae",
-      "genus": "Eriocrania"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "3040455": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "island trevally",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Ferdauia",
       "family": "Carangidae",
-      "genus": "Ferdauia"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "38873": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "European ash",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Fraxinus",
       "family": "Oleaceae",
-      "genus": "Fraxinus"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "93906": {
-      "kingdom": "Metazoa",
-      "phylum": "Brachiopoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "brachiopods",
+      "fallback_common_name_source": "group_name",
+      "genus": "Frenulina",
       "family": "Laqueidae",
-      "genus": "Frenulina"
+      "phylum": "Brachiopoda",
+      "kingdom": "Metazoa"
     },
     "109180": {
-      "kingdom": "Metazoa",
-      "phylum": "Echinodermata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "starfish",
+      "fallback_common_name_source": "group_name",
+      "genus": "Fromia",
       "family": "Ophidiasteridae",
-      "genus": "Fromia"
+      "phylum": "Echinodermata",
+      "kingdom": "Metazoa"
     },
     "5518": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Fusarium",
       "family": "Nectriaceae",
-      "genus": "Fusarium"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "654390": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Fusarium",
       "family": "Nectriaceae",
-      "genus": "Fusarium"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "36050": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Fusarium",
       "family": "Nectriaceae",
-      "genus": "Fusarium"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "8049": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Atlantic cod",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Gadus",
       "family": "Gadidae",
-      "genus": "Gadus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "9031": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "chicken",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Gallus",
       "family": "Phasianidae",
-      "genus": "Gallus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "443782": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Westralian jewfish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Glaucosoma",
       "family": "Glaucosomatidae",
-      "genus": "Glaucosoma"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1764964": {
-      "phylum": "Bacillariophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "diatoms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Gomphonema",
       "family": "Gomphonemataceae",
-      "genus": "Gomphonema"
+      "phylum": "Bacillariophyta"
     },
     "2991509": {
-      "kingdom": "Metazoa",
-      "phylum": "Nematomorpha",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "horsehair worms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Gordius",
       "family": "Gordiidae",
-      "genus": "Gordius"
+      "phylum": "Nematomorpha",
+      "kingdom": "Metazoa"
     },
     "3635": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "cotton",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Gossypium",
       "family": "Malvaceae",
-      "genus": "Gossypium"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1391528": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Grapholita",
       "family": "Tortricidae",
-      "genus": "Grapholita"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "377273": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Greyia",
       "family": "Francoaceae",
-      "genus": "Greyia"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "23282": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Greyia",
       "family": "Francoaceae",
-      "genus": "Greyia"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1167264": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Greyia",
       "family": "Francoaceae",
-      "genus": "Greyia"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "170411": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Chlorophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "green algae",
+      "fallback_common_name_source": "group_name",
+      "genus": "Halimeda",
       "family": "Halimedaceae",
-      "genus": "Halimeda"
+      "phylum": "Chlorophyta",
+      "kingdom": "Viridiplantae"
     },
     "2874060": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "mites & ticks",
+      "fallback_common_name_source": "group_name",
+      "genus": "Halotydeus",
       "family": "Penthaleidae",
-      "genus": "Halotydeus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "2867824": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "wasps, ants & bees",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hemadas",
       "family": "Ormyridae",
-      "genus": "Hemadas"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "1210419": {
-      "kingdom": "Metazoa",
-      "phylum": "Annelida",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "segmented worms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hermenia",
       "family": "Polynoidae",
-      "genus": "Hermenia"
+      "phylum": "Annelida",
+      "kingdom": "Metazoa"
     },
     "2566765": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "caddisflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hesperophylax",
       "family": "Limnephilidae",
-      "genus": "Hesperophylax"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "10181": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "naked mole-rat",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Heterocephalus",
       "family": "Bathyergidae",
-      "genus": "Heterocephalus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "103715": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "spotted seahorse",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Hippocampus",
       "family": "Syngnathidae",
-      "genus": "Hippocampus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "703264": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "beetles",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hippodamia",
       "family": "Coccinellidae",
-      "genus": "Hippodamia"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "30945": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "flathead sole",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Hippoglossoides",
       "family": "Pleuronectidae",
-      "genus": "Hippoglossoides"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "193520": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hippophae",
       "family": "Elaeagnaceae",
-      "genus": "Hippophae"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "9606": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "human",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Homo",
       "family": "Hominidae",
-      "genus": "Homo"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "182223": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Japanese smelt",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Hypomesus",
       "family": "Osmeridae",
-      "genus": "Hypomesus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "359854": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Iberis",
       "family": "Brassicaceae",
-      "genus": "Iberis"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "753191": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Incurvaria",
       "family": "Incurvariidae",
-      "genus": "Incurvaria"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "295660": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "cigarette beetle",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Lasioderma",
       "family": "Ptinidae",
-      "genus": "Lasioderma"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "5661": {
-      "phylum": "Euglenozoa",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "kinetoplastids",
+      "fallback_common_name_source": "group_name",
+      "genus": "Leishmania",
       "family": "Trypanosomatidae",
-      "genus": "Leishmania"
+      "phylum": "Euglenozoa"
     },
     "120438": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "chitons",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lepidopleurus",
       "family": "Lepidopleuridae",
-      "genus": "Lepidopleurus"
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
     },
     "2853716": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lespedeza",
       "family": "Fabaceae",
-      "genus": "Lespedeza"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "722666": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lomaspilis",
       "family": "Geometridae",
-      "genus": "Lomaspilis"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "69944": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "burbot",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Lota",
       "family": "Lotidae",
-      "genus": "Lota"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "211834": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "mangrove red snapper",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Lutjanus",
       "family": "Lutjanidae",
-      "genus": "Lutjanus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "2483678": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lycodon",
       "family": "Colubridae",
-      "genus": "Lycodon"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1384909": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "hymenopterans",
+      "fallback_common_name_source": "group_name",
+      "genus": "Macrophya",
       "family": "Tenthredinidae",
-      "genus": "Macrophya"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "1003756": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "blue blanquillo",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Malacanthus",
       "family": "Malacanthidae",
-      "genus": "Malacanthus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "471061": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Mechanitis",
       "family": "Nymphalidae",
-      "genus": "Mechanitis"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "537173": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Megacarpaea",
       "family": "Brassicaceae",
-      "genus": "Megacarpaea"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1155344": {
-      "fallback_common_name": "tall yellow sweet-clover",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Melilotus",
       "family": "Fabaceae",
-      "genus": "Melilotus"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "8063": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "European hake",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Merluccius",
       "family": "Merlucciidae",
-      "genus": "Merluccius"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "39342": {
-      "kingdom": "Metazoa",
-      "phylum": "Echinodermata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "sea urchins",
+      "fallback_common_name_source": "group_name",
+      "genus": "Mespilia",
       "family": "Temnopleuridae",
-      "genus": "Mespilia"
+      "phylum": "Echinodermata",
+      "kingdom": "Metazoa"
     },
     "5530": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Metarhizium",
       "family": "Clavicipitaceae",
-      "genus": "Metarhizium"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "577170": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "beetles",
+      "fallback_common_name_source": "group_name",
+      "genus": "Omosita",
       "family": "Nitidulidae",
-      "genus": "Omosita"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "72053": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Lahontan cutthroat trout",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Oncorhynchus",
       "family": "Salmonidae",
-      "genus": "Oncorhynchus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "2790589": {
-      "kingdom": "Metazoa",
-      "phylum": "Echinodermata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "sea cucumbers",
+      "fallback_common_name_source": "group_name",
+      "genus": "Opheodesoma",
       "family": "Synaptidae",
-      "genus": "Opheodesoma"
+      "phylum": "Echinodermata",
+      "kingdom": "Metazoa"
     },
     "627230": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "bivalves",
+      "fallback_common_name_source": "group_name",
+      "genus": "Ostrea",
       "family": "Ostreidae",
-      "genus": "Ostrea"
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
     },
     "3112342": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Oxypteryx",
       "family": "Gelechiidae",
-      "genus": "Oxypteryx"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "71578": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Chinese spiny lobster",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Panulirus",
       "family": "Palinuridae",
-      "genus": "Panulirus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "75030": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "palette surgeonfish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Paracanthurus",
       "family": "Acanthuridae",
-      "genus": "Paracanthurus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "2561588": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Pelochrista",
       "family": "Tortricidae",
-      "genus": "Pelochrista"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "1511666": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "flies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Phaonia",
       "family": "Muscidae",
-      "genus": "Phaonia"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "2882607": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "flies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Phaonia",
       "family": "Muscidae",
-      "genus": "Phaonia"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "39090": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "spotted seal",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Phoca",
       "family": "Phocidae",
-      "genus": "Phoca"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "9720": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "harbor seal",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Phoca",
       "family": "Phocidae",
-      "genus": "Phoca"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "163115": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Phycis",
       "family": "Phycidae",
-      "genus": "Phycis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "221188": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "orange hawkweed",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Pilosella",
       "family": "Asteraceae",
-      "genus": "Pilosella"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "90988": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "fathead minnow",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Pimephales",
       "family": "Leuciscidae",
-      "genus": "Pimephales"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "40930": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "lilac mealybug",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Planococcus",
       "family": "Pseudococcidae",
-      "genus": "Planococcus"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "39414": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "narrow-leaved plantain",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Plantago",
       "family": "Plantaginaceae",
-      "genus": "Plantago"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "134630": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "blacksaddled coralgrouper",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Plectropomus",
       "family": "Serranidae",
-      "genus": "Plectropomus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "160734": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "leopard coralgrouper",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Plectropomus",
       "family": "Serranidae",
-      "genus": "Plectropomus"
-    },
-    "3706531": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
-      "family": "Pleurobranchidae",
-      "genus": "Pleurobranchus"
-    },
-    "64176": {
-      "fallback_common_name": "Common wall lizard",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
       "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3706531": {},
+    "64176": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Common wall lizard",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Podarcis",
       "family": "Lacertidae",
-      "genus": "Podarcis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1534827": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Podarcis",
       "family": "Lacertidae",
-      "genus": "Podarcis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "8060": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "saithe",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Pollachius",
       "family": "Gadidae",
-      "genus": "Pollachius"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "495877": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "longcomb sawfish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Pristis",
       "family": "Pristidae",
-      "genus": "Pristis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "181117": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Prunella",
       "family": "Prunellidae",
-      "genus": "Prunella"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "230822": {
-      "kingdom": "Fungi",
-      "phylum": "Basidiomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "basidiomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Psathyrella",
       "family": "Psathyrellaceae",
-      "genus": "Psathyrella"
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
     },
     "3465981": {
-      "kingdom": "Metazoa",
-      "phylum": "Platyhelminthes",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "flatworms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Pseudoceros",
       "family": "Pseudocerotidae",
-      "genus": "Pseudoceros"
+      "phylum": "Platyhelminthes",
+      "kingdom": "Metazoa"
     },
     "98380": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Pseudolabrus",
       "family": "Labridae",
-      "genus": "Pseudolabrus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "2485022": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Pseudophycis",
       "family": "Moridae",
-      "genus": "Pseudophycis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "9228": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Rose-ringed parakeet",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Psittacula",
       "family": "Psittacidae",
-      "genus": "Psittacula"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "1578925": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Pyricularia",
       "family": "Pyriculariaceae",
-      "genus": "Pyricularia"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "407999": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Quercus",
       "family": "Fagaceae",
-      "genus": "Quercus"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "68468": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Regulus",
       "family": "Regulidae",
-      "genus": "Regulus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "196296": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Little Japanese Horseshoe Bat",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Rhinolophus",
       "family": "Rhinolophidae",
-      "genus": "Rhinolophus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "3251964": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "cephalopods",
+      "fallback_common_name_source": "group_name",
+      "genus": "Rhombosepion",
       "family": "Sepiidae",
-      "genus": "Rhombosepion"
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
     },
     "74653": {
-      "fallback_common_name": "Macartny rose",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Rosa",
       "family": "Rosaceae",
-      "genus": "Rosa"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "74648": {
-      "fallback_common_name": "memorial rose",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Rosa",
       "family": "Rosaceae",
-      "genus": "Rosa"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1507361": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "wasps, ants & bees",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sapyga",
       "family": "Sapygidae",
-      "genus": "Sapyga"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "876076": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Satyrium",
       "family": "Lycaenidae",
-      "genus": "Satyrium"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "263521": {
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Schizopygopsis",
       "family": "Cyprinidae",
-      "genus": "Schizopygopsis"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "587071": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "hawkfish anthias",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Serranocirrhitus",
       "family": "Anthiadidae",
-      "genus": "Serranocirrhitus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "203583": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sisymbrium",
       "family": "Brassicaceae",
-      "genus": "Sisymbrium"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "4081": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "tomato",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Solanum",
       "family": "Solanaceae",
-      "genus": "Solanum"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1284347": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sorbus",
       "family": "Rosaceae",
-      "genus": "Sorbus"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "8175": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "gilthead seabream",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Sparus",
       "family": "Sparidae",
-      "genus": "Sparus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "128199": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "mosses",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sphagnum",
       "family": "Sphagnaceae",
-      "genus": "Sphagnum"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "70868": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "great barracuda",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Sphyraena",
       "family": "Sphyraenidae",
-      "genus": "Sphyraena"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "214434": {
-      "phylum": "Bacillariophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "diatoms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Staurosirella",
       "family": "Staurosiraceae",
-      "genus": "Staurosirella"
+      "phylum": "Bacillariophyta"
     },
     "161581": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "spotted pipefish",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Stigmatopora",
       "family": "Syngnathidae",
-      "genus": "Stigmatopora"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "68746": {
-      "fallback_common_name": "wine cap",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Fungi",
-      "phylum": "Basidiomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "basidiomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Stropharia",
       "family": "Strophariaceae",
-      "genus": "Stropharia"
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
     },
     "109475": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "white-toothed pygmy shrew",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Suncus",
       "family": "Soricidae",
-      "genus": "Suncus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
-    "3272347": {
-      "kingdom": "Metazoa",
-      "phylum": "Annelida",
-      "family": "Syllidae",
-      "genus": "Syllis"
-    },
+    "3272347": {},
     "37727": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Talaromyces",
       "family": "Trichocomaceae",
-      "genus": "Talaromyces"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "147273": {
-      "fallback_common_name": "Himalayan yew",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "seed plants",
+      "fallback_common_name_source": "group_name",
+      "genus": "Taxus",
       "family": "Taxaceae",
-      "genus": "Taxus"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "80348": {
-      "kingdom": "Metazoa",
-      "phylum": "Mollusca",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "gastropods",
+      "fallback_common_name_source": "group_name",
+      "genus": "Tegula",
       "family": "Tegulidae",
-      "genus": "Tegula"
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
     },
     "594117": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "flies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Tephritis",
       "family": "Tephritidae",
-      "genus": "Tephritis"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "8238": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Pacific bluefin tuna",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Thunnus",
       "family": "Scombridae",
-      "genus": "Thunnus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "27717": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "tench",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Tinca",
       "family": "Tincidae",
-      "genus": "Tinca"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "177916": {
-      "kingdom": "Metazoa",
-      "phylum": "Arthropoda",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "caddisflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Tinodes",
       "family": "Psychomyiidae",
-      "genus": "Tinodes"
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     },
     "51453": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Trichoderma",
       "family": "Hypocreaceae",
-      "genus": "Trichoderma"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "523103": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ascomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Trichophyton",
       "family": "Arthrodermataceae",
-      "genus": "Trichophyton"
+      "phylum": "Ascomycota",
+      "kingdom": "Fungi"
     },
     "189963": {
-      "kingdom": "Fungi",
-      "phylum": "Basidiomycota",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "basidiomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Trichosporon",
       "family": "Trichosporonaceae",
-      "genus": "Trichosporon"
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
     },
     "4565": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "bread wheat",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Triticum",
       "family": "Poaceae",
-      "genus": "Triticum"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "58211": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "House wren",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Troglodytes",
       "family": "Certhiidae",
-      "genus": "Troglodytes"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "146147": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Canary drum",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Umbrina",
       "family": "Sciaenidae",
-      "genus": "Umbrina"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "195338": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "porcupine ray",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Urogymnus",
       "family": "Dasyatidae",
-      "genus": "Urogymnus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "160511": {
-      "fallback_common_name": "common speedwell",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Veronica",
       "family": "Plantaginaceae",
-      "genus": "Veronica"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
-    "3680444": {
-      "kingdom": "Fungi",
-      "phylum": "Ascomycota",
-      "genus": "Verweija"
-    },
+    "3680444": {},
     "105273": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Asian particolored bat",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Vespertilio",
       "family": "Vespertilionidae",
-      "genus": "Vespertilio"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "3914": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "adzuki bean",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Vigna",
       "family": "Fabaceae",
-      "genus": "Vigna"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "75044": {
+      "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "moorish idol",
-      "fallback_common_name_source": "GenbankCommonName",
-      "kingdom": "Metazoa",
-      "phylum": "Chordata",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Zanclus",
       "family": "Zanclidae",
-      "genus": "Zanclus"
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
     },
     "4577": {
-      "fallback_common_name": "maize",
-      "fallback_common_name_source": "CommonName",
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "monocots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Zea",
       "family": "Poaceae",
-      "genus": "Zea"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     },
     "1043351": {
-      "kingdom": "Viridiplantae",
-      "phylum": "Streptophyta",
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "monocots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Zoysia",
       "family": "Poaceae",
-      "genus": "Zoysia"
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     }
   }
 }
