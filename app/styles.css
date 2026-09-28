@@ -365,3 +365,95 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .site-head::after{left:12px;right:12px}
   .tab-icon{width:15px;height:15px}
 }
+
+
+#genometrics-view{margin-top:22px}
+.genometrics-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,.55fr);
+  gap:36px;
+  align-items:end;
+  background:var(--panel);
+  border:1px solid var(--line-dark);
+  padding:24px;
+}
+.genometrics-intro h2{
+  font-size:clamp(1.6rem,3vw,2.5rem);
+  letter-spacing:-.035em;
+  margin:5px 0 8px;
+  font-weight:620;
+}
+.genometrics-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1px;
+  background:var(--line-dark);
+  border:1px solid var(--line-dark);
+  border-top:0;
+}
+.genometric-card{
+  position:relative;
+  background:
+    linear-gradient(rgba(46,110,166,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(46,110,166,.035) 1px,transparent 1px),
+    var(--panel);
+  background-size:32px 32px,32px 32px,auto;
+  padding:24px;
+  min-width:0;
+}
+.genometric-card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  width:30px;height:1px;
+  background:var(--accent);
+  opacity:.55;
+}
+.genometric-card h2{
+  margin:5px 0 4px;
+  font-size:1.25rem;
+  letter-spacing:-.025em;
+  font-weight:600;
+}
+.metric-donut-wrap{
+  width:min(240px,100%);
+  aspect-ratio:1;
+  margin:22px auto 16px;
+}
+.metric-donut{width:100%;height:100%}
+.metric-center-main{font-size:27px}
+.metric-legend{margin-top:4px}
+.metric-denominator{
+  color:var(--muted);
+  font-size:.79rem;
+  line-height:1.5;
+  margin:14px 0 0;
+}
+.genometrics-method{
+  border:1px solid var(--line-dark);
+  border-top:0;
+  min-height:0;
+}
+.genometrics-method-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:16px;
+}
+.genometrics-method-grid p{
+  margin:0;
+  color:var(--muted);
+  font-size:.84rem;
+  line-height:1.55;
+}
+.genometrics-method-grid strong{color:var(--ink);font-weight:600}
+@media(max-width:1050px){
+  .genometrics-grid{grid-template-columns:1fr 1fr}
+  .sex-card{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .genometrics-intro{grid-template-columns:1fr;gap:18px}
+  .genometrics-grid{grid-template-columns:1fr}
+  .sex-card{grid-column:auto}
+  .genometrics-method-grid{grid-template-columns:1fr}
+}
