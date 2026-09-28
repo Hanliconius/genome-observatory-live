@@ -183,7 +183,7 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Chromosome labelling</p>
             <h2 class="panel-title">Sex-chromosome labels</h2>
-            <p class="genometrics-summary">Explicit X/Y/Z/W-style chromosome names in NCBI sequence reports. This measures assembly labelling, not an inferred sex-determination system.</p>
+            <p class="genometrics-summary">Explicit X/Y/Z/W/U/V-style or generic sex-chromosome names in NCBI sequence reports. This measures assembly labelling, not an inferred sex-determination system.</p>
             <div class="genometrics-donut-row">
               <div class="donut-wrap"><svg id="genometrics-sex-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Sex chromosome labels in assemblies"></svg></div>
               <div id="genometrics-sex-legend" class="donut-legend"></div>
@@ -201,8 +201,8 @@
           </div>
           <div class="genometrics-method-grid">
             <p><strong>Mitochondrial / plastid:</strong> an organelle is counted only when NCBI's assembly metadata explicitly associates that organelle genome with the nuclear assembly.</p>
-            <p><strong>Sex chromosomes:</strong> <em>XY labelled</em> requires both X and Y; <em>ZW labelled</em> requires both Z and W. Single or non-pair X/Y/Z/W-style labels are shown as <em>Other / partial label</em>.</p>
-            <p><strong>No label</strong> means no matching chromosome name was found in the sequence report. It does not mean the organism lacks sex chromosomes.</p>
+            <p><strong>Sex chromosomes:</strong> <em>XY labelled</em> requires both X and Y; <em>ZW labelled</em> requires both Z and W. U/V, generic sex-chromosome names, and single or non-pair X/Y/Z/W-style labels are shown as <em>Other / partial label</em>.</p>
+            <p><strong>No label</strong> means no explicit sex-chromosome-style chromosome name was found in the sequence report. It does not mean the organism lacks sex chromosomes.</p>
           </div>
         </article>
       </section>
