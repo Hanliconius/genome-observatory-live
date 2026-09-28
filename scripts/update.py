@@ -53,40 +53,54 @@ def normalise(r):
 def taxonomy(taxid):
     if not taxid:return {}
     url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
-    txt=S.get(url,params={'db':'taxonomy','id':taxid},timeout=30).text
-    soup=BeautifulSoup(txt,'xml'); out={}
-    current=soup.find('Taxon')
-    if current:
-        # Prefer a name attached to the focal taxon itself.
-        other=current.find('OtherNames',recursive=False)
-        if other:
-            for tag in ('GenbankCommonName','CommonName'):
-                node=other.find(tag)
-                if node and node.get_text(strip=True):
-                    out['fallback_common_name']=node.get_text(strip=True)
-                    out['fallback_common_name_source']=tag
-                    break
-        if not out.get('fallback_common_name'):
-            node=current.find('BlastName',recursive=False)
-            if node and node.get_text(strip=True):
-                out['fallback_common_name']=node.get_text(strip=True)
-                out['fallback_common_name_source']='BlastName'
-        # NCBI also displays a broader group name when a species has no
-        # species-level common name. Reproduce that by taking the nearest
-        # ancestor with a BlastName (for example "beetles" or "snakes").
-        if not out.get('fallback_common_name'):
-            lineage=current.find('LineageEx',recursive=False)
-            ancestors=lineage.find_all('Taxon',recursive=False) if lineage else []
-            for ancestor in reversed(ancestors):
-                node=ancestor.find('BlastName',recursive=False)
-                if node and node.get_text(strip=True):
-                    out['fallback_common_name']=node.get_text(strip=True)
-                    out['fallback_common_name_source']='ancestor_BlastName'
-                    break
-    for t in soup.select('LineageEx Taxon'):
-        rank=(t.Rank.text if t.Rank else '').lower(); name=t.ScientificName.text if t.ScientificName else ''
-        if rank in {'genus','family','phylum','kingdom','superkingdom'}: out[rank]=name
-    return out
+    # NCBI E-utilities allows 3 requests/sec without an API key. Pace and retry
+    # these lookups so a transient 429/5xx does not turn into missing taxonomy.
+    for attempt in range(4):
+        try:
+            r=S.get(url,params={'db':'taxonomy','id':taxid,'retmode':'xml'},timeout=30)
+            if r.status_code==429 or r.status_code>=500:
+                time.sleep(1.0*(attempt+1))
+                continue
+            r.raise_for_status()
+            soup=BeautifulSoup(r.text,'xml'); out={}
+            current=soup.find('Taxon')
+            if not current:
+                time.sleep(1.0*(attempt+1))
+                continue
+
+            # In the EFetch XML, GenbankCommonName and BlastName live inside
+            # OtherNames. Prefer the species common name, then NCBI's broader
+            # BLAST/group label (e.g. "mites & ticks", "sea urchins").
+            other=current.find('OtherNames',recursive=False)
+            if other:
+                for tag in ('GenbankCommonName','CommonName','BlastName'):
+                    node=other.find(tag,recursive=False)
+                    if node and node.get_text(strip=True):
+                        out['fallback_common_name']=node.get_text(strip=True)
+                        out['fallback_common_name_source']=tag
+                        break
+
+            # If the focal taxon still has no label, walk up the lineage and
+            # use the nearest ancestor carrying a BLAST/group name.
+            if not out.get('fallback_common_name'):
+                lineage=current.find('LineageEx',recursive=False)
+                ancestors=lineage.find_all('Taxon',recursive=False) if lineage else []
+                for ancestor in reversed(ancestors):
+                    other_ancestor=ancestor.find('OtherNames',recursive=False)
+                    node=other_ancestor.find('BlastName',recursive=False) if other_ancestor else None
+                    if node and node.get_text(strip=True):
+                        out['fallback_common_name']=node.get_text(strip=True)
+                        out['fallback_common_name_source']='ancestor_BlastName'
+                        break
+
+            for t in current.select('LineageEx Taxon'):
+                rank=(t.Rank.text if t.Rank else '').lower(); name=t.ScientificName.text if t.ScientificName else ''
+                if rank in {'genus','family','phylum','kingdom','superkingdom'}: out[rank]=name
+            time.sleep(.36)
+            return out
+        except requests.RequestException:
+            time.sleep(1.0*(attempt+1))
+    return {}
 
 def broad_group(tx):
     lineage=' '.join(tx.values()).lower()
@@ -184,15 +198,18 @@ def main():
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
     byacc={x['accession']:x for x in old_recent if x.get('release_date','')<query_after}
     image_cache=old.get('image_cache',{})
-    tax_cache={}
+    tax_cache=dict(old.get('taxonomy_cache') or {})
+    old_byacc={x.get('accession'):x for x in old_recent if x.get('accession')}
     for x in incoming:
         if x['release_date']>=after:
             tid=str(x.get('tax_id') or '')
             if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
             tx=tax_cache[tid]
-            x.update({k:tx.get(k) for k in ('genus','family','phylum')});x['group']=broad_group(tx)
-            if not x.get('common_name') and tx.get('fallback_common_name'):
-                x['common_name']=tx['fallback_common_name']
+            previous=old_byacc.get(x['accession'],{})
+            x.update({k:(tx.get(k) or previous.get(k)) for k in ('genus','family','phylum')})
+            x['group']=broad_group(tx) if tx else previous.get('group','Other')
+            if not x.get('common_name'):
+                x['common_name']=tx.get('fallback_common_name') or previous.get('common_name')
             key=x['organism_name']
             if not image_cache.get(key): image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
             x['image']=image_cache.get(key)
@@ -308,6 +325,6 @@ def main():
             {'group':'Fungi','count':fungi},
             {'group':'Other','count':max(0,total-animals-plants-fungi)}
         ]
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
