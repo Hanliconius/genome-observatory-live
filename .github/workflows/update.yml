@@ -39,7 +39,7 @@ jobs:
           datasets version
 
       - name: Install Python dependencies
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]') || hashFiles('data/genometrics.json') == ''
         run: pip install -r requirements.txt
 
       - name: Bootstrap lifetime history on first run
