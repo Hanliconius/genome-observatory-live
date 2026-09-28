@@ -3,14 +3,17 @@ const TAXA_INDEX_URL='../data/taxa/index.json';
 const IUCN_URL='../data/status/iucn.json';
 const COUNTRY_URL='../data/countries.json';
 const SEQUENCING_COUNTRY_URL='../data/sequencing_countries.json';
+const GENOMETRICS_URL='../data/genometrics.json';
 const WORLD_URL='https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, WORLD_DATA=null, selectedCountry=null, countryFacet='origin';
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, GENOMETRICS_DATA=null, GENOMETRICS_LOADING=null, WORLD_DATA=null, selectedCountry=null, countryFacet='origin';
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
+const METRIC_BINARY_COLORS={'Associated':'#5aa17a','Not associated':'#d7ddd8'};
+const SEX_LABEL_COLORS={'XY labelled':'#2e6ea6','ZW labelled':'#8b75b3','Other / partial label':'#d59a38','No X/Y/Z/W label':'#d7ddd8'};
 const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
@@ -28,9 +31,13 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   el('taxa-view').hidden=view!=='taxa';
   el('status-view').hidden=view!=='status';
   el('countries-view').hidden=view!=='countries';
+  el('genometrics-view').hidden=view!=='genometrics';
   if(view==='taxa'){
     el('range-label').textContent='Taxa explorer';
     loadTaxaIndex();
+  }else if(view==='genometrics'){
+    el('range-label').textContent='Genometrics';
+    loadGenometrics();
   }else if(view==='status'){
     el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
     loadIucn();
@@ -43,7 +50,7 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
 }));
 
 document.querySelectorAll('.status-tab[data-status]').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.status-tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.status-tab[data-status]').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');
   statusMode=b.dataset.status;
   el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
@@ -228,6 +235,88 @@ function renderCumulative(){
   let a=0,f=0;
   const rows=(DATA.yearly||[]).map(x=>({year:String(x.year),assemblies:(a+=Number(x.assemblies||0)),first:(f+=Number(x.first_time_species||0))}));
   drawDualChart('cumulative-chart',rows);
+}
+
+async function loadGenometrics(){
+  if(GENOMETRICS_DATA){renderGenometrics();return;}
+  if(GENOMETRICS_LOADING)return GENOMETRICS_LOADING;
+  el('genometrics-loading').hidden=false;
+  el('genometrics-content').hidden=true;
+  el('genometrics-loading').textContent='Loading genometrics…';
+  GENOMETRICS_LOADING=fetch(GENOMETRICS_URL)
+    .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
+    .then(d=>{GENOMETRICS_DATA=d;renderGenometrics();})
+    .catch(err=>{
+      console.error(err);
+      el('genometrics-loading').textContent='Genometrics are unavailable until the next data refresh.';
+    })
+    .finally(()=>{GENOMETRICS_LOADING=null;});
+  return GENOMETRICS_LOADING;
+}
+
+function drawGenometricDonut(svgId,legendId,rows,centerMain,centerSub,context,palette){
+  const svg=el(svgId),legend=el(legendId);
+  const total=rows.reduce((a,b)=>a+Number(b.count||0),0);
+  const r=86,c=2*Math.PI*r;
+  let offset=0;
+  let html=`<circle class="donut-bg" cx="120" cy="120" r="${r}"></circle>`;
+  rows.forEach(x=>{
+    const frac=total?Number(x.count||0)/total:0,dash=frac*c;
+    html+=`<circle class="donut-seg metric-donut-seg" data-group="${esc(x.group)}" data-count="${Number(x.count||0)}" data-total="${total}" data-context="${esc(context)}" cx="120" cy="120" r="${r}" stroke="${palette[x.group]||'#8b75b3'}" stroke-dasharray="${dash} ${c-dash}" stroke-dashoffset="${-offset}"></circle>`;
+    offset+=dash;
+  });
+  html+=`<text class="donut-center-main metric-center-main" x="120" y="116">${esc(centerMain)}</text><text class="donut-center-sub" x="120" y="137">${esc(centerSub)}</text>`;
+  svg.innerHTML=html;
+  legend.innerHTML=rows.map(x=>{
+    const n=Number(x.count||0),pct=total?100*n/total:0;
+    return `<div class="donut-row"><i class="dot" style="background:${palette[x.group]||'#8b75b3'}"></i><span>${esc(x.group)}</span><span class="n">${fmt(n)}</span><span class="pct">${fmt1(pct)}%</span></div>`;
+  }).join('');
+
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.metric-donut-seg').forEach(seg=>{
+    const show=ev=>{
+      const n=Number(seg.dataset.count||0),den=Number(seg.dataset.total||0),pct=den?100*n/den:0;
+      tip.innerHTML=`<strong>${esc(seg.dataset.group)}</strong><span>${fmt(n)} / ${fmt(den)}</span><span>${fmt1(pct)}% · ${esc(seg.dataset.context)}</span>`;
+      tip.hidden=false;seg.classList.add('is-hovered');positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;seg.classList.remove('is-hovered');};
+    seg.onpointerenter=show;seg.onpointermove=show;seg.onpointerleave=hide;
+  });
+}
+
+function renderGenometrics(){
+  if(!GENOMETRICS_DATA)return;
+  const m=GENOMETRICS_DATA.mitochondrial_association||{};
+  const p=GENOMETRICS_DATA.plastid_association||{};
+  const sx=GENOMETRICS_DATA.sex_chromosome_labels||{};
+
+  el('genometrics-loading').hidden=true;
+  el('genometrics-content').hidden=false;
+
+  drawGenometricDonut(
+    'genometric-mito-donut','genometric-mito-legend',
+    [{group:'Associated',count:Number(m.associated||0)},{group:'Not associated',count:Number(m.not_associated||0)}],
+    fmt1(m.percentage)+'%','associated','all tracked assemblies',METRIC_BINARY_COLORS
+  );
+  el('genometric-mito-note').textContent=
+    fmt(m.associated)+' / '+fmt(m.denominator)+' tracked assemblies have an explicitly associated mitochondrial genome.';
+
+  drawGenometricDonut(
+    'genometric-plastid-donut','genometric-plastid-legend',
+    [{group:'Associated',count:Number(p.associated||0)},{group:'Not associated',count:Number(p.not_associated||0)}],
+    fmt1(p.percentage)+'%','associated','Viridiplantae assemblies',METRIC_BINARY_COLORS
+  );
+  el('genometric-plastid-note').textContent=
+    fmt(p.associated)+' / '+fmt(p.denominator)+' Viridiplantae assemblies have an explicitly associated plastid/chloroplast genome.';
+
+  const sexRows=(sx.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
+  const sexTotal=sexRows.reduce((a,b)=>a+b.count,0);
+  drawGenometricDonut(
+    'genometric-sex-donut','genometric-sex-legend',sexRows,
+    fmt(sexTotal),'assemblies','explicit chromosome labels',SEX_LABEL_COLORS
+  );
+  el('genometric-sex-note').textContent=
+    'Categories reflect explicit X/Y/Z/W-style chromosome names in NCBI sequence reports; absence of a label is not evidence that a species lacks sex chromosomes.';
 }
 
 async function loadIucn(){
