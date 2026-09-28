@@ -436,28 +436,51 @@ def bootstrap_sex_cache_package(accessions):
 
 
 def build_sex_cache(accessions,cache):
+    # Sanitize the first historical cache generated during development.
+    # Bare U/V labels are too ambiguous because they are commonly ordinary
+    # Roman-numeral chromosomes; retain U/V only when future incremental
+    # sequence reports explicitly identify them in a sex-chromosome context.
+    sanitized=0
+    for acc,rec in list(cache.items()):
+        toks=set(rec.get("tokens") or [])
+        cleaned=toks-{"U","V"}
+        if cleaned!=toks:
+            rec=dict(rec)
+            rec["tokens"]=sorted(cleaned)
+            rec["candidate_labels"]=[
+                x for x in (rec.get("candidate_labels") or [])
+                if sex_token(x) not in {"U","V"}
+            ]
+            rec["category"]=classify_tokens(cleaned)
+            cache[acc]=rec
+            sanitized+=1
+    if sanitized:
+        print(f"sex labels: sanitized ambiguous bare U/V tokens in {sanitized} cached assemblies")
+        write_json(CACHE,cache)
+
     missing=[a for a in accessions if a not in cache]
     cached_tokens=sum(
         bool((cache.get(a) or {}).get("tokens"))
         for a in accessions
     )
 
-    # Rebuild the known-bad all-empty bootstrap cache, or do the first
-    # historical fill, from one filtered metadata package.
+    # First historical fill or recovery from a genuinely empty cache.
     if len(missing)>1000 or (accessions and cached_tokens==0):
         print(
-            f"sex labels: package bootstrap for {len(accessions)} assemblies "
+            f"sex labels: Entrez bootstrap for {len(accessions)} assemblies "
             f"(replacing {len(cache)} cached records)"
         )
-        cache=bootstrap_sex_cache_package(accessions)
+        cache=bootstrap_sex_cache_entrez(accessions)
+        # Entrez bootstrap deliberately uses only X/Y/Z/W plus explicitly
+        # named 'sex chromosome' / gonosome records.
         write_json(CACHE,cache)
         return cache
 
     if not missing:
         return cache
 
-    # Daily incremental fill: new assemblies are few, so a single CLI
-    # sequence-report query is cheap and avoids maintaining another package.
+    # Daily incremental fill: new assemblies are few, so one CLI query over
+    # an accession file is cheap and returns the complete chromosome labels.
     print(
         f"sex labels: resolving {len(missing)} newly deposited assemblies "
         f"through one NCBI sequence-report query"
