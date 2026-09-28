@@ -24,6 +24,7 @@ CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 VIRIDIPLANTAE=33090
+FUNGI=4751
 BATCH_SIZE=250
 SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
 EUTILS_BASE="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
@@ -106,8 +107,8 @@ def sex_token(label):
     s=raw.upper().strip()
 
     patterns=[
-        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZWUV])(?:[ _.-]*[0-9]+)?$",
-        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZWUV])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZW])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZW])(?:[ _.-]*[0-9]+)?$",
     ]
     for pat in patterns:
         m=re.match(pat,s)
@@ -324,9 +325,7 @@ def bootstrap_sex_cache_entrez(accessions):
         "Y":["chromosome Y","chromosome Y1","chromosome Y2"],
         "Z":["chromosome Z","chromosome Z1","chromosome Z2"],
         "W":["chromosome W","chromosome W1","chromosome W2"],
-        "U":["chromosome U","chromosome U1","chromosome U2"],
-        "V":["chromosome V","chromosome V1","chromosome V2"],
-        "OTHER":["sex chromosome","gonosome"],
+        "OTHER":["sex chromosome","gonosome","U sex chromosome","V sex chromosome"],
     }
 
     for token,title_terms in queries.items():
@@ -361,11 +360,15 @@ def bootstrap_sex_cache_entrez(accessions):
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
     cached_tokens=sum(bool((cache.get(a) or {}).get("tokens")) for a in accessions)
+    ambiguous_uv=any(
+        set((cache.get(a) or {}).get("tokens") or []) & {"U","V"}
+        for a in accessions
+    )
 
     # A previous bootstrap produced an all-empty cache because the Datasets
     # sequence-report endpoint silently ignored comma-joined accessions.
     # Rebuild that cache through Entrez chromosome indexes.
-    if len(missing)>1000 or (accessions and cached_tokens==0):
+    if len(missing)>1000 or (accessions and (cached_tokens==0 or ambiguous_uv)):
         print(
             f"sex labels: Entrez bootstrap for {len(accessions)} tracked assemblies "
             f"(replacing {len(cache)} cached records)"
@@ -429,12 +432,23 @@ def main():
     sex_counts=Counter()
     token_counts=Counter()
     label_counts=Counter()
+    taxid_by_accession={x["accession"]:x["taxid"] for x in records}
+    fungal_x_only=0
     for a in accessions:
         rec=sex_cache.get(a) or {}
-        cat=rec.get("category") or "No sex-chromosome label"
+        toks=set(rec.get("tokens") or [])
+        taxid=taxid_by_accession.get(a)
+        # In fungi, a bare chromosome X is commonly Roman numeral ten rather
+        # than a sex chromosome. Exclude X-only fungal records unless another
+        # explicit sex-style token is present.
+        if toks=={"X"} and taxid and is_desc(taxid,FUNGI,parent,lineage_cache):
+            cat="No sex-chromosome label"
+            fungal_x_only+=1
+        else:
+            cat=rec.get("category") or "No sex-chromosome label"
+            token_counts.update(toks)
+            label_counts.update(rec.get("candidate_labels") or [])
         sex_counts[cat]+=1
-        token_counts.update(rec.get("tokens") or [])
-        label_counts.update(rec.get("candidate_labels") or [])
 
     total=len(records)
     categories=[
@@ -463,16 +477,17 @@ def main():
             "categories":[
                 {"group":c,"count":sex_counts.get(c,0)} for c in categories
             ],
-            "definition":"Explicit chromosome-name labels in the NCBI genome sequence report. This includes X/Y/Z/W/U/V-style and generic sex-chromosome labels and measures assembly labelling, not the organism's inferred biological sex-determination system.",
+            "definition":"Explicit chromosome-name labels in the NCBI genome sequence report. This includes X/Y/Z/W-style and explicitly identified other sex-chromosome labels and measures assembly labelling, not the organism's inferred biological sex-determination system.",
             "rules":{
                 "XY labelled":"Both X and Y labels detected, without Z/W.",
                 "ZW labelled":"Both Z and W labels detected, without X/Y.",
-                "Other / partial label":"At least one X/Y/Z/W-style or generic sex-chromosome label detected, but not a clean XY or ZW pair.",
-                "No sex-chromosome label":"No explicit X/Y/Z/W-style or generic sex-chromosome label detected."
+                "Other / partial label":"At least one X/Y/Z/W-style or explicitly identified other sex-chromosome label detected, but not a clean XY or ZW pair.",
+                "No sex-chromosome label":"No explicit X/Y/Z/W-style or explicitly identified other sex-chromosome label detected."
             },
             "audit":{
                 "token_counts":dict(token_counts),
-                "top_candidate_labels":[{"label":k,"count":v} for k,v in label_counts.most_common(50)]
+                "top_candidate_labels":[{"label":k,"count":v} for k,v in label_counts.most_common(50)],
+                "excluded_fungal_x_only":fungal_x_only
             }
         },
         "source":{
