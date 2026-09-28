@@ -904,9 +904,6 @@ def build_production_validation(records, sra_cache, ror_cache, submitter_cache):
             ),
         },
         "submitter_controls": control_rows,
-        "production_validation": build_production_validation(
-            records, sra_cache, ror_cache, submitter_cache
-        ),
     }
 
 
@@ -1116,6 +1113,9 @@ def build_provenance_audit(records, sra_cache, ror_cache, submitter_cache):
             ][:100],
         },
         "submitter_controls": control_rows,
+        "production_validation": build_production_validation(
+            records, sra_cache, ror_cache, submitter_cache
+        ),
     }
 
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1144,11 +1144,20 @@ def build_provenance_audit(records, sra_cache, ror_cache, submitter_cache):
                 row["failure_stage"],
             ])
 
+    pv = audit["production_validation"]
     print(
-        f"audit: DToL {dtol_gbr}/{dtol_total} resolved to GBR "
+        f"audit legacy: DToL {dtol_gbr}/{dtol_total} resolved to GBR "
         f"({(dtol_gbr/dtol_total if dtol_total else 0):.1%}); "
         f"global {global_counts['with_resolved_country']}/"
-        f"{global_counts['assemblies']} assemblies resolved"
+        f"{global_counts['assemblies']} center-only assemblies resolved"
+    )
+    print(
+        f"audit production: DToL {pv['dtol']['contains_gbr']}/"
+        f"{pv['dtol']['assemblies']} includes GBR "
+        f"({pv['dtol']['gbr_recall']:.1%}); "
+        f"global {pv['global']['assigned']}/"
+        f"{pv['global']['assemblies']} institute-country assignments "
+        f"({pv['global']['coverage']:.1%})"
     )
     return audit
 
