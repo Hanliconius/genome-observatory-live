@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tarfile
 import tempfile
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -113,47 +114,58 @@ def classify_tokens(tokens):
         return "Other / partial label"
     return "No X/Y/Z/W label"
 
+def resolve_sex_batch(batch):
+    labels=defaultdict(set)
+    tokens=defaultdict(set)
+    with tempfile.NamedTemporaryFile("w",delete=False,prefix="gol_acc_",suffix=".txt") as fh:
+        for a in batch:fh.write(a+"\n")
+        path=fh.name
+    try:
+        cmd=[
+            "datasets","summary","genome","accession","--inputfile",path,
+            "--report","sequence","--as-json-lines"
+        ]
+        for r in stream(cmd):
+            a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
+            role=str(first(r,"role",default="") or "").casefold()
+            loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
+            if not a or not (role=="assembled-molecule" or loc=="chromosome"):
+                continue
+            c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
+            if not c:continue
+            labels[a].add(c)
+            tok=sex_token(c)
+            if tok:tokens[a].add(tok)
+    finally:
+        Path(path).unlink(missing_ok=True)
+
+    out={}
+    for a in batch:
+        toks=sorted(tokens.get(a,set()))
+        out[a]={
+            "category":classify_tokens(toks),
+            "tokens":toks,
+            "candidate_labels":sorted(x for x in labels.get(a,set()) if sex_token(x)),
+        }
+    return out
+
+
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
     if not missing:return cache
-    print(f"sex labels: resolving {len(missing)} uncached assemblies")
-    for start in range(0,len(missing),BATCH_SIZE):
-        batch=missing[start:start+BATCH_SIZE]
-        labels=defaultdict(set)
-        tokens=defaultdict(set)
-        with tempfile.NamedTemporaryFile("w",delete=False,prefix="gol_acc_",suffix=".txt") as fh:
-            for a in batch:fh.write(a+"\n")
-            path=fh.name
-        try:
-            cmd=[
-                "datasets","summary","genome","accession","--inputfile",path,
-                "--report","sequence","--as-json-lines"
-            ]
-            for r in stream(cmd):
-                a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
-                role=str(first(r,"role",default="") or "").casefold()
-                loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-                if not a or not (role=="assembled-molecule" or loc=="chromosome"):
-                    continue
-                c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
-                if not c:continue
-                labels[a].add(c)
-                tok=sex_token(c)
-                if tok:tokens[a].add(tok)
-        finally:
-            Path(path).unlink(missing_ok=True)
-
-        for a in batch:
-            toks=sorted(tokens.get(a,set()))
-            cache[a]={
-                "category":classify_tokens(toks),
-                "tokens":toks,
-                "candidate_labels":sorted(x for x in labels.get(a,set()) if sex_token(x)),
-            }
-        if (start//BATCH_SIZE)%5==0:
-            write_json(CACHE,cache)
-    write_json(CACHE,cache)
+    batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
+    print(f"sex labels: resolving {len(missing)} uncached assemblies in {len(batches)} batches")
+    completed=0
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        futures={ex.submit(resolve_sex_batch,b):b for b in batches}
+        for fut in as_completed(futures):
+            cache.update(fut.result())
+            completed+=1
+            if completed%5==0 or completed==len(batches):
+                print(f"sex labels: completed {completed}/{len(batches)} batches")
+                write_json(CACHE,cache)
     return cache
+
 
 def main():
     parent=load_parents(); lineage_cache={}
