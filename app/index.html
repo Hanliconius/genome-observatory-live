@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f6f7f4" />
-  <title>Eukaryote Genome Watch</title>
-  <link rel="stylesheet" href="styles.css?v=20260927h" />
+  <meta name="theme-color" content="#0d1b22" />
+  <title>Genome Observatory Live</title>
+  <link rel="stylesheet" href="styles.css?v=20260927i" />
 </head>
 <body>
   <header class="site-head">
     <div class="title-wrap">
-      <p class="kicker">NCBI · LIVE PUBLIC GENOME ACTIVITY</p>
+      <p class="kicker observatory-kicker"><span class="live-dot" aria-hidden="true"></span><span class="live-word">LIVE</span> · NCBI PUBLIC GENOME ACTIVITY</p>
       <p class="byline">By <strong>Joe Hanly</strong> · <a href="https://github.com/Hanliconius" target="_blank" rel="me noopener">GitHub</a> · <a href="https://bsky.app/profile/hanliconius.bsky.social" target="_blank" rel="me noopener">Bluesky</a></p>
-      <h1>Eukaryote Genome Watch</h1>
-      <p class="lede">Chromosome-scale eukaryote genomes entering GenBank and moving through NCBI RefSeq annotation.</p>
+      <h1><span class="brand-main">Genome Observatory</span> <span class="brand-live">Live</span></h1>
+      <p class="lede">Tracking the growth of chromosome-scale eukaryotic genome sequencing.</p>
+      <p class="lede-detail">Chromosome-scale eukaryote genomes entering GenBank and moving through NCBI RefSeq annotation.</p>
     </div>
     <div class="head-meta">
       <div class="meta-pair"><span class="meta-label">Updated</span><span id="updated">loading…</span></div>
@@ -23,10 +24,10 @@
 
   <main>
     <nav class="section-tabs" aria-label="Dashboard section">
-      <button class="section-tab active" data-view="overview">Overview</button>
-      <button class="section-tab" data-view="status">Endangered</button>
-      <button class="section-tab" data-view="countries">By country</button>
-      <button class="section-tab" data-view="taxa">Taxa explorer</button>
+      <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
+      <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
+      <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
+      <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
     </nav>
 
     <section id="overview-view">
