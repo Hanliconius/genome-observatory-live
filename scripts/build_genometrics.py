@@ -469,12 +469,10 @@ def build_sex_cache(accessions,cache):
     # First historical fill or recovery from a genuinely empty cache.
     if len(missing)>1000 or (accessions and cached_tokens==0):
         print(
-            f"sex labels: Entrez bootstrap for {len(accessions)} assemblies "
-            f"(replacing {len(cache)} cached records)"
+            f"sex labels: filtered metadata-package bootstrap for "
+            f"{len(accessions)} assemblies (replacing {len(cache)} cached records)"
         )
-        cache=bootstrap_sex_cache_entrez(accessions)
-        # Entrez bootstrap deliberately uses only X/Y/Z/W plus explicitly
-        # named 'sex chromosome' / gonosome records.
+        cache=bootstrap_sex_cache_package(accessions)
         write_json(CACHE,cache)
         return cache
 
