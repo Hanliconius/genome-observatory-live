@@ -22,6 +22,7 @@ AUDIT_TSV = AUDIT_DIR / "sequencing_country_dtol_failures.tsv"
 CACHE_DIR = ROOT / "cache"
 SRA_CACHE = CACHE_DIR / "sra_biosample_centers.json"
 ROR_CACHE = CACHE_DIR / "ror_center_countries.json"
+SUBMITTER_ROR_CACHE = CACHE_DIR / "ror_submitter_countries.json"
 
 ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
@@ -29,8 +30,63 @@ ROR_URL = "https://api.ror.org/v2/organizations"
 UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repository)"
 RATE_WINDOW_DAYS = 30
 SRA_BATCH_SIZE = 250
+SUBMITTER_MIN_COUNT = 2
 
-# Provenance audit v1
+# Exact, human-reviewed SRA CenterName aliases. These are used before ROR,
+# both to recover common acronyms and to override a small number of known
+# false-positive ROR matches. Consortium/project names that do not identify a
+# single institute (for example G10K, GSC, BAT1K) are intentionally omitted.
+CENTER_COUNTRY_ALIASES = {
+    "UCSC GI": ("USA", "UCSC Genome Institute"),
+    "JGI": ("USA", "DOE Joint Genome Institute"),
+    "BCM": ("USA", "Baylor College of Medicine"),
+    "BCM-HGSC": ("USA", "Baylor College of Medicine Human Genome Sequencing Center"),
+    "VIB/KULEUVEN": ("BEL", "VIB / KU Leuven"),
+    "UNIVERSITY OF COPENHAGEN": ("DNK", "University of Copenhagen"),
+    "WUGSC": ("USA", "Washington University Genome Sequencing Center"),
+    "USDA-ARS": ("USA", "USDA Agricultural Research Service"),
+    "USDA ARS": ("USA", "USDA Agricultural Research Service"),
+    "CSIRO": ("AUS", "CSIRO"),
+    "KAUST": ("SAU", "King Abdullah University of Science and Technology"),
+    "MIT": ("USA", "Massachusetts Institute of Technology"),
+    "BGI": ("CHN", "BGI"),
+    "NC STATE UNIVERSITY": ("USA", "North Carolina State University"),
+    "MCDONNELL GENOME INSTITUTE AT WASHINGTON UNIVERSITY": ("USA", "McDonnell Genome Institute at Washington University"),
+    "LAWRENCE BERKELEY NATIONAL LAB": ("USA", "Lawrence Berkeley National Laboratory"),
+    "PRINCETON UNIVERSITY": ("USA", "Princeton University"),
+    "UNIVERSITY OF GEORGIA": ("USA", "University of Georgia"),
+    "OREGON STATE UNIVERSTY": ("USA", "Oregon State University"),
+    "UNIVERSITY OF CALIFORNIA - DAVIS": ("USA", "University of California, Davis"),
+    "PACIFIC BIOSCIENCES": ("USA", "Pacific Biosciences"),
+    "NYGC": ("USA", "New York Genome Center"),
+    "ELIXIR NORWAY": ("NOR", "ELIXIR Norway"),
+    "MINDEROO OCEANOMICS CENTRE AT UWA": ("AUS", "Minderoo OceanOmics Centre at UWA"),
+    "INSTITUT DE BIOLOGIA EVOLUTIVA (CSIC-UPF)": ("ESP", "Institut de Biologia Evolutiva (CSIC-UPF)"),
+    "CENTRO NACIONAL DE ANÃLISIS GENÃMICO": ("ESP", "Centro Nacional de Análisis Genómico"),
+    "INSTITUT DE BIOLOGIE DE L'ECOLE NORMALE SUPERIEURE": ("FRA", "Institut de biologie de l'École normale supérieure"),
+    "INRAE (FISH PHYSIOLOGY AND GENOMICS LABORATORY)": ("FRA", "INRAE"),
+    "CHINESE AGRICULTURAL ACADEMY OF SCIENCES": ("CHN", "Chinese Academy of Agricultural Sciences"),
+    "SOUTH CHINA NATIONAL BOTANICAL GARDEN, UNIVERSITY OF CHINESE ACADEMY SCIENCE": ("CHN", "South China National Botanical Garden"),
+}
+
+# Conservative assembly-submitter fallbacks. These are substring matches only
+# for institution names whose country is unambiguous. They are consulted only
+# when an assembly has no usable SRA sequencing-center country.
+SUBMITTER_COUNTRY_PATTERNS = [
+    ("WELLCOME SANGER INSTITUTE", "GBR", "Wellcome Sanger Institute"),
+    ("WELLCOME TRUST SANGER INSTITUTE", "GBR", "Wellcome Sanger Institute"),
+    ("EARLHAM INSTITUTE", "GBR", "Earlham Institute"),
+    ("BROAD INSTITUTE", "USA", "Broad Institute"),
+    ("BAYLOR COLLEGE OF MEDICINE", "USA", "Baylor College of Medicine"),
+    ("JOINT GENOME INSTITUTE", "USA", "DOE Joint Genome Institute"),
+    ("CHINESE ACADEMY OF AGRICULTURAL SCIENCES", "CHN", "Chinese Academy of Agricultural Sciences"),
+    ("CHINESE ACADEMY OF SCIENCES", "CHN", "Chinese Academy of Sciences"),
+    ("MAX PLANCK INSTITUTE", "DEU", "Max Planck Institute"),
+    ("UNIVERSITY OF COPENHAGEN", "DNK", "University of Copenhagen"),
+    ("AUSTRALIAN NATIONAL UNIVERSITY", "AUS", "Australian National University"),
+]
+
+# Provenance audit v2
 DTOL_BIOPROJECT = "PRJEB40665"
 SANGER_TOL_BIOPROJECT = "PRJEB43745"
 
@@ -378,7 +434,187 @@ def backfill_ror_cache(centers, cache):
     return cache
 
 
-def aggregate(records, sra_cache, ror_cache):
+
+def org_key(value):
+    return re.sub(r"\s+", " ", str(value or "")).strip().upper()
+
+
+def country_from_iso3(iso3):
+    c = pycountry.countries.get(alpha_3=str(iso3 or "").upper())
+    if not c:
+        return None
+    return {
+        "iso2": c.alpha_2,
+        "iso3": c.alpha_3,
+        "iso_n3": str(c.numeric).zfill(3),
+        "name": c.name,
+    }
+
+
+def curated_center_country(center):
+    hit = CENTER_COUNTRY_ALIASES.get(org_key(center))
+    if not hit:
+        return None
+    iso3, label = hit
+    country = country_from_iso3(iso3)
+    if not country:
+        return None
+    return {
+        "status": "matched",
+        **country,
+        "ror_id": None,
+        "ror_name": label,
+        "matching_type": "CURATED ALIAS",
+        "provenance": "sra_center_alias",
+    }
+
+
+def curated_submitter_country(submitter):
+    key = org_key(submitter)
+    if not key:
+        return None
+    for pattern, iso3, label in SUBMITTER_COUNTRY_PATTERNS:
+        if pattern in key:
+            country = country_from_iso3(iso3)
+            if country:
+                return {
+                    "status": "matched",
+                    **country,
+                    "ror_id": None,
+                    "ror_name": label,
+                    "matching_type": "CURATED SUBMITTER",
+                    "provenance": "submitter_alias",
+                }
+    return None
+
+
+def resolved_center_country(center, ror_cache):
+    curated = curated_center_country(center)
+    if curated:
+        return curated
+    info = ror_cache.get(center) or {}
+    if info.get("status") != "matched" or not info.get("iso3"):
+        return None
+    return {
+        **info,
+        "provenance": "sra_center_ror",
+    }
+
+
+def resolved_submitter_country(submitter, submitter_cache):
+    curated = curated_submitter_country(submitter)
+    if curated:
+        return curated
+    info = submitter_cache.get(submitter) or {}
+    if info.get("status") != "matched" or not info.get("iso3"):
+        return None
+    return {
+        **info,
+        "provenance": "submitter_ror",
+    }
+
+
+def backfill_submitter_cache(records, cache, center_cache):
+    counts = Counter(
+        x.get("submitter")
+        for x in records
+        if x.get("submitter")
+    )
+
+    # Reuse already-reviewed/resolved identical strings from the center cache.
+    for submitter in counts:
+        if submitter in cache or curated_submitter_country(submitter):
+            continue
+        info = center_cache.get(submitter) or {}
+        if info.get("status") == "matched" and info.get("iso3"):
+            cache[submitter] = dict(info)
+
+    missing = sorted(
+        submitter
+        for submitter, n in counts.items()
+        if n >= SUBMITTER_MIN_COUNT
+        and submitter not in cache
+        and not curated_submitter_country(submitter)
+    )
+    if not missing:
+        return cache
+
+    print(
+        f"ROR: resolving {len(missing)} uncached assembly submitters "
+        f"used by >= {SUBMITTER_MIN_COUNT} assemblies"
+    )
+    for i, submitter in enumerate(missing, 1):
+        try:
+            cache[submitter] = resolve_center(submitter)
+        except requests.RequestException as exc:
+            print(f"ROR transient failure for submitter {submitter!r}: {exc}")
+            continue
+        if i % 20 == 0:
+            write_json(SUBMITTER_ROR_CACHE, cache)
+        time.sleep(0.2)
+
+    write_json(SUBMITTER_ROR_CACHE, cache)
+    return cache
+
+
+def resolve_record_assignments(record, sra_cache, ror_cache, submitter_cache):
+    bs = record.get("biosample")
+    centers = sorted(set(sra_cache.get(bs, []) or [])) if bs else []
+
+    by_country = {}
+    unresolved_centers = []
+    for center in centers:
+        info = resolved_center_country(center, ror_cache)
+        if not info:
+            unresolved_centers.append(center)
+            continue
+        iso3 = info["iso3"]
+        item = by_country.setdefault(iso3, {
+            "country": info,
+            "labels": set(),
+            "provenance": set(),
+        })
+        item["labels"].add(center)
+        item["provenance"].add(info.get("provenance", "sra_center_ror"))
+
+    # Any usable SRA sequencing-center country takes precedence. We do not add
+    # the submitter country on top, because submitter and physical sequencing
+    # center can legitimately differ.
+    if by_country:
+        return [
+            {
+                "country": item["country"],
+                "labels": sorted(item["labels"]),
+                "provenance": sorted(item["provenance"]),
+            }
+            for item in by_country.values()
+        ], {
+            "mode": "sra_center",
+            "centers": centers,
+            "unresolved_centers": unresolved_centers,
+        }
+
+    submitter = record.get("submitter") or ""
+    submitter_info = resolved_submitter_country(submitter, submitter_cache)
+    if submitter_info:
+        return [{
+            "country": submitter_info,
+            "labels": [submitter],
+            "provenance": [submitter_info.get("provenance", "submitter_ror")],
+        }], {
+            "mode": "submitter_fallback",
+            "centers": centers,
+            "unresolved_centers": unresolved_centers,
+        }
+
+    return [], {
+        "mode": "unresolved",
+        "centers": centers,
+        "unresolved_centers": unresolved_centers,
+    }
+
+
+def aggregate(records, sra_cache, ror_cache, submitter_cache):
     today = date.today()
     cutoff = (today - timedelta(days=RATE_WINDOW_DAYS - 1)).isoformat()
     countries = {}
@@ -398,49 +634,57 @@ def aggregate(records, sra_cache, ror_cache):
                 "species": set(),
                 "first_seen": {},
                 "yearly_assemblies": defaultdict(int),
-                "centers": Counter(),
+                "institutes": Counter(),
+                "provenance": Counter(),
             }
         return countries[key]
 
     for x in records:
         coverage["assemblies_scanned"] += 1
-        bs = x["biosample"]
-        if not bs:
-            continue
-        coverage["assemblies_with_biosample"] += 1
+        bs = x.get("biosample")
+        if bs:
+            coverage["assemblies_with_biosample"] += 1
 
-        centers = sorted(set(sra_cache.get(bs, []) or []))
-        if not centers:
-            continue
-        coverage["assemblies_with_sra_center"] += 1
+        centers = sorted(set(sra_cache.get(bs, []) or [])) if bs else []
+        if centers:
+            coverage["assemblies_with_sra_center"] += 1
 
-        country_to_centers = defaultdict(set)
-        for center in centers:
-            info = ror_cache.get(center) or {}
-            if info.get("status") != "matched" or not info.get("iso3"):
-                unresolved_centers[center] += 1
-                continue
-            country_to_centers[info["iso3"]].add(center)
+        assignments, meta = resolve_record_assignments(
+            x, sra_cache, ror_cache, submitter_cache
+        )
+        for center in meta["unresolved_centers"]:
+            unresolved_centers[center] += 1
 
-        if not country_to_centers:
+        if not assignments:
+            coverage["assemblies_unresolved_institute_country"] += 1
             continue
-        coverage["assemblies_with_resolved_center_country"] += 1
-        if len(country_to_centers) > 1:
+
+        coverage["assemblies_with_resolved_institute_country"] += 1
+        if meta["mode"] == "sra_center":
+            coverage["assemblies_resolved_by_sra_center"] += 1
+            # Backward-compatible metric retained for the current UI/data readers.
+            coverage["assemblies_with_resolved_center_country"] += 1
+        elif meta["mode"] == "submitter_fallback":
+            coverage["assemblies_resolved_by_submitter_fallback"] += 1
+
+        if len(assignments) > 1:
             coverage["assemblies_with_multiple_center_countries"] += 1
 
-        for iso3, matched_centers in country_to_centers.items():
-            info = next(
-                v for v in ror_cache.values()
-                if isinstance(v, dict) and v.get("status") == "matched" and v.get("iso3") == iso3
-            )
+        for assignment in assignments:
+            info = assignment["country"]
             rec = ensure(info)
             rec["assemblies"] += 1
             rec["species"].add(x["organism_name"])
             rec["yearly_assemblies"][x["release_date"][:4]] += 1
             if x["release_date"] >= cutoff:
                 rec["window_assemblies"] += 1
-            for center in matched_centers:
-                rec["centers"][center] += 1
+
+            for label in assignment["labels"]:
+                if label:
+                    rec["institutes"][label] += 1
+            for source in assignment["provenance"]:
+                rec["provenance"][source] += 1
+                coverage[f"country_assignments_{source}"] += 1
 
             org = x["organism_name"]
             old = rec["first_seen"].get(org)
@@ -451,6 +695,10 @@ def aggregate(records, sra_cache, ror_cache):
     for rec in countries.values():
         first_by_year = Counter(ds[:4] for ds in rec["first_seen"].values())
         years = sorted(set(rec["yearly_assemblies"]) | set(first_by_year))
+        top_institutes = [
+            {"name": name, "assemblies": n}
+            for name, n in rec["institutes"].most_common(5)
+        ]
         rows.append({
             "iso2": rec["iso2"],
             "iso3": rec["iso3"],
@@ -461,10 +709,9 @@ def aggregate(records, sra_cache, ror_cache):
             "first_time_species": len(rec["first_seen"]),
             "window_assemblies": rec["window_assemblies"],
             "genomes_per_day": rec["window_assemblies"] / float(RATE_WINDOW_DAYS),
-            "top_centers": [
-                {"name": name, "assemblies": n}
-                for name, n in rec["centers"].most_common(5)
-            ],
+            "top_institutes": top_institutes,
+            "top_centers": top_institutes,
+            "provenance_counts": dict(rec["provenance"]),
             "yearly": [
                 {
                     "year": int(year),
@@ -478,18 +725,25 @@ def aggregate(records, sra_cache, ror_cache):
     rows.sort(key=lambda x: x["name"])
     coverage["country_assignments"] = sum(x["assemblies"] for x in rows)
     total = coverage["assemblies_scanned"]
-    resolved = coverage["assemblies_with_resolved_center_country"]
+    resolved = coverage["assemblies_with_resolved_institute_country"]
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "rate_window_days": RATE_WINDOW_DAYS,
         "source": {
-            "linkage": "NCBI genome assembly BioSample -> SRA RunInfo BioSample",
-            "center_field": "SRA CenterName",
-            "organization_resolution": "ROR v2 affiliation matcher; chosen:true results only",
+            "primary_linkage": "NCBI genome assembly BioSample -> SRA RunInfo CenterName",
+            "fallback_field": "NCBI assembly submitter",
+            "organization_resolution": (
+                "Human-reviewed aliases for selected unambiguous names; otherwise "
+                "ROR v2 affiliation matcher chosen:true results"
+            ),
+            "precedence": (
+                "Any resolved SRA sequencing-center country takes precedence. "
+                "Assembly submitter is used only when no usable SRA center country exists."
+            ),
             "interpretation": (
-                "An assembly is counted once in each country represented by a resolved "
-                "SRA sequencing center linked to its BioSample. Country totals can therefore "
-                "overlap when an assembly has sequencing data from centers in multiple countries."
+                "This is an institute-associated provenance view. SRA CenterName is the "
+                "strongest evidence for the physical sequencing center; assembly submitter "
+                "is a fallback and can represent the genome-producing/submitting institute."
             ),
         },
         "coverage": {
@@ -499,9 +753,12 @@ def aggregate(records, sra_cache, ror_cache):
                 c for vals in sra_cache.values() for c in (vals or [])
             }),
             "distinct_centers_resolved_to_country": sum(
-                1 for v in ror_cache.values()
-                if isinstance(v, dict) and v.get("status") == "matched"
+                1 for center in {
+                    c for vals in sra_cache.values() for c in (vals or [])
+                }
+                if resolved_center_country(center, ror_cache)
             ),
+            "distinct_submitters_cached": len(submitter_cache),
         },
         "unresolved_centers": [
             {"name": name, "assemblies": n}
@@ -510,28 +767,27 @@ def aggregate(records, sra_cache, ror_cache):
         "countries": rows,
     }
 
-
-
-
 def resolved_center_info(centers, ror_cache):
     resolved = []
     unresolved = []
     for center in sorted(set(centers or [])):
-        info = ror_cache.get(center) or {}
-        if info.get("status") == "matched" and info.get("iso3"):
+        info = resolved_center_country(center, ror_cache)
+        if info:
             resolved.append({
                 "center": center,
                 "iso3": info.get("iso3"),
                 "ror_name": info.get("ror_name"),
                 "ror_id": info.get("ror_id"),
                 "matching_type": info.get("matching_type"),
+                "provenance": info.get("provenance"),
             })
         else:
+            raw = ror_cache.get(center) or {}
             unresolved.append({
                 "center": center,
-                "status": info.get("status", "not_cached"),
-                "ror_name": info.get("ror_name"),
-                "ror_id": info.get("ror_id"),
+                "status": raw.get("status", "not_cached"),
+                "ror_name": raw.get("ror_name"),
+                "ror_id": raw.get("ror_id"),
             })
     return resolved, unresolved
 
@@ -557,7 +813,104 @@ def control_for_submitter(submitter):
     return None
 
 
-def build_provenance_audit(records, sra_cache, ror_cache):
+
+def build_production_validation(records, sra_cache, ror_cache, submitter_cache):
+    global_counts = Counter()
+    dtol = Counter()
+    controls = {
+        label: {
+            "label": label,
+            "expected_iso3": iso3,
+            "assemblies": 0,
+            "assigned": 0,
+            "contains_expected_country": 0,
+            "other_country_only": 0,
+            "used_sra_center": 0,
+            "used_submitter_fallback": 0,
+            "unresolved": 0,
+        }
+        for label, iso3, _ in SUBMITTER_CONTROLS
+    }
+
+    for record in records:
+        assignments, meta = resolve_record_assignments(
+            record, sra_cache, ror_cache, submitter_cache
+        )
+        countries = {
+            a["country"].get("iso3")
+            for a in assignments
+            if a.get("country")
+        }
+
+        global_counts["assemblies"] += 1
+        if assignments:
+            global_counts["assigned"] += 1
+            global_counts[f"mode_{meta['mode']}"] += 1
+        else:
+            global_counts["unresolved"] += 1
+
+        if DTOL_BIOPROJECT in set(record.get("bioproject_accessions") or []):
+            dtol["assemblies"] += 1
+            if "GBR" in countries:
+                dtol["contains_gbr"] += 1
+            elif countries:
+                dtol["other_country_only"] += 1
+            else:
+                dtol["unresolved"] += 1
+            dtol[f"mode_{meta['mode']}"] += 1
+
+        control = control_for_submitter(record.get("submitter"))
+        if control:
+            label, expected_iso3 = control
+            c = controls[label]
+            c["assemblies"] += 1
+            if assignments:
+                c["assigned"] += 1
+            else:
+                c["unresolved"] += 1
+            if expected_iso3 in countries:
+                c["contains_expected_country"] += 1
+            elif countries:
+                c["other_country_only"] += 1
+            if meta["mode"] == "sra_center":
+                c["used_sra_center"] += 1
+            elif meta["mode"] == "submitter_fallback":
+                c["used_submitter_fallback"] += 1
+
+    total = global_counts["assemblies"]
+    dtol_total = dtol["assemblies"]
+    control_rows = []
+    for label, _, _ in SUBMITTER_CONTROLS:
+        c = controls[label]
+        if not c["assemblies"]:
+            continue
+        c["coverage"] = c["assigned"] / c["assemblies"]
+        c["expected_country_recall"] = (
+            c["contains_expected_country"] / c["assemblies"]
+        )
+        control_rows.append(c)
+
+    return {
+        "global": {
+            **global_counts,
+            "coverage": global_counts["assigned"] / total if total else 0,
+        },
+        "dtol": {
+            **dtol,
+            "gbr_recall": dtol["contains_gbr"] / dtol_total if dtol_total else 0,
+            "coverage": (
+                (dtol["contains_gbr"] + dtol["other_country_only"]) / dtol_total
+                if dtol_total else 0
+            ),
+        },
+        "submitter_controls": control_rows,
+        "production_validation": build_production_validation(
+            records, sra_cache, ror_cache, submitter_cache
+        ),
+    }
+
+
+def build_provenance_audit(records, sra_cache, ror_cache, submitter_cache):
     generated_at = datetime.now(timezone.utc).isoformat()
     global_counts = Counter()
     global_center_counts = Counter()
@@ -706,7 +1059,8 @@ def build_provenance_audit(records, sra_cache, ror_cache):
         "generated_at": generated_at,
         "scope": "Chromosome/complete GenBank Eukaryota assemblies tracked by Genome Observatory Live",
         "method": {
-            "production_path": "Assembly -> BioSample -> SRA RunInfo CenterName -> ROR affiliation match -> country",
+            "legacy_path": "Assembly -> BioSample -> SRA RunInfo CenterName -> ROR affiliation match -> country",
+            "production_path": "Resolved SRA CenterName country first; otherwise assembly submitter country",
             "dtol_positive_control": DTOL_BIOPROJECT,
             "sanger_tree_of_life_parent": SANGER_TOL_BIOPROJECT,
             "note": (
@@ -828,16 +1182,21 @@ def main():
     ror_cache = load_json(ROR_CACHE, {})
     ror_cache = backfill_ror_cache(centers, ror_cache)
 
-    payload = aggregate(records, sra_cache, ror_cache)
+    submitter_cache = load_json(SUBMITTER_ROR_CACHE, {})
+    submitter_cache = backfill_submitter_cache(records, submitter_cache, ror_cache)
+
+    payload = aggregate(records, sra_cache, ror_cache, submitter_cache)
     write_json(OUT, payload)
-    build_provenance_audit(records, sra_cache, ror_cache)
+    build_provenance_audit(records, sra_cache, ror_cache, submitter_cache)
 
     cov = payload["coverage"]
     print(
         f"wrote {OUT}: {len(payload['countries'])} countries; "
-        f"{cov['assemblies_with_resolved_center_country']}/"
-        f"{cov['assemblies_scanned']} assemblies resolved "
+        f"{cov['assemblies_with_resolved_institute_country']}/"
+        f"{cov['assemblies_scanned']} assemblies resolved to an institute country "
         f"({cov['fraction_resolved']:.1%}); "
+        f"{cov['assemblies_resolved_by_sra_center']} via SRA center; "
+        f"{cov['assemblies_resolved_by_submitter_fallback']} via submitter fallback; "
         f"{cov['assemblies_with_multiple_center_countries']} multi-country assemblies"
     )
 
