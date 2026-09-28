@@ -23,7 +23,7 @@ const GENOMETRIC_COLORS={
   'No X/Y/Z/W label':'#d8dfdb',
   'No sex-chromosome label':'#d8dfdb'
 };
-const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
+const RANGE={week:{label:'Past week',rate:'Deposits per business day'},year:{label:'Past year',rate:'Deposits per business day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
 
@@ -106,15 +106,17 @@ function render(){
   el('top-first').textContent=fmt(s.first_time_species);
   el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
   el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
-  const last7=DATA.daily.slice(-7);
   const last30=DATA.daily.slice(-30);
-  el('top-rate').textContent=fmt1(last30.reduce((a,b)=>a+(b.assemblies||0),0)/Math.max(1,last30.length));
+  const previous30=DATA.daily.slice(-60,-30);
+  const currentPace=businessDayPace(last30);
+  const previousPace=businessDayPace(previous30);
+  el('top-rate').textContent=fmt1(currentPace);
   el('primary-label').textContent=RANGE[range].label;
   el('assemblies-count').textContent=fmt(s.assemblies);
   el('species-count').textContent=fmt(s.species);
   el('first-count').textContent=fmt(s.first_time_species);
-
-  renderMiniBars(last7);
+  el('hero-pace').textContent=fmt1(currentPace);
+  el('hero-change').textContent=paceChange(currentPace,previousPace);
   renderNewest();
   renderDonuts();
   renderPipeline();
@@ -146,9 +148,32 @@ function prettyDate(ds){
   return Number.isNaN(d.getTime())?ds:d.toLocaleDateString([], {year:'numeric',month:'short',day:'numeric'});
 }
 
-function renderMiniBars(rows,targetId='daily-bars'){
-  const m=Math.max(1,...rows.map(x=>x.assemblies||0));
-  el(targetId).innerHTML=rows.map(x=>`<i title="${esc(x.date)}: ${x.assemblies}" style="height:${Math.max(4,100*(x.assemblies||0)/m)}%"></i>`).join('');
+function isBusinessDate(ds){
+  const d=new Date(String(ds||'')+'T12:00:00');
+  if(Number.isNaN(d.getTime()))return false;
+  const day=d.getDay();
+  return day>=1&&day<=5;
+}
+
+function businessDayRows(rows){
+  return (rows||[]).filter(x=>isBusinessDate(x.date));
+}
+
+function recentBusinessDays(rows,n){
+  return businessDayRows(rows).slice(-n);
+}
+
+function businessDayPace(rows){
+  const xs=rows||[];
+  const businessDays=businessDayRows(xs).length;
+  const assemblies=xs.reduce((a,b)=>a+Number(b.assemblies||0),0);
+  return businessDays?assemblies/businessDays:0;
+}
+
+function paceChange(current,previous){
+  if(!previous)return current?'New activity':'—';
+  const pct=100*(current-previous)/previous;
+  return (pct>0?'+':'')+fmt1(pct)+'%';
 }
 
 function renderNewest(){
@@ -246,10 +271,16 @@ function renderRecent(){
 
 function renderRate(){
   let rows,labels;
-  if(range==='week'){rows=DATA.daily.slice(-7);labels=rows.map(x=>new Date(x.date+'T12:00:00').toLocaleDateString([], {weekday:'short'}));}
-  else if(range==='year'){rows=DATA.daily.slice(-365);labels=rows.map(x=>x.date);}
+  if(range==='week'){
+    rows=recentBusinessDays(DATA.daily,10);
+    labels=rows.map(x=>new Date(x.date+'T12:00:00').toLocaleDateString([], {weekday:'short',month:'numeric',day:'numeric'}));
+  }
+  else if(range==='year'){
+    rows=businessDayRows(DATA.daily.slice(-365));
+    labels=rows.map(x=>x.date);
+  }
   else{rows=(DATA.yearly||[]).map(x=>({date:String(x.year),assemblies:x.assemblies}));labels=rows.map(x=>x.date);}
-  el('rate-title').textContent=RANGE[range].rate;
+  el('rate-title').textContent=range==='week'?'Deposits per business day · last 10 business days':RANGE[range].rate;
   drawLineChart('rate-chart',rows,'assemblies',labels,range);
 }
 
@@ -377,8 +408,11 @@ function renderStatus(){
   const s=IUCN_DATA[statusMode];
   if(!s)return;
   const label=statusMode==='threatened'?'Threatened':'Extinct';
-  const last7=dailyWindow(s.recent_daily,7,IUCN_DATA.generated_at);
-  const last30=dailyWindow(s.recent_daily,30,IUCN_DATA.generated_at);
+  const last60=dailyWindow(s.recent_daily,60,IUCN_DATA.generated_at);
+  const previous30=last60.slice(0,30);
+  const last30=last60.slice(-30);
+  const currentPace=businessDayPace(last30);
+  const previousPace=businessDayPace(previous30);
   el('status-loading').hidden=true;
   el('status-content').hidden=false;
   el('status-primary-label').textContent=label+' · all time';
@@ -387,12 +421,13 @@ function renderStatus(){
   el('status-first').textContent=fmt(s.summary.first_time_species);
   el('status-pipeline').textContent=fmt(s.annotations?.in_progress?.length||0);
   el('status-completed').textContent=fmt(s.annotations?.recent_completed?.length||0);
-  el('status-rate').textContent=fmt1(last30.reduce((a,b)=>a+(b.assemblies||0),0)/30);
+  el('status-rate').textContent=fmt1(currentPace);
   el('status-hero-count').textContent=fmt(s.summary.assemblies);
   el('status-hero-species').textContent=fmt(s.summary.species);
   el('status-hero-first').textContent=fmt(s.summary.first_time_species);
+  el('status-hero-pace').textContent=fmt1(currentPace);
+  el('status-hero-change').textContent=paceChange(currentPace,previousPace);
   el('status-hero-title').textContent=label+' species genome deposits';
-  renderMiniBars(last7,'status-daily-bars');
 
   const x=(s.recent_assemblies||[]).find(x=>x.image?.thumb_url)||(s.recent_assemblies||[])[0];
   if(!x){
@@ -460,10 +495,10 @@ function updateCountryFacetText(){
   const sequencing=countryFacet==='sequencing';
   const alltime=countryMapIsAllTime();
   el('country-facet-description').textContent=sequencing
-    ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day mean. Assemblies can count in more than one country when resolved SRA centers span countries.'
+    ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day business-day pace. Assemblies can count in more than one country when resolved SRA centers span countries.'
     : alltime
       ? 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the total number of chromosome/complete genome deposits assigned to each country across the full record.'
-      : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.';
+      : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.';
   el('country-search-description').textContent=sequencing
     ? 'Search a country, or click it on the map, to see the cumulative history of institute-associated genome assemblies linked to that country.'
     : alltime
@@ -559,6 +594,10 @@ function countryByNumeric(id){
   return data?.countries?.find(x=>String(x.iso_n3).padStart(3,'0')===key)||null;
 }
 
+function countryRateValue(c){
+  return Number(c?.genomes_per_business_day??c?.genomes_per_day??0);
+}
+
 function countryRateLabel(v){
   const n=Number(v||0);
   return n<1?n.toFixed(2):n.toFixed(1);
@@ -574,8 +613,8 @@ function renderCountryMap(){
   const projection=d3.geoNaturalEarth1().fitExtent([[8,8],[width-8,height-8]],geo);
   const path=d3.geoPath(projection);
   const alltime=countryMapIsAllTime();
-  const valueKey=alltime?'assemblies':'genomes_per_day';
-  const maxValue=Math.max(0,...data.countries.map(x=>Number(x[valueKey]||0)));
+  const valueOf=x=>alltime?Number(x.assemblies||0):countryRateValue(x);
+  const maxValue=Math.max(0,...data.countries.map(valueOf));
   const scale=d3.scaleSequentialSqrt([0,Math.max(maxValue,alltime?1:0.01)],d3.interpolateBlues);
   const tip=el('chart-tooltip');
 
@@ -592,7 +631,7 @@ function renderCountryMap(){
     .attr('d',path)
     .attr('fill',d=>{
       const c=countryByNumeric(d.id);
-      return c?scale(Number(c[valueKey]||0)):'#e3e6ea';
+      return c?scale(valueOf(c)):'#e3e6ea';
     })
     .attr('data-country-id',d=>String(d.id??''))
     .on('pointerenter pointermove',function(ev,d){
@@ -602,7 +641,7 @@ function renderCountryMap(){
       if(c){
         const primary=alltime
           ? `<span>${fmt(c.assemblies)} assemblies · all time</span>`
-          : `<span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
+          : `<span>${countryRateLabel(countryRateValue(c))} genomes per business day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
         const base=`<strong>${esc(name)}</strong>${primary}${alltime?'':`<span>${fmt(c.assemblies)} assemblies · all time</span>`}<span>${fmt(c.species)} species represented</span>`;
         const institutes=countryFacet==='sequencing' && (c.top_institutes?.length||c.top_centers?.length)
           ? '<span>Top institutes: '+(c.top_institutes||c.top_centers).slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
@@ -624,9 +663,9 @@ function renderCountryMap(){
 
   el('country-map').setAttribute('aria-label',alltime
     ? 'World map of all-time genome deposits by sample-origin country'
-    : 'World map of genomes deposited per day by country');
+    : 'World map of genomes deposited per business day by country');
   el('country-map-legend').innerHTML=
-    '<span>'+(alltime?'Total genome deposits · all time':'Genomes per day · trailing 30-day average')+'</span>'+
+    '<span>'+(alltime?'Total genome deposits · all time':'Genomes per business day · trailing 30-day pace')+'</span>'+
     '<div class="map-gradient"></div>'+
     '<div class="map-legend-ticks"><span>0</span><span>'+(alltime?fmt(maxValue):countryRateLabel(maxValue))+'</span></div>';
 }
@@ -648,19 +687,19 @@ function renderCountryMatches(raw){
       const be=bn===q?0:bn.startsWith(q)?1:2;
       return ae-be||(countryMapIsAllTime()
         ? Number(b.assemblies||0)-Number(a.assemblies||0)
-        : Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0))||an.localeCompare(bn);
+        : countryRateValue(b)-countryRateValue(a))||an.localeCompare(bn);
     });
   }else{
     rows.sort((a,b)=>countryMapIsAllTime()
       ? Number(b.assemblies||0)-Number(a.assemblies||0)
-      : Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||Number(b.assemblies||0)-Number(a.assemblies||0));
+      : countryRateValue(b)-countryRateValue(a)||Number(b.assemblies||0)-Number(a.assemblies||0));
   }
   rows=rows.slice(0,12);
   const box=el('country-results');
   const context=countryFacet==='sequencing'?'linked assemblies':'all-time assemblies';
   const heading=countryMapIsAllTime()?'Most sequenced · all time':'Most active · trailing 30 days';
   box.innerHTML=(q?'':'<div class="taxon-results-label">'+heading+'</div>')+
-    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryMapIsAllTime()?fmt(x.assemblies):countryRateLabel(x.genomes_per_day)+'/day'}</span></button>`).join('');
+    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryMapIsAllTime()?fmt(x.assemblies):countryRateLabel(countryRateValue(x))+'/business day'}</span></button>`).join('');
   box.querySelectorAll('button[data-iso3]').forEach(btn=>btn.addEventListener('click',()=>{
     const meta=data.countries.find(x=>x.iso3===btn.dataset.iso3);
     if(meta)selectCountry(meta);
@@ -685,7 +724,7 @@ function renderCountryDetail(c){
   el('country-content').hidden=false;
   el('country-name').textContent=c.name;
   el('country-code').textContent=(countryFacet==='sequencing'?'Institute provenance · ':'Sample origin · ')+c.iso3;
-  el('country-rate').textContent=countryRateLabel(c.genomes_per_day);
+  el('country-rate').textContent=countryRateLabel(countryRateValue(c));
   el('country-week').textContent=fmt(c.window_assemblies);
   el('country-assemblies').textContent=fmt(c.assemblies);
   el('country-species').textContent=fmt(c.species);
