@@ -439,14 +439,23 @@ function activeCountryData(){
   return countryFacet==='sequencing' ? SEQ_COUNTRY_DATA : COUNTRY_DATA;
 }
 
+function countryMapIsAllTime(){
+  return countryFacet==='alltime';
+}
+
 function updateCountryFacetText(){
   const sequencing=countryFacet==='sequencing';
+  const alltime=countryMapIsAllTime();
   el('country-facet-description').textContent=sequencing
     ? 'Country is assigned from SRA CenterName, linked through each assembly BioSample and resolved to an organization country with ROR. Colour shows the trailing 30-day mean. Assemblies can count in more than one country when sequencing centers span countries.'
-    : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.';
+    : alltime
+      ? 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the total number of chromosome/complete genome deposits assigned to each country across the full record.'
+      : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.';
   el('country-search-description').textContent=sequencing
     ? 'Search a country, or click it on the map, to see the cumulative history of assemblies with sequencing data from SRA centers in that country.'
-    : 'Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.';
+    : alltime
+      ? 'Search a country, or click it on the map, to explore its all-time genome-deposition history.'
+      : 'Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.';
   el('country-all-label').textContent=sequencing?'All-time linked assemblies':'All-time assemblies';
   el('country-assembly-legend').textContent=sequencing?'Assemblies with sequencing centers in country':'Assemblies';
   el('country-species-legend').textContent=sequencing?'First-time species linked to country':'First-time species in country';
@@ -547,8 +556,10 @@ function renderCountryMap(){
   const geo=topojson.feature(WORLD_DATA,WORLD_DATA.objects.countries);
   const projection=d3.geoNaturalEarth1().fitExtent([[8,8],[width-8,height-8]],geo);
   const path=d3.geoPath(projection);
-  const maxRate=Math.max(0,...data.countries.map(x=>Number(x.genomes_per_day||0)));
-  const scale=d3.scaleSequentialSqrt([0,Math.max(maxRate,0.01)],d3.interpolateBlues);
+  const alltime=countryMapIsAllTime();
+  const valueKey=alltime?'assemblies':'genomes_per_day';
+  const maxValue=Math.max(0,...data.countries.map(x=>Number(x[valueKey]||0)));
+  const scale=d3.scaleSequentialSqrt([0,Math.max(maxValue,alltime?1:0.01)],d3.interpolateBlues);
   const tip=el('chart-tooltip');
 
   svg.append('path')
@@ -564,7 +575,7 @@ function renderCountryMap(){
     .attr('d',path)
     .attr('fill',d=>{
       const c=countryByNumeric(d.id);
-      return c?scale(Number(c.genomes_per_day||0)):'#e3e6ea';
+      return c?scale(Number(c[valueKey]||0)):'#e3e6ea';
     })
     .attr('data-country-id',d=>String(d.id??''))
     .on('pointerenter pointermove',function(ev,d){
@@ -572,7 +583,10 @@ function renderCountryMap(){
       d3.select(this).classed('is-hovered',true);
       const name=c?.name||d.properties?.name||'Country';
       if(c){
-        const base=`<strong>${esc(name)}</strong><span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span><span>${fmt(c.assemblies)} assemblies · all time</span><span>${fmt(c.species)} species represented</span>`;
+        const primary=alltime
+          ? `<span>${fmt(c.assemblies)} assemblies · all time</span>`
+          : `<span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
+        const base=`<strong>${esc(name)}</strong>${primary}${alltime?'':`<span>${fmt(c.assemblies)} assemblies · all time</span>`}<span>${fmt(c.species)} species represented</span>`;
         const centers=countryFacet==='sequencing' && c.top_centers?.length
           ? '<span>Top centers: '+c.top_centers.slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
           : '';
@@ -591,10 +605,13 @@ function renderCountryMap(){
       if(c)selectCountry(c);
     });
 
+  el('country-map').setAttribute('aria-label',alltime
+    ? 'World map of all-time genome deposits by sample-origin country'
+    : 'World map of genomes deposited per day by country');
   el('country-map-legend').innerHTML=
-    '<span>Genomes per day · trailing 30-day average</span>'+
+    '<span>'+(alltime?'Total genome deposits · all time':'Genomes per day · trailing 30-day average')+'</span>'+
     '<div class="map-gradient"></div>'+
-    '<div class="map-legend-ticks"><span>0</span><span>'+countryRateLabel(maxRate)+'</span></div>';
+    '<div class="map-legend-ticks"><span>0</span><span>'+(alltime?fmt(maxValue):countryRateLabel(maxValue))+'</span></div>';
 }
 
 function renderCountryMatches(raw){
@@ -612,16 +629,21 @@ function renderCountryMatches(raw){
       const an=a.name.toLowerCase(),bn=b.name.toLowerCase();
       const ae=an===q?0:an.startsWith(q)?1:2;
       const be=bn===q?0:bn.startsWith(q)?1:2;
-      return ae-be||Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||an.localeCompare(bn);
+      return ae-be||(countryMapIsAllTime()
+        ? Number(b.assemblies||0)-Number(a.assemblies||0)
+        : Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0))||an.localeCompare(bn);
     });
   }else{
-    rows.sort((a,b)=>Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||Number(b.assemblies||0)-Number(a.assemblies||0));
+    rows.sort((a,b)=>countryMapIsAllTime()
+      ? Number(b.assemblies||0)-Number(a.assemblies||0)
+      : Number(b.genomes_per_day||0)-Number(a.genomes_per_day||0)||Number(b.assemblies||0)-Number(a.assemblies||0));
   }
   rows=rows.slice(0,12);
   const box=el('country-results');
   const context=countryFacet==='sequencing'?'linked assemblies':'all-time assemblies';
-  box.innerHTML=(q?'':'<div class="taxon-results-label">Most active · trailing 30 days</div>')+
-    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryRateLabel(x.genomes_per_day)}/day</span></button>`).join('');
+  const heading=countryMapIsAllTime()?'Most sequenced · all time':'Most active · trailing 30 days';
+  box.innerHTML=(q?'':'<div class="taxon-results-label">'+heading+'</div>')+
+    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryMapIsAllTime()?fmt(x.assemblies):countryRateLabel(x.genomes_per_day)+'/day'}</span></button>`).join('');
   box.querySelectorAll('button[data-iso3]').forEach(btn=>btn.addEventListener('click',()=>{
     const meta=data.countries.find(x=>x.iso3===btn.dataset.iso3);
     if(meta)selectCountry(meta);
