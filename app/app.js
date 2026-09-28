@@ -13,7 +13,7 @@ let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
 const METRIC_BINARY_COLORS={'Associated':'#5aa17a','Not associated':'#d7ddd8'};
-const SEX_LABEL_COLORS={'XY labelled':'#2e6ea6','ZW labelled':'#8b75b3','Other / partial label':'#d59a38','No X/Y/Z/W label':'#d7ddd8'};
+const SEX_LABEL_COLORS={'XY labelled':'#2e6ea6','ZW labelled':'#8b75b3','Other / partial label':'#d59a38','No sex-chromosome label':'#d7ddd8'};
 const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
@@ -316,7 +316,7 @@ function renderGenometrics(){
     fmt(sexTotal),'assemblies','explicit chromosome labels',SEX_LABEL_COLORS
   );
   el('genometric-sex-note').textContent=
-    'Categories reflect explicit X/Y/Z/W-style chromosome names in NCBI sequence reports; absence of a label is not evidence that a species lacks sex chromosomes.';
+    'Categories reflect explicit X/Y/Z/W/U/V-style or generic sex-chromosome names in NCBI sequence reports; absence of a label is not evidence that a species lacks sex chromosomes.';
 }
 
 async function loadIucn(){
