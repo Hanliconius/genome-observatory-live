@@ -564,7 +564,7 @@ function renderCountryMap(){
     .attr('d',path)
     .attr('fill',d=>{
       const c=countryByNumeric(d.id);
-      return c?scale(Number(c.genomes_per_day||0)):'#edf0ed';
+      return c?scale(Number(c.genomes_per_day||0)):'#e3e6ea';
     })
     .attr('data-country-id',d=>String(d.id??''))
     .on('pointerenter pointermove',function(ev,d){
