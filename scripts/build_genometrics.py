@@ -140,8 +140,9 @@ def sequence_report_page(batch,page_token=None):
         body["page_token"]=page_token
 
     last=None
-    for attempt in range(5):
+    for attempt in range(8):
         try:
+            time.sleep(0.38)
             resp=requests.post(
                 SEQUENCE_REPORT_URL,
                 json=body,
@@ -153,7 +154,15 @@ def sequence_report_page(batch,page_token=None):
             )
             if resp.status_code in {429,500,502,503,504}:
                 last=RuntimeError(f"NCBI sequence-report HTTP {resp.status_code}")
-                time.sleep(1.0*(attempt+1))
+                if resp.status_code==429:
+                    retry=resp.headers.get("Retry-After")
+                    try:
+                        delay=max(2.0,float(retry)) if retry else 2.0*(attempt+1)
+                    except ValueError:
+                        delay=2.0*(attempt+1)
+                else:
+                    delay=1.5*(attempt+1)
+                time.sleep(delay)
                 continue
             resp.raise_for_status()
             return resp.json()
@@ -348,7 +357,7 @@ def build_sex_cache(accessions,cache):
         return cache
 
     batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
-    workers=min(6,len(batches))
+    workers=1
     print(
         f"sex labels: filtered NCBI sequence-report API for "
         f"{len(missing)} assemblies in {len(batches)} batches"
