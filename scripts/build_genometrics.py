@@ -120,9 +120,10 @@ def sex_token(label):
 
 def classify_tokens(tokens):
     t=set(tokens)
-    if {"X","Y"}<=t and not ({"Z","W","U","V","OTHER"} & t):
+    biological=t-{"OTHER"}
+    if {"X","Y"}<=biological and not ({"Z","W","U","V"} & biological):
         return "XY labelled"
-    if {"Z","W"}<=t and not ({"X","Y","U","V","OTHER"} & t):
+    if {"Z","W"}<=biological and not ({"X","Y","U","V"} & biological):
         return "ZW labelled"
     if t:
         return "Other / partial label"
