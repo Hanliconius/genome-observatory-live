@@ -69,40 +69,7 @@ jobs:
         run: python scripts/build_sequencing_countries.py
 
       - name: Build genometrics
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[genometrics-refresh]')
         run: python scripts/build_genometrics.py
-
-      - name: Diagnose NCBI multi-accession sequence reports
-        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[diag-multi]')
-        run: |
-          python - <<'PY'
-          import json, urllib.request
-          url="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
-          a="GCA_000001405.29"
-          b="GCA_000002315.5"
-          tests=[
-              ("comma", a+","+b),
-              ("space", a+" "+b),
-              ("newline", a+"\n"+b),
-              ("semicolon", a+";"+b),
-              ("single-human", a),
-              ("single-chicken", b),
-          ]
-          for name,value in tests:
-              body={"accession":value,"chromosomes":["X","Y","Z","W"],"page_size":100}
-              req=urllib.request.Request(
-                  url,
-                  data=json.dumps(body).encode(),
-                  headers={"Content-Type":"application/json","Accept":"application/json"},
-              )
-              try:
-                  with urllib.request.urlopen(req,timeout=60) as resp:
-                      d=json.loads(resp.read().decode())
-                  pairs=sorted({(x.get("assembly_accession"),x.get("chr_name"),x.get("role")) for x in d.get("reports",[])})
-                  print(name, "N", len(d.get("reports",[])), "ASSEMBLIES", sorted({x[0] for x in pairs if x[0]}), "PRIMARY", [x for x in pairs if x[2]=="assembled-molecule"])
-              except Exception as e:
-                  print(name,"ERROR",repr(e))
-          PY
 
       - name: Build IUCN threatened and extinct views
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
