@@ -107,16 +107,13 @@ function render(){
   el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
   el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
   const last30=DATA.daily.slice(-30);
-  const previous30=DATA.daily.slice(-60,-30);
   const currentPace=businessDayPace(last30);
-  const previousPace=businessDayPace(previous30);
   el('top-rate').textContent=fmt1(currentPace);
   el('primary-label').textContent=RANGE[range].label;
   el('assemblies-count').textContent=fmt(s.assemblies);
   el('species-count').textContent=fmt(s.species);
   el('first-count').textContent=fmt(s.first_time_species);
-  el('hero-pace').textContent=fmt1(currentPace);
-  el('hero-change').textContent=paceChange(currentPace,previousPace);
+  renderYearlyBars('hero-yearly-chart',DATA.yearly||[]);
   renderNewest();
   renderDonuts();
   renderPipeline();
@@ -174,6 +171,45 @@ function paceChange(current,previous){
   if(!previous)return current?'New activity':'—';
   const pct=100*(current-previous)/previous;
   return (pct>0?'+':'')+fmt1(pct)+'%';
+}
+
+function renderYearlyBars(svgId,rows){
+  const svg=el(svgId);
+  if(!svg||!rows?.length){if(svg)svg.innerHTML='';return;}
+  const vals=rows.map(x=>Number(x.assemblies||0));
+  const max=Math.max(1,...vals);
+  const w=860,h=170,L=8,R=8,T=8,B=26,iw=w-L-R,ih=h-T-B;
+  const gap=Math.max(1.5,Math.min(5,iw/rows.length*.18));
+  const bw=Math.max(2,(iw-gap*(rows.length-1))/rows.length);
+  let html='';
+  rows.forEach((r,i)=>{
+    const v=Number(r.assemblies||0);
+    const bh=ih*v/max;
+    const x=L+i*(bw+gap);
+    const y=T+ih-bh;
+    html+=`<rect class="hero-year-bar" data-year="${esc(r.year)}" data-count="${v}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${bw.toFixed(2)}" height="${Math.max(1,bh).toFixed(2)}" rx="1"></rect>`;
+  });
+  const tickCount=Math.min(6,rows.length);
+  const tickIdx=[...new Set([...Array(tickCount).keys()].map(i=>Math.round(i*(rows.length-1)/Math.max(1,tickCount-1))))];
+  tickIdx.forEach(i=>{
+    const x=L+i*(bw+gap)+bw/2;
+    const lab=String(rows[i].year);
+    html+=`<text class="hero-year-tick" x="${x.toFixed(2)}" y="${h-7}" text-anchor="middle">${esc(lab)}</text>`;
+  });
+  svg.innerHTML=html;
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.hero-year-bar').forEach(bar=>{
+    const show=ev=>{
+      tip.innerHTML=`<strong>${esc(bar.dataset.year)}</strong><span>${fmt(Number(bar.dataset.count||0))} assemblies</span>`;
+      tip.hidden=false;
+      bar.classList.add('is-hovered');
+      positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
+    bar.onpointerenter=show;
+    bar.onpointermove=show;
+    bar.onpointerleave=hide;
+  });
 }
 
 function renderNewest(){
@@ -409,10 +445,8 @@ function renderStatus(){
   if(!s)return;
   const label=statusMode==='threatened'?'Threatened':'Extinct';
   const last60=dailyWindow(s.recent_daily,60,IUCN_DATA.generated_at);
-  const previous30=last60.slice(0,30);
   const last30=last60.slice(-30);
   const currentPace=businessDayPace(last30);
-  const previousPace=businessDayPace(previous30);
   el('status-loading').hidden=true;
   el('status-content').hidden=false;
   el('status-primary-label').textContent=label+' · all time';
@@ -425,9 +459,8 @@ function renderStatus(){
   el('status-hero-count').textContent=fmt(s.summary.assemblies);
   el('status-hero-species').textContent=fmt(s.summary.species);
   el('status-hero-first').textContent=fmt(s.summary.first_time_species);
-  el('status-hero-pace').textContent=fmt1(currentPace);
-  el('status-hero-change').textContent=paceChange(currentPace,previousPace);
   el('status-hero-title').textContent=label+' species genome deposits';
+  renderYearlyBars('status-hero-yearly-chart',s.yearly||[]);
 
   const x=(s.recent_assemblies||[]).find(x=>x.image?.thumb_url)||(s.recent_assemblies||[])[0];
   if(!x){
