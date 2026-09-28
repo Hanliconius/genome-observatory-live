@@ -52,11 +52,10 @@
           <p class="panel-kicker" id="primary-label">Past week</p>
           <h2 class="panel-title">Chromosome-scale genome deposits</h2>
           <div class="hero-number" id="assemblies-count">—</div>
-          <div class="hero-summary-grid" aria-label="Recent genome-deposition summary">
-            <div class="hero-summary-item"><span class="hero-summary-label">Species represented</span><strong id="species-count">—</strong></div>
-            <div class="hero-summary-item"><span class="hero-summary-label">First-time species</span><strong id="first-count">—</strong></div>
-            <div class="hero-summary-item"><span class="hero-summary-label">30-day pace / business day</span><strong id="hero-pace">—</strong></div>
-            <div class="hero-summary-item"><span class="hero-summary-label">Change vs previous 30 days</span><strong id="hero-change">—</strong></div>
+          <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
+          <div class="hero-yearly-wrap">
+            <div class="hero-yearly-head"><span>Annual deposits</span><span>current year is year-to-date</span></div>
+            <svg id="hero-yearly-chart" class="hero-yearly-chart" viewBox="0 0 860 170" preserveAspectRatio="none" role="img" aria-label="Genome deposits per year"></svg>
           </div>
         </article>
 
@@ -239,11 +238,10 @@
             <p class="panel-kicker" id="status-primary-label">Threatened · all time</p>
             <h2 class="panel-title" id="status-hero-title">Threatened species genome deposits</h2>
             <div class="hero-number" id="status-hero-count">—</div>
-            <div class="hero-summary-grid" aria-label="IUCN genome-deposition summary">
-              <div class="hero-summary-item"><span class="hero-summary-label">Species represented</span><strong id="status-hero-species">—</strong></div>
-              <div class="hero-summary-item"><span class="hero-summary-label">First-time species</span><strong id="status-hero-first">—</strong></div>
-              <div class="hero-summary-item"><span class="hero-summary-label">30-day pace / business day</span><strong id="status-hero-pace">—</strong></div>
-              <div class="hero-summary-item"><span class="hero-summary-label">Change vs previous 30 days</span><strong id="status-hero-change">—</strong></div>
+            <p class="hero-subline"><span id="status-hero-species">—</span> species represented · <span id="status-hero-first">—</span> first-time species</p>
+            <div class="hero-yearly-wrap">
+              <div class="hero-yearly-head"><span>Annual deposits</span><span>current year is year-to-date</span></div>
+              <svg id="status-hero-yearly-chart" class="hero-yearly-chart" viewBox="0 0 860 170" preserveAspectRatio="none" role="img" aria-label="Matching genome deposits per year"></svg>
             </div>
           </article>
 
