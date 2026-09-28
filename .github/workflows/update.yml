@@ -39,6 +39,7 @@ jobs:
           datasets version
 
       - name: Install Python dependencies
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]') || contains(github.event.head_commit.message, '[genometrics-refresh]')
         run: pip install -r requirements.txt
 
       - name: Bootstrap lifetime history on first run
@@ -69,6 +70,7 @@ jobs:
         run: python scripts/build_sequencing_countries.py
 
       - name: Build genometrics
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[genometrics-refresh]')
         run: python scripts/build_genometrics.py
 
       - name: Build IUCN threatened and extinct views
