@@ -203,50 +203,71 @@ def bulk_bootstrap_sex_cache(accessions):
     return out
 
 
-def build_sex_cache(accessions,cache):
-    missing=[a for a in accessions if a not in cache]
-    if not missing:return cache
-
-    # The first historical fill is much faster and gentler as one taxon-wide
-    # sequence-report stream than as dozens of accession RPCs. Subsequent
-    # daily runs use small accession batches for only genuinely new genomes.
-    if len(missing)>1000:
-        wanted=set(missing)
-        labels=defaultdict(set)
-        tokens=defaultdict(set)
+def bulk_bootstrap_sex_cache(accessions):
+    """Initial fill using NCBI's server-side chromosome-name filter."""
+    wanted=set(accessions)
+    labels=defaultdict(set)
+    tokens=defaultdict(set)
+    with tempfile.TemporaryDirectory(prefix="gol_sex_bootstrap_") as td:
+        zpath=Path(td)/"sex_reports.zip"
         cmd=[
-            "datasets","summary","genome","taxon","Eukaryota",
+            "datasets","download","genome","taxon","Eukaryota",
             "--assembly-source","GenBank",
             "--assembly-level","chromosome,complete",
-            "--report","sequence","--as-json-lines"
+            "--chromosomes",",".join(SEX_CHROMOSOME_QUERY),
+            "--include","seq-report",
+            "--filename",str(zpath),
+            "--no-progressbar",
+            "--fast-zip-validation",
         ]
-        print(f"sex labels: initial bulk fill for {len(missing)} assemblies")
-        rows=0
-        for r in stream(cmd):
-            rows+=1
-            a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
-            if a not in wanted:
-                continue
-            role=str(first(r,"role",default="") or "").casefold()
-            loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-            if not (role=="assembled-molecule" or loc=="chromosome"):
-                continue
-            c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
-            if not c:
-                continue
-            labels[a].add(c)
-            tok=sex_token(c)
-            if tok:
-                tokens[a].add(tok)
+        p=subprocess.run(cmd,text=True,capture_output=True)
+        if p.returncode:
+            raise RuntimeError(
+                f"datasets sex-report download failed {p.returncode}: {p.stderr[-4000:]}"
+            )
+        with zipfile.ZipFile(zpath) as zf:
+            report_names=[n for n in zf.namelist() if n.endswith("/sequence_report.jsonl")]
+            print(f"sex labels: filtered package contains {len(report_names)} assembly sequence reports")
+            for name in report_names:
+                with zf.open(name) as fh:
+                    for raw in fh:
+                        try:
+                            r=json.loads(raw)
+                        except Exception:
+                            continue
+                        a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
+                        if not a or a not in wanted:
+                            continue
+                        role=str(first(r,"role",default="") or "").casefold()
+                        loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
+                        if not (role=="assembled-molecule" or loc=="chromosome"):
+                            continue
+                        c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
+                        if not c:
+                            continue
+                        tok=sex_token(c)
+                        if tok:
+                            labels[a].add(c)
+                            tokens[a].add(tok)
 
-        for a in missing:
-            toks=sorted(tokens.get(a,set()))
-            cache[a]={
-                "category":classify_tokens(toks),
-                "tokens":toks,
-                "candidate_labels":sorted(x for x in labels.get(a,set()) if sex_token(x)),
-            }
-        print(f"sex labels: bulk stream read {rows} sequence rows")
+    out={}
+    for a in accessions:
+        toks=sorted(tokens.get(a,set()))
+        out[a]={
+            "category":classify_tokens(toks),
+            "tokens":toks,
+            "candidate_labels":sorted(labels.get(a,set())),
+        }
+    return out
+
+
+def build_sex_cache(accessions,cache):
+    missing=[a for a in accessions if a not in cache]
+    if not missing:
+        return cache
+    if len(missing)>5000:
+        print(f"sex labels: filtered bulk bootstrap for {len(missing)} assemblies")
+        cache.update(bulk_bootstrap_sex_cache(accessions))
         write_json(CACHE,cache)
         return cache
 
