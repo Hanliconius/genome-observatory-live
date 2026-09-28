@@ -460,18 +460,18 @@ function updateCountryFacetText(){
   const sequencing=countryFacet==='sequencing';
   const alltime=countryMapIsAllTime();
   el('country-facet-description').textContent=sequencing
-    ? 'Country is assigned from SRA CenterName, linked through each assembly BioSample and resolved to an organization country with ROR. Colour shows the trailing 30-day mean. Assemblies can count in more than one country when sequencing centers span countries.'
+    ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day mean. Assemblies can count in more than one country when resolved SRA centers span countries.'
     : alltime
       ? 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the total number of chromosome/complete genome deposits assigned to each country across the full record.'
       : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.';
   el('country-search-description').textContent=sequencing
-    ? 'Search a country, or click it on the map, to see the cumulative history of assemblies with sequencing data from SRA centers in that country.'
+    ? 'Search a country, or click it on the map, to see the cumulative history of institute-associated genome assemblies linked to that country.'
     : alltime
       ? 'Search a country, or click it on the map, to explore its all-time genome-deposition history.'
       : 'Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.';
-  el('country-all-label').textContent=sequencing?'All-time linked assemblies':'All-time assemblies';
-  el('country-assembly-legend').textContent=sequencing?'Assemblies with sequencing centers in country':'Assemblies';
-  el('country-species-legend').textContent=sequencing?'First-time species linked to country':'First-time species in country';
+  el('country-all-label').textContent=sequencing?'All-time institute-linked assemblies':'All-time assemblies';
+  el('country-assembly-legend').textContent=sequencing?'Institute-associated assemblies':'Assemblies';
+  el('country-species-legend').textContent=sequencing?'First-time species linked to institute country':'First-time species in country';
 }
 
 function updateCountryCoverageText(){
@@ -479,14 +479,18 @@ function updateCountryCoverageText(){
   if(!data)return;
   const c=data.coverage||{};
   if(countryFacet==='sequencing'){
-    const resolved=Number(c.assemblies_with_resolved_center_country||0);
+    const resolved=Number(c.assemblies_with_resolved_institute_country||c.assemblies_with_resolved_center_country||0);
     const total=Number(c.assemblies_scanned||0);
     const pct=total?100*resolved/total:0;
+    const viaSra=Number(c.assemblies_resolved_by_sra_center||c.assemblies_with_resolved_center_country||0);
+    const viaSubmitter=Number(c.assemblies_resolved_by_submitter_fallback||0);
     const centers=Number(c.distinct_centers_resolved_to_country||0);
     const totalCenters=Number(c.distinct_sra_centers||0);
     el('country-map-status').textContent=
-      fmt(resolved)+' of '+fmt(total)+' assemblies linked to a resolved sequencing-center country ('+
-      fmt1(pct)+'%). '+fmt(centers)+' of '+fmt(totalCenters)+' distinct SRA center names resolved via ROR.'+
+      fmt(resolved)+' of '+fmt(total)+' assemblies linked to an institute country ('+
+      fmt1(pct)+'%). '+fmt(viaSra)+' use resolved SRA sequencing centers; '+
+      fmt(viaSubmitter)+' use the assembly-submitter fallback. '+
+      fmt(centers)+' of '+fmt(totalCenters)+' distinct SRA center names resolve via ROR or curated aliases.'+
       (Number(c.assemblies_with_multiple_center_countries||0)
         ? ' '+fmt(c.assemblies_with_multiple_center_countries)+' assemblies link to centers in multiple countries.'
         : '');
@@ -600,12 +604,12 @@ function renderCountryMap(){
           ? `<span>${fmt(c.assemblies)} assemblies · all time</span>`
           : `<span>${countryRateLabel(c.genomes_per_day)} genomes per day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
         const base=`<strong>${esc(name)}</strong>${primary}${alltime?'':`<span>${fmt(c.assemblies)} assemblies · all time</span>`}<span>${fmt(c.species)} species represented</span>`;
-        const centers=countryFacet==='sequencing' && c.top_centers?.length
-          ? '<span>Top centers: '+c.top_centers.slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
+        const institutes=countryFacet==='sequencing' && (c.top_institutes?.length||c.top_centers?.length)
+          ? '<span>Top institutes: '+(c.top_institutes||c.top_centers).slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
           : '';
-        tip.innerHTML=base+centers;
+        tip.innerHTML=base+institutes;
       }else{
-        tip.innerHTML=`<strong>${esc(name)}</strong><span>No ${countryFacet==='sequencing'?'resolved sequencing-center':'country-assigned'} genome records</span>`;
+        tip.innerHTML=`<strong>${esc(name)}</strong><span>No ${countryFacet==='sequencing'?'resolved institute-country':'country-assigned'} genome records</span>`;
       }
       tip.hidden=false;positionTooltip(ev,tip);
     })
@@ -680,7 +684,7 @@ function renderCountryDetail(c){
   el('country-empty').hidden=true;
   el('country-content').hidden=false;
   el('country-name').textContent=c.name;
-  el('country-code').textContent=(countryFacet==='sequencing'?'Sequencing center · ':'Sample origin · ')+c.iso3;
+  el('country-code').textContent=(countryFacet==='sequencing'?'Institute provenance · ':'Sample origin · ')+c.iso3;
   el('country-rate').textContent=countryRateLabel(c.genomes_per_day);
   el('country-week').textContent=fmt(c.window_assemblies);
   el('country-assemblies').textContent=fmt(c.assemblies);
