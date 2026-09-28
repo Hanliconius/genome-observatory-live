@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20260928d" />
+  <link rel="stylesheet" href="styles.css?v=20260928e" />
 </head>
 <body>
   <header class="site-head">
@@ -44,7 +44,7 @@
         <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="top-first">—</span></div>
         <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="top-pipeline">—</span></div>
         <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="top-completed">—</span></div>
-        <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="top-rate">—</span></div>
+        <div class="stat-box"><span class="stat-label">30-day business-day pace</span><span class="stat-value" id="top-rate">—</span></div>
       </section>
 
       <section class="layout-grid">
@@ -52,10 +52,11 @@
           <p class="panel-kicker" id="primary-label">Past week</p>
           <h2 class="panel-title">Chromosome-scale genome deposits</h2>
           <div class="hero-number" id="assemblies-count">—</div>
-          <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
-          <div class="sparkline-wrap">
-            <div class="sparkline-labels"><span>Daily activity</span><span>last 7 days</span></div>
-            <div class="mini-bars" id="daily-bars" aria-label="Daily assembly counts"></div>
+          <div class="hero-summary-grid" aria-label="Recent genome-deposition summary">
+            <div class="hero-summary-item"><span class="hero-summary-label">Species represented</span><strong id="species-count">—</strong></div>
+            <div class="hero-summary-item"><span class="hero-summary-label">First-time species</span><strong id="first-count">—</strong></div>
+            <div class="hero-summary-item"><span class="hero-summary-label">30-day pace / business day</span><strong id="hero-pace">—</strong></div>
+            <div class="hero-summary-item"><span class="hero-summary-label">Change vs previous 30 days</span><strong id="hero-change">—</strong></div>
           </div>
         </article>
 
@@ -90,7 +91,7 @@
           <div class="panel-head">
             <div>
               <p class="panel-kicker">Assemblies over time</p>
-              <h2 class="panel-title" id="rate-title">Deposits per day</h2>
+              <h2 class="panel-title" id="rate-title">Deposits per business day · last 10 business days</h2>
             </div>
           </div>
           <svg id="rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
@@ -230,7 +231,7 @@
           <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="status-first">—</span></div>
           <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="status-pipeline">—</span></div>
           <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="status-completed">—</span></div>
-          <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="status-rate">—</span></div>
+          <div class="stat-box"><span class="stat-label">30-day business-day pace</span><span class="stat-value" id="status-rate">—</span></div>
         </section>
 
         <section class="layout-grid">
@@ -238,10 +239,11 @@
             <p class="panel-kicker" id="status-primary-label">Threatened · all time</p>
             <h2 class="panel-title" id="status-hero-title">Threatened species genome deposits</h2>
             <div class="hero-number" id="status-hero-count">—</div>
-            <p class="hero-subline"><span id="status-hero-species">—</span> species represented · <span id="status-hero-first">—</span> first-time species</p>
-            <div class="sparkline-wrap">
-              <div class="sparkline-labels"><span>Daily activity</span><span>last 7 days</span></div>
-              <div class="mini-bars" id="status-daily-bars" aria-label="Daily matching assembly counts"></div>
+            <div class="hero-summary-grid" aria-label="IUCN genome-deposition summary">
+              <div class="hero-summary-item"><span class="hero-summary-label">Species represented</span><strong id="status-hero-species">—</strong></div>
+              <div class="hero-summary-item"><span class="hero-summary-label">First-time species</span><strong id="status-hero-first">—</strong></div>
+              <div class="hero-summary-item"><span class="hero-summary-label">30-day pace / business day</span><strong id="status-hero-pace">—</strong></div>
+              <div class="hero-summary-item"><span class="hero-summary-label">Change vs previous 30 days</span><strong id="status-hero-change">—</strong></div>
             </div>
           </article>
 
@@ -317,7 +319,7 @@
           <div>
             <p class="panel-kicker">Geographic activity</p>
             <h2>Genome deposition by country</h2>
-            <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per day over the trailing 30 days.</p>
+            <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.</p>
           </div>
           <div class="country-map-tools">
             <nav class="status-tabs country-facet-tabs" aria-label="Country facet">
@@ -328,7 +330,7 @@
             <div id="country-map-legend" class="country-map-legend"></div>
           </div>
         </div>
-        <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per day by country"></svg>
+        <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per business day by country"></svg>
         <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
       </article>
 
@@ -355,7 +357,7 @@
         </article>
 
         <section class="stat-strip country-stats">
-          <div class="stat-box"><span class="stat-label">Genomes per day</span><span class="stat-value" id="country-rate">—</span></div>
+          <div class="stat-box"><span class="stat-label">Genomes / business day</span><span class="stat-value" id="country-rate">—</span></div>
           <div class="stat-box"><span class="stat-label" id="country-window-label">Past 30 days</span><span class="stat-value" id="country-week">—</span></div>
           <div class="stat-box"><span class="stat-label" id="country-all-label">All-time assemblies</span><span class="stat-value" id="country-assemblies">—</span></div>
           <div class="stat-box"><span class="stat-label">Species represented</span><span class="stat-value" id="country-species">—</span></div>
@@ -422,7 +424,7 @@
             <div class="panel-head">
               <div>
                 <p class="panel-kicker">Past year</p>
-                <h2 class="panel-title">Assemblies deposited per day</h2>
+                <h2 class="panel-title">Assemblies deposited per business day</h2>
               </div>
             </div>
             <svg id="taxon-recent-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
@@ -441,6 +443,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20260928d"></script>
+  <script src="app.js?v=20260928e"></script>
 </body>
 </html>
