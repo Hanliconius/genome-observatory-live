@@ -16,6 +16,9 @@ import requests
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "sequencing_countries.json"
+AUDIT_DIR = ROOT / "data" / "audits"
+AUDIT_JSON = AUDIT_DIR / "sequencing_country_provenance.json"
+AUDIT_TSV = AUDIT_DIR / "sequencing_country_dtol_failures.tsv"
 CACHE_DIR = ROOT / "cache"
 SRA_CACHE = CACHE_DIR / "sra_biosample_centers.json"
 ROR_CACHE = CACHE_DIR / "ror_center_countries.json"
@@ -26,6 +29,25 @@ ROR_URL = "https://api.ror.org/v2/organizations"
 UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repository)"
 RATE_WINDOW_DAYS = 30
 SRA_BATCH_SIZE = 250
+
+DTOL_BIOPROJECT = "PRJEB40665"
+SANGER_TOL_BIOPROJECT = "PRJEB43745"
+
+# Independent positive controls taken from the assembly submitter field.
+# These are deliberately conservative, institution-specific names with
+# unambiguous countries; they are used only for audit metrics, not to alter
+# production country assignments.
+SUBMITTER_CONTROLS = [
+    ("Wellcome Sanger Institute", "GBR", ("WELLCOME SANGER INSTITUTE", "WELLCOME TRUST SANGER INSTITUTE")),
+    ("Earlham Institute", "GBR", ("EARLHAM INSTITUTE",)),
+    ("Broad Institute", "USA", ("BROAD INSTITUTE",)),
+    ("Baylor College of Medicine", "USA", ("BAYLOR COLLEGE OF MEDICINE",)),
+    ("DOE Joint Genome Institute", "USA", ("JOINT GENOME INSTITUTE",)),
+    ("Chinese Academy of Sciences", "CHN", ("CHINESE ACADEMY OF SCIENCES",)),
+    ("Max Planck Institute", "DEU", ("MAX PLANCK INSTITUTE",)),
+    ("University of Copenhagen", "DNK", ("UNIVERSITY OF COPENHAGEN",)),
+    ("Australian National University", "AUS", ("AUSTRALIAN NATIONAL UNIVERSITY",)),
+]
 
 S = requests.Session()
 S.headers.update({"User-Agent": UA})
@@ -104,13 +126,47 @@ def stream_assemblies():
         )
 
 
+def bioproject_accessions(report):
+    info = first(report, "assembly_info", "assemblyInfo", default={}) or {}
+    found = set()
+
+    direct = first(
+        info,
+        "bioproject_accession",
+        "bioprojectAccession",
+        default=None,
+    )
+    if direct:
+        found.add(str(direct).strip())
+
+    lineage = info.get("bioproject_lineage") or info.get("bioprojectLineage") or []
+    for level in lineage:
+        for project in (level.get("bioprojects") or []):
+            accession = project.get("accession")
+            if accession:
+                found.add(str(accession).strip())
+            parents = project.get("parent_accessions") or project.get("parentAccessions") or []
+            for parent in parents:
+                if parent:
+                    found.add(str(parent).strip())
+
+    bs = first(info, "biosample", default={}) or {}
+    for project in (bs.get("bioprojects") or []):
+        accession = project.get("accession")
+        if accession:
+            found.add(str(accession).strip())
+        parents = project.get("parent_accessions") or project.get("parentAccessions") or []
+        for parent in parents:
+            if parent:
+                found.add(str(parent).strip())
+
+    return sorted(x for x in found if x)
+
+
 def normalize_assembly(report):
-    bs = first(
-        report,
-        "assembly_info.biosample",
-        "assemblyInfo.biosample",
-        default={},
-    ) or {}
+    info = first(report, "assembly_info", "assemblyInfo", default={}) or {}
+    bs = first(info, "biosample", default={}) or {}
+    owner = first(bs, "owner", default={}) or {}
     return {
         "accession": first(
             report, "accession", "assembly.accession",
@@ -125,6 +181,9 @@ def normalize_assembly(report):
             "assembly.release_date", "release_date", default=""
         ))[:10],
         "biosample": str(first(bs, "accession", default="") or "").strip(),
+        "submitter": str(first(info, "submitter", default="") or "").strip(),
+        "biosample_owner": str(first(owner, "name", default="") or "").strip(),
+        "bioproject_accessions": bioproject_accessions(report),
     }
 
 
@@ -451,6 +510,294 @@ def aggregate(records, sra_cache, ror_cache):
     }
 
 
+
+
+def resolved_center_info(centers, ror_cache):
+    resolved = []
+    unresolved = []
+    for center in sorted(set(centers or [])):
+        info = ror_cache.get(center) or {}
+        if info.get("status") == "matched" and info.get("iso3"):
+            resolved.append({
+                "center": center,
+                "iso3": info.get("iso3"),
+                "ror_name": info.get("ror_name"),
+                "ror_id": info.get("ror_id"),
+                "matching_type": info.get("matching_type"),
+            })
+        else:
+            unresolved.append({
+                "center": center,
+                "status": info.get("status", "not_cached"),
+                "ror_name": info.get("ror_name"),
+                "ror_id": info.get("ror_id"),
+            })
+    return resolved, unresolved
+
+
+def exclusive_failure_stage(record, centers, resolved, expected_iso3):
+    if not record.get("biosample"):
+        return "no_biosample"
+    if not centers:
+        return "no_sra_center"
+    if not resolved:
+        return "centers_unresolved"
+    countries = {x.get("iso3") for x in resolved if x.get("iso3")}
+    if expected_iso3 not in countries:
+        return "resolved_wrong_country"
+    return "resolved_expected_country"
+
+
+def control_for_submitter(submitter):
+    text = str(submitter or "").upper()
+    for label, iso3, patterns in SUBMITTER_CONTROLS:
+        if any(pattern in text for pattern in patterns):
+            return label, iso3
+    return None
+
+
+def build_provenance_audit(records, sra_cache, ror_cache):
+    generated_at = datetime.now(timezone.utc).isoformat()
+    global_counts = Counter()
+    global_center_counts = Counter()
+
+    dtol_rows = []
+    dtol_stages = Counter()
+    dtol_center_counts = Counter()
+    dtol_submitters = Counter()
+    dtol_owners = Counter()
+
+    controls = {}
+    for label, iso3, _ in SUBMITTER_CONTROLS:
+        controls[label] = {
+            "label": label,
+            "expected_iso3": iso3,
+            "assemblies": 0,
+            "with_biosample": 0,
+            "with_sra_center": 0,
+            "with_resolved_country": 0,
+            "resolved_expected_country": 0,
+            "resolved_wrong_country": 0,
+            "stage_counts": Counter(),
+            "center_counts": Counter(),
+            "wrong_country_examples": [],
+        }
+
+    for record in records:
+        global_counts["assemblies"] += 1
+        bs = record.get("biosample")
+        centers = sorted(set(sra_cache.get(bs, []) or [])) if bs else []
+        resolved, unresolved = resolved_center_info(centers, ror_cache)
+        countries = sorted({x["iso3"] for x in resolved if x.get("iso3")})
+
+        if bs:
+            global_counts["with_biosample"] += 1
+        if centers:
+            global_counts["with_sra_center"] += 1
+        if resolved:
+            global_counts["with_resolved_country"] += 1
+        for center in centers:
+            global_center_counts[center] += 1
+
+        project_set = set(record.get("bioproject_accessions") or [])
+        is_dtol = DTOL_BIOPROJECT in project_set
+        if is_dtol:
+            stage = exclusive_failure_stage(record, centers, resolved, "GBR")
+            dtol_stages[stage] += 1
+            dtol_submitters[record.get("submitter") or "(missing)"] += 1
+            dtol_owners[record.get("biosample_owner") or "(missing)"] += 1
+            for center in centers:
+                dtol_center_counts[center] += 1
+
+            dtol_rows.append({
+                "accession": record.get("accession"),
+                "organism_name": record.get("organism_name"),
+                "release_date": record.get("release_date"),
+                "biosample": bs,
+                "submitter": record.get("submitter"),
+                "biosample_owner": record.get("biosample_owner"),
+                "bioproject_accessions": record.get("bioproject_accessions") or [],
+                "centers": centers,
+                "resolved_countries": countries,
+                "resolved_centers": resolved,
+                "unresolved_centers": unresolved,
+                "failure_stage": stage,
+            })
+
+        control = control_for_submitter(record.get("submitter"))
+        if control:
+            label, expected_iso3 = control
+            c = controls[label]
+            c["assemblies"] += 1
+            if bs:
+                c["with_biosample"] += 1
+            if centers:
+                c["with_sra_center"] += 1
+            if resolved:
+                c["with_resolved_country"] += 1
+            stage = exclusive_failure_stage(record, centers, resolved, expected_iso3)
+            c["stage_counts"][stage] += 1
+            if expected_iso3 in countries:
+                c["resolved_expected_country"] += 1
+            elif resolved:
+                c["resolved_wrong_country"] += 1
+                if len(c["wrong_country_examples"]) < 20:
+                    c["wrong_country_examples"].append({
+                        "accession": record.get("accession"),
+                        "organism_name": record.get("organism_name"),
+                        "submitter": record.get("submitter"),
+                        "centers": centers,
+                        "resolved_countries": countries,
+                        "resolved_centers": resolved,
+                    })
+            for center in centers:
+                c["center_counts"][center] += 1
+
+    def center_rows(counter, limit=50):
+        rows = []
+        for center, n in counter.most_common(limit):
+            info = ror_cache.get(center) or {}
+            rows.append({
+                "center": center,
+                "assemblies": n,
+                "status": info.get("status", "not_cached"),
+                "iso3": info.get("iso3"),
+                "ror_name": info.get("ror_name"),
+                "ror_id": info.get("ror_id"),
+                "matching_type": info.get("matching_type"),
+            })
+        return rows
+
+    control_rows = []
+    for label, _, _ in SUBMITTER_CONTROLS:
+        c = controls[label]
+        total = c["assemblies"]
+        if total == 0:
+            continue
+        correct = c["resolved_expected_country"]
+        wrong = c["resolved_wrong_country"]
+        resolved_total = c["with_resolved_country"]
+        c_out = {
+            k: v for k, v in c.items()
+            if k not in {"stage_counts", "center_counts"}
+        }
+        c_out["stage_counts"] = dict(c["stage_counts"])
+        c_out["recall_expected_country"] = correct / total if total else 0
+        c_out["precision_among_resolved"] = (
+            correct / (correct + wrong) if (correct + wrong) else None
+        )
+        c_out["resolution_rate"] = resolved_total / total if total else 0
+        c_out["top_centers"] = center_rows(c["center_counts"], 20)
+        control_rows.append(c_out)
+
+    dtol_total = len(dtol_rows)
+    dtol_gbr = dtol_stages["resolved_expected_country"]
+    dtol_wrong = dtol_stages["resolved_wrong_country"]
+    dtol_resolved = dtol_gbr + dtol_wrong
+
+    unresolved_global = Counter()
+    for center, n in global_center_counts.items():
+        info = ror_cache.get(center) or {}
+        if info.get("status") != "matched" or not info.get("iso3"):
+            unresolved_global[center] = n
+
+    audit = {
+        "generated_at": generated_at,
+        "scope": "Chromosome/complete GenBank Eukaryota assemblies tracked by Genome Observatory Live",
+        "method": {
+            "production_path": "Assembly -> BioSample -> SRA RunInfo CenterName -> ROR affiliation match -> country",
+            "dtol_positive_control": DTOL_BIOPROJECT,
+            "sanger_tree_of_life_parent": SANGER_TOL_BIOPROJECT,
+            "note": (
+                "DToL membership is read from the NCBI assembly BioProject lineage. "
+                "DToL is led by Wellcome Sanger Institute in the UK, so GBR is the "
+                "expected country for this positive-control cohort. Submitter controls "
+                "are independent conservative checks and do not alter production assignments."
+            ),
+        },
+        "global": {
+            **global_counts,
+            "sra_center_rate": (
+                global_counts["with_sra_center"] / global_counts["assemblies"]
+                if global_counts["assemblies"] else 0
+            ),
+            "resolved_country_rate": (
+                global_counts["with_resolved_country"] / global_counts["assemblies"]
+                if global_counts["assemblies"] else 0
+            ),
+            "distinct_center_names": len(global_center_counts),
+            "distinct_unresolved_center_names": len(unresolved_global),
+            "top_unresolved_centers": center_rows(unresolved_global, 50),
+        },
+        "dtol": {
+            "bioproject": DTOL_BIOPROJECT,
+            "tracked_assemblies": dtol_total,
+            "stage_counts": dict(dtol_stages),
+            "recall_gbr": dtol_gbr / dtol_total if dtol_total else 0,
+            "resolution_rate": dtol_resolved / dtol_total if dtol_total else 0,
+            "precision_among_resolved": (
+                dtol_gbr / dtol_resolved if dtol_resolved else None
+            ),
+            "assembly_submitter_mentions_sanger": sum(
+                n for name, n in dtol_submitters.items()
+                if "SANGER" in name.upper()
+            ),
+            "biosample_owner_mentions_sanger": sum(
+                n for name, n in dtol_owners.items()
+                if "SANGER" in name.upper()
+            ),
+            "top_submitters": [
+                {"name": name, "assemblies": n}
+                for name, n in dtol_submitters.most_common(20)
+            ],
+            "top_biosample_owners": [
+                {"name": name, "assemblies": n}
+                for name, n in dtol_owners.most_common(20)
+            ],
+            "top_centers": center_rows(dtol_center_counts, 50),
+            "failure_examples": [
+                row for row in dtol_rows
+                if row["failure_stage"] != "resolved_expected_country"
+            ][:100],
+        },
+        "submitter_controls": control_rows,
+    }
+
+    AUDIT_DIR.mkdir(parents=True, exist_ok=True)
+    write_json(AUDIT_JSON, audit)
+
+    with AUDIT_TSV.open("w", newline="") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow([
+            "accession", "organism_name", "release_date", "biosample",
+            "submitter", "biosample_owner", "bioproject_accessions",
+            "centers", "resolved_countries", "failure_stage",
+        ])
+        for row in dtol_rows:
+            if row["failure_stage"] == "resolved_expected_country":
+                continue
+            writer.writerow([
+                row["accession"],
+                row["organism_name"],
+                row["release_date"],
+                row["biosample"],
+                row["submitter"],
+                row["biosample_owner"],
+                ";".join(row["bioproject_accessions"]),
+                ";".join(row["centers"]),
+                ";".join(row["resolved_countries"]),
+                row["failure_stage"],
+            ])
+
+    print(
+        f"audit: DToL {dtol_gbr}/{dtol_total} resolved to GBR "
+        f"({(dtol_gbr/dtol_total if dtol_total else 0):.1%}); "
+        f"global {global_counts['with_resolved_country']}/"
+        f"{global_counts['assemblies']} assemblies resolved"
+    )
+    return audit
+
+
 def main():
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     records = []
@@ -482,6 +829,7 @@ def main():
 
     payload = aggregate(records, sra_cache, ror_cache)
     write_json(OUT, payload)
+    build_provenance_audit(records, sra_cache, ror_cache)
 
     cov = payload["coverage"]
     print(
