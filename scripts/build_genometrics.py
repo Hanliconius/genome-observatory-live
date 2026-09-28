@@ -168,7 +168,7 @@ def sequence_report_page(batch,page_token=None):
             return resp.json()
         except (requests.RequestException,ValueError) as exc:
             last=exc
-            time.sleep(1.0*(attempt+1))
+            time.sleep(2.0*(attempt+1))
     raise RuntimeError(f"NCBI sequence-report request failed after retries: {last}")
 
 
