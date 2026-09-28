@@ -1,0 +1,26 @@
+name: Genometrics audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/audit_sex_eutils.py'
+      - '.github/workflows/genometrics-audit.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: genometrics-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test Entrez chromosome-to-assembly linkage
+        run: python scripts/audit_sex_eutils.py
