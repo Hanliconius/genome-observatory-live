@@ -346,19 +346,12 @@ def build_sex_cache(accessions,cache):
     if not missing:
         return cache
 
-    # First historical fill: use NCBI's nucleotide title index to locate only
-    # X/Y/Z/W/U/V/generic sex-chromosome records, follow their Assembly links,
-    # and intersect with the tracked GenBank collection.
-    if len(missing)>1000:
-        print(f"sex labels: Entrez-index bootstrap for {len(missing)} assemblies")
-        cache.update(bootstrap_sex_cache_entrez(accessions))
-        write_json(CACHE,cache)
-        return cache
-
-    # Daily incremental fill: sequence reports only for genuinely new assemblies.
     batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
-    workers=min(5,len(batches))
-    print(f"sex labels: resolving {len(missing)} new assemblies in {len(batches)} accession batches")
+    workers=min(6,len(batches))
+    print(
+        f"sex labels: filtered NCBI sequence-report API for "
+        f"{len(missing)} assemblies in {len(batches)} batches"
+    )
     completed=0
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(resolve_sex_batch,b):b for b in batches}
@@ -372,7 +365,8 @@ def build_sex_cache(accessions,cache):
                     f"({len(batch)} accessions): {exc}"
                 ) from exc
             completed+=1
-            if completed%3==0 or completed==len(batches):
+            if completed%20==0 or completed==len(batches):
+                print(f"sex labels: completed {completed}/{len(batches)} batches")
                 write_json(CACHE,cache)
     return cache
 
