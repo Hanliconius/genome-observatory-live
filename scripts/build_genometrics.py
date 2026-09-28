@@ -86,33 +86,34 @@ def normalize_chr_label(value):
     return s
 
 def sex_token(label):
-    """Return X/Y/Z/W only for an explicit sex-style chromosome token."""
+    """Return an explicit sex-chromosome-style token from a chromosome label."""
     raw=normalize_chr_label(label)
     if not raw:return None
     s=raw.upper().strip()
 
     patterns=[
-        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZW])(?:[ _.-]*[0-9]+)?$",
-        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZW])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZWUV])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZWUV])(?:[ _.-]*[0-9]+)?$",
     ]
     for pat in patterns:
         m=re.match(pat,s)
         if m:return m.group(1)
 
-    if re.search(r"SEX|GONOSOM",s):
-        m=re.search(r"(?:^|[^A-Z])([XYZW])(?:[^A-Z]|$)",s)
-        if m:return m.group(1)
+    if re.search(r"SEX[ _.-]*CHROM|GONOSOM",s):
+        m=re.search(r"(?:^|[^A-Z])([XYZWUV])(?:[^A-Z]|$)",s)
+        return m.group(1) if m else "OTHER"
     return None
 
 def classify_tokens(tokens):
     t=set(tokens)
-    if {"X","Y"}<=t and not ({"Z","W"} & t):
+    if {"X","Y"}<=t and not ({"Z","W","U","V","OTHER"} & t):
         return "XY labelled"
-    if {"Z","W"}<=t and not ({"X","Y"} & t):
+    if {"Z","W"}<=t and not ({"X","Y","U","V","OTHER"} & t):
         return "ZW labelled"
     if t:
         return "Other / partial label"
-    return "No X/Y/Z/W label"
+    return "No sex-chromosome label"
+
 
 def resolve_sex_batch(batch):
     labels=defaultdict(set)
@@ -222,14 +223,14 @@ def main():
     label_counts=Counter()
     for a in accessions:
         rec=sex_cache.get(a) or {}
-        cat=rec.get("category") or "No X/Y/Z/W label"
+        cat=rec.get("category") or "No sex-chromosome label"
         sex_counts[cat]+=1
         token_counts.update(rec.get("tokens") or [])
         label_counts.update(rec.get("candidate_labels") or [])
 
     total=len(records)
     categories=[
-        "XY labelled","ZW labelled","Other / partial label","No X/Y/Z/W label"
+        "XY labelled","ZW labelled","Other / partial label","No sex-chromosome label"
     ]
     payload={
         "generated_at":datetime.now(timezone.utc).isoformat(),
@@ -254,12 +255,12 @@ def main():
             "categories":[
                 {"group":c,"count":sex_counts.get(c,0)} for c in categories
             ],
-            "definition":"Explicit chromosome-name labels in the NCBI genome sequence report. This measures assembly labelling, not the organism's inferred biological sex-determination system.",
+            "definition":"Explicit chromosome-name labels in the NCBI genome sequence report. This includes X/Y/Z/W/U/V-style and generic sex-chromosome labels and measures assembly labelling, not the organism's inferred biological sex-determination system.",
             "rules":{
                 "XY labelled":"Both X and Y labels detected, without Z/W.",
                 "ZW labelled":"Both Z and W labels detected, without X/Y.",
-                "Other / partial label":"At least one X/Y/Z/W-style label detected, but not a clean XY or ZW pair.",
-                "No X/Y/Z/W label":"No explicit X/Y/Z/W-style chromosome label detected."
+                "Other / partial label":"At least one X/Y/Z/W/U/V-style or generic sex-chromosome label detected, but not a clean XY or ZW pair.",
+                "No sex-chromosome label":"No explicit X/Y/Z/W/U/V-style or generic sex-chromosome label detected."
             },
             "audit":{
                 "token_counts":dict(token_counts),
