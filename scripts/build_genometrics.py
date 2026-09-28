@@ -106,8 +106,8 @@ def sex_token(label):
     s=raw.upper().strip()
 
     patterns=[
-        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZW])(?:[ _.-]*[0-9]+)?$",
-        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZW])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZWUV])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZWUV])(?:[ _.-]*[0-9]+)?$",
     ]
     for pat in patterns:
         m=re.match(pat,s)
@@ -175,16 +175,22 @@ def sequence_report_page(batch,page_token=None):
 def resolve_sex_batch(batch):
     labels=defaultdict(set)
     tokens=defaultdict(set)
-    token=None
-    while True:
-        page=sequence_report_page(batch,token)
-        for r in page.get("reports",[]) or []:
+    with tempfile.NamedTemporaryFile("w",delete=False,prefix="gol_acc_",suffix=".txt") as fh:
+        for a in batch:
+            fh.write(a+"\n")
+        path=fh.name
+    try:
+        cmd=[
+            "datasets","summary","genome","accession",
+            "--inputfile",path,
+            "--report","sequence",
+            "--as-json-lines",
+        ]
+        for r in stream(cmd):
             a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
-            if not a:
-                continue
             role=str(first(r,"role",default="") or "").casefold()
             loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-            if role and role!="assembled-molecule" and loc!="chromosome":
+            if not a or not (role=="assembled-molecule" or loc=="chromosome"):
                 continue
             c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
             if not c:
@@ -193,9 +199,8 @@ def resolve_sex_batch(batch):
             tok=sex_token(c)
             if tok:
                 tokens[a].add(tok)
-        token=page.get("next_page_token") or page.get("nextPageToken")
-        if not token:
-            break
+    finally:
+        Path(path).unlink(missing_ok=True)
 
     out={}
     for a in batch:
@@ -319,6 +324,8 @@ def bootstrap_sex_cache_entrez(accessions):
         "Y":["chromosome Y","chromosome Y1","chromosome Y2"],
         "Z":["chromosome Z","chromosome Z1","chromosome Z2"],
         "W":["chromosome W","chromosome W1","chromosome W2"],
+        "U":["chromosome U","chromosome U1","chromosome U2"],
+        "V":["chromosome V","chromosome V1","chromosome V2"],
         "OTHER":["sex chromosome","gonosome"],
     }
 
@@ -353,27 +360,28 @@ def bootstrap_sex_cache_entrez(accessions):
 
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
+    cached_tokens=sum(bool((cache.get(a) or {}).get("tokens")) for a in accessions)
+
+    # A previous bootstrap produced an all-empty cache because the Datasets
+    # sequence-report endpoint silently ignored comma-joined accessions.
+    # Rebuild that cache through Entrez chromosome indexes.
+    if len(missing)>1000 or (accessions and cached_tokens==0):
+        print(
+            f"sex labels: Entrez bootstrap for {len(accessions)} tracked assemblies "
+            f"(replacing {len(cache)} cached records)"
+        )
+        cache=bootstrap_sex_cache_entrez(accessions)
+        write_json(CACHE,cache)
+        return cache
+
     if not missing:
         return cache
 
-    batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
-    print(
-        f"sex labels: filtered NCBI sequence-report API for "
-        f"{len(missing)} assemblies in {len(batches)} paced batches"
-    )
-    completed=0
-    for batch in batches:
-        try:
-            cache.update(resolve_sex_batch(batch))
-        except Exception as exc:
-            raise RuntimeError(
-                f"sex-label batch failed for {batch[0]}..{batch[-1]} "
-                f"({len(batch)} accessions): {exc}"
-            ) from exc
-        completed+=1
-        if completed%10==0 or completed==len(batches):
-            print(f"sex labels: completed {completed}/{len(batches)} batches")
-            write_json(CACHE,cache)
+    # Daily refresh: only new assemblies need sequence reports. The CLI accepts
+    # an accession input file and avoids one HTTP call per accession.
+    print(f"sex labels: resolving {len(missing)} new assemblies through one NCBI Datasets CLI query")
+    cache.update(resolve_sex_batch(missing))
+    write_json(CACHE,cache)
     return cache
 
 
