@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20260927i" />
+  <link rel="stylesheet" href="styles.css?v=20260928a" />
 </head>
 <body>
   <header class="site-head">
@@ -25,6 +25,7 @@
   <main>
     <nav class="section-tabs" aria-label="Dashboard section">
       <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
+      <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12 17 8M5.5 16.5h13"/><path d="M7 7.5 5.5 6M17 7.5 18.5 6"/></svg><span>Genometrics</span></button>
       <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
       <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
       <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
@@ -139,6 +140,70 @@
             <p class="note">Recent per-assembly metadata only; lifetime history is stored as compact aggregates.</p>
           </div>
           <div id="recent-list" class="recent-table"></div>
+        </article>
+      </section>
+    </section>
+
+    <section id="genometrics-view" hidden>
+      <article class="genometrics-intro">
+        <div>
+          <p class="panel-kicker">Collection metrics</p>
+          <h2>What do deposited genome assemblies contain?</h2>
+          <p class="taxon-intro">Metadata-derived properties of the chromosome-scale and complete GenBank eukaryote collection. These metrics describe what is explicitly associated or labelled in NCBI records; they do not infer missing biological features.</p>
+        </div>
+        <p class="genometrics-updated" id="genometrics-updated">Loading current metrics…</p>
+      </article>
+
+      <div id="genometrics-loading" class="status-loading">Loading genometrics…</div>
+
+      <section id="genometrics-content" hidden>
+        <div class="genometrics-grid">
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Organelle association</p>
+            <h2 class="panel-title">Mitochondrial genome associated</h2>
+            <p class="genometrics-summary">Share of all tracked genome deposits with an associated mitochondrial genome in the NCBI assembly record.</p>
+            <div class="genometrics-donut-row">
+              <div class="donut-wrap"><svg id="genometrics-mito-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Mitochondrial genome association"></svg></div>
+              <div id="genometrics-mito-legend" class="donut-legend"></div>
+            </div>
+            <p class="genometrics-denominator" id="genometrics-mito-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Plant organelles</p>
+            <h2 class="panel-title">Plastid genome associated</h2>
+            <p class="genometrics-summary">Share of tracked Viridiplantae genome deposits with an associated chloroplast/plastid genome in the NCBI assembly record.</p>
+            <div class="genometrics-donut-row">
+              <div class="donut-wrap"><svg id="genometrics-plastid-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Plastid genome association"></svg></div>
+              <div id="genometrics-plastid-legend" class="donut-legend"></div>
+            </div>
+            <p class="genometrics-denominator" id="genometrics-plastid-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Chromosome labelling</p>
+            <h2 class="panel-title">Sex-chromosome labels</h2>
+            <p class="genometrics-summary">Explicit X/Y/Z/W-style chromosome names in NCBI sequence reports. This measures assembly labelling, not an inferred sex-determination system.</p>
+            <div class="genometrics-donut-row">
+              <div class="donut-wrap"><svg id="genometrics-sex-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Sex chromosome labels in assemblies"></svg></div>
+              <div id="genometrics-sex-legend" class="donut-legend"></div>
+            </div>
+            <p class="genometrics-denominator" id="genometrics-sex-denominator"></p>
+          </article>
+        </div>
+
+        <article class="panel full-width genometrics-method">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Interpretation</p>
+              <h2 class="panel-title">What these metrics mean</h2>
+            </div>
+          </div>
+          <div class="genometrics-method-grid">
+            <p><strong>Mitochondrial / plastid:</strong> an organelle is counted only when NCBI's assembly metadata explicitly associates that organelle genome with the nuclear assembly.</p>
+            <p><strong>Sex chromosomes:</strong> <em>XY labelled</em> requires both X and Y; <em>ZW labelled</em> requires both Z and W. Single or non-pair X/Y/Z/W-style labels are shown as <em>Other / partial label</em>.</p>
+            <p><strong>No label</strong> means no matching chromosome name was found in the sequence report. It does not mean the organism lacks sex chromosomes.</p>
+          </div>
         </article>
       </section>
     </section>
@@ -375,6 +440,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20260927k"></script>
+  <script src="app.js?v=20260928a"></script>
 </body>
 </html>
