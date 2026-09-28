@@ -444,18 +444,20 @@ def build_sex_cache(accessions,cache):
     for acc,rec in list(cache.items()):
         toks=set(rec.get("tokens") or [])
         cleaned=toks-{"U","V"}
-        if cleaned!=toks:
+        labels=list(rec.get("candidate_labels") or [])
+        cleaned_labels=[
+            x for x in labels
+            if str(x).strip().upper() not in {"U","V"}
+        ]
+        if cleaned!=toks or cleaned_labels!=labels:
             rec=dict(rec)
             rec["tokens"]=sorted(cleaned)
-            rec["candidate_labels"]=[
-                x for x in (rec.get("candidate_labels") or [])
-                if sex_token(x) not in {"U","V"}
-            ]
+            rec["candidate_labels"]=cleaned_labels
             rec["category"]=classify_tokens(cleaned)
             cache[acc]=rec
             sanitized+=1
     if sanitized:
-        print(f"sex labels: sanitized ambiguous bare U/V tokens in {sanitized} cached assemblies")
+        print(f"sex labels: sanitized ambiguous bare U/V metadata in {sanitized} cached assemblies")
         write_json(CACHE,cache)
 
     missing=[a for a in accessions if a not in cache]
