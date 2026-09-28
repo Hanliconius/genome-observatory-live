@@ -163,7 +163,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 
 .country-map-tools{display:grid;gap:14px;justify-items:end;min-width:320px}
 .country-facet-tabs{justify-self:end}
-.country-facet-tabs .status-tab{min-width:150px;text-align:center}
+.country-facet-tabs .status-tab{min-width:128px;text-align:center}
 @media(max-width:900px){
   .country-map-tools{justify-items:start;min-width:0;margin-top:18px}
   .country-facet-tabs{justify-self:start}
@@ -309,7 +309,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   background:
     linear-gradient(rgba(46,110,166,.055) 1px,transparent 1px),
     linear-gradient(90deg,rgba(46,110,166,.055) 1px,transparent 1px),
-    #fafbf9;
+    #f7f8fa;
   background-size:34px 34px,34px 34px,auto;
 }
 .country-map-panel{
