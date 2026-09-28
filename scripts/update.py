@@ -55,6 +55,15 @@ def taxonomy(taxid):
     url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
     txt=S.get(url,params={'db':'taxonomy','id':taxid},timeout=30).text
     soup=BeautifulSoup(txt,'xml'); out={}
+    current=soup.find('Taxon')
+    other=current.find('OtherNames') if current else None
+    if other:
+        for tag in ('GenbankCommonName','CommonName','BlastName'):
+            node=other.find(tag)
+            if node and node.get_text(strip=True):
+                out['fallback_common_name']=node.get_text(strip=True)
+                out['fallback_common_name_source']=tag
+                break
     for t in soup.select('LineageEx Taxon'):
         rank=(t.Rank.text if t.Rank else '').lower(); name=t.ScientificName.text if t.ScientificName else ''
         if rank in {'genus','family','phylum','kingdom','superkingdom'}: out[rank]=name
@@ -163,11 +172,28 @@ def main():
             if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
             tx=tax_cache[tid]
             x.update({k:tx.get(k) for k in ('genus','family','phylum')});x['group']=broad_group(tx)
+            if not x.get('common_name') and tx.get('fallback_common_name'):
+                x['common_name']=tx['fallback_common_name']
             key=x['organism_name']
             if not image_cache.get(key): image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
             x['image']=image_cache.get(key)
         byacc[x['accession']]=x
     recent=sorted([x for x in byacc.values() if x['release_date']>=cutoff],key=lambda z:(z['release_date'],z['accession']),reverse=True)
+
+    # Backfill the rows most likely to appear in the rolling metadata table.
+    # NCBI's BlastName is intentionally broad (for example "beetles" or "snakes")
+    # and mirrors the fallback label shown by NCBI when no species common name exists.
+    for x in recent[:60]:
+        if x.get('common_name'):
+            continue
+        tid=str(x.get('tax_id') or '')
+        if not tid:
+            continue
+        if tid not in tax_cache:
+            tax_cache[tid]=taxonomy(x.get('tax_id'))
+        tx=tax_cache[tid]
+        if tx.get('fallback_common_name'):
+            x['common_name']=tx['fallback_common_name']
 
     daily={r['date']:r for r in old.get('daily',[]) if r['date']<after}
     grouped=defaultdict(list)
