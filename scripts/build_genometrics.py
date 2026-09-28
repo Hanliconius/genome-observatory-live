@@ -12,6 +12,7 @@ import tempfile
 import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.parse
+import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -357,32 +358,109 @@ def bootstrap_sex_cache_entrez(accessions):
     return out
 
 
+def bootstrap_sex_cache_package(accessions):
+    """One-time historical fill from an NCBI metadata-only package."""
+    labels=defaultdict(set)
+    tokens=defaultdict(set)
+
+    with tempfile.TemporaryDirectory(prefix="gol_sex_package_") as td:
+        td=Path(td)
+        accfile=td/"accessions.txt"
+        zpath=td/"sex_sequence_reports.zip"
+        accfile.write_text("\n".join(accessions)+"\n")
+
+        cmd=[
+            "datasets","download","genome","accession",
+            "--inputfile",str(accfile),
+            "--chromosomes",",".join(SEX_CHROMOSOME_QUERY),
+            "--include","seq-report",
+            "--filename",str(zpath),
+            "--no-progressbar",
+            "--fast-zip-validation",
+        ]
+        print(
+            f"sex labels: requesting one filtered metadata package for "
+            f"{len(accessions)} tracked assemblies"
+        )
+        p=subprocess.run(cmd,text=True,capture_output=True)
+        if p.returncode:
+            raise RuntimeError(
+                f"datasets filtered sex-report package failed {p.returncode}: "
+                f"{p.stderr[-6000:]}"
+            )
+
+        with zipfile.ZipFile(zpath) as zf:
+            names=[
+                n for n in zf.namelist()
+                if n.endswith("/sequence_report.jsonl")
+            ]
+            print(f"sex labels: package contains {len(names)} matching assembly reports")
+            for name in names:
+                with zf.open(name) as fh:
+                    for raw in fh:
+                        try:
+                            r=json.loads(raw)
+                        except Exception:
+                            continue
+                        a=str(first(
+                            r,"assembly_accession","assemblyAccession","accession",
+                            default=""
+                        ) or "")
+                        if not a:
+                            continue
+                        role=str(first(r,"role",default="") or "").casefold()
+                        loc=str(first(
+                            r,"assigned_molecule_location_type",
+                            "assignedMoleculeLocationType",default=""
+                        ) or "").casefold()
+                        if role!="assembled-molecule" and loc!="chromosome":
+                            continue
+                        c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
+                        if not c:
+                            continue
+                        tok=sex_token(c)
+                        if tok:
+                            labels[a].add(c)
+                            tokens[a].add(tok)
+
+    out={}
+    for a in accessions:
+        toks=sorted(tokens.get(a,set()))
+        out[a]={
+            "category":classify_tokens(toks),
+            "tokens":toks,
+            "candidate_labels":sorted(labels.get(a,set())),
+        }
+    return out
+
+
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
-    cached_tokens=sum(bool((cache.get(a) or {}).get("tokens")) for a in accessions)
-    ambiguous_uv=any(
-        set((cache.get(a) or {}).get("tokens") or []) & {"U","V"}
+    cached_tokens=sum(
+        bool((cache.get(a) or {}).get("tokens"))
         for a in accessions
     )
 
-    # A previous bootstrap produced an all-empty cache because the Datasets
-    # sequence-report endpoint silently ignored comma-joined accessions.
-    # Rebuild that cache through Entrez chromosome indexes.
-    if len(missing)>1000 or (accessions and (cached_tokens==0 or ambiguous_uv)):
+    # Rebuild the known-bad all-empty bootstrap cache, or do the first
+    # historical fill, from one filtered metadata package.
+    if len(missing)>1000 or (accessions and cached_tokens==0):
         print(
-            f"sex labels: Entrez bootstrap for {len(accessions)} tracked assemblies "
+            f"sex labels: package bootstrap for {len(accessions)} assemblies "
             f"(replacing {len(cache)} cached records)"
         )
-        cache=bootstrap_sex_cache_entrez(accessions)
+        cache=bootstrap_sex_cache_package(accessions)
         write_json(CACHE,cache)
         return cache
 
     if not missing:
         return cache
 
-    # Daily refresh: only new assemblies need sequence reports. The CLI accepts
-    # an accession input file and avoids one HTTP call per accession.
-    print(f"sex labels: resolving {len(missing)} new assemblies through one NCBI Datasets CLI query")
+    # Daily incremental fill: new assemblies are few, so a single CLI
+    # sequence-report query is cheap and avoids maintaining another package.
+    print(
+        f"sex labels: resolving {len(missing)} newly deposited assemblies "
+        f"through one NCBI sequence-report query"
+    )
     cache.update(resolve_sex_batch(missing))
     write_json(CACHE,cache)
     return cache
