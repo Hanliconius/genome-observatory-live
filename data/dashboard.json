@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T14:28:03.836194+00:00",
+  "generated_at": "2026-09-28T14:56:41.230836+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48163,7 +48163,7 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 19
+      "count": 21
     },
     {
       "group": "Fungi",
@@ -48171,7 +48171,7 @@
     },
     {
       "group": "Other",
-      "count": 12
+      "count": 10
     },
     {
       "group": "Plants",
@@ -48242,9 +48242,9 @@
     "assembly_name": "IGS_Ld1S_Pro.1.0",
     "total_sequence_length": 33102059,
     "chromosome_count": 36,
-    "genus": null,
-    "family": null,
-    "phylum": null,
+    "genus": "Leishmania",
+    "family": "Trypanosomatidae",
+    "phylum": "Euglenozoa",
     "group": "Other",
     "image": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Amastogotes_of_Leishmania_donovani.jpg/960px-Amastogotes_of_Leishmania_donovani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -48264,9 +48264,9 @@
       "assembly_name": "IGS_Ld1S_Pro.1.0",
       "total_sequence_length": 33102059,
       "chromosome_count": 36,
-      "genus": null,
-      "family": null,
-      "phylum": null,
+      "genus": "Leishmania",
+      "family": "Trypanosomatidae",
+      "phylum": "Euglenozoa",
       "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Amastogotes_of_Leishmania_donovani.jpg/960px-Amastogotes_of_Leishmania_donovani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -48496,10 +48496,10 @@
       "assembly_name": "bTroAed1.hap1 v2",
       "total_sequence_length": 1224968293,
       "chromosome_count": 40,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48512,10 +48512,10 @@
       "assembly_name": "bTroAed1.hap2 v2",
       "total_sequence_length": 1147004143,
       "chromosome_count": 38,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49432,7 +49432,12 @@
       "family": "Pieridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Large_White_Butterfly_%2842054744%29.jpeg/960px-Large_White_Butterfly_%2842054744%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Large_White_Butterfly_(42054744).jpeg",
+        "credit": "Matt Prosser · CC BY 3.0",
+        "matched_name": "Pieridae"
+      }
     },
     {
       "accession": "GCA_061535395.1",
@@ -49660,7 +49665,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg/960px-Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg",
+        "credit": "M108t · CC BY 4.0",
+        "matched_name": "Rosa bracteata"
+      }
     },
     {
       "accession": "GCA_061476585.1",
@@ -49735,10 +49745,10 @@
       "assembly_name": "ehOphGris1.1",
       "total_sequence_length": 1283655933,
       "chromosome_count": 19,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Opheodesoma",
+      "family": "Synaptidae",
+      "phylum": "Echinodermata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50032,10 +50042,10 @@
       "assembly_name": "qqAnyAcce1.hap1.1",
       "total_sequence_length": 1421874312,
       "chromosome_count": 14,
-      "genus": "Anyphaena",
-      "family": "Anyphaenidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anyphaena_accentuata_%2826684792532%29.jpg/960px-Anyphaena_accentuata_%2826684792532%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Anyphaena_accentuata_(26684792532).jpg",
@@ -50322,10 +50332,10 @@
       "assembly_name": "Aphareus rutilans_haplotype_1_assembly",
       "total_sequence_length": 1153639611,
       "chromosome_count": 26,
-      "genus": "Aphareus",
-      "family": "Lutjanidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -50401,10 +50411,10 @@
       "assembly_name": "Aphareus rutilans_haplotype_2_assembly",
       "total_sequence_length": 1153002625,
       "chromosome_count": 26,
-      "genus": "Aphareus",
-      "family": "Lutjanidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -50724,10 +50734,10 @@
       "assembly_name": "Cephalopholis miniata_haplotype_1_assembly",
       "total_sequence_length": 1089202513,
       "chromosome_count": 28,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cephalopholis",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg/960px-Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cierva_coral_(Cephalopholis_miniata),_Zanz%C3%ADbar,_Tanzania,_2024-05-30,_DD_14.jpg",
@@ -50777,10 +50787,10 @@
       "assembly_name": "Cephalopholis miniata_haplotype_2_assembly",
       "total_sequence_length": 1066352700,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cephalopholis",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg/960px-Cierva_coral_%28Cephalopholis_miniata%29%2C_Zanz%C3%ADbar%2C_Tanzania%2C_2024-05-30%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cierva_coral_(Cephalopholis_miniata),_Zanz%C3%ADbar,_Tanzania,_2024-05-30,_DD_14.jpg",
@@ -51364,10 +51374,10 @@
       "assembly_name": "Cqf v.1.0",
       "total_sequence_length": 86876455,
       "chromosome_count": 18,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cronartium",
+      "family": "Coleosporiaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -51380,10 +51390,10 @@
       "assembly_name": "ASM6137023v1",
       "total_sequence_length": 177597589,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Greyia",
+      "family": "Francoaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg/960px-Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_sutherlandii,_bloeiwyse,_Manie_van_der_Schijff_BT,_d.jpg",
@@ -51401,10 +51411,10 @@
       "assembly_name": "ASM6137016v1",
       "total_sequence_length": 177973392,
       "chromosome_count": 16,
-      "genus": "Greyia",
-      "family": "Francoaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Greyia_flanaganii%2C_blom%2C_Manie_van_der_Schijff_BT%2C_b.jpg/960px-Greyia_flanaganii%2C_blom%2C_Manie_van_der_Schijff_BT%2C_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_flanaganii,_blom,_Manie_van_der_Schijff_BT,_b.jpg",
@@ -51989,7 +51999,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rosa_luciae_2.JPG/960px-Rosa_luciae_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Rosa_luciae_2.JPG",
+        "credit": "Qwert1234 · CC BY-SA 3.0",
+        "matched_name": "Rosa lucieae"
+      }
     },
     {
       "accession": "GCA_061310315.1",
@@ -52005,7 +52020,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rosa_luciae_2.JPG/960px-Rosa_luciae_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Rosa_luciae_2.JPG",
+        "credit": "Qwert1234 · CC BY-SA 3.0",
+        "matched_name": "Rosa lucieae"
+      }
     },
     {
       "accession": "GCA_061310285.1",
@@ -52033,10 +52053,10 @@
       "assembly_name": "ASM6129185v1",
       "total_sequence_length": 3101667459,
       "chromosome_count": 15,
-      "genus": "Camellia",
-      "family": "Theaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52349,7 +52369,12 @@
       "family": "Sapygidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_%28Enoplognatha_ovata%29_%2817134417385%29.jpg/960px-Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_%28Enoplognatha_ovata%29_%2817134417385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_(Enoplognatha_ovata)_(17134417385).jpg",
+        "credit": "Line Sabroe from Denmark · CC BY 2.0",
+        "matched_name": "Sapyga quinquepunctata"
+      }
     },
     {
       "accession": "GCA_988276805.1",
@@ -52393,10 +52418,10 @@
       "assembly_name": "fGadMor3.1.hap2",
       "total_sequence_length": 709428025,
       "chromosome_count": 23,
-      "genus": "Gadus",
-      "family": "Gadidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52599,7 +52624,12 @@
       "family": "Lycaenidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/%28MHNT%29_Satyrium_spini_-_Mladkov%2C_Ceska_Republika_-_male.jpg/960px-%28MHNT%29_Satyrium_spini_-_Mladkov%2C_Ceska_Republika_-_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Satyrium_spini_-_Mladkov,_Ceska_Republika_-_male.jpg",
+        "credit": "Didier Descouens · CC BY-SA 4.0",
+        "matched_name": "Satyrium spini"
+      }
     },
     {
       "accession": "GCA_988265005.1",
@@ -52611,10 +52641,10 @@
       "assembly_name": "ilBucNigr2.hap1.1",
       "total_sequence_length": 374209986,
       "chromosome_count": 30,
-      "genus": "Bucculatrix",
-      "family": "Bucculatricidae",
-      "phylum": "Arthropoda",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Bucculatrix_nigricomella.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Bucculatrix_nigricomella.JPG",
@@ -52706,10 +52736,10 @@
       "assembly_name": "xbCenAcul1.1",
       "total_sequence_length": 3766919424,
       "chromosome_count": 15,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Centrocardita",
+      "family": "Carditidae",
+      "phylum": "Mollusca",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Carditidae_-_Venericardia_ameliae.JPG/960px-Carditidae_-_Venericardia_ameliae.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carditidae_-_Venericardia_ameliae.JPG",
@@ -131431,7 +131461,12 @@
     "Cochleoceps spatula": null,
     "Coilia brachygnathus": null,
     "Colias eurytheme": null,
-    "Colias philodice": null,
+    "Colias philodice": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Large_White_Butterfly_%2842054744%29.jpeg/960px-Large_White_Butterfly_%2842054744%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Large_White_Butterfly_(42054744).jpeg",
+      "credit": "Matt Prosser · CC BY 3.0",
+      "matched_name": "Pieridae"
+    },
     "Coreius guichenoti": null,
     "Coreius heterodon": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/FMIB_47470_Zezera_rathbuni.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -131722,10 +131757,30 @@
     "Regulus regulus": null,
     "Rhinolophus cornutus": null,
     "Rhombosepion orbignyanum": null,
-    "Rosa bracteata": null,
-    "Rosa lucieae": null,
-    "Sapyga quinquepunctata": null,
-    "Satyrium spini": null,
+    "Rosa bracteata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg/960px-Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg",
+      "credit": "M108t · CC BY 4.0",
+      "matched_name": "Rosa bracteata"
+    },
+    "Rosa lucieae": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rosa_luciae_2.JPG/960px-Rosa_luciae_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Rosa_luciae_2.JPG",
+      "credit": "Qwert1234 · CC BY-SA 3.0",
+      "matched_name": "Rosa lucieae"
+    },
+    "Sapyga quinquepunctata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_%28Enoplognatha_ovata%29_%2817134417385%29.jpg/960px-Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_%28Enoplognatha_ovata%29_%2817134417385%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Female_Sapyga_quinquepunctata_vs_female_Candy-stripe_spider_(Enoplognatha_ovata)_(17134417385).jpg",
+      "credit": "Line Sabroe from Denmark · CC BY 2.0",
+      "matched_name": "Sapyga quinquepunctata"
+    },
+    "Satyrium spini": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/%28MHNT%29_Satyrium_spini_-_Mladkov%2C_Ceska_Republika_-_male.jpg/960px-%28MHNT%29_Satyrium_spini_-_Mladkov%2C_Ceska_Republika_-_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Satyrium_spini_-_Mladkov,_Ceska_Republika_-_male.jpg",
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "matched_name": "Satyrium spini"
+    },
     "Schizopygopsis younghusbandi": null,
     "Serranocirrhitus latus": null,
     "Sisymbrium orientale": null,
