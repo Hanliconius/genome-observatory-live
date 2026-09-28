@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import json
 import re
+import requests
 import shutil
 import subprocess
 import tarfile
+import time
 import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
@@ -19,7 +21,14 @@ CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 VIRIDIPLANTAE=33090
-BATCH_SIZE=1000
+BATCH_SIZE=100
+SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
+SEX_CHROMOSOME_QUERY=(
+    ["X","Y","Z","W","U","V"]
+    + [f"{base}{i}" for base in ("X","Y","Z","W","U","V") for i in range(1,10)]
+    + [f"LG{base}" for base in ("X","Y","Z","W","U","V")]
+    + ["sex chromosome","gonosome"]
+)
 
 def first(d,*paths,default=None):
     for path in paths:
@@ -115,30 +124,63 @@ def classify_tokens(tokens):
     return "No sex-chromosome label"
 
 
+def sequence_report_page(batch,page_token=None):
+    body={
+        "accession": ",".join(batch),
+        "chromosomes": SEX_CHROMOSOME_QUERY,
+        "page_size": 1000,
+    }
+    if page_token:
+        body["page_token"]=page_token
+
+    last=None
+    for attempt in range(5):
+        try:
+            resp=requests.post(
+                SEQUENCE_REPORT_URL,
+                json=body,
+                headers={
+                    "Accept":"application/json",
+                    "User-Agent":UA,
+                },
+                timeout=90,
+            )
+            if resp.status_code in {429,500,502,503,504}:
+                last=RuntimeError(f"NCBI sequence-report HTTP {resp.status_code}")
+                time.sleep(1.0*(attempt+1))
+                continue
+            resp.raise_for_status()
+            return resp.json()
+        except (requests.RequestException,ValueError) as exc:
+            last=exc
+            time.sleep(1.0*(attempt+1))
+    raise RuntimeError(f"NCBI sequence-report request failed after retries: {last}")
+
+
 def resolve_sex_batch(batch):
     labels=defaultdict(set)
     tokens=defaultdict(set)
-    with tempfile.NamedTemporaryFile("w",delete=False,prefix="gol_acc_",suffix=".txt") as fh:
-        for a in batch:fh.write(a+"\n")
-        path=fh.name
-    try:
-        cmd=[
-            "datasets","summary","genome","accession","--inputfile",path,
-            "--report","sequence","--as-json-lines"
-        ]
-        for r in stream(cmd):
+    token=None
+    while True:
+        page=sequence_report_page(batch,token)
+        for r in page.get("reports",[]) or []:
             a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
+            if not a:
+                continue
             role=str(first(r,"role",default="") or "").casefold()
             loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-            if not a or not (role=="assembled-molecule" or loc=="chromosome"):
+            if role and role!="assembled-molecule" and loc!="chromosome":
                 continue
             c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
-            if not c:continue
+            if not c:
+                continue
             labels[a].add(c)
             tok=sex_token(c)
-            if tok:tokens[a].add(tok)
-    finally:
-        Path(path).unlink(missing_ok=True)
+            if tok:
+                tokens[a].add(tok)
+        token=page.get("next_page_token") or page.get("nextPageToken")
+        if not token:
+            break
 
     out={}
     for a in batch:
