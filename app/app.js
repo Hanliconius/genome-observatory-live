@@ -20,7 +20,8 @@ const GENOMETRIC_COLORS={
   'XY labelled':'#2e6ea6',
   'ZW labelled':'#8b75b3',
   'Other / partial label':'#d59a38',
-  'No X/Y/Z/W label':'#d8dfdb'
+  'No X/Y/Z/W label':'#d8dfdb',
+  'No sex-chromosome label':'#d8dfdb'
 };
 const RANGE={week:{label:'Past week',rate:'Deposits per day'},year:{label:'Past year',rate:'Deposits per day'},all:{label:'All time',rate:'Deposits per year'}};
 
@@ -316,14 +317,16 @@ function renderGenometrics(){
 
   const sexRows=(sex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
   const sexTotal=Number(sex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
-  const noLabel=sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count||0;
+  const noLabel=sexRows.find(x=>x.group==='No sex-chromosome label')?.count
+    ?? sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count
+    ?? 0;
   const anyPct=sexTotal?100*(sexTotal-noLabel)/sexTotal:0;
   drawGenometricDonut(
     'genometrics-sex-donut','genometrics-sex-legend',sexRows,
     fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
   );
   el('genometrics-sex-denominator').textContent=
-    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit X/Y/Z/W-style chromosome label.';
+    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
 }
 
 async function loadIucn(){
