@@ -30,6 +30,7 @@ UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repositor
 RATE_WINDOW_DAYS = 30
 SRA_BATCH_SIZE = 250
 
+# Provenance audit v1
 DTOL_BIOPROJECT = "PRJEB40665"
 SANGER_TOL_BIOPROJECT = "PRJEB43745"
 
