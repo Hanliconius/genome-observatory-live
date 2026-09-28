@@ -73,6 +73,27 @@ jobs:
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]') || hashFiles('data/genometrics.json') == ''
         run: python scripts/build_genometrics.py
 
+      - name: Audit NCBI sequence-report request shape
+        run: |
+          python - <<'PY'
+          import json, urllib.request
+          url="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
+          tests=[
+              {"accession":"GCA_000001405.29","chromosomes":["X","Y"],"page_size":20},
+              {"accessions":["GCA_000001405.29"],"chromosomes":["X","Y"],"page_size":20},
+              {"accession":"GCA_000002315.5","chromosomes":["Z","W"],"page_size":20},
+          ]
+          for body in tests:
+              print("REQUEST",json.dumps(body))
+              req=urllib.request.Request(url,data=json.dumps(body).encode(),headers={"Content-Type":"application/json","Accept":"application/json"})
+              try:
+                  with urllib.request.urlopen(req,timeout=60) as resp:
+                      text=resp.read().decode()
+                  print("RESPONSE",text[:6000])
+              except Exception as e:
+                  print("ERROR",repr(e))
+          PY
+
       - name: Build IUCN threatened and extinct views
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_iucn.py
