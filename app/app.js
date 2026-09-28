@@ -127,6 +127,19 @@ function render(){
 
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
+function assemblyUrl(accession){
+  const acc=String(accession||'').trim();
+  return acc ? 'https://www.ncbi.nlm.nih.gov/datasets/genome/'+encodeURIComponent(acc)+'/' : '';
+}
+
+function assemblySpeciesLink(x){
+  const name=esc(x?.organism_name||'');
+  const url=assemblyUrl(x?.accession);
+  return url
+    ? `<a class="assembly-link" href="${url}" target="_blank" rel="noopener" title="Open ${esc(x.accession)} at NCBI">${name}</a>`
+    : name;
+}
+
 function prettyDate(ds){
   if(!ds)return '—';
   const d=new Date(ds+'T12:00:00');
@@ -151,7 +164,7 @@ function renderNewest(){
     x.total_sequence_length ? fmt1(x.total_sequence_length/1e6)+' Mb genome' : null
   ].filter(Boolean).join(' · ');
   el('newest-card').innerHTML=`${image}<div>
-    <h3>${esc(x.organism_name)}</h3>
+    <h3>${assemblySpeciesLink(x)}</h3>
     ${details?`<p class="featured-details">${details}</p>`:''}
     <p>${esc(x.assembly_level||'Assembly')} · ${esc(x.accession||'')}</p>
     ${taxon?`<p>${esc(taxon)}</p>`:''}
@@ -228,7 +241,7 @@ function renderMilestones(){
 function renderRecent(){
   const rows=DATA.recent_assemblies||[];
   el('recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
-  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
 }
 
 function renderRate(){
@@ -394,7 +407,7 @@ function renderStatus(){
       x.total_sequence_length?fmt1(x.total_sequence_length/1e6)+' Mb genome':null
     ].filter(Boolean).join(' · ');
     el('status-newest-card').innerHTML=`${image}<div>
-      <h3>${esc(x.organism_name)}</h3>
+      <h3>${assemblySpeciesLink(x)}</h3>
       ${details?`<p class="featured-details">${details}</p>`:''}
       <p>${esc(x.iucn_status||label)} · ${esc(x.assembly_level||'Assembly')} · ${esc(x.accession||'')}</p>
       <p>Released ${esc(x.release_date||'')}</p>
@@ -429,7 +442,7 @@ function renderStatus(){
 
   const recent=s.recent_assemblies||[];
   el('status-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>IUCN status</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
-    recent.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${esc(x.organism_name||'')}</span><span class="muted">${esc(x.iucn_status||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+    recent.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.iucn_status||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
 
   const source=IUCN_DATA.source||{};
   el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
