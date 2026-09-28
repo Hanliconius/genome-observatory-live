@@ -175,7 +175,8 @@ function paceChange(current,previous){
 
 function renderYearlyBars(svgId,rows){
   const svg=el(svgId);
-  if(!svg||!rows?.length){if(svg)svg.innerHTML='';return;}
+  rows=(rows||[]).slice(-5);
+  if(!svg||!rows.length){if(svg)svg.innerHTML='';return;}
   const vals=rows.map(x=>Number(x.assemblies||0));
   const max=Math.max(1,...vals);
   const w=860,h=170,L=8,R=8,T=8,B=26,iw=w-L-R,ih=h-T-B;
