@@ -24,6 +24,7 @@ OUT=ROOT/"data"/"genometrics.json"
 CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
+# Genometrics bootstrap version: 3
 VIRIDIPLANTAE=33090
 FUNGI=4751
 BATCH_SIZE=250
