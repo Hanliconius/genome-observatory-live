@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20260927i" />
+  <link rel="stylesheet" href="styles.css?v=20260927j" />
 </head>
 <body>
   <header class="site-head">
@@ -25,6 +25,7 @@
   <main>
     <nav class="section-tabs" aria-label="Dashboard section">
       <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
+      <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v8l5.7 5.7M12 12h8"/></svg><span>Genometrics</span></button>
       <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
       <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
       <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
@@ -139,6 +140,61 @@
             <p class="note">Recent per-assembly metadata only; lifetime history is stored as compact aggregates.</p>
           </div>
           <div id="recent-list" class="recent-table"></div>
+        </article>
+      </section>
+    </section>
+
+    <section id="genometrics-view" hidden>
+      <article class="genometrics-intro">
+        <div>
+          <p class="panel-kicker">Collection-level metadata</p>
+          <h2>What is represented in deposited genomes?</h2>
+          <p class="taxon-intro">Metadata-derived properties of the chromosome-scale and complete GenBank assemblies tracked by Genome Observatory Live.</p>
+        </div>
+        <p class="note">These metrics describe what is explicitly associated with or labelled in NCBI records; they do not infer missing biological features.</p>
+      </article>
+
+      <div id="genometrics-loading" class="status-loading">Loading genometrics…</div>
+
+      <section id="genometrics-content" hidden>
+        <div class="genometrics-grid">
+          <article class="genometric-card">
+            <p class="panel-kicker">Organelle association</p>
+            <h2>Mitochondrial genome associated</h2>
+            <div class="metric-donut-wrap"><svg id="genometric-mito-donut" class="donut metric-donut" viewBox="0 0 240 240" role="img"></svg></div>
+            <div id="genometric-mito-legend" class="donut-legend metric-legend"></div>
+            <p class="metric-denominator" id="genometric-mito-note"></p>
+          </article>
+
+          <article class="genometric-card">
+            <p class="panel-kicker">Plant organelles</p>
+            <h2>Plastid genome associated</h2>
+            <div class="metric-donut-wrap"><svg id="genometric-plastid-donut" class="donut metric-donut" viewBox="0 0 240 240" role="img"></svg></div>
+            <div id="genometric-plastid-legend" class="donut-legend metric-legend"></div>
+            <p class="metric-denominator" id="genometric-plastid-note"></p>
+          </article>
+
+          <article class="genometric-card sex-card">
+            <p class="panel-kicker">Chromosome labelling</p>
+            <h2>Sex-chromosome labels</h2>
+            <div class="metric-donut-wrap"><svg id="genometric-sex-donut" class="donut metric-donut" viewBox="0 0 240 240" role="img"></svg></div>
+            <div id="genometric-sex-legend" class="donut-legend metric-legend"></div>
+            <p class="metric-denominator" id="genometric-sex-note"></p>
+          </article>
+        </div>
+
+        <article class="panel full-width genometrics-method">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Interpretation</p>
+              <h2 class="panel-title">What these metrics mean</h2>
+            </div>
+          </div>
+          <div class="genometrics-method-grid">
+            <p><strong>Mitochondrial association</strong> counts assemblies whose NCBI assembly report explicitly links an associated mitochondrial genome.</p>
+            <p><strong>Plastid association</strong> uses Viridiplantae as the denominator and counts explicitly associated chloroplast/plastid genomes.</p>
+            <p><strong>Sex-chromosome labelling</strong> uses explicit chromosome names in NCBI sequence reports. “XY” and “ZW” mean those label pairs are present; this is not an inference of the species’ biological sex-determination system.</p>
+          </div>
         </article>
       </section>
     </section>
@@ -375,6 +431,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20260927k"></script>
+  <script src="app.js?v=20260927l"></script>
 </body>
 </html>
