@@ -52,56 +52,28 @@ def normalise(r):
 
 def taxonomy(taxid):
     if not taxid:return {}
-    url='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi'
-    # NCBI E-utilities allows 3 requests/sec without an API key. Pace and retry
-    # these lookups so a transient 429/5xx does not turn into missing taxonomy.
-    for attempt in range(4):
-        try:
-            r=S.get(url,params={'db':'taxonomy','id':taxid,'retmode':'xml'},timeout=30)
-            if r.status_code==429 or r.status_code>=500:
-                time.sleep(1.0*(attempt+1))
-                continue
-            r.raise_for_status()
-            soup=BeautifulSoup(r.text,'xml'); out={}
-            current=soup.find('Taxon')
-            if not current:
-                time.sleep(1.0*(attempt+1))
-                continue
-
-            # In the EFetch XML, GenbankCommonName and BlastName live inside
-            # OtherNames. Prefer the species common name, then NCBI's broader
-            # BLAST/group label (e.g. "mites & ticks", "sea urchins").
-            other=current.find('OtherNames',recursive=False)
-            if other:
-                for tag in ('GenbankCommonName','CommonName','BlastName'):
-                    node=other.find(tag,recursive=False)
-                    if node and node.get_text(strip=True):
-                        out['fallback_common_name']=node.get_text(strip=True)
-                        out['fallback_common_name_source']=tag
-                        break
-
-            # If the focal taxon still has no label, walk up the lineage and
-            # use the nearest ancestor carrying a BLAST/group name.
-            if not out.get('fallback_common_name'):
-                lineage=current.find('LineageEx',recursive=False)
-                ancestors=lineage.find_all('Taxon',recursive=False) if lineage else []
-                for ancestor in reversed(ancestors):
-                    other_ancestor=ancestor.find('OtherNames',recursive=False)
-                    node=other_ancestor.find('BlastName',recursive=False) if other_ancestor else None
-                    if node and node.get_text(strip=True):
-                        out['fallback_common_name']=node.get_text(strip=True)
-                        out['fallback_common_name_source']='ancestor_BlastName'
-                        break
-
-            for t in current.select('LineageEx Taxon'):
-                rank=(t.Rank.text if t.Rank else '').lower(); name=t.ScientificName.text if t.ScientificName else ''
-                if rank in {'genus','family','phylum','kingdom','superkingdom'}: out[rank]=name
-            time.sleep(.36)
-            return out
-        except requests.RequestException:
-            time.sleep(1.0*(attempt+1))
-    return {}
-
+    try:
+        # Use the same current NCBI Datasets taxonomy fields shown on the NCBI
+        # site: curator_common_name first, then group_name (formerly BLAST name).
+        payload=json.loads(run('datasets','summary','taxonomy','taxon',str(taxid)))
+        tx=first(payload,'reports.0.taxonomy',default={}) or {}
+        if not tx:return {}
+        out={'_source':'datasets_taxonomy_v1'}
+        common=tx.get('curator_common_name')
+        group=tx.get('group_name') or tx.get('blast_name')
+        if common:
+            out['fallback_common_name']=common
+            out['fallback_common_name_source']='curator_common_name'
+        elif group:
+            out['fallback_common_name']=group
+            out['fallback_common_name_source']='group_name'
+        classification=tx.get('classification') or {}
+        for rank in ('genus','family','phylum','kingdom'):
+            name=(classification.get(rank) or {}).get('name')
+            if name: out[rank]=name
+        return out
+    except (subprocess.CalledProcessError,json.JSONDecodeError,TypeError,ValueError):
+        return {}
 def broad_group(tx):
     lineage=' '.join(tx.values()).lower()
     if any(x in lineage for x in ['metazoa','animalia']):return 'Animals'
@@ -198,7 +170,7 @@ def main():
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
     byacc={x['accession']:x for x in old_recent if x.get('release_date','')<query_after}
     image_cache=old.get('image_cache',{})
-    tax_cache=dict(old.get('taxonomy_cache') or {})
+    tax_cache={k:v for k,v in (old.get('taxonomy_cache') or {}).items() if isinstance(v,dict) and v.get('_source')=='datasets_taxonomy_v1'}
     old_byacc={x.get('accession'):x for x in old_recent if x.get('accession')}
     for x in incoming:
         if x['release_date']>=after:
