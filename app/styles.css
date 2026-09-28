@@ -365,3 +365,110 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .site-head::after{left:12px;right:12px}
   .tab-icon{width:15px;height:15px}
 }
+
+
+#genometrics-view{margin-top:22px}
+.genometrics-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:36px;
+  align-items:end;
+  background:var(--panel);
+  border:1px solid var(--line-dark);
+  padding:24px;
+}
+.genometrics-intro h2{
+  font-size:clamp(1.6rem,3vw,2.5rem);
+  letter-spacing:-.035em;
+  margin:5px 0 8px;
+  font-weight:620;
+}
+.genometrics-updated{
+  margin:0;
+  color:var(--muted);
+  font-size:.78rem;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.genometrics-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1px;
+  background:var(--line-dark);
+  border:1px solid var(--line-dark);
+  border-top:0;
+}
+.genometrics-card{
+  min-width:0;
+  min-height:500px;
+  background:
+    linear-gradient(rgba(46,110,166,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(46,110,166,.03) 1px,transparent 1px),
+    var(--panel);
+  background-size:32px 32px,32px 32px,auto;
+}
+.genometrics-card .panel-title{font-size:1.25rem}
+.genometrics-summary{
+  color:var(--muted);
+  line-height:1.5;
+  min-height:72px;
+  margin:10px 0 16px;
+  font-size:.88rem;
+}
+.genometrics-donut-row{
+  display:grid;
+  grid-template-columns:240px minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+  margin-top:8px;
+}
+.genometrics-donut-row .donut-wrap{
+  width:220px;
+  height:220px;
+}
+.genometrics-card .donut-row{
+  grid-template-columns:12px minmax(0,1fr) auto auto;
+  font-size:.78rem;
+  gap:7px;
+}
+.genometrics-center-main{font-size:28px}
+.genometrics-denominator{
+  border-top:1px solid var(--line);
+  padding-top:12px;
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:.78rem;
+  line-height:1.45;
+}
+.genometrics-method{
+  min-height:0;
+  border:1px solid var(--line-dark);
+  border-top:0;
+}
+.genometrics-method-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-top:16px;
+}
+.genometrics-method-grid p{
+  margin:0;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.55;
+}
+.genometrics-method-grid strong{color:var(--ink)}
+@media(max-width:1180px){
+  .genometrics-grid{grid-template-columns:1fr}
+  .genometrics-card{min-height:0}
+  .genometrics-summary{min-height:0}
+  .genometrics-donut-row{grid-template-columns:240px minmax(0,1fr)}
+}
+@media(max-width:900px){
+  .genometrics-intro{grid-template-columns:1fr;gap:14px}
+  .genometrics-method-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .genometrics-donut-row{grid-template-columns:1fr}
+  .genometrics-donut-row .donut-wrap{margin:auto}
+}
