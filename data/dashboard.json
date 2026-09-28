@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-27T21:48:08.429315+00:00",
+  "generated_at": "2026-09-28T14:28:03.836194+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 71,
-      "species": 52,
+      "assemblies": 54,
+      "species": 35,
       "first_time_species": 0
     },
     "year": {
@@ -19,12 +19,6 @@
     }
   },
   "daily": [
-    {
-      "date": "2004-11-02",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-03",
       "assemblies": 0,
@@ -48018,6 +48012,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-09-28",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -48163,19 +48163,19 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 25
-    },
-    {
-      "group": "Other",
-      "count": 22
+      "count": 19
     },
     {
       "group": "Fungi",
       "count": 16
     },
     {
+      "group": "Other",
+      "count": 12
+    },
+    {
       "group": "Plants",
-      "count": 8
+      "count": 7
     }
   ],
   "groups_year": [
@@ -48301,10 +48301,10 @@
       "assembly_name": "Mglob_BlMal_v1f",
       "total_sequence_length": 977011201,
       "chromosome_count": 21,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Mespilia",
+      "family": "Temnopleuridae",
+      "phylum": "Echinodermata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg/960px-Erizo_de_mar_%28Mespilia_globulus%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_283.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Erizo_de_mar_(Mespilia_globulus),_Anilao,_Filipinas,_2023-08-22,_DD_283.jpg",
@@ -48322,10 +48322,10 @@
       "assembly_name": "ASM61617325v1",
       "total_sequence_length": 14381553938,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48343,10 +48343,10 @@
       "assembly_name": "ASM61617285v1",
       "total_sequence_length": 14463317234,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -48454,10 +48454,10 @@
       "assembly_name": "mBlaBre2.hap2",
       "total_sequence_length": 2160914320,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Blarina",
+      "family": "Soricidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blarina_brevicauda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Blarina_brevicauda.jpg",
@@ -48475,10 +48475,10 @@
       "assembly_name": "mBlaBre2.hap1",
       "total_sequence_length": 2312942455,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Blarina",
+      "family": "Soricidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blarina_brevicauda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Blarina_brevicauda.jpg",
@@ -48496,10 +48496,10 @@
       "assembly_name": "bTroAed1.hap1 v2",
       "total_sequence_length": 1224968293,
       "chromosome_count": 40,
-      "genus": "Troglodytes",
-      "family": "Certhiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48512,10 +48512,10 @@
       "assembly_name": "bTroAed1.hap2 v2",
       "total_sequence_length": 1147004143,
       "chromosome_count": 38,
-      "genus": "Troglodytes",
-      "family": "Certhiidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -48592,10 +48592,10 @@
       "assembly_name": "ASM61612805v1",
       "total_sequence_length": 1849748025,
       "chromosome_count": 19,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Vespertilio",
+      "family": "Vespertilionidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48656,10 +48656,10 @@
       "assembly_name": "ASM61611885v1",
       "total_sequence_length": 40751606,
       "chromosome_count": 12,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cercospora",
+      "family": "Mycosphaerellaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -48978,10 +48978,10 @@
       "assembly_name": "ASM61597785v1",
       "total_sequence_length": 2107057361,
       "chromosome_count": 43,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Bathyraja",
+      "family": "Arhynchobatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Bathyraja_abyssicola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Bathyraja_abyssicola.jpg",
@@ -49047,10 +49047,10 @@
       "assembly_name": "Pretropical",
       "total_sequence_length": 2298690117,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gossypium",
+      "family": "Malvaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Gossypium_hirsutum_%28DITSL%29.JPG/960px-Gossypium_hirsutum_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gossypium_hirsutum_(DITSL).JPG",
@@ -49068,10 +49068,10 @@
       "assembly_name": "Consorcio",
       "total_sequence_length": 2295940408,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gossypium",
+      "family": "Malvaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Gossypium_hirsutum_%28DITSL%29.JPG/960px-Gossypium_hirsutum_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gossypium_hirsutum_(DITSL).JPG",
@@ -49089,10 +49089,10 @@
       "assembly_name": "Preseco",
       "total_sequence_length": 2299273975,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gossypium",
+      "family": "Malvaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Gossypium_hirsutum_%28DITSL%29.JPG/960px-Gossypium_hirsutum_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gossypium_hirsutum_(DITSL).JPG",
@@ -49110,10 +49110,10 @@
       "assembly_name": "Chorlitos",
       "total_sequence_length": 2300094691,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gossypium",
+      "family": "Malvaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Gossypium_hirsutum_%28DITSL%29.JPG/960px-Gossypium_hirsutum_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Gossypium_hirsutum_(DITSL).JPG",
@@ -49280,10 +49280,10 @@
       "assembly_name": "Bornmuellera_tymphaea_CUNI_V1_2026_06_masked",
       "total_sequence_length": 815595051,
       "chromosome_count": 8,
-      "genus": "Bornmuellera",
-      "family": "Brassicaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -49333,10 +49333,10 @@
       "assembly_name": "LU_Pmuan_2.1",
       "total_sequence_length": 1539255591,
       "chromosome_count": 19,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Podarcis",
+      "family": "Lacertidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20210612_Podarcis_muralis_03.jpg/960px-20210612_Podarcis_muralis_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:20210612_Podarcis_muralis_03.jpg",
@@ -49370,10 +49370,10 @@
       "assembly_name": "ASM61535625v1",
       "total_sequence_length": 1033907130,
       "chromosome_count": 12,
-      "genus": "Hippophae",
-      "family": "Elaeagnaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/2020_year._Herbarium._Hippophae_rhamnoides._img-015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:2020_year._Herbarium._Hippophae_rhamnoides._img-015.jpg",
@@ -49395,7 +49395,12 @@
       "family": "Palinuridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Langouste_%28Palinuridae%29.jpg/960px-Langouste_%28Palinuridae%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Langouste_(Palinuridae).jpg",
+        "credit": "Gzen92 · CC BY-SA 4.0",
+        "matched_name": "Palinuridae"
+      }
     },
     {
       "accession": "GCA_061535525.1",
@@ -49407,10 +49412,10 @@
       "assembly_name": "xbOstLuri2 USDA-ARS PSRF primary",
       "total_sequence_length": 1028839577,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Ostrea",
+      "family": "Ostreidae",
+      "phylum": "Mollusca",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49524,10 +49529,10 @@
       "assembly_name": "LU_Pmuni_2.1",
       "total_sequence_length": 1523952992,
       "chromosome_count": 19,
-      "genus": "Podarcis",
-      "family": "Lacertidae",
-      "phylum": "Chordata",
-      "group": "Animals",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Lacerta_agilis_%28Lacertidae%29_-_%28male_subadult%29%2C_Mook_en_Middelaar_%28gemeente%29%2C_the_Netherlands.jpg/960px-Lacerta_agilis_%28Lacertidae%29_-_%28male_subadult%29%2C_Mook_en_Middelaar_%28gemeente%29%2C_the_Netherlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Lacerta_agilis_(Lacertidae)_-_(male_subadult),_Mook_en_Middelaar_(gemeente),_the_Netherlands.jpg",
@@ -49609,10 +49614,10 @@
       "assembly_name": "ASM6148185v1",
       "total_sequence_length": 14644421470,
       "chromosome_count": 21,
-      "genus": "Triticum",
-      "family": "Poaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
@@ -49688,10 +49693,10 @@
       "assembly_name": "Barcuatavar SanDiego0097 863",
       "total_sequence_length": 231707436,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Boechera",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Boechera_drummondii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Boechera_drummondii.jpg",
@@ -49709,10 +49714,10 @@
       "assembly_name": "IPPCAAS_Hvar_1.0",
       "total_sequence_length": 344003133,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippodamia",
+      "family": "Coccinellidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/000692-asteroid_shape_model_%28692%29_Hippodamia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:000692-asteroid_shape_model_(692)_Hippodamia.png",
@@ -49963,10 +49968,10 @@
       "assembly_name": "WHYC_v1.0",
       "total_sequence_length": 1128618594,
       "chromosome_count": 37,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gallus",
+      "family": "Phasianidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50027,10 +50032,10 @@
       "assembly_name": "qqAnyAcce1.hap1.1",
       "total_sequence_length": 1421874312,
       "chromosome_count": 14,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Anyphaena",
+      "family": "Anyphaenidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anyphaena_accentuata_%2826684792532%29.jpg/960px-Anyphaena_accentuata_%2826684792532%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Anyphaena_accentuata_(26684792532).jpg",
@@ -50280,10 +50285,10 @@
       "assembly_name": "Pseudophycis breviuscula_haplotype_1_assembly",
       "total_sequence_length": 634415030,
       "chromosome_count": 30,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pseudophycis",
+      "family": "Moridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50317,10 +50322,10 @@
       "assembly_name": "Aphareus rutilans_haplotype_1_assembly",
       "total_sequence_length": 1153639611,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Aphareus",
+      "family": "Lutjanidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -50380,10 +50385,10 @@
       "assembly_name": "Pseudophycis breviuscula_haplotype_2_assembly",
       "total_sequence_length": 566201971,
       "chromosome_count": 38,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pseudophycis",
+      "family": "Moridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50396,10 +50401,10 @@
       "assembly_name": "Aphareus rutilans_haplotype_2_assembly",
       "total_sequence_length": 1153002625,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Aphareus",
+      "family": "Lutjanidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Aprut_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Aprut_u0.png",
@@ -50740,10 +50745,10 @@
       "assembly_name": "Pseudolabrus biserialis_haplotype_1_assembly",
       "total_sequence_length": 858918278,
       "chromosome_count": 25,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pseudolabrus",
+      "family": "Labridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50756,10 +50761,10 @@
       "assembly_name": "Pseudolabrus biserialis_haplotype_2_assembly",
       "total_sequence_length": 865797395,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pseudolabrus",
+      "family": "Labridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -50990,10 +50995,10 @@
       "assembly_name": "ddCarPrat1.hap1.1",
       "total_sequence_length": 716163919,
       "chromosome_count": 15,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cardamine",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Cardamine_pratensis_TK_2021-05-08_1.jpg/960px-Cardamine_pratensis_TK_2021-05-08_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cardamine_pratensis_TK_2021-05-08_1.jpg",
@@ -51194,7 +51199,12 @@
       "family": "Acanthuridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg/960px-Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg",
+        "credit": "Jim Maragos, U.S. Fish and Wildlife Service · Public domain",
+        "matched_name": "Paracanthurus hepatus"
+      }
     },
     {
       "accession": "GCA_988280615.1",
@@ -51210,7 +51220,12 @@
       "family": "Acanthuridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg/960px-Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg",
+        "credit": "Jim Maragos, U.S. Fish and Wildlife Service · Public domain",
+        "matched_name": "Paracanthurus hepatus"
+      }
     },
     {
       "accession": "GCA_988280605.1",
@@ -51317,10 +51332,10 @@
       "assembly_name": "ASM6137230v1",
       "total_sequence_length": 509318196,
       "chromosome_count": 11,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Vigna",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": null
     },
     {
@@ -51333,10 +51348,10 @@
       "assembly_name": "ASM6137226v1",
       "total_sequence_length": 484589734,
       "chromosome_count": 11,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Vigna",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": null
     },
     {
@@ -51386,10 +51401,10 @@
       "assembly_name": "ASM6137016v1",
       "total_sequence_length": 177973392,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Greyia",
+      "family": "Francoaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Greyia_flanaganii%2C_blom%2C_Manie_van_der_Schijff_BT%2C_b.jpg/960px-Greyia_flanaganii%2C_blom%2C_Manie_van_der_Schijff_BT%2C_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_flanaganii,_blom,_Manie_van_der_Schijff_BT,_b.jpg",
@@ -51481,10 +51496,10 @@
       "assembly_name": "ASM6134643v1",
       "total_sequence_length": 23461531,
       "chromosome_count": 3,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichophyton",
+      "family": "Arthrodermataceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Microscope_view_of_Trichophyton_rubrum_04.jpg/960px-Microscope_view_of_Trichophyton_rubrum_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Microscope_view_of_Trichophyton_rubrum_04.jpg",
@@ -51534,10 +51549,10 @@
       "assembly_name": "ASM6134611v1",
       "total_sequence_length": 460001772,
       "chromosome_count": 22,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippocampus",
+      "family": "Syngnathidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg/960px-Caballito_de_mar_com%C3%BAn_%28Hippocampus_hippocampus%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_74.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Caballito_de_mar_com%C3%BAn_(Hippocampus_hippocampus),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_74.jpg",
@@ -51555,10 +51570,10 @@
       "assembly_name": "ASM6133621v1",
       "total_sequence_length": 34242889,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichoderma",
+      "family": "Hypocreaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -51576,10 +51591,10 @@
       "assembly_name": "ASM6133560v1",
       "total_sequence_length": 34726479,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichoderma",
+      "family": "Hypocreaceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Trichoderma.reesei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Trichoderma.reesei.jpg",
@@ -52182,10 +52197,10 @@
       "assembly_name": "ucHalCyli1.1",
       "total_sequence_length": 28400975,
       "chromosome_count": 14,
-      "genus": "Halimeda",
-      "family": "Halimedaceae",
-      "phylum": "Chlorophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -52198,8 +52213,8 @@
       "assembly_name": "uoAurSpea1.1",
       "total_sequence_length": 42781333,
       "chromosome_count": 5,
-      "genus": null,
-      "family": null,
+      "genus": "Aureoumbra",
+      "family": "Sarcinochrysidaceae",
       "phylum": null,
       "group": "Other",
       "image": null
@@ -52234,7 +52249,12 @@
       "family": "Gelechiidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Oxypteryx_atrella_%2851355388361%29.jpg/960px-Oxypteryx_atrella_%2851355388361%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Oxypteryx_atrella_(51355388361).jpg",
+        "credit": "Ben Sale from Stevenage, UK · CC BY 2.0",
+        "matched_name": "Oxypteryx atrella"
+      }
     },
     {
       "accession": "GCA_988276995.1",
@@ -52246,10 +52266,10 @@
       "assembly_name": "lpCarBige1.hap2.1",
       "total_sequence_length": 396519023,
       "chromosome_count": 34,
-      "genus": "Carex",
-      "family": "Cyperaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Carex_bigelowii_kz02.jpg/960px-Carex_bigelowii_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carex_bigelowii_kz02.jpg",
@@ -52283,10 +52303,10 @@
       "assembly_name": "lpCarBige1.hap1.1",
       "total_sequence_length": 396308935,
       "chromosome_count": 34,
-      "genus": "Carex",
-      "family": "Cyperaceae",
-      "phylum": "Streptophyta",
-      "group": "Plants",
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Carex_bigelowii_kz02.jpg/960px-Carex_bigelowii_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carex_bigelowii_kz02.jpg",
@@ -52341,10 +52361,10 @@
       "assembly_name": "xpLepCaje1.1",
       "total_sequence_length": 1739177086,
       "chromosome_count": 12,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Lepidopleurus",
+      "family": "Lepidopleuridae",
+      "phylum": "Mollusca",
+      "group": "Animals",
       "image": null
     },
     {
@@ -52373,10 +52393,10 @@
       "assembly_name": "fGadMor3.1.hap2",
       "total_sequence_length": 709428025,
       "chromosome_count": 23,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Gadus",
+      "family": "Gadidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -52595,7 +52615,12 @@
       "family": "Bucculatricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Bucculatrix_nigricomella.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Bucculatrix_nigricomella.JPG",
+        "credit": "Stainton · Public domain",
+        "matched_name": "Bucculatrix nigricomella"
+      }
     },
     {
       "accession": "GCA_988264995.1",
@@ -52607,10 +52632,10 @@
       "assembly_name": "gfCorHemi3.1",
       "total_sequence_length": 94097817,
       "chromosome_count": 13,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cortinarius",
+      "family": "Cortinariaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cortinarius_hemitrichus_-_Lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cortinarius_hemitrichus_-_Lindsey.jpg",
@@ -52660,10 +52685,10 @@
       "assembly_name": "ilGraCaec1.hap1.1",
       "total_sequence_length": 682324071,
       "chromosome_count": 29,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Grapholita",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/-1241-_Grapholita_compositella_%2841027756310%29.jpg/960px--1241-_Grapholita_compositella_%2841027756310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:-1241-_Grapholita_compositella_(41027756310).jpg",
@@ -120334,39 +120359,6 @@
       "assembly_name": "HZAU_Ekis_v1",
       "total_sequence_length": 895268121,
       "chromosome_count": 27
-    },
-    {
-      "accession": "GCA_052759605.1",
-      "organism_name": "Oryza sativa Indica Group",
-      "common_name": "long-grained rice",
-      "tax_id": 39946,
-      "release_date": "2025-09-22",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "rice_kato_T2T",
-      "total_sequence_length": 395084276,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_052757275.1",
-      "organism_name": "Monochamus sutor",
-      "common_name": null,
-      "tax_id": 236073,
-      "release_date": "2025-09-22",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5275727v1",
-      "total_sequence_length": 789929701,
-      "chromosome_count": 11
-    },
-    {
-      "accession": "GCA_052756005.1",
-      "organism_name": "Neoseiulus longispinosus",
-      "common_name": null,
-      "tax_id": 1853072,
-      "release_date": "2025-09-22",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5275600v1",
-      "total_sequence_length": 199210599,
-      "chromosome_count": 4
     }
   ],
   "annotations": {
@@ -131374,7 +131366,12 @@
       "matched_name": "Boechera perennans"
     },
     "Bornmuellera tymphaea": null,
-    "Bucculatrix nigricomella": null,
+    "Bucculatrix nigricomella": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Bucculatrix_nigricomella.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bucculatrix_nigricomella.JPG",
+      "credit": "Stainton · Public domain",
+      "matched_name": "Bucculatrix nigricomella"
+    },
     "Camellia sinensis": null,
     "Caranx lugubris": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Carangue_noire_%28Caranx_lugubris%29_%28Ifremer_00755-86701%29.jpg/960px-Carangue_noire_%28Caranx_lugubris%29_%28Ifremer_00755-86701%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -131634,9 +131631,24 @@
     "Oncorhynchus clarkii henshawi": null,
     "Opheodesoma grisea": null,
     "Ostrea lurida": null,
-    "Oxypteryx atrella": null,
-    "Panulirus stimpsoni": null,
-    "Paracanthurus hepatus": null,
+    "Oxypteryx atrella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Oxypteryx_atrella_%2851355388361%29.jpg/960px-Oxypteryx_atrella_%2851355388361%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oxypteryx_atrella_(51355388361).jpg",
+      "credit": "Ben Sale from Stevenage, UK · CC BY 2.0",
+      "matched_name": "Oxypteryx atrella"
+    },
+    "Panulirus stimpsoni": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Langouste_%28Palinuridae%29.jpg/960px-Langouste_%28Palinuridae%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Langouste_(Palinuridae).jpg",
+      "credit": "Gzen92 · CC BY-SA 4.0",
+      "matched_name": "Palinuridae"
+    },
+    "Paracanthurus hepatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg/960px-Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg",
+      "credit": "Jim Maragos, U.S. Fish and Wildlife Service · Public domain",
+      "matched_name": "Paracanthurus hepatus"
+    },
     "Pelochrista infidana": null,
     "Phaonia gobertii": null,
     "Phaonia palpata": null,
