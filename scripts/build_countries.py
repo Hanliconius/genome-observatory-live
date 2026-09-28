@@ -15,7 +15,8 @@ OUT = ROOT / "data" / "countries.json"
 
 MISSING = {
     "", "missing", "not provided", "not applicable", "not collected",
-    "unknown", "unspecified", "na", "n/a", "none",
+    "not determined", "restricted access", "unknown", "unspecified",
+    "na", "n/a", "none",
 }
 
 ALIASES = {
@@ -63,6 +64,41 @@ ALIASES = {
     "north macedonia": "MK",
     "syria": "SY",
     "syrian arab republic": "SY",
+
+    # INSDC / NCBI geo_loc_name vocabulary differs from current ISO spellings
+    # for several countries and territories. Keep these explicit so changes in
+    # pycountry/iso-codes do not silently drop valid historical/current labels.
+    "turkey": "TR",
+    "cote d'ivoire": "CI",
+    "côte d'ivoire": "CI",
+    "curacao": "CW",
+    "democratic republic of the congo": "CD",
+    "republic of the congo": "CG",
+    "falkland islands (islas malvinas)": "FK",
+    "cocos islands": "CC",
+    "macau": "MO",
+    "micronesia, federated states of": "FM",
+    "pitcairn islands": "PN",
+    "reunion": "RE",
+    "saint barthelemy": "BL",
+    "saint helena": "SH",
+    "saint martin": "MF",
+    "sint maarten": "SX",
+    "svalbard": "SJ",
+    "jan mayen": "SJ",
+    "virgin islands": "VI",
+    "french southern and antarctic lands": "TF",
+    "gaza strip": "PS",
+    "west bank": "PS",
+
+    # Unambiguous historical INSDC names.
+    "belgian congo": "CD",
+    "british guiana": "GY",
+    "burma": "MM",
+    "east timor": "TL",
+    "siam": "TH",
+    "the former yugoslav republic of macedonia": "MK",
+    "zaire": "CD",
 }
 
 
@@ -111,6 +147,29 @@ def geo_loc_name(report):
     return None
 
 
+def lookup_country(candidate):
+    candidate = re.sub(r"\s+", " ", str(candidate or "")).strip().strip('"')
+    if not candidate or candidate.casefold() in MISSING:
+        return None
+
+    key = (
+        candidate
+        .replace("\u2019", "'")
+        .replace("\u2018", "'")
+        .casefold()
+    )
+    alias = ALIASES.get(key)
+    try:
+        country = (
+            pycountry.countries.get(alpha_2=alias)
+            if alias
+            else pycountry.countries.lookup(candidate)
+        )
+    except LookupError:
+        return None
+    return country
+
+
 def country_from_geo(raw):
     if not raw:
         return None
@@ -118,16 +177,18 @@ def country_from_geo(raw):
     if value.casefold() in MISSING:
         return None
 
-    # INSDC geo_loc_name uses COUNTRY: finer locality.
+    # INSDC geo_loc_name uses COUNTRY: finer locality. First try the controlled
+    # vocabulary prefix verbatim. A comma fallback catches older/non-conforming
+    # values such as "Turkey, Ankara" without breaking names such as
+    # "Micronesia, Federated States of", because the full value is tried first.
     candidate = value.split(":", 1)[0].strip()
     if candidate.casefold() in MISSING:
         return None
 
-    alias = ALIASES.get(candidate.casefold())
-    try:
-        country = pycountry.countries.get(alpha_2=alias) if alias else pycountry.countries.lookup(candidate)
-    except LookupError:
-        return None
+    country = lookup_country(candidate)
+    if not country and ":" not in value and "," in candidate:
+        country = lookup_country(candidate.split(",", 1)[0])
+
     if not country:
         return None
     return {
@@ -193,6 +254,8 @@ def main():
     unassigned = 0
     reports = 0
     with_location = 0
+    missing_location = 0
+    unresolved_location = defaultdict(int)
 
     def ensure(c):
         key = c["iso3"]
@@ -217,9 +280,14 @@ def main():
             continue
         if x["geo_loc_name"]:
             with_location += 1
+        else:
+            missing_location += 1
         c = country_from_geo(x["geo_loc_name"])
         if not c:
             unassigned += 1
+            if x["geo_loc_name"]:
+                prefix = re.sub(r"\s+", " ", str(x["geo_loc_name"])).strip().split(":", 1)[0].strip()
+                unresolved_location[prefix] += 1
             continue
 
         rec = ensure(c)
@@ -276,7 +344,16 @@ def main():
             "assemblies_with_geo_loc_name": with_location,
             "assemblies_assigned_to_country": assigned,
             "assemblies_unassigned": unassigned,
+            "assemblies_missing_geo_loc_name": missing_location,
+            "assemblies_with_unresolved_geo_loc_name": sum(unresolved_location.values()),
             "fraction_assigned": assigned / reports if reports else 0,
+            "unresolved_geo_loc_prefixes": [
+                {"value": value, "count": count}
+                for value, count in sorted(
+                    unresolved_location.items(),
+                    key=lambda item: (-item[1], item[0].casefold()),
+                )[:50]
+            ],
         },
         "rate_window_days": rate_window_days,
         "countries": out_rows,
@@ -284,8 +361,17 @@ def main():
     OUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n")
     print(
         f"wrote {OUT}: {len(out_rows)} countries, "
-        f"{assigned}/{reports} assemblies assigned ({payload['coverage']['fraction_assigned']:.1%})"
+        f"{assigned}/{reports} assemblies assigned ({payload['coverage']['fraction_assigned']:.1%}); "
+        f"{missing_location} missing geo_loc_name; "
+        f"{sum(unresolved_location.values())} non-empty locations unresolved"
     )
+    if unresolved_location:
+        print("top unresolved geo_loc_name prefixes:")
+        for value, count in sorted(
+            unresolved_location.items(),
+            key=lambda item: (-item[1], item[0].casefold()),
+        )[:20]:
+            print(f"  {count:6d}  {value}")
 
 
 if __name__ == "__main__":
