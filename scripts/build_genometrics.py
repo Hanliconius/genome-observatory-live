@@ -6,7 +6,6 @@ import re
 import shutil
 import subprocess
 import tarfile
-import zipfile
 import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
@@ -20,8 +19,7 @@ CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 VIRIDIPLANTAE=33090
-BATCH_SIZE=250
-SEX_CHROMOSOME_QUERY=["X","Y","Z","W","X1","X2","Y1","Y2","Z1","Z2","W1","W2"]
+BATCH_SIZE=1000
 
 def first(d,*paths,default=None):
     for path in paths:
@@ -152,135 +150,28 @@ def resolve_sex_batch(batch):
     return out
 
 
-def bulk_bootstrap_sex_cache(accessions):
-    """Efficient first fill: download only X/Y/Z/W-style sequence reports."""
-    wanted=set(accessions)
-    labels=defaultdict(set)
-    tokens=defaultdict(set)
-    with tempfile.TemporaryDirectory(prefix="gol_sex_bootstrap_") as td:
-        zpath=Path(td)/"sex_reports.zip"
-        cmd=[
-            "datasets","download","genome","taxon","Eukaryota",
-            "--assembly-source","GenBank",
-            "--assembly-level","chromosome,complete",
-            "--chromosomes",",".join(SEX_CHROMOSOME_QUERY),
-            "--include","seq-report",
-            "--filename",str(zpath),
-            "--no-progressbar",
-            "--fast-zip-validation",
-        ]
-        p=subprocess.run(cmd,text=True,capture_output=True)
-        if p.returncode:
-            raise RuntimeError(f"datasets sex-report download failed {p.returncode}: {p.stderr[-4000:]}")
-        with zipfile.ZipFile(zpath) as zf:
-            report_names=[n for n in zf.namelist() if n.endswith("/sequence_report.jsonl")]
-            print(f"sex labels: bulk package contains {len(report_names)} sequence reports")
-            for name in report_names:
-                with zf.open(name) as fh:
-                    for raw in fh:
-                        try:r=json.loads(raw)
-                        except Exception:continue
-                        a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
-                        if not a or a not in wanted:continue
-                        role=str(first(r,"role",default="") or "").casefold()
-                        loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-                        if not (role=="assembled-molecule" or loc=="chromosome"):continue
-                        c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
-                        if not c:continue
-                        tok=sex_token(c)
-                        if tok:
-                            labels[a].add(c)
-                            tokens[a].add(tok)
-
-    out={}
-    for a in accessions:
-        toks=sorted(tokens.get(a,set()))
-        out[a]={
-            "category":classify_tokens(toks),
-            "tokens":toks,
-            "candidate_labels":sorted(labels.get(a,set())),
-        }
-    return out
-
-
-def bulk_bootstrap_sex_cache(accessions):
-    """Initial fill using NCBI's server-side chromosome-name filter."""
-    wanted=set(accessions)
-    labels=defaultdict(set)
-    tokens=defaultdict(set)
-    with tempfile.TemporaryDirectory(prefix="gol_sex_bootstrap_") as td:
-        zpath=Path(td)/"sex_reports.zip"
-        cmd=[
-            "datasets","download","genome","taxon","Eukaryota",
-            "--assembly-source","GenBank",
-            "--assembly-level","chromosome,complete",
-            "--chromosomes",",".join(SEX_CHROMOSOME_QUERY),
-            "--include","seq-report",
-            "--filename",str(zpath),
-            "--no-progressbar",
-            "--fast-zip-validation",
-        ]
-        p=subprocess.run(cmd,text=True,capture_output=True)
-        if p.returncode:
-            raise RuntimeError(
-                f"datasets sex-report download failed {p.returncode}: {p.stderr[-4000:]}"
-            )
-        with zipfile.ZipFile(zpath) as zf:
-            report_names=[n for n in zf.namelist() if n.endswith("/sequence_report.jsonl")]
-            print(f"sex labels: filtered package contains {len(report_names)} assembly sequence reports")
-            for name in report_names:
-                with zf.open(name) as fh:
-                    for raw in fh:
-                        try:
-                            r=json.loads(raw)
-                        except Exception:
-                            continue
-                        a=str(first(r,"assembly_accession","assemblyAccession","accession",default="") or "")
-                        if not a or a not in wanted:
-                            continue
-                        role=str(first(r,"role",default="") or "").casefold()
-                        loc=str(first(r,"assigned_molecule_location_type","assignedMoleculeLocationType",default="") or "").casefold()
-                        if not (role=="assembled-molecule" or loc=="chromosome"):
-                            continue
-                        c=normalize_chr_label(first(r,"chr_name","chrName",default=""))
-                        if not c:
-                            continue
-                        tok=sex_token(c)
-                        if tok:
-                            labels[a].add(c)
-                            tokens[a].add(tok)
-
-    out={}
-    for a in accessions:
-        toks=sorted(tokens.get(a,set()))
-        out[a]={
-            "category":classify_tokens(toks),
-            "tokens":toks,
-            "candidate_labels":sorted(labels.get(a,set())),
-        }
-    return out
-
-
 def build_sex_cache(accessions,cache):
     missing=[a for a in accessions if a not in cache]
     if not missing:
         return cache
-    if len(missing)>5000:
-        print(f"sex labels: filtered bulk bootstrap for {len(missing)} assemblies")
-        cache.update(bulk_bootstrap_sex_cache(accessions))
-        write_json(CACHE,cache)
-        return cache
 
     batches=[missing[i:i+BATCH_SIZE] for i in range(0,len(missing),BATCH_SIZE)]
-    print(f"sex labels: resolving {len(missing)} new assemblies in {len(batches)} batches")
+    workers=min(5,len(batches))
+    print(f"sex labels: resolving {len(missing)} assemblies in {len(batches)} accession batches with {workers} workers")
     completed=0
-    with ThreadPoolExecutor(max_workers=3) as ex:
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(resolve_sex_batch,b):b for b in batches}
         for fut in as_completed(futures):
-            cache.update(fut.result())
+            batch=futures[fut]
+            try:
+                cache.update(fut.result())
+            except Exception as exc:
+                raise RuntimeError(
+                    f"sex-label batch failed for {batch[0]}..{batch[-1]} ({len(batch)} accessions): {exc}"
+                ) from exc
             completed+=1
-            if completed%5==0 or completed==len(batches):
-                print(f"sex labels: completed {completed}/{len(batches)} batches")
+            print(f"sex labels: completed {completed}/{len(batches)} batches")
+            if completed%3==0 or completed==len(batches):
                 write_json(CACHE,cache)
     return cache
 
