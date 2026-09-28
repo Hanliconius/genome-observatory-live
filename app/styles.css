@@ -134,8 +134,8 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .country-map-panel{background:var(--panel);border:1px solid var(--line-dark);padding:24px}
 .country-map-head{align-items:end}
 .country-map-head h2,.country-search-panel h2{font-size:clamp(1.6rem,3vw,2.5rem);letter-spacing:-.035em;margin:5px 0 8px;font-weight:620}
-.country-map{width:100%;height:auto;display:block;margin-top:18px;background:#fafbf9;border:1px solid var(--line)}
-.map-ocean{fill:#fafbf9;stroke:none}
+.country-map{width:100%;height:auto;display:block;margin-top:18px;background:#f7f8fa;border:1px solid var(--line)}
+.map-ocean{fill:#f7f8fa;stroke:none}
 .country-shape{stroke:#fff;stroke-width:.55;vector-effect:non-scaling-stroke;cursor:pointer;transition:opacity .12s ease,stroke-width .12s ease}
 .country-shape.is-hovered{stroke:var(--ink);stroke-width:1.4}
 .country-shape.is-selected{stroke:var(--ink);stroke-width:2}
