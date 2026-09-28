@@ -27,7 +27,7 @@ VIRIDIPLANTAE=33090
 BATCH_SIZE=100
 SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
 EUTILS_BASE="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
-ACCESSION_RE=re.compile(r"\\bGC[AF]_\\d+(?:\\.\\d+)?\\b")
+ACCESSION_RE=re.compile(r"\bGC[AF]_\d+(?:\.\d+)?\b")
 SEX_CHROMOSOME_QUERY=(
     ["X","Y","Z","W","U","V"]
     + [f"{base}{i}" for base in ("X","Y","Z","W","U","V") for i in range(1,10)]
@@ -106,8 +106,8 @@ def sex_token(label):
     s=raw.upper().strip()
 
     patterns=[
-        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZWUV])(?:[ _.-]*[0-9]+)?$",
-        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZWUV])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:CHR(?:OMOSOME)?[ _.-]*)?([XYZW])(?:[ _.-]*[0-9]+)?$",
+        r"^(?:LG|LINKAGE[ _.-]*GROUP)[ _.-]*([XYZW])(?:[ _.-]*[0-9]+)?$",
     ]
     for pat in patterns:
         m=re.match(pat,s)
@@ -309,8 +309,6 @@ def bootstrap_sex_cache_entrez(accessions):
         "Y":["chromosome Y","chromosome Y1","chromosome Y2"],
         "Z":["chromosome Z","chromosome Z1","chromosome Z2"],
         "W":["chromosome W","chromosome W1","chromosome W2"],
-        "U":["chromosome U","chromosome U1","chromosome U2"],
-        "V":["chromosome V","chromosome V1","chromosome V2"],
         "OTHER":["sex chromosome","gonosome"],
     }
 
@@ -461,8 +459,8 @@ def main():
             "rules":{
                 "XY labelled":"Both X and Y labels detected, without Z/W.",
                 "ZW labelled":"Both Z and W labels detected, without X/Y.",
-                "Other / partial label":"At least one X/Y/Z/W/U/V-style or generic sex-chromosome label detected, but not a clean XY or ZW pair.",
-                "No sex-chromosome label":"No explicit X/Y/Z/W/U/V-style or generic sex-chromosome label detected."
+                "Other / partial label":"At least one X/Y/Z/W-style or generic sex-chromosome label detected, but not a clean XY or ZW pair.",
+                "No sex-chromosome label":"No explicit X/Y/Z/W-style or generic sex-chromosome label detected."
             },
             "audit":{
                 "token_counts":dict(token_counts),
