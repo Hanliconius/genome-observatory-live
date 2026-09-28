@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T17:44:28.724393+00:00",
+  "generated_at": "2026-09-28T17:58:17.058920+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48163,11 +48163,11 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 21
+      "count": 25
     },
     {
       "group": "Fungi",
-      "count": 16
+      "count": 18
     },
     {
       "group": "Plants",
@@ -48175,7 +48175,7 @@
     },
     {
       "group": "Other",
-      "count": 8
+      "count": 2
     }
   ],
   "groups_year": [
@@ -48380,10 +48380,10 @@
       "assembly_name": "CBS151398v1",
       "total_sequence_length": 30165745,
       "chromosome_count": 8,
-      "genus": null,
+      "genus": "Verweija",
       "family": null,
-      "phylum": null,
-      "group": "Other",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -48496,10 +48496,10 @@
       "assembly_name": "bTroAed1.hap1 v2",
       "total_sequence_length": 1224968293,
       "chromosome_count": 40,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48512,10 +48512,10 @@
       "assembly_name": "bTroAed1.hap2 v2",
       "total_sequence_length": 1147004143,
       "chromosome_count": 38,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Troglodytes",
+      "family": "Certhiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48528,10 +48528,10 @@
       "assembly_name": "rOncCla1.1.pri",
       "total_sequence_length": 2506013150,
       "chromosome_count": 32,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Oncorhynchus",
+      "family": "Salmonidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -48560,10 +48560,10 @@
       "assembly_name": "ASM61613165v1",
       "total_sequence_length": 25523718,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichosporon",
+      "family": "Trichosporonaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -49136,10 +49136,10 @@
       "assembly_name": "AD6C_Chr",
       "total_sequence_length": 662379437,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippoglossoides",
+      "family": "Pleuronectidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/FMIB_33695_Hippoglossoides_Elassodon_Jordan%3B_Gilbert.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_33695_Hippoglossoides_Elassodon_Jordan;_Gilbert.jpeg",
@@ -49278,7 +49278,12 @@
       "family": "Pseudococcidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Planococcus_lilacinus_Pore_mulecular-pore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Planococcus_lilacinus_Pore_mulecular-pore.jpg",
+        "credit": "Chamaiporn Department of Agriculture, Thailand · CC BY 3.0 au",
+        "matched_name": "Planococcus lilacinus"
+      }
     },
     {
       "accession": "GCA_061547655.1",
@@ -49290,10 +49295,10 @@
       "assembly_name": "Bornmuellera_tymphaea_CUNI_V1_2026_06_masked",
       "total_sequence_length": 815595051,
       "chromosome_count": 8,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Bornmuellera",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": null
     },
     {
@@ -49306,10 +49311,10 @@
       "assembly_name": "Phoca_largha_LI1_v1",
       "total_sequence_length": 2410525974,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Phoca",
+      "family": "Phocidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Common_seal_%28Phoca_vitulina%29.jpg/960px-Common_seal_%28Phoca_vitulina%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Common_seal_(Phoca_vitulina).jpg",
@@ -49327,10 +49332,10 @@
       "assembly_name": "Iberis_sempervirens_CUNI_V1_2026_06",
       "total_sequence_length": 565896696,
       "chromosome_count": 11,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Iberis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Iberis_amara_flower_%2815%29.jpg/960px-Iberis_amara_flower_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Iberis_amara_flower_(15).jpg",
@@ -49348,10 +49353,10 @@
       "assembly_name": "LU_Pmuan_2.1",
       "total_sequence_length": 1539255591,
       "chromosome_count": 19,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Podarcis",
+      "family": "Lacertidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/20210612_Podarcis_muralis_03.jpg/960px-20210612_Podarcis_muralis_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:20210612_Podarcis_muralis_03.jpg",
@@ -49385,10 +49390,10 @@
       "assembly_name": "ASM61535625v1",
       "total_sequence_length": 1033907130,
       "chromosome_count": 12,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hippophae",
+      "family": "Elaeagnaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/2020_year._Herbarium._Hippophae_rhamnoides._img-015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:2020_year._Herbarium._Hippophae_rhamnoides._img-015.jpg",
@@ -49516,7 +49521,12 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg/960px-Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg",
+        "credit": "Yongchangjang · CC BY-SA 4.0",
+        "matched_name": "Zoysia sinica"
+      }
     },
     {
       "accession": "GCA_061531765.1",
@@ -49586,10 +49596,10 @@
       "assembly_name": "xcRhoOrbi1.1",
       "total_sequence_length": 5601293161,
       "chromosome_count": 46,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Rhombosepion",
+      "family": "Sepiidae",
+      "phylum": "Mollusca",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49603,9 +49613,9 @@
       "total_sequence_length": 1077334014,
       "chromosome_count": 24,
       "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49619,9 +49629,9 @@
       "total_sequence_length": 1083364354,
       "chromosome_count": 24,
       "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -49669,17 +49679,17 @@
     {
       "accession": "GCA_061476855.1",
       "organism_name": "Rosa bracteata",
-      "common_name": null,
+      "common_name": "Macartny rose",
       "tax_id": 74653,
       "release_date": "2026-09-20",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM6147685v1",
       "total_sequence_length": 501060603,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Rosa",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg/960px-Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Flower_of_Rosa_bracteata_in_Ishigaki_Island.jpg",
@@ -49697,10 +49707,10 @@
       "assembly_name": "Bperennansvar SanDiego193153 862",
       "total_sequence_length": 217111559,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Boechera",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Boechera_perennans_1.jpg/960px-Boechera_perennans_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Boechera_perennans_1.jpg",
@@ -49866,10 +49876,10 @@
       "assembly_name": "ilAclAspe2.1",
       "total_sequence_length": 597427833,
       "chromosome_count": 30,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Acleris",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/%281043%29_Acleris_aspersana_%2814848954643%29.jpg/960px-%281043%29_Acleris_aspersana_%2814848954643%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:(1043)_Acleris_aspersana_(14848954643).jpg",
@@ -49887,10 +49897,10 @@
       "assembly_name": "ilLomMarg3.1",
       "total_sequence_length": 590642356,
       "chromosome_count": 30,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Lomaspilis",
+      "family": "Geometridae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Lomaspilis_marginata_%28Clouded_Border%29.jpg/960px-Lomaspilis_marginata_%28Clouded_Border%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Lomaspilis_marginata_(Clouded_Border).jpg",
@@ -50002,7 +50012,12 @@
       "family": "Phasianidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Red_jungle_fowl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Red_jungle_fowl.png",
+        "credit": "Subramanya C K · CC BY-SA 3.0",
+        "matched_name": "Gallus gallus"
+      }
     },
     {
       "accession": "GCA_061392115.1",
@@ -50072,10 +50087,10 @@
       "assembly_name": "qqAnyAcce1.hap1.1",
       "total_sequence_length": 1421874312,
       "chromosome_count": 14,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Anyphaena",
+      "family": "Anyphaenidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anyphaena_accentuata_%2826684792532%29.jpg/960px-Anyphaena_accentuata_%2826684792532%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Anyphaena_accentuata_(26684792532).jpg",
@@ -50146,10 +50161,10 @@
       "assembly_name": "Aphareus furca_haplotype_2_assembly",
       "total_sequence_length": 1149808648,
       "chromosome_count": 30,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Aphareus",
+      "family": "Lutjanidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Apfur_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Apfur_u0.png",
@@ -50271,7 +50286,12 @@
       "family": "Zanclidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zanclus_cornutus_in_Kona.jpg/960px-Zanclus_cornutus_in_Kona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Zanclus_cornutus_in_Kona.jpg",
+        "credit": "Brocken Inaglory · CC BY-SA 3.0",
+        "matched_name": "Zanclus"
+      }
     },
     {
       "accession": "GCA_988281685.1",
@@ -50283,10 +50303,10 @@
       "assembly_name": "Aphareus furca_haplotype_1_assembly",
       "total_sequence_length": 1157821702,
       "chromosome_count": 28,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Aphareus",
+      "family": "Lutjanidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Apfur_u0.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Apfur_u0.png",
@@ -50304,10 +50324,10 @@
       "assembly_name": "Acanthurus nigricans_haplotype_1_assembly",
       "total_sequence_length": 664729094,
       "chromosome_count": 24,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Acanthurus",
+      "family": "Acanthuridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Acanthurus_nigricans.jpg/960px-Acanthurus_nigricans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Acanthurus_nigricans.jpg",
@@ -50341,10 +50361,10 @@
       "assembly_name": "Acanthurus nigricans_haplotype_2_assembly",
       "total_sequence_length": 669525079,
       "chromosome_count": 26,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Acanthurus",
+      "family": "Acanthuridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Acanthurus_nigricans.jpg/960px-Acanthurus_nigricans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Acanthurus_nigricans.jpg",
@@ -50578,10 +50598,10 @@
       "assembly_name": "Pristis zijsron_haplotype_2_assembly",
       "total_sequence_length": 2373393783,
       "chromosome_count": 51,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50631,10 +50651,10 @@
       "assembly_name": "Pristis zijsron_haplotype_1_assembly",
       "total_sequence_length": 2433300514,
       "chromosome_count": 52,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pristis",
+      "family": "Pristidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pristidae_-_Pristis_lathami.JPG/960px-Pristidae_-_Pristis_lathami.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Pristidae_-_Pristis_lathami.JPG",
@@ -50700,10 +50720,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_1_assembly",
       "total_sequence_length": 3067276070,
       "chromosome_count": 73,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carcharhinus",
+      "family": "Carcharhinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50721,10 +50741,10 @@
       "assembly_name": "Carcharhinus cautus_haplotype_2_assembly",
       "total_sequence_length": 2887078191,
       "chromosome_count": 50,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carcharhinus",
+      "family": "Carcharhinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Carcharhinus_cautus_csiro-nfc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carcharhinus_cautus_csiro-nfc.jpg",
@@ -50989,7 +51009,12 @@
       "family": "Leuciscidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Fathead_Minnow_-_Breeding_Male.JPG/960px-Fathead_Minnow_-_Breeding_Male.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fathead_Minnow_-_Breeding_Male.JPG",
+        "credit": "Rankin1958 · CC BY-SA 3.0",
+        "matched_name": "Pimephales promelas"
+      }
     },
     {
       "accession": "GCA_988280855.1",
@@ -51001,10 +51026,10 @@
       "assembly_name": "ilIncPect1.hap1.1",
       "total_sequence_length": 668138472,
       "chromosome_count": 31,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Incurvaria",
+      "family": "Incurvariidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg/960px-Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Incurvaria_pectinea_-_pupa_is_within_protective_leaf_structure.jpg",
@@ -51068,17 +51093,17 @@
     {
       "accession": "GCA_988280775.1",
       "organism_name": "Cardamine pratensis",
-      "common_name": null,
+      "common_name": "cuckoo flower",
       "tax_id": 50465,
       "release_date": "2026-09-17",
       "assembly_level": "Chromosome",
       "assembly_name": "ddCarPrat1.hap1.1",
       "total_sequence_length": 716163919,
       "chromosome_count": 15,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cardamine",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Cardamine_pratensis_TK_2021-05-08_1.jpg/960px-Cardamine_pratensis_TK_2021-05-08_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Cardamine_pratensis_TK_2021-05-08_1.jpg",
@@ -51280,10 +51305,10 @@
       "assembly_name": "Paracanthurus hepatus_haplotype_2_assembly",
       "total_sequence_length": 661859321,
       "chromosome_count": 50,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Paracanthurus",
+      "family": "Acanthuridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg/960px-Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg",
@@ -51301,10 +51326,10 @@
       "assembly_name": "Paracanthurus hepatus_haplotype_1_assembly",
       "total_sequence_length": 663627294,
       "chromosome_count": 33,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Paracanthurus",
+      "family": "Acanthuridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg/960px-Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Coral_reef_fish_pacific_blue_tan_paracanthurus_hepatus.jpg",
@@ -51375,10 +51400,10 @@
       "assembly_name": "HG008Nv6.3_hap1",
       "total_sequence_length": 3017437751,
       "chromosome_count": 23,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Homo",
+      "family": "Hominidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Akha_cropped_hires.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Akha_cropped_hires.JPG",
@@ -51396,10 +51421,10 @@
       "assembly_name": "HG008Nv6.3_hap2",
       "total_sequence_length": 3016723536,
       "chromosome_count": 23,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Homo",
+      "family": "Hominidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Akha_cropped_hires.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Akha_cropped_hires.JPG",
@@ -51449,10 +51474,10 @@
       "assembly_name": "Cqf v.1.0",
       "total_sequence_length": 86876455,
       "chromosome_count": 18,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Cronartium",
+      "family": "Coleosporiaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": null
     },
     {
@@ -51465,10 +51490,10 @@
       "assembly_name": "ASM6137023v1",
       "total_sequence_length": 177597589,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Greyia",
+      "family": "Francoaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg/960px-Greyia_sutherlandii%2C_bloeiwyse%2C_Manie_van_der_Schijff_BT%2C_d.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_sutherlandii,_bloeiwyse,_Manie_van_der_Schijff_BT,_d.jpg",
@@ -51507,10 +51532,10 @@
       "assembly_name": "ASM6137015v1",
       "total_sequence_length": 175276884,
       "chromosome_count": 16,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Greyia",
+      "family": "Francoaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Greyia_radlkoferi_01.jpg/960px-Greyia_radlkoferi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Greyia_radlkoferi_01.jpg",
@@ -51560,10 +51585,10 @@
       "assembly_name": "ASM6134649v1",
       "total_sequence_length": 460651048,
       "chromosome_count": 28,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Hypomesus",
+      "family": "Osmeridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG/960px-Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science%2C_Tokyo_-_DSC06856.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Hypomesus_nipponensis_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC06856.JPG",
@@ -51581,10 +51606,10 @@
       "assembly_name": "ASM6134643v1",
       "total_sequence_length": 23461531,
       "chromosome_count": 3,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Trichophyton",
+      "family": "Arthrodermataceae",
+      "phylum": "Ascomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Microscope_view_of_Trichophyton_rubrum_04.jpg/960px-Microscope_view_of_Trichophyton_rubrum_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Microscope_view_of_Trichophyton_rubrum_04.jpg",
@@ -51602,10 +51627,10 @@
       "assembly_name": "ASM6134622v1",
       "total_sequence_length": 598202306,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Lespedeza",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Chinese_bushclover_%28Lespedeza_cuneata%29_%2821173669822%29.jpg/960px-Chinese_bushclover_%28Lespedeza_cuneata%29_%2821173669822%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Chinese_bushclover_(Lespedeza_cuneata)_(21173669822).jpg",
@@ -51727,7 +51752,12 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Corntassel_7095.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Corntassel_7095.jpg",
+        "credit": "Spedona · CC BY-SA 3.0",
+        "matched_name": "Zea mays"
+      }
     },
     {
       "accession": "GCA_061311715.1",
@@ -51739,10 +51769,10 @@
       "assembly_name": "ASM6131171v1",
       "total_sequence_length": 991211868,
       "chromosome_count": 10,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Amphicrossus",
+      "family": "Nitidulidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Amphicrossus_ciliatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Amphicrossus_ciliatus.jpg",
@@ -52068,17 +52098,17 @@
     {
       "accession": "GCA_061310445.1",
       "organism_name": "Rosa lucieae",
-      "common_name": null,
+      "common_name": "memorial rose",
       "tax_id": 74648,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM6131044v1",
       "total_sequence_length": 494742266,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Rosa",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rosa_luciae_2.JPG/960px-Rosa_luciae_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Rosa_luciae_2.JPG",
@@ -52089,17 +52119,17 @@
     {
       "accession": "GCA_061310315.1",
       "organism_name": "Rosa lucieae",
-      "common_name": null,
+      "common_name": "memorial rose",
       "tax_id": 74648,
       "release_date": "2026-09-16",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM6131031v1",
       "total_sequence_length": 483028070,
       "chromosome_count": 7,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Rosa",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rosa_luciae_2.JPG/960px-Rosa_luciae_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Rosa_luciae_2.JPG",
@@ -52207,10 +52237,10 @@
       "assembly_name": "fPolVir2.1.hap2",
       "total_sequence_length": 640682287,
       "chromosome_count": 20,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pollachius",
+      "family": "Gadidae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Grand_Aquarium_Saint-Malo_-_Pollachius_pollachius_01.jpg/960px-Grand_Aquarium_Saint-Malo_-_Pollachius_pollachius_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Grand_Aquarium_Saint-Malo_-_Pollachius_pollachius_01.jpg",
@@ -52318,8 +52348,8 @@
       "assembly_name": "uoAurSpea1.1",
       "total_sequence_length": 42781333,
       "chromosome_count": 5,
-      "genus": null,
-      "family": null,
+      "genus": "Aureoumbra",
+      "family": "Sarcinochrysidaceae",
       "phylum": null,
       "group": "Other",
       "image": null
@@ -52371,10 +52401,10 @@
       "assembly_name": "lpCarBige1.hap2.1",
       "total_sequence_length": 396519023,
       "chromosome_count": 34,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carex",
+      "family": "Cyperaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Carex_bigelowii_kz02.jpg/960px-Carex_bigelowii_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carex_bigelowii_kz02.jpg",
@@ -52408,10 +52438,10 @@
       "assembly_name": "lpCarBige1.hap1.1",
       "total_sequence_length": 396308935,
       "chromosome_count": 34,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Carex",
+      "family": "Cyperaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Carex_bigelowii_kz02.jpg/960px-Carex_bigelowii_kz02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Carex_bigelowii_kz02.jpg",
@@ -52512,7 +52542,12 @@
       "family": "Gadidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Atlantic_cod.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Atlantic_cod.jpg",
+        "credit": "Public domain",
+        "matched_name": "Gadus morhua"
+      }
     },
     {
       "accession": "GCA_988265225.1",
@@ -52582,10 +52617,10 @@
       "assembly_name": "gfPsaPilu1.hap1.1",
       "total_sequence_length": 40971153,
       "chromosome_count": 12,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Psathyrella",
+      "family": "Psathyrellaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Coprinellus_micaceus_%28Psathyrellaceae%29_%2816677534455%29.jpg/960px-Coprinellus_micaceus_%28Psathyrellaceae%29_%2816677534455%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Coprinellus_micaceus_(Psathyrellaceae)_(16677534455).jpg",
@@ -52603,11 +52638,16 @@
       "assembly_name": "daPilAura1.hap1.1",
       "total_sequence_length": 3672332004,
       "chromosome_count": 18,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
-      "image": null
+      "genus": "Pilosella",
+      "family": "Asteraceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Hieracium_aurantiacum_LC0106.jpg/960px-Hieracium_aurantiacum_LC0106.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hieracium_aurantiacum_LC0106.jpg",
+        "credit": "Jörg Hempel · CC BY-SA 3.0 de",
+        "matched_name": "Pilosella aurantiaca"
+      }
     },
     {
       "accession": "GCA_988265165.1",
@@ -52656,10 +52696,10 @@
       "assembly_name": "ilPelInfi3.hap1.1",
       "total_sequence_length": 594564048,
       "chromosome_count": 13,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Pelochrista",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": null
     },
     {
@@ -52714,10 +52754,10 @@
       "assembly_name": "icOmoDisc4.hap1.1",
       "total_sequence_length": 942355721,
       "chromosome_count": 11,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Omosita",
+      "family": "Nitidulidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png/960px-Omosita_discoidea_%28Fabricius%2C_1775%29_%2829131983133%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Omosita_discoidea_(Fabricius,_1775)_(29131983133).png",
@@ -52814,10 +52854,10 @@
       "assembly_name": "idPhaPalp1.hap1.1",
       "total_sequence_length": 1591667588,
       "chromosome_count": 5,
-      "genus": null,
-      "family": null,
-      "phylum": null,
-      "group": "Other",
+      "genus": "Phaonia",
+      "family": "Muscidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Phaonia.palpata.-.lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Phaonia.palpata.-.lindsey.jpg",
@@ -131662,8 +131702,18 @@
       "credit": "William M. Brown Jr., Bugwood.org · CC BY 3.0",
       "matched_name": "Fusarium poae"
     },
-    "Gadus morhua": null,
-    "Gallus gallus": null,
+    "Gadus morhua": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Atlantic_cod.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Atlantic_cod.jpg",
+      "credit": "Public domain",
+      "matched_name": "Gadus morhua"
+    },
+    "Gallus gallus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Red_jungle_fowl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Red_jungle_fowl.png",
+      "credit": "Subramanya C K · CC BY-SA 3.0",
+      "matched_name": "Gallus gallus"
+    },
     "Glaucosoma hebraicum": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Geographical_Distribution_of_Glaucosoma_hebraicum.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "page_url": "https://commons.wikimedia.org/wiki/File:Geographical_Distribution_of_Glaucosoma_hebraicum.png",
@@ -131880,9 +131930,24 @@
       "credit": "Diego Delso · CC BY-SA 4.0",
       "matched_name": "Phycis"
     },
-    "Pilosella aurantiaca": null,
-    "Pimephales promelas": null,
-    "Planococcus lilacinus": null,
+    "Pilosella aurantiaca": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Hieracium_aurantiacum_LC0106.jpg/960px-Hieracium_aurantiacum_LC0106.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hieracium_aurantiacum_LC0106.jpg",
+      "credit": "Jörg Hempel · CC BY-SA 3.0 de",
+      "matched_name": "Pilosella aurantiaca"
+    },
+    "Pimephales promelas": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Fathead_Minnow_-_Breeding_Male.JPG/960px-Fathead_Minnow_-_Breeding_Male.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Fathead_Minnow_-_Breeding_Male.JPG",
+      "credit": "Rankin1958 · CC BY-SA 3.0",
+      "matched_name": "Pimephales promelas"
+    },
+    "Planococcus lilacinus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Planococcus_lilacinus_Pore_mulecular-pore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Planococcus_lilacinus_Pore_mulecular-pore.jpg",
+      "credit": "Chamaiporn Department of Agriculture, Thailand · CC BY 3.0 au",
+      "matched_name": "Planococcus lilacinus"
+    },
     "Plantago lanceolata": null,
     "Plectropomus laevis": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Mero_de_coral_ensillado_negro_%28Plectropomus_laevis%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-10%2C_DD_207.jpg/960px-Mero_de_coral_ensillado_negro_%28Plectropomus_laevis%29%2C_Mah%C3%A9%2C_Seychelles%2C_2025-09-10%2C_DD_207.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -132072,8 +132137,1224 @@
     "Verweija noviomagensis": null,
     "Vespertilio sinensis": null,
     "Vigna angularis": null,
-    "Zanclus cornutus": null,
-    "Zea mays": null,
-    "Zoysia sinica": null
+    "Zanclus cornutus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zanclus_cornutus_in_Kona.jpg/960px-Zanclus_cornutus_in_Kona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Zanclus_cornutus_in_Kona.jpg",
+      "credit": "Brocken Inaglory · CC BY-SA 3.0",
+      "matched_name": "Zanclus"
+    },
+    "Zea mays": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Corntassel_7095.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Corntassel_7095.jpg",
+      "credit": "Spedona · CC BY-SA 3.0",
+      "matched_name": "Zea mays"
+    },
+    "Zoysia sinica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg/960px-Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Zoysia_sinica_of_Gwangpo_bay_in_Korea.jpg",
+      "credit": "Yongchangjang · CC BY-SA 4.0",
+      "matched_name": "Zoysia sinica"
+    }
+  },
+  "taxonomy_cache": {
+    "2248776": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Ajellomycetaceae",
+      "genus": "Emergomyces"
+    },
+    "80948": {
+      "fallback_common_name": "scissortail sergeant",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Pomacentridae",
+      "genus": "Abudefduf"
+    },
+    "1603565": {
+      "fallback_common_name": "lesser redpoll",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Fringillidae",
+      "genus": "Acanthis"
+    },
+    "175431": {
+      "fallback_common_name": "whitecheek surgeonfish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Acanthuridae",
+      "genus": "Acanthurus"
+    },
+    "758704": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Tortricidae",
+      "genus": "Acleris"
+    },
+    "2748399": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Nitidulidae",
+      "genus": "Amphicrossus"
+    },
+    "1155750": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Anyphaenidae",
+      "genus": "Anyphaena"
+    },
+    "396779": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lutjanidae",
+      "genus": "Aphareus"
+    },
+    "443676": {
+      "fallback_common_name": "rusty jobfish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lutjanidae",
+      "genus": "Aphareus"
+    },
+    "1334829": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Aplodontiidae",
+      "genus": "Aplodontia"
+    },
+    "59689": {
+      "fallback_common_name": "lyrate rockcress",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Arabidopsis"
+    },
+    "3451515": {
+      "family": "Sarcinochrysidaceae",
+      "genus": "Aureoumbra"
+    },
+    "298348": {
+      "fallback_common_name": "Eaton's skate",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Arhynchobatidae",
+      "genus": "Bathyraja"
+    },
+    "9387": {
+      "fallback_common_name": "short-tailed shrew",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Soricidae",
+      "genus": "Blarina"
+    },
+    "486422": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Boechera"
+    },
+    "115922": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Boechera"
+    },
+    "457784": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Bornmuellera"
+    },
+    "1594241": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Bucculatricidae",
+      "genus": "Bucculatrix"
+    },
+    "4442": {
+      "fallback_common_name": "black tea",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Theaceae",
+      "genus": "Camellia"
+    },
+    "1156094": {
+      "fallback_common_name": "black jack",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Carangidae",
+      "genus": "Caranx"
+    },
+    "443757": {
+      "fallback_common_name": "nervous shark",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Carcharhinidae",
+      "genus": "Carcharhinus"
+    },
+    "50465": {
+      "fallback_common_name": "cuckoo flower",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Cardamine"
+    },
+    "241200": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Cyperaceae",
+      "genus": "Carex"
+    },
+    "3441413": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Erebidae",
+      "genus": "Catocala"
+    },
+    "2991936": {
+      "kingdom": "Metazoa",
+      "phylum": "Porifera",
+      "family": "Coelospheridae",
+      "genus": "Celtodoryx"
+    },
+    "1582122": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Carditidae",
+      "genus": "Centrocardita"
+    },
+    "334914": {
+      "fallback_common_name": "coral hind",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Serranidae",
+      "genus": "Cephalopholis"
+    },
+    "438356": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Mycosphaerellaceae",
+      "genus": "Cercospora"
+    },
+    "73333": {
+      "fallback_common_name": "Eurasian tree-creeper",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Certhiidae",
+      "genus": "Certhia"
+    },
+    "68486": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Sylviidae",
+      "genus": "Cettia"
+    },
+    "371911": {
+      "fallback_common_name": "Common ringed plover",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Charadriidae",
+      "genus": "Charadrius"
+    },
+    "82893": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Cheilodactylidae",
+      "genus": "Cheilodactylus"
+    },
+    "96657": {
+      "kingdom": "Metazoa",
+      "phylum": "Nematoda",
+      "family": "Rhabditidae",
+      "genus": "Choriorhabditis"
+    },
+    "2740755": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Gobiesocidae",
+      "genus": "Cochleoceps"
+    },
+    "411919": {
+      "fallback_common_name": "Yangtse grenadier anchovy",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Engraulidae",
+      "genus": "Coilia"
+    },
+    "42296": {
+      "fallback_common_name": "orange sulphur",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Pieridae",
+      "genus": "Colias"
+    },
+    "72851": {
+      "fallback_common_name": "clouded sulphur butterfly",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Pieridae",
+      "genus": "Colias"
+    },
+    "328532": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Gobionidae",
+      "genus": "Coreius"
+    },
+    "171525": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Gobionidae",
+      "genus": "Coreius"
+    },
+    "1182148": {
+      "fallback_common_name": "western king wrasse",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Labridae",
+      "genus": "Coris"
+    },
+    "304823": {
+      "kingdom": "Fungi",
+      "phylum": "Basidiomycota",
+      "family": "Cortinariaceae",
+      "genus": "Cortinarius"
+    },
+    "3711059": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Serranidae"
+    },
+    "136831": {
+      "kingdom": "Fungi",
+      "phylum": "Basidiomycota",
+      "family": "Coleosporiaceae",
+      "genus": "Cronartium"
+    },
+    "3042125": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Isotomidae",
+      "genus": "Cryptopygus"
+    },
+    "646043": {
+      "fallback_common_name": "oblique-lined dottyback",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Pseudochromidae",
+      "genus": "Cypho"
+    },
+    "1045269": {
+      "fallback_common_name": "Amur carp",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Cyprinidae",
+      "genus": "Cyprinus"
+    },
+    "77166": {
+      "fallback_common_name": "mountain pine beetle",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Curculionidae",
+      "genus": "Dendroctonus"
+    },
+    "56063": {
+      "fallback_common_name": "tubaroot",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Fabaceae",
+      "genus": "Derris"
+    },
+    "38941": {
+      "fallback_common_name": "white seabream",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Sparidae",
+      "genus": "Diplodus"
+    },
+    "1955775": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Ajellomycetaceae",
+      "genus": "Emergomyces"
+    },
+    "2060907": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Ajellomycetaceae",
+      "genus": "Emergomyces"
+    },
+    "2060908": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Ajellomycetaceae",
+      "genus": "Emergomyces"
+    },
+    "1955774": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Ajellomycetaceae",
+      "genus": "Emergomyces"
+    },
+    "160718": {
+      "fallback_common_name": "blacktip grouper",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Serranidae",
+      "genus": "Epinephelus"
+    },
+    "2561294": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Eriocraniidae",
+      "genus": "Eriocrania"
+    },
+    "3040455": {
+      "fallback_common_name": "island trevally",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Carangidae",
+      "genus": "Ferdauia"
+    },
+    "38873": {
+      "fallback_common_name": "European ash",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Oleaceae",
+      "genus": "Fraxinus"
+    },
+    "93906": {
+      "kingdom": "Metazoa",
+      "phylum": "Brachiopoda",
+      "family": "Laqueidae",
+      "genus": "Frenulina"
+    },
+    "109180": {
+      "kingdom": "Metazoa",
+      "phylum": "Echinodermata",
+      "family": "Ophidiasteridae",
+      "genus": "Fromia"
+    },
+    "5518": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Nectriaceae",
+      "genus": "Fusarium"
+    },
+    "654390": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Nectriaceae",
+      "genus": "Fusarium"
+    },
+    "36050": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Nectriaceae",
+      "genus": "Fusarium"
+    },
+    "8049": {
+      "fallback_common_name": "Atlantic cod",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Gadidae",
+      "genus": "Gadus"
+    },
+    "9031": {
+      "fallback_common_name": "chicken",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Phasianidae",
+      "genus": "Gallus"
+    },
+    "443782": {
+      "fallback_common_name": "Westralian jewfish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Glaucosomatidae",
+      "genus": "Glaucosoma"
+    },
+    "1764964": {
+      "phylum": "Bacillariophyta",
+      "family": "Gomphonemataceae",
+      "genus": "Gomphonema"
+    },
+    "2991509": {
+      "kingdom": "Metazoa",
+      "phylum": "Nematomorpha",
+      "family": "Gordiidae",
+      "genus": "Gordius"
+    },
+    "3635": {
+      "fallback_common_name": "cotton",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Malvaceae",
+      "genus": "Gossypium"
+    },
+    "1391528": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Tortricidae",
+      "genus": "Grapholita"
+    },
+    "377273": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Francoaceae",
+      "genus": "Greyia"
+    },
+    "23282": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Francoaceae",
+      "genus": "Greyia"
+    },
+    "1167264": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Francoaceae",
+      "genus": "Greyia"
+    },
+    "170411": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Chlorophyta",
+      "family": "Halimedaceae",
+      "genus": "Halimeda"
+    },
+    "2874060": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Penthaleidae",
+      "genus": "Halotydeus"
+    },
+    "2867824": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Ormyridae",
+      "genus": "Hemadas"
+    },
+    "1210419": {
+      "kingdom": "Metazoa",
+      "phylum": "Annelida",
+      "family": "Polynoidae",
+      "genus": "Hermenia"
+    },
+    "2566765": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Limnephilidae",
+      "genus": "Hesperophylax"
+    },
+    "10181": {
+      "fallback_common_name": "naked mole-rat",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Bathyergidae",
+      "genus": "Heterocephalus"
+    },
+    "103715": {
+      "fallback_common_name": "spotted seahorse",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Syngnathidae",
+      "genus": "Hippocampus"
+    },
+    "703264": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Coccinellidae",
+      "genus": "Hippodamia"
+    },
+    "30945": {
+      "fallback_common_name": "flathead sole",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Pleuronectidae",
+      "genus": "Hippoglossoides"
+    },
+    "193520": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Elaeagnaceae",
+      "genus": "Hippophae"
+    },
+    "9606": {
+      "fallback_common_name": "human",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Hominidae",
+      "genus": "Homo"
+    },
+    "182223": {
+      "fallback_common_name": "Japanese smelt",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Osmeridae",
+      "genus": "Hypomesus"
+    },
+    "359854": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Iberis"
+    },
+    "753191": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Incurvariidae",
+      "genus": "Incurvaria"
+    },
+    "295660": {
+      "fallback_common_name": "cigarette beetle",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Ptinidae",
+      "genus": "Lasioderma"
+    },
+    "5661": {
+      "phylum": "Euglenozoa",
+      "family": "Trypanosomatidae",
+      "genus": "Leishmania"
+    },
+    "120438": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Lepidopleuridae",
+      "genus": "Lepidopleurus"
+    },
+    "2853716": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Fabaceae",
+      "genus": "Lespedeza"
+    },
+    "722666": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Geometridae",
+      "genus": "Lomaspilis"
+    },
+    "69944": {
+      "fallback_common_name": "burbot",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lotidae",
+      "genus": "Lota"
+    },
+    "211834": {
+      "fallback_common_name": "mangrove red snapper",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lutjanidae",
+      "genus": "Lutjanus"
+    },
+    "2483678": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Colubridae",
+      "genus": "Lycodon"
+    },
+    "1384909": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Tenthredinidae",
+      "genus": "Macrophya"
+    },
+    "1003756": {
+      "fallback_common_name": "blue blanquillo",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Malacanthidae",
+      "genus": "Malacanthus"
+    },
+    "471061": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Nymphalidae",
+      "genus": "Mechanitis"
+    },
+    "537173": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Megacarpaea"
+    },
+    "1155344": {
+      "fallback_common_name": "tall yellow sweet-clover",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Fabaceae",
+      "genus": "Melilotus"
+    },
+    "8063": {
+      "fallback_common_name": "European hake",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Merlucciidae",
+      "genus": "Merluccius"
+    },
+    "39342": {
+      "kingdom": "Metazoa",
+      "phylum": "Echinodermata",
+      "family": "Temnopleuridae",
+      "genus": "Mespilia"
+    },
+    "5530": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Clavicipitaceae",
+      "genus": "Metarhizium"
+    },
+    "577170": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Nitidulidae",
+      "genus": "Omosita"
+    },
+    "72053": {
+      "fallback_common_name": "Lahontan cutthroat trout",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Salmonidae",
+      "genus": "Oncorhynchus"
+    },
+    "2790589": {
+      "kingdom": "Metazoa",
+      "phylum": "Echinodermata",
+      "family": "Synaptidae",
+      "genus": "Opheodesoma"
+    },
+    "627230": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Ostreidae",
+      "genus": "Ostrea"
+    },
+    "3112342": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Gelechiidae",
+      "genus": "Oxypteryx"
+    },
+    "71578": {
+      "fallback_common_name": "Chinese spiny lobster",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Palinuridae",
+      "genus": "Panulirus"
+    },
+    "75030": {
+      "fallback_common_name": "palette surgeonfish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Acanthuridae",
+      "genus": "Paracanthurus"
+    },
+    "2561588": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Tortricidae",
+      "genus": "Pelochrista"
+    },
+    "1511666": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Muscidae",
+      "genus": "Phaonia"
+    },
+    "2882607": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Muscidae",
+      "genus": "Phaonia"
+    },
+    "39090": {
+      "fallback_common_name": "spotted seal",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Phocidae",
+      "genus": "Phoca"
+    },
+    "9720": {
+      "fallback_common_name": "harbor seal",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Phocidae",
+      "genus": "Phoca"
+    },
+    "163115": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Phycidae",
+      "genus": "Phycis"
+    },
+    "221188": {
+      "fallback_common_name": "orange hawkweed",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Asteraceae",
+      "genus": "Pilosella"
+    },
+    "90988": {
+      "fallback_common_name": "fathead minnow",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Leuciscidae",
+      "genus": "Pimephales"
+    },
+    "40930": {
+      "fallback_common_name": "lilac mealybug",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Pseudococcidae",
+      "genus": "Planococcus"
+    },
+    "39414": {
+      "fallback_common_name": "narrow-leaved plantain",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Plantaginaceae",
+      "genus": "Plantago"
+    },
+    "134630": {
+      "fallback_common_name": "blacksaddled coralgrouper",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Serranidae",
+      "genus": "Plectropomus"
+    },
+    "160734": {
+      "fallback_common_name": "leopard coralgrouper",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Serranidae",
+      "genus": "Plectropomus"
+    },
+    "3706531": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Pleurobranchidae",
+      "genus": "Pleurobranchus"
+    },
+    "64176": {
+      "fallback_common_name": "Common wall lizard",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lacertidae",
+      "genus": "Podarcis"
+    },
+    "1534827": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Lacertidae",
+      "genus": "Podarcis"
+    },
+    "8060": {
+      "fallback_common_name": "saithe",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Gadidae",
+      "genus": "Pollachius"
+    },
+    "495877": {
+      "fallback_common_name": "longcomb sawfish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Pristidae",
+      "genus": "Pristis"
+    },
+    "181117": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Prunellidae",
+      "genus": "Prunella"
+    },
+    "230822": {
+      "kingdom": "Fungi",
+      "phylum": "Basidiomycota",
+      "family": "Psathyrellaceae",
+      "genus": "Psathyrella"
+    },
+    "3465981": {
+      "kingdom": "Metazoa",
+      "phylum": "Platyhelminthes",
+      "family": "Pseudocerotidae",
+      "genus": "Pseudoceros"
+    },
+    "98380": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Labridae",
+      "genus": "Pseudolabrus"
+    },
+    "2485022": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Moridae",
+      "genus": "Pseudophycis"
+    },
+    "9228": {
+      "fallback_common_name": "Rose-ringed parakeet",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Psittacidae",
+      "genus": "Psittacula"
+    },
+    "1578925": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Pyriculariaceae",
+      "genus": "Pyricularia"
+    },
+    "407999": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Fagaceae",
+      "genus": "Quercus"
+    },
+    "68468": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Regulidae",
+      "genus": "Regulus"
+    },
+    "196296": {
+      "fallback_common_name": "Little Japanese Horseshoe Bat",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Rhinolophidae",
+      "genus": "Rhinolophus"
+    },
+    "3251964": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Sepiidae",
+      "genus": "Rhombosepion"
+    },
+    "74653": {
+      "fallback_common_name": "Macartny rose",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Rosaceae",
+      "genus": "Rosa"
+    },
+    "74648": {
+      "fallback_common_name": "memorial rose",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Rosaceae",
+      "genus": "Rosa"
+    },
+    "1507361": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Sapygidae",
+      "genus": "Sapyga"
+    },
+    "876076": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Lycaenidae",
+      "genus": "Satyrium"
+    },
+    "263521": {
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Cyprinidae",
+      "genus": "Schizopygopsis"
+    },
+    "587071": {
+      "fallback_common_name": "hawkfish anthias",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Anthiadidae",
+      "genus": "Serranocirrhitus"
+    },
+    "203583": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Brassicaceae",
+      "genus": "Sisymbrium"
+    },
+    "4081": {
+      "fallback_common_name": "tomato",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Solanaceae",
+      "genus": "Solanum"
+    },
+    "1284347": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Rosaceae",
+      "genus": "Sorbus"
+    },
+    "8175": {
+      "fallback_common_name": "gilthead seabream",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Sparidae",
+      "genus": "Sparus"
+    },
+    "128199": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Sphagnaceae",
+      "genus": "Sphagnum"
+    },
+    "70868": {
+      "fallback_common_name": "great barracuda",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Sphyraenidae",
+      "genus": "Sphyraena"
+    },
+    "214434": {
+      "phylum": "Bacillariophyta",
+      "family": "Staurosiraceae",
+      "genus": "Staurosirella"
+    },
+    "161581": {
+      "fallback_common_name": "spotted pipefish",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Syngnathidae",
+      "genus": "Stigmatopora"
+    },
+    "68746": {
+      "fallback_common_name": "wine cap",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Fungi",
+      "phylum": "Basidiomycota",
+      "family": "Strophariaceae",
+      "genus": "Stropharia"
+    },
+    "109475": {
+      "fallback_common_name": "white-toothed pygmy shrew",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Soricidae",
+      "genus": "Suncus"
+    },
+    "3272347": {
+      "kingdom": "Metazoa",
+      "phylum": "Annelida",
+      "family": "Syllidae",
+      "genus": "Syllis"
+    },
+    "37727": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Trichocomaceae",
+      "genus": "Talaromyces"
+    },
+    "147273": {
+      "fallback_common_name": "Himalayan yew",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Taxaceae",
+      "genus": "Taxus"
+    },
+    "80348": {
+      "kingdom": "Metazoa",
+      "phylum": "Mollusca",
+      "family": "Tegulidae",
+      "genus": "Tegula"
+    },
+    "594117": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Tephritidae",
+      "genus": "Tephritis"
+    },
+    "8238": {
+      "fallback_common_name": "Pacific bluefin tuna",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Scombridae",
+      "genus": "Thunnus"
+    },
+    "27717": {
+      "fallback_common_name": "tench",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Tincidae",
+      "genus": "Tinca"
+    },
+    "177916": {
+      "kingdom": "Metazoa",
+      "phylum": "Arthropoda",
+      "family": "Psychomyiidae",
+      "genus": "Tinodes"
+    },
+    "51453": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Hypocreaceae",
+      "genus": "Trichoderma"
+    },
+    "523103": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "family": "Arthrodermataceae",
+      "genus": "Trichophyton"
+    },
+    "189963": {
+      "kingdom": "Fungi",
+      "phylum": "Basidiomycota",
+      "family": "Trichosporonaceae",
+      "genus": "Trichosporon"
+    },
+    "4565": {
+      "fallback_common_name": "bread wheat",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Poaceae",
+      "genus": "Triticum"
+    },
+    "58211": {
+      "fallback_common_name": "House wren",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Certhiidae",
+      "genus": "Troglodytes"
+    },
+    "146147": {
+      "fallback_common_name": "Canary drum",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Sciaenidae",
+      "genus": "Umbrina"
+    },
+    "195338": {
+      "fallback_common_name": "porcupine ray",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Dasyatidae",
+      "genus": "Urogymnus"
+    },
+    "160511": {
+      "fallback_common_name": "common speedwell",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Plantaginaceae",
+      "genus": "Veronica"
+    },
+    "3680444": {
+      "kingdom": "Fungi",
+      "phylum": "Ascomycota",
+      "genus": "Verweija"
+    },
+    "105273": {
+      "fallback_common_name": "Asian particolored bat",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Vespertilionidae",
+      "genus": "Vespertilio"
+    },
+    "3914": {
+      "fallback_common_name": "adzuki bean",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Fabaceae",
+      "genus": "Vigna"
+    },
+    "75044": {
+      "fallback_common_name": "moorish idol",
+      "fallback_common_name_source": "GenbankCommonName",
+      "kingdom": "Metazoa",
+      "phylum": "Chordata",
+      "family": "Zanclidae",
+      "genus": "Zanclus"
+    },
+    "4577": {
+      "fallback_common_name": "maize",
+      "fallback_common_name_source": "CommonName",
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Poaceae",
+      "genus": "Zea"
+    },
+    "1043351": {
+      "kingdom": "Viridiplantae",
+      "phylum": "Streptophyta",
+      "family": "Poaceae",
+      "genus": "Zoysia"
+    }
   }
 }
