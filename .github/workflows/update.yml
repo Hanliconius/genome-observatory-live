@@ -73,6 +73,26 @@ jobs:
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]') || hashFiles('data/genometrics.json') == ''
         run: python scripts/build_genometrics.py
 
+      - name: Diagnose NCBI chromosome-filter API
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[diag-sex-api]')
+        run: |
+          python - <<'PY'
+          import json, urllib.parse, urllib.request
+          base='https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCA_000001405.29/sequence_reports'
+          for query in [
+              [('chromosomes','X'),('chromosomes','Y')],
+              [('chromosomes','X,Y')],
+          ]:
+              url=base+'?'+urllib.parse.urlencode(query)
+              print('URL',url)
+              try:
+                  with urllib.request.urlopen(url,timeout=60) as r:
+                      body=r.read().decode()
+                      print('STATUS',r.status,'LEN',len(body),'BODY',body[:1800])
+              except Exception as e:
+                  print('ERROR',repr(e))
+          PY
+
       - name: Audit NCBI sequence-report request shape
         run: |
           python - <<'PY'
