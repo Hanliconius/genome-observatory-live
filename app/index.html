@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20260927i" />
+  <link rel="stylesheet" href="styles.css?v=20260928a" />
 </head>
 <body>
   <header class="site-head">
@@ -25,6 +25,7 @@
   <main>
     <nav class="section-tabs" aria-label="Dashboard section">
       <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
+      <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M20 12h-3M12 20v-3M4 12h3"/></svg><span>Genometrics</span></button>
       <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
       <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
       <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
@@ -140,6 +141,65 @@
           </div>
           <div id="recent-list" class="recent-table"></div>
         </article>
+      </section>
+    </section>
+
+    <section id="genometrics-view" hidden>
+      <article class="genometrics-intro">
+        <div>
+          <p class="panel-kicker">Collection-level metadata</p>
+          <h2>Genometrics</h2>
+          <p class="taxon-intro">Derived properties of the chromosome-scale and complete GenBank eukaryote collection. These metrics describe metadata associated with deposited assemblies; absence of a label or organelle association does not imply biological absence.</p>
+        </div>
+        <p class="note" id="genometrics-generated">Loading metadata snapshot…</p>
+      </article>
+
+      <div id="genometrics-loading" class="status-loading">Loading collection metrics…</div>
+
+      <section id="genometrics-content" hidden>
+        <section class="genometrics-grid">
+          <article class="panel genometric-card">
+            <div>
+              <p class="panel-kicker">Organelle association</p>
+              <h2 class="panel-title">Mitochondrial genome</h2>
+              <p class="genometric-intro">How many tracked nuclear genome deposits have an associated mitochondrial genome recorded by NCBI?</p>
+            </div>
+            <div class="genometric-donut-wrap">
+              <svg id="genometrics-mito-donut" class="donut genometric-donut" viewBox="0 0 240 240" role="img" aria-label="Mitochondrial genome association"></svg>
+            </div>
+            <p class="genometric-n" id="genometrics-mito-n">—</p>
+            <div id="genometrics-mito-legend" class="donut-legend genometric-legend"></div>
+            <p class="genometric-note">Association is taken from NCBI <code>organelleInfo</code>. “No associated” means no mitochondrial association is recorded in the assembly metadata, not that the organism lacks mitochondria.</p>
+          </article>
+
+          <article class="panel genometric-card">
+            <div>
+              <p class="panel-kicker">Plant organelles</p>
+              <h2 class="panel-title">Plastid genome</h2>
+              <p class="genometric-intro">Among tracked Viridiplantae deposits, how many have an associated plastid or chloroplast genome?</p>
+            </div>
+            <div class="genometric-donut-wrap">
+              <svg id="genometrics-plastid-donut" class="donut genometric-donut" viewBox="0 0 240 240" role="img" aria-label="Plastid genome association"></svg>
+            </div>
+            <p class="genometric-n" id="genometrics-plastid-n">—</p>
+            <div id="genometrics-plastid-legend" class="donut-legend genometric-legend"></div>
+            <p class="genometric-note">The denominator is Viridiplantae. Association is recorded when NCBI assembly metadata contains an associated chloroplast or plastid genome.</p>
+          </article>
+
+          <article class="panel genometric-card">
+            <div>
+              <p class="panel-kicker">Chromosome labelling</p>
+              <h2 class="panel-title">Sex chromosomes</h2>
+              <p class="genometric-intro">How often do deposited assemblies explicitly label sex chromosomes in the NCBI genome sequence report?</p>
+            </div>
+            <div class="genometric-donut-wrap">
+              <svg id="genometrics-sex-donut" class="donut genometric-donut" viewBox="0 0 240 240" role="img" aria-label="Sex chromosome labelling"></svg>
+            </div>
+            <p class="genometric-n" id="genometrics-sex-n">—</p>
+            <div id="genometrics-sex-legend" class="donut-legend genometric-legend"></div>
+            <p class="genometric-note">XY and ZW require both members of the pair to be explicitly labelled. “Other / partial” includes X-only, Y-only, Z-only, W-only and other explicit sex-chromosome labels. This measures assembly labelling, not an inferred biological sex-determination system.</p>
+          </article>
+        </section>
       </section>
     </section>
 
@@ -370,11 +430,11 @@
 
   <footer class="site-foot">
     <p>Assembly metadata: NCBI Datasets, restricted to GenBank eukaryote assemblies at chromosome or complete level. Annotation status: NCBI RefSeq.</p>
-    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. Country view: NCBI BioSample geographic location, aggregated to ISO countries. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
+    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. Country view: NCBI BioSample geographic location, aggregated to ISO countries. Genometrics: NCBI assembly <code>organelleInfo</code>, genome sequence chromosome labels, and NCBI Taxonomy. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20260927k"></script>
+  <script src="app.js?v=20260928a"></script>
 </body>
 </html>
