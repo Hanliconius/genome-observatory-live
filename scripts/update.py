@@ -56,14 +56,33 @@ def taxonomy(taxid):
     txt=S.get(url,params={'db':'taxonomy','id':taxid},timeout=30).text
     soup=BeautifulSoup(txt,'xml'); out={}
     current=soup.find('Taxon')
-    other=current.find('OtherNames') if current else None
-    if other:
-        for tag in ('GenbankCommonName','CommonName','BlastName'):
-            node=other.find(tag)
+    if current:
+        # Prefer a name attached to the focal taxon itself.
+        other=current.find('OtherNames',recursive=False)
+        if other:
+            for tag in ('GenbankCommonName','CommonName'):
+                node=other.find(tag)
+                if node and node.get_text(strip=True):
+                    out['fallback_common_name']=node.get_text(strip=True)
+                    out['fallback_common_name_source']=tag
+                    break
+        if not out.get('fallback_common_name'):
+            node=current.find('BlastName',recursive=False)
             if node and node.get_text(strip=True):
                 out['fallback_common_name']=node.get_text(strip=True)
-                out['fallback_common_name_source']=tag
-                break
+                out['fallback_common_name_source']='BlastName'
+        # NCBI also displays a broader group name when a species has no
+        # species-level common name. Reproduce that by taking the nearest
+        # ancestor with a BlastName (for example "beetles" or "snakes").
+        if not out.get('fallback_common_name'):
+            lineage=current.find('LineageEx',recursive=False)
+            ancestors=lineage.find_all('Taxon',recursive=False) if lineage else []
+            for ancestor in reversed(ancestors):
+                node=ancestor.find('BlastName',recursive=False)
+                if node and node.get_text(strip=True):
+                    out['fallback_common_name']=node.get_text(strip=True)
+                    out['fallback_common_name_source']='ancestor_BlastName'
+                    break
     for t in soup.select('LineageEx Taxon'):
         rank=(t.Rank.text if t.Rank else '').lower(); name=t.ScientificName.text if t.ScientificName else ''
         if rank in {'genus','family','phylum','kingdom','superkingdom'}: out[rank]=name
