@@ -24,7 +24,7 @@ No sequence data are stored. Full per-assembly metadata is retained only for the
 
 ## Automatic updates
 
-`.github/workflows/update.yml` refreshes the data every six hours and commits the changed JSON. A static host such as GitHub Pages, Cloudflare Pages, or Netlify can deploy every commit.
+`.github/workflows/update.yml` refreshes the data daily (24-hour cadence) and commits the changed JSON. A static host such as GitHub Pages, Cloudflare Pages, or Netlify can deploy every commit.
 
 ## Local preview
 
