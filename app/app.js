@@ -838,7 +838,8 @@ function renderTaxon(t){
     const ds=d.toISOString().slice(0,10);
     recent.push({date:ds,assemblies:sparse.get(ds)||0});
   }
-  drawLineChart('taxon-recent-chart',recent,'assemblies',recent.map(x=>x.date),'year');
+  const recentBusiness=businessDayRows(recent);
+  drawLineChart('taxon-recent-chart',recentBusiness,'assemblies',recentBusiness.map(x=>x.date),'year');
 }
 
 function niceMax(v){
