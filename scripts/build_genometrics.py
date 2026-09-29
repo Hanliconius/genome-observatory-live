@@ -466,6 +466,28 @@ def build_assembly_quality(records):
         if not xs:return None
         ys=sorted(xs); n=len(ys)
         return ys[n//2] if n%2 else (ys[n//2-1]+ys[n//2])/2
+    size_edges_mb=[1,3,10,30,100,300,1000,3000,10000,30000,100000]
+    size_counts=[0]*(len(size_edges_mb)+1)
+    for bp in lengths:
+        mb=bp/1_000_000
+        idx=next((i for i,e in enumerate(size_edges_mb) if mb<e),len(size_edges_mb))
+        size_counts[idx]+=1
+    size_hist=[]
+    lows=[0]+size_edges_mb
+    highs=size_edges_mb+[None]
+    for i,count in enumerate(size_counts):
+        lo=lows[i]; hi=highs[i]
+        label=(f"<{hi:g} Mb" if i==0 else f"{lo:g}–{hi:g} Mb" if hi is not None else f"≥{lo:g} Mb")
+        size_hist.append({"label":label,"count":count})
+
+    chrom_edges=[1,2,5,10,20,30,40,50,75,100]
+    chrom_counts=[0]*len(chrom_edges)
+    for n in chroms:
+        idx=next((i for i,e in enumerate(chrom_edges) if n<=e),len(chrom_edges)-1)
+        chrom_counts[idx]+=1
+    chrom_labels=["1","2–5","6–10","11–20","21–30","31–40","41–50","51–75","76–100",">100"]
+    chrom_hist=[{"label":label,"count":count} for label,count in zip(chrom_labels,chrom_counts)]
+
     return {
         "assemblies":len(records),
         "median_assembly_size_bp":median(lengths),
@@ -474,6 +496,8 @@ def build_assembly_quality(records):
         "assembly_size_available":len(lengths),
         "contig_n50_available":len(n50s),
         "chromosome_count_available":len(chroms),
+        "assembly_size_histogram":size_hist,
+        "chromosome_count_histogram":chrom_hist,
         "definition":"Current NCBI assembly statistics for the tracked chromosome-scale/complete GenBank collection."
     }
 
