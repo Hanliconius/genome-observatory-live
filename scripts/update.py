@@ -300,3 +300,4 @@ def main():
     out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
+
