@@ -64,23 +64,44 @@ def stream(cmd):
     code=p.wait()
     if code: raise RuntimeError(f"datasets failed {code}: {err[-4000:]}")
 
-def load_parents():
+def load_taxonomy():
     with tempfile.TemporaryDirectory(prefix="gol_tax_") as td:
         td=Path(td); arc=td/"taxdump.tar.gz"
         req=Request(TAXDUMP_URL,headers={"User-Agent":UA})
         with urlopen(req,timeout=120) as src, arc.open("wb") as dst:
             shutil.copyfileobj(src,dst)
         with tarfile.open(arc,"r:gz") as tf:
-            member=next(m for m in tf.getmembers() if Path(m.name).name=="nodes.dmp")
-            tf.extract(member,td)
-        node=next(td.rglob("nodes.dmp"))
-        parent={}
+            for basename in ("nodes.dmp","names.dmp"):
+                member=next(m for m in tf.getmembers() if Path(m.name).name==basename)
+                tf.extract(member,td)
+        node=next(td.rglob("nodes.dmp")); names_file=next(td.rglob("names.dmp"))
+        parent={}; rank={}; sci={}
         with node.open(errors="replace") as fh:
             for line in fh:
                 p=line.split("|")
-                if len(p)>=2:
-                    parent[int(p[0].strip())]=int(p[1].strip())
-        return parent
+                if len(p)>=3:
+                    tid=int(p[0].strip())
+                    parent[tid]=int(p[1].strip())
+                    rank[tid]=p[2].strip().casefold()
+        with names_file.open(errors="replace") as fh:
+            for line in fh:
+                p=line.split("|")
+                if len(p)>=4 and p[3].strip()=="scientific name":
+                    sci[int(p[0].strip())]=p[1].strip()
+        return parent,rank,sci
+
+def taxon_lineage_by_rank(tid,parent,rank,sci):
+    out={}
+    cur=tid; seen=set()
+    while cur and cur not in seen:
+        seen.add(cur)
+        r=rank.get(cur)
+        if r in {"genus","family","order","class"} and r not in out:
+            out[r]=sci.get(cur,"")
+        nxt=parent.get(cur)
+        if nxt is None or nxt==cur:break
+        cur=nxt
+    return out
 
 def is_desc(tid,ancestor,parent,cache):
     key=(tid,ancestor)
@@ -177,16 +198,22 @@ def load_tree_of_sex_expected():
     resp=requests.get(TOS_URL,headers={"User-Agent":UA},timeout=180)
     resp.raise_for_status()
     by_name=defaultdict(set)
+    row_taxonomy={}
     rows=0
     for row in csv.DictReader(io.StringIO(resp.text)):
         rows+=1
         norm={str(k or "").strip().casefold():v for k,v in row.items()}
         genus=norm.get("genus") or ""
-        species=norm.get("species") or ""
-        name=canonical_species_name(f"{genus} {species}")
+        species_epithet=norm.get("species") or ""
+        name=canonical_species_name(f"{genus} {species_epithet}")
         system=tos_system(norm.get("karyotype"))
         if name and system:
             by_name[name].add(system)
+            row_taxonomy[name]={
+                "genus":genus.strip(),
+                "family":str(norm.get("family") or "").strip(),
+                "order":str(norm.get("order") or "").strip(),
+            }
 
     ambiguous=sum(1 for states in by_name.values() if len(states)>1)
     species={
@@ -194,12 +221,32 @@ def load_tree_of_sex_expected():
         for name,states in by_name.items()
         if len(states)==1
     }
+
+    # Infer only from completely concordant Tree-of-Sex species at a named
+    # genus/family/order, with increasingly strict minimum evidence upward.
+    rank_min={"genus":3,"family":5,"order":10}
+    rank_states={r:defaultdict(list) for r in rank_min}
+    for name,system in species.items():
+        tx=row_taxonomy.get(name,{})
+        for r in rank_min:
+            value=str(tx.get(r) or "").strip()
+            if value:
+                rank_states[r][value.casefold()].append(system)
+    inferred={}
+    for r,min_n in rank_min.items():
+        inferred[r]={}
+        for taxon,states in rank_states[r].items():
+            if len(states)>=min_n and len(set(states))==1:
+                inferred[r][taxon]={"system":states[0],"support_species":len(states)}
+
     out={
         "source_date":TOS_SOURCE_DATE,
         "source_url":TOS_URL,
         "rows_read":rows,
         "ambiguous_species_excluded":ambiguous,
         "species":species,
+        "inferred":inferred,
+        "inference_rule":"Higher-rank expectations require complete concordance among Tree of Sex species: >=3 species/genus, >=5/family, >=10/order.",
     }
     write_json(TOS_CACHE,out)
     print(
@@ -236,21 +283,38 @@ def observed_matches_expected(system,tokens):
     return False
 
 
-def build_expected_vs_observed(records,effective_tokens):
+def build_expected_vs_observed(records,effective_tokens,parent,rank,sci):
     tos=load_tree_of_sex_expected()
     lookup=tos.get("species") or {}
     counts=defaultdict(Counter)
     matched_species=set()
     matched_assemblies=0
+    provenance=Counter()
 
     for rec in records:
         name=canonical_species_name(rec.get("organism_name"))
         system=lookup.get(name) if name else None
+        source="species documented" if system else None
+        if not system and rec.get("taxid"):
+            lineage=taxon_lineage_by_rank(rec["taxid"],parent,rank,sci)
+            for r in ("genus","family","order"):
+                taxon=str(lineage.get(r) or "").casefold()
+                hit=((tos.get("inferred") or {}).get(r) or {}).get(taxon)
+                if hit:
+                    system=hit["system"]
+                    source=f"{r} inferred"
+                    break
+            # Birds are unusually conserved for female heterogamety and Tree
+            # of Sex explicitly notes their uniform sex-determination system.
+            if not system and is_desc(rec["taxid"],8782,parent,{}):
+                system="ZW"
+                source="Aves inferred"
         group=expected_group(system)
         if not system or not group:
             continue
         matched_assemblies+=1
-        matched_species.add(name)
+        matched_species.add(name or str(rec.get("taxid")))
+        provenance[source]+=1
         toks=set(effective_tokens.get(rec["accession"]) or [])
         if observed_matches_expected(system,toks):
             status="Expected label(s) found"
@@ -286,8 +350,9 @@ def build_expected_vs_observed(records,effective_tokens):
         "tree_of_sex_species_with_unambiguous_karyotype":len(lookup),
         "ambiguous_tree_of_sex_species_excluded":tos.get("ambiguous_species_excluded",0),
         "source_snapshot":TOS_SOURCE_DATE,
+        "provenance":dict(provenance),
         "groups":groups,
-        "definition":"Assembly-level comparison for chromosome/complete GenBank genomes whose NCBI organism name matches a Tree of Sex species with an unambiguous explicit karyotype. Expected labels are derived from Tree of Sex karyotype; observed labels come from NCBI sequence reports.",
+        "definition":"Assembly-level comparison for chromosome/complete GenBank genomes. Expectations use an explicit Tree of Sex species karyotype first, then only fully concordant genus/family/order Tree-of-Sex evidence; Aves may inherit ZW because Tree of Sex explicitly describes birds as uniform in sex-determination system. Observed labels come from NCBI sequence reports.",
         "rules":{
             "XY / complex XY":"Expected when both X and Y labels are observed.",
             "XO":"Expected when an X label is observed.",
@@ -655,7 +720,7 @@ def build_sex_cache(accessions,cache):
 
 
 def main():
-    parent=load_parents(); lineage_cache={}
+    parent,rank,sci=load_taxonomy(); lineage_cache={}
     cmd=[
         "datasets","summary","genome","taxon","Eukaryota",
         "--assembly-source","GenBank","--assembly-level","chromosome,complete",
@@ -725,7 +790,7 @@ def main():
         sex_counts[cat]+=1
 
     try:
-        expected_vs_observed=build_expected_vs_observed(records,effective_tokens)
+        expected_vs_observed=build_expected_vs_observed(records,effective_tokens,parent,rank,sci)
     except Exception as exc:
         print(f"WARNING: Tree of Sex comparison unavailable: {exc}")
         expected_vs_observed=None
