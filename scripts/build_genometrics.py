@@ -189,15 +189,28 @@ def tos_system(value):
         return {"x0":"XO","z0":"ZO","w0":"WO"}.get(compact,compact.upper())
     return None
 
+def parse_int_values(value):
+    vals=[]
+    for x in re.findall(r"(?<![\\d.])\\d+(?![\\d.])",str(value or "")):
+        try:
+            n=int(x)
+            if 1<=n<=1000: vals.append(n)
+        except ValueError:
+            pass
+    return sorted(set(vals))
+
 def load_tree_of_sex_expected():
     cached=load_json(TOS_CACHE,{})
-    if cached.get("source_date")==TOS_SOURCE_DATE and cached.get("species") and cached.get("inferred"):
+    if cached.get("source_date")==TOS_SOURCE_DATE and cached.get("species") and cached.get("inferred") and cached.get("chromosome_numbers"):
         return cached
 
     print("Tree of Sex: downloading source snapshot for expected sex-chromosome systems")
     resp=requests.get(TOS_URL,headers={"User-Agent":UA},timeout=180)
     resp.raise_for_status()
     by_name=defaultdict(set)
+    chromosome_numbers=defaultdict(lambda: {"female":set(),"male":set()})
+    ploidy=defaultdict(set)
+    sexual_system=defaultdict(set)
     row_taxonomy={}
     rows=0
     for row in csv.DictReader(io.StringIO(resp.text)):
@@ -207,8 +220,17 @@ def load_tree_of_sex_expected():
         species_epithet=norm.get("species") or ""
         name=canonical_species_name(f"{genus} {species_epithet}")
         system=tos_system(norm.get("karyotype"))
-        if name and system:
-            by_name[name].add(system)
+        if name:
+            if system:
+                by_name[name].add(system)
+            for n in parse_int_values(norm.get("chromosome number (female) 2n")):
+                chromosome_numbers[name]["female"].add(n)
+            for n in parse_int_values(norm.get("chromosome number (male) 2n")):
+                chromosome_numbers[name]["male"].add(n)
+            pv=str(norm.get("predicted ploidy") or "").strip()
+            sv=str(norm.get("sexual system") or "").strip()
+            if pv: ploidy[name].add(pv)
+            if sv: sexual_system[name].add(sv)
             row_taxonomy[name]={
                 "genus":genus.strip(),
                 "family":str(norm.get("family") or "").strip(),
@@ -259,6 +281,20 @@ def load_tree_of_sex_expected():
         "rows_read":rows,
         "ambiguous_species_excluded":ambiguous,
         "species":species,
+        "chromosome_numbers":{
+            name:{
+                "female":sorted(v["female"]),
+                "male":sorted(v["male"]),
+            }
+            for name,v in chromosome_numbers.items()
+            if v["female"] or v["male"]
+        },
+        "ploidy":{
+            name:sorted(v) for name,v in ploidy.items() if len(v)==1
+        },
+        "sexual_system":{
+            name:sorted(v) for name,v in sexual_system.items() if len(v)==1
+        },
         "inferred":inferred,
         "inference_rule":"Higher-rank expectations require complete concordance among Tree of Sex species: >=3 species/genus, >=5/family, >=10/order.",
     }
@@ -375,6 +411,71 @@ def build_expected_vs_observed(records,effective_tokens,parent,rank,sci):
         },
     }
 
+
+def build_karyotype_audit(records):
+    tos=load_tree_of_sex_expected()
+    chrom=tos.get("chromosome_numbers") or {}
+    bins=Counter(); matched_species=set(); matched=0
+    ploidy_counts=Counter()
+    sexual_counts=Counter()
+    for rec in records:
+        name=canonical_species_name(rec.get("organism_name"))
+        if not name: continue
+        expected=chrom.get(name) or {}
+        vals=sorted(set((expected.get("female") or [])+(expected.get("male") or [])))
+        try: observed=int(rec.get("assembly_chromosomes"))
+        except (TypeError,ValueError): observed=None
+        if vals and observed:
+            # Tree of Sex gives diploid counts while a haploid assembly often
+            # represents one homolog per autosome. Compare to both 2N and N,
+            # and use whichever is closer; report as broad agreement only.
+            candidates=set(vals)
+            candidates.update(n/2 for n in vals if n%2==0)
+            rel=min(abs(observed-x)/x for x in candidates if x>0)
+            matched+=1; matched_species.add(name)
+            if rel<=0.05: bins["Within 5%"]+=1
+            elif rel<=0.20: bins["Within 20%"]+=1
+            else: bins[">20% different"]+=1
+        if name in (tos.get("ploidy") or {}):
+            ploidy_counts.update((tos["ploidy"][name][0],))
+        if name in (tos.get("sexual_system") or {}):
+            sexual_counts.update((tos["sexual_system"][name][0],))
+    return {
+        "matched_assemblies":matched,
+        "matched_species":len(matched_species),
+        "categories":[{"group":k,"count":bins[k]} for k in ("Within 5%","Within 20%",">20% different")],
+        "definition":"Observed NCBI total chromosome count compared with Tree of Sex female/male 2N values. Because assemblies can represent a haploid chromosome complement, agreement is assessed against both reported 2N and N where 2N is even; the closer expectation is used.",
+        "tree_of_sex_traits":{
+            "ploidy_species":len(tos.get("ploidy") or {}),
+            "sexual_system_species":len(tos.get("sexual_system") or {}),
+            "top_ploidy":[{"group":k,"count":v} for k,v in ploidy_counts.most_common(8)],
+            "top_sexual_system":[{"group":k,"count":v} for k,v in sexual_counts.most_common(8)],
+        }
+    }
+
+def build_assembly_quality(records):
+    lengths=[]; n50s=[]; chroms=[]
+    for rec in records:
+        try: lengths.append(int(rec.get("assembly_length")))
+        except (TypeError,ValueError): pass
+        try: n50s.append(int(rec.get("contig_n50")))
+        except (TypeError,ValueError): pass
+        try: chroms.append(int(rec.get("assembly_chromosomes")))
+        except (TypeError,ValueError): pass
+    def median(xs):
+        if not xs:return None
+        ys=sorted(xs); n=len(ys)
+        return ys[n//2] if n%2 else (ys[n//2-1]+ys[n//2])/2
+    return {
+        "assemblies":len(records),
+        "median_assembly_size_bp":median(lengths),
+        "median_contig_n50_bp":median(n50s),
+        "median_chromosomes_reported":median(chroms),
+        "assembly_size_available":len(lengths),
+        "contig_n50_available":len(n50s),
+        "chromosome_count_available":len(chroms),
+        "definition":"Current NCBI assembly statistics for the tracked chromosome-scale/complete GenBank collection."
+    }
 
 def sequence_report_page(batch,page_token=None):
     body={
@@ -773,7 +874,13 @@ def main():
             "organism.scientific_name","organism.scientificName",
             default=""
         ) or "")
-        records.append({"accession":acc,"taxid":taxid,"organism_name":organism_name})
+        records.append({
+            "accession":acc,"taxid":taxid,"organism_name":organism_name,
+            "assembly_chromosomes":first(r,"assembly_stats.total_number_of_chromosomes","assemblyStats.totalNumberOfChromosomes"),
+            "assembly_length":first(r,"assembly_stats.total_sequence_length","assemblyStats.totalSequenceLength"),
+            "contig_n50":first(r,"assembly_stats.contig_n50","assemblyStats.contigN50"),
+            "scaffold_n50":first(r,"assembly_stats.scaffold_n50","assemblyStats.scaffoldN50"),
+        })
 
     accessions=[x["accession"] for x in records]
     sex_cache=load_json(CACHE,{})
@@ -808,6 +915,9 @@ def main():
     except Exception as exc:
         print(f"WARNING: Tree of Sex comparison unavailable: {exc}")
         expected_vs_observed=None
+
+    karyotype_audit=build_karyotype_audit(records)
+    assembly_quality=build_assembly_quality(records)
 
     total=len(records)
     categories=[
@@ -850,6 +960,8 @@ def main():
             }
         },
         "sex_chromosome_expected_vs_observed":expected_vs_observed,
+        "karyotype_audit":karyotype_audit,
+        "assembly_quality":assembly_quality,
         "source":{
             "assembly_report":"NCBI Datasets genome assembly report (organelleInfo)",
             "sequence_report":"NCBI Datasets genome sequence report (chrName; assembled-molecule/chromosome records)",
