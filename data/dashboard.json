@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-28T18:10:43.825957+00:00",
+  "generated_at": "2026-09-29T14:30:00.467753+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 54,
-      "species": 35,
+      "assemblies": 40,
+      "species": 29,
       "first_time_species": 0
     },
     "year": {
-      "assemblies": 6334,
-      "species": 3946,
-      "first_time_species": 3266
+      "assemblies": 6331,
+      "species": 3943,
+      "first_time_species": 3264
     },
     "all": {
       "assemblies": 18785,
@@ -19,12 +19,6 @@
     }
   },
   "daily": [
-    {
-      "date": "2004-11-03",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-04",
       "assemblies": 0,
@@ -48018,6 +48012,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-09-29",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -48162,16 +48162,16 @@
   ],
   "groups_week": [
     {
-      "group": "Animals",
-      "count": 25
-    },
-    {
       "group": "Fungi",
       "count": 18
     },
     {
+      "group": "Animals",
+      "count": 17
+    },
+    {
       "group": "Plants",
-      "count": 9
+      "count": 3
     },
     {
       "group": "Other",
@@ -48181,7 +48181,7 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4093
+      "count": 4090
     },
     {
       "group": "Plants",
@@ -120588,17 +120588,6 @@
       "assembly_name": "ASM5281464v1",
       "total_sequence_length": 479302531,
       "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_052783135.1",
-      "organism_name": "Pareuchiloglanis anteanalis",
-      "common_name": null,
-      "tax_id": 221673,
-      "release_date": "2025-09-23",
-      "assembly_level": "Chromosome",
-      "assembly_name": "HZAU_Ekis_v1",
-      "total_sequence_length": 895268121,
-      "chromosome_count": 27
     }
   ],
   "annotations": {
