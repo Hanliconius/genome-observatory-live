@@ -160,7 +160,7 @@ def classify_tokens(tokens):
 
 
 def canonical_species_name(value):
-    s=re.sub(r"\\s+"," ",str(value or "").replace("_"," ").strip())
+    s=re.sub(r"\s+"," ",str(value or "").replace("_"," ").strip())
     if not s:
         return None
     low=f" {s.casefold()} "
@@ -177,7 +177,7 @@ def canonical_species_name(value):
 
 
 def tos_system(value):
-    s=re.sub(r"\\s+"," ",str(value or "").strip()).casefold()
+    s=re.sub(r"\s+"," ",str(value or "").strip()).casefold()
     compact=re.sub(r"[^a-z0-9]","",s)
     if not compact:
         return None
@@ -191,7 +191,7 @@ def tos_system(value):
 
 def parse_int_values(value):
     vals=[]
-    for x in re.findall(r"(?<![\\d.])\\d+(?![\\d.])",str(value or "")):
+    for x in re.findall(r"(?<![\d.])\d+(?![\d.])",str(value or "")):
         try:
             n=int(x)
             if 1<=n<=1000: vals.append(n)
