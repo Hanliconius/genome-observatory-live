@@ -207,6 +207,10 @@
             <h2 class="panel-title">Genome size & contiguity</h2>
             <p class="genometrics-summary">Collection-wide assembly size and contiguity from NCBI assembly statistics. This describes deposited assemblies; an independent biological genome-size reference can be layered on when sufficiently broad data are available.</p>
             <div id="genometrics-quality-stats" class="genometrics-stat-grid"></div>
+            <div class="genometrics-histograms">
+              <div><h3>Genome size</h3><svg id="genometrics-size-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of assembly genome sizes"></svg></div>
+              <div><h3>Chromosome number</h3><svg id="genometrics-chrom-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of reported chromosome counts"></svg></div>
+            </div>
             <p class="genometrics-denominator" id="genometrics-quality-denominator"></p>
           </article>
 
