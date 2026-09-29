@@ -620,7 +620,7 @@ function updateCountryFacetText(){
   const sequencing=countryFacet==='sequencing';
   const alltime=countryMapIsAllTime();
   el('country-facet-description').textContent=sequencing
-    ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day business-day pace. Assemblies can count in more than one country when resolved SRA centers span countries.'
+    ? 'Institute country reflects the SRA sequencing center recorded for the reads underlying each assembly. It does not use sample origin, project leadership or the assembly submitter. Center names are resolved conservatively through ROR; records whose sequencing center cannot be resolved are excluded. Colour shows the trailing 30-day business-day pace. Assemblies can count in more than one country when recorded sequencing centers span countries.'
     : alltime
       ? 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the total number of chromosome/complete genome deposits assigned to each country across the full record.'
       : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.';
@@ -648,9 +648,8 @@ function updateCountryCoverageText(){
     const totalCenters=Number(c.distinct_sra_centers||0);
     el('country-map-status').textContent=
       fmt(resolved)+' of '+fmt(total)+' assemblies linked to an institute country ('+
-      fmt1(pct)+'%). '+fmt(viaSra)+' use resolved SRA sequencing centers; '+
-      fmt(viaSubmitter)+' use the assembly-submitter fallback. '+
-      fmt(centers)+' of '+fmt(totalCenters)+' distinct SRA center names resolve via ROR or curated aliases.'+
+      fmt1(pct)+'%). '+fmt(viaSra)+' use resolved SRA sequencing centers. '+
+      fmt(centers)+' of '+fmt(totalCenters)+' distinct SRA center names resolve to a country; unresolved centers are excluded.'+
       (Number(c.assemblies_with_multiple_center_countries||0)
         ? ' '+fmt(c.assemblies_with_multiple_center_countries)+' assemblies link to centers in multiple countries.'
         : '');
