@@ -480,10 +480,10 @@ def build_assembly_quality(records):
         label=(f"<{hi:g} Mb" if i==0 else f"{lo:g}–{hi:g} Mb" if hi is not None else f"≥{lo:g} Mb")
         size_hist.append({"label":label,"count":count})
 
-    chrom_edges=[1,2,5,10,20,30,40,50,75,100]
-    chrom_counts=[0]*len(chrom_edges)
+    chrom_edges=[1,5,10,20,30,40,50,75,100]
+    chrom_counts=[0]*(len(chrom_edges)+1)
     for n in chroms:
-        idx=next((i for i,e in enumerate(chrom_edges) if n<=e),len(chrom_edges)-1)
+        idx=next((i for i,e in enumerate(chrom_edges) if n<=e),len(chrom_edges))
         chrom_counts[idx]+=1
     chrom_labels=["1","2–5","6–10","11–20","21–30","31–40","41–50","51–75","76–100",">100"]
     chrom_hist=[{"label":label,"count":count} for label,count in zip(chrom_labels,chrom_counts)]
