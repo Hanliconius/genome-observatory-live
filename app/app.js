@@ -445,6 +445,32 @@ function renderGenometrics(){
     fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
 
   renderSexExpectedObserved(d.sex_chromosome_expected_vs_observed||null);
+
+  const kar=d.karyotype_audit||{};
+  const karRows=(kar.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
+  const karTotal=karRows.reduce((sum,x)=>sum+x.count,0);
+  drawGenometricDonut(
+    'genometrics-karyotype-donut','genometrics-karyotype-legend',karRows,
+    fmt(kar.matched_species||0),'species','Karyotype agreement'
+  );
+  el('genometrics-karyotype-denominator').textContent=
+    fmt(kar.matched_assemblies||0)+' assemblies from '+fmt(kar.matched_species||0)+' species had both an NCBI chromosome count and Tree of Sex karyotype count.';
+
+  const q=d.assembly_quality||{};
+  const mb=v=>v==null?'—':fmt1(Number(v)/1e6)+' Mb';
+  el('genometrics-quality-stats').innerHTML=
+    `<div><strong>${mb(q.median_assembly_size_bp)}</strong><span>median assembly size</span></div>
+     <div><strong>${mb(q.median_contig_n50_bp)}</strong><span>median contig N50</span></div>
+     <div><strong>${q.median_chromosomes_reported==null?'—':fmt1(q.median_chromosomes_reported)}</strong><span>median chromosomes reported</span></div>`;
+  el('genometrics-quality-denominator').textContent=
+    fmt(q.assemblies||0)+' chromosome-scale or complete GenBank eukaryote assemblies in the current collection.';
+
+  const traits=kar.tree_of_sex_traits||{};
+  const traitRows=(title,rows)=>`<div class="trait-block"><strong>${esc(title)}</strong>${(rows||[]).slice(0,5).map(x=>`<span><b>${esc(x.group)}</b> ${fmt(x.count)}</span>`).join('')}</div>`;
+  el('genometrics-traits').innerHTML=
+    traitRows('Ploidy',(traits.top_ploidy||[]))+traitRows('Sexual system',(traits.top_sexual_system||[]));
+  el('genometrics-traits-denominator').textContent=
+    'Reference coverage among tracked species: '+fmt(traits.ploidy_species||0)+' with ploidy and '+fmt(traits.sexual_system_species||0)+' with sexual-system records in the Tree of Sex snapshot.';
 }
 
 async function loadIucn(){
