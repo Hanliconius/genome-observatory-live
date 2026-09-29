@@ -191,7 +191,7 @@ def tos_system(value):
 
 def load_tree_of_sex_expected():
     cached=load_json(TOS_CACHE,{})
-    if cached.get("source_date")==TOS_SOURCE_DATE and cached.get("species"):
+    if cached.get("source_date")==TOS_SOURCE_DATE and cached.get("species") and cached.get("inferred"):
         return cached
 
     print("Tree of Sex: downloading source snapshot for expected sex-chromosome systems")
@@ -232,12 +232,26 @@ def load_tree_of_sex_expected():
             value=str(tx.get(r) or "").strip()
             if value:
                 rank_states[r][value.casefold()].append(system)
+    def inference_system(states):
+        groups={expected_group(x) for x in states}
+        groups.discard(None)
+        if len(groups)!=1:
+            return None
+        group=next(iter(groups))
+        return {
+            "XY / complex XY":"XY",
+            "ZW / complex ZW":"ZW",
+            "XO":"XO",
+            "ZO / WO":None,
+        }.get(group)
+
     inferred={}
     for r,min_n in rank_min.items():
         inferred[r]={}
         for taxon,states in rank_states[r].items():
-            if len(states)>=min_n and len(set(states))==1:
-                inferred[r][taxon]={"system":states[0],"support_species":len(states)}
+            consensus=inference_system(states)
+            if len(states)>=min_n and consensus:
+                inferred[r][taxon]={"system":consensus,"support_species":len(states)}
 
     out={
         "source_date":TOS_SOURCE_DATE,
