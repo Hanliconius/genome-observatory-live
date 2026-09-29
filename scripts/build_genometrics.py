@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import csv
+import io
 import json
 import re
 import requests
@@ -22,6 +24,9 @@ from urllib.request import Request, urlopen
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"genometrics.json"
 CACHE=ROOT/"cache"/"sex_chromosome_labels.json"
+TOS_CACHE=ROOT/"cache"/"tree_of_sex_expected_20221009.json"
+TOS_URL="https://raw.githubusercontent.com/sachi1n/haplodiploidy-eusociality/main/Data%20files/Trait%20data%20files/tree_of_sex_data_20221009.csv"
+TOS_SOURCE_DATE="2022-10-09"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 # Genometrics bootstrap version: 3
@@ -131,6 +136,174 @@ def classify_tokens(tokens):
     if t:
         return "Other / partial label"
     return "No sex-chromosome label"
+
+
+def canonical_species_name(value):
+    s=re.sub(r"\\s+"," ",str(value or "").replace("_"," ").strip())
+    if not s:
+        return None
+    low=f" {s.casefold()} "
+    if any(x in low for x in (" hybrid "," x "," sp. "," cf. "," aff. ")):
+        return None
+    parts=s.split()
+    if len(parts)<2:
+        return None
+    genus=re.sub(r"[^A-Za-z-]","",parts[0])
+    species=re.sub(r"[^A-Za-z0-9.-]","",parts[1])
+    if not genus or not species:
+        return None
+    return f"{genus.casefold()} {species.casefold()}"
+
+
+def tos_system(value):
+    s=re.sub(r"\\s+"," ",str(value or "").strip()).casefold()
+    compact=re.sub(r"[^a-z0-9]","",s)
+    if not compact:
+        return None
+    if "complexy" in compact or "complexx y" in s:
+        return None
+    if "complexy" in compact:
+        return None
+    if "complexy" in compact:
+        return None
+    if "complexy" in compact:
+        return None
+    if "complexxy" in compact:
+        return "complex XY"
+    if "complexzw" in compact:
+        return "complex ZW"
+    if compact in {"xy","xo","x0","zw","zo","z0","wo","w0"}:
+        return {"x0":"XO","z0":"ZO","w0":"WO"}.get(compact,compact.upper())
+    return None
+
+
+def load_tree_of_sex_expected():
+    cached=load_json(TOS_CACHE,{})
+    if cached.get("source_date")==TOS_SOURCE_DATE and cached.get("species"):
+        return cached
+
+    print("Tree of Sex: downloading source snapshot for expected sex-chromosome systems")
+    resp=requests.get(TOS_URL,headers={"User-Agent":UA},timeout=180)
+    resp.raise_for_status()
+    by_name=defaultdict(set)
+    rows=0
+    for row in csv.DictReader(io.StringIO(resp.text)):
+        rows+=1
+        norm={str(k or "").strip().casefold():v for k,v in row.items()}
+        genus=norm.get("genus") or ""
+        species=norm.get("species") or ""
+        name=canonical_species_name(f"{genus} {species}")
+        system=tos_system(norm.get("karyotype"))
+        if name and system:
+            by_name[name].add(system)
+
+    ambiguous=sum(1 for states in by_name.values() if len(states)>1)
+    species={
+        name:next(iter(states))
+        for name,states in by_name.items()
+        if len(states)==1
+    }
+    out={
+        "source_date":TOS_SOURCE_DATE,
+        "source_url":TOS_URL,
+        "rows_read":rows,
+        "ambiguous_species_excluded":ambiguous,
+        "species":species,
+    }
+    write_json(TOS_CACHE,out)
+    print(
+        f"Tree of Sex: cached {len(species)} unambiguous species "
+        f"({ambiguous} conflicting species excluded)"
+    )
+    return out
+
+
+def expected_group(system):
+    if system in {"XY","complex XY"}:
+        return "XY / complex XY"
+    if system=="XO":
+        return "XO"
+    if system in {"ZW","complex ZW"}:
+        return "ZW / complex ZW"
+    if system in {"ZO","WO"}:
+        return "ZO / WO"
+    return None
+
+
+def observed_matches_expected(system,tokens):
+    t=set(tokens)
+    if system in {"XY","complex XY"}:
+        return {"X","Y"}<=t
+    if system=="XO":
+        return "X" in t
+    if system in {"ZW","complex ZW"}:
+        return {"Z","W"}<=t
+    if system=="ZO":
+        return "Z" in t
+    if system=="WO":
+        return "W" in t
+    return False
+
+
+def build_expected_vs_observed(records,effective_tokens):
+    tos=load_tree_of_sex_expected()
+    lookup=tos.get("species") or {}
+    counts=defaultdict(Counter)
+    matched_species=set()
+    matched_assemblies=0
+
+    for rec in records:
+        name=canonical_species_name(rec.get("organism_name"))
+        system=lookup.get(name) if name else None
+        group=expected_group(system)
+        if not system or not group:
+            continue
+        matched_assemblies+=1
+        matched_species.add(name)
+        toks=set(effective_tokens.get(rec["accession"]) or [])
+        if observed_matches_expected(system,toks):
+            status="Expected label(s) found"
+        elif toks:
+            status="Partial / different label"
+        else:
+            status="No sex-chromosome label"
+        counts[group][status]+=1
+
+    order=["XY / complex XY","XO","ZW / complex ZW","ZO / WO"]
+    statuses=[
+        "Expected label(s) found",
+        "Partial / different label",
+        "No sex-chromosome label",
+    ]
+    groups=[]
+    for group in order:
+        total=sum(counts[group].values())
+        if not total:
+            continue
+        groups.append({
+            "expected":group,
+            "assemblies":total,
+            "observed":[
+                {"group":status,"count":counts[group].get(status,0)}
+                for status in statuses
+            ],
+        })
+
+    return {
+        "matched_assemblies":matched_assemblies,
+        "matched_species":len(matched_species),
+        "tree_of_sex_species_with_unambiguous_karyotype":len(lookup),
+        "ambiguous_tree_of_sex_species_excluded":tos.get("ambiguous_species_excluded",0),
+        "source_snapshot":TOS_SOURCE_DATE,
+        "groups":groups,
+        "definition":"Assembly-level comparison for chromosome/complete GenBank genomes whose NCBI organism name matches a Tree of Sex species with an unambiguous explicit karyotype. Expected labels are derived from Tree of Sex karyotype; observed labels come from NCBI sequence reports.",
+        "rules":{
+            "XY / complex XY":"Expected when both X and Y labels are observed.",
+            "XO":"Expected when an X label is observed.",
+            "ZW / complex ZW":"Expected when both Z and W labels are observed.",
+            "ZO / WO":"Expected when the corresponding Z or W label is observed.",
+        },
+    }
 
 
 def sequence_report_page(batch,page_token=None):
@@ -525,7 +698,12 @@ def main():
             plants+=1
             if has_plastid:plastid+=1
 
-        records.append({"accession":acc,"taxid":taxid})
+        organism_name=str(first(
+            r,"organism.organism_name","organism.organismName",
+            "organism.scientific_name","organism.scientificName",
+            default=""
+        ) or "")
+        records.append({"accession":acc,"taxid":taxid,"organism_name":organism_name})
 
     accessions=[x["accession"] for x in records]
     sex_cache=load_json(CACHE,{})
@@ -536,6 +714,7 @@ def main():
     label_counts=Counter()
     taxid_by_accession={x["accession"]:x["taxid"] for x in records}
     fungal_x_only=0
+    effective_tokens={}
     for a in accessions:
         rec=sex_cache.get(a) or {}
         toks=set(rec.get("tokens") or [])
@@ -544,13 +723,21 @@ def main():
         # than a sex chromosome. Exclude X-only fungal records unless another
         # explicit sex-style token is present.
         if toks=={"X"} and taxid and is_desc(taxid,FUNGI,parent,lineage_cache):
+            toks=set()
             cat="No sex-chromosome label"
             fungal_x_only+=1
         else:
-            cat=rec.get("category") or "No sex-chromosome label"
+            cat=classify_tokens(toks)
             token_counts.update(toks)
             label_counts.update(rec.get("candidate_labels") or [])
+        effective_tokens[a]=sorted(toks)
         sex_counts[cat]+=1
+
+    try:
+        expected_vs_observed=build_expected_vs_observed(records,effective_tokens)
+    except Exception as exc:
+        print(f"WARNING: Tree of Sex comparison unavailable: {exc}")
+        expected_vs_observed=None
 
     total=len(records)
     categories=[
@@ -592,10 +779,12 @@ def main():
                 "excluded_fungal_x_only":fungal_x_only
             }
         },
+        "sex_chromosome_expected_vs_observed":expected_vs_observed,
         "source":{
             "assembly_report":"NCBI Datasets genome assembly report (organelleInfo)",
             "sequence_report":"NCBI Datasets genome sequence report (chrName; assembled-molecule/chromosome records)",
-            "taxonomy":"NCBI Taxonomy; Viridiplantae taxid 33090"
+            "taxonomy":"NCBI Taxonomy; Viridiplantae taxid 33090",
+            "tree_of_sex":"Tree of Sex karyotype snapshot dated 2022-10-09; original database described by The Tree of Sex Consortium (2014), Scientific Data 1:140015."
         }
     }
     OUT.parent.mkdir(parents=True,exist_ok=True)
@@ -604,6 +793,12 @@ def main():
     print(f"mitochondrial association: {mito}/{total} ({payload['mitochondrial_association']['percentage']:.1f}%)")
     print(f"plastid association: {plastid}/{plants} Viridiplantae ({payload['plastid_association']['percentage']:.1f}%)")
     print("sex chromosome labels:",dict(sex_counts))
+    if expected_vs_observed:
+        print(
+            "Tree of Sex matched:",
+            expected_vs_observed["matched_assemblies"],"assemblies from",
+            expected_vs_observed["matched_species"],"species"
+        )
     print("sex tokens:",dict(token_counts))
     print("top sex candidate labels:",label_counts.most_common(30))
 
