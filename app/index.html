@@ -192,6 +192,33 @@
           </article>
 
           <article class="panel genometrics-card">
+            <p class="panel-kicker">Karyotype audit</p>
+            <h2 class="panel-title">Chromosome count vs expected</h2>
+            <p class="genometrics-summary">For species with Tree of Sex chromosome counts, compare the number of chromosomes represented by the NCBI assembly with the reported biological karyotype.</p>
+            <div class="genometrics-donut-row">
+              <div class="donut-wrap"><svg id="genometrics-karyotype-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Assembly chromosome count agreement with expected karyotype"></svg></div>
+              <div id="genometrics-karyotype-legend" class="donut-legend"></div>
+            </div>
+            <p class="genometrics-denominator" id="genometrics-karyotype-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Assembly architecture</p>
+            <h2 class="panel-title">Genome size & contiguity</h2>
+            <p class="genometrics-summary">Collection-wide assembly size and contiguity from NCBI assembly statistics. This describes deposited assemblies; an independent biological genome-size reference can be layered on when sufficiently broad data are available.</p>
+            <div id="genometrics-quality-stats" class="genometrics-stat-grid"></div>
+            <p class="genometrics-denominator" id="genometrics-quality-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Biological context</p>
+            <h2 class="panel-title">Ploidy & sexual systems</h2>
+            <p class="genometrics-summary">Reference traits represented among tracked species with Tree of Sex records. These describe organism biology rather than assembly quality.</p>
+            <div id="genometrics-traits" class="trait-summary"></div>
+            <p class="genometrics-denominator" id="genometrics-traits-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
             <p class="panel-kicker">Observed vs expected</p>
             <h2 class="panel-title">Expected sex-chromosome annotation</h2>
             <p class="genometrics-summary">For genome deposits from species with an explicit Tree of Sex karyotype, compare the expected sex-chromosome system with the labels actually present in NCBI sequence reports.</p>
@@ -210,7 +237,8 @@
           </div>
           <div class="genometrics-method-grid">
             <p><strong>Mitochondrial / plastid:</strong> an organelle is counted only when NCBI's assembly metadata explicitly associates that organelle genome with the nuclear assembly.</p>
-            <p><strong>Sex chromosomes:</strong> expected systems come from explicit Tree of Sex karyotypes. XY/complex XY expects X + Y labels, XO expects X, ZW/complex ZW expects Z + W, and ZO/WO expects the corresponding Z or W label.</p>
+            <p><strong>Sex chromosomes:</strong> expectations use species records first, then conservative concordant clade evidence. The source level is retained in the generated data.</p>
+            <p><strong>Karyotype:</strong> NCBI's reported assembly chromosome count is compared with Tree of Sex female/male 2N. Because many assemblies represent a haploid complement, both 2N and N are considered and the closer expectation is used.</p>
             <p><strong>No observed label</strong> means no explicit sex-chromosome-style chromosome name was found in the NCBI sequence report. It is missing annotation, not evidence that the organism lacks the expected sex chromosomes.</p>
           </div>
         </article>
