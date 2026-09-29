@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T16:31:23.439381+00:00",
+  "generated_at": "2026-09-29T21:21:58.469660+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -50753,7 +50753,12 @@
       "family": "Anthiadidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Serranocirrhitus_latus.jpg/960px-Serranocirrhitus_latus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Serranocirrhitus_latus.jpg",
+        "credit": "Dieter Karner from Loosdorf, Austria · CC BY 2.0",
+        "matched_name": "Serranocirrhitus"
+      }
     },
     {
       "accession": "GCA_988281195.1",
