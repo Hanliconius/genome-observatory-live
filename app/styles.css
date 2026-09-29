@@ -447,6 +447,72 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   font-size:.78rem;
   line-height:1.45;
 }
+.sex-compare{
+  display:grid;
+  gap:18px;
+  margin:10px 0 4px;
+}
+.sex-compare-row{
+  display:grid;
+  gap:7px;
+}
+.sex-compare-rowhead{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:baseline;
+  font-size:.78rem;
+}
+.sex-compare-rowhead strong{
+  color:var(--ink);
+  font-weight:620;
+}
+.sex-compare-rowhead span{
+  color:var(--muted);
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+.sex-compare-track{
+  height:28px;
+  width:100%;
+  display:flex;
+  overflow:hidden;
+  border:1px solid var(--line-dark);
+  background:#eef1ef;
+}
+.sex-compare-seg{
+  display:block;
+  min-width:1px;
+  height:100%;
+}
+.sex-compare-legend{
+  display:grid;
+  gap:7px;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:.74rem;
+}
+.sex-compare-legend span{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.sex-compare-legend i{
+  width:10px;
+  height:10px;
+  flex:0 0 10px;
+}
+.genometrics-source-note{
+  margin:9px 0 0;
+  color:var(--muted);
+  font-size:.72rem;
+  line-height:1.4;
+}
+.genometrics-source-note a{
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid rgba(46,110,166,.3);
+}
 .genometrics-method{
   min-height:0;
   border:1px solid var(--line-dark);
