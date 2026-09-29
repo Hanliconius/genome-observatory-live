@@ -21,7 +21,9 @@ const GENOMETRIC_COLORS={
   'ZW labelled':'#8b75b3',
   'Other / partial label':'#d59a38',
   'No X/Y/Z/W label':'#d8dfdb',
-  'No sex-chromosome label':'#d8dfdb'
+  'No sex-chromosome label':'#d8dfdb',
+  'Expected label(s) found':'#2e6ea6',
+  'Partial / different label':'#d59a38'
 };
 const RANGE={week:{label:'Past week',rate:'Deposits per business day'},year:{label:'Past year',rate:'Deposits per business day'},all:{label:'All time',rate:'Deposits per year'}};
 
@@ -364,6 +366,53 @@ function drawGenometricDonut(svgId,legendId,rows,centerMain,centerSub,periodLabe
   attachDonutHover(svg);
 }
 
+function renderSexExpectedObserved(comp,legacySex){
+  const holder=el('genometrics-sex-comparison');
+  const fallback=el('genometrics-sex-legacy');
+  const groups=(comp?.groups||[]).filter(x=>Number(x.assemblies||0)>0);
+  if(!groups.length){
+    holder.hidden=true;
+    fallback.hidden=false;
+    const sexRows=(legacySex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
+    const sexTotal=Number(legacySex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
+    const noLabel=sexRows.find(x=>x.group==='No sex-chromosome label')?.count
+      ?? sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count
+      ?? 0;
+    const anyPct=sexTotal?100*(sexTotal-noLabel)/sexTotal:0;
+    drawGenometricDonut(
+      'genometrics-sex-donut','genometrics-sex-legend',sexRows,
+      fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
+    );
+    el('genometrics-sex-denominator').textContent=
+      fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
+    return;
+  }
+
+  fallback.hidden=true;
+  holder.hidden=false;
+  const statuses=['Expected label(s) found','Partial / different label','No sex-chromosome label'];
+  holder.innerHTML=groups.map(row=>{
+    const total=Number(row.assemblies||0);
+    const by=Object.fromEntries((row.observed||[]).map(x=>[x.group,Number(x.count||0)]));
+    const segs=statuses.map(status=>{
+      const n=by[status]||0,pct=total?100*n/total:0;
+      return n?`<span class="sex-compare-seg" style="width:${pct}%;background:${GENOMETRIC_COLORS[status]||COLORS.Other}" title="${esc(status)}: ${fmt(n)} (${fmt1(pct)}%)"></span>`:'';
+    }).join('');
+    const expected=by['Expected label(s) found']||0;
+    const expectedPct=total?100*expected/total:0;
+    return `<div class="sex-compare-row">
+      <div class="sex-compare-rowhead"><strong>${esc(row.expected)}</strong><span>${fmt(total)} assemblies · ${fmt1(expectedPct)}% expected labels found</span></div>
+      <div class="sex-compare-track" aria-label="${esc(row.expected)}: ${fmt1(expectedPct)} percent carry expected labels">${segs}</div>
+    </div>`;
+  }).join('')+
+  `<div class="sex-compare-legend">${statuses.map(status=>`<span><i style="background:${GENOMETRIC_COLORS[status]||COLORS.Other}"></i>${esc(status)}</span>`).join('')}</div>`;
+
+  el('genometrics-sex-denominator').textContent=
+    fmt(comp.matched_assemblies)+' tracked genome deposits from '+fmt(comp.matched_species)+
+    ' species matched an unambiguous Tree of Sex karyotype (snapshot '+esc(comp.source_snapshot||'')+').';
+}
+
+
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
   const d=GENOMETRICS_DATA;
@@ -396,18 +445,7 @@ function renderGenometrics(){
   el('genometrics-plastid-denominator').textContent=
     fmt(plastid.associated)+' of '+fmt(plastid.denominator)+' Viridiplantae genome deposits have an associated plastid/chloroplast genome.';
 
-  const sexRows=(sex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
-  const sexTotal=Number(sex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
-  const noLabel=sexRows.find(x=>x.group==='No sex-chromosome label')?.count
-    ?? sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count
-    ?? 0;
-  const anyPct=sexTotal?100*(sexTotal-noLabel)/sexTotal:0;
-  drawGenometricDonut(
-    'genometrics-sex-donut','genometrics-sex-legend',sexRows,
-    fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
-  );
-  el('genometrics-sex-denominator').textContent=
-    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
+  renderSexExpectedObserved(d.sex_chromosome_expected_vs_observed||null,sex);
 }
 
 async function loadIucn(){
