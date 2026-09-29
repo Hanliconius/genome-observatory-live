@@ -160,22 +160,13 @@ def tos_system(value):
     compact=re.sub(r"[^a-z0-9]","",s)
     if not compact:
         return None
-    if "complexy" in compact or "complexx y" in s:
-        return None
-    if "complexy" in compact:
-        return None
-    if "complexy" in compact:
-        return None
-    if "complexy" in compact:
-        return None
-    if "complexxy" in compact:
+    if compact=="complexxy":
         return "complex XY"
-    if "complexzw" in compact:
+    if compact=="complexzw":
         return "complex ZW"
     if compact in {"xy","xo","x0","zw","zo","z0","wo","w0"}:
         return {"x0":"XO","z0":"ZO","w0":"WO"}.get(compact,compact.upper())
     return None
-
 
 def load_tree_of_sex_expected():
     cached=load_json(TOS_CACHE,{})
