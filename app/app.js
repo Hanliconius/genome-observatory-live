@@ -399,6 +399,32 @@ function renderSexExpectedObserved(comp){
     ' species matched an unambiguous Tree of Sex karyotype (snapshot '+esc(comp.source_snapshot||'')+').';
 }
 
+function drawGenometricHistogram(svgId,rows,periodLabel){
+  const svg=el(svgId);
+  rows=rows||[];
+  if(!svg||!rows.length){if(svg)svg.innerHTML='';return;}
+  const w=520,h=210,L=8,R=8,T=12,B=48,iw=w-L-R,ih=h-T-B;
+  const max=Math.max(1,...rows.map(x=>Number(x.count||0)));
+  const gap=Math.max(2,Math.min(6,iw/rows.length*.16));
+  const bw=(iw-gap*(rows.length-1))/rows.length;
+  let html='';
+  rows.forEach((r,i)=>{
+    const v=Number(r.count||0),bh=ih*v/max,x=L+i*(bw+gap),y=T+ih-bh;
+    html+=`<rect class="genometrics-hist-bar" data-label="${esc(r.label)}" data-count="${v}" data-period="${esc(periodLabel)}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${bw.toFixed(2)}" height="${Math.max(1,bh).toFixed(2)}" rx="2"></rect>`;
+    html+=`<text class="genometrics-hist-tick" x="${(x+bw/2).toFixed(2)}" y="${h-12}" text-anchor="end" transform="rotate(-38 ${(x+bw/2).toFixed(2)} ${h-12})">${esc(r.label)}</text>`;
+  });
+  svg.innerHTML=html;
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.genometrics-hist-bar').forEach(bar=>{
+    const show=ev=>{
+      tip.innerHTML=`<strong>${esc(bar.dataset.label)}</strong><span>${fmt(Number(bar.dataset.count||0))} assemblies</span><span>${esc(bar.dataset.period)}</span>`;
+      tip.hidden=false;bar.classList.add('is-hovered');positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
+    bar.onpointerenter=show;bar.onpointermove=show;bar.onpointerleave=hide;
+  });
+}
+
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
   const d=GENOMETRICS_DATA;
@@ -462,8 +488,10 @@ function renderGenometrics(){
     `<div><strong>${mb(q.median_assembly_size_bp)}</strong><span>median assembly size</span></div>
      <div><strong>${mb(q.median_contig_n50_bp)}</strong><span>median contig N50</span></div>
      <div><strong>${q.median_chromosomes_reported==null?'—':fmt1(q.median_chromosomes_reported)}</strong><span>median chromosomes reported</span></div>`;
+  drawGenometricHistogram('genometrics-size-hist',q.assembly_size_histogram||[],'Genome size');
+  drawGenometricHistogram('genometrics-chrom-hist',q.chromosome_count_histogram||[],'Reported chromosome count');
   el('genometrics-quality-denominator').textContent=
-    fmt(q.assemblies||0)+' chromosome-scale or complete GenBank eukaryote assemblies in the current collection.';
+    fmt(q.assembly_size_available||0)+' assemblies contribute genome size; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
 
   const traits=kar.tree_of_sex_traits||{};
   const traitRows=(title,rows)=>`<div class="trait-block"><strong>${esc(title)}</strong>${(rows||[]).slice(0,5).map(x=>`<span><b>${esc(x.group)}</b> ${fmt(x.count)}</span>`).join('')}</div>`;
