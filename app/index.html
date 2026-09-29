@@ -181,15 +181,22 @@
           </article>
 
           <article class="panel genometrics-card">
-            <p class="panel-kicker">Observed vs expected</p>
-            <h2 class="panel-title">Sex-chromosome annotation</h2>
-            <p class="genometrics-summary">For genome deposits from species with an explicit Tree of Sex karyotype, compare the expected sex-chromosome system with the labels actually present in NCBI sequence reports.</p>
-            <div id="genometrics-sex-comparison" class="sex-compare" hidden></div>
-            <div id="genometrics-sex-legacy" class="genometrics-donut-row" hidden>
+            <p class="panel-kicker">Chromosome labelling</p>
+            <h2 class="panel-title">Sex-chromosome labels</h2>
+            <p class="genometrics-summary">Explicit X/Y/Z/W-style labels or explicitly identified other sex-chromosome names in NCBI sequence reports, across all tracked genome deposits.</p>
+            <div class="genometrics-donut-row">
               <div class="donut-wrap"><svg id="genometrics-sex-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Sex chromosome labels in assemblies"></svg></div>
               <div id="genometrics-sex-legend" class="donut-legend"></div>
             </div>
             <p class="genometrics-denominator" id="genometrics-sex-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card">
+            <p class="panel-kicker">Observed vs expected</p>
+            <h2 class="panel-title">Expected sex-chromosome annotation</h2>
+            <p class="genometrics-summary">For genome deposits from species with an explicit Tree of Sex karyotype, compare the expected sex-chromosome system with the labels actually present in NCBI sequence reports.</p>
+            <div id="genometrics-sex-comparison" class="sex-compare" hidden></div>
+            <p class="genometrics-denominator" id="genometrics-sex-comparison-denominator"></p>
             <p class="genometrics-source-note">Expected system: <a href="https://www.treeofsex.org/database" target="_blank" rel="noopener">Tree of Sex</a> · observed labels: NCBI sequence reports.</p>
           </article>
         </div>
