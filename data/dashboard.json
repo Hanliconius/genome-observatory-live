@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T14:30:00.467753+00:00",
+  "generated_at": "2026-09-29T16:31:23.439381+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -49008,7 +49008,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Sorbus_sitchensis.jpg/960px-Sorbus_sitchensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sorbus_sitchensis.jpg",
+        "credit": "CC BY-SA 3.0",
+        "matched_name": "Sorbus sitchensis"
+      }
     },
     {
       "accession": "GCA_988288955.1",
@@ -49024,7 +49029,12 @@
       "family": "Brassicaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Barbarea_vulgaris_R._Br.%2C_%28Brassicaceae%29-2F.jpg/960px-Barbarea_vulgaris_R._Br.%2C_%28Brassicaceae%29-2F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Barbarea_vulgaris_R._Br.,_(Brassicaceae)-2F.jpg",
+        "credit": "Guy Waterval · Apache License 2.0",
+        "matched_name": "Brassicaceae"
+      }
     },
     {
       "accession": "GCA_061603475.1",
@@ -49589,7 +49599,12 @@
       "family": "Solanaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2018-06-01_%28137%29_Solanum_lycopersicum_%28tomato%29_at_Bichlh%C3%A4usl_in_Frankenfels%2C_Austria.jpg/960px-2018-06-01_%28137%29_Solanum_lycopersicum_%28tomato%29_at_Bichlh%C3%A4usl_in_Frankenfels%2C_Austria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:2018-06-01_(137)_Solanum_lycopersicum_(tomato)_at_Bichlh%C3%A4usl_in_Frankenfels,_Austria.jpg",
+        "credit": "GT1976 · CC BY-SA 4.0",
+        "matched_name": "Solanum lycopersicum"
+      }
     },
     {
       "accession": "GCA_988284935.1",
@@ -50717,7 +50732,12 @@
       "family": "Anthiadidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Serranocirrhitus_latus.jpg/960px-Serranocirrhitus_latus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Serranocirrhitus_latus.jpg",
+        "credit": "Dieter Karner from Loosdorf, Austria · CC BY 2.0",
+        "matched_name": "Serranocirrhitus"
+      }
     },
     {
       "accession": "GCA_988281205.1",
@@ -52228,7 +52248,12 @@
       "family": "Sparidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Chopa_%28Spondyliosoma_cantharus%29%2C_Cabo_de_Palos%2C_Espa%C3%B1a%2C_2022-07-14%2C_DD_14.jpg/960px-Chopa_%28Spondyliosoma_cantharus%29%2C_Cabo_de_Palos%2C_Espa%C3%B1a%2C_2022-07-14%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chopa_(Spondyliosoma_cantharus),_Cabo_de_Palos,_Espa%C3%B1a,_2022-07-14,_DD_14.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Sparus"
+      }
     },
     {
       "accession": "GCA_061287405.1",
@@ -120593,40 +120618,124 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Erythranthe guttata",
-        "status": "In sequence databases",
-        "freeze_date": "2026-09-17",
-        "assembly": "IM_541 (GCF_056151865.1)"
+        "species": "Pinus tabuliformis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1"
       },
       {
-        "species": "Rhinolophus sinicus",
+        "species": "Salvia hispanica",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-24",
+        "assembly": "Shi_PSC_v1"
+      },
+      {
+        "species": "Pogonomyrmex barbatus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "ASM5579846v1"
+      },
+      {
+        "species": "Actinia tenebrosa",
         "status": "In sequence databases",
-        "freeze_date": "2026-09-15",
-        "assembly": "RSI-T2T (GCF_057876585.1)"
+        "freeze_date": "2026-09-24",
+        "assembly": "QUT_ActTen_1.0 (GCF_029948245.1)"
+      },
+      {
+        "species": "Prunus mume",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-24",
+        "assembly": "ASM2933915v1 (GCF_029339155.1)"
+      },
+      {
+        "species": "Artemia sp. Qi Xiang Cuo",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "ASM4972408v1"
+      },
+      {
+        "species": "Urtica dioica subsp. dioica",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "U.dioica_male_clone48M_v1_H2"
+      },
+      {
+        "species": "Actinidia eriantha",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-17",
+        "assembly": "HAP1 (GCF_982292455.1)"
+      },
+      {
+        "species": "Pimephales promelas",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "fPimPro1.hap1.1"
+      },
+      {
+        "species": "Hippocampus bargibanti",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-25",
+        "assembly": "ASM5194339v1 (GCF_051943395.1)"
+      },
+      {
+        "species": "Nelumbo lutea",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-24",
+        "assembly": "American lotus-T2T (GCF_056320005.1)"
+      },
+      {
+        "species": "Atractosteus spatula",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-24",
+        "assembly": "fAtrSpa1.hap1 (GCF_055471065.1)"
+      },
+      {
+        "species": "Amborella trichopoda",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-10",
+        "assembly": "AtrichopodaSantaCruz75HAP2 v2.0 (GCF_054954075.1)"
+      },
+      {
+        "species": "Nelumbo nucifera",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-22",
+        "assembly": "China Antique-T2T (GCF_055504915.1)"
+      },
+      {
+        "species": "Theobroma cacao",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-18",
+        "assembly": "ASM5381388v1 (GCF_053813885.1)"
+      },
+      {
+        "species": "Phoenix dactylifera",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-17",
+        "assembly": "Male_Medina_1_primary_PhDact_Kaust_v1.1 (GCF_054393675.1)"
       },
       {
         "species": "Moschus berezovskii",
-        "status": "In sequence databases",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-15",
         "assembly": "NW_MosBer_1.0 (GCF_049115385.1)"
       },
       {
-        "species": "Stylophora pistillata",
+        "species": "Erythranthe guttata",
         "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-16",
-        "assembly": "jaStyPist1.2 (GCF_964205215.1)"
+        "freeze_date": "2026-09-17",
+        "assembly": "IM_541 (GCF_056151865.1)"
       },
       {
-        "species": "Amborella trichopoda",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-10",
-        "assembly": "AtrichopodaSantaCruz75HAP2 v2.0"
+        "species": "Pyrus communis",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-17",
+        "assembly": "ASM4128382v1 (GCF_041283825.1)"
       },
       {
         "species": "Sesamum indicum",
-        "status": "Automated processing in progress",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-21",
-        "assembly": "ASM2616843v1"
+        "assembly": "ASM2616843v1 (GCF_026168435.1)"
       },
       {
         "species": "Danio rerio",
@@ -120639,63 +120748,34 @@
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-08-31",
         "assembly": "GRCz13ab (GCF_052040795.2)"
-      },
-      {
-        "species": "Pinus tabuliformis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1"
-      },
-      {
-        "species": "Nelumbo nucifera",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-22",
-        "assembly": "China Antique-T2T"
-      },
-      {
-        "species": "Theobroma cacao",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-18",
-        "assembly": "ASM5381388v1 (GCF_053813885.1)"
-      },
-      {
-        "species": "Pyrus communis",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "ASM4128382v1 (GCF_041283825.1)"
-      },
-      {
-        "species": "Phoenix dactylifera",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "Male_Medina_1_primary_PhDact_Kaust_v1.1 (GCF_054393675.1)"
-      },
-      {
-        "species": "Actinidia eriantha",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "HAP1 (GCF_982292455.1)"
-      },
-      {
-        "species": "Xenopus tropicalis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-22",
-        "assembly": "UCB_Xtro_10.0 (GCF_000004195.4)"
-      },
-      {
-        "species": "Lepisosteus platostomus",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "fLepPlt1.hap1 (GCF_059453375.1)"
-      },
-      {
-        "species": "Zootoca vivipara",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-18",
-        "assembly": "rZooViv2.hap1.1 (GCF_965207765.1)"
       }
     ],
     "recent_completed": [
+      {
+        "species": "Xenopus tropicalis",
+        "release_date": "2026-09-24",
+        "assembly": "UCB_Xtro_10.0 (GCF_000004195.4)"
+      },
+      {
+        "species": "Rhinolophus sinicus",
+        "release_date": "2026-09-23",
+        "assembly": "RSI-T2T (GCF_057876585.1)"
+      },
+      {
+        "species": "Stylophora pistillata",
+        "release_date": "2026-09-22",
+        "assembly": "jaStyPist1.2 (GCF_964205215.1)"
+      },
+      {
+        "species": "Zootoca vivipara",
+        "release_date": "2026-09-21",
+        "assembly": "rZooViv2.hap1.1 (GCF_965207765.1)"
+      },
+      {
+        "species": "Lepisosteus platostomus",
+        "release_date": "2026-09-19",
+        "assembly": "fLepPlt1.hap1 (GCF_059453375.1)"
+      },
       {
         "species": "Tinamus guttatus",
         "release_date": "2026-09-18",
@@ -120925,41 +121005,6 @@
         "species": "Azolla caroliniana",
         "release_date": "2026-08-19",
         "assembly": "voAzoCaro1.0.p (GCF_043228905.1)"
-      },
-      {
-        "species": "Danio rerio",
-        "release_date": "2026-08-17",
-        "assembly": "GRCz12tu (GCF_049306965.2)"
-      },
-      {
-        "species": "Danio rerio",
-        "release_date": "2026-08-17",
-        "assembly": "GRCz12ab (GCF_052040795.1)"
-      },
-      {
-        "species": "Heterocephalus glaber",
-        "release_date": "2026-08-17",
-        "assembly": "H.glaber_assembly_v1.0 (GCF_053883595.1)"
-      },
-      {
-        "species": "Aethalodelphis obliquidens",
-        "release_date": "2026-08-16",
-        "assembly": "ASM367639v1 (GCF_003676395.1)"
-      },
-      {
-        "species": "Seriola lalandi dorsalis",
-        "release_date": "2026-08-14",
-        "assembly": "Sedor1 (GCF_002814215.2)"
-      },
-      {
-        "species": "Parasteatoda tepidariorum",
-        "release_date": "2026-08-13",
-        "assembly": "Ptep-v5.0 (GCF_982258835.1)"
-      },
-      {
-        "species": "Acanthaster planci",
-        "release_date": "2026-08-13",
-        "assembly": "COTS_SCS (GCF_054643075.1)"
       }
     ]
   },
@@ -132116,11 +132161,36 @@
       "matched_name": "Satyrium spini"
     },
     "Schizopygopsis younghusbandi": null,
-    "Serranocirrhitus latus": null,
-    "Sisymbrium orientale": null,
-    "Solanum lycopersicum": null,
-    "Sorbus sitchensis": null,
-    "Sparus aurata": null,
+    "Serranocirrhitus latus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Serranocirrhitus_latus.jpg/960px-Serranocirrhitus_latus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Serranocirrhitus_latus.jpg",
+      "credit": "Dieter Karner from Loosdorf, Austria · CC BY 2.0",
+      "matched_name": "Serranocirrhitus"
+    },
+    "Sisymbrium orientale": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Barbarea_vulgaris_R._Br.%2C_%28Brassicaceae%29-2F.jpg/960px-Barbarea_vulgaris_R._Br.%2C_%28Brassicaceae%29-2F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Barbarea_vulgaris_R._Br.,_(Brassicaceae)-2F.jpg",
+      "credit": "Guy Waterval · Apache License 2.0",
+      "matched_name": "Brassicaceae"
+    },
+    "Solanum lycopersicum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2018-06-01_%28137%29_Solanum_lycopersicum_%28tomato%29_at_Bichlh%C3%A4usl_in_Frankenfels%2C_Austria.jpg/960px-2018-06-01_%28137%29_Solanum_lycopersicum_%28tomato%29_at_Bichlh%C3%A4usl_in_Frankenfels%2C_Austria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:2018-06-01_(137)_Solanum_lycopersicum_(tomato)_at_Bichlh%C3%A4usl_in_Frankenfels,_Austria.jpg",
+      "credit": "GT1976 · CC BY-SA 4.0",
+      "matched_name": "Solanum lycopersicum"
+    },
+    "Sorbus sitchensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Sorbus_sitchensis.jpg/960px-Sorbus_sitchensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sorbus_sitchensis.jpg",
+      "credit": "CC BY-SA 3.0",
+      "matched_name": "Sorbus sitchensis"
+    },
+    "Sparus aurata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Chopa_%28Spondyliosoma_cantharus%29%2C_Cabo_de_Palos%2C_Espa%C3%B1a%2C_2022-07-14%2C_DD_14.jpg/960px-Chopa_%28Spondyliosoma_cantharus%29%2C_Cabo_de_Palos%2C_Espa%C3%B1a%2C_2022-07-14%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chopa_(Spondyliosoma_cantharus),_Cabo_de_Palos,_Espa%C3%B1a,_2022-07-14,_DD_14.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Sparus"
+    },
     "Sphagnum fimbriatum": null,
     "Sphyraena barracuda": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Banco_de_gran_barracudas_%28Sphyraena_barracuda%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-27%2C_DD_115.jpg/960px-Banco_de_gran_barracudas_%28Sphyraena_barracuda%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-27%2C_DD_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
