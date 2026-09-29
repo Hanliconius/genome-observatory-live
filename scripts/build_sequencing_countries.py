@@ -1203,7 +1203,6 @@ def main():
         f"{cov['assemblies_scanned']} assemblies resolved to an institute country "
         f"({cov['fraction_resolved']:.1%}); "
         f"{cov['assemblies_resolved_by_sra_center']} via SRA center; "
-        f"{cov['assemblies_resolved_by_submitter_fallback']} via submitter fallback; "
         f"{cov['assemblies_with_multiple_center_countries']} multi-country assemblies"
     )
 
