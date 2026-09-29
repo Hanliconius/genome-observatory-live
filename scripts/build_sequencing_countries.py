@@ -31,6 +31,7 @@ UA = "EukaryoteGenomeWatch/0.7 (public research dashboard; contact via repositor
 RATE_WINDOW_DAYS = 30
 SRA_BATCH_SIZE = 250
 SUBMITTER_MIN_COUNT = 2
+CENTER_RESOLVER_VERSION = 2
 
 # Exact, human-reviewed SRA CenterName aliases. These are used before ROR,
 # both to recover common acronyms and to override a small number of known
@@ -391,29 +392,55 @@ def country_from_ror_org(org):
     }
 
 
+def normalize_org_name(value):
+    return re.sub(r"[^A-Z0-9]+", " ", str(value or "").upper()).strip()
+
+
+def ror_org_names(org):
+    return [x.get("value") for x in (org.get("names", []) or []) if x.get("value")]
+
+
 def resolve_center(center):
     r = S.get(ROR_URL, params={"affiliation": center}, timeout=60)
     r.raise_for_status()
-    data = r.json()
-    chosen = next((x for x in data.get("items", []) if x.get("chosen") is True), None)
-    if not chosen:
-        return {"status": "unmatched"}
-    org = chosen.get("organization") or {}
-    country = country_from_ror_org(org)
-    if not country:
-        return {
-            "status": "ambiguous_location",
-            "ror_id": org.get("id"),
-        }
-    return {
-        "status": "matched",
-        **country,
-        "matching_type": chosen.get("matching_type"),
-    }
+    chosen = next((x for x in r.json().get("items", []) if x.get("chosen") is True), None)
+    if chosen:
+        org = chosen.get("organization") or {}
+        country = country_from_ror_org(org)
+        if country:
+            return {"status":"matched", **country, "ror_id":org.get("id"),
+                    "ror_name":next(iter(ror_org_names(org)),None),
+                    "matching_type":chosen.get("matching_type"),
+                    "resolver_version":CENTER_RESOLVER_VERSION}
+
+    # Conservative generic fallback for free-text SRA center names: ROR search,
+    # accepting only an exact normalized registered name or alias.
+    r = S.get(ROR_URL, params={"query": center}, timeout=60)
+    r.raise_for_status()
+    target = normalize_org_name(center)
+    exact = []
+    for item in r.json().get("items", []) or []:
+        org = item.get("organization") or item
+        if target and target in {normalize_org_name(x) for x in ror_org_names(org)}:
+            country = country_from_ror_org(org)
+            if country:
+                exact.append((org,country))
+    countries = {country["iso3"] for _,country in exact}
+    if len(exact) == 1 or (exact and len(countries) == 1):
+        org,country = exact[0]
+        return {"status":"matched", **country, "ror_id":org.get("id"),
+                "ror_name":next(iter(ror_org_names(org)),None),
+                "matching_type":"EXACT ROR NAME/ALIAS",
+                "resolver_version":CENTER_RESOLVER_VERSION}
+    return {"status":"unmatched" if not exact else "ambiguous_location",
+            "resolver_version":CENTER_RESOLVER_VERSION}
 
 
 def backfill_ror_cache(centers, cache):
-    missing = sorted(x for x in centers if x and x not in cache)
+    missing = sorted(
+        x for x in centers
+        if x and (x not in cache or (cache.get(x) or {}).get("resolver_version") != CENTER_RESOLVER_VERSION)
+    )
     if not missing:
         return cache
 
@@ -557,10 +584,9 @@ def backfill_submitter_cache(records, cache, center_cache):
     return cache
 
 
-def resolve_record_assignments(record, sra_cache, ror_cache, submitter_cache):
+def resolve_record_assignments(record, sra_cache, ror_cache, submitter_cache=None):
     bs = record.get("biosample")
     centers = sorted(set(sra_cache.get(bs, []) or [])) if bs else []
-
     by_country = {}
     unresolved_centers = []
     for center in centers:
@@ -568,50 +594,16 @@ def resolve_record_assignments(record, sra_cache, ror_cache, submitter_cache):
         if not info:
             unresolved_centers.append(center)
             continue
-        iso3 = info["iso3"]
-        item = by_country.setdefault(iso3, {
-            "country": info,
-            "labels": set(),
-            "provenance": set(),
-        })
+        item = by_country.setdefault(info["iso3"], {"country":info,"labels":set(),"provenance":set()})
         item["labels"].add(center)
-        item["provenance"].add(info.get("provenance", "sra_center_ror"))
-
-    # Any usable SRA sequencing-center country takes precedence. We do not add
-    # the submitter country on top, because submitter and physical sequencing
-    # center can legitimately differ.
+        item["provenance"].add(info.get("provenance","sra_center_ror"))
     if by_country:
-        return [
-            {
-                "country": item["country"],
-                "labels": sorted(item["labels"]),
-                "provenance": sorted(item["provenance"]),
-            }
-            for item in by_country.values()
-        ], {
-            "mode": "sra_center",
-            "centers": centers,
-            "unresolved_centers": unresolved_centers,
-        }
-
-    submitter = record.get("submitter") or ""
-    submitter_info = resolved_submitter_country(submitter, submitter_cache)
-    if submitter_info:
-        return [{
-            "country": submitter_info,
-            "labels": [submitter],
-            "provenance": [submitter_info.get("provenance", "submitter_ror")],
-        }], {
-            "mode": "submitter_fallback",
-            "centers": centers,
-            "unresolved_centers": unresolved_centers,
-        }
-
-    return [], {
-        "mode": "unresolved",
-        "centers": centers,
-        "unresolved_centers": unresolved_centers,
-    }
+        return [{"country":x["country"],"labels":sorted(x["labels"]),"provenance":sorted(x["provenance"])}
+                for x in by_country.values()], {
+                    "mode":"sra_center","centers":centers,"unresolved_centers":unresolved_centers}
+    # No submitter fallback: this view is strictly about the center recorded
+    # for the underlying SRA reads.
+    return [], {"mode":"unresolved","centers":centers,"unresolved_centers":unresolved_centers}
 
 
 def aggregate(records, sra_cache, ror_cache, submitter_cache):
@@ -738,19 +730,18 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
         "rate_window_days": RATE_WINDOW_DAYS,
         "source": {
             "primary_linkage": "NCBI genome assembly BioSample -> SRA RunInfo CenterName",
-            "fallback_field": "NCBI assembly submitter",
+            "fallback_field": None,
             "organization_resolution": (
                 "Human-reviewed aliases for selected unambiguous names; otherwise "
-                "ROR v2 affiliation matcher chosen:true results"
+                "ROR v2 affiliation matching followed by conservative exact name/alias search"
             ),
             "precedence": (
-                "Any resolved SRA sequencing-center country takes precedence. "
-                "Assembly submitter is used only when no usable SRA center country exists."
+                "Only resolved SRA sequencing-center countries are counted. "
+                "Assembly submitter, project leadership and sample origin are not used."
             ),
             "interpretation": (
-                "This is an institute-associated provenance view. SRA CenterName is the "
-                "strongest evidence for the physical sequencing center; assembly submitter "
-                "is a fallback and can represent the genome-producing/submitting institute."
+                "Country reflects the SRA CenterName associated with the underlying reads. "
+                "Records without a resolvable sequencing center are excluded."
             ),
         },
         "coverage": {
@@ -1199,7 +1190,7 @@ def main():
     ror_cache = backfill_ror_cache(centers, ror_cache)
 
     submitter_cache = load_json(SUBMITTER_ROR_CACHE, {})
-    submitter_cache = backfill_submitter_cache(records, submitter_cache, ror_cache)
+    # Historical submitter cache retained for audit compatibility only.
 
     payload = aggregate(records, sra_cache, ror_cache, submitter_cache)
     write_json(OUT, payload)
