@@ -575,3 +575,11 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .trait-block span{display:flex;justify-content:space-between;gap:10px}
 .trait-block span b{font-weight:500;color:var(--text)}
 @media(max-width:700px){.genometrics-stat-grid{grid-template-columns:1fr}.trait-summary{grid-template-columns:1fr}}
+
+.genometrics-histograms{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 8px}
+.genometrics-histograms h3{font-size:.9rem;margin:0 0 4px}
+.genometrics-hist{display:block;width:100%;height:auto;overflow:visible}
+.genometrics-hist-bar{fill:var(--accent);opacity:.78;transition:opacity .12s ease}
+.genometrics-hist-bar.is-hovered{opacity:1}
+.genometrics-hist-tick{fill:var(--muted);font-size:9px}
+@media(max-width:700px){.genometrics-histograms{grid-template-columns:1fr}}
