@@ -366,29 +366,16 @@ function drawGenometricDonut(svgId,legendId,rows,centerMain,centerSub,periodLabe
   attachDonutHover(svg);
 }
 
-function renderSexExpectedObserved(comp,legacySex){
+function renderSexExpectedObserved(comp){
   const holder=el('genometrics-sex-comparison');
-  const fallback=el('genometrics-sex-legacy');
+  const denominator=el('genometrics-sex-comparison-denominator');
   const groups=(comp?.groups||[]).filter(x=>Number(x.assemblies||0)>0);
   if(!groups.length){
     holder.hidden=true;
-    fallback.hidden=false;
-    const sexRows=(legacySex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
-    const sexTotal=Number(legacySex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
-    const noLabel=sexRows.find(x=>x.group==='No sex-chromosome label')?.count
-      ?? sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count
-      ?? 0;
-    const anyPct=sexTotal?100*(sexTotal-noLabel)/sexTotal:0;
-    drawGenometricDonut(
-      'genometrics-sex-donut','genometrics-sex-legend',sexRows,
-      fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
-    );
-    el('genometrics-sex-denominator').textContent=
-      fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
+    denominator.textContent='Expected-vs-observed comparison unavailable until the next completed genometrics refresh.';
     return;
   }
 
-  fallback.hidden=true;
   holder.hidden=false;
   const statuses=['Expected label(s) found','Partial / different label','No sex-chromosome label'];
   holder.innerHTML=groups.map(row=>{
@@ -407,11 +394,10 @@ function renderSexExpectedObserved(comp,legacySex){
   }).join('')+
   `<div class="sex-compare-legend">${statuses.map(status=>`<span><i style="background:${GENOMETRIC_COLORS[status]||COLORS.Other}"></i>${esc(status)}</span>`).join('')}</div>`;
 
-  el('genometrics-sex-denominator').textContent=
+  denominator.textContent=
     fmt(comp.matched_assemblies)+' tracked genome deposits from '+fmt(comp.matched_species)+
     ' species matched an unambiguous Tree of Sex karyotype (snapshot '+esc(comp.source_snapshot||'')+').';
 }
-
 
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
@@ -445,7 +431,20 @@ function renderGenometrics(){
   el('genometrics-plastid-denominator').textContent=
     fmt(plastid.associated)+' of '+fmt(plastid.denominator)+' Viridiplantae genome deposits have an associated plastid/chloroplast genome.';
 
-  renderSexExpectedObserved(d.sex_chromosome_expected_vs_observed||null,sex);
+  const sexRows=(sex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
+  const sexTotal=Number(sex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
+  const noLabel=sexRows.find(x=>x.group==='No sex-chromosome label')?.count
+    ?? sexRows.find(x=>x.group==='No X/Y/Z/W label')?.count
+    ?? 0;
+  const anyPct=sexTotal?100*(sexTotal-noLabel)/sexTotal:0;
+  drawGenometricDonut(
+    'genometrics-sex-donut','genometrics-sex-legend',sexRows,
+    fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
+  );
+  el('genometrics-sex-denominator').textContent=
+    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
+
+  renderSexExpectedObserved(d.sex_chromosome_expected_vs_observed||null);
 }
 
 async function loadIucn(){
