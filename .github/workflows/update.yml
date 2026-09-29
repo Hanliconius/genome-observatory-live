@@ -88,8 +88,18 @@ jobs:
           else
             git commit -m 'data: refresh NCBI genome activity'
             git fetch origin main
-            git rebase origin/main
-            git push
+            if [ "$(git rev-parse HEAD^)" != "$(git rev-parse origin/main)" ]; then
+              echo 'main advanced during this run; regenerate from latest main to avoid generated-data merge conflicts.'
+              git reset --hard origin/main
+              python scripts/build_genometrics.py
+              git add data/genometrics.json cache
+              if git diff --cached --quiet; then
+                echo 'No genometrics changes remain after regeneration.'
+              else
+                git commit -m 'data: refresh NCBI genome activity'
+              fi
+            fi
+            git push origin HEAD:main
           fi
 
       - name: Prepare Pages artifact
