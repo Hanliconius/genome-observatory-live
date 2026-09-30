@@ -301,3 +301,4 @@ def main():
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
 
+
