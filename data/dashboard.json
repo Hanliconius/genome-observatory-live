@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-29T21:54:40.164165+00:00",
+  "generated_at": "2026-09-30T14:20:07.318084+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 40,
-      "species": 29,
+      "assemblies": 15,
+      "species": 11,
       "first_time_species": 0
     },
     "year": {
-      "assemblies": 6331,
-      "species": 3943,
-      "first_time_species": 3264
+      "assemblies": 6328,
+      "species": 3942,
+      "first_time_species": 3262
     },
     "all": {
       "assemblies": 18785,
@@ -19,12 +19,6 @@
     }
   },
   "daily": [
-    {
-      "date": "2004-11-04",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-05",
       "assemblies": 2,
@@ -48018,6 +48012,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-09-30",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -48162,30 +48162,30 @@
   ],
   "groups_week": [
     {
-      "group": "Fungi",
-      "count": 18
-    },
-    {
       "group": "Animals",
-      "count": 17
+      "count": 10
     },
     {
       "group": "Plants",
-      "count": 3
+      "count": 2
+    },
+    {
+      "group": "Fungi",
+      "count": 2
     },
     {
       "group": "Other",
-      "count": 2
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4090
+      "count": 4088
     },
     {
       "group": "Plants",
-      "count": 1685
+      "count": 1684
     },
     {
       "group": "Fungi",
@@ -120343,281 +120343,6 @@
       "assembly_name": "ASM5284965v1",
       "total_sequence_length": 2506778675,
       "chromosome_count": 33
-    },
-    {
-      "accession": "GCA_052855235.1",
-      "organism_name": "Floccularia luteovirens",
-      "common_name": null,
-      "tax_id": 493452,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5285523v1",
-      "total_sequence_length": 26731665,
-      "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_052819035.1",
-      "organism_name": "Auxenochlorella protothecoides",
-      "common_name": null,
-      "tax_id": 3075,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "UTEX_25_H1.V1",
-      "total_sequence_length": 21976416,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_052818955.1",
-      "organism_name": "Auxenochlorella protothecoides",
-      "common_name": null,
-      "tax_id": 3075,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "UTEX 2341_H1.V1",
-      "total_sequence_length": 21927624,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_052818925.1",
-      "organism_name": "Triplophysa erythraea",
-      "common_name": null,
-      "tax_id": 3128099,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281892v1",
-      "total_sequence_length": 794017755,
-      "chromosome_count": 25
-    },
-    {
-      "accession": "GCA_052818915.1",
-      "organism_name": "Auxenochlorella symbiontica",
-      "common_name": null,
-      "tax_id": 634936,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "CCAP_211-61_H1.V1",
-      "total_sequence_length": 23020461,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_052818805.1",
-      "organism_name": "Sinotaia quadrata",
-      "common_name": null,
-      "tax_id": 200191,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281880v1",
-      "total_sequence_length": 980713406,
-      "chromosome_count": 8
-    },
-    {
-      "accession": "GCA_052818645.1",
-      "organism_name": "Maccullochella peelii peelii",
-      "common_name": null,
-      "tax_id": 135762,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281864v1",
-      "total_sequence_length": 762835388,
-      "chromosome_count": 24
-    },
-    {
-      "accession": "GCA_052818405.1",
-      "organism_name": "Bambusa oldhamii",
-      "common_name": null,
-      "tax_id": 58923,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ZAAS_BaOldh_V1",
-      "total_sequence_length": 1442725978,
-      "chromosome_count": 35
-    },
-    {
-      "accession": "GCA_052818315.1",
-      "organism_name": "Triticum turgidum subsp. durum",
-      "common_name": "durum wheat",
-      "tax_id": 4567,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281831v1",
-      "total_sequence_length": 10505535142,
-      "chromosome_count": 14
-    },
-    {
-      "accession": "GCA_052818215.1",
-      "organism_name": "Equus caballus",
-      "common_name": "horse",
-      "tax_id": 9796,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "T2T-horse1.0",
-      "total_sequence_length": 2798702308,
-      "chromosome_count": 33
-    },
-    {
-      "accession": "GCA_052818205.1",
-      "organism_name": "Balaenoptera edeni",
-      "common_name": "Eden's whale",
-      "tax_id": 9769,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "BalEdn.hic.v1",
-      "total_sequence_length": 2614755077,
-      "chromosome_count": 23
-    },
-    {
-      "accession": "GCA_052818155.1",
-      "organism_name": "Babesia gibsoni",
-      "common_name": null,
-      "tax_id": 33632,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281815v1",
-      "total_sequence_length": 7924496,
-      "chromosome_count": 4
-    },
-    {
-      "accession": "GCA_052815875.1",
-      "organism_name": "Aegilops markgrafii",
-      "common_name": null,
-      "tax_id": 4494,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281587v1",
-      "total_sequence_length": 3577170360,
-      "chromosome_count": 7
-    },
-    {
-      "accession": "GCA_052815825.1",
-      "organism_name": "Dorysthenes granulosus",
-      "common_name": null,
-      "tax_id": 690275,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281582v1",
-      "total_sequence_length": 1008056856,
-      "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_052815765.1",
-      "organism_name": "Aegilops uniaristata",
-      "common_name": null,
-      "tax_id": 4492,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281576v1",
-      "total_sequence_length": 4475943907,
-      "chromosome_count": 7
-    },
-    {
-      "accession": "GCA_052815655.1",
-      "organism_name": "Gerronema lapidescens",
-      "common_name": null,
-      "tax_id": 2962918,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281565v1",
-      "total_sequence_length": 82106268,
-      "chromosome_count": 11
-    },
-    {
-      "accession": "GCA_052815355.1",
-      "organism_name": "Rana chensinensis",
-      "common_name": "Chinese brown frog",
-      "tax_id": 79015,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281535v1",
-      "total_sequence_length": 4230638015,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_052815345.1",
-      "organism_name": "Strongylodon macrobotrys",
-      "common_name": null,
-      "tax_id": 167626,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5281534v1",
-      "total_sequence_length": 557645275,
-      "chromosome_count": 14
-    },
-    {
-      "accession": "GCA_052815325.1",
-      "organism_name": "Strongylodon macrobotrys",
-      "common_name": null,
-      "tax_id": 167626,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5281532v1",
-      "total_sequence_length": 545154308,
-      "chromosome_count": 14
-    },
-    {
-      "accession": "GCA_052815245.1",
-      "organism_name": "Batocera lineolata",
-      "common_name": null,
-      "tax_id": 583388,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281524v1",
-      "total_sequence_length": 327956054,
-      "chromosome_count": 10
-    },
-    {
-      "accession": "GCA_052815205.1",
-      "organism_name": "Anoplophora chinensis",
-      "common_name": null,
-      "tax_id": 217632,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281520v1",
-      "total_sequence_length": 661154369,
-      "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052815195.1",
-      "organism_name": "Elysia leucolegnote",
-      "common_name": null,
-      "tax_id": 1522334,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281519v1",
-      "total_sequence_length": 776755396,
-      "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052815035.1",
-      "organism_name": "Pyrus sinkiangensis",
-      "common_name": null,
-      "tax_id": 363829,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5281503v1",
-      "total_sequence_length": 507495836,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052815015.1",
-      "organism_name": "Pyrus sinkiangensis",
-      "common_name": null,
-      "tax_id": 363829,
-      "release_date": "2025-09-24",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5281501v1",
-      "total_sequence_length": 506627499,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052814645.1",
-      "organism_name": "Rhododendron sp. HZ-2025a",
-      "common_name": null,
-      "tax_id": 3420927,
-      "release_date": "2025-09-24",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5281464v1",
-      "total_sequence_length": 479302531,
-      "chromosome_count": 13
     }
   ],
   "annotations": {
