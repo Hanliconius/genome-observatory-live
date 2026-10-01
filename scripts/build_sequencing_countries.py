@@ -37,6 +37,12 @@ SUBMITTER_MIN_COUNT = 2
 # false-positive ROR matches. Consortium/project names that do not identify a
 # single institute (for example G10K, GSC, BAT1K) are intentionally omitted.
 CENTER_COUNTRY_ALIASES = {
+    "WELLCOME SANGER INSTITUTE": ("GBR", "Wellcome Sanger Institute"),
+    "WELLCOME TRUST SANGER INSTITUTE": ("GBR", "Wellcome Sanger Institute"),
+    "THE WELLCOME TRUST SANGER INSTITUTE": ("GBR", "Wellcome Sanger Institute"),
+    "THE SANGER CENTRE": ("GBR", "Wellcome Sanger Institute"),
+    "SANGER CENTRE": ("GBR", "Wellcome Sanger Institute"),
+    "WELLCOME TRUST SANGER CENTRE": ("GBR", "Wellcome Sanger Institute"),
     "UCSC GI": ("USA", "UCSC Genome Institute"),
     "JGI": ("USA", "DOE Joint Genome Institute"),
     "BCM": ("USA", "Baylor College of Medicine"),
@@ -75,6 +81,10 @@ CENTER_COUNTRY_ALIASES = {
 SUBMITTER_COUNTRY_PATTERNS = [
     ("WELLCOME SANGER INSTITUTE", "GBR", "Wellcome Sanger Institute"),
     ("WELLCOME TRUST SANGER INSTITUTE", "GBR", "Wellcome Sanger Institute"),
+    ("THE WELLCOME TRUST SANGER INSTITUTE", "GBR", "Wellcome Sanger Institute"),
+    ("THE SANGER CENTRE", "GBR", "Wellcome Sanger Institute"),
+    ("SANGER CENTRE", "GBR", "Wellcome Sanger Institute"),
+    ("WELLCOME TRUST SANGER CENTRE", "GBR", "Wellcome Sanger Institute"),
     ("EARLHAM INSTITUTE", "GBR", "Earlham Institute"),
     ("BROAD INSTITUTE", "USA", "Broad Institute"),
     ("BAYLOR COLLEGE OF MEDICINE", "USA", "Baylor College of Medicine"),
@@ -95,7 +105,14 @@ SANGER_TOL_BIOPROJECT = "PRJEB43745"
 # unambiguous countries; they are used only for audit metrics, not to alter
 # production country assignments.
 SUBMITTER_CONTROLS = [
-    ("Wellcome Sanger Institute", "GBR", ("WELLCOME SANGER INSTITUTE", "WELLCOME TRUST SANGER INSTITUTE")),
+    ("Wellcome Sanger Institute", "GBR", (
+        "WELLCOME SANGER INSTITUTE",
+        "WELLCOME TRUST SANGER INSTITUTE",
+        "THE WELLCOME TRUST SANGER INSTITUTE",
+        "THE SANGER CENTRE",
+        "SANGER CENTRE",
+        "WELLCOME TRUST SANGER CENTRE",
+    )),
     ("Earlham Institute", "GBR", ("EARLHAM INSTITUTE",)),
     ("Broad Institute", "USA", ("BROAD INSTITUTE",)),
     ("Baylor College of Medicine", "USA", ("BAYLOR COLLEGE OF MEDICINE",)),
@@ -514,6 +531,17 @@ def resolved_submitter_country(submitter, submitter_cache):
     }
 
 
+def canonical_institute_name(label, mode, ror_cache, submitter_cache):
+    if not label:
+        return ""
+    info = (
+        resolved_center_country(label, ror_cache)
+        if mode == "sra_center"
+        else resolved_submitter_country(label, submitter_cache)
+    ) or {}
+    return str(info.get("ror_name") or label).strip()
+
+
 def backfill_submitter_cache(records, cache, center_cache):
     counts = Counter(
         x.get("submitter")
@@ -687,12 +715,9 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
             for label in assignment["labels"]:
                 if not label:
                     continue
-                info = (
-                    resolved_center_country(label, ror_cache)
-                    if meta["mode"] == "sra_center"
-                    else resolved_submitter_country(label, submitter_cache)
-                ) or {}
-                canonical = str(info.get("ror_name") or label).strip()
+                canonical = canonical_institute_name(
+                    label, meta["mode"], ror_cache, submitter_cache
+                )
                 if canonical:
                     assembly_institutes.add((canonical, iso3))
         for canonical, iso3 in assembly_institutes:
@@ -709,8 +734,11 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
                 rec["window_assemblies"] += 1
 
             for label in assignment["labels"]:
-                if label:
-                    rec["institutes"][label] += 1
+                canonical = canonical_institute_name(
+                    label, meta["mode"], ror_cache, submitter_cache
+                )
+                if canonical:
+                    rec["institutes"][canonical] += 1
             for source in assignment["provenance"]:
                 rec["provenance"][source] += 1
                 coverage[f"country_assignments_{source}"] += 1
