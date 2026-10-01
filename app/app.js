@@ -436,73 +436,105 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   const rows=(trend?.years||[]).filter(x=>Number(x?.[reportedKey]||0)>0);
   const series=(trend?.[seriesKey]||[]).slice(0,10);
   if(!rows.length||!series.length){
-    svg.innerHTML='<text class="genometrics-trend-empty" x="450" y="165" text-anchor="middle">Trend data unavailable until the next completed genometrics refresh.</text>';
+    svg.innerHTML='<text class="genometrics-trend-empty" x="260" y="165" text-anchor="middle">Trend data unavailable until the next completed genometrics refresh.</text>';
     legend.innerHTML='';
     return;
   }
 
-  const w=900,h=330,L=58,R=18,T=18,B=52,iw=w-L-R,ih=h-T-B;
+  const w=520,h=330,L=50,R=12,T=18,B=52,iw=w-L-R,ih=h-T-B;
   const years=rows.map(x=>Number(x.year));
   const xmin=Math.min(...years),xmax=Math.max(...years);
   const x=yr=>L+(xmax===xmin?iw/2:(yr-xmin)/(xmax-xmin)*iw);
   const y=p=>T+ih-(Math.max(0,Math.min(100,p))/100)*ih;
+  const countFor=(row,name)=>{
+    if(seriesKey==='technology_series')return Number((row.technology||{})[name]||0);
+    if(seriesKey==='assembler_series')return Number((row.assemblers||{})[name]||0);
+    if(seriesKey==='proximity_series')return Number(row.proximity||0);
+    return 0;
+  };
   let html='';
 
   [0,25,50,75,100].forEach(p=>{
     const yy=y(p);
     html+='<line class="genometrics-trend-grid" x1="'+L+'" x2="'+(w-R)+'" y1="'+yy+'" y2="'+yy+'"></line>';
-    html+='<text class="genometrics-trend-axis-label" x="'+(L-10)+'" y="'+(yy+4)+'" text-anchor="end">'+p+'%</text>';
+    html+='<text class="genometrics-trend-axis-label" x="'+(L-8)+'" y="'+(yy+4)+'" text-anchor="end">'+p+'%</text>';
   });
   html+='<line class="genometrics-trend-axis" x1="'+L+'" x2="'+(w-R)+'" y1="'+(T+ih)+'" y2="'+(T+ih)+'"></line>';
 
   let tickYears=years.filter((yr,i)=>i===0||i===years.length-1||yr%5===0);
-  if(tickYears.length>8){
-    tickYears=tickYears.filter((yr,i)=>i===0||i===tickYears.length-1||yr%10===0);
-  }
+  if(tickYears.length>7)tickYears=tickYears.filter((yr,i)=>i===0||i===tickYears.length-1||yr%10===0);
   [...new Set(tickYears)].forEach(yr=>{
     const xx=x(yr);
     html+='<line class="genometrics-trend-tick" x1="'+xx+'" x2="'+xx+'" y1="'+(T+ih)+'" y2="'+(T+ih+5)+'"></line>';
     html+='<text class="genometrics-trend-axis-label" x="'+xx+'" y="'+(h-19)+'" text-anchor="middle">'+yr+'</text>';
   });
 
-  const valueField=seriesKey==='technology_series'?'technology':'assemblers';
   series.forEach((name,si)=>{
     const color=METHOD_TREND_COLORS[si%METHOD_TREND_COLORS.length];
     const pts=rows.map(row=>{
       const denom=Number(row[reportedKey]||0);
-      const count=Number((row[valueField]||{})[name]||0);
+      const count=countFor(row,name);
       return {year:Number(row.year),count,denom,pct:denom?100*count/denom:0};
     });
     const path=pts.map((p,i)=>(i?'L ':'M ')+x(p.year).toFixed(2)+' '+y(p.pct).toFixed(2)).join(' ');
     html+='<path class="genometrics-trend-line" d="'+path+'" style="stroke:'+color+'"></path>';
     pts.forEach(p=>{
-      html+='<circle class="genometrics-trend-point" data-series="'+esc(name)+'" data-year="'+p.year+'" data-count="'+p.count+'" data-denom="'+p.denom+'" data-pct="'+p.pct.toFixed(3)+'" data-period="'+esc(periodLabel)+'" cx="'+x(p.year).toFixed(2)+'" cy="'+y(p.pct).toFixed(2)+'" r="3.2" style="fill:'+color+'"></circle>';
+      html+='<circle class="genometrics-trend-point" data-year="'+p.year+'" cx="'+x(p.year).toFixed(2)+'" cy="'+y(p.pct).toFixed(2)+'" r="3.2" style="fill:'+color+'"></circle>';
     });
+  });
+
+  rows.forEach((row,i)=>{
+    const xx=x(Number(row.year));
+    const left=i===0?L:(x(Number(rows[i-1].year))+xx)/2;
+    const right=i===rows.length-1?w-R:(xx+x(Number(rows[i+1].year)))/2;
+    html+='<rect class="genometrics-trend-hit" data-row-index="'+i+'" x="'+left.toFixed(2)+'" y="'+T+'" width="'+Math.max(1,right-left).toFixed(2)+'" height="'+ih+'"></rect>';
   });
   svg.innerHTML=html;
 
   const latest=rows[rows.length-1];
-  const latestMap=latest[valueField]||{};
   const latestDenom=Number(latest[reportedKey]||0);
   legend.innerHTML=series.map((name,si)=>{
     const color=METHOD_TREND_COLORS[si%METHOD_TREND_COLORS.length];
-    const count=Number(latestMap[name]||0);
+    const count=countFor(latest,name);
     const pct=latestDenom?100*count/latestDenom:0;
     return '<span><i style="background:'+color+'"></i><b>'+esc(name)+'</b><em>'+fmt1(pct)+'% in '+latest.year+'</em></span>';
   }).join('');
 
   const tip=el('chart-tooltip');
-  svg.querySelectorAll('.genometrics-trend-point').forEach(dot=>{
+  const clearHover=()=>{
+    tip.hidden=true;
+    svg.querySelectorAll('.genometrics-trend-point.is-hovered').forEach(p=>p.classList.remove('is-hovered'));
+    svg.querySelectorAll('.genometrics-trend-guide').forEach(g=>g.remove());
+  };
+  svg.querySelectorAll('.genometrics-trend-hit').forEach(hit=>{
+    const idx=Number(hit.dataset.rowIndex);
+    const row=rows[idx];
     const show=ev=>{
-      tip.innerHTML='<strong>'+esc(dot.dataset.series)+' · '+esc(dot.dataset.year)+'</strong><span>'+fmt1(Number(dot.dataset.pct||0))+'% of assemblies with '+esc(dot.dataset.period)+' metadata</span><span>'+fmt(Number(dot.dataset.count||0))+' of '+fmt(Number(dot.dataset.denom||0))+' metadata-bearing assemblies</span>';
+      svg.querySelectorAll('.genometrics-trend-point.is-hovered').forEach(p=>p.classList.remove('is-hovered'));
+      svg.querySelectorAll('.genometrics-trend-point[data-year="'+row.year+'"]').forEach(p=>p.classList.add('is-hovered'));
+      svg.querySelectorAll('.genometrics-trend-guide').forEach(g=>g.remove());
+      const guide=document.createElementNS('http://www.w3.org/2000/svg','line');
+      guide.setAttribute('class','genometrics-trend-guide');
+      guide.setAttribute('x1',x(Number(row.year)));guide.setAttribute('x2',x(Number(row.year)));
+      guide.setAttribute('y1',T);guide.setAttribute('y2',T+ih);
+      svg.insertBefore(guide,svg.querySelector('.genometrics-trend-hit'));
+
+      const denom=Number(row[reportedKey]||0);
+      const detail=series.map(name=>{
+        const count=countFor(row,name);
+        const pct=denom?100*count/denom:0;
+        return '<span><b>'+esc(name)+'</b>: '+fmt1(pct)+'% ('+fmt(count)+'/'+fmt(denom)+')</span>';
+      }).join('');
+      tip.innerHTML='<strong>'+esc(row.year)+' · '+esc(periodLabel)+'</strong>'+detail;
       tip.hidden=false;
-      dot.classList.add('is-hovered');
       positionTooltip(ev,tip);
     };
-    const hide=()=>{tip.hidden=true;dot.classList.remove('is-hovered');};
-    dot.onpointerenter=show;dot.onpointermove=show;dot.onpointerleave=hide;
+    hit.onpointerenter=show;
+    hit.onpointermove=show;
+    hit.onpointerleave=clearHover;
   });
 }
+
 
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
@@ -575,19 +607,27 @@ function renderGenometrics(){
   const methods=d.methods_through_time||{};
   drawGenometricTrend(
     'genometrics-tech-trend','genometrics-tech-legend',methods,
-    'technology_series','tech_reported','sequencing-technology'
+    'technology_series','tech_reported','primary sequencing technology'
+  );
+  drawGenometricTrend(
+    'genometrics-proximity-trend','genometrics-proximity-legend',methods,
+    'proximity_series','tech_reported','Hi-C / proximity use'
   );
   drawGenometricTrend(
     'genometrics-assembler-trend','genometrics-assembler-legend',methods,
-    'assembler_series','assembler_reported','assembly-method'
+    'assembler_series','assembler_reported','assembly method'
   );
   const tracked=Number(q.assemblies||0);
   const techN=Number(methods.technology_metadata_assemblies||0);
+  const proximityN=Number(methods.proximity_assemblies||0);
   const asmN=Number(methods.assembler_metadata_assemblies||0);
   el('genometrics-tech-denominator').textContent=
     fmt(techN)+' of '+fmt(tracked)+' tracked assemblies report sequencing-technology metadata'+
     (tracked?' ('+fmt1(100*techN/tracked)+'%). ':'; ')+
-    'Lines are yearly percentages among metadata-bearing assemblies and can overlap for hybrid sequencing strategies.';
+    'Hi-C/proximity methods are excluded from this panel; lines can overlap when hybrid primary sequencing was reported.';
+  el('genometrics-proximity-denominator').textContent=
+    fmt(proximityN)+' tracked assemblies explicitly report Hi-C or another recognized proximity-ligation method in NCBI sequencing metadata. '+
+    'The yearly line uses assemblies with sequencing-technology metadata as its denominator.';
   el('genometrics-assembler-denominator').textContent=
     fmt(asmN)+' of '+fmt(tracked)+' tracked assemblies report a specific assembly method'+
     (tracked?' ('+fmt1(100*asmN/tracked)+'%). ':'; ')+
