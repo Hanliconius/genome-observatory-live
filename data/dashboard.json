@@ -1,30 +1,24 @@
 {
-  "generated_at": "2026-09-30T16:25:15.514866+00:00",
+  "generated_at": "2026-10-01T17:02:17.969891+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 20,
-      "species": 16,
-      "first_time_species": 2
+      "assemblies": 43,
+      "species": 15,
+      "first_time_species": 6
     },
     "year": {
-      "assemblies": 6333,
-      "species": 3944,
-      "first_time_species": 3264
+      "assemblies": 6328,
+      "species": 3950,
+      "first_time_species": 3268
     },
     "all": {
-      "assemblies": 18790,
-      "species": 10533,
-      "first_time_species": 10533
+      "assemblies": 18826,
+      "species": 10539,
+      "first_time_species": 10539
     }
   },
   "daily": [
-    {
-      "date": "2004-11-05",
-      "assemblies": 2,
-      "species": 2,
-      "first_time_species": 2
-    },
     {
       "date": "2004-11-06",
       "assemblies": 0,
@@ -48003,18 +47997,24 @@
     },
     {
       "date": "2026-09-28",
-      "assemblies": 5,
-      "species": 5,
-      "first_time_species": 2
+      "assemblies": 25,
+      "species": 6,
+      "first_time_species": 1
     },
     {
       "date": "2026-09-29",
+      "assemblies": 16,
+      "species": 7,
+      "first_time_species": 5
+    },
+    {
+      "date": "2026-09-30",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-09-30",
+      "date": "2026-10-01",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -48155,41 +48155,41 @@
     },
     {
       "year": "2026",
-      "assemblies": 5169,
-      "species": 3466,
-      "first_time_species": 2517
+      "assemblies": 5205,
+      "species": 3474,
+      "first_time_species": 2521
     }
   ],
   "groups_week": [
     {
-      "group": "Animals",
-      "count": 14
+      "group": "Fungi",
+      "count": 20
     },
     {
       "group": "Plants",
-      "count": 3
+      "count": 11
     },
     {
-      "group": "Fungi",
-      "count": 2
+      "group": "Animals",
+      "count": 9
     },
     {
       "group": "Other",
-      "count": 1
+      "count": 3
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4091
+      "count": 4097
     },
     {
       "group": "Plants",
-      "count": 1685
+      "count": 1654
     },
     {
       "group": "Fungi",
-      "count": 431
+      "count": 451
     },
     {
       "group": "Other",
@@ -48233,27 +48233,658 @@
     }
   ],
   "featured_assembly": {
-    "accession": "GCA_062004762.1",
-    "organism_name": "Trichinella spiralis",
-    "common_name": "nematodes",
-    "tax_id": 6334,
-    "release_date": "2026-09-28",
+    "accession": "GCA_062009917.1",
+    "organism_name": "Arachis hypogaea",
+    "common_name": "peanut",
+    "tax_id": 3818,
+    "release_date": "2026-09-29",
     "assembly_level": "Chromosome",
-    "assembly_name": "VRTS_ISS3",
-    "total_sequence_length": 58018279,
-    "chromosome_count": 3,
-    "genus": "Trichinella",
-    "family": "Trichinellidae",
-    "phylum": "Nematoda",
-    "group": "Animals",
+    "assembly_name": "ASM62009917v1",
+    "total_sequence_length": 2540169500,
+    "chromosome_count": 20,
+    "genus": "Arachis",
+    "family": "Fabaceae",
+    "phylum": "Streptophyta",
+    "group": "Plants",
     "image": {
-      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Trichinella_larv1_DPDx.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Trichinella_larv1_DPDx.JPG",
-      "credit": "DPDx Image Library · Public domain",
-      "matched_name": "Trichinella spiralis"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+      "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+      "matched_name": "Arachis hypogaea"
     }
   },
   "recent_assemblies": [
+    {
+      "accession": "GCA_062009919.1",
+      "organism_name": "Epinephelus fuscoguttatus x Epinephelus lanceolatus",
+      "common_name": "hybrid giant tiger grouper",
+      "tax_id": 1074816,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009919v1",
+      "total_sequence_length": 1116780029,
+      "chromosome_count": 24,
+      "genus": "Epinephelus",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009918.1",
+      "organism_name": "Dracocephalum moldavica",
+      "common_name": "eudicots",
+      "tax_id": 39296,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "BT MC_D.moldavica_t2t_V1",
+      "total_sequence_length": 255610819,
+      "chromosome_count": 4,
+      "genus": "Dracocephalum",
+      "family": "Lamiaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009917.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009917v1",
+      "total_sequence_length": 2540169500,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009916.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009916v1",
+      "total_sequence_length": 2543287637,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009915.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009915v1",
+      "total_sequence_length": 2507946250,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009914.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009914v1",
+      "total_sequence_length": 2601807580,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009913.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009913v1",
+      "total_sequence_length": 2490767742,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009912.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009912v1",
+      "total_sequence_length": 2629578195,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009911.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009911v1",
+      "total_sequence_length": 2563804557,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009910.1",
+      "organism_name": "Arachis hypogaea",
+      "common_name": "peanut",
+      "tax_id": 3818,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009910v1",
+      "total_sequence_length": 2538251598,
+      "chromosome_count": 20,
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
+    },
+    {
+      "accession": "GCA_062009627.1",
+      "organism_name": "Cobitis hankugensis",
+      "common_name": "ray-finned fishes",
+      "tax_id": 287196,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009627v1",
+      "total_sequence_length": 1317765496,
+      "chromosome_count": 24,
+      "genus": "Cobitis",
+      "family": "Cobitidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009626.1",
+      "organism_name": "Eonycteris spelaea",
+      "common_name": "lesser dawn bat",
+      "tax_id": 58065,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009626v1",
+      "total_sequence_length": 1894182083,
+      "chromosome_count": 18,
+      "genus": "Eonycteris",
+      "family": "Pteropodidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009624.1",
+      "organism_name": "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)",
+      "common_name": null,
+      "tax_id": 3700093,
+      "release_date": "2026-09-29",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62009624v1",
+      "total_sequence_length": 1039562372,
+      "chromosome_count": 24,
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009623.1",
+      "organism_name": "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)",
+      "common_name": null,
+      "tax_id": 3700093,
+      "release_date": "2026-09-29",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62009623v1",
+      "total_sequence_length": 1087222971,
+      "chromosome_count": 24,
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "group": "Other",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009622.1",
+      "organism_name": "Eonycteris spelaea",
+      "common_name": "lesser dawn bat",
+      "tax_id": 58065,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009622v1",
+      "total_sequence_length": 1995370597,
+      "chromosome_count": 18,
+      "genus": "Eonycteris",
+      "family": "Pteropodidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009544.1",
+      "organism_name": "Periploca sepium",
+      "common_name": "eudicots",
+      "tax_id": 190712,
+      "release_date": "2026-09-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009544v1",
+      "total_sequence_length": 381538729,
+      "chromosome_count": 11,
+      "genus": "Periploca",
+      "family": "Apocynaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009471.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009471v1",
+      "total_sequence_length": 141319592,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
+    },
+    {
+      "accession": "GCA_062009467.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009467v1",
+      "total_sequence_length": 146937379,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
+    },
+    {
+      "accession": "GCA_062009460.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009460v1",
+      "total_sequence_length": 147353084,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
+    },
+    {
+      "accession": "GCA_062009459.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009459v1",
+      "total_sequence_length": 146235808,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009458.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009458v1",
+      "total_sequence_length": 164798187,
+      "chromosome_count": 19,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009445.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009445v1",
+      "total_sequence_length": 147008307,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009444.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009444v1",
+      "total_sequence_length": 161364534,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009442.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009442v1",
+      "total_sequence_length": 142697631,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009435.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009435v1",
+      "total_sequence_length": 143811700,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009434.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009434v1",
+      "total_sequence_length": 140688021,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009433.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009433v1",
+      "total_sequence_length": 147409797,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009422.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009422v1",
+      "total_sequence_length": 143253479,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009420.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009420v1",
+      "total_sequence_length": 145915163,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009418.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009418v1",
+      "total_sequence_length": 142532778,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009401.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009401v1",
+      "total_sequence_length": 145282789,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009400.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009400v1",
+      "total_sequence_length": 143822317,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009399.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009399v1",
+      "total_sequence_length": 141927477,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009389.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009389v1",
+      "total_sequence_length": 143578628,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009385.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009385v1",
+      "total_sequence_length": 143279435,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062009380.1",
+      "organism_name": "Puccinia hordei",
+      "common_name": "rust fungi & allies",
+      "tax_id": 27345,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62009380v1",
+      "total_sequence_length": 143392937,
+      "chromosome_count": 18,
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
     {
       "accession": "GCA_062004762.1",
       "organism_name": "Trichinella spiralis",
@@ -50268,7 +50899,12 @@
       "family": "Sphagnaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sphagnum_fimbriatum_%28a%2C_150604-484755%29_7105.JPG/960px-Sphagnum_fimbriatum_%28a%2C_150604-484755%29_7105.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sphagnum_fimbriatum_(a,_150604-484755)_7105.JPG",
+        "credit": "HermannSchachner · CC0",
+        "matched_name": "Sphagnum fimbriatum"
+      }
     },
     {
       "accession": "GCA_988282005.1",
@@ -120410,39 +121046,6 @@
       "assembly_name": "ASM4625519v2",
       "total_sequence_length": 585385561,
       "chromosome_count": 26
-    },
-    {
-      "accession": "GCA_052849685.1",
-      "organism_name": "Lactuca virosa",
-      "common_name": null,
-      "tax_id": 75947,
-      "release_date": "2025-09-25",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Lactuca_virosa_CGN04683_v6",
-      "total_sequence_length": 3378627238,
-      "chromosome_count": 9
-    },
-    {
-      "accession": "GCA_052849675.1",
-      "organism_name": "Oncorhynchus masou masou",
-      "common_name": "cherry salmon",
-      "tax_id": 90313,
-      "release_date": "2025-09-25",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5284967v1",
-      "total_sequence_length": 2593587901,
-      "chromosome_count": 33
-    },
-    {
-      "accession": "GCA_052849655.1",
-      "organism_name": "Oncorhynchus masou masou",
-      "common_name": "cherry salmon",
-      "tax_id": 90313,
-      "release_date": "2025-09-25",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5284965v1",
-      "total_sequence_length": 2506778675,
-      "chromosome_count": 33
     }
   ],
   "annotations": {
@@ -131371,7 +131974,13 @@
     "Zymoseptoria tritici ST99CH_3D7": "2017-05-12",
     "Zymoseptoria tritici STIR04_A26b": "2018-02-23",
     "Ursus maritimus": "2026-09-28",
-    "Sphecodoptera sheni": "2026-09-28"
+    "Sphecodoptera sheni": "2026-09-28",
+    "Cobitis hankugensis": "2026-09-29",
+    "Periploca sepium": "2026-09-29",
+    "Dracocephalum moldavica": "2026-09-29",
+    "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)": "2026-09-29",
+    "Eonycteris spelaea": "2026-09-29",
+    "Puccinia hordei": "2026-09-28"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -132023,7 +132632,12 @@
       "credit": "Diego Delso · CC BY-SA 4.0",
       "matched_name": "Sparus"
     },
-    "Sphagnum fimbriatum": null,
+    "Sphagnum fimbriatum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sphagnum_fimbriatum_%28a%2C_150604-484755%29_7105.JPG/960px-Sphagnum_fimbriatum_%28a%2C_150604-484755%29_7105.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sphagnum_fimbriatum_(a,_150604-484755)_7105.JPG",
+      "credit": "HermannSchachner · CC0",
+      "matched_name": "Sphagnum fimbriatum"
+    },
     "Sphyraena barracuda": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Banco_de_gran_barracudas_%28Sphyraena_barracuda%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-27%2C_DD_115.jpg/960px-Banco_de_gran_barracudas_%28Sphyraena_barracuda%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-27%2C_DD_115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Banco_de_gran_barracudas_(Sphyraena_barracuda),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-27,_DD_115.jpg",
@@ -132140,7 +132754,25 @@
       "credit": "DPDx Image Library · Public domain",
       "matched_name": "Trichinella spiralis"
     },
-    "Ursus maritimus": null
+    "Ursus maritimus": null,
+    "Arachis hypogaea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+      "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+      "matched_name": "Arachis hypogaea"
+    },
+    "Cobitis hankugensis": null,
+    "Dracocephalum moldavica": null,
+    "Eonycteris spelaea": null,
+    "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)": null,
+    "Epinephelus fuscoguttatus x Epinephelus lanceolatus": null,
+    "Periploca sepium": null,
+    "Puccinia hordei": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+      "credit": "Mkaercher · CC BY-SA 3.0",
+      "matched_name": "Puccinia"
+    }
   },
   "taxonomy_cache": {
     "2248776": {
@@ -133703,7 +134335,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3706531": {},
     "3109951": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "moths & butterflies",
@@ -133713,7 +134344,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3272347": {},
     "6334": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "nematodes",
@@ -133732,6 +134362,72 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
+    "3818": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "peanut",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Arachis",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "287196": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cobitis",
+      "family": "Cobitidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "39296": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Dracocephalum",
+      "family": "Lamiaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "58065": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lesser dawn bat",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Eonycteris",
+      "family": "Pteropodidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3700093": {},
+    "1074816": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "hybrid giant tiger grouper",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Epinephelus",
+      "family": "Serranidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "190712": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Periploca",
+      "family": "Apocynaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3706531": {},
+    "27345": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "rust fungi & allies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Puccinia",
+      "family": "Pucciniaceae",
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
+    },
+    "3272347": {},
     "3680444": {}
   }
 }
