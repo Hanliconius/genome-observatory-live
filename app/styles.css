@@ -675,3 +675,43 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .genometrics-trend{height:260px}
   .genometrics-trend-legend{gap:8px 12px}
 }
+
+
+/* Taxa comparison */
+.taxon-compare-search-panel{grid-template-columns:minmax(0,.9fr) minmax(500px,1.1fr);align-items:start}
+.taxon-search-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.taxon-search-wrap label{display:block;margin:0 0 7px;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em}
+.taxon-search-input{width:100%;appearance:none;border:1px solid var(--line-dark);border-radius:6px;background:#fff;color:var(--ink);padding:13px 14px;font:inherit;font-size:1rem;outline:none}
+.taxon-search-input:focus{border-color:var(--ink);box-shadow:0 0 0 2px rgba(17,24,21,.07)}
+.taxon-compare-note{grid-column:1/-1;margin:0;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem;line-height:1.45}
+.taxon-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-top:0}
+.taxon-compare-column{min-width:0;background:var(--panel)}
+.taxon-compare-column .taxon-empty{border:0;min-height:160px}
+.taxon-side-content{display:grid;gap:1px;background:var(--line-dark)}
+.taxon-side-content>.taxon-heading,.taxon-side-content>.panel,.taxon-side-stats{border:0;background:var(--panel)}
+.taxon-side-content>.taxon-heading{padding:20px}
+.taxon-side-content>.taxon-heading h2{font-size:clamp(2rem,3.6vw,3.6rem)}
+.taxon-side-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.taxon-side-stats>div{min-width:0;padding:12px;border-right:1px solid var(--line-dark)}
+.taxon-side-stats>div:last-child{border-right:0}
+.taxon-side-stats span,.taxon-side-stats strong{display:block}
+.taxon-side-stats span{color:var(--muted);font-size:.66rem;text-transform:uppercase;letter-spacing:.05em;line-height:1.2}
+.taxon-side-stats strong{margin-top:6px;font-size:1.05rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.taxon-compare-panel{min-height:0}
+.taxon-compare-panel .chart{height:270px}
+.taxon-map-panel{min-height:0}
+.taxon-map{width:100%;height:auto;display:block;margin-top:14px;background:#f7f8fa;border:1px solid var(--line)}
+.taxon-country-shape{stroke:#fff;stroke-width:.5;vector-effect:non-scaling-stroke;transition:stroke-width .12s ease}
+.taxon-country-shape.is-hovered{stroke:var(--ink);stroke-width:1.4}
+.taxon-map-legend{margin-top:10px;color:var(--muted);font-size:.72rem}
+.taxon-map-legend>span{display:block;margin-bottom:5px}
+.taxon-map-status{margin:8px 0 0;color:var(--muted);font-size:.75rem;line-height:1.4}
+@media(max-width:980px){
+  .taxon-compare-search-panel{grid-template-columns:1fr}
+  .taxon-compare-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .taxon-search-pair{grid-template-columns:1fr}
+  .taxon-side-stats{grid-template-columns:repeat(2,1fr)}
+  .taxon-side-stats>div{border-bottom:1px solid var(--line-dark)}
+}

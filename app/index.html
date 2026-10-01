@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001e" />
+  <link rel="stylesheet" href="styles.css?v=20261001f" />
 </head>
 <body>
   <header class="site-head">
@@ -444,59 +444,99 @@
     </section>
 
     <section id="taxa-view" hidden>
-      <article class="taxon-search-panel">
-        <div>
-          <p class="panel-kicker">Searchable taxonomic history</p>
-          <h2>Explore chromosome-scale sequencing by phylum or order</h2>
-          <p class="taxon-intro">Search only phyla and orders to keep the site small, static and free to host.</p>
+      <article class="taxon-search-panel taxon-compare-search-panel">
+        <div class="taxon-search-intro">
+          <p class="panel-kicker">Comparative taxonomic history</p>
+          <h2>Compare chromosome-scale sequencing by phylum or order</h2>
+          <p class="taxon-intro">Search two taxa independently. Their historical and recent charts use shared axes, and sample-origin maps use the same colour scale for direct comparison. Only phyla and orders are indexed to keep the site small, static and free to host.</p>
         </div>
-        <div class="taxon-search-wrap">
-          <input id="taxon-search" type="search" autocomplete="off" placeholder="Try Lepidoptera, Arthropoda, Ascomycota…" aria-label="Search phylum or order">
-          <div id="taxon-results" class="taxon-results"></div>
+        <div class="taxon-search-pair">
+          <div class="taxon-search-wrap">
+            <label for="taxon-search-left">Left taxon</label>
+            <input id="taxon-search-left" class="taxon-search-input" type="search" autocomplete="off" placeholder="Try Lepidoptera…" aria-label="Search left phylum or order">
+            <div id="taxon-results-left" class="taxon-results"></div>
+          </div>
+          <div class="taxon-search-wrap">
+            <label for="taxon-search-right">Right taxon</label>
+            <input id="taxon-search-right" class="taxon-search-input" type="search" autocomplete="off" placeholder="Try Coleoptera…" aria-label="Search right phylum or order">
+            <div id="taxon-results-right" class="taxon-results"></div>
+          </div>
         </div>
+        <p class="taxon-compare-note">Shared scales update whenever either selection changes. Maps show the BioSample country attached to qualifying assemblies; they describe sample provenance, not the natural geographic range of the taxon.</p>
       </article>
 
-      <section id="taxon-empty" class="taxon-empty">
-        <p>Choose a phylum or order to see its genome-deposition history.</p>
-      </section>
-
-      <section id="taxon-content" hidden>
-        <article class="taxon-heading">
-          <p class="panel-kicker" id="taxon-rank">Taxon</p>
-          <h2 id="taxon-name">—</h2>
-          <p id="taxon-lineage" class="taxon-lineage"></p>
+      <section class="taxon-compare-grid">
+        <article class="taxon-compare-column">
+          <section id="taxon-empty-left" class="taxon-empty"><p>Choose a taxon for the left side.</p></section>
+          <section id="taxon-content-left" class="taxon-side-content" hidden>
+            <article class="taxon-heading">
+              <p class="panel-kicker" id="taxon-rank-left">Taxon</p>
+              <h2 id="taxon-name-left">—</h2>
+              <p id="taxon-lineage-left" class="taxon-lineage"></p>
+            </article>
+            <section class="taxon-side-stats">
+              <div><span>Assemblies</span><strong id="taxon-assemblies-left">—</strong></div>
+              <div><span>Species</span><strong id="taxon-species-left">—</strong></div>
+              <div><span>First deposit</span><strong id="taxon-first-left">—</strong></div>
+              <div><span>Past year</span><strong id="taxon-year-assemblies-left">—</strong></div>
+              <div><span>Past-year species</span><strong id="taxon-year-species-left">—</strong></div>
+            </section>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Lifetime · shared scale</p>
+              <h3 class="panel-title">Cumulative assemblies and first-time species</h3>
+              <svg id="taxon-cumulative-chart-left" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+              <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+            </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Past year · shared scale</p>
+              <h3 class="panel-title">Assemblies deposited per business day</h3>
+              <svg id="taxon-recent-chart-left" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            </article>
+            <article class="panel taxon-map-panel">
+              <p class="panel-kicker">Sample provenance · shared scale</p>
+              <h3 class="panel-title">Countries represented in BioSample metadata</h3>
+              <svg id="taxon-map-left" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries for left taxon"></svg>
+              <div id="taxon-map-legend-left" class="taxon-map-legend"></div>
+              <p id="taxon-map-status-left" class="taxon-map-status"></p>
+            </article>
+          </section>
         </article>
 
-        <section class="stat-strip taxon-stats">
-          <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="taxon-assemblies">—</span></div>
-          <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="taxon-species">—</span></div>
-          <div class="stat-box"><span class="stat-label">First deposit</span><span class="stat-value stat-date" id="taxon-first">—</span></div>
-          <div class="stat-box"><span class="stat-label">Past year assemblies</span><span class="stat-value" id="taxon-year-assemblies">—</span></div>
-          <div class="stat-box"><span class="stat-label">Past year species</span><span class="stat-value" id="taxon-year-species">—</span></div>
-        </section>
-
-        <section class="taxon-grid">
-          <article class="panel chart-panel">
-            <div class="panel-head">
-              <div>
-                <p class="panel-kicker">Lifetime</p>
-                <h2 class="panel-title">Cumulative assemblies and first-time species</h2>
-              </div>
-            </div>
-            <svg id="taxon-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
-          </article>
-
-          <article class="panel chart-panel">
-            <div class="panel-head">
-              <div>
-                <p class="panel-kicker">Past year</p>
-                <h2 class="panel-title">Assemblies deposited per business day</h2>
-              </div>
-            </div>
-            <svg id="taxon-recent-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-          </article>
-        </section>
+        <article class="taxon-compare-column">
+          <section id="taxon-empty-right" class="taxon-empty"><p>Choose a taxon for the right side.</p></section>
+          <section id="taxon-content-right" class="taxon-side-content" hidden>
+            <article class="taxon-heading">
+              <p class="panel-kicker" id="taxon-rank-right">Taxon</p>
+              <h2 id="taxon-name-right">—</h2>
+              <p id="taxon-lineage-right" class="taxon-lineage"></p>
+            </article>
+            <section class="taxon-side-stats">
+              <div><span>Assemblies</span><strong id="taxon-assemblies-right">—</strong></div>
+              <div><span>Species</span><strong id="taxon-species-right">—</strong></div>
+              <div><span>First deposit</span><strong id="taxon-first-right">—</strong></div>
+              <div><span>Past year</span><strong id="taxon-year-assemblies-right">—</strong></div>
+              <div><span>Past-year species</span><strong id="taxon-year-species-right">—</strong></div>
+            </section>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Lifetime · shared scale</p>
+              <h3 class="panel-title">Cumulative assemblies and first-time species</h3>
+              <svg id="taxon-cumulative-chart-right" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+              <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+            </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Past year · shared scale</p>
+              <h3 class="panel-title">Assemblies deposited per business day</h3>
+              <svg id="taxon-recent-chart-right" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            </article>
+            <article class="panel taxon-map-panel">
+              <p class="panel-kicker">Sample provenance · shared scale</p>
+              <h3 class="panel-title">Countries represented in BioSample metadata</h3>
+              <svg id="taxon-map-right" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries for right taxon"></svg>
+              <div id="taxon-map-legend-right" class="taxon-map-legend"></div>
+              <p id="taxon-map-status-right" class="taxon-map-status"></p>
+            </article>
+          </section>
+        </article>
       </section>
     </section>
 
@@ -518,6 +558,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001e"></script>
+  <script src="app.js?v=20261001f"></script>
 </body>
 </html>

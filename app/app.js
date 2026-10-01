@@ -8,7 +8,7 @@ const WORLD_URL='https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, GENOMETRICS_DATA=null, GENOMETRICS_LOADING=null, WORLD_DATA=null, selectedCountry=null, countryFacet='origin';
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, TAXON_SELECTED={left:null,right:null}, TAXON_CACHE=new Map(), IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, GENOMETRICS_DATA=null, GENOMETRICS_LOADING=null, WORLD_DATA=null, WORLD_LOADING=null, selectedCountry=null, countryFacet='origin';
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
@@ -95,12 +95,14 @@ el('country-search').addEventListener('keydown',e=>{
   }
 });
 
-el('taxon-search').addEventListener('input',e=>renderTaxonMatches(e.target.value));
-el('taxon-search').addEventListener('keydown',e=>{
-  if(e.key==='Enter'){
-    const firstResult=el('taxon-results').querySelector('button[data-taxid]');
-    if(firstResult){e.preventDefault();firstResult.click();}
-  }
+['left','right'].forEach(side=>{
+  el('taxon-search-'+side).addEventListener('input',e=>renderTaxonMatches(e.target.value,side));
+  el('taxon-search-'+side).addEventListener('keydown',e=>{
+    if(e.key==='Enter'){
+      const firstResult=el('taxon-results-'+side).querySelector('button[data-taxid]');
+      if(firstResult){e.preventDefault();firstResult.click();}
+    }
+  });
 });
 
 function render(){
@@ -1029,32 +1031,57 @@ function renderCountryDetail(c){
   drawDualChart('country-cumulative-chart',rows);
 }
 
+async function ensureWorldData(){
+  if(WORLD_DATA)return WORLD_DATA;
+  if(WORLD_LOADING)return WORLD_LOADING;
+  if(!window.d3||!window.topojson)throw new Error('Map libraries unavailable');
+  WORLD_LOADING=d3.json(WORLD_URL)
+    .then(world=>{WORLD_DATA=world;return world;})
+    .finally(()=>{WORLD_LOADING=null;});
+  return WORLD_LOADING;
+}
+
 async function loadTaxaIndex(){
-  if(TAXA_INDEX){renderTaxonMatches(el('taxon-search').value);return;}
+  if(TAXA_INDEX){
+    renderTaxonMatches(el('taxon-search-left').value,'left');
+    renderTaxonMatches(el('taxon-search-right').value,'right');
+    ensureWorldData().then(()=>renderTaxonComparison()).catch(()=>{});
+    return;
+  }
   if(TAXA_LOADING)return TAXA_LOADING;
-  el('taxon-results').innerHTML='<div class="taxon-loading">Loading phylum/order index…</div>';
-  TAXA_LOADING=fetch(TAXA_INDEX_URL)
-    .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
-    .then(d=>{
+  ['left','right'].forEach(side=>{
+    el('taxon-results-'+side).innerHTML='<div class="taxon-loading">Loading phylum/order index…</div>';
+  });
+  TAXA_LOADING=Promise.all([
+    fetch(TAXA_INDEX_URL+'?refresh='+Date.now(),{cache:'no-store'})
+      .then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
+    ensureWorldData().catch(err=>{console.warn('Taxon map unavailable',err);return null;})
+  ])
+    .then(([d])=>{
       TAXA_INDEX=d;
       if(!d.taxa?.length){
-        el('taxon-results').innerHTML='<div class="taxon-loading">Taxonomy index is being built. Try again after the next data refresh.</div>';
+        ['left','right'].forEach(side=>{
+          el('taxon-results-'+side).innerHTML='<div class="taxon-loading">Taxonomy index is being built. Try again after the next data refresh.</div>';
+        });
         return;
       }
-      renderTaxonMatches(el('taxon-search').value);
+      renderTaxonMatches(el('taxon-search-left').value,'left');
+      renderTaxonMatches(el('taxon-search-right').value,'right');
     })
     .catch(err=>{
       console.error(err);
-      el('taxon-results').innerHTML='<div class="taxon-loading">Taxonomy index unavailable.</div>';
+      ['left','right'].forEach(side=>{
+        el('taxon-results-'+side).innerHTML='<div class="taxon-loading">Taxonomy index unavailable.</div>';
+      });
     })
     .finally(()=>{TAXA_LOADING=null;});
   return TAXA_LOADING;
 }
 
-function renderTaxonMatches(raw){
+function renderTaxonMatches(raw,side){
   if(!TAXA_INDEX?.taxa?.length)return;
   const q=String(raw||'').trim().toLowerCase();
-  let rows=TAXA_INDEX.taxa;
+  let rows=TAXA_INDEX.taxa.slice();
   if(q){
     rows=rows.filter(x=>x.name.toLowerCase().includes(q));
     rows.sort((a,b)=>{
@@ -1066,60 +1093,69 @@ function renderTaxonMatches(raw){
     rows=rows.filter(x=>x.rank==='order').sort((a,b)=>Number(b.assemblies||0)-Number(a.assemblies||0));
   }
   rows=rows.slice(0,12);
-  const box=el('taxon-results');
+  const box=el('taxon-results-'+side);
   box.innerHTML=(q?'':'<div class="taxon-results-label">Most sequenced orders</div>')+
     rows.map(x=>{
       const context=[x.class,x.phylum].filter(Boolean).join(' · ');
-      return `<button type="button" data-taxid="${x.taxid}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.rank)}${context?' · '+esc(context):''}</small></span><span>${fmt(x.assemblies)}</span></button>`;
+      return '<button type="button" data-taxid="'+x.taxid+'" class="taxon-result"><span><strong>'+esc(x.name)+'</strong><small>'+esc(x.rank)+(context?' · '+esc(context):'')+'</small></span><span>'+fmt(x.assemblies)+'</span></button>';
     }).join('');
   box.querySelectorAll('button[data-taxid]').forEach(btn=>btn.addEventListener('click',()=>{
     const meta=TAXA_INDEX.taxa.find(x=>String(x.taxid)===btn.dataset.taxid);
-    if(meta)selectTaxon(meta);
+    if(meta)selectTaxon(meta,side);
   }));
 }
 
-async function selectTaxon(meta){
-  el('taxon-search').value=meta.name;
-  el('taxon-results').innerHTML='';
-  el('taxon-empty').innerHTML='<p>Loading '+esc(meta.name)+'…</p>';
-  el('taxon-empty').hidden=false;
-  el('taxon-content').hidden=true;
+async function selectTaxon(meta,side){
+  el('taxon-search-'+side).value=meta.name;
+  el('taxon-results-'+side).innerHTML='';
+  el('taxon-empty-'+side).innerHTML='<p>Loading '+esc(meta.name)+'…</p>';
+  el('taxon-empty-'+side).hidden=false;
+  el('taxon-content-'+side).hidden=true;
   try{
-    const r=await fetch(`../data/taxa/${meta.taxid}.json`);
-    if(!r.ok)throw Error(r.status);
-    const t=await r.json();
-    renderTaxon(t);
+    let t=TAXON_CACHE.get(String(meta.taxid));
+    if(!t){
+      const r=await fetch('../data/taxa/'+meta.taxid+'.json?refresh='+Date.now(),{cache:'no-store'});
+      if(!r.ok)throw Error(r.status);
+      t=await r.json();
+      TAXON_CACHE.set(String(meta.taxid),t);
+    }
+    TAXON_SELECTED[side]=t;
+    renderTaxonComparison();
   }catch(err){
     console.error(err);
-    el('taxon-empty').innerHTML='<p>Taxon history unavailable for '+esc(meta.name)+'.</p>';
+    el('taxon-empty-'+side).innerHTML='<p>Taxon history unavailable for '+esc(meta.name)+'.</p>';
   }
 }
 
-function renderTaxon(t){
-  el('taxon-empty').hidden=true;
-  el('taxon-content').hidden=false;
-  el('taxon-rank').textContent=t.rank;
-  el('taxon-name').textContent=t.name;
+function taxonLineage(t){
   const lineage=[];
-  if(t.phylum?.name && t.phylum.name!==t.name)lineage.push(t.phylum.name);
-  if(t.class?.name && t.class.name!==t.name)lineage.push(t.class.name);
-  if(t.rank==='order')lineage.push(t.name);
-  el('taxon-lineage').textContent=lineage.join(' → ');
+  if(t?.phylum?.name && t.phylum.name!==t.name)lineage.push(t.phylum.name);
+  if(t?.class?.name && t.class.name!==t.name)lineage.push(t.class.name);
+  if(t?.rank==='order')lineage.push(t.name);
+  return lineage.join(' → ');
+}
 
-  el('taxon-assemblies').textContent=fmt(t.stats?.assemblies);
-  el('taxon-species').textContent=fmt(t.stats?.species);
-  el('taxon-first').textContent=prettyDate(t.stats?.first_deposit);
-  el('taxon-year-assemblies').textContent=fmt(t.stats?.past_year_assemblies);
-  el('taxon-year-species').textContent=fmt(t.stats?.past_year_species);
+function taxonYears(selected){
+  const ys=selected.flatMap(t=>(t?.yearly||[]).map(x=>Number(x.year))).filter(Number.isFinite);
+  if(!ys.length)return [];
+  const lo=Math.min(...ys),hi=Math.max(...ys);
+  return Array.from({length:hi-lo+1},(_,i)=>lo+i);
+}
 
-  let ca=0,cf=0;
-  const cumulative=(t.yearly||[]).map(x=>({
-    year:String(x.year),
-    assemblies:(ca+=Number(x.assemblies||0)),
-    first:(cf+=Number(x.first_time_species||0))
-  }));
-  drawDualChart('taxon-cumulative-chart',cumulative);
+function taxonCumulativeRows(t,years){
+  if(!t)return [];
+  const by=new Map((t.yearly||[]).map(x=>[Number(x.year),x]));
+  let assemblies=0,first=0;
+  return years.map(year=>{
+    const r=by.get(year)||{};
+    assemblies+=Number(r.assemblies||0);
+    first+=Number(r.first_time_species||0);
+    return {year:String(year),assemblies,first};
+  });
+}
 
+function taxonRecentRows(t){
+  if(!t)return [];
   const sparse=new Map((t.recent_daily||[]).map(x=>[x.date,Number(x.assemblies||0)]));
   const anchor=TAXA_INDEX?.generated_at?new Date(TAXA_INDEX.generated_at):new Date();
   const end=new Date(Date.UTC(anchor.getUTCFullYear(),anchor.getUTCMonth(),anchor.getUTCDate()));
@@ -1129,8 +1165,107 @@ function renderTaxon(t){
     const ds=d.toISOString().slice(0,10);
     recent.push({date:ds,assemblies:sparse.get(ds)||0});
   }
-  const recentBusiness=businessDayRows(recent);
-  drawLineChart('taxon-recent-chart',recentBusiness,'assemblies',recentBusiness.map(x=>x.date),'year');
+  return businessDayRows(recent);
+}
+
+function renderTaxonComparison(){
+  const selected=[TAXON_SELECTED.left,TAXON_SELECTED.right].filter(Boolean);
+  if(!selected.length)return;
+
+  const years=taxonYears(selected);
+  const cumulative={
+    left:taxonCumulativeRows(TAXON_SELECTED.left,years),
+    right:taxonCumulativeRows(TAXON_SELECTED.right,years)
+  };
+  const recent={
+    left:taxonRecentRows(TAXON_SELECTED.left),
+    right:taxonRecentRows(TAXON_SELECTED.right)
+  };
+
+  const cumulativeMax=niceMax(Math.max(0,...['left','right'].flatMap(side=>
+    cumulative[side].flatMap(x=>[Number(x.assemblies||0),Number(x.first||0)])
+  )));
+  const recentMax=niceMax(Math.max(0,...['left','right'].flatMap(side=>
+    recent[side].map(x=>Number(x.assemblies||0))
+  )));
+  const mapMax=Math.max(1,...selected.flatMap(t=>(t.countries||[]).map(c=>Number(c.assemblies||0))));
+
+  ['left','right'].forEach(side=>{
+    const t=TAXON_SELECTED[side];
+    if(!t)return;
+    el('taxon-empty-'+side).hidden=true;
+    el('taxon-content-'+side).hidden=false;
+    el('taxon-rank-'+side).textContent=t.rank;
+    el('taxon-name-'+side).textContent=t.name;
+    el('taxon-lineage-'+side).textContent=taxonLineage(t);
+    el('taxon-assemblies-'+side).textContent=fmt(t.stats?.assemblies);
+    el('taxon-species-'+side).textContent=fmt(t.stats?.species);
+    el('taxon-first-'+side).textContent=prettyDate(t.stats?.first_deposit);
+    el('taxon-year-assemblies-'+side).textContent=fmt(t.stats?.past_year_assemblies);
+    el('taxon-year-species-'+side).textContent=fmt(t.stats?.past_year_species);
+
+    drawDualChart('taxon-cumulative-chart-'+side,cumulative[side],cumulativeMax);
+    drawLineChart(
+      'taxon-recent-chart-'+side,recent[side],'assemblies',
+      recent[side].map(x=>x.date),'year',recentMax
+    );
+    drawTaxonOriginMap(side,t,mapMax);
+  });
+}
+
+function drawTaxonOriginMap(side,t,sharedMax){
+  const svgEl=el('taxon-map-'+side);
+  const legend=el('taxon-map-legend-'+side);
+  const status=el('taxon-map-status-'+side);
+  if(!svgEl)return;
+  if(!WORLD_DATA||!window.d3||!window.topojson){
+    svgEl.innerHTML='';
+    legend.innerHTML='';
+    status.textContent='World map unavailable.';
+    return;
+  }
+
+  const rows=t.countries||[];
+  const byNumeric=new Map(rows.map(c=>[String(c.iso_n3||'').padStart(3,'0'),c]));
+  const svg=d3.select(svgEl);
+  svg.selectAll('*').remove();
+  const width=520,height=285;
+  const geo=topojson.feature(WORLD_DATA,WORLD_DATA.objects.countries);
+  const projection=d3.geoNaturalEarth1().fitExtent([[5,5],[width-5,height-5]],geo);
+  const path=d3.geoPath(projection);
+  const scale=d3.scaleSequentialSqrt([0,Math.max(1,sharedMax)],d3.interpolateBlues);
+  const tip=el('chart-tooltip');
+
+  svg.append('path').datum({type:'Sphere'}).attr('class','map-ocean').attr('d',path);
+  svg.append('g').selectAll('path')
+    .data(geo.features)
+    .join('path')
+    .attr('class','taxon-country-shape')
+    .attr('d',path)
+    .attr('fill',d=>{
+      const c=byNumeric.get(String(d.id??'').padStart(3,'0'));
+      return c?scale(Number(c.assemblies||0)):'#e3e6ea';
+    })
+    .on('pointerenter pointermove',function(ev,d){
+      d3.select(this).classed('is-hovered',true);
+      const c=byNumeric.get(String(d.id??'').padStart(3,'0'));
+      const name=c?.name||d.properties?.name||'Country';
+      tip.innerHTML=c
+        ? '<strong>'+esc(name)+'</strong><span>'+fmt(c.assemblies)+' '+esc(t.name)+' assemblies with this BioSample origin</span>'
+        : '<strong>'+esc(name)+'</strong><span>No assigned '+esc(t.name)+' assembly origins</span>';
+      tip.hidden=false;positionTooltip(ev,tip);
+    })
+    .on('pointerleave',function(){
+      d3.select(this).classed('is-hovered',false);
+      tip.hidden=true;
+    });
+
+  legend.innerHTML='<span>Assemblies with BioSample origin</span><div class="map-gradient"></div><div class="map-legend-ticks"><span>0</span><span>'+fmt(sharedMax)+'</span></div>';
+  const assigned=Number(t.stats?.origin_assigned_assemblies||0);
+  const total=Number(t.stats?.assemblies||0);
+  status.textContent=assigned
+    ? fmt(assigned)+' of '+fmt(total)+' assemblies have a resolved sample-origin country ('+fmt1(100*assigned/Math.max(1,total))+'%).'
+    : 'No resolved sample-origin country data are available for this taxon yet.';
 }
 
 function niceMax(v){
@@ -1154,10 +1289,10 @@ function xLabel(mode,label){
   return Number.isNaN(d.getTime())?label:d.toLocaleDateString([], {month:'short',day:'numeric'});
 }
 
-function drawLineChart(id,rows,key,labels,mode){
+function drawLineChart(id,rows,key,labels,mode,forcedMax=null){
   const svg=el(id);if(!svg||!rows.length){if(svg)svg.innerHTML='';return;}
   const w=860,h=320,L=60,R=18,T=12,B=42,iw=w-L-R,ih=h-T-B;
-  const vals=rows.map(x=>Number(x[key]||0)),max=niceMax(Math.max(...vals));
+  const vals=rows.map(x=>Number(x[key]||0)),max=forcedMax==null?niceMax(Math.max(...vals)):Math.max(1,Number(forcedMax));
   const pts=rows.map((x,i)=>[L+iw*(rows.length===1?.5:i/(rows.length-1)),T+ih*(1-Number(x[key]||0)/max)]);
   let html='';
   for(let i=0;i<=4;i++){const val=max*i/4,y=T+ih*(1-i/4);html+=`<line class="gridline" x1="${L}" y1="${y}" x2="${w-R}" y2="${y}"></line><text class="tick-label" x="${L-8}" y="${y+4}" text-anchor="end">${fmt(Math.round(val))}</text>`;}
@@ -1170,10 +1305,10 @@ function drawLineChart(id,rows,key,labels,mode){
   attachChartHover(svg,rows,[key],labels,mode,{L,R,T,B,w,h,max});
 }
 
-function drawDualChart(id,rows){
+function drawDualChart(id,rows,forcedMax=null){
   const svg=el(id);if(!svg||!rows.length){if(svg)svg.innerHTML='';return;}
   const w=860,h=320,L=60,R=18,T=12,B=42,iw=w-L-R,ih=h-T-B;
-  const max=niceMax(Math.max(...rows.flatMap(x=>[Number(x.assemblies||0),Number(x.first||0)])));
+  const max=forcedMax==null?niceMax(Math.max(...rows.flatMap(x=>[Number(x.assemblies||0),Number(x.first||0)]))):Math.max(1,Number(forcedMax));
   let html='';
   for(let i=0;i<=4;i++){const val=max*i/4,y=T+ih*(1-i/4);html+=`<line class="gridline" x1="${L}" y1="${y}" x2="${w-R}" y2="${y}"></line><text class="tick-label" x="${L-8}" y="${y+4}" text-anchor="end">${fmt(Math.round(val))}</text>`;}
   html+=`<line class="axis" x1="${L}" y1="${T}" x2="${L}" y2="${h-B}"></line><line class="axis" x1="${L}" y1="${h-B}" x2="${w-R}" y2="${h-B}"></line>`;

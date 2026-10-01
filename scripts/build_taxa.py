@@ -11,6 +11,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+from build_countries import country_from_geo, geo_loc_name
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "taxa"
 TAXDUMP_URL = "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
@@ -141,6 +143,7 @@ def main():
         recent_species = defaultdict(set)
         species_first = {}
         species_taxa = {}
+        country_meta = {}
 
         def ensure_taxon(tid, rk, lin):
             if tid not in agg:
@@ -163,6 +166,8 @@ def main():
                     "last_deposit": None,
                     "yearly": defaultdict(int),
                     "recent_daily": defaultdict(int),
+                    "countries": defaultdict(int),
+                    "origin_assigned": 0,
                 }
             return agg[tid]
 
@@ -199,6 +204,15 @@ def main():
                 continue
 
             lin = lineage(taxid)
+            country = country_from_geo(geo_loc_name(report))
+            if country:
+                country_meta[country["iso3"]] = {
+                    "iso2": country["iso2"],
+                    "iso3": country["iso3"],
+                    "iso_n3": country["iso_n3"],
+                    "name": country["name"],
+                }
+
             taxon_ids = []
             if lin.get("phylum"):
                 taxon_ids.append((lin["phylum"], "phylum"))
@@ -231,6 +245,10 @@ def main():
                 if release >= recent_cutoff:
                     rec["recent_daily"][release] += 1
                     recent_species[tid].add(species_key)
+
+                if country:
+                    rec["origin_assigned"] += 1
+                    rec["countries"][country["iso3"]] += 1
 
                 key = (tid, species_key)
                 if key not in species_first or release < species_first[key]:
@@ -275,9 +293,20 @@ def main():
                     "last_deposit": rec["last_deposit"],
                     "past_year_assemblies": sum(rec["recent_daily"].values()),
                     "past_year_species": len(recent_species[tid]),
+                    "origin_assigned_assemblies": rec["origin_assigned"],
                 },
                 "yearly": yearly,
                 "recent_daily": recent_daily,
+                "countries": [
+                    {
+                        **country_meta[iso3],
+                        "assemblies": count,
+                    }
+                    for iso3, count in sorted(
+                        rec["countries"].items(),
+                        key=lambda kv: (-kv[1], country_meta[kv[0]]["name"]),
+                    )
+                ],
             }
             (OUT / f"{tid}.json").write_text(
                 json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n"
