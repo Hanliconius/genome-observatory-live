@@ -339,7 +339,7 @@ async function loadGenometrics(){
   el('genometrics-loading').hidden=false;
   el('genometrics-loading').textContent='Loading genometrics…';
   el('genometrics-content').hidden=true;
-  GENOMETRICS_LOADING=fetch(GENOMETRICS_URL)
+  GENOMETRICS_LOADING=fetch(GENOMETRICS_URL+'?refresh='+Date.now(),{cache:'no-store'})
     .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
     .then(d=>{GENOMETRICS_DATA=d;renderGenometrics();})
     .catch(err=>{
@@ -434,7 +434,16 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   const svg=el(svgId),legend=el(legendId);
   if(!svg||!legend)return;
   const rows=(trend?.years||[]).filter(x=>Number(x?.[reportedKey]||0)>0);
-  const series=(trend?.[seriesKey]||[]).slice(0,10);
+  let series=(trend?.[seriesKey]||[]).slice(0,10);
+  if(seriesKey==='technology_series'){
+    // Backward-safe: never render proximity-ligation as a primary sequencing technology,
+    // even if an older cached genometrics.json still lists it there.
+    series=series.filter(name=>name!=='Hi-C / proximity');
+  }else if(seriesKey==='proximity_series'&&!series.length){
+    // Older generated JSON stored proximity counts inside technology.
+    const hasLegacy=rows.some(row=>Number((row.technology||{})['Hi-C / proximity']||0)>0);
+    if(hasLegacy)series=['Hi-C / proximity'];
+  }
   if(!rows.length||!series.length){
     svg.innerHTML='<text class="genometrics-trend-empty" x="260" y="165" text-anchor="middle">Trend data unavailable until the next completed genometrics refresh.</text>';
     legend.innerHTML='';
@@ -449,7 +458,10 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   const countFor=(row,name)=>{
     if(seriesKey==='technology_series')return Number((row.technology||{})[name]||0);
     if(seriesKey==='assembler_series')return Number((row.assemblers||{})[name]||0);
-    if(seriesKey==='proximity_series')return Number(row.proximity||0);
+    if(seriesKey==='proximity_series'){
+      if(row.proximity!=null)return Number(row.proximity||0);
+      return Number((row.technology||{})['Hi-C / proximity']||0);
+    }
     return 0;
   };
   let html='';
@@ -461,8 +473,10 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   });
   html+='<line class="genometrics-trend-axis" x1="'+L+'" x2="'+(w-R)+'" y1="'+(T+ih)+'" y2="'+(T+ih)+'"></line>';
 
-  let tickYears=years.filter((yr,i)=>i===0||i===years.length-1||yr%5===0);
-  if(tickYears.length>7)tickYears=tickYears.filter((yr,i)=>i===0||i===tickYears.length-1||yr%10===0);
+  let tickYears=years.filter(yr=>yr%5===0);
+  if(!tickYears.length)tickYears=[xmin,xmax];
+  if(xmin<tickYears[0]-2)tickYears.unshift(xmin);
+  if(xmax>tickYears[tickYears.length-1]+2)tickYears.push(xmax);
   [...new Set(tickYears)].forEach(yr=>{
     const xx=x(yr);
     html+='<line class="genometrics-trend-tick" x1="'+xx+'" x2="'+xx+'" y1="'+(T+ih)+'" y2="'+(T+ih+5)+'"></line>';
@@ -611,7 +625,7 @@ function renderGenometrics(){
   );
   drawGenometricTrend(
     'genometrics-proximity-trend','genometrics-proximity-legend',methods,
-    'proximity_series','tech_reported','Hi-C / proximity use'
+    'proximity_series','assemblies','Hi-C / proximity use'
   );
   drawGenometricTrend(
     'genometrics-assembler-trend','genometrics-assembler-legend',methods,
@@ -626,8 +640,9 @@ function renderGenometrics(){
     (tracked?' ('+fmt1(100*techN/tracked)+'%). ':'; ')+
     'Hi-C/proximity methods are excluded from this panel; lines can overlap when hybrid primary sequencing was reported.';
   el('genometrics-proximity-denominator').textContent=
-    fmt(proximityN)+' tracked assemblies explicitly report Hi-C or another recognized proximity-ligation method in NCBI sequencing metadata. '+
-    'The yearly line uses assemblies with sequencing-technology metadata as its denominator.';
+    fmt(proximityN)+' of '+fmt(tracked)+' tracked assemblies explicitly report Hi-C or another recognized proximity-ligation method in NCBI sequencing metadata'+
+    (tracked?' ('+fmt1(100*proximityN/tracked)+'%). ':'; ')+
+    'The yearly line is the fraction of all qualifying assembly deposits released in that year that explicitly report proximity data.';
   el('genometrics-assembler-denominator').textContent=
     fmt(asmN)+' of '+fmt(tracked)+' tracked assemblies report a specific assembly method'+
     (tracked?' ('+fmt1(100*asmN/tracked)+'%). ':'; ')+
