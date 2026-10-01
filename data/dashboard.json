@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:11:09.693042+00:00",
+  "generated_at": "2026-10-01T23:30:42.682004+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48289,7 +48289,12 @@
       "family": "Lamiaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dracocephalum_moldavica_Sturm_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dracocephalum_moldavica_Sturm_-_detail.jpg",
+        "credit": "Johann Georg Sturm (Painter: Jacob Sturm) · Public domain",
+        "matched_name": "Dracocephalum moldavica"
+      }
     },
     {
       "accession": "GCA_062009917.1",
@@ -49987,7 +49992,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061561615.1",
@@ -50003,7 +50013,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061561605.1",
@@ -50019,7 +50034,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061561595.1",
@@ -50035,7 +50055,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061561575.1",
@@ -132285,7 +132310,12 @@
     "Cryptopygus clavatus": null,
     "Cypho purpurascens": null,
     "Cyprinus carpio haematopterus": null,
-    "Dendroctonus ponderosae": null,
+    "Dendroctonus ponderosae": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+      "credit": "Public domain",
+      "matched_name": "Dendroctonus ponderosae"
+    },
     "Derris elliptica": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Derris_elliptica_%28DITSL%29.JPG/960px-Derris_elliptica_%28DITSL%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Derris_elliptica_(DITSL).JPG",
@@ -132851,7 +132881,12 @@
       "matched_name": "Arachis hypogaea"
     },
     "Cobitis hankugensis": null,
-    "Dracocephalum moldavica": null,
+    "Dracocephalum moldavica": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dracocephalum_moldavica_Sturm_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dracocephalum_moldavica_Sturm_-_detail.jpg",
+      "credit": "Johann Georg Sturm (Painter: Jacob Sturm) · Public domain",
+      "matched_name": "Dracocephalum moldavica"
+    },
     "Eonycteris spelaea": null,
     "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)": null,
     "Epinephelus fuscoguttatus x Epinephelus lanceolatus": {
