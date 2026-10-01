@@ -589,7 +589,7 @@ function renderGenometrics(){
     (tracked?' ('+fmt1(100*techN/tracked)+'%). ':'; ')+
     'Lines are yearly percentages among metadata-bearing assemblies and can overlap for hybrid sequencing strategies.';
   el('genometrics-assembler-denominator').textContent=
-    fmt(asmN)+' of '+fmt(tracked)+' tracked assemblies report assembly-method metadata'+
+    fmt(asmN)+' of '+fmt(tracked)+' tracked assemblies report a specific assembly method'+
     (tracked?' ('+fmt1(100*asmN/tracked)+'%). ':'; ')+
     'Software versions and spelling variants are normalized into named assembler families; an assembly can mention more than one family.';
 
