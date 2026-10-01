@@ -83,6 +83,7 @@ document.querySelectorAll('.country-facet-tab').forEach(b=>b.addEventListener('c
   updateCountryFacetText();
   if(countryFacet==='sequencing') await loadSequencingCountries();
   renderCountryMap();
+  renderInstituteRanking();
   renderCountryMatches('');
   updateCountryCoverageText();
 }));
@@ -840,6 +841,7 @@ async function loadCountries(){
   if(COUNTRY_DATA && WORLD_DATA){
     if(countryFacet==='sequencing'&&!SEQ_COUNTRY_DATA) await loadSequencingCountries();
     renderCountryMap();
+    renderInstituteRanking();
     renderCountryMatches(el('country-search').value);
     if(selectedCountry) renderCountryDetail(selectedCountry);
     updateCountryCoverageText();
@@ -858,6 +860,7 @@ async function loadCountries(){
       WORLD_DATA=world;
       if(countryFacet==='sequencing') await loadSequencingCountries();
       renderCountryMap();
+      renderInstituteRanking();
       renderCountryMatches(el('country-search').value);
       updateCountryCoverageText();
     })
@@ -875,7 +878,7 @@ async function loadSequencingCountries(){
   el('country-map-status').textContent='Loading sequencing-center country data…';
   SEQ_COUNTRY_LOADING=fetch(SEQUENCING_COUNTRY_URL)
     .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
-    .then(d=>{SEQ_COUNTRY_DATA=d;return d;})
+    .then(d=>{SEQ_COUNTRY_DATA=d;renderInstituteRanking();return d;})
     .catch(err=>{
       console.error(err);
       el('country-map-status').textContent='Sequencing-center country data are unavailable until the next data refresh.';
@@ -883,6 +886,58 @@ async function loadSequencingCountries(){
     })
     .finally(()=>{SEQ_COUNTRY_LOADING=null;});
   return SEQ_COUNTRY_LOADING;
+}
+
+function renderInstituteRanking(){
+  const panel=el('institute-ranking-panel');
+  const svg=el('institute-ranking-chart');
+  if(!panel||!svg)return;
+  const active=countryFacet==='sequencing';
+  panel.hidden=!active;
+  if(!active)return;
+
+  const rows=(SEQ_COUNTRY_DATA?.top_institutes||[]).slice(0,10);
+  if(!rows.length){
+    svg.innerHTML='<text class="institute-ranking-empty" x="550" y="210" text-anchor="middle">Institute ranking unavailable until the next institute-country refresh.</text>';
+    el('institute-ranking-note').textContent='';
+    return;
+  }
+
+  const w=1100,h=430,L=300,R=72,T=20,B=24,iw=w-L-R;
+  const rowH=(h-T-B)/rows.length;
+  const max=Math.max(1,...rows.map(x=>Number(x.assemblies||0)));
+  const scale=v=>iw*Number(v||0)/max;
+  let out='';
+  rows.forEach((r,i)=>{
+    const y=T+i*rowH+4;
+    const bh=Math.max(12,rowH-9);
+    const bw=scale(r.assemblies);
+    out+='<text class="institute-ranking-label" x="'+(L-12)+'" y="'+(y+bh/2+4)+'" text-anchor="end">'+esc(r.name)+'</text>';
+    out+='<rect class="institute-ranking-bar" data-index="'+i+'" x="'+L+'" y="'+y.toFixed(2)+'" width="'+Math.max(1,bw).toFixed(2)+'" height="'+bh.toFixed(2)+'" rx="2"></rect>';
+    out+='<text class="institute-ranking-value" x="'+(L+bw+8).toFixed(2)+'" y="'+(y+bh/2+4)+'">'+fmt(r.assemblies)+'</text>';
+  });
+  svg.innerHTML=out;
+
+  const resolved=Number(SEQ_COUNTRY_DATA?.coverage?.assemblies_with_resolved_institute_country||0);
+  el('institute-ranking-note').textContent=fmt(resolved)+' assemblies have a resolved institute-country association.';
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.institute-ranking-bar').forEach(bar=>{
+    const row=rows[Number(bar.dataset.index)];
+    const show=ev=>{
+      const pct=resolved?100*Number(row.assemblies||0)/resolved:0;
+      tip.innerHTML='<strong>'+esc(row.name)+'</strong>'+
+        '<span>'+fmt(row.assemblies)+' associated assemblies</span>'+
+        '<span>'+fmt1(pct)+'% of assemblies with resolved institute provenance</span>'+
+        (row.country?'<span>'+esc(row.country)+'</span>':'');
+      tip.hidden=false;
+      bar.classList.add('is-hovered');
+      positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
+    bar.onpointerenter=show;
+    bar.onpointermove=show;
+    bar.onpointerleave=hide;
+  });
 }
 
 function countryByNumeric(id){

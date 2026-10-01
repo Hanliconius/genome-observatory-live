@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001g" />
+  <link rel="stylesheet" href="styles.css?v=20261001h" />
 </head>
 <body>
   <header class="site-head">
@@ -401,6 +401,18 @@
         <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
       </article>
 
+      <article id="institute-ranking-panel" class="panel institute-ranking-panel" hidden>
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Institute ranking</p>
+            <h2 class="panel-title">Top 10 institutes</h2>
+            <p class="taxon-intro">Assemblies associated with each resolved sequencing institute. SRA sequencing-center names are preferred; assembly submitter is the fallback when no usable SRA center is available.</p>
+          </div>
+          <p class="note" id="institute-ranking-note"></p>
+        </div>
+        <svg id="institute-ranking-chart" class="institute-ranking-chart" viewBox="0 0 1100 430" preserveAspectRatio="none" role="img" aria-label="Top ten institutes by associated genome assemblies"></svg>
+      </article>
+
       <article class="country-search-panel">
         <div>
           <p class="panel-kicker">Country history</p>
@@ -558,6 +570,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001g"></script>
+  <script src="app.js?v=20261001h"></script>
 </body>
 </html>

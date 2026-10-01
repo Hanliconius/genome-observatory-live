@@ -748,3 +748,19 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   border:2px solid #2e6ea6;
   flex:0 0 auto;
 }
+
+
+/* By-institute global ranking */
+.institute-ranking-panel{border:1px solid var(--line-dark);border-top:0}
+.institute-ranking-panel .panel-head{align-items:end}
+.institute-ranking-panel .taxon-intro{max-width:760px;margin-bottom:0}
+.institute-ranking-chart{display:block;width:100%;height:430px;margin-top:12px;overflow:visible}
+.institute-ranking-bar{fill:var(--accent);opacity:.82;cursor:crosshair;transition:opacity .1s ease}
+.institute-ranking-bar.is-hovered{opacity:1}
+.institute-ranking-label{fill:var(--ink);font-size:12px}
+.institute-ranking-value{fill:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+.institute-ranking-empty{fill:var(--muted);font-size:13px}
+@media(max-width:760px){
+  .institute-ranking-chart{height:390px}
+  .institute-ranking-label{font-size:10px}
+}

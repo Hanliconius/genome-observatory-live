@@ -625,6 +625,8 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
     countries = {}
     coverage = Counter()
     unresolved_centers = Counter()
+    global_institutes = Counter()
+    global_institute_countries = defaultdict(Counter)
 
     def ensure(country):
         key = country["iso3"]
@@ -674,6 +676,28 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
 
         if len(assignments) > 1:
             coverage["assemblies_with_multiple_center_countries"] += 1
+
+        # Count each canonical institute at most once per assembly. This keeps
+        # case/spelling variants together when ROR or a curated alias supplies
+        # a canonical organization name, while preserving legitimate hybrid
+        # institute associations.
+        assembly_institutes = set()
+        for assignment in assignments:
+            iso3 = assignment["country"]["iso3"]
+            for label in assignment["labels"]:
+                if not label:
+                    continue
+                info = (
+                    resolved_center_country(label, ror_cache)
+                    if meta["mode"] == "sra_center"
+                    else resolved_submitter_country(label, submitter_cache)
+                ) or {}
+                canonical = str(info.get("ror_name") or label).strip()
+                if canonical:
+                    assembly_institutes.add((canonical, iso3))
+        for canonical, iso3 in assembly_institutes:
+            global_institutes[canonical] += 1
+            global_institute_countries[canonical][iso3] += 1
 
         for assignment in assignments:
             info = assignment["country"]
@@ -770,6 +794,21 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
         "unresolved_centers": [
             {"name": name, "assemblies": n}
             for name, n in unresolved_centers.most_common(25)
+        ],
+        "top_institutes": [
+            {
+                "name": name,
+                "assemblies": n,
+                "country_iso3": (
+                    global_institute_countries[name].most_common(1)[0][0]
+                    if global_institute_countries[name] else None
+                ),
+                "country": (
+                    country_from_iso3(global_institute_countries[name].most_common(1)[0][0])["name"]
+                    if global_institute_countries[name] else None
+                ),
+            }
+            for name, n in global_institutes.most_common(10)
         ],
         "countries": rows,
     }
