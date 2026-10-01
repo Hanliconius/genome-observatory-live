@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-01T17:02:17.969891+00:00",
+  "generated_at": "2026-10-01T23:11:09.693042+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
       "assemblies": 43,
       "species": 15,
-      "first_time_species": 6
+      "first_time_species": 0
     },
     "year": {
       "assemblies": 6328,
       "species": 3950,
-      "first_time_species": 3268
+      "first_time_species": 3262
     },
     "all": {
-      "assemblies": 18826,
+      "assemblies": 18824,
       "species": 10539,
       "first_time_species": 10539
     }
@@ -47999,13 +47999,13 @@
       "date": "2026-09-28",
       "assemblies": 25,
       "species": 6,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-09-29",
       "assemblies": 16,
       "species": 7,
-      "first_time_species": 5
+      "first_time_species": 0
     },
     {
       "date": "2026-09-30",
@@ -48023,9 +48023,9 @@
   "yearly": [
     {
       "year": "2004",
-      "assemblies": 2,
-      "species": 2,
-      "first_time_species": 2
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     },
     {
       "year": "2005",
@@ -48157,7 +48157,7 @@
       "year": "2026",
       "assemblies": 5205,
       "species": 3474,
-      "first_time_species": 2521
+      "first_time_species": 2515
     }
   ],
   "groups_week": [
@@ -48217,11 +48217,11 @@
   "milestones": [
     {
       "threshold": 10,
-      "date": "2005-12-14"
+      "date": "2006-04-20"
     },
     {
       "threshold": 100,
-      "date": "2011-12-13"
+      "date": "2012-01-13"
     },
     {
       "threshold": 1000,
@@ -48229,28 +48229,28 @@
     },
     {
       "threshold": 10000,
-      "date": "2025-02-15"
+      "date": "2025-02-16"
     }
   ],
   "featured_assembly": {
-    "accession": "GCA_062009917.1",
-    "organism_name": "Arachis hypogaea",
-    "common_name": "peanut",
-    "tax_id": 3818,
+    "accession": "GCA_062009919.1",
+    "organism_name": "Epinephelus fuscoguttatus x Epinephelus lanceolatus",
+    "common_name": "hybrid giant tiger grouper",
+    "tax_id": 1074816,
     "release_date": "2026-09-29",
     "assembly_level": "Chromosome",
-    "assembly_name": "ASM62009917v1",
-    "total_sequence_length": 2540169500,
-    "chromosome_count": 20,
-    "genus": "Arachis",
-    "family": "Fabaceae",
-    "phylum": "Streptophyta",
-    "group": "Plants",
+    "assembly_name": "ASM62009919v1",
+    "total_sequence_length": 1116780029,
+    "chromosome_count": 24,
+    "genus": "Epinephelus",
+    "family": "Serranidae",
+    "phylum": "Chordata",
+    "group": "Animals",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-      "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-      "matched_name": "Arachis hypogaea"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
+      "credit": "Joris Joostensz Laerle (attributed) · Public domain",
+      "matched_name": "Serranidae"
     }
   },
   "recent_assemblies": [
@@ -48268,7 +48268,12 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
+        "credit": "Joris Joostensz Laerle (attributed) · Public domain",
+        "matched_name": "Serranidae"
+      }
     },
     {
       "accession": "GCA_062009918.1",
@@ -48627,7 +48632,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009458.1",
@@ -48643,7 +48653,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009445.1",
@@ -48659,7 +48674,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009444.1",
@@ -48675,7 +48695,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009442.1",
@@ -48691,7 +48716,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009435.1",
@@ -48707,7 +48737,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009434.1",
@@ -48723,7 +48758,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009433.1",
@@ -48739,7 +48779,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009422.1",
@@ -48755,7 +48800,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009420.1",
@@ -48771,7 +48821,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009418.1",
@@ -48787,7 +48842,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009401.1",
@@ -48803,7 +48863,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009400.1",
@@ -48819,7 +48884,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009399.1",
@@ -48835,7 +48905,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009389.1",
@@ -48851,7 +48926,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009385.1",
@@ -48867,7 +48947,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009380.1",
@@ -48883,7 +48968,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062004762.1",
@@ -52237,7 +52327,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg/960px-Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
+        "credit": "Ishizaki Yūshi · Public domain",
+        "matched_name": "Vigna angularis"
+      }
     },
     {
       "accession": "GCA_061372265.1",
@@ -52253,7 +52348,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg/960px-Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
+        "credit": "Ishizaki Yūshi · Public domain",
+        "matched_name": "Vigna angularis"
+      }
     },
     {
       "accession": "GCA_061372115.1",
@@ -121051,52 +121151,34 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Pinus tabuliformis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1"
-      },
-      {
-        "species": "Salvia hispanica",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-24",
-        "assembly": "Shi_PSC_v1"
+        "species": "Artemia sp. Qi Xiang Cuo",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-28",
+        "assembly": "ASM4972408v1 (GCF_049724085.1)"
       },
       {
         "species": "Pogonomyrmex barbatus",
-        "status": "Automated processing in progress",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-28",
-        "assembly": "ASM5579846v1"
+        "assembly": "ASM5579846v1 (GCF_055798465.1)"
       },
       {
-        "species": "Actinia tenebrosa",
-        "status": "In sequence databases",
-        "freeze_date": "2026-09-24",
-        "assembly": "QUT_ActTen_1.0 (GCF_029948245.1)"
+        "species": "Danio rerio",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-08-31",
+        "assembly": "GRCz12tu (GCF_049306965.2)"
       },
       {
-        "species": "Prunus mume",
+        "species": "Danio rerio",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-08-31",
+        "assembly": "GRCz13ab (GCF_052040795.2)"
+      },
+      {
+        "species": "Salvia hispanica",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-24",
-        "assembly": "ASM2933915v1 (GCF_029339155.1)"
-      },
-      {
-        "species": "Artemia sp. Qi Xiang Cuo",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-28",
-        "assembly": "ASM4972408v1"
-      },
-      {
-        "species": "Urtica dioica subsp. dioica",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-28",
-        "assembly": "U.dioica_male_clone48M_v1_H2"
-      },
-      {
-        "species": "Actinidia eriantha",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "HAP1 (GCF_982292455.1)"
+        "assembly": "Shi_PSC_v1 (GCF_029641045.1)"
       },
       {
         "species": "Pimephales promelas",
@@ -121105,89 +121187,86 @@
         "assembly": "fPimPro1.hap1.1"
       },
       {
-        "species": "Hippocampus bargibanti",
+        "species": "Rhopilema esculentum",
         "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-25",
-        "assembly": "ASM5194339v1 (GCF_051943395.1)"
+        "freeze_date": "2026-09-29",
+        "assembly": "ASM5794536v1 (GCF_057945365.1)"
       },
       {
-        "species": "Nelumbo lutea",
+        "species": "Pocillopora damicornis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-30",
+        "assembly": "jaPocDami1.2"
+      },
+      {
+        "species": "Actinia tenebrosa",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-24",
-        "assembly": "American lotus-T2T (GCF_056320005.1)"
+        "assembly": "QUT_ActTen_1.0 (GCF_029948245.1)"
       },
       {
-        "species": "Atractosteus spatula",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-24",
-        "assembly": "fAtrSpa1.hap1 (GCF_055471065.1)"
+        "species": "Pinus tabuliformis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1"
       },
       {
-        "species": "Amborella trichopoda",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-10",
-        "assembly": "AtrichopodaSantaCruz75HAP2 v2.0 (GCF_054954075.1)"
-      },
-      {
-        "species": "Nelumbo nucifera",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-22",
-        "assembly": "China Antique-T2T (GCF_055504915.1)"
-      },
-      {
-        "species": "Theobroma cacao",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-18",
-        "assembly": "ASM5381388v1 (GCF_053813885.1)"
-      },
-      {
-        "species": "Phoenix dactylifera",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "Male_Medina_1_primary_PhDact_Kaust_v1.1 (GCF_054393675.1)"
-      },
-      {
-        "species": "Moschus berezovskii",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-15",
-        "assembly": "NW_MosBer_1.0 (GCF_049115385.1)"
-      },
-      {
-        "species": "Erythranthe guttata",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "IM_541 (GCF_056151865.1)"
-      },
-      {
-        "species": "Pyrus communis",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-17",
-        "assembly": "ASM4128382v1 (GCF_041283825.1)"
-      },
-      {
-        "species": "Sesamum indicum",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-21",
-        "assembly": "ASM2616843v1 (GCF_026168435.1)"
-      },
-      {
-        "species": "Danio rerio",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-08-31",
-        "assembly": "GRCz12tu (GCF_049306965.2)"
-      },
-      {
-        "species": "Danio rerio",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-08-31",
-        "assembly": "GRCz13ab (GCF_052040795.2)"
+        "species": "Urtica dioica subsp. dioica",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "U.dioica_male_clone48M_v1_H2"
       }
     ],
     "recent_completed": [
       {
+        "species": "Prunus mume",
+        "release_date": "2026-09-28",
+        "assembly": "ASM2933915v1 (GCF_029339155.1)"
+      },
+      {
+        "species": "Hippocampus bargibanti",
+        "release_date": "2026-09-26",
+        "assembly": "ASM5194339v1 (GCF_051943395.1)"
+      },
+      {
+        "species": "Nelumbo lutea",
+        "release_date": "2026-09-26",
+        "assembly": "American lotus-T2T (GCF_056320005.1)"
+      },
+      {
+        "species": "Atractosteus spatula",
+        "release_date": "2026-09-25",
+        "assembly": "fAtrSpa1.hap1 (GCF_055471065.1)"
+      },
+      {
+        "species": "Nelumbo nucifera",
+        "release_date": "2026-09-24",
+        "assembly": "China Antique-T2T (GCF_055504915.1)"
+      },
+      {
+        "species": "Sesamum indicum",
+        "release_date": "2026-09-24",
+        "assembly": "ASM2616843v1 (GCF_026168435.1)"
+      },
+      {
+        "species": "Amborella trichopoda",
+        "release_date": "2026-09-24",
+        "assembly": "AtrichopodaSantaCruz75HAP2 v2.0 (GCF_054954075.1)"
+      },
+      {
         "species": "Xenopus tropicalis",
         "release_date": "2026-09-24",
         "assembly": "UCB_Xtro_10.0 (GCF_000004195.4)"
+      },
+      {
+        "species": "Moschus berezovskii",
+        "release_date": "2026-09-23",
+        "assembly": "NW_MosBer_1.0 (GCF_049115385.1)"
+      },
+      {
+        "species": "Erythranthe guttata",
+        "release_date": "2026-09-23",
+        "assembly": "IM_541 (GCF_056151865.1)"
       },
       {
         "species": "Rhinolophus sinicus",
@@ -121195,9 +121274,29 @@
         "assembly": "RSI-T2T (GCF_057876585.1)"
       },
       {
+        "species": "Theobroma cacao",
+        "release_date": "2026-09-22",
+        "assembly": "ASM5381388v1 (GCF_053813885.1)"
+      },
+      {
+        "species": "Actinidia eriantha",
+        "release_date": "2026-09-22",
+        "assembly": "HAP1 (GCF_982292455.1)"
+      },
+      {
         "species": "Stylophora pistillata",
         "release_date": "2026-09-22",
         "assembly": "jaStyPist1.2 (GCF_964205215.1)"
+      },
+      {
+        "species": "Phoenix dactylifera",
+        "release_date": "2026-09-22",
+        "assembly": "Male_Medina_1_primary_PhDact_Kaust_v1.1 (GCF_054393675.1)"
+      },
+      {
+        "species": "Pyrus communis",
+        "release_date": "2026-09-22",
+        "assembly": "ASM4128382v1 (GCF_041283825.1)"
       },
       {
         "species": "Zootoca vivipara",
@@ -121423,21 +121522,6 @@
         "species": "Dipteris shenzhenensis",
         "release_date": "2026-08-20",
         "assembly": "Dip_SZ_1.0 (GCF_047967505.1)"
-      },
-      {
-        "species": "Zootermopsis nevadensis",
-        "release_date": "2026-08-20",
-        "assembly": "Znev_1.0 (GCF_977971745.1)"
-      },
-      {
-        "species": "Spodoptera litura",
-        "release_date": "2026-08-20",
-        "assembly": "ASM270686v4 (GCF_002706865.3)"
-      },
-      {
-        "species": "Azolla caroliniana",
-        "release_date": "2026-08-19",
-        "assembly": "voAzoCaro1.0.p (GCF_043228905.1)"
       }
     ]
   },
@@ -132726,7 +132810,12 @@
     },
     "Verweija noviomagensis": null,
     "Vespertilio sinensis": null,
-    "Vigna angularis": null,
+    "Vigna angularis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg/960px-Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
+      "credit": "Ishizaki Yūshi · Public domain",
+      "matched_name": "Vigna angularis"
+    },
     "Zanclus cornutus": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Zanclus_cornutus_in_Kona.jpg/960px-Zanclus_cornutus_in_Kona.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Zanclus_cornutus_in_Kona.jpg",
@@ -132765,7 +132854,12 @@
     "Dracocephalum moldavica": null,
     "Eonycteris spelaea": null,
     "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)": null,
-    "Epinephelus fuscoguttatus x Epinephelus lanceolatus": null,
+    "Epinephelus fuscoguttatus x Epinephelus lanceolatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
+      "credit": "Joris Joostensz Laerle (attributed) · Public domain",
+      "matched_name": "Serranidae"
+    },
     "Periploca sepium": null,
     "Puccinia hordei": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -134398,7 +134492,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "1074816": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "hybrid giant tiger grouper",
@@ -134417,7 +134510,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3706531": {},
     "27345": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "rust fungi & allies",
@@ -134427,6 +134519,8 @@
       "phylum": "Basidiomycota",
       "kingdom": "Fungi"
     },
+    "3700093": {},
+    "3706531": {},
     "3272347": {},
     "3680444": {}
   }
