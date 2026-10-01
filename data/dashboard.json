@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:42:13.234148+00:00",
+  "generated_at": "2026-10-01T23:57:19.791871+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -49449,7 +49449,12 @@
       "family": "Limnephilidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Hesperophylax_P1470947a.jpg/960px-Hesperophylax_P1470947a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hesperophylax_P1470947a.jpg",
+        "credit": "xpda · CC BY-SA 4.0",
+        "matched_name": "Hesperophylax"
+      }
     },
     {
       "accession": "GCA_061612335.1",
@@ -51408,7 +51413,12 @@
       "family": "Lutjanidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG/960px-Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG",
+        "credit": "Jean-Lou Justine · CC BY-SA 4.0",
+        "matched_name": "Lutjanus argentimaculatus"
+      }
     },
     {
       "accession": "GCA_988281325.1",
@@ -51867,7 +51877,12 @@
       "family": "Lutjanidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG/960px-Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG",
+        "credit": "Jean-Lou Justine · CC BY-SA 4.0",
+        "matched_name": "Lutjanus argentimaculatus"
+      }
     },
     {
       "accession": "GCA_988280975.1",
@@ -132415,7 +132430,12 @@
     "Halotydeus destructor": null,
     "Hemadas nubilipennis": null,
     "Hermenia verruculosa": null,
-    "Hesperophylax consimilis": null,
+    "Hesperophylax consimilis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Hesperophylax_P1470947a.jpg/960px-Hesperophylax_P1470947a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hesperophylax_P1470947a.jpg",
+      "credit": "xpda · CC BY-SA 4.0",
+      "matched_name": "Hesperophylax"
+    },
     "Heterocephalus glaber": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg/960px-%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:(A)_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_(arrow)_in_Heterocephalus_glaber.jpg",
@@ -132506,7 +132526,12 @@
       "credit": "USFWS Mountain-Prairie · Public domain",
       "matched_name": "Lota lota"
     },
-    "Lutjanus argentimaculatus": null,
+    "Lutjanus argentimaculatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG/960px-Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Lutjanus_argentimaculatus_JNC2123_New_Caledonia.JPG",
+      "credit": "Jean-Lou Justine · CC BY-SA 4.0",
+      "matched_name": "Lutjanus argentimaculatus"
+    },
     "Lycodon rosozonatus": null,
     "Macrophya ribis": null,
     "Malacanthus latovittatus": null,
