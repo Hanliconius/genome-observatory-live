@@ -613,6 +613,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 }
 .genometrics-trend-line{
   fill:none;
+  pointer-events:none;
   stroke-width:2.4;
   stroke-linecap:round;
   stroke-linejoin:round;
@@ -620,6 +621,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   opacity:.92;
 }
 .genometrics-trend-point{
+  pointer-events:none;
   stroke:#fff;
   stroke-width:1.5;
   vector-effect:non-scaling-stroke;
@@ -627,6 +629,18 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   transition:r .1s ease,opacity .1s ease;
 }
 .genometrics-trend-point.is-hovered{r:5;opacity:1}
+.genometrics-trend-hit{
+  fill:transparent;
+  pointer-events:all;
+  cursor:crosshair;
+}
+.genometrics-trend-guide{
+  stroke:var(--accent);
+  stroke-width:1;
+  stroke-dasharray:3 4;
+  vector-effect:non-scaling-stroke;
+  pointer-events:none;
+}
 .genometrics-trend-legend{
   display:flex;
   flex-wrap:wrap;
