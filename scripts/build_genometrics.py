@@ -501,6 +501,159 @@ def build_assembly_quality(records):
         "definition":"Current NCBI assembly statistics for the tracked chromosome-scale/complete GenBank collection."
     }
 
+
+TECH_RULES=[
+    ("Illumina", r"\billumina\b|\bnovaseq\b|\bhiseq\b|\bmiseq\b|\bnextseq\b|\biseq\b"),
+    ("PacBio HiFi", r"\bhifi\b|\bccs\b|circular consensus|\brevio\b"),
+    ("Oxford Nanopore", r"\boxford nanopore\b|\bnanopore\b|\bminion\b|\bpromethion\b|\bgridion\b"),
+    ("Hi-C / proximity", r"\bhi[- ]?c\b|\bomni[- ]?c\b|\bdovetail\b"),
+    ("10x Genomics", r"\b10x\b|\b10 x\b|10x genomics|linked[- ]?read|\bchromium\b"),
+    ("BGI / MGI", r"\bbgi\b|\bmgi\b|\bdnbseq\b|\bmgiseq\b"),
+    ("Sanger", r"\bsanger\b|capillary sequencing|\babi[ -]?3730\b"),
+    ("Ion Torrent", r"\bion torrent\b|\bion proton\b"),
+    ("SOLiD", r"\bsolid\b"),
+]
+ASSEMBLER_RULES=[
+    ("hifiasm", r"\bhifiasm\b"),
+    ("Canu / HiCanu", r"\bhicanu\b|\bcanu\b"),
+    ("FALCON", r"\bfalcon(?:[-_ ]?unzip)?\b"),
+    ("Flye", r"\bmetaflye\b|\bflye\b"),
+    ("Verkko", r"\bverkko\b"),
+    ("MaSuRCA", r"\bmasurca\b|\bma[- ]?su[- ]?r?ca\b"),
+    ("ALLPATHS-LG", r"\ballpaths(?:[-_ ]?lg)?\b"),
+    ("SOAPdenovo", r"\bsoapdenovo(?:2)?\b"),
+    ("SPAdes", r"\bspades\b"),
+    ("Supernova", r"\bsupernova\b"),
+    ("ABySS", r"\babyss\b"),
+    ("DISCOVAR", r"\bdiscovar\b"),
+    ("wtdbg2 / Redbean", r"\bwtdbg2\b|\bredbean\b"),
+    ("Shasta", r"\bshasta\b"),
+    ("Velvet", r"\bvelvet\b"),
+    ("Newbler", r"\bnewbler\b"),
+]
+
+def metadata_text(value):
+    if value is None:
+        return ""
+    if isinstance(value,list):
+        return "; ".join(str(x) for x in value if x not in (None,""))
+    if isinstance(value,dict):
+        return "; ".join(str(x) for x in value.values() if x not in (None,""))
+    return str(value)
+
+def classify_sequencing_tech(value):
+    raw=metadata_text(value)
+    s=raw.casefold()
+    if not s.strip():
+        return set()
+    out=set()
+    hifi=bool(re.search(TECH_RULES[1][1],s))
+    for label,pat in TECH_RULES:
+        if label=="PacBio HiFi":
+            if hifi: out.add(label)
+        elif re.search(pat,s):
+            out.add(label)
+    # PacBio is common in older assemblies without an explicit HiFi/CCS label.
+    if not hifi and re.search(r"\bpacbio\b|\bpacific biosciences\b|\bsmrt\b|\bsequel\b|\brs ?ii\b",s):
+        out.add("PacBio (other / unspecified)")
+    return out
+
+def classify_assembly_method(value):
+    s=metadata_text(value).casefold()
+    if not s.strip():
+        return set()
+    return {label for label,pat in ASSEMBLER_RULES if re.search(pat,s)}
+
+def release_year(value):
+    m=re.match(r"^(\d{4})",str(value or ""))
+    if not m:
+        return None
+    y=int(m.group(1))
+    now=datetime.now(timezone.utc).year
+    return y if 1990<=y<=now else None
+
+def build_method_trends(records):
+    years=defaultdict(lambda:{
+        "assemblies":0,
+        "tech_reported":0,
+        "assembler_reported":0,
+        "tech":Counter(),
+        "assemblers":Counter(),
+        "tech_unclassified":0,
+        "assembler_unclassified":0,
+    })
+    raw_tech=Counter()
+    raw_methods=Counter()
+
+    for rec in records:
+        year=release_year(rec.get("release_date"))
+        if year is None:
+            continue
+        y=years[year]
+        y["assemblies"]+=1
+
+        tech_raw=metadata_text(rec.get("sequencing_tech")).strip()
+        if tech_raw:
+            y["tech_reported"]+=1
+            raw_tech[tech_raw]+=1
+            cats=classify_sequencing_tech(tech_raw)
+            if cats:
+                y["tech"].update(cats)
+            else:
+                y["tech_unclassified"]+=1
+
+        method_raw=metadata_text(rec.get("assembly_method")).strip()
+        if method_raw:
+            y["assembler_reported"]+=1
+            raw_methods[method_raw]+=1
+            cats=classify_assembly_method(method_raw)
+            if cats:
+                y["assemblers"].update(cats)
+            else:
+                y["assembler_unclassified"]+=1
+
+    tech_totals=Counter()
+    assembler_totals=Counter()
+    for y in years.values():
+        tech_totals.update(y["tech"])
+        assembler_totals.update(y["assemblers"])
+
+    # Keep all normalized technology families; limit assembler lines to the
+    # most represented named assembler families so the browser chart stays legible.
+    tech_series=[
+        x for x,_ in sorted(tech_totals.items(), key=lambda kv:(-kv[1],kv[0]))
+    ]
+    assembler_series=[
+        x for x,_ in sorted(assembler_totals.items(), key=lambda kv:(-kv[1],kv[0]))[:8]
+    ]
+
+    rows=[]
+    for year in sorted(years):
+        y=years[year]
+        rows.append({
+            "year":year,
+            "assemblies":y["assemblies"],
+            "tech_reported":y["tech_reported"],
+            "assembler_reported":y["assembler_reported"],
+            "tech_unclassified":y["tech_unclassified"],
+            "assembler_unclassified":y["assembler_unclassified"],
+            "technology":{k:y["tech"].get(k,0) for k in tech_series},
+            "assemblers":{k:y["assemblers"].get(k,0) for k in assembler_series},
+        })
+
+    return {
+        "years":rows,
+        "technology_series":tech_series,
+        "assembler_series":assembler_series,
+        "technology_metadata_assemblies":sum(y["tech_reported"] for y in years.values()),
+        "assembler_metadata_assemblies":sum(y["assembler_reported"] for y in years.values()),
+        "technology_unclassified_assemblies":sum(y["tech_unclassified"] for y in years.values()),
+        "assembler_unclassified_assemblies":sum(y["assembler_unclassified"] for y in years.values()),
+        "top_raw_sequencing_tech":[{"value":k,"count":v} for k,v in raw_tech.most_common(25)],
+        "top_raw_assembly_methods":[{"value":k,"count":v} for k,v in raw_methods.most_common(25)],
+        "definition":"Year is the NCBI assembly release year. Each line is the percentage of assemblies with non-empty metadata in that year that mention the normalized technology or assembler family. One assembly can contribute to multiple lines, so percentages do not sum to 100%.",
+    }
+
 def sequence_report_page(batch,page_token=None):
     body={
         "accession": ",".join(batch),
@@ -904,6 +1057,9 @@ def main():
             "assembly_length":first(r,"assembly_stats.total_sequence_length","assemblyStats.totalSequenceLength"),
             "contig_n50":first(r,"assembly_stats.contig_n50","assemblyStats.contigN50"),
             "scaffold_n50":first(r,"assembly_stats.scaffold_n50","assemblyStats.scaffoldN50"),
+            "release_date":first(r,"assembly_info.release_date","assemblyInfo.releaseDate"),
+            "sequencing_tech":first(r,"assembly_info.sequencing_tech","assemblyInfo.sequencingTech"),
+            "assembly_method":first(r,"assembly_info.assembly_method","assemblyInfo.assemblyMethod"),
         })
 
     accessions=[x["accession"] for x in records]
@@ -942,6 +1098,7 @@ def main():
 
     karyotype_audit=build_karyotype_audit(records)
     assembly_quality=build_assembly_quality(records)
+    method_trends=build_method_trends(records)
 
     total=len(records)
     categories=[
@@ -986,8 +1143,9 @@ def main():
         "sex_chromosome_expected_vs_observed":expected_vs_observed,
         "karyotype_audit":karyotype_audit,
         "assembly_quality":assembly_quality,
+        "methods_through_time":method_trends,
         "source":{
-            "assembly_report":"NCBI Datasets genome assembly report (organelleInfo)",
+            "assembly_report":"NCBI Datasets genome assembly report (organelleInfo; assemblyInfo.releaseDate; assemblyInfo.sequencingTech; assemblyInfo.assemblyMethod)",
             "sequence_report":"NCBI Datasets genome sequence report (chrName; assembled-molecule/chromosome records)",
             "taxonomy":"NCBI Taxonomy; Viridiplantae taxid 33090",
             "tree_of_sex":"Tree of Sex karyotype snapshot dated 2022-10-09; original database described by The Tree of Sex Consortium (2014), Scientific Data 1:140015."
