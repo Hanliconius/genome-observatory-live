@@ -876,7 +876,7 @@ async function loadSequencingCountries(){
   if(SEQ_COUNTRY_DATA)return SEQ_COUNTRY_DATA;
   if(SEQ_COUNTRY_LOADING)return SEQ_COUNTRY_LOADING;
   el('country-map-status').textContent='Loading sequencing-center country data…';
-  SEQ_COUNTRY_LOADING=fetch(SEQUENCING_COUNTRY_URL)
+  SEQ_COUNTRY_LOADING=fetch(SEQUENCING_COUNTRY_URL+'?refresh='+Date.now(),{cache:'no-store'})
     .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
     .then(d=>{SEQ_COUNTRY_DATA=d;renderInstituteRanking();return d;})
     .catch(err=>{
@@ -896,7 +896,28 @@ function renderInstituteRanking(){
   panel.hidden=!active;
   if(!active)return;
 
-  const rows=(SEQ_COUNTRY_DATA?.top_institutes||[]).slice(0,10);
+  let rows=(SEQ_COUNTRY_DATA?.top_institutes||[]).slice(0,10);
+  if(!rows.length){
+    // Backward-safe fallback for older cached sequencing_countries.json files:
+    // combine the per-country institute snippets rather than rendering a blank panel.
+    const merged=new Map();
+    (SEQ_COUNTRY_DATA?.countries||[]).forEach(country=>{
+      (country.top_institutes||country.top_centers||[]).forEach(inst=>{
+        const key=String(inst.name||'').trim().toUpperCase();
+        if(!key)return;
+        const prev=merged.get(key)||{
+          name:String(inst.name||'').trim(),
+          assemblies:0,
+          country:country.name||null
+        };
+        prev.assemblies+=Number(inst.assemblies||0);
+        merged.set(key,prev);
+      });
+    });
+    rows=[...merged.values()]
+      .sort((a,b)=>Number(b.assemblies||0)-Number(a.assemblies||0))
+      .slice(0,10);
+  }
   if(!rows.length){
     svg.innerHTML='<text class="institute-ranking-empty" x="550" y="210" text-anchor="middle">Institute ranking unavailable until the next institute-country refresh.</text>';
     el('institute-ranking-note').textContent='';
