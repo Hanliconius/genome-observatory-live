@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001a" />
+  <link rel="stylesheet" href="styles.css?v=20261001b" />
 </head>
 <body>
   <header class="site-head">
@@ -222,20 +222,29 @@
             <p class="genometrics-denominator" id="genometrics-traits-denominator"></p>
           </article>
 
-          <article class="panel genometrics-card full-width genometrics-trend-card">
+          <article class="panel genometrics-card genometrics-trend-card">
             <p class="panel-kicker">Technology history</p>
             <h2 class="panel-title">Sequencing technologies through time</h2>
-            <p class="genometrics-summary">How the technologies behind chromosome-scale and complete eukaryotic assemblies have changed across NCBI release years. Lines show the percentage of assemblies with sequencing-technology metadata in each year that mention each normalized technology family; hybrid assemblies can contribute to more than one line.</p>
-            <svg id="genometrics-tech-trend" class="genometrics-trend" viewBox="0 0 900 330" preserveAspectRatio="none" role="img" aria-label="Sequencing technologies used in deposited genome assemblies through time"></svg>
+            <p class="genometrics-summary">Primary read technologies behind chromosome-scale and complete eukaryotic assemblies across NCBI release years. PacBio HiFi, other/unspecified PacBio, Oxford Nanopore, Illumina and other sequencing platforms are tracked independently; Hi-C and other proximity-ligation data are shown separately.</p>
+            <svg id="genometrics-tech-trend" class="genometrics-trend" viewBox="0 0 520 330" preserveAspectRatio="none" role="img" aria-label="Primary sequencing technologies used in deposited genome assemblies through time"></svg>
             <div id="genometrics-tech-legend" class="genometrics-trend-legend"></div>
             <p class="genometrics-denominator" id="genometrics-tech-denominator"></p>
           </article>
 
-          <article class="panel genometrics-card full-width genometrics-trend-card">
+          <article class="panel genometrics-card genometrics-trend-card">
+            <p class="panel-kicker">Long-range scaffolding</p>
+            <h2 class="panel-title">Hi-C / proximity scaffolding through time</h2>
+            <p class="genometrics-summary">Share of assemblies whose NCBI sequencing-technology metadata reports Hi-C or a related proximity-ligation method such as Arima, Omni-C, Dovetail/Chicago or Phase Genomics. This is supplementary long-range information, not a primary read technology.</p>
+            <svg id="genometrics-proximity-trend" class="genometrics-trend" viewBox="0 0 520 330" preserveAspectRatio="none" role="img" aria-label="Use of Hi-C and related proximity scaffolding through time"></svg>
+            <div id="genometrics-proximity-legend" class="genometrics-trend-legend"></div>
+            <p class="genometrics-denominator" id="genometrics-proximity-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card genometrics-trend-card">
             <p class="panel-kicker">Assembly history</p>
             <h2 class="panel-title">Assemblers through time</h2>
-            <p class="genometrics-summary">The changing assembly software reported for chromosome-scale and complete eukaryotic genome deposits. Versions and spelling variants are collapsed into assembler families, and the eight most represented named families are shown.</p>
-            <svg id="genometrics-assembler-trend" class="genometrics-trend" viewBox="0 0 900 330" preserveAspectRatio="none" role="img" aria-label="Genome assembly software used through time"></svg>
+            <p class="genometrics-summary">The changing assembly software reported for chromosome-scale and complete eukaryotic genome deposits. Versions and spelling variants are collapsed into assembler families, and the most represented named families are shown.</p>
+            <svg id="genometrics-assembler-trend" class="genometrics-trend" viewBox="0 0 520 330" preserveAspectRatio="none" role="img" aria-label="Genome assembly software used through time"></svg>
             <div id="genometrics-assembler-legend" class="genometrics-trend-legend"></div>
             <p class="genometrics-denominator" id="genometrics-assembler-denominator"></p>
           </article>
@@ -262,7 +271,7 @@
             <p><strong>Sex chromosomes:</strong> expectations use species records first, then conservative concordant clade evidence. The source level is retained in the generated data.</p>
             <p><strong>Karyotype:</strong> NCBI's reported assembly chromosome count is compared with Tree of Sex female/male 2N. Because many assemblies represent a haploid complement, both 2N and N are considered and the closer expectation is used.</p>
             <p><strong>No observed label</strong> means no explicit sex-chromosome-style chromosome name was found in the NCBI sequence report. It is missing annotation, not evidence that the organism lacks the expected sex chromosomes.</p>
-            <p><strong>Technology / assembler trends:</strong> free-text NCBI sequencingTech and assemblyMethod values are normalized into broad named families. Percentages use only assemblies with a non-empty value in that field for that release year; hybrid workflows can appear in multiple technology or assembler series.</p>
+            <p><strong>Technology / assembler trends:</strong> free-text NCBI sequencingTech and assemblyMethod values are normalized into broad named families. Primary read technologies are separated from Hi-C/proximity-ligation methods, which are tracked independently. Percentages use the relevant metadata-bearing assemblies for each release year; hybrid primary sequencing workflows can appear in multiple technology series.</p>
           </div>
         </article>
       </section>
@@ -509,6 +518,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001a"></script>
+  <script src="app.js?v=20261001b"></script>
 </body>
 </html>
