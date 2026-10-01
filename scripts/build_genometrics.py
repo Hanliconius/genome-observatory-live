@@ -506,7 +506,7 @@ TECH_RULES=[
     ("Illumina", r"\billumina\b|\bnovaseq\b|\bhiseq\b|\bmiseq\b|\bnextseq\b|\biseq\b"),
     ("PacBio HiFi", r"\bhifi\b|\bccs\b|circular consensus|\brevio\b"),
     ("Oxford Nanopore", r"\boxford nanopore\b|\bnanopore\b|\bminion\b|\bpromethion\b|\bgridion\b"),
-    ("Hi-C / proximity", r"\bhi[- ]?c\b|\bomni[- ]?c\b|\bdovetail\b"),
+    ("Hi-C / proximity", r"\bhi[- ]?c\b|\bomni[- ]?c\b|\bdovetail\b|\barima\d*\b|phase genomics|\bchicago\b"),
     ("10x Genomics", r"\b10x\b|\b10 x\b|10x genomics|linked[- ]?read|\bchromium\b"),
     ("BGI / MGI", r"\bbgi\b|\bmgi\b|\bdnbseq\b|\bmgiseq\b"),
     ("Sanger", r"\bsanger\b|capillary sequencing|\babi[ -]?3730\b"),
@@ -518,7 +518,7 @@ ASSEMBLER_RULES=[
     ("Canu / HiCanu", r"\bhicanu\b|\bcanu\b"),
     ("FALCON", r"\bfalcon(?:[-_ ]?unzip)?\b"),
     ("Flye", r"\bmetaflye\b|\bflye\b"),
-    ("Verkko", r"\bverkko\b"),
+    ("Verkko", r"\bverkko\d*\b"),
     ("MaSuRCA", r"\bmasurca\b|\bma[- ]?su[- ]?r?ca\b"),
     ("ALLPATHS-LG", r"\ballpaths(?:[-_ ]?lg)?\b"),
     ("SOAPdenovo", r"\bsoapdenovo(?:2)?\b"),
@@ -529,7 +529,11 @@ ASSEMBLER_RULES=[
     ("wtdbg2 / Redbean", r"\bwtdbg2\b|\bredbean\b"),
     ("Shasta", r"\bshasta\b"),
     ("Velvet", r"\bvelvet\b"),
-    ("Newbler", r"\bnewbler\b"),
+    ("Newbler / GS De Novo", r"\bnewbler\b|gs de novo assembler"),
+    ("IDBA", r"\bidba(?:[_-]?ud)?\b"),
+    ("TRITEX", r"\btritex\b"),
+    ("NextDenovo", r"\bnextdenovo\b"),
+    ("Geneious", r"\bgeneious\b"),
 ]
 
 def metadata_text(value):
@@ -603,9 +607,17 @@ def build_method_trends(records):
                 y["tech_unclassified"]+=1
 
         method_raw=metadata_text(rec.get("assembly_method")).strip()
+        method_low=method_raw.casefold()
+        # NCBI contains thousands of legacy records whose assemblyMethod is
+        # literally "various". Treat those as missing for prevalence trends:
+        # they are non-empty metadata but do not identify an assembler.
+        method_informative=bool(method_raw) and method_low not in {
+            "various","unknown","unspecified","not provided","n/a","na","none","-"
+        }
         if method_raw:
-            y["assembler_reported"]+=1
             raw_methods[method_raw]+=1
+        if method_informative:
+            y["assembler_reported"]+=1
             cats=classify_assembly_method(method_raw)
             if cats:
                 y["assemblers"].update(cats)
@@ -651,7 +663,7 @@ def build_method_trends(records):
         "assembler_unclassified_assemblies":sum(y["assembler_unclassified"] for y in years.values()),
         "top_raw_sequencing_tech":[{"value":k,"count":v} for k,v in raw_tech.most_common(25)],
         "top_raw_assembly_methods":[{"value":k,"count":v} for k,v in raw_methods.most_common(25)],
-        "definition":"Year is the NCBI assembly release year. Each line is the percentage of assemblies with non-empty metadata in that year that mention the normalized technology or assembler family. One assembly can contribute to multiple lines, so percentages do not sum to 100%.",
+        "definition":"Year is the NCBI assembly release year. Technology lines use assemblies with non-empty sequencingTech metadata; assembler lines use assemblies with an informative assemblyMethod value (generic values such as 'various' are treated as missing). Each line is the percentage of those metadata-bearing assemblies in that year that mention the normalized family. One assembly can contribute to multiple lines, so percentages do not sum to 100%.",
     }
 
 def sequence_report_page(batch,page_token=None):
