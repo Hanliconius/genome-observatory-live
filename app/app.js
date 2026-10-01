@@ -25,6 +25,10 @@ const GENOMETRIC_COLORS={
   'Expected label(s) found':'#2e6ea6',
   'Partial / different label':'#d59a38'
 };
+const METHOD_TREND_COLORS=[
+  '#2e6ea6','#5aa17a','#d59a38','#8b75b3','#b85c5c',
+  '#3f8f9d','#8a6f4d','#657786','#9a5f87','#4d7a52'
+];
 const RANGE={week:{label:'Past week',rate:'Deposits per business day'},year:{label:'Past year',rate:'Deposits per business day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
@@ -425,6 +429,81 @@ function drawGenometricHistogram(svgId,rows,periodLabel){
   });
 }
 
+
+function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLabel){
+  const svg=el(svgId),legend=el(legendId);
+  if(!svg||!legend)return;
+  const rows=(trend?.years||[]).filter(x=>Number(x?.[reportedKey]||0)>0);
+  const series=(trend?.[seriesKey]||[]).slice(0,10);
+  if(!rows.length||!series.length){
+    svg.innerHTML='<text class="genometrics-trend-empty" x="450" y="165" text-anchor="middle">Trend data unavailable until the next completed genometrics refresh.</text>';
+    legend.innerHTML='';
+    return;
+  }
+
+  const w=900,h=330,L=58,R=18,T=18,B=52,iw=w-L-R,ih=h-T-B;
+  const years=rows.map(x=>Number(x.year));
+  const xmin=Math.min(...years),xmax=Math.max(...years);
+  const x=yr=>L+(xmax===xmin?iw/2:(yr-xmin)/(xmax-xmin)*iw);
+  const y=p=>T+ih-(Math.max(0,Math.min(100,p))/100)*ih;
+  let html='';
+
+  [0,25,50,75,100].forEach(p=>{
+    const yy=y(p);
+    html+='<line class="genometrics-trend-grid" x1="'+L+'" x2="'+(w-R)+'" y1="'+yy+'" y2="'+yy+'"></line>';
+    html+='<text class="genometrics-trend-axis-label" x="'+(L-10)+'" y="'+(yy+4)+'" text-anchor="end">'+p+'%</text>';
+  });
+  html+='<line class="genometrics-trend-axis" x1="'+L+'" x2="'+(w-R)+'" y1="'+(T+ih)+'" y2="'+(T+ih)+'"></line>';
+
+  let tickYears=years.filter((yr,i)=>i===0||i===years.length-1||yr%5===0);
+  if(tickYears.length>8){
+    tickYears=tickYears.filter((yr,i)=>i===0||i===tickYears.length-1||yr%10===0);
+  }
+  [...new Set(tickYears)].forEach(yr=>{
+    const xx=x(yr);
+    html+='<line class="genometrics-trend-tick" x1="'+xx+'" x2="'+xx+'" y1="'+(T+ih)+'" y2="'+(T+ih+5)+'"></line>';
+    html+='<text class="genometrics-trend-axis-label" x="'+xx+'" y="'+(h-19)+'" text-anchor="middle">'+yr+'</text>';
+  });
+
+  const valueField=seriesKey==='technology_series'?'technology':'assemblers';
+  series.forEach((name,si)=>{
+    const color=METHOD_TREND_COLORS[si%METHOD_TREND_COLORS.length];
+    const pts=rows.map(row=>{
+      const denom=Number(row[reportedKey]||0);
+      const count=Number((row[valueField]||{})[name]||0);
+      return {year:Number(row.year),count,denom,pct:denom?100*count/denom:0};
+    });
+    const path=pts.map((p,i)=>(i?'L ':'M ')+x(p.year).toFixed(2)+' '+y(p.pct).toFixed(2)).join(' ');
+    html+='<path class="genometrics-trend-line" d="'+path+'" style="stroke:'+color+'"></path>';
+    pts.forEach(p=>{
+      html+='<circle class="genometrics-trend-point" data-series="'+esc(name)+'" data-year="'+p.year+'" data-count="'+p.count+'" data-denom="'+p.denom+'" data-pct="'+p.pct.toFixed(3)+'" data-period="'+esc(periodLabel)+'" cx="'+x(p.year).toFixed(2)+'" cy="'+y(p.pct).toFixed(2)+'" r="3.2" style="fill:'+color+'"></circle>';
+    });
+  });
+  svg.innerHTML=html;
+
+  const latest=rows[rows.length-1];
+  const latestMap=latest[valueField]||{};
+  const latestDenom=Number(latest[reportedKey]||0);
+  legend.innerHTML=series.map((name,si)=>{
+    const color=METHOD_TREND_COLORS[si%METHOD_TREND_COLORS.length];
+    const count=Number(latestMap[name]||0);
+    const pct=latestDenom?100*count/latestDenom:0;
+    return '<span><i style="background:'+color+'"></i><b>'+esc(name)+'</b><em>'+fmt1(pct)+'% in '+latest.year+'</em></span>';
+  }).join('');
+
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.genometrics-trend-point').forEach(dot=>{
+    const show=ev=>{
+      tip.innerHTML='<strong>'+esc(dot.dataset.series)+' · '+esc(dot.dataset.year)+'</strong><span>'+fmt1(Number(dot.dataset.pct||0))+'% of assemblies with '+esc(dot.dataset.period)+' metadata</span><span>'+fmt(Number(dot.dataset.count||0))+' of '+fmt(Number(dot.dataset.denom||0))+' metadata-bearing assemblies</span>';
+      tip.hidden=false;
+      dot.classList.add('is-hovered');
+      positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;dot.classList.remove('is-hovered');};
+    dot.onpointerenter=show;dot.onpointermove=show;dot.onpointerleave=hide;
+  });
+}
+
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
   const d=GENOMETRICS_DATA;
@@ -492,6 +571,27 @@ function renderGenometrics(){
   drawGenometricHistogram('genometrics-chrom-hist',q.chromosome_count_histogram||[],'Reported chromosome count');
   el('genometrics-quality-denominator').textContent=
     fmt(q.assembly_size_available||0)+' assemblies contribute genome size; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
+
+  const methods=d.methods_through_time||{};
+  drawGenometricTrend(
+    'genometrics-tech-trend','genometrics-tech-legend',methods,
+    'technology_series','tech_reported','sequencing-technology'
+  );
+  drawGenometricTrend(
+    'genometrics-assembler-trend','genometrics-assembler-legend',methods,
+    'assembler_series','assembler_reported','assembly-method'
+  );
+  const tracked=Number(q.assemblies||0);
+  const techN=Number(methods.technology_metadata_assemblies||0);
+  const asmN=Number(methods.assembler_metadata_assemblies||0);
+  el('genometrics-tech-denominator').textContent=
+    fmt(techN)+' of '+fmt(tracked)+' tracked assemblies report sequencing-technology metadata'+
+    (tracked?' ('+fmt1(100*techN/tracked)+'%). ':'; ')+
+    'Lines are yearly percentages among metadata-bearing assemblies and can overlap for hybrid sequencing strategies.';
+  el('genometrics-assembler-denominator').textContent=
+    fmt(asmN)+' of '+fmt(tracked)+' tracked assemblies report assembly-method metadata'+
+    (tracked?' ('+fmt1(100*asmN/tracked)+'%). ':'; ')+
+    'Software versions and spelling variants are normalized into named assembler families; an assembly can mention more than one family.';
 
   const traits=kar.tree_of_sex_traits||{};
   const traitRows=(title,rows)=>`<div class="trait-block"><strong>${esc(title)}</strong>${(rows||[]).slice(0,5).map(x=>`<span><b>${esc(x.group)}</b> ${fmt(x.count)}</span>`).join('')}</div>`;
