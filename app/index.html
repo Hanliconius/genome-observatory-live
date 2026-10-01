@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001c" />
+  <link rel="stylesheet" href="styles.css?v=20261001d" />
 </head>
 <body>
   <header class="site-head">
@@ -225,7 +225,7 @@
           <article class="panel genometrics-card genometrics-trend-card">
             <p class="panel-kicker">Technology history</p>
             <h2 class="panel-title">Sequencing technologies through time</h2>
-            <p class="genometrics-summary">Primary read technologies behind chromosome-scale and complete eukaryotic assemblies across NCBI release years. PacBio HiFi, other/unspecified PacBio, Oxford Nanopore, Illumina and other sequencing platforms are tracked independently; Hi-C and other proximity-ligation data are shown separately.</p>
+            <p class="genometrics-summary">Primary read technologies behind chromosome-scale and complete eukaryotic assemblies across NCBI release years. PacBio HiFi is separated from PacBio records where HiFi/CLR mode is not specified, alongside Oxford Nanopore, Illumina and other platforms; Hi-C and other proximity-ligation data are shown separately.</p>
             <svg id="genometrics-tech-trend" class="genometrics-trend" viewBox="0 0 520 330" preserveAspectRatio="none" role="img" aria-label="Primary sequencing technologies used in deposited genome assemblies through time"></svg>
             <div id="genometrics-tech-legend" class="genometrics-trend-legend"></div>
             <p class="genometrics-denominator" id="genometrics-tech-denominator"></p>
@@ -234,7 +234,7 @@
           <article class="panel genometrics-card genometrics-trend-card">
             <p class="panel-kicker">Long-range scaffolding</p>
             <h2 class="panel-title">Hi-C / proximity scaffolding through time</h2>
-            <p class="genometrics-summary">Share of assemblies whose NCBI sequencing-technology metadata reports Hi-C or a related proximity-ligation method such as Arima, Omni-C, Dovetail/Chicago or Phase Genomics. This is supplementary long-range information, not a primary read technology.</p>
+            <p class="genometrics-summary">Share of assemblies whose NCBI sequencing-technology metadata reports Hi-C or a related proximity-ligation method such as Arima, Omni-C, Dovetail/Chicago, Phase Genomics or PacBio CiFi. This is supplementary long-range information, not a primary read technology.</p>
             <svg id="genometrics-proximity-trend" class="genometrics-trend" viewBox="0 0 520 330" preserveAspectRatio="none" role="img" aria-label="Use of Hi-C and related proximity scaffolding through time"></svg>
             <div id="genometrics-proximity-legend" class="genometrics-trend-legend"></div>
             <p class="genometrics-denominator" id="genometrics-proximity-denominator"></p>
@@ -518,6 +518,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001c"></script>
+  <script src="app.js?v=20261001d"></script>
 </body>
 </html>
