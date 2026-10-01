@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:30:42.682004+00:00",
+  "generated_at": "2026-10-01T23:42:13.234148+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -50076,7 +50076,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061561545.1",
@@ -50092,7 +50097,12 @@
       "family": "Curculionidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendroctonus_ponderosae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendroctonus_ponderosae.jpg",
+        "credit": "Public domain",
+        "matched_name": "Dendroctonus ponderosae"
+      }
     },
     {
       "accession": "GCA_061549455.1",
