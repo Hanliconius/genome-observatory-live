@@ -790,8 +790,8 @@ function updateCountryFacetText(){
   el('country-facet-description').textContent=sequencing
     ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day business-day pace. Assemblies can count in more than one country when resolved SRA centers span countries.'
     : alltime
-      ? 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the total number of chromosome/complete genome deposits assigned to each country across the full record.'
-      : 'Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.';
+      ? 'Sample geography is inferred from the NCBI BioSample geographic-location field. Countries are shaded by all-time deposits; controlled INSDC ocean/sea localities are shown as proportional markers.'
+      : 'Sample geography is inferred from the NCBI BioSample geographic-location field. Countries are shaded by trailing 30-day business-day pace; controlled INSDC ocean/sea localities are shown as proportional markers.';
   el('country-search-description').textContent=sequencing
     ? 'Search a country, or click it on the map, to see the cumulative history of institute-associated genome assemblies linked to that country.'
     : alltime
@@ -823,11 +823,15 @@ function updateCountryCoverageText(){
         ? ' '+fmt(c.assemblies_with_multiple_center_countries)+' assemblies link to centers in multiple countries.'
         : '');
   }else{
-    const pct=100*Number(c.fraction_assigned||0);
+    const countryN=Number(c.assemblies_assigned_to_country||0);
+    const marineN=Number(c.assemblies_assigned_to_marine_locality||0);
+    const resolved=Number(c.assemblies_geographically_resolved||countryN+marineN);
+    const total=Number(c.assemblies_scanned||0);
+    const pct=total?100*resolved/total:0;
     el('country-map-status').textContent=
-      fmt(c.assemblies_assigned_to_country)+' of '+
-      fmt(c.assemblies_scanned)+' assemblies assigned to a country ('+
-      fmt1(pct)+'%).';
+      fmt(resolved)+' of '+fmt(total)+' assemblies have a resolved geographic origin ('+
+      fmt1(pct)+'%): '+fmt(countryN)+' assigned to countries'+
+      (marineN?' and '+fmt(marineN)+' to controlled ocean/sea localities.':'.');
   }
 }
 
@@ -844,7 +848,7 @@ async function loadCountries(){
   if(COUNTRY_LOADING)return COUNTRY_LOADING;
   el('country-map-status').textContent='Loading country data and map…';
   COUNTRY_LOADING=Promise.all([
-    fetch(COUNTRY_URL).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
+    fetch(COUNTRY_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
     (window.d3 && window.topojson)
       ? d3.json(WORLD_URL)
       : Promise.reject(new Error('Map libraries unavailable'))
@@ -954,13 +958,43 @@ function renderCountryMap(){
       if(c)selectCountry(c);
     });
 
+  if(countryFacet!=='sequencing'){
+    const marine=(COUNTRY_DATA?.marine_localities||[]);
+    const marineMax=Math.max(0,...marine.map(valueOf));
+    const radius=d3.scaleSqrt()
+      .domain([0,Math.max(1,marineMax)])
+      .range([3.5,13]);
+    svg.append('g')
+      .attr('class','marine-marker-layer')
+      .selectAll('circle')
+      .data(marine.filter(x=>valueOf(x)>0))
+      .join('circle')
+      .attr('class','marine-marker')
+      .attr('cx',d=>projection([Number(d.lon),Number(d.lat)])[0])
+      .attr('cy',d=>projection([Number(d.lon),Number(d.lat)])[1])
+      .attr('r',d=>radius(valueOf(d)))
+      .on('pointerenter pointermove',function(ev,d){
+        d3.select(this).classed('is-hovered',true);
+        const primary=alltime
+          ? '<span>'+fmt(d.assemblies)+' assemblies · all time</span>'
+          : '<span>'+countryRateLabel(valueOf(d))+' genomes per business day</span><span>'+fmt(d.window_assemblies)+' assemblies · past 30 days</span>';
+        tip.innerHTML='<strong>'+esc(d.name)+'</strong>'+primary+'<span>'+fmt(d.species)+' species represented</span><span>INSDC ocean/sea geo_loc_name</span>';
+        tip.hidden=false;positionTooltip(ev,tip);
+      })
+      .on('pointerleave',function(){
+        d3.select(this).classed('is-hovered',false);
+        tip.hidden=true;
+      });
+  }
+
   el('country-map').setAttribute('aria-label',alltime
     ? 'World map of all-time genome deposits by sample-origin country'
     : 'World map of genomes deposited per business day by country');
   el('country-map-legend').innerHTML=
     '<span>'+(alltime?'Total genome deposits · all time':'Genomes per business day · trailing 30-day pace')+'</span>'+
     '<div class="map-gradient"></div>'+
-    '<div class="map-legend-ticks"><span>0</span><span>'+(alltime?fmt(maxValue):countryRateLabel(maxValue))+'</span></div>';
+    '<div class="map-legend-ticks"><span>0</span><span>'+(alltime?fmt(maxValue):countryRateLabel(maxValue))+'</span></div>'+
+    (countryFacet==='sequencing'?'':'<div class="marine-legend-key"><i></i><span>Ocean / sea locality · marker size reflects the same time view</span></div>');
 }
 
 function renderCountryMatches(raw){
@@ -1189,6 +1223,7 @@ function renderTaxonComparison(){
     recent[side].map(x=>Number(x.assemblies||0))
   )));
   const mapMax=Math.max(1,...selected.flatMap(t=>(t.countries||[]).map(c=>Number(c.assemblies||0))));
+  const marineMax=Math.max(1,...selected.flatMap(t=>(t.marine_localities||[]).map(c=>Number(c.assemblies||0))));
 
   ['left','right'].forEach(side=>{
     const t=TAXON_SELECTED[side];
@@ -1209,11 +1244,11 @@ function renderTaxonComparison(){
       'taxon-recent-chart-'+side,recent[side],'assemblies',
       recent[side].map(x=>x.date),'year',recentMax
     );
-    drawTaxonOriginMap(side,t,mapMax);
+    drawTaxonOriginMap(side,t,mapMax,marineMax);
   });
 }
 
-function drawTaxonOriginMap(side,t,sharedMax){
+function drawTaxonOriginMap(side,t,sharedMax,sharedMarineMax){
   const svgEl=el('taxon-map-'+side);
   const legend=el('taxon-map-legend-'+side);
   const status=el('taxon-map-status-'+side);
@@ -1260,12 +1295,38 @@ function drawTaxonOriginMap(side,t,sharedMax){
       tip.hidden=true;
     });
 
-  legend.innerHTML='<span>Assemblies with BioSample origin</span><div class="map-gradient"></div><div class="map-legend-ticks"><span>0</span><span>'+fmt(sharedMax)+'</span></div>';
-  const assigned=Number(t.stats?.origin_assigned_assemblies||0);
+  const marine=t.marine_localities||[];
+  const marineRadius=d3.scaleSqrt()
+    .domain([0,Math.max(1,sharedMarineMax)])
+    .range([3,10]);
+  svg.append('g')
+    .attr('class','marine-marker-layer')
+    .selectAll('circle')
+    .data(marine)
+    .join('circle')
+    .attr('class','marine-marker taxon-marine-marker')
+    .attr('cx',d=>projection([Number(d.lon),Number(d.lat)])[0])
+    .attr('cy',d=>projection([Number(d.lon),Number(d.lat)])[1])
+    .attr('r',d=>marineRadius(Number(d.assemblies||0)))
+    .on('pointerenter pointermove',function(ev,d){
+      d3.select(this).classed('is-hovered',true);
+      tip.innerHTML='<strong>'+esc(d.name)+'</strong><span>'+fmt(d.assemblies)+' '+esc(t.name)+' assemblies with this BioSample origin</span><span>INSDC ocean/sea geo_loc_name</span>';
+      tip.hidden=false;positionTooltip(ev,tip);
+    })
+    .on('pointerleave',function(){
+      d3.select(this).classed('is-hovered',false);
+      tip.hidden=true;
+    });
+
+  legend.innerHTML='<span>Country assemblies · shared fill scale</span><div class="map-gradient"></div><div class="map-legend-ticks"><span>0</span><span>'+fmt(sharedMax)+'</span></div>'+
+    '<div class="marine-legend-key"><i></i><span>Ocean / sea locality · shared marker-size scale</span></div>';
+  const countryAssigned=Number(t.stats?.origin_country_assemblies??t.stats?.origin_assigned_assemblies??0);
+  const marineAssigned=Number(t.stats?.origin_marine_assemblies||0);
+  const resolved=Number(t.stats?.origin_resolved_assemblies||countryAssigned+marineAssigned);
   const total=Number(t.stats?.assemblies||0);
-  status.textContent=assigned
-    ? fmt(assigned)+' of '+fmt(total)+' assemblies have a resolved sample-origin country ('+fmt1(100*assigned/Math.max(1,total))+'%).'
-    : 'No resolved sample-origin country data are available for this taxon yet.';
+  status.textContent=resolved
+    ? fmt(resolved)+' of '+fmt(total)+' assemblies have resolved geographic origin ('+fmt1(100*resolved/Math.max(1,total))+'%): '+fmt(countryAssigned)+' country, '+fmt(marineAssigned)+' ocean/sea.'
+    : 'No resolved BioSample geographic-origin data are available for this taxon yet.';
 }
 
 function niceMax(v){

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001f" />
+  <link rel="stylesheet" href="styles.css?v=20261001g" />
 </head>
 <body>
   <header class="site-head">
@@ -385,7 +385,7 @@
         <div class="panel-head country-map-head">
           <div>
             <p class="panel-kicker">Geographic activity</p>
-            <h2>Genome deposition by country</h2>
+            <h2>Genome deposition by geographic origin</h2>
             <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.</p>
           </div>
           <div class="country-map-tools">
@@ -462,7 +462,7 @@
             <div id="taxon-results-right" class="taxon-results"></div>
           </div>
         </div>
-        <p class="taxon-compare-note">Shared scales update whenever either selection changes. Maps show the BioSample country attached to qualifying assemblies; they describe sample provenance, not the natural geographic range of the taxon.</p>
+        <p class="taxon-compare-note">Shared scales update whenever either selection changes. Maps show the BioSample geographic origin attached to qualifying assemblies, including controlled ocean/sea localities; they describe sample provenance, not the natural geographic range of the taxon.</p>
       </article>
 
       <section class="taxon-compare-grid">
@@ -494,8 +494,8 @@
             </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
-              <h3 class="panel-title">Countries represented in BioSample metadata</h3>
-              <svg id="taxon-map-left" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries for left taxon"></svg>
+              <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
+              <svg id="taxon-map-left" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries and marine localities for left taxon"></svg>
               <div id="taxon-map-legend-left" class="taxon-map-legend"></div>
               <p id="taxon-map-status-left" class="taxon-map-status"></p>
             </article>
@@ -530,8 +530,8 @@
             </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
-              <h3 class="panel-title">Countries represented in BioSample metadata</h3>
-              <svg id="taxon-map-right" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries for right taxon"></svg>
+              <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
+              <svg id="taxon-map-right" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries and marine localities for right taxon"></svg>
               <div id="taxon-map-legend-right" class="taxon-map-legend"></div>
               <p id="taxon-map-status-right" class="taxon-map-status"></p>
             </article>
@@ -545,7 +545,7 @@
 
   <footer class="site-foot">
     <p>Assembly metadata: NCBI Datasets, restricted to GenBank eukaryote assemblies at chromosome or complete level. Annotation status: NCBI RefSeq.</p>
-    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. Country view: NCBI BioSample geographic location, aggregated to ISO countries. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
+    <p>Organism images: Wikimedia/Wikidata with attribution retained when available. Taxa explorer: NCBI Taxonomy, pre-aggregated to phylum and order. Endangered view: IUCN Red List categories via the GBIF-hosted IUCN checklist. Geographic view: NCBI BioSample geographic location, aggregated to ISO countries plus controlled INSDC ocean/sea localities. This site tracks public assembly deposition, not raw sequencing-machine output.</p>
     <p style="grid-column:1/-1;margin:0;padding-top:2px">
       <img
         src="https://hits.sh/hanliconius.github.io/eukaryote-genome-watch/app.svg?label=visits&color=315f54&labelColor=e9eeeb&style=flat-square"
@@ -558,6 +558,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001f"></script>
+  <script src="app.js?v=20261001g"></script>
 </body>
 </html>

@@ -19,6 +19,22 @@ MISSING = {
     "na", "n/a", "none",
 }
 
+# INSDC geo_loc_name controlled vocabulary entries that are oceans or seas.
+# Coordinates are display anchors only: they place a marker in the named water
+# body and are not interpreted as the sample's precise collection coordinates.
+MARINE_LOCALITIES = {
+    "arctic ocean": {"name": "Arctic Ocean", "lat": 82.0, "lon": 0.0},
+    "atlantic ocean": {"name": "Atlantic Ocean", "lat": 12.0, "lon": -32.0},
+    "baltic sea": {"name": "Baltic Sea", "lat": 58.0, "lon": 20.0},
+    "indian ocean": {"name": "Indian Ocean", "lat": -20.0, "lon": 80.0},
+    "mediterranean sea": {"name": "Mediterranean Sea", "lat": 36.0, "lon": 18.0},
+    "north sea": {"name": "North Sea", "lat": 56.0, "lon": 3.0},
+    "pacific ocean": {"name": "Pacific Ocean", "lat": 2.0, "lon": -150.0},
+    "ross sea": {"name": "Ross Sea", "lat": -75.0, "lon": 175.0},
+    "southern ocean": {"name": "Southern Ocean", "lat": -60.0, "lon": 20.0},
+    "tasman sea": {"name": "Tasman Sea", "lat": -40.0, "lon": 160.0},
+}
+
 ALIASES = {
     "usa": "US",
     "u.s.a.": "US",
@@ -200,6 +216,19 @@ def country_from_geo(raw):
     }
 
 
+def marine_from_geo(raw):
+    if not raw:
+        return None
+    value = re.sub(r"\s+", " ", str(raw)).strip()
+    if value.casefold() in MISSING:
+        return None
+    prefix = value.split(":", 1)[0].strip().casefold()
+    meta = MARINE_LOCALITIES.get(prefix)
+    if not meta:
+        return None
+    return {**meta, "raw": value}
+
+
 def stream_assemblies():
     cmd = [
         "datasets", "summary", "genome", "taxon", "Eukaryota",
@@ -256,6 +285,7 @@ def main():
     )
 
     countries = {}
+    marine_localities = {}
     unassigned = 0
     reports = 0
     with_location = 0
@@ -278,6 +308,19 @@ def main():
             }
         return countries[key]
 
+    def ensure_marine(m):
+        key = m["name"]
+        if key not in marine_localities:
+            marine_localities[key] = {
+                "name": m["name"],
+                "lat": m["lat"],
+                "lon": m["lon"],
+                "assemblies": 0,
+                "window_assemblies": 0,
+                "species": set(),
+            }
+        return marine_localities[key]
+
     for report in stream_assemblies():
         reports += 1
         x = normalize(report)
@@ -288,6 +331,15 @@ def main():
         else:
             missing_location += 1
         c = country_from_geo(x["geo_loc_name"])
+        m = None if c else marine_from_geo(x["geo_loc_name"])
+        if m:
+            mrec = ensure_marine(m)
+            mrec["assemblies"] += 1
+            mrec["species"].add(x["organism_name"])
+            if x["release_date"] >= window_cutoff:
+                mrec["window_assemblies"] += 1
+            continue
+
         if not c:
             unassigned += 1
             if x["geo_loc_name"]:
@@ -340,20 +392,39 @@ def main():
 
     out_rows.sort(key=lambda x: x["name"])
     assigned = sum(x["assemblies"] for x in out_rows)
+    marine_rows = [
+        {
+            "name": rec["name"],
+            "lat": rec["lat"],
+            "lon": rec["lon"],
+            "assemblies": rec["assemblies"],
+            "species": len(rec["species"]),
+            "window_assemblies": rec["window_assemblies"],
+            "business_days_in_window": business_days_in_window,
+            "genomes_per_day": rec["window_assemblies"] / float(rate_window_days),
+            "genomes_per_business_day": rec["window_assemblies"] / float(max(1, business_days_in_window)),
+        }
+        for rec in sorted(marine_localities.values(), key=lambda x: x["name"])
+    ]
+    marine_assigned = sum(x["assemblies"] for x in marine_rows)
+    geographically_resolved = assigned + marine_assigned
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": {
             "field": "NCBI BioSample geoLocName",
-            "interpretation": "country prefix before ':'; non-country geographic features and missing values remain unassigned",
+            "interpretation": "controlled geo_loc_name prefix before ':'; ISO countries are choropleth regions and INSDC ocean/sea terms are mapped as representative marine markers",
         },
         "coverage": {
             "assemblies_scanned": reports,
             "assemblies_with_geo_loc_name": with_location,
             "assemblies_assigned_to_country": assigned,
+            "assemblies_assigned_to_marine_locality": marine_assigned,
+            "assemblies_geographically_resolved": geographically_resolved,
             "assemblies_unassigned": unassigned,
             "assemblies_missing_geo_loc_name": missing_location,
             "assemblies_with_unresolved_geo_loc_name": sum(unresolved_location.values()),
             "fraction_assigned": assigned / reports if reports else 0,
+            "fraction_resolved_geographically": geographically_resolved / reports if reports else 0,
             "unresolved_geo_loc_prefixes": [
                 {"value": value, "count": count}
                 for value, count in sorted(
@@ -364,6 +435,7 @@ def main():
         },
         "rate_window_days": rate_window_days,
         "countries": out_rows,
+        "marine_localities": marine_rows,
     }
     OUT.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n")
     print(

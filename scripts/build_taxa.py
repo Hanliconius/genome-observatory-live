@@ -11,7 +11,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from build_countries import country_from_geo, geo_loc_name
+from build_countries import country_from_geo, geo_loc_name, marine_from_geo
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "taxa"
@@ -144,6 +144,7 @@ def main():
         species_first = {}
         species_taxa = {}
         country_meta = {}
+        marine_meta = {}
 
         def ensure_taxon(tid, rk, lin):
             if tid not in agg:
@@ -167,7 +168,9 @@ def main():
                     "yearly": defaultdict(int),
                     "recent_daily": defaultdict(int),
                     "countries": defaultdict(int),
+                    "marine_localities": defaultdict(int),
                     "origin_assigned": 0,
+                    "origin_marine": 0,
                 }
             return agg[tid]
 
@@ -204,13 +207,21 @@ def main():
                 continue
 
             lin = lineage(taxid)
-            country = country_from_geo(geo_loc_name(report))
+            raw_geo = geo_loc_name(report)
+            country = country_from_geo(raw_geo)
+            marine = None if country else marine_from_geo(raw_geo)
             if country:
                 country_meta[country["iso3"]] = {
                     "iso2": country["iso2"],
                     "iso3": country["iso3"],
                     "iso_n3": country["iso_n3"],
                     "name": country["name"],
+                }
+            if marine:
+                marine_meta[marine["name"]] = {
+                    "name": marine["name"],
+                    "lat": marine["lat"],
+                    "lon": marine["lon"],
                 }
 
             taxon_ids = []
@@ -249,6 +260,9 @@ def main():
                 if country:
                     rec["origin_assigned"] += 1
                     rec["countries"][country["iso3"]] += 1
+                elif marine:
+                    rec["origin_marine"] += 1
+                    rec["marine_localities"][marine["name"]] += 1
 
                 key = (tid, species_key)
                 if key not in species_first or release < species_first[key]:
@@ -294,6 +308,9 @@ def main():
                     "past_year_assemblies": sum(rec["recent_daily"].values()),
                     "past_year_species": len(recent_species[tid]),
                     "origin_assigned_assemblies": rec["origin_assigned"],
+                    "origin_country_assemblies": rec["origin_assigned"],
+                    "origin_marine_assemblies": rec["origin_marine"],
+                    "origin_resolved_assemblies": rec["origin_assigned"] + rec["origin_marine"],
                 },
                 "yearly": yearly,
                 "recent_daily": recent_daily,
@@ -305,6 +322,16 @@ def main():
                     for iso3, count in sorted(
                         rec["countries"].items(),
                         key=lambda kv: (-kv[1], country_meta[kv[0]]["name"]),
+                    )
+                ],
+                "marine_localities": [
+                    {
+                        **marine_meta[name],
+                        "assemblies": count,
+                    }
+                    for name, count in sorted(
+                        rec["marine_localities"].items(),
+                        key=lambda kv: (-kv[1], kv[0]),
                     )
                 ],
             }
