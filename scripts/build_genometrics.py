@@ -506,13 +506,17 @@ TECH_RULES=[
     ("Illumina", r"\billumina\b|\bnovaseq\b|\bhiseq\b|\bmiseq\b|\bnextseq\b|\biseq\b"),
     ("PacBio HiFi", r"\bhifi\b|\bccs\b|circular consensus|\brevio\b"),
     ("Oxford Nanopore", r"\boxford nanopore\b|\bnanopore\b|\bminion\b|\bpromethion\b|\bgridion\b"),
-    ("Hi-C / proximity", r"\bhi[- ]?c\b|\bomni[- ]?c\b|\bdovetail\b|\barima\d*\b|phase genomics|\bchicago\b"),
     ("10x Genomics", r"\b10x\b|\b10 x\b|10x genomics|linked[- ]?read|\bchromium\b"),
     ("BGI / MGI", r"\bbgi\b|\bmgi\b|\bdnbseq\b|\bmgiseq\b"),
     ("Sanger", r"\bsanger\b|capillary sequencing|\babi[ -]?3730\b"),
     ("Ion Torrent", r"\bion torrent\b|\bion proton\b"),
     ("SOLiD", r"\bsolid\b"),
 ]
+PROXIMITY_RE=re.compile(
+    r"\bhi[- ]?c\b|\bomni[- ]?c\b|\bdovetail\b|\barima\d*\b|"
+    r"phase genomics|\bchicago\b",
+    re.I,
+)
 ASSEMBLER_RULES=[
     ("hifiasm", r"\bhifiasm\b"),
     ("Canu / HiCanu", r"\bhicanu\b|\bcanu\b"),
@@ -562,6 +566,9 @@ def classify_sequencing_tech(value):
         out.add("PacBio (other / unspecified)")
     return out
 
+def uses_proximity_scaffolding(value):
+    return bool(PROXIMITY_RE.search(metadata_text(value)))
+
 def classify_assembly_method(value):
     s=metadata_text(value).casefold()
     if not s.strip():
@@ -581,6 +588,7 @@ def build_method_trends(records):
         "assemblies":0,
         "tech_reported":0,
         "assembler_reported":0,
+        "proximity":0,
         "tech":Counter(),
         "assemblers":Counter(),
         "tech_unclassified":0,
@@ -600,11 +608,16 @@ def build_method_trends(records):
         if tech_raw:
             y["tech_reported"]+=1
             raw_tech[tech_raw]+=1
+            if uses_proximity_scaffolding(tech_raw):
+                y["proximity"]+=1
             cats=classify_sequencing_tech(tech_raw)
             if cats:
                 y["tech"].update(cats)
             else:
-                y["tech_unclassified"]+=1
+                # Proximity-only metadata is not a primary sequencing
+                # technology, so do not call it an unclassified technology.
+                if not uses_proximity_scaffolding(tech_raw):
+                    y["tech_unclassified"]+=1
 
         method_raw=metadata_text(rec.get("assembly_method")).strip()
         method_low=method_raw.casefold()
@@ -647,6 +660,7 @@ def build_method_trends(records):
             "assemblies":y["assemblies"],
             "tech_reported":y["tech_reported"],
             "assembler_reported":y["assembler_reported"],
+            "proximity":y["proximity"],
             "tech_unclassified":y["tech_unclassified"],
             "assembler_unclassified":y["assembler_unclassified"],
             "technology":{k:y["tech"].get(k,0) for k in tech_series},
@@ -656,14 +670,16 @@ def build_method_trends(records):
     return {
         "years":rows,
         "technology_series":tech_series,
+        "proximity_series":["Hi-C / proximity"],
         "assembler_series":assembler_series,
         "technology_metadata_assemblies":sum(y["tech_reported"] for y in years.values()),
+        "proximity_assemblies":sum(y["proximity"] for y in years.values()),
         "assembler_metadata_assemblies":sum(y["assembler_reported"] for y in years.values()),
         "technology_unclassified_assemblies":sum(y["tech_unclassified"] for y in years.values()),
         "assembler_unclassified_assemblies":sum(y["assembler_unclassified"] for y in years.values()),
         "top_raw_sequencing_tech":[{"value":k,"count":v} for k,v in raw_tech.most_common(25)],
         "top_raw_assembly_methods":[{"value":k,"count":v} for k,v in raw_methods.most_common(25)],
-        "definition":"Year is the NCBI assembly release year. Technology lines use assemblies with non-empty sequencingTech metadata; assembler lines use assemblies with an informative assemblyMethod value (generic values such as 'various' are treated as missing). Each line is the percentage of those metadata-bearing assemblies in that year that mention the normalized family. One assembly can contribute to multiple lines, so percentages do not sum to 100%.",
+        "definition":"Year is the NCBI assembly release year. Primary sequencing-technology lines use assemblies with non-empty sequencingTech metadata and exclude Hi-C/proximity-ligation methods from that classification. Proximity use is tracked independently from the same metadata field. Assembler lines use assemblies with an informative assemblyMethod value (generic values such as 'various' are treated as missing). One assembly can contribute to multiple primary technology lines when hybrid sequencing was reported.",
     }
 
 def sequence_report_page(batch,page_token=None):
