@@ -504,7 +504,7 @@ def build_assembly_quality(records):
 
 TECH_RULES=[
     ("Illumina", r"\billumina\b|\bnovaseq\b|\bhiseq\b|\bmiseq\b|\bnextseq\b|\biseq\b"),
-    ("PacBio HiFi", r"\bhifi\b|\bccs\b|circular consensus|\brevio\b|\bci[- ]?fi\b"),
+    ("PacBio", r"\bpacbio\b|\bpacific biosciences\b|\bsmrt\b|\bsequel\b|\brs ?ii\b|\brevio\b|\bhifi\b|\bccs\b|circular consensus|\bci[- ]?fi\b"),
     ("Oxford Nanopore", r"\boxford nanopore\b|\bnanopore\b|\bminion\b|\bpromethion\b|\bgridion\b"),
     ("10x Genomics", r"\b10x\b|\b10 x\b|10x genomics|linked[- ]?read|\bchromium\b"),
     ("BGI / MGI", r"\bbgi\b|\bmgi\b|\bdnbseq\b|\bmgiseq\b"),
@@ -550,23 +550,10 @@ def metadata_text(value):
     return str(value)
 
 def classify_sequencing_tech(value):
-    raw=metadata_text(value)
-    s=raw.casefold()
+    s=metadata_text(value).casefold()
     if not s.strip():
         return set()
-    out=set()
-    hifi=bool(re.search(TECH_RULES[1][1],s))
-    for label,pat in TECH_RULES:
-        if label=="PacBio HiFi":
-            if hifi: out.add(label)
-        elif re.search(pat,s):
-            out.add(label)
-    # PacBio records often omit whether reads were generated in CLR vs HiFi/CCS mode.
-    # Do not infer a non-HiFi technology from that absence; keep these as
-    # "HiFi not specified" unless the record explicitly identifies HiFi/CCS/Revio/CiFi.
-    if not hifi and re.search(r"\bpacbio\b|\bpacific biosciences\b|\bsmrt\b|\bsequel\b|\brs ?ii\b",s):
-        out.add("PacBio (HiFi not specified)")
-    return out
+    return {label for label,pat in TECH_RULES if re.search(pat,s)}
 
 def uses_proximity_scaffolding(value):
     return bool(PROXIMITY_RE.search(metadata_text(value)))

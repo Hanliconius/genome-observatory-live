@@ -436,9 +436,11 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   const rows=(trend?.years||[]).filter(x=>Number(x?.[reportedKey]||0)>0);
   let series=(trend?.[seriesKey]||[]).slice(0,10);
   if(seriesKey==='technology_series'){
-    // Backward-safe: never render proximity-ligation as a primary sequencing technology,
-    // even if an older cached genometrics.json still lists it there.
-    series=series.filter(name=>name!=='Hi-C / proximity');
+    // Backward-safe: never render proximity-ligation as a primary sequencing technology.
+    // Also collapse older PacBio subcategories into one platform-level series.
+    const hadPacBio=series.some(name=>name==='PacBio'||name==='PacBio HiFi'||name==='PacBio (HiFi not specified)'||name==='PacBio (other / unspecified)');
+    series=series.filter(name=>name!=='Hi-C / proximity'&&!['PacBio','PacBio HiFi','PacBio (HiFi not specified)','PacBio (other / unspecified)'].includes(name));
+    if(hadPacBio)series.unshift('PacBio');
   }else if(seriesKey==='proximity_series'&&!series.length){
     // Older generated JSON stored proximity counts inside technology.
     const hasLegacy=rows.some(row=>Number((row.technology||{})['Hi-C / proximity']||0)>0);
@@ -456,7 +458,16 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
   const x=yr=>L+(xmax===xmin?iw/2:(yr-xmin)/(xmax-xmin)*iw);
   const y=p=>T+ih-(Math.max(0,Math.min(100,p))/100)*ih;
   const countFor=(row,name)=>{
-    if(seriesKey==='technology_series')return Number((row.technology||{})[name]||0);
+    if(seriesKey==='technology_series'){
+      const tech=row.technology||{};
+      if(name==='PacBio'){
+        if(tech.PacBio!=null)return Number(tech.PacBio||0);
+        return Number(tech['PacBio HiFi']||0)+
+          Number(tech['PacBio (HiFi not specified)']||0)+
+          Number(tech['PacBio (other / unspecified)']||0);
+      }
+      return Number(tech[name]||0);
+    }
     if(seriesKey==='assembler_series')return Number((row.assemblers||{})[name]||0);
     if(seriesKey==='proximity_series'){
       if(row.proximity!=null)return Number(row.proximity||0);
