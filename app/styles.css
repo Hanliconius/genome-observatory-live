@@ -583,3 +583,81 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .genometrics-hist-bar.is-hovered{opacity:1}
 .genometrics-hist-tick{fill:var(--muted);font-size:9px}
 @media(max-width:700px){.genometrics-histograms{grid-template-columns:1fr}}
+
+
+/* Genometrics: sequencing technology and assembler history */
+.genometrics-trend-card{min-height:0}
+.genometrics-trend-card .genometrics-summary{max-width:850px;min-height:0}
+.genometrics-trend{
+  display:block;
+  width:100%;
+  height:330px;
+  margin-top:12px;
+  overflow:visible;
+  cursor:crosshair;
+}
+.genometrics-trend-grid{
+  stroke:var(--line);
+  stroke-width:1;
+  stroke-dasharray:2 5;
+  vector-effect:non-scaling-stroke;
+}
+.genometrics-trend-axis,.genometrics-trend-tick{
+  stroke:var(--line-dark);
+  stroke-width:1;
+  vector-effect:non-scaling-stroke;
+}
+.genometrics-trend-axis-label,.genometrics-trend-empty{
+  fill:var(--muted);
+  font-size:11px;
+}
+.genometrics-trend-line{
+  fill:none;
+  stroke-width:2.4;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+  opacity:.92;
+}
+.genometrics-trend-point{
+  stroke:#fff;
+  stroke-width:1.5;
+  vector-effect:non-scaling-stroke;
+  opacity:.88;
+  transition:r .1s ease,opacity .1s ease;
+}
+.genometrics-trend-point.is-hovered{r:5;opacity:1}
+.genometrics-trend-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin:12px 0 4px;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+}
+.genometrics-trend-legend span{
+  display:grid;
+  grid-template-columns:12px auto;
+  column-gap:7px;
+  align-items:center;
+  color:var(--ink);
+  font-size:.77rem;
+}
+.genometrics-trend-legend i{
+  width:12px;
+  height:3px;
+  border-radius:999px;
+  grid-row:1 / span 2;
+}
+.genometrics-trend-legend b{font-weight:600}
+.genometrics-trend-legend em{
+  grid-column:2;
+  color:var(--muted);
+  font-size:.69rem;
+  font-style:normal;
+  font-variant-numeric:tabular-nums;
+}
+@media(max-width:700px){
+  .genometrics-trend{height:260px}
+  .genometrics-trend-legend{gap:8px 12px}
+}
