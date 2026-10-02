@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:16:23.763118+00:00",
+  "generated_at": "2026-10-02T21:24:36.581778+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -49486,7 +49486,12 @@
       "family": "Mycosphaerellaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Soja_Mancha_Ojo_de_Rana_MOR.jpg/960px-Soja_Mancha_Ojo_de_Rana_MOR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Soja_Mancha_Ojo_de_Rana_MOR.jpg",
+        "credit": "Maggilautaro · Public domain",
+        "matched_name": "Cercospora sojina"
+      }
     },
     {
       "accession": "GCA_061611865.1",
@@ -132167,7 +132172,12 @@
       "credit": "Diego Delso · CC BY-SA 4.0",
       "matched_name": "Cephalopholis miniata"
     },
-    "Cercospora sojina": null,
+    "Cercospora sojina": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Soja_Mancha_Ojo_de_Rana_MOR.jpg/960px-Soja_Mancha_Ojo_de_Rana_MOR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Soja_Mancha_Ojo_de_Rana_MOR.jpg",
+      "credit": "Maggilautaro · Public domain",
+      "matched_name": "Cercospora sojina"
+    },
     "Certhia familiaris": null,
     "Cettia cetti": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Rouxinol-bravo%2C_Cetti%27s_Warbler%3B_Sesimbra%2C_Portugal_%2849996990303%29.jpg/960px-Rouxinol-bravo%2C_Cetti%27s_Warbler%3B_Sesimbra%2C_Portugal_%2849996990303%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
