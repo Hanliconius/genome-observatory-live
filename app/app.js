@@ -3,12 +3,13 @@ const TAXA_INDEX_URL='../data/taxa/index.json';
 const IUCN_URL='../data/status/iucn.json';
 const COUNTRY_URL='../data/countries.json';
 const SEQUENCING_COUNTRY_URL='../data/sequencing_countries.json';
+const COUNTRY_TAXA_URL='../data/taxa/country_orders.json';
 const GENOMETRICS_URL='../data/genometrics.json';
 const WORLD_URL='https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 const el=id=>document.getElementById(id);
 const fmt=n=>new Intl.NumberFormat('en-US').format(n||0);
 const fmt1=n=>Number(n||0).toFixed(1);
-let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, TAXON_SELECTED={left:null,right:null}, TAXON_CACHE=new Map(), IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, GENOMETRICS_DATA=null, GENOMETRICS_LOADING=null, WORLD_DATA=null, WORLD_LOADING=null, selectedCountry=null, countryFacet='origin';
+let DATA, range='week', TAXA_INDEX=null, TAXA_LOADING=null, TAXON_SELECTED={left:null,right:null}, TAXON_CACHE=new Map(), IUCN_DATA=null, IUCN_LOADING=null, statusMode='threatened', COUNTRY_DATA=null, COUNTRY_LOADING=null, COUNTRY_TAXA_DATA=null, COUNTRY_TAXA_LOADING=null, SEQ_COUNTRY_DATA=null, SEQ_COUNTRY_LOADING=null, GENOMETRICS_DATA=null, GENOMETRICS_LOADING=null, WORLD_DATA=null, WORLD_LOADING=null, selectedCountry=null, countryFacet='origin';
 
 const COLORS={Animals:'#2e6ea6',Plants:'#5aa17a',Fungi:'#d59a38',Other:'#8b75b3'};
 const IUCN_COLORS={'Vulnerable':'#5aa17a','Endangered':'#d59a38','Critically endangered':'#8b75b3','Extinct in the wild':'#d59a38','Extinct':'#111815'};
@@ -83,7 +84,7 @@ document.querySelectorAll('.country-facet-tab').forEach(b=>b.addEventListener('c
   updateCountryFacetText();
   if(countryFacet==='sequencing') await loadSequencingCountries();
   renderCountryMap();
-  renderInstituteRanking();
+  renderCountryCompanion();
   renderCountryMatches('');
   updateCountryCoverageText();
 }));
@@ -786,21 +787,18 @@ function countryMapIsAllTime(){
 }
 
 function updateCountryFacetText(){
-  const sequencing=countryFacet==='sequencing';
-  const alltime=countryMapIsAllTime();
-  el('country-facet-description').textContent=sequencing
-    ? 'Institute country uses a resolved SRA sequencing center when available; otherwise it falls back to the NCBI assembly submitter. Common unambiguous center aliases are curated, with other organization names resolved through ROR. Colour shows the trailing 30-day business-day pace. Assemblies can count in more than one country when resolved SRA centers span countries.'
-    : alltime
-      ? 'Sample geography is inferred from the NCBI BioSample geographic-location field. Countries are shaded by all-time deposits; controlled INSDC ocean/sea localities are shown as proportional markers.'
-      : 'Sample geography is inferred from the NCBI BioSample geographic-location field. Countries are shaded by trailing 30-day business-day pace; controlled INSDC ocean/sea localities are shown as proportional markers.';
-  el('country-search-description').textContent=sequencing
-    ? 'Search a country, or click it on the map, to see the cumulative history of institute-associated genome assemblies linked to that country.'
-    : alltime
-      ? 'Search a country, or click it on the map, to explore its all-time genome-deposition history.'
-      : 'Search a country, or click it on the map, to reproduce the cumulative All-time view for that country.';
-  el('country-all-label').textContent=sequencing?'All-time institute-linked assemblies':'All-time assemblies';
-  el('country-assembly-legend').textContent=sequencing?'Institute-associated assemblies':'Assemblies';
-  el('country-species-legend').textContent=sequencing?'First-time species linked to institute country':'First-time species in country';
+  const desc=el('country-facet-description');
+  const mapTitle=el('country-map-title');
+  if(countryFacet==='sequencing'){
+    if(desc)desc.textContent='Country reflects the inferred sequencing or genome-producing institute. Recent colour shows the trailing 30-day pace.';
+    if(mapTitle)mapTitle.textContent='Institute-associated activity';
+  }else if(countryFacet==='alltime'){
+    if(desc)desc.textContent='Country reflects BioSample geographic origin. Colour shows the all-time number of qualifying chromosome/complete genome deposits.';
+    if(mapTitle)mapTitle.textContent='All-time sample origins';
+  }else{
+    if(desc)desc.textContent='Country reflects the NCBI BioSample geographic-location field. Colour shows the trailing 30-day deposition pace; ocean and sea localities appear as markers.';
+    if(mapTitle)mapTitle.textContent='Sample-origin activity';
+  }
 }
 
 function updateCountryCoverageText(){
@@ -839,9 +837,15 @@ function updateCountryCoverageText(){
 async function loadCountries(){
   updateCountryFacetText();
   if(COUNTRY_DATA && WORLD_DATA){
+    if(!COUNTRY_TAXA_DATA){
+      try{
+        const r=await fetch(COUNTRY_TAXA_URL+'?refresh='+Date.now(),{cache:'no-store'});
+        if(r.ok)COUNTRY_TAXA_DATA=await r.json();
+      }catch(err){console.warn('Country taxon summary unavailable',err);}
+    }
     if(countryFacet==='sequencing'&&!SEQ_COUNTRY_DATA) await loadSequencingCountries();
     renderCountryMap();
-    renderInstituteRanking();
+    renderCountryCompanion();
     renderCountryMatches(el('country-search').value);
     if(selectedCountry) renderCountryDetail(selectedCountry);
     updateCountryCoverageText();
@@ -851,16 +855,18 @@ async function loadCountries(){
   el('country-map-status').textContent='Loading country data and map…';
   COUNTRY_LOADING=Promise.all([
     fetch(COUNTRY_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
+    fetch(COUNTRY_TAXA_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}),
     (window.d3 && window.topojson)
       ? d3.json(WORLD_URL)
       : Promise.reject(new Error('Map libraries unavailable'))
   ])
-    .then(async([countries,world])=>{
+    .then(async([countries,countryTaxa,world])=>{
       COUNTRY_DATA=countries;
+      COUNTRY_TAXA_DATA=countryTaxa;
       WORLD_DATA=world;
       if(countryFacet==='sequencing') await loadSequencingCountries();
       renderCountryMap();
-      renderInstituteRanking();
+      renderCountryCompanion();
       renderCountryMatches(el('country-search').value);
       updateCountryCoverageText();
     })
@@ -878,7 +884,7 @@ async function loadSequencingCountries(){
   el('country-map-status').textContent='Loading sequencing-center country data…';
   SEQ_COUNTRY_LOADING=fetch(SEQUENCING_COUNTRY_URL+'?refresh='+Date.now(),{cache:'no-store'})
     .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
-    .then(d=>{SEQ_COUNTRY_DATA=d;renderInstituteRanking();return d;})
+    .then(d=>{SEQ_COUNTRY_DATA=d;renderCountryCompanion();return d;})
     .catch(err=>{
       console.error(err);
       el('country-map-status').textContent='Sequencing-center country data are unavailable until the next data refresh.';
@@ -888,68 +894,98 @@ async function loadSequencingCountries(){
   return SEQ_COUNTRY_LOADING;
 }
 
-function renderInstituteRanking(){
-  const panel=el('institute-ranking-panel');
-  const svg=el('institute-ranking-chart');
-  if(!panel||!svg)return;
-  const active=countryFacet==='sequencing';
-  panel.hidden=!active;
-  if(!active)return;
+function renderCountryCompanion(){
+  const svg=el('country-companion-chart');
+  const title=el('country-companion-title');
+  const kicker=el('country-companion-kicker');
+  const desc=el('country-companion-description');
+  const note=el('country-companion-note');
+  if(!svg||!title||!kicker||!desc||!note)return;
 
-  let rows=(SEQ_COUNTRY_DATA?.top_institutes||[]).slice(0,10);
-  if(!rows.length){
-    // Backward-safe fallback for older cached sequencing_countries.json files:
-    // combine the per-country institute snippets rather than rendering a blank panel.
-    const merged=new Map();
-    (SEQ_COUNTRY_DATA?.countries||[]).forEach(country=>{
-      (country.top_institutes||country.top_centers||[]).forEach(inst=>{
-        const key=String(inst.name||'').trim().toUpperCase();
-        if(!key)return;
-        const prev=merged.get(key)||{
-          name:String(inst.name||'').trim(),
-          assemblies:0,
-          country:country.name||null
-        };
-        prev.assemblies+=Number(inst.assemblies||0);
-        merged.set(key,prev);
-      });
-    });
-    rows=[...merged.values()]
+  let rows=[],valueKey='assemblies',valueLabel='assemblies',context='';
+
+  if(countryFacet==='sequencing'){
+    const countryRow=selectedCountry && selectedCountry.top_institutes ? selectedCountry : null;
+    rows=(countryRow?.top_institutes||SEQ_COUNTRY_DATA?.top_institutes||[]).slice(0,10);
+    kicker.textContent='Institute ranking';
+    title.textContent=countryRow ? 'Top institutes in '+countryRow.name : 'Top 10 institutes';
+    desc.textContent=countryRow
+      ? 'Resolved sequencing-institute associations for assemblies linked to '+countryRow.name+'.'
+      : 'Assemblies associated with each resolved sequencing institute; SRA sequencing-center names are preferred.';
+    valueKey='assemblies';
+    valueLabel='associated assemblies';
+    context='institute';
+    const denominator=countryRow
+      ? Number(countryRow.assemblies||0)
+      : Number(SEQ_COUNTRY_DATA?.coverage?.assemblies_with_resolved_institute_country||0);
+    note.textContent=countryRow
+      ? fmt(denominator)+' institute-linked assemblies are associated with '+countryRow.name+'.'
+      : fmt(denominator)+' assemblies have a resolved institute-country association.';
+  }else if(countryFacet==='origin'){
+    const countryRows=selectedCountry
+      ? (COUNTRY_TAXA_DATA?.countries?.[selectedCountry.iso3]||[])
+      : (COUNTRY_TAXA_DATA?.origin_orders||[]);
+    rows=countryRows.slice(0,10);
+    kicker.textContent='Taxonomic composition';
+    title.textContent=selectedCountry
+      ? 'Orders represented in '+selectedCountry.name
+      : 'Top orders by species represented';
+    desc.textContent=selectedCountry
+      ? 'Distinct species represented among assemblies whose BioSample origin resolves to '+selectedCountry.name+'.'
+      : 'Distinct species represented among assemblies with a resolved BioSample country.';
+    valueKey='species';
+    valueLabel='species represented';
+    context='taxon';
+    note.textContent=selectedCountry
+      ? 'Click another country to update this taxonomic profile.'
+      : 'Click a country on the map to show its taxonomic composition.';
+  }else{
+    rows=(COUNTRY_DATA?.countries||[])
+      .slice()
       .sort((a,b)=>Number(b.assemblies||0)-Number(a.assemblies||0))
       .slice(0,10);
+    kicker.textContent='Country ranking';
+    title.textContent='Top 10 sample-origin countries';
+    desc.textContent='All-time chromosome/complete genome assemblies with a resolved BioSample country.';
+    valueKey='assemblies';
+    valueLabel='assemblies';
+    context='country';
+    note.textContent='All-time totals; marine-only locality records are shown on the map but are not countries.';
   }
+
   if(!rows.length){
-    svg.innerHTML='<text class="institute-ranking-empty" x="550" y="210" text-anchor="middle">Institute ranking unavailable until the next institute-country refresh.</text>';
-    el('institute-ranking-note').textContent='';
+    svg.innerHTML='<text class="country-companion-empty" x="260" y="225" text-anchor="middle">Ranking unavailable until the next data refresh.</text>';
     return;
   }
 
-  const w=1100,h=430,L=300,R=72,T=20,B=24,iw=w-L-R;
-  const rowH=(h-T-B)/rows.length;
-  const max=Math.max(1,...rows.map(x=>Number(x.assemblies||0)));
+  drawCountryCompanionBars(svg,rows,valueKey,valueLabel,context);
+}
+
+function drawCountryCompanionBars(svg,rows,valueKey,valueLabel,context){
+  const w=520,h=450,L=205,R=56,T=14,B=18,iw=w-L-R;
+  const rowH=(h-T-B)/Math.max(1,rows.length);
+  const max=Math.max(1,...rows.map(x=>Number(x[valueKey]||0)));
   const scale=v=>iw*Number(v||0)/max;
   let out='';
   rows.forEach((r,i)=>{
-    const y=T+i*rowH+4;
-    const bh=Math.max(12,rowH-9);
-    const bw=scale(r.assemblies);
-    out+='<text class="institute-ranking-label" x="'+(L-12)+'" y="'+(y+bh/2+4)+'" text-anchor="end">'+esc(r.name)+'</text>';
-    out+='<rect class="institute-ranking-bar" data-index="'+i+'" x="'+L+'" y="'+y.toFixed(2)+'" width="'+Math.max(1,bw).toFixed(2)+'" height="'+bh.toFixed(2)+'" rx="2"></rect>';
-    out+='<text class="institute-ranking-value" x="'+(L+bw+8).toFixed(2)+'" y="'+(y+bh/2+4)+'">'+fmt(r.assemblies)+'</text>';
+    const y=T+i*rowH+5;
+    const bh=Math.max(12,rowH-11);
+    const bw=scale(r[valueKey]);
+    out+='<text class="country-companion-label" x="'+(L-10)+'" y="'+(y+bh/2+4)+'" text-anchor="end">'+esc(r.name)+'</text>';
+    out+='<rect class="country-companion-bar" data-index="'+i+'" x="'+L+'" y="'+y.toFixed(2)+'" width="'+Math.max(1,bw).toFixed(2)+'" height="'+bh.toFixed(2)+'" rx="2"></rect>';
+    out+='<text class="country-companion-value" x="'+Math.min(w-R+4,L+bw+7).toFixed(2)+'" y="'+(y+bh/2+4)+'">'+fmt(r[valueKey])+'</text>';
   });
   svg.innerHTML=out;
 
-  const resolved=Number(SEQ_COUNTRY_DATA?.coverage?.assemblies_with_resolved_institute_country||0);
-  el('institute-ranking-note').textContent=fmt(resolved)+' assemblies have a resolved institute-country association.';
   const tip=el('chart-tooltip');
-  svg.querySelectorAll('.institute-ranking-bar').forEach(bar=>{
+  svg.querySelectorAll('.country-companion-bar').forEach(bar=>{
     const row=rows[Number(bar.dataset.index)];
     const show=ev=>{
-      const pct=resolved?100*Number(row.assemblies||0)/resolved:0;
-      tip.innerHTML='<strong>'+esc(row.name)+'</strong>'+
-        '<span>'+fmt(row.assemblies)+' associated assemblies</span>'+
-        '<span>'+fmt1(pct)+'% of assemblies with resolved institute provenance</span>'+
-        (row.country?'<span>'+esc(row.country)+'</span>':'');
+      let body='<strong>'+esc(row.name)+'</strong><span>'+fmt(row[valueKey])+' '+esc(valueLabel)+'</span>';
+      if(context==='taxon')body+='<span>'+fmt(row.assemblies)+' assemblies</span>';
+      if(context==='country')body+='<span>'+fmt(row.species)+' species represented</span>';
+      if(context==='institute'&&row.country)body+='<span>'+esc(row.country)+'</span>';
+      tip.innerHTML=body;
       tip.hidden=false;
       bar.classList.add('is-hovered');
       positionTooltip(ev,tip);
@@ -960,6 +996,7 @@ function renderInstituteRanking(){
     bar.onpointerleave=hide;
   });
 }
+
 
 function countryByNumeric(id){
   const data=activeCountryData();
@@ -1114,6 +1151,7 @@ function selectCountry(meta){
   el('country-search').value=meta.name;
   el('country-results').innerHTML='';
   renderCountryDetail(meta);
+  renderCountryCompanion();
   document.querySelectorAll('.country-shape').forEach(p=>p.classList.remove('is-selected'));
   const target=[...document.querySelectorAll('.country-shape')].find(p=>{
     const c=countryByNumeric(p.dataset.countryId);

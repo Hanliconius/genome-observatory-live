@@ -145,6 +145,12 @@ def main():
         species_taxa = {}
         country_meta = {}
         marine_meta = {}
+        all_order_assemblies = Counter()
+        all_order_species = defaultdict(set)
+        origin_order_assemblies = Counter()
+        origin_order_species = defaultdict(set)
+        country_order_assemblies = defaultdict(Counter)
+        country_order_species = defaultdict(lambda: defaultdict(set))
 
         def ensure_taxon(tid, rk, lin):
             if tid not in agg:
@@ -238,6 +244,17 @@ def main():
                 if lin.get("species")
                 else f"name:{organism}"
             )
+
+            order_tid = lin.get("order")
+            if order_tid:
+                all_order_assemblies[order_tid] += 1
+                all_order_species[order_tid].add(species_key)
+                if country:
+                    iso3 = country["iso3"]
+                    origin_order_assemblies[order_tid] += 1
+                    origin_order_species[order_tid].add(species_key)
+                    country_order_assemblies[iso3][order_tid] += 1
+                    country_order_species[iso3][order_tid].add(species_key)
 
             for tid, rk in taxon_ids:
                 rec = ensure_taxon(tid, rk, lin)
@@ -349,6 +366,46 @@ def main():
                 "species": len(species_members[tid]),
                 "first_deposit": rec["first_deposit"],
             })
+
+        def order_rows(assembly_counts, species_sets, limit=10):
+            tids = sorted(
+                assembly_counts,
+                key=lambda tid: (
+                    -len(species_sets.get(tid, set())),
+                    -assembly_counts[tid],
+                    names.get(tid, str(tid)).casefold(),
+                ),
+            )[:limit]
+            return [
+                {
+                    "taxid": tid,
+                    "name": names.get(tid, str(tid)),
+                    "assemblies": assembly_counts[tid],
+                    "species": len(species_sets.get(tid, set())),
+                }
+                for tid in tids
+            ]
+
+        country_orders = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "definition": (
+                "Top taxonomic orders ranked by distinct species represented. "
+                "Country-specific and origin-wide values use assemblies with a "
+                "resolved BioSample country; all_orders uses all tracked assemblies."
+            ),
+            "all_orders": order_rows(all_order_assemblies, all_order_species),
+            "origin_orders": order_rows(origin_order_assemblies, origin_order_species),
+            "countries": {
+                iso3: order_rows(
+                    country_order_assemblies[iso3],
+                    country_order_species[iso3],
+                )
+                for iso3 in sorted(country_order_assemblies)
+            },
+        }
+        (OUT / "country_orders.json").write_text(
+            json.dumps(country_orders, separators=(",", ":"), ensure_ascii=False) + "\n"
+        )
 
         index_rows.sort(key=lambda x: (x["name"].casefold(), x["rank"], x["taxid"]))
         index = {

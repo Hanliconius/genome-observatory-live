@@ -75,6 +75,19 @@ CENTER_COUNTRY_ALIASES = {
     "SOUTH CHINA NATIONAL BOTANICAL GARDEN, UNIVERSITY OF CHINESE ACADEMY SCIENCE": ("CHN", "South China National Botanical Garden"),
 }
 
+# Human-readable display names for organization records whose ROR display label
+# is an acronym, historical name, or otherwise awkward in the dashboard.
+# These do not merge distinct institutions; they only improve labels.
+INSTITUTE_DISPLAY_ALIASES = {
+    "CAS": "Chinese Academy of Sciences",
+    "CAAS": "Chinese Academy of Agricultural Sciences",
+    "CU": "Columbia University",
+    "UC Santa Cruz": "University of California, Santa Cruz",
+    "UCSC Genome Institute": "UC Santa Cruz Genomics Institute",
+    "Imperial University of Peking": "Peking University · IAAS",
+    "Leibniz-Institut für Pflanzengenetik und Kulturpflanzenforschung (IPK)": "Leibniz IPK",
+}
+
 # Conservative assembly-submitter fallbacks. These are substring matches only
 # for institution names whose country is unambiguous. They are consulted only
 # when an assembly has no usable SRA sequencing-center country.
@@ -539,7 +552,8 @@ def canonical_institute_name(label, mode, ror_cache, submitter_cache):
         if mode == "sra_center"
         else resolved_submitter_country(label, submitter_cache)
     ) or {}
-    return str(info.get("ror_name") or label).strip()
+    raw = str(info.get("ror_name") or label).strip()
+    return INSTITUTE_DISPLAY_ALIASES.get(raw, raw)
 
 
 def backfill_submitter_cache(records, cache, center_cache):
@@ -754,7 +768,7 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
         years = sorted(set(rec["yearly_assemblies"]) | set(first_by_year))
         top_institutes = [
             {"name": name, "assemblies": n}
-            for name, n in rec["institutes"].most_common(5)
+            for name, n in rec["institutes"].most_common(10)
         ]
         rows.append({
             "iso2": rec["iso2"],

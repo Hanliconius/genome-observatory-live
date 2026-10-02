@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
-  <link rel="stylesheet" href="styles.css?v=20261001h" />
+  <link rel="stylesheet" href="styles.css?v=20261002a" />
 </head>
 <body>
   <header class="site-head">
@@ -381,37 +381,42 @@
     </section>
 
     <section id="countries-view" hidden>
-      <article class="country-map-panel">
-        <div class="panel-head country-map-head">
-          <div>
-            <p class="panel-kicker">Geographic activity</p>
-            <h2>Genome deposition by geographic origin</h2>
-            <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.</p>
-          </div>
-          <div class="country-map-tools">
-            <nav class="status-tabs country-facet-tabs" aria-label="Country facet">
-              <button class="status-tab country-facet-tab active" data-country-facet="origin">Sample origin</button>
-              <button class="status-tab country-facet-tab" data-country-facet="sequencing">Institute</button>
-              <button class="status-tab country-facet-tab" data-country-facet="alltime">All genomes</button>
-            </nav>
-            <div id="country-map-legend" class="country-map-legend"></div>
-          </div>
+      <article class="country-facet-header">
+        <div>
+          <p class="panel-kicker">Geographic activity</p>
+          <h2>Genome deposition by geography</h2>
+          <p class="taxon-intro" id="country-facet-description">Country is inferred from the NCBI BioSample geographic-location field. Colour shows the mean chromosome/complete genome deposits per business day over the trailing 30 days.</p>
         </div>
-        <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per business day by country"></svg>
-        <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
+        <nav class="status-tabs country-facet-tabs" aria-label="Country facet">
+          <button class="status-tab country-facet-tab active" data-country-facet="origin">Sample origin</button>
+          <button class="status-tab country-facet-tab" data-country-facet="sequencing">Institute</button>
+          <button class="status-tab country-facet-tab" data-country-facet="alltime">All genomes</button>
+        </nav>
       </article>
 
-      <article id="institute-ranking-panel" class="panel institute-ranking-panel" hidden>
-        <div class="panel-head">
-          <div>
-            <p class="panel-kicker">Institute ranking</p>
-            <h2 class="panel-title">Top 10 institutes</h2>
-            <p class="taxon-intro">Assemblies associated with each resolved sequencing institute. SRA sequencing-center names are preferred; assembly submitter is the fallback when no usable SRA center is available.</p>
+      <section class="country-overview-grid">
+        <article class="country-map-panel country-overview-panel">
+          <div class="country-overview-head">
+            <div>
+              <p class="panel-kicker">World map</p>
+              <h2 id="country-map-title">Sample-origin activity</h2>
+            </div>
+            <div id="country-map-legend" class="country-map-legend"></div>
           </div>
-          <p class="note" id="institute-ranking-note"></p>
-        </div>
-        <svg id="institute-ranking-chart" class="institute-ranking-chart" viewBox="0 0 1100 430" preserveAspectRatio="none" role="img" aria-label="Top ten institutes by associated genome assemblies"></svg>
-      </article>
+          <svg id="country-map" class="country-map" viewBox="0 0 1100 570" role="img" aria-label="World map of genomes deposited per business day by country"></svg>
+          <p id="country-map-status" class="country-map-status">Loading country data and map…</p>
+        </article>
+
+        <article id="country-companion-panel" class="panel country-companion-panel country-overview-panel">
+          <div>
+            <p class="panel-kicker" id="country-companion-kicker">Taxonomic composition</p>
+            <h2 class="panel-title" id="country-companion-title">Top orders by species represented</h2>
+            <p class="taxon-intro" id="country-companion-description">Distinct species represented among assemblies with a resolved BioSample country.</p>
+          </div>
+          <svg id="country-companion-chart" class="country-companion-chart" viewBox="0 0 520 450" preserveAspectRatio="none" role="img" aria-label="Companion ranking for the selected geographic view"></svg>
+          <p class="country-companion-note" id="country-companion-note"></p>
+        </article>
+      </section>
 
       <article class="country-search-panel">
         <div>
@@ -570,6 +575,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261001i"></script>
+  <script src="app.js?v=20261002a"></script>
 </body>
 </html>
