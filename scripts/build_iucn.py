@@ -6,12 +6,14 @@ import io
 import json
 import re
 import subprocess
+import time
 import tempfile
 import zipfile
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -320,6 +322,117 @@ def normalize_assembly(report):
     }
 
 
+def api_json(base, params):
+    req = Request(base + "?" + urlencode(params), headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def commons_file_info(title):
+    try:
+        q = api_json("https://commons.wikimedia.org/w/api.php", {
+            "action": "query", "titles": title, "prop": "imageinfo",
+            "iiprop": "url|extmetadata", "iiurlwidth": 900, "format": "json",
+        })
+        for page in (q.get("query", {}).get("pages", {}) or {}).values():
+            ii = (page.get("imageinfo") or [{}])[0]
+            thumb = ii.get("thumburl")
+            if not thumb:
+                continue
+            meta = ii.get("extmetadata") or {}
+            lic = (meta.get("LicenseShortName") or {}).get("value", "")
+            artist = re.sub("<[^>]+>", "", (meta.get("Artist") or {}).get("value", "")).strip()
+            return {
+                "thumb_url": thumb,
+                "page_url": ii.get("descriptionurl", ""),
+                "credit": " · ".join(x for x in (artist, lic) if x),
+                "matched_name": title,
+            }
+    except Exception:
+        pass
+    return None
+
+
+def wikidata_image(name):
+    if not name:
+        return None
+    try:
+        hits = api_json("https://www.wikidata.org/w/api.php", {
+            "action": "wbsearchentities", "search": name, "language": "en",
+            "type": "item", "limit": 5, "format": "json",
+        }).get("search", [])
+        for hit in hits:
+            qid = hit.get("id")
+            if not qid:
+                continue
+            ent = api_json("https://www.wikidata.org/w/api.php", {
+                "action": "wbgetentities", "ids": qid, "props": "claims", "format": "json",
+            }).get("entities", {}).get(qid, {})
+            p18 = (ent.get("claims") or {}).get("P18") or []
+            filename = first(p18[0], "mainsnak.datavalue.value") if p18 else None
+            if filename:
+                info = commons_file_info("File:" + filename)
+                if info:
+                    info["matched_name"] = name
+                    return info
+    except Exception:
+        pass
+    return None
+
+
+def commons_search(name):
+    if not name:
+        return None
+    try:
+        q = api_json("https://commons.wikimedia.org/w/api.php", {
+            "action": "query", "generator": "search",
+            "gsrsearch": 'intitle:"' + name + '" filetype:bitmap',
+            "gsrnamespace": 6, "gsrlimit": 6, "prop": "imageinfo",
+            "iiprop": "url|extmetadata", "iiurlwidth": 900, "format": "json",
+        })
+        for page in (q.get("query", {}).get("pages", {}) or {}).values():
+            ii = (page.get("imageinfo") or [{}])[0]
+            thumb = ii.get("thumburl")
+            if not thumb:
+                continue
+            meta = ii.get("extmetadata") or {}
+            lic = (meta.get("LicenseShortName") or {}).get("value", "")
+            artist = re.sub("<[^>]+>", "", (meta.get("Artist") or {}).get("value", "")).strip()
+            return {
+                "thumb_url": thumb,
+                "page_url": ii.get("descriptionurl", ""),
+                "credit": " · ".join(x for x in (artist, lic) if x),
+                "matched_name": name,
+            }
+    except Exception:
+        pass
+    return None
+
+
+def image_names(row):
+    # Prefer the NCBI organism name, then the matched IUCN name.  For older
+    # fallback rows this avoids depending on the rolling dashboard taxonomy cache.
+    names = []
+    for raw in (row.get("organism_name"), row.get("iucn_name")):
+        n = norm_name(raw)
+        if n and n not in names:
+            names.append(n)
+        parts = n.split()
+        if len(parts) >= 2:
+            genus = parts[0]
+            if genus not in names:
+                names.append(genus)
+    return names
+
+
+def find_image(row):
+    for name in image_names(row):
+        info = wikidata_image(name) or commons_search(name)
+        if info:
+            return info
+        time.sleep(0.1)
+    return None
+
 def make_milestones(daily_rows):
     total = sum(int(r["assemblies"]) for r in daily_rows)
     targets = [x for x in (10, 100, 1000, 10000) if x <= total]
@@ -395,7 +508,12 @@ def aggregate(rows, dashboard, recent_cutoff, seed_recent_if_empty=False):
             if org in latest_species:
                 continue
             y = dict(x)
-            y["image"] = image_cache.get(org)
+            image = image_cache.get(org)
+            if not image:
+                image = find_image(y)
+                if image:
+                    image_cache[org] = image
+            y["image"] = image
             recent.append(y)
             latest_species.add(org)
             if len(latest_species) >= min(6, len(first_seen)):
