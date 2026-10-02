@@ -335,7 +335,7 @@ def make_milestones(daily_rows):
     return out
 
 
-def aggregate(rows, dashboard, recent_cutoff):
+def aggregate(rows, dashboard, recent_cutoff, seed_recent_if_empty=False):
     rows.sort(key=lambda x: (x["release_date"], x["accession"]))
     first_seen = {}
     daily = defaultdict(lambda: {"assemblies": 0, "species": set(), "first_time_species": 0})
@@ -383,6 +383,25 @@ def aggregate(rows, dashboard, recent_cutoff):
         y["image"] = image_cache.get(x["organism_name"])
         recent.append(y)
 
+    # The extinct set is exceptionally sparse. On first population only, keep the
+    # recent-content area useful by showing the latest known qualifying genomes
+    # when the normal rolling window is empty. This is display content only:
+    # recent_daily and all summary/rate calculations retain the real cutoff.
+    recent_fallback = False
+    if seed_recent_if_empty and not recent and rows:
+        latest_species = set()
+        for x in reversed(rows):
+            org = x["organism_name"]
+            if org in latest_species:
+                continue
+            y = dict(x)
+            y["image"] = image_cache.get(org)
+            recent.append(y)
+            latest_species.add(org)
+            if len(latest_species) >= min(6, len(first_seen)):
+                break
+        recent_fallback = bool(recent)
+
     matched_species = {x["organism_name"].casefold() for x in rows}
     def ann_match(item):
         name = norm_name(item.get("species", ""))
@@ -406,6 +425,7 @@ def aggregate(rows, dashboard, recent_cutoff):
         "iucn_breakdown": [{"group": k, "count": v} for k, v in statuses.most_common()],
         "milestones": make_milestones(daily_rows),
         "recent_assemblies": recent[:200],
+        "recent_assemblies_fallback": recent_fallback,
         "annotations": annotations,
     }
 
@@ -444,7 +464,9 @@ def main():
             "license": "CC BY 4.0 via GBIF",
         },
         "threatened": aggregate(buckets["threatened"], dashboard, recent_cutoff),
-        "extinct": aggregate(buckets["extinct"], dashboard, recent_cutoff),
+        "extinct": aggregate(
+            buckets["extinct"], dashboard, recent_cutoff, seed_recent_if_empty=True
+        ),
         "audit": {
             "ncbi_assemblies_scanned": reports,
             "matched_assemblies": matched,
