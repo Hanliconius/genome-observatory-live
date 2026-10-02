@@ -410,7 +410,7 @@ def commons_search(name):
 
 
 def image_names(row):
-    # Prefer the NCBI organism name, then the matched IUCN name.  For older
+    # Prefer the NCBI organism name, then the matched IUCN name. For older
     # fallback rows this avoids depending on the rolling dashboard taxonomy cache.
     names = []
     for raw in (row.get("organism_name"), row.get("iucn_name")):
