@@ -872,3 +872,10 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   .country-overview-panel{padding:14px!important}
   .country-companion-label{font-size:9px}
 }
+
+
+/* Ranked Genometrics bars follow the same accent/hover language as collection histograms. */
+.genometrics-top-species{display:block;width:100%;height:auto;overflow:visible;margin-top:12px}
+.genometrics-rank-label{fill:var(--ink);font-size:10px;font-style:italic}
+.genometrics-rank-count{fill:var(--muted);font-size:9px;font-weight:700}
+.genometrics-rank-bar{transition:opacity .12s ease}
