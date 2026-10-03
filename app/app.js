@@ -312,8 +312,26 @@ function renderMilestones(){
 
 function renderRecent(){
   const rows=DATA.recent_assemblies||[];
+  const bySpecies=new Map();
+  rows.forEach(x=>{
+    const key=String(x.organism_name||'').trim()||String(x.accession||'');
+    if(!bySpecies.has(key))bySpecies.set(key,[]);
+    bySpecies.get(key).push(x);
+  });
+  const speciesRows=[...bySpecies.values()].slice(0,18);
+  const accessionLinks=xs=>xs.map(x=>{
+    const acc=esc(x.accession||'');
+    const url=assemblyUrl(x.accession);
+    return url ? `<a class="assembly-link" href="${url}" target="_blank" rel="noopener">${acc}</a>` : acc;
+  }).join('<br>');
+  const uniqueText=(xs,key)=>[...new Set(xs.map(x=>String(x[key]||'').trim()).filter(Boolean))].map(esc).join('<br>');
   el('recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
-  rows.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+  speciesRows.map(xs=>{
+    const x=xs[0];
+    const dates=[...new Set(xs.map(y=>y.release_date).filter(Boolean))];
+    const dateText=dates.length===1?esc(dates[0]):dates.map(esc).join('<br>');
+    return `<div class="row"><span class="muted">${dateText}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${uniqueText(xs,'assembly_name')}</span><span>${uniqueText(xs,'assembly_level')}</span><span class="muted">${accessionLinks(xs)}</span></div>`;
+  }).join('');
 }
 
 function renderRate(){
