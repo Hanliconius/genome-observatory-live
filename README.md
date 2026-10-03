@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="app/favicon.svg" width="96" height="96" alt="Genome Observatory Live logo">
+</p>
+
 # Genome Observatory Live
 
 **A live, lightweight view of the growth of chromosome-scale eukaryotic genome sequencing.**
