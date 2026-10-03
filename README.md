@@ -220,4 +220,4 @@ Code in this repository can be cited by linking to the relevant GitHub commit or
 
 ---
 
-**Genome Observatory Live** · [Live dashboard](https://hanliconius.github.io/genome-observatory-live/app/) · [Source code](https://github.com/Hanliconius/eukaryote-genome-watch) · [Joe Hanly](https://github.com/Hanliconius)
+**Genome Observatory Live** · [Live dashboard](https://hanliconius.github.io/genome-observatory-live/app/) · [Source code](https://github.com/Hanliconius/genome-observatory-live) · [Joe Hanly](https://github.com/Hanliconius)
