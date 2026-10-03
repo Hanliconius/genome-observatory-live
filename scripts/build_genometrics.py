@@ -1115,6 +1115,8 @@ def main():
 
     karyotype_audit=build_karyotype_audit(records)
     assembly_quality=build_assembly_quality(records)
+    species_counts=Counter(x.get("organism_name","").strip() for x in records if x.get("organism_name","").strip())
+    top_species=[{"species":name,"assemblies":count} for name,count in species_counts.most_common(15)]
     method_trends=build_method_trends(records)
 
     total=len(records)
@@ -1160,6 +1162,10 @@ def main():
         "sex_chromosome_expected_vs_observed":expected_vs_observed,
         "karyotype_audit":karyotype_audit,
         "assembly_quality":assembly_quality,
+        "top_species_by_assemblies":{
+            "species":top_species,
+            "definition":"Top 15 organism names by number of qualifying GenBank chromosome-level or complete-genome assemblies in the tracked collection."
+        },
         "methods_through_time":method_trends,
         "source":{
             "assembly_report":"NCBI Datasets genome assembly report (organelleInfo; assemblyInfo.releaseDate; assemblyInfo.sequencingTech; assemblyInfo.assemblyMethod)",
