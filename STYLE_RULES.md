@@ -1,6 +1,6 @@
 # Genome Observatory Live — Visual Style Rules
 
-This file is the visual contract for charts and quantitative panels in Genome Observatory Live. New plots should follow these rules unless a scientific reason requires an exception.
+This file is the visual contract for charts and quantitative panels in Genome Observatory Live. It should be treated as the default reference when adding or revising visualizations. New plots should follow these rules unless a scientific reason requires an exception.
 
 ## General
 - Prefer a compact, information-dense scientific-dashboard aesthetic over decorative graphics.
