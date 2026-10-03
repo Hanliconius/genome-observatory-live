@@ -116,7 +116,7 @@ function render(){
   el('top-first').textContent=fmt(s.first_time_species);
   el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
   el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
-  const last30=DATA.daily.slice(-30);
+  const last30=reportingLagRows(DATA.daily).slice(-30);
   const currentPace=businessDayPace(last30);
   el('top-rate').textContent=fmt1(currentPace);
   el('primary-label').textContent=RANGE[range].label;
@@ -166,8 +166,16 @@ function businessDayRows(rows){
   return (rows||[]).filter(x=>isBusinessDate(x.date));
 }
 
-function recentBusinessDays(rows,n){
-  return businessDayRows(rows).slice(-n);
+const REPORTING_LAG_DAYS=3;
+function reportingLagRows(rows,generatedAt=DATA?.generated_at){
+  const anchor=generatedAt?new Date(generatedAt):new Date();
+  const cutoff=new Date(Date.UTC(anchor.getUTCFullYear(),anchor.getUTCMonth(),anchor.getUTCDate()));
+  cutoff.setUTCDate(cutoff.getUTCDate()-REPORTING_LAG_DAYS);
+  const ds=cutoff.toISOString().slice(0,10);
+  return (rows||[]).filter(x=>String(x.date||'')<=ds);
+}
+function recentBusinessDays(rows,n,generatedAt=DATA?.generated_at){
+  return businessDayRows(reportingLagRows(rows,generatedAt)).slice(-n);
 }
 
 function businessDayPace(rows){
@@ -341,7 +349,7 @@ function renderRate(){
     labels=rows.map(x=>new Date(x.date+'T12:00:00').toLocaleDateString([], {weekday:'short',month:'numeric',day:'numeric'}));
   }
   else if(range==='year'){
-    rows=businessDayRows(DATA.daily.slice(-365));
+    rows=businessDayRows(reportingLagRows(DATA.daily).slice(-365));
     labels=rows.map(x=>x.date);
   }
   else{rows=(DATA.yearly||[]).map(x=>({date:String(x.year),assemblies:x.assemblies}));labels=rows.map(x=>x.date);}
@@ -451,6 +459,27 @@ function drawGenometricHistogram(svgId,rows,periodLabel){
   });
 }
 
+
+function drawTopSpecies(svgId,rows){
+  const svg=el(svgId);rows=rows||[];
+  if(!svg||!rows.length){if(svg)svg.innerHTML='';return;}
+  const w=520,h=470,L=178,R=34,T=12,B=18,iw=w-L-R;
+  const rowH=(h-T-B)/rows.length,max=Math.max(1,...rows.map(x=>Number(x.assemblies||0)));
+  let html='';
+  rows.forEach((r,i)=>{
+    const n=Number(r.assemblies||0),y=T+i*rowH+4,bh=Math.max(8,rowH-9),bw=iw*n/max;
+    html+=`<text class="genometrics-rank-label" x="${L-10}" y="${(y+bh*.72).toFixed(2)}" text-anchor="end">${esc(r.species)}</text>`;
+    html+=`<rect class="genometrics-hist-bar genometrics-rank-bar" data-label="${esc(r.species)}" data-count="${n}" x="${L}" y="${y.toFixed(2)}" width="${Math.max(1,bw).toFixed(2)}" height="${bh.toFixed(2)}" rx="2"></rect>`;
+    html+=`<text class="genometrics-rank-count" x="${Math.min(w-R+4,L+bw+6).toFixed(2)}" y="${(y+bh*.72).toFixed(2)}">${fmt(n)}</text>`;
+  });
+  svg.innerHTML=html;
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.genometrics-rank-bar').forEach(bar=>{
+    const show=ev=>{tip.innerHTML=`<strong><em>${esc(bar.dataset.label)}</em></strong><span>${fmt(Number(bar.dataset.count||0))} chromosome-scale / complete assemblies</span>`;tip.hidden=false;bar.classList.add('is-hovered');positionTooltip(ev,tip);};
+    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
+    bar.onpointerenter=show;bar.onpointermove=show;bar.onpointerleave=hide;
+  });
+}
 
 function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLabel){
   const svg=el(svgId),legend=el(legendId);
@@ -648,6 +677,9 @@ function renderGenometrics(){
      <div><strong>${q.median_chromosomes_reported==null?'—':fmt1(q.median_chromosomes_reported)}</strong><span>median chromosomes reported</span></div>`;
   drawGenometricHistogram('genometrics-size-hist',q.assembly_size_histogram||[],'Genome size');
   drawGenometricHistogram('genometrics-chrom-hist',q.chromosome_count_histogram||[],'Reported chromosome count');
+  const topSpecies=d.top_species_by_assemblies?.species||[];
+  drawTopSpecies('genometrics-top-species',topSpecies);
+  el('genometrics-top-species-denominator').textContent='Ranked across all '+fmt(q.assemblies||0)+' tracked chromosome-level and complete GenBank assembly deposits.';
   el('genometrics-quality-denominator').textContent=
     fmt(q.assembly_size_available||0)+' assemblies contribute genome size; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
 
@@ -710,6 +742,7 @@ function dailyWindow(rows,days,generatedAt){
   const sparse=new Map((rows||[]).map(x=>[x.date,Number(x.assemblies||0)]));
   const anchor=generatedAt?new Date(generatedAt):new Date();
   const end=new Date(Date.UTC(anchor.getUTCFullYear(),anchor.getUTCMonth(),anchor.getUTCDate()));
+  end.setUTCDate(end.getUTCDate()-REPORTING_LAG_DAYS);
   const out=[];
   for(let i=days-1;i>=0;i--){
     const d=new Date(end);d.setUTCDate(end.getUTCDate()-i);
