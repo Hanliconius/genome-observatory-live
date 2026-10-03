@@ -6,7 +6,7 @@
 
 **A live, lightweight view of the growth of chromosome-scale eukaryotic genome sequencing.**
 
-[**Open Genome Observatory Live →**](https://hanliconius.github.io/eukaryote-genome-watch/app/)
+[**Open Genome Observatory Live →**](https://hanliconius.github.io/genome-observatory-live/app/)
 
 Genome Observatory Live tracks chromosome-scale and complete eukaryotic genome assemblies entering the public NCBI/GenBank ecosystem, alongside RefSeq annotation activity and collection-wide metadata. It is designed as a compact public observatory: no sequence data are mirrored, the site is entirely static, and the dataset refreshes automatically on GitHub Actions.
 
@@ -220,4 +220,4 @@ Code in this repository can be cited by linking to the relevant GitHub commit or
 
 ---
 
-**Genome Observatory Live** · [Live dashboard](https://hanliconius.github.io/eukaryote-genome-watch/app/) · [Source code](https://github.com/Hanliconius/eukaryote-genome-watch) · [Joe Hanly](https://github.com/Hanliconius)
+**Genome Observatory Live** · [Live dashboard](https://hanliconius.github.io/genome-observatory-live/app/) · [Source code](https://github.com/Hanliconius/eukaryote-genome-watch) · [Joe Hanly](https://github.com/Hanliconius)
