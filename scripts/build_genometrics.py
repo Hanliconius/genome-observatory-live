@@ -31,6 +31,7 @@ TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
 # Genometrics bootstrap version: 3
 VIRIDIPLANTAE=33090
+METAZOA=33208
 FUNGI=4751
 BATCH_SIZE=250
 SEQUENCE_REPORT_URL="https://api.ncbi.nlm.nih.gov/datasets/v2/genome/sequence_reports"
@@ -499,6 +500,157 @@ def build_assembly_quality(records):
         "assembly_size_histogram":size_hist,
         "chromosome_count_histogram":chrom_hist,
         "definition":"Current NCBI assembly statistics for the tracked chromosome-scale/complete GenBank collection."
+    }
+
+
+def taxon_name_at_rank(tid,target_rank,parent,rank,sci):
+    if not tid:
+        return ""
+    cur=tid; seen=set()
+    while cur and cur not in seen:
+        seen.add(cur)
+        if rank.get(cur)==target_rank:
+            return sci.get(cur,"")
+        nxt=parent.get(cur)
+        if nxt is None or nxt==cur:
+            break
+        cur=nxt
+    return ""
+
+
+def architecture_group(tid,parent,lineage_cache):
+    if tid and is_desc(tid,METAZOA,parent,lineage_cache):
+        return "Animals"
+    if tid and is_desc(tid,VIRIDIPLANTAE,parent,lineage_cache):
+        return "Plants"
+    if tid and is_desc(tid,FUNGI,parent,lineage_cache):
+        return "Fungi"
+    return "Other"
+
+
+def build_architecture_views(records,parent,rank,sci,lineage_cache):
+    """Small browser-ready summaries for genome size/chromosome visualisations.
+
+    Each species contributes at most one assembly to each view. The newest
+    qualifying assembly is used, preventing heavily resequenced species from
+    dominating the biological distributions.
+    """
+    def valid_size(rec):
+        try:
+            bp=int(rec.get("assembly_length"))
+            return bp if bp>0 else None
+        except (TypeError,ValueError):
+            return None
+
+    def valid_chrom(rec):
+        try:
+            n=int(rec.get("assembly_chromosomes"))
+            return n if n>0 else None
+        except (TypeError,ValueError):
+            return None
+
+    def species_key(rec):
+        name=str(rec.get("organism_name") or "").strip()
+        return canonical_species_name(name) or name.casefold()
+
+    # Newest size-bearing assembly and newest assembly bearing both size + count.
+    size_rep={}
+    scatter_rep={}
+    for rec in records:
+        key=species_key(rec)
+        if not key:
+            continue
+        ds=str(rec.get("release_date") or "")
+        bp=valid_size(rec)
+        chrom=valid_chrom(rec)
+        if bp is not None:
+            old=size_rep.get(key)
+            if old is None or ds>str(old.get("release_date") or ""):
+                size_rep[key]=rec
+        if bp is not None and chrom is not None:
+            old=scatter_rep.get(key)
+            if old is None or ds>str(old.get("release_date") or ""):
+                scatter_rep[key]=rec
+
+    points=[]
+    for rec in scatter_rep.values():
+        bp=valid_size(rec); chrom=valid_chrom(rec)
+        if bp is None or chrom is None:
+            continue
+        tid=rec.get("taxid")
+        cls=taxon_name_at_rank(tid,"class",parent,rank,sci)
+        points.append({
+            "species":str(rec.get("organism_name") or ""),
+            "chromosomes":chrom,
+            "size_mb":round(bp/1_000_000,3),
+            "group":architecture_group(tid,parent,lineage_cache),
+            "class":cls,
+        })
+    points.sort(key=lambda x:(x["group"],x["species"]))
+
+    class_sizes=defaultdict(list)
+    class_groups=defaultdict(Counter)
+    for rec in size_rep.values():
+        bp=valid_size(rec)
+        if bp is None:
+            continue
+        tid=rec.get("taxid")
+        cls=taxon_name_at_rank(tid,"class",parent,rank,sci)
+        if not cls:
+            continue
+        class_sizes[cls].append(bp/1_000_000)
+        class_groups[cls][architecture_group(tid,parent,lineage_cache)]+=1
+
+    top_classes=[
+        name for name,_ in sorted(
+            ((name,len(vals)) for name,vals in class_sizes.items()),
+            key=lambda x:(-x[1],x[0])
+        )[:8]
+    ]
+
+    edges=[1,3,10,30,100,300,1000,3000,10000,30000,100000]
+    labels=[]
+    lows=[0]+edges
+    highs=edges+[None]
+    for i in range(len(lows)):
+        lo=lows[i]; hi=highs[i]
+        labels.append(
+            f"<{hi:g} Mb" if i==0
+            else f"{lo:g}–{hi:g} Mb" if hi is not None
+            else f"≥{lo:g} Mb"
+        )
+
+    def median(xs):
+        if not xs:
+            return None
+        ys=sorted(xs); n=len(ys)
+        return ys[n//2] if n%2 else (ys[n//2-1]+ys[n//2])/2
+
+    distributions=[]
+    for cls in top_classes:
+        vals=class_sizes[cls]
+        counts=[0]*(len(edges)+1)
+        for mb in vals:
+            bi=next((i for i,e in enumerate(edges) if mb<e),len(edges))
+            counts[bi]+=1
+        distributions.append({
+            "taxon":cls,
+            "group":class_groups[cls].most_common(1)[0][0] if class_groups[cls] else "Other",
+            "species":len(vals),
+            "median_mb":round(median(vals),3) if vals else None,
+            "bins":[{"label":lab,"count":count} for lab,count in zip(labels,counts)],
+        })
+
+    return {
+        "species_points":points,
+        "scatter_species":len(points),
+        "size_species":len(size_rep),
+        "size_distribution_by_class":{
+            "classes":distributions,
+            "bin_labels":labels,
+            "represented_species":sum(len(class_sizes[x]) for x in top_classes),
+        },
+        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show the eight NCBI classes with the most species carrying size metadata."
     }
 
 
@@ -1115,6 +1267,7 @@ def main():
 
     karyotype_audit=build_karyotype_audit(records)
     assembly_quality=build_assembly_quality(records)
+    architecture_views=build_architecture_views(records,parent,rank,sci,lineage_cache)
     species_counts=Counter(x.get("organism_name","").strip() for x in records if x.get("organism_name","").strip())
     top_species=[{"species":name,"assemblies":count} for name,count in species_counts.most_common(15)]
     method_trends=build_method_trends(records)
@@ -1162,6 +1315,7 @@ def main():
         "sex_chromosome_expected_vs_observed":expected_vs_observed,
         "karyotype_audit":karyotype_audit,
         "assembly_quality":assembly_quality,
+        "genome_architecture":architecture_views,
         "top_species_by_assemblies":{
             "species":top_species,
             "definition":"Top 15 organism names by number of qualifying GenBank chromosome-level or complete-genome assemblies in the tracked collection."
