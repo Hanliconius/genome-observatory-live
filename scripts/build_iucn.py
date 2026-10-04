@@ -493,7 +493,16 @@ def aggregate(rows, dashboard, recent_cutoff, seed_recent_if_empty=False):
         if x["release_date"] < recent_cutoff:
             break
         y = dict(x)
-        y["image"] = image_cache.get(x["organism_name"])
+        org = x["organism_name"]
+        image = image_cache.get(org)
+        # Recent IUCN rows must not depend on the species already having been
+        # encountered by the main dashboard image cache. Resolve the image here
+        # as well, so the featured status card follows newly current species.
+        if not image:
+            image = find_image(y)
+            if image:
+                image_cache[org] = image
+        y["image"] = image
         recent.append(y)
 
     # The extinct set is exceptionally sparse. On first population only, keep the
