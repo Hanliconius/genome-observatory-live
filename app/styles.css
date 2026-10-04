@@ -308,6 +308,29 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
   background-size:32px 32px,32px 32px,auto;
 }
 .chart{position:relative}
+
+/* Overview: one-year deposit calendar */
+.weather-panel{
+  background:
+    linear-gradient(rgba(46,110,166,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(46,110,166,.035) 1px,transparent 1px),
+    var(--panel);
+  background-size:32px 32px,32px 32px,auto;
+}
+.weather-map{display:block;width:100%;height:auto;margin-top:12px;overflow:visible}
+.weather-cell{stroke:rgba(17,24,21,.08);stroke-width:.65;vector-effect:non-scaling-stroke;transition:opacity .1s ease,stroke-width .1s ease}
+.weather-level-0{fill:#eef1ef}
+.weather-level-1{fill:#dce9e4;background:#dce9e4}
+.weather-level-2{fill:#b9d8cd;background:#b9d8cd}
+.weather-level-3{fill:#84b9aa;background:#84b9aa}
+.weather-level-4{fill:#4b8e7d;background:#4b8e7d}
+.weather-level-5{fill:#245f54;background:#245f54}
+.weather-cell.is-hovered{stroke:var(--ink);stroke-width:1.6}
+.weather-month-label,.weather-day-label{fill:var(--muted);font-size:10px}
+.weather-day-label{font-size:9px}
+.weather-key{display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:5px;color:var(--muted);font-size:.7rem}
+.weather-key i{display:block;width:12px;height:12px;border:1px solid rgba(17,24,21,.08);border-radius:2px}
+
 .gridline{stroke-dasharray:2 5}
 .hover-guide{stroke:var(--accent);stroke-dasharray:2 3}
 .hover-dot{filter:drop-shadow(0 0 2px rgba(46,110,166,.28))}
@@ -584,6 +607,58 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .genometrics-hist-tick{fill:var(--muted);font-size:9px}
 @media(max-width:700px){.genometrics-histograms{grid-template-columns:1fr}}
 
+
+/* Genometrics: species-level genome architecture */
+.genometrics-architecture-card{min-height:0}
+.genometrics-architecture-card .genometrics-summary{min-height:0}
+.genometrics-architecture,.genometrics-size-by-taxon{
+  display:block;
+  width:100%;
+  height:auto;
+  margin-top:8px;
+  overflow:visible;
+}
+.genometrics-arch-grid{
+  stroke:var(--line);
+  stroke-width:1;
+  stroke-dasharray:2 5;
+  vector-effect:non-scaling-stroke;
+}
+.genometrics-arch-axis{
+  stroke:var(--line-dark);
+  stroke-width:1;
+  vector-effect:non-scaling-stroke;
+}
+.genometrics-arch-tick,.genometrics-arch-axis-label,.genometrics-dist-tick,.genometrics-dist-n{
+  fill:var(--muted);
+  font-size:9px;
+}
+.genometrics-arch-axis-label{font-size:10px}
+.genometrics-arch-point{
+  opacity:.52;
+  stroke:#fff;
+  stroke-width:.6;
+  vector-effect:non-scaling-stroke;
+  transition:opacity .1s ease,r .1s ease,stroke-width .1s ease;
+  cursor:pointer;
+}
+.genometrics-arch-point.is-hovered{opacity:1;r:4.4;stroke:var(--ink);stroke-width:1}
+.genometrics-architecture-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  margin-top:8px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:.74rem;
+}
+.genometrics-architecture-legend span{display:flex;align-items:center;gap:6px}
+.genometrics-architecture-legend i{width:9px;height:9px;border-radius:50%}
+.genometrics-dist-label{fill:var(--ink);font-size:9px;font-style:italic}
+.genometrics-dist-n{font-size:8px}
+.genometrics-dist-bar{opacity:.7;transition:opacity .1s ease;cursor:pointer}
+.genometrics-dist-bar.is-hovered{opacity:1;stroke:var(--ink);stroke-width:.7;vector-effect:non-scaling-stroke}
 
 /* Genometrics: sequencing technology and assembler history */
 .genometrics-trend-card{min-height:0}
