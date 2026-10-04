@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-04T02:17:48.008372+00:00",
+  "generated_at": "2026-10-04T02:48:24.163952+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
       "assemblies": 53,
       "species": 22,
-      "first_time_species": 6
+      "first_time_species": 0
     },
     "year": {
       "assemblies": 6355,
       "species": 3967,
-      "first_time_species": 3278
+      "first_time_species": 3259
     },
     "all": {
       "assemblies": 18855,
@@ -47957,13 +47957,13 @@
       "date": "2026-09-24",
       "assemblies": 26,
       "species": 21,
-      "first_time_species": 9
+      "first_time_species": 0
     },
     {
       "date": "2026-09-25",
       "assemblies": 8,
       "species": 7,
-      "first_time_species": 4
+      "first_time_species": 0
     },
     {
       "date": "2026-09-26",
@@ -47993,19 +47993,19 @@
       "date": "2026-09-30",
       "assemblies": 4,
       "species": 1,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-10-01",
       "assemblies": 4,
       "species": 4,
-      "first_time_species": 3
+      "first_time_species": 0
     },
     {
       "date": "2026-10-02",
       "assemblies": 4,
       "species": 4,
-      "first_time_species": 2
+      "first_time_species": 0
     },
     {
       "date": "2026-10-03",
@@ -48157,7 +48157,7 @@
       "year": "2026",
       "assemblies": 5236,
       "species": 3500,
-      "first_time_species": 2534
+      "first_time_species": 2515
     }
   ],
   "groups_week": [
@@ -48233,25 +48233,20 @@
     }
   ],
   "featured_assembly": {
-    "accession": "GCA_062009919.1",
-    "organism_name": "Epinephelus fuscoguttatus x Epinephelus lanceolatus",
-    "common_name": "hybrid giant tiger grouper",
-    "tax_id": 1074816,
-    "release_date": "2026-09-29",
+    "accession": "GCA_062014572.1",
+    "organism_name": "Cynoscion nebulosus",
+    "common_name": "spotted seatrout",
+    "tax_id": 13029,
+    "release_date": "2026-10-02",
     "assembly_level": "Chromosome",
-    "assembly_name": "ASM62009919v1",
-    "total_sequence_length": 1116780029,
+    "assembly_name": "fCynNeb1.hap2",
+    "total_sequence_length": 662870293,
     "chromosome_count": 24,
-    "genus": "Epinephelus",
-    "family": "Serranidae",
+    "genus": "Cynoscion",
+    "family": "Sciaenidae",
     "phylum": "Chordata",
     "group": "Animals",
-    "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
-      "credit": "Joris Joostensz Laerle (attributed) · Public domain",
-      "matched_name": "Serranidae"
-    }
+    "image": null
   },
   "recent_assemblies": [
     {
@@ -49271,7 +49266,12 @@
       "family": "Anatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Long-tailed-duck.jpg/960px-Long-tailed-duck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Long-tailed-duck.jpg",
+        "credit": "Wolfgang Wander · CC BY-SA 3.0",
+        "matched_name": "Clangula hyemalis"
+      }
     },
     {
       "accession": "GCA_988291755.1",
@@ -49303,7 +49303,12 @@
       "family": "Pectinidae",
       "phylum": "Mollusca",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Caribachlamys_ornata_%28ornate_scallop%29_%28San_Salvador_Island%2C_Bahamas%29_2_%2816188572121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Caribachlamys_ornata_(ornate_scallop)_(San_Salvador_Island,_Bahamas)_2_(16188572121).jpg",
+        "credit": "James St. John · CC BY 2.0",
+        "matched_name": "Caribachlamys ornata"
+      }
     },
     {
       "accession": "GCA_988291585.1",
@@ -49457,7 +49462,12 @@
       "family": "Anatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anser_fabalis_fabalis_%28Taiga_Bean_Goose%29%2C_Naturschutzgebiet_Schellbruch%2C_L%C3%BCbeck%2C_Germany.jpg/960px-Anser_fabalis_fabalis_%28Taiga_Bean_Goose%29%2C_Naturschutzgebiet_Schellbruch%2C_L%C3%BCbeck%2C_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anser_fabalis_fabalis_(Taiga_Bean_Goose),_Naturschutzgebiet_Schellbruch,_L%C3%BCbeck,_Germany.jpg",
+        "credit": "Hobbyfotowiki · CC0",
+        "matched_name": "Anser fabalis"
+      }
     },
     {
       "accession": "GCA_988290445.1",
@@ -49521,7 +49531,12 @@
       "family": "Anatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tufted_Duck_09_05_2025_02.jpg/960px-Tufted_Duck_09_05_2025_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_09_05_2025_02.jpg",
+        "credit": "Alexis Lours · CC BY 4.0",
+        "matched_name": "Aythya fuligula"
+      }
     },
     {
       "accession": "GCA_988290405.1",
@@ -49569,7 +49584,12 @@
       "family": "Caprimulgidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Caprimulgus_macrurus.jpg/960px-Caprimulgus_macrurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Caprimulgus_macrurus.jpg",
+        "credit": "NatureAtYourBackyard, Flickr User · CC BY 2.0",
+        "matched_name": "Caprimulgus"
+      }
     },
     {
       "accession": "GCA_988290365.1",
@@ -133363,15 +133383,40 @@
       "credit": "Calibas (edit by Aqwis) · CC BY-SA 3.0",
       "matched_name": "Anas platyrhynchos"
     },
-    "Anser fabalis": null,
-    "Aythya fuligula": null,
+    "Anser fabalis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Anser_fabalis_fabalis_%28Taiga_Bean_Goose%29%2C_Naturschutzgebiet_Schellbruch%2C_L%C3%BCbeck%2C_Germany.jpg/960px-Anser_fabalis_fabalis_%28Taiga_Bean_Goose%29%2C_Naturschutzgebiet_Schellbruch%2C_L%C3%BCbeck%2C_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Anser_fabalis_fabalis_(Taiga_Bean_Goose),_Naturschutzgebiet_Schellbruch,_L%C3%BCbeck,_Germany.jpg",
+      "credit": "Hobbyfotowiki · CC0",
+      "matched_name": "Anser fabalis"
+    },
+    "Aythya fuligula": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tufted_Duck_09_05_2025_02.jpg/960px-Tufted_Duck_09_05_2025_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tufted_Duck_09_05_2025_02.jpg",
+      "credit": "Alexis Lours · CC BY 4.0",
+      "matched_name": "Aythya fuligula"
+    },
     "Branta canadensis": null,
     "Bucephala clangula": null,
     "Calappa ocellata": null,
     "Calonectris borealis": null,
-    "Caprimulgus europaeus": null,
-    "Caribachlamys ornata": null,
-    "Clangula hyemalis": null,
+    "Caprimulgus europaeus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Caprimulgus_macrurus.jpg/960px-Caprimulgus_macrurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Caprimulgus_macrurus.jpg",
+      "credit": "NatureAtYourBackyard, Flickr User · CC BY 2.0",
+      "matched_name": "Caprimulgus"
+    },
+    "Caribachlamys ornata": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Caribachlamys_ornata_%28ornate_scallop%29_%28San_Salvador_Island%2C_Bahamas%29_2_%2816188572121%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Caribachlamys_ornata_(ornate_scallop)_(San_Salvador_Island,_Bahamas)_2_(16188572121).jpg",
+      "credit": "James St. John · CC BY 2.0",
+      "matched_name": "Caribachlamys ornata"
+    },
+    "Clangula hyemalis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Long-tailed-duck.jpg/960px-Long-tailed-duck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Long-tailed-duck.jpg",
+      "credit": "Wolfgang Wander · CC BY-SA 3.0",
+      "matched_name": "Clangula hyemalis"
+    },
     "Columba oenas": null,
     "Columba palumbus": null,
     "Cygnus columbianus": null,
@@ -135189,7 +135234,6 @@
       "phylum": "Annelida",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "1619589": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "segmented worms",
@@ -135253,6 +135297,7 @@
       "phylum": "Annelida",
       "kingdom": "Metazoa"
     },
+    "3700093": {},
     "3680444": {}
   }
 }
