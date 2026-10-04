@@ -1,30 +1,24 @@
 {
-  "generated_at": "2026-10-03T14:43:58.248510+00:00",
+  "generated_at": "2026-10-04T02:17:48.008372+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 41,
-      "species": 13,
-      "first_time_species": 0
+      "assemblies": 53,
+      "species": 22,
+      "first_time_species": 6
     },
     "year": {
-      "assemblies": 6326,
-      "species": 3949,
-      "first_time_species": 3261
+      "assemblies": 6355,
+      "species": 3967,
+      "first_time_species": 3278
     },
     "all": {
-      "assemblies": 18824,
-      "species": 10539,
-      "first_time_species": 10539
+      "assemblies": 18855,
+      "species": 10557,
+      "first_time_species": 10557
     }
   },
   "daily": [
-    {
-      "date": "2004-11-08",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-09",
       "assemblies": 0,
@@ -47961,15 +47955,15 @@
     },
     {
       "date": "2026-09-24",
-      "assemblies": 13,
-      "species": 9,
-      "first_time_species": 0
+      "assemblies": 26,
+      "species": 21,
+      "first_time_species": 9
     },
     {
       "date": "2026-09-25",
-      "assemblies": 2,
-      "species": 2,
-      "first_time_species": 0
+      "assemblies": 8,
+      "species": 7,
+      "first_time_species": 4
     },
     {
       "date": "2026-09-26",
@@ -47997,24 +47991,30 @@
     },
     {
       "date": "2026-09-30",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
+      "assemblies": 4,
+      "species": 1,
+      "first_time_species": 1
     },
     {
       "date": "2026-10-01",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
+      "assemblies": 4,
+      "species": 4,
+      "first_time_species": 3
     },
     {
       "date": "2026-10-02",
+      "assemblies": 4,
+      "species": 4,
+      "first_time_species": 2
+    },
+    {
+      "date": "2026-10-03",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-10-03",
+      "date": "2026-10-04",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -48155,12 +48155,16 @@
     },
     {
       "year": "2026",
-      "assemblies": 5205,
-      "species": 3474,
-      "first_time_species": 2515
+      "assemblies": 5236,
+      "species": 3500,
+      "first_time_species": 2534
     }
   ],
   "groups_week": [
+    {
+      "group": "Animals",
+      "count": 20
+    },
     {
       "group": "Fungi",
       "count": 20
@@ -48170,10 +48174,6 @@
       "count": 11
     },
     {
-      "group": "Animals",
-      "count": 8
-    },
-    {
       "group": "Other",
       "count": 2
     }
@@ -48181,11 +48181,11 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4095
+      "count": 4126
     },
     {
       "group": "Plants",
-      "count": 1654
+      "count": 1655
     },
     {
       "group": "Fungi",
@@ -48193,7 +48193,7 @@
     },
     {
       "group": "Other",
-      "count": 126
+      "count": 123
     }
   ],
   "groups_all": [
@@ -48254,6 +48254,198 @@
     }
   },
   "recent_assemblies": [
+    {
+      "accession": "GCA_062014572.1",
+      "organism_name": "Cynoscion nebulosus",
+      "common_name": "spotted seatrout",
+      "tax_id": 13029,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "fCynNeb1.hap2",
+      "total_sequence_length": 662870293,
+      "chromosome_count": 24,
+      "genus": "Cynoscion",
+      "family": "Sciaenidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062014570.1",
+      "organism_name": "Pedetes capensis",
+      "common_name": "springhare",
+      "tax_id": 10023,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mPedCap2.hap2",
+      "total_sequence_length": 2798748820,
+      "chromosome_count": 19,
+      "genus": "Pedetes",
+      "family": "Pedetidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062014567.1",
+      "organism_name": "Columba oenas",
+      "common_name": "birds",
+      "tax_id": 160229,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bColOen1.hap2",
+      "total_sequence_length": 1261615145,
+      "chromosome_count": 39,
+      "genus": "Columba",
+      "family": "Columbidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_043774265.2",
+      "organism_name": "Oncorhynchus clarkii henshawi",
+      "common_name": "Lahontan cutthroat trout",
+      "tax_id": 72053,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "fOncCla1.1.alt",
+      "total_sequence_length": 2266753130,
+      "chromosome_count": 32,
+      "genus": "Oncorhynchus",
+      "family": "Salmonidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988295075.1",
+      "organism_name": "Sthenelais boa",
+      "common_name": "segmented worms",
+      "tax_id": 55702,
+      "release_date": "2026-10-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "wpSthBoax2.1",
+      "total_sequence_length": 514916321,
+      "chromosome_count": 11,
+      "genus": "Sthenelais",
+      "family": "Sigalionidae",
+      "phylum": "Annelida",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988295065.1",
+      "organism_name": "Ditrupa arietina",
+      "common_name": "segmented worms",
+      "tax_id": 344925,
+      "release_date": "2026-10-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "wsDitArie1.1",
+      "total_sequence_length": 1355751584,
+      "chromosome_count": 10,
+      "genus": "Ditrupa",
+      "family": "Serpulidae",
+      "phylum": "Annelida",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988295045.1",
+      "organism_name": "Calappa ocellata",
+      "common_name": "crustaceans",
+      "tax_id": 1844856,
+      "release_date": "2026-10-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "qmCalOcel1.1",
+      "total_sequence_length": 1091446729,
+      "chromosome_count": 37,
+      "genus": "Calappa",
+      "family": "Calappidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_986918845.2",
+      "organism_name": "Leodia sexiesperforata",
+      "common_name": "sea urchins",
+      "tax_id": 1351945,
+      "release_date": "2026-10-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "eeLeoSexi1.2",
+      "total_sequence_length": 737169485,
+      "chromosome_count": 23,
+      "genus": "Leodia",
+      "family": "Mellitidae",
+      "phylum": "Echinodermata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062012677.1",
+      "organism_name": "Ptychobarbus chungtienensis",
+      "common_name": "ray-finned fishes",
+      "tax_id": 263526,
+      "release_date": "2026-09-30",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62012677v1",
+      "total_sequence_length": 3440566500,
+      "chromosome_count": 37,
+      "genus": "Ptychobarbus",
+      "family": "Cyprinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062012673.1",
+      "organism_name": "Ptychobarbus chungtienensis",
+      "common_name": "ray-finned fishes",
+      "tax_id": 263526,
+      "release_date": "2026-09-30",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62012673v1",
+      "total_sequence_length": 2093252256,
+      "chromosome_count": 35,
+      "genus": "Ptychobarbus",
+      "family": "Cyprinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062012672.1",
+      "organism_name": "Ptychobarbus chungtienensis",
+      "common_name": "ray-finned fishes",
+      "tax_id": 263526,
+      "release_date": "2026-09-30",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62012672v1",
+      "total_sequence_length": 1973304656,
+      "chromosome_count": 35,
+      "genus": "Ptychobarbus",
+      "family": "Cyprinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062012670.1",
+      "organism_name": "Ptychobarbus chungtienensis",
+      "common_name": "ray-finned fishes",
+      "tax_id": 263526,
+      "release_date": "2026-09-30",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62012670v1",
+      "total_sequence_length": 3480505428,
+      "chromosome_count": 37,
+      "genus": "Ptychobarbus",
+      "family": "Cyprinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
     {
       "accession": "GCA_062009919.1",
       "organism_name": "Epinephelus fuscoguttatus x Epinephelus lanceolatus",
@@ -49066,6 +49258,102 @@
       "image": null
     },
     {
+      "accession": "GCA_988291785.1",
+      "organism_name": "Clangula hyemalis",
+      "common_name": "long-tailed duck",
+      "tax_id": 197941,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bClaHye2.hap1.2",
+      "total_sequence_length": 1219682838,
+      "chromosome_count": 42,
+      "genus": "Clangula",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988291755.1",
+      "organism_name": "Harmothoe fraserthomsoni",
+      "common_name": "segmented worms",
+      "tax_id": 1619589,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "wpHarFras1.1",
+      "total_sequence_length": 1932915239,
+      "chromosome_count": 19,
+      "genus": "Harmothoe",
+      "family": "Polynoidae",
+      "phylum": "Annelida",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988291715.1",
+      "organism_name": "Caribachlamys ornata",
+      "common_name": "bivalves",
+      "tax_id": 994942,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "xbCarOrna1.1",
+      "total_sequence_length": 1291880209,
+      "chromosome_count": 19,
+      "genus": "Caribachlamys",
+      "family": "Pectinidae",
+      "phylum": "Mollusca",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988291585.1",
+      "organism_name": "Martadoris mediterranea",
+      "common_name": "gastropods",
+      "tax_id": 1618146,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "xgTamMedi1.1",
+      "total_sequence_length": 1589360814,
+      "chromosome_count": 13,
+      "genus": "Martadoris",
+      "family": "Polyceridae",
+      "phylum": "Mollusca",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988226515.1",
+      "organism_name": "Hypericum perforatum",
+      "common_name": "eudicots",
+      "tax_id": 65561,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ddHypPerf5.hap2.HyPR01.IPK.v1",
+      "total_sequence_length": 317467803,
+      "chromosome_count": 8,
+      "genus": "Hypericum",
+      "family": "Hypericaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_988226375.1",
+      "organism_name": "Hypericum perforatum",
+      "common_name": "eudicots",
+      "tax_id": 65561,
+      "release_date": "2026-09-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ddHypPerf5.HyPR01.hap1.IPK.v1",
+      "total_sequence_length": 309399221,
+      "chromosome_count": 8,
+      "genus": "Hypericum",
+      "family": "Hypericaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
       "accession": "GCA_062001637.1",
       "organism_name": "Leishmania donovani",
       "common_name": "kinetoplastids",
@@ -49101,6 +49389,229 @@
       "phylum": "Arthropoda",
       "group": "Animals",
       "image": null
+    },
+    {
+      "accession": "GCA_988291745.1",
+      "organism_name": "Harmothoe fraserthomsoni",
+      "common_name": "segmented worms",
+      "tax_id": 1619589,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "wpHarFras1.1 alternative haplotype",
+      "total_sequence_length": 1767233701,
+      "chromosome_count": 19,
+      "genus": "Harmothoe",
+      "family": "Polynoidae",
+      "phylum": "Annelida",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988291175.1",
+      "organism_name": "Acantholabrus palloni",
+      "common_name": "scale-rayed wrasse",
+      "tax_id": 202583,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "fAcaPal1.1",
+      "total_sequence_length": 759611441,
+      "chromosome_count": 24,
+      "genus": "Acantholabrus",
+      "family": "Labridae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Brunsnultra.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Brunsnultra.png",
+        "credit": "Public domain",
+        "matched_name": "Acantholabrus palloni"
+      }
+    },
+    {
+      "accession": "GCA_988290555.1",
+      "organism_name": "Cygnus columbianus",
+      "common_name": "tundra swan",
+      "tax_id": 110926,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bCygCol1.hap1.2",
+      "total_sequence_length": 1261752711,
+      "chromosome_count": 41,
+      "genus": "Cygnus",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290455.1",
+      "organism_name": "Anser fabalis",
+      "common_name": "Taiga bean goose",
+      "tax_id": 132587,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bAnsFab1.hap1.2",
+      "total_sequence_length": 1289373221,
+      "chromosome_count": 40,
+      "genus": "Anser",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290445.1",
+      "organism_name": "Calonectris borealis",
+      "common_name": "Cory's shearwater",
+      "tax_id": 1323832,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bCalBor7.hap1.3",
+      "total_sequence_length": 1368540755,
+      "chromosome_count": 42,
+      "genus": "Calonectris",
+      "family": "Procellariidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290435.1",
+      "organism_name": "Caprimulgus europaeus",
+      "common_name": "Eurasian nightjar",
+      "tax_id": 111811,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bCapEur3.hap2.2",
+      "total_sequence_length": 1155967053,
+      "chromosome_count": 40,
+      "genus": "Caprimulgus",
+      "family": "Caprimulgidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290425.1",
+      "organism_name": "Branta canadensis",
+      "common_name": "Canada goose",
+      "tax_id": 8853,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bBraCan1.hap1.2",
+      "total_sequence_length": 1306840937,
+      "chromosome_count": 40,
+      "genus": "Branta",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290415.1",
+      "organism_name": "Aythya fuligula",
+      "common_name": "tufted duck",
+      "tax_id": 219594,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bAytFul3.hap1.2",
+      "total_sequence_length": 1208009827,
+      "chromosome_count": 41,
+      "genus": "Aythya",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290405.1",
+      "organism_name": "Columba palumbus",
+      "common_name": "birds",
+      "tax_id": 8934,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bColPal1.hap1.2",
+      "total_sequence_length": 1485234722,
+      "chromosome_count": 39,
+      "genus": "Columba",
+      "family": "Columbidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290395.1",
+      "organism_name": "Bucephala clangula",
+      "common_name": "common goldeneye",
+      "tax_id": 107022,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bBucCla1.hap1.2",
+      "total_sequence_length": 1261179959,
+      "chromosome_count": 42,
+      "genus": "Bucephala",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290375.1",
+      "organism_name": "Caprimulgus europaeus",
+      "common_name": "Eurasian nightjar",
+      "tax_id": 111811,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bCapEur3.hap1.2",
+      "total_sequence_length": 1248750300,
+      "chromosome_count": 42,
+      "genus": "Caprimulgus",
+      "family": "Caprimulgidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988290365.1",
+      "organism_name": "Anas platyrhynchos",
+      "common_name": "mallard",
+      "tax_id": 8839,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bAnaPla2.hap1.2",
+      "total_sequence_length": 1267093049,
+      "chromosome_count": 41,
+      "genus": "Anas",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Male_mallard3.jpg/960px-Male_mallard3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Male_mallard3.jpg",
+        "credit": "Calibas (edit by Aqwis) · CC BY-SA 3.0",
+        "matched_name": "Anas platyrhynchos"
+      }
+    },
+    {
+      "accession": "GCA_988290355.1",
+      "organism_name": "Anas acuta",
+      "common_name": "northern pintail",
+      "tax_id": 28680,
+      "release_date": "2026-09-24",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bAnaAcu1.hap1.2",
+      "total_sequence_length": 1205440452,
+      "chromosome_count": 41,
+      "genus": "Anas",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Male_northern_pintail_at_Llano_Seco.jpg/960px-Male_northern_pintail_at_Llano_Seco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Male_northern_pintail_at_Llano_Seco.jpg",
+        "credit": "Frank Schulenburg · CC BY-SA 4.0",
+        "matched_name": "Anas acuta"
+      }
     },
     {
       "accession": "GCA_062000183.1",
@@ -131988,7 +132499,25 @@
     "Dracocephalum moldavica": "2026-09-29",
     "Epinephelus fuscoguttatus (female) x Cephalopholis sonnerati (male)": "2026-09-29",
     "Eonycteris spelaea": "2026-09-29",
-    "Puccinia hordei": "2026-09-28"
+    "Puccinia hordei": "2026-09-28",
+    "Pedetes capensis": "2026-10-02",
+    "Cynoscion nebulosus": "2026-10-02",
+    "Ditrupa arietina": "2026-10-01",
+    "Calappa ocellata": "2026-10-01",
+    "Sthenelais boa": "2026-10-01",
+    "Ptychobarbus chungtienensis": "2026-09-30",
+    "Caribachlamys ornata": "2026-09-25",
+    "Martadoris mediterranea": "2026-09-25",
+    "Harmothoe fraserthomsoni": "2026-09-24",
+    "Clangula hyemalis": "2026-09-25",
+    "Calonectris borealis": "2026-09-24",
+    "Cygnus columbianus": "2026-09-24",
+    "Columba palumbus": "2026-09-24",
+    "Branta canadensis": "2026-09-24",
+    "Caprimulgus europaeus": "2026-09-24",
+    "Acantholabrus palloni": "2026-09-24",
+    "Anser fabalis": "2026-09-24",
+    "Bucephala clangula": "2026-09-24"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -132815,7 +133344,46 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
       "credit": "Mkaercher · CC BY-SA 3.0",
       "matched_name": "Puccinia"
-    }
+    },
+    "Acantholabrus palloni": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Brunsnultra.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Brunsnultra.png",
+      "credit": "Public domain",
+      "matched_name": "Acantholabrus palloni"
+    },
+    "Anas acuta": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Male_northern_pintail_at_Llano_Seco.jpg/960px-Male_northern_pintail_at_Llano_Seco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Male_northern_pintail_at_Llano_Seco.jpg",
+      "credit": "Frank Schulenburg · CC BY-SA 4.0",
+      "matched_name": "Anas acuta"
+    },
+    "Anas platyrhynchos": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Male_mallard3.jpg/960px-Male_mallard3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Male_mallard3.jpg",
+      "credit": "Calibas (edit by Aqwis) · CC BY-SA 3.0",
+      "matched_name": "Anas platyrhynchos"
+    },
+    "Anser fabalis": null,
+    "Aythya fuligula": null,
+    "Branta canadensis": null,
+    "Bucephala clangula": null,
+    "Calappa ocellata": null,
+    "Calonectris borealis": null,
+    "Caprimulgus europaeus": null,
+    "Caribachlamys ornata": null,
+    "Clangula hyemalis": null,
+    "Columba oenas": null,
+    "Columba palumbus": null,
+    "Cygnus columbianus": null,
+    "Cynoscion nebulosus": null,
+    "Ditrupa arietina": null,
+    "Harmothoe fraserthomsoni": null,
+    "Hypericum perforatum": null,
+    "Leodia sexiesperforata": null,
+    "Martadoris mediterranea": null,
+    "Pedetes capensis": null,
+    "Ptychobarbus chungtienensis": null,
+    "Sthenelais boa": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -134468,7 +135036,223 @@
       "phylum": "Basidiomycota",
       "kingdom": "Fungi"
     },
+    "202583": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "scale-rayed wrasse",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Acantholabrus",
+      "family": "Labridae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "28680": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "northern pintail",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Anas",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "8839": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "mallard",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Anas",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "132587": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Taiga bean goose",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Anser",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "219594": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "tufted duck",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Aythya",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "8853": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Canada goose",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Branta",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "107022": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "common goldeneye",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Bucephala",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "1844856": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "crustaceans",
+      "fallback_common_name_source": "group_name",
+      "genus": "Calappa",
+      "family": "Calappidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1323832": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Cory's shearwater",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Calonectris",
+      "family": "Procellariidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "111811": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Eurasian nightjar",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Caprimulgus",
+      "family": "Caprimulgidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "994942": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "bivalves",
+      "fallback_common_name_source": "group_name",
+      "genus": "Caribachlamys",
+      "family": "Pectinidae",
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
+    },
+    "197941": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "long-tailed duck",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Clangula",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "160229": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Columba",
+      "family": "Columbidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "8934": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Columba",
+      "family": "Columbidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "110926": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "tundra swan",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Cygnus",
+      "family": "Anatidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "13029": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "spotted seatrout",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Cynoscion",
+      "family": "Sciaenidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "344925": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "segmented worms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Ditrupa",
+      "family": "Serpulidae",
+      "phylum": "Annelida",
+      "kingdom": "Metazoa"
+    },
     "3700093": {},
+    "1619589": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "segmented worms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Harmothoe",
+      "family": "Polynoidae",
+      "phylum": "Annelida",
+      "kingdom": "Metazoa"
+    },
+    "65561": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hypericum",
+      "family": "Hypericaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "1351945": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "sea urchins",
+      "fallback_common_name_source": "group_name",
+      "genus": "Leodia",
+      "family": "Mellitidae",
+      "phylum": "Echinodermata",
+      "kingdom": "Metazoa"
+    },
+    "1618146": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "gastropods",
+      "fallback_common_name_source": "group_name",
+      "genus": "Martadoris",
+      "family": "Polyceridae",
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
+    },
+    "10023": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "springhare",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Pedetes",
+      "family": "Pedetidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "263526": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Ptychobarbus",
+      "family": "Cyprinidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "55702": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "segmented worms",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sthenelais",
+      "family": "Sigalionidae",
+      "phylum": "Annelida",
+      "kingdom": "Metazoa"
+    },
     "3680444": {}
   }
 }
