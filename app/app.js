@@ -822,8 +822,25 @@ function renderStatus(){
     : '<p class="note">No assembly-count milestones crossed yet.</p>';
 
   const recent=s.recent_assemblies||[];
+  const recentBySpecies=new Map();
+  recent.forEach(x=>{
+    const species=String(x.organism_name||'').trim()||String(x.accession||'');
+    const key=species+'\u0000'+String(x.release_date||'');
+    if(!recentBySpecies.has(key))recentBySpecies.set(key,[]);
+    recentBySpecies.get(key).push(x);
+  });
+  const recentSpeciesRows=[...recentBySpecies.values()].slice(0,18);
+  const recentAccessionLinks=xs=>xs.map(x=>{
+    const acc=esc(x.accession||'');
+    const url=assemblyUrl(x.accession);
+    return url ? `<a class="assembly-link" href="${url}" target="_blank" rel="noopener">${acc}</a>` : acc;
+  }).join('<br>');
+  const recentUniqueText=(xs,key)=>[...new Set(xs.map(x=>String(x[key]||'').trim()).filter(Boolean))].map(esc).join('<br>');
   el('status-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>IUCN status</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
-    recent.slice(0,18).map(x=>`<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.iucn_status||'—')}</span><span class="muted">${esc(x.assembly_name||'')}</span><span>${esc(x.assembly_level||'')}</span><span class="muted">${esc(x.accession||'')}</span></div>`).join('');
+    recentSpeciesRows.map(xs=>{
+      const x=xs[0];
+      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'iucn_status')||'—'}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
+    }).join('');
 
   const source=IUCN_DATA.source||{};
   el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
