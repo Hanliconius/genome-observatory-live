@@ -554,7 +554,7 @@ def main():
     dashboard = json.loads(DASH.read_text()) if DASH.exists() else {}
     iucn, source_counts = load_iucn_names()
 
-    # Reuse the dashboard's resolved common names for overlapping assemblies.
+    # [refresh] Reuse the dashboard's resolved common names for overlapping assemblies.
     # update.py applies the canonical fallback rule: NCBI assembly common name,
     # then taxonomy curator_common_name, then group_name/BLAST name.
     dashboard_by_accession = {
