@@ -554,6 +554,15 @@ def main():
     dashboard = json.loads(DASH.read_text()) if DASH.exists() else {}
     iucn, source_counts = load_iucn_names()
 
+    # Reuse the dashboard's resolved common names for overlapping assemblies.
+    # update.py applies the canonical fallback rule: NCBI assembly common name,
+    # then taxonomy curator_common_name, then group_name/BLAST name.
+    dashboard_by_accession = {
+        x.get("accession"): x
+        for x in dashboard.get("recent_assemblies", [])
+        if x.get("accession")
+    }
+
     buckets = {"threatened": [], "extinct": []}
     reports = matched = 0
     for report in stream_assemblies():
@@ -565,6 +574,9 @@ def main():
         if not info:
             continue
         matched += 1
+        dashboard_row = dashboard_by_accession.get(x["accession"], {})
+        if not x.get("common_name") and dashboard_row.get("common_name"):
+            x["common_name"] = dashboard_row["common_name"]
         x["iucn_status"] = info["status"]
         x["iucn_name"] = info["accepted_name"]
         x["group"] = info["group"]
