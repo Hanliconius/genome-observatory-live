@@ -836,10 +836,10 @@ function renderStatus(){
     return url ? `<a class="assembly-link" href="${url}" target="_blank" rel="noopener">${acc}</a>` : acc;
   }).join('<br>');
   const recentUniqueText=(xs,key)=>[...new Set(xs.map(x=>String(x[key]||'').trim()).filter(Boolean))].map(esc).join('<br>');
-  el('status-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>IUCN status</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
+  el('status-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>IUCN status</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
     recentSpeciesRows.map(xs=>{
       const x=xs[0];
-      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'iucn_status')||'—'}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
+      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'common_name')||'—'}</span><span class="muted">${recentUniqueText(xs,'iucn_status')||'—'}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
     }).join('');
 
   const source=IUCN_DATA.source||{};
