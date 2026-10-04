@@ -251,25 +251,24 @@ def main():
             milestones.append({'threshold':milestone_targets[target_i],'date':row['date']})
             target_i += 1
 
-    # Choose the newest recent assembly for which an image can be found.
-    # Search each candidate at species -> genus -> family level, then move down the
-    # chronological list if all three fail.
-    featured=None
-    for x in recent[:40]:
-        key=x['organism_name']
-        tx={k:x.get(k) for k in ('genus','family','phylum') if x.get(k)}
+    # The featured assembly follows the current genome chronology, not the image
+    # cache. Resolve/refresh Wikimedia for the newest assembly's species after the
+    # featured record has been chosen, so stale cached imagery cannot make an older
+    # species remain featured after the genome list itself has advanced.
+    featured=recent[0] if recent else None
+    if featured:
+        key=featured['organism_name']
+        tx={k:featured.get(k) for k in ('genus','family','phylum') if featured.get(k)}
         if not tx.get('genus') or not tx.get('family'):
-            tid=str(x.get('tax_id') or '')
-            if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
+            tid=str(featured.get('tax_id') or '')
+            if tid not in tax_cache: tax_cache[tid]=taxonomy(featured.get('tax_id'))
             tx={**tax_cache.get(tid,{}),**tx}
-            x.update({k:tx.get(k) for k in ('genus','family','phylum') if tx.get(k)})
-            if not x.get('group'): x['group']=broad_group(tx)
-        if not image_cache.get(key):
-            image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
-        x['image']=image_cache.get(key)
-        if x.get('image'):
-            featured=x
-            break
+            featured.update({k:tx.get(k) for k in ('genus','family','phylum') if tx.get(k)})
+            if not featured.get('group'): featured['group']=broad_group(tx)
+        image=commons_image([featured['organism_name'],tx.get('genus'),tx.get('family')])
+        if image:
+            image_cache[key]=image
+        featured['image']=image or image_cache.get(key)
 
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
 
