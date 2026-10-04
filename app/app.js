@@ -130,7 +130,7 @@ function render(){
   renderGroups();
   renderMilestones();
   renderRecent();
-  renderRate();
+  renderWeatherMap();
   renderCumulative();
 }
 
@@ -340,6 +340,77 @@ function renderRecent(){
     const dateText=esc(x.release_date||'');
     return `<div class="row"><span class="muted">${dateText}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${esc(x.common_name||'—')}</span><span class="muted">${uniqueText(xs,'assembly_name')}</span><span>${uniqueText(xs,'assembly_level')}</span><span class="muted">${accessionLinks(xs)}</span></div>`;
   }).join('');
+}
+
+function renderWeatherMap(){
+  const svg=el('weather-map');
+  if(!svg||!DATA)return;
+  const source=reportingLagRows(DATA.daily||[]);
+  if(!source.length){svg.innerHTML='';return;}
+
+  const end=new Date(source[source.length-1].date+'T12:00:00Z');
+  const rawStart=new Date(end);
+  rawStart.setUTCDate(rawStart.getUTCDate()-364);
+  const displayStart=new Date(rawStart);
+  displayStart.setUTCDate(displayStart.getUTCDate()-displayStart.getUTCDay());
+
+  const byDate=new Map(source.map(x=>[String(x.date),x]));
+  const nonzero=source
+    .filter(x=>new Date(x.date+'T12:00:00Z')>=rawStart&&Number(x.assemblies||0)>0)
+    .map(x=>Number(x.assemblies||0))
+    .sort((a,b)=>a-b);
+  const q=p=>nonzero.length?nonzero[Math.min(nonzero.length-1,Math.floor((nonzero.length-1)*p))]:0;
+  const cuts=[q(.2),q(.4),q(.6),q(.8)];
+  const level=v=>{
+    if(v<=0)return 0;
+    let n=1;
+    cuts.forEach(c=>{if(v>c)n++;});
+    return Math.min(5,n);
+  };
+
+  const msDay=86400000;
+  const totalDays=Math.floor((end-displayStart)/msDay)+1;
+  const weeks=Math.ceil(totalDays/7);
+  const w=860,h=150,L=34,R=8,T=26,B=14;
+  const cell=Math.min(14,(w-L-R)/Math.max(1,weeks));
+  const box=Math.max(5,cell-2.4);
+  let html='';
+
+  ['Mon','Wed','Fri'].forEach((lab,i)=>{
+    const dow=[1,3,5][i];
+    html+=`<text class="weather-day-label" x="0" y="${(T+dow*cell+box*.76).toFixed(2)}">${lab}</text>`;
+  });
+
+  let lastMonth='';
+  for(let d=new Date(displayStart),i=0;d<=end;d.setUTCDate(d.getUTCDate()+1),i++){
+    const ds=d.toISOString().slice(0,10);
+    const week=Math.floor(i/7),dow=d.getUTCDay();
+    const x=L+week*cell,y=T+dow*cell;
+    const row=byDate.get(ds)||{};
+    const assemblies=Number(row.assemblies||0);
+    const species=Number(row.species||0);
+    const first=Number(row.first_time_species||0);
+    const inWindow=d>=rawStart;
+    if(inWindow){
+      html+=`<rect class="weather-cell weather-level-${level(assemblies)}" data-date="${ds}" data-assemblies="${assemblies}" data-species="${species}" data-first="${first}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${box.toFixed(2)}" height="${box.toFixed(2)}" rx="2"></rect>`;
+    }
+    const month=d.toLocaleDateString('en-US',{month:'short',timeZone:'UTC'});
+    if(d.getUTCDate()<=7&&month!==lastMonth&&inWindow){
+      html+=`<text class="weather-month-label" x="${x.toFixed(2)}" y="13">${month}</text>`;
+      lastMonth=month;
+    }
+  }
+  svg.innerHTML=html;
+
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.weather-cell').forEach(cellEl=>{
+    const show=ev=>{
+      tip.innerHTML=`<strong>${esc(prettyDate(cellEl.dataset.date))}</strong><span>${fmt(Number(cellEl.dataset.assemblies||0))} assemblies</span><span>${fmt(Number(cellEl.dataset.species||0))} species represented · ${fmt(Number(cellEl.dataset.first||0))} first-time species</span>`;
+      tip.hidden=false;cellEl.classList.add('is-hovered');positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;cellEl.classList.remove('is-hovered');};
+    cellEl.onpointerenter=show;cellEl.onpointermove=show;cellEl.onpointerleave=hide;
+  });
 }
 
 function renderRate(){
@@ -612,6 +683,106 @@ function drawGenometricTrend(svgId,legendId,trend,seriesKey,reportedKey,periodLa
 }
 
 
+function drawGenomeArchitecture(svgId,legendId,arch){
+  const svg=el(svgId),legend=el(legendId);
+  const pts=(arch?.species_points||[]).filter(p=>Number(p.chromosomes)>0&&Number(p.size_mb)>0);
+  if(!svg||!pts.length){
+    if(svg)svg.innerHTML='';
+    if(legend)legend.innerHTML='';
+    return;
+  }
+
+  const w=520,h=390,L=58,R=14,T=16,B=48,iw=w-L-R,ih=h-T-B;
+  const logs=pts.map(p=>({x:Math.log10(Number(p.chromosomes)),y:Math.log10(Number(p.size_mb))}));
+  let xmin=Math.min(...logs.map(p=>p.x)),xmax=Math.max(...logs.map(p=>p.x));
+  let ymin=Math.min(...logs.map(p=>p.y)),ymax=Math.max(...logs.map(p=>p.y));
+  xmin=Math.floor(xmin*2)/2;xmax=Math.ceil(xmax*2)/2;
+  ymin=Math.floor(ymin);ymax=Math.ceil(ymax);
+  if(xmax<=xmin)xmax=xmin+1;if(ymax<=ymin)ymax=ymin+1;
+  const X=v=>L+(Math.log10(v)-xmin)/(xmax-xmin)*iw;
+  const Y=v=>T+ih-(Math.log10(v)-ymin)/(ymax-ymin)*ih;
+
+  const xTicks=[1,2,5,10,20,50,100,200,500,1000,2000].filter(v=>Math.log10(v)>=xmin&&Math.log10(v)<=xmax);
+  const yTicks=[.1,.3,1,3,10,30,100,300,1000,3000,10000,30000,100000,300000].filter(v=>Math.log10(v)>=ymin&&Math.log10(v)<=ymax);
+  const sizeLabel=v=>v>=1000?(v/1000)+' Gb':v+' Mb';
+
+  let html='';
+  xTicks.forEach(v=>{
+    const x=X(v);
+    html+=`<line class="genometrics-arch-grid" x1="${x}" x2="${x}" y1="${T}" y2="${T+ih}"></line><text class="genometrics-arch-tick" x="${x}" y="${h-24}" text-anchor="middle">${v}</text>`;
+  });
+  yTicks.forEach(v=>{
+    const y=Y(v);
+    html+=`<line class="genometrics-arch-grid" x1="${L}" x2="${L+iw}" y1="${y}" y2="${y}"></line><text class="genometrics-arch-tick" x="${L-7}" y="${y+3}" text-anchor="end">${sizeLabel(v)}</text>`;
+  });
+  html+=`<line class="genometrics-arch-axis" x1="${L}" x2="${L+iw}" y1="${T+ih}" y2="${T+ih}"></line><line class="genometrics-arch-axis" x1="${L}" x2="${L}" y1="${T}" y2="${T+ih}"></line>`;
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-4}" text-anchor="middle">Reported chromosome count · log scale</text><text class="genometrics-arch-axis-label" transform="translate(12 ${T+ih/2}) rotate(-90)" text-anchor="middle">Genome size · log scale</text>`;
+
+  pts.forEach(p=>{
+    const group=p.group||'Other';
+    html+=`<circle class="genometrics-arch-point" cx="${X(Number(p.chromosomes)).toFixed(2)}" cy="${Y(Number(p.size_mb)).toFixed(2)}" r="2.4" fill="${COLORS[group]||COLORS.Other}" data-species="${esc(p.species)}" data-group="${esc(group)}" data-class="${esc(p.class||'')}" data-chromosomes="${Number(p.chromosomes)}" data-size="${Number(p.size_mb)}"></circle>`;
+  });
+  svg.innerHTML=html;
+
+  const groups=['Animals','Plants','Fungi','Other'].filter(g=>pts.some(p=>(p.group||'Other')===g));
+  legend.innerHTML=groups.map(g=>`<span><i style="background:${COLORS[g]}"></i>${g}</span>`).join('');
+
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.genometrics-arch-point').forEach(p=>{
+    const show=ev=>{
+      const cls=p.dataset.class?` · ${esc(p.dataset.class)}`:'';
+      tip.innerHTML=`<strong><i>${esc(p.dataset.species)}</i></strong><span>${fmt(Number(p.dataset.chromosomes))} chromosomes · ${fmt1(Number(p.dataset.size))} Mb</span><span>${esc(p.dataset.group)}${cls}</span>`;
+      tip.hidden=false;p.classList.add('is-hovered');positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;p.classList.remove('is-hovered');};
+    p.onpointerenter=show;p.onpointermove=show;p.onpointerleave=hide;
+  });
+}
+
+function drawGenomeSizeByTaxon(svgId,dist){
+  const svg=el(svgId);
+  const classes=dist?.classes||[];
+  if(!svg||!classes.length){if(svg)svg.innerHTML='';return;}
+  const bins=dist.bin_labels||classes[0]?.bins?.map(x=>x.label)||[];
+  const w=520,h=430,L=118,R=8,T=12,B=52,iw=w-L-R;
+  const rowH=(h-T-B)/classes.length;
+  const bw=iw/Math.max(1,bins.length);
+  let html='';
+
+  classes.forEach((row,ri)=>{
+    const total=Number(row.species||0);
+    const vals=(row.bins||[]).map(x=>Number(x.count||0));
+    const peak=Math.max(1,...vals);
+    const base=T+(ri+1)*rowH-7;
+    html+=`<text class="genometrics-dist-label" x="${L-8}" y="${base-3}" text-anchor="end">${esc(row.taxon)}</text>`;
+    html+=`<text class="genometrics-dist-n" x="${L-8}" y="${base+9}" text-anchor="end">n=${fmt(total)}</text>`;
+    vals.forEach((v,bi)=>{
+      const bh=Math.max(v?1:0,(rowH-13)*(v/peak));
+      const x=L+bi*bw+1,y=base-bh;
+      html+=`<rect class="genometrics-dist-bar" data-taxon="${esc(row.taxon)}" data-label="${esc((row.bins||[])[bi]?.label||bins[bi]||'')}" data-count="${v}" data-total="${total}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${Math.max(1,bw-2).toFixed(2)}" height="${bh.toFixed(2)}" fill="${COLORS[row.group]||COLORS.Other}"></rect>`;
+    });
+  });
+
+  const labelIdx=[0,2,4,6,8,10,bins.length-1].filter((v,i,a)=>v>=0&&v<bins.length&&a.indexOf(v)===i);
+  labelIdx.forEach(bi=>{
+    const x=L+(bi+.5)*bw;
+    html+=`<text class="genometrics-dist-tick" x="${x.toFixed(2)}" y="${h-22}" text-anchor="end" transform="rotate(-34 ${x.toFixed(2)} ${h-22})">${esc(bins[bi])}</text>`;
+  });
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-3}" text-anchor="middle">Genome size · shared logarithmic bins</text>`;
+  svg.innerHTML=html;
+
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.genometrics-dist-bar').forEach(bar=>{
+    const show=ev=>{
+      const n=Number(bar.dataset.count||0),total=Number(bar.dataset.total||0);
+      tip.innerHTML=`<strong>${esc(bar.dataset.taxon)}</strong><span>${esc(bar.dataset.label)}</span><span>${fmt(n)} species · ${total?fmt1(100*n/total):'0.0'}%</span>`;
+      tip.hidden=false;bar.classList.add('is-hovered');positionTooltip(ev,tip);
+    };
+    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
+    bar.onpointerenter=show;bar.onpointermove=show;bar.onpointerleave=hide;
+  });
+}
+
 function renderGenometrics(){
   if(!GENOMETRICS_DATA)return;
   const d=GENOMETRICS_DATA;
@@ -682,6 +853,14 @@ function renderGenometrics(){
   el('genometrics-top-species-denominator').textContent='Ranked across all '+fmt(q.assemblies||0)+' tracked chromosome-level and complete GenBank assembly deposits.';
   el('genometrics-quality-denominator').textContent=
     fmt(q.assembly_size_available||0)+' assemblies contribute genome size; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
+
+  const arch=d.genome_architecture||{};
+  drawGenomeArchitecture('genometrics-size-chrom-scatter','genometrics-architecture-legend',arch);
+  el('genometrics-architecture-denominator').textContent=
+    fmt(arch.scatter_species||0)+' species have both NCBI assembly size and reported chromosome-count metadata; each species is represented once.';
+  drawGenomeSizeByTaxon('genometrics-size-by-taxon',arch.size_distribution_by_class||{});
+  el('genometrics-size-by-taxon-denominator').textContent=
+    fmt(arch.size_distribution_by_class?.represented_species||0)+' species are represented across the eight best-covered NCBI classes; one newest size-bearing assembly per species.';
 
   const methods=d.methods_through_time||{};
   drawGenometricTrend(
