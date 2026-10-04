@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T02:48:24.163952+00:00",
+  "generated_at": "2026-10-04T02:56:33.764097+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -48232,22 +48232,7 @@
       "date": "2025-02-16"
     }
   ],
-  "featured_assembly": {
-    "accession": "GCA_062014572.1",
-    "organism_name": "Cynoscion nebulosus",
-    "common_name": "spotted seatrout",
-    "tax_id": 13029,
-    "release_date": "2026-10-02",
-    "assembly_level": "Chromosome",
-    "assembly_name": "fCynNeb1.hap2",
-    "total_sequence_length": 662870293,
-    "chromosome_count": 24,
-    "genus": "Cynoscion",
-    "family": "Sciaenidae",
-    "phylum": "Chordata",
-    "group": "Animals",
-    "image": null
-  },
+  "featured_assembly": null,
   "recent_assemblies": [
     {
       "accession": "GCA_062014572.1",
@@ -48455,12 +48440,7 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
-        "credit": "Joris Joostensz Laerle (attributed) · Public domain",
-        "matched_name": "Serranidae"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009918.1",
@@ -48476,12 +48456,7 @@
       "family": "Lamiaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dracocephalum_moldavica_Sturm_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Dracocephalum_moldavica_Sturm_-_detail.jpg",
-        "credit": "Johann Georg Sturm (Painter: Jacob Sturm) · Public domain",
-        "matched_name": "Dracocephalum moldavica"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009917.1",
@@ -48497,12 +48472,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009916.1",
@@ -48518,12 +48488,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009915.1",
@@ -48539,12 +48504,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009914.1",
@@ -48560,12 +48520,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009913.1",
@@ -48581,12 +48536,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009912.1",
@@ -48602,12 +48552,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009911.1",
@@ -48623,12 +48568,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009910.1",
@@ -48644,12 +48584,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009627.1",
@@ -48761,12 +48696,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009467.1",
@@ -48782,12 +48712,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009460.1",
@@ -48803,12 +48728,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009459.1",
@@ -48824,12 +48744,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009458.1",
@@ -48845,12 +48760,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009445.1",
@@ -48866,12 +48776,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009444.1",
@@ -48887,12 +48792,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009442.1",
@@ -48908,12 +48808,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009435.1",
@@ -48929,12 +48824,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009434.1",
@@ -48950,12 +48840,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009433.1",
@@ -48971,12 +48856,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009422.1",
@@ -48992,12 +48872,7 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-        "credit": "Mkaercher · CC BY-SA 3.0",
-        "matched_name": "Puccinia"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009420.1",
@@ -49499,7 +49374,12 @@
       "family": "Caprimulgidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Caprimulgus_macrurus.jpg/960px-Caprimulgus_macrurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Caprimulgus_macrurus.jpg",
+        "credit": "NatureAtYourBackyard, Flickr User · CC BY 2.0",
+        "matched_name": "Caprimulgus"
+      }
     },
     {
       "accession": "GCA_988290425.1",
@@ -49847,7 +49727,12 @@
       "family": "Certhiidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg/960px-Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Common_chimpanzee_(Pan_troglodytes_schweinfurthii)_feeding.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Troglodytes"
+      }
     },
     {
       "accession": "GCA_057816365.2",
@@ -49863,7 +49748,12 @@
       "family": "Certhiidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg/960px-Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Common_chimpanzee_(Pan_troglodytes_schweinfurthii)_feeding.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Troglodytes"
+      }
     },
     {
       "accession": "GCA_043774065.2",
@@ -49911,7 +49801,12 @@
       "family": "Trichosporonaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Trichosporon_asahii_Gram_Stain.jpg/960px-Trichosporon_asahii_Gram_Stain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Trichosporon_asahii_Gram_Stain.jpg",
+        "credit": "Kelubact · CC BY 4.0",
+        "matched_name": "Trichosporon"
+      }
     },
     {
       "accession": "GCA_061612815.1",
@@ -133280,14 +133175,24 @@
       "credit": "Korinna · CC BY 4.0",
       "matched_name": "Trichophyton"
     },
-    "Trichosporon asahii var. asahii": null,
+    "Trichosporon asahii var. asahii": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Trichosporon_asahii_Gram_Stain.jpg/960px-Trichosporon_asahii_Gram_Stain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Trichosporon_asahii_Gram_Stain.jpg",
+      "credit": "Kelubact · CC BY 4.0",
+      "matched_name": "Trichosporon"
+    },
     "Triticum aestivum": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
       "credit": "Bijay chaurasia · CC BY-SA 4.0",
       "matched_name": "Triticum aestivum"
     },
-    "Troglodytes aedon": null,
+    "Troglodytes aedon": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg/960px-Common_chimpanzee_%28Pan_troglodytes_schweinfurthii%29_feeding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Common_chimpanzee_(Pan_troglodytes_schweinfurthii)_feeding.jpg",
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "matched_name": "Troglodytes"
+    },
     "Umbrina canariensis": null,
     "Urogymnus asperrimus": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Dasyatidae%2C_Sunshine_Aquarium.jpg/960px-Dasyatidae%2C_Sunshine_Aquarium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -133428,7 +133333,12 @@
     "Martadoris mediterranea": null,
     "Pedetes capensis": null,
     "Ptychobarbus chungtienensis": null,
-    "Sthenelais boa": null
+    "Sthenelais boa": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sigalionidae_R%C3%A9union.jpg/960px-Sigalionidae_R%C3%A9union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sigalionidae_R%C3%A9union.jpg",
+      "credit": "Philippe Bourjon · CC BY-SA 4.0",
+      "matched_name": "Sigalionidae"
+    }
   },
   "taxonomy_cache": {
     "2248776": {
