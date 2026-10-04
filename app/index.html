@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261002a" />
+  <link rel="stylesheet" href="styles.css?v=20261004b" />
 </head>
 <body>
   <header class="site-head">
@@ -87,14 +87,16 @@
           </div>
         </article>
 
-        <article class="panel chart-panel span-2">
+        <article class="panel weather-panel span-2">
           <div class="panel-head">
             <div>
-              <p class="panel-kicker">Assemblies over time</p>
-              <h2 class="panel-title" id="rate-title">Deposits per business day · last 10 business days</h2>
+              <p class="panel-kicker">Deposit weather</p>
+              <h2 class="panel-title">A year of chromosome-scale genome deposits</h2>
             </div>
+            <p class="note">Each square is one calendar day. Darker days contain more deposited assemblies; hover for assemblies, represented species and first-time species. The newest 3 calendar days are omitted for reporting lag.</p>
           </div>
-          <svg id="rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          <svg id="weather-map" class="weather-map" viewBox="0 0 860 150" preserveAspectRatio="xMinYMin meet" role="img" aria-label="Calendar heatmap of chromosome-scale genome deposits over the past year"></svg>
+          <div class="weather-key" aria-hidden="true"><span>Fewer</span><i class="weather-level-1"></i><i class="weather-level-2"></i><i class="weather-level-3"></i><i class="weather-level-4"></i><i class="weather-level-5"></i><span>More deposits</span></div>
         </article>
 
         <article class="panel list-panel">
@@ -213,6 +215,23 @@
               <div><h3>Chromosome number</h3><svg id="genometrics-chrom-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of reported chromosome counts"></svg></div>
             </div>
             <p class="genometrics-denominator" id="genometrics-quality-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card genometrics-architecture-card">
+            <p class="panel-kicker">Genome architecture</p>
+            <h2 class="panel-title">Genome size × chromosome number</h2>
+            <p class="genometrics-summary">One representative chromosome-scale assembly per species. Both axes are logarithmic so compact genomes and biological extremes remain visible together.</p>
+            <svg id="genometrics-size-chrom-scatter" class="genometrics-architecture" viewBox="0 0 520 390" role="img" aria-label="Genome size versus reported chromosome number, one point per species"></svg>
+            <div id="genometrics-architecture-legend" class="genometrics-architecture-legend"></div>
+            <p class="genometrics-denominator" id="genometrics-architecture-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card genometrics-architecture-card">
+            <p class="panel-kicker">Genome-size landscape</p>
+            <h2 class="panel-title">Genome-size distributions by major taxon</h2>
+            <p class="genometrics-summary">Size distributions for the eight NCBI classes with the broadest species coverage in the collection. Each species contributes one representative assembly and all rows share the same logarithmic genome-size axis.</p>
+            <svg id="genometrics-size-by-taxon" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Genome-size distributions for the eight best represented NCBI classes"></svg>
+            <p class="genometrics-denominator" id="genometrics-size-by-taxon-denominator"></p>
           </article>
 
           <article class="panel genometrics-card genometrics-top-species-card">
@@ -584,6 +603,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261002a"></script>
+  <script src="app.js?v=20261004b"></script>
 </body>
 </html>
