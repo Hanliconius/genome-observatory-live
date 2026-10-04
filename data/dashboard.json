@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T02:56:33.764097+00:00",
+  "generated_at": "2026-10-04T15:22:01.694999+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -121489,6 +121489,36 @@
   "annotations": {
     "in_progress": [
       {
+        "species": "Rhopilema esculentum",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-29",
+        "assembly": "ASM5794536v1 (GCF_057945365.1)"
+      },
+      {
+        "species": "Pogonomyrmex barbatus",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-28",
+        "assembly": "ASM5579846v1 (GCF_055798465.1)"
+      },
+      {
+        "species": "Artemia sp. Qi Xiang Cuo",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-28",
+        "assembly": "ASM4972408v1 (GCF_049724085.1)"
+      },
+      {
+        "species": "Salvia hispanica",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-24",
+        "assembly": "Shi_PSC_v1 (GCF_029641045.1)"
+      },
+      {
+        "species": "Pocillopora damicornis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-30",
+        "assembly": "jaPocDami1.2"
+      },
+      {
         "species": "Polistes dominula",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-10-01",
@@ -121507,12 +121537,6 @@
         "assembly": "UWA_Hpros_2 (GCF_041222555.1)"
       },
       {
-        "species": "Rhopilema esculentum",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-29",
-        "assembly": "ASM5794536v1 (GCF_057945365.1)"
-      },
-      {
         "species": "Danio rerio",
         "status": "In sequence databases In Gene On the FTP",
         "freeze_date": "2026-08-31",
@@ -121529,30 +121553,6 @@
         "status": "Automated processing in progress",
         "freeze_date": "2026-09-28",
         "assembly": "fPimPro1.hap1.1"
-      },
-      {
-        "species": "Artemia sp. Qi Xiang Cuo",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-28",
-        "assembly": "ASM4972408v1 (GCF_049724085.1)"
-      },
-      {
-        "species": "Pogonomyrmex barbatus",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-28",
-        "assembly": "ASM5579846v1 (GCF_055798465.1)"
-      },
-      {
-        "species": "Salvia hispanica",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-09-24",
-        "assembly": "Shi_PSC_v1 (GCF_029641045.1)"
-      },
-      {
-        "species": "Pocillopora damicornis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-30",
-        "assembly": "jaPocDami1.2"
       },
       {
         "species": "Pinus tabuliformis",
