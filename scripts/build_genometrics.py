@@ -29,7 +29,7 @@ TOS_URL="https://raw.githubusercontent.com/sachi1n/haplodiploidy-eusociality/mai
 TOS_SOURCE_DATE="2022-10-09"
 TAXDUMP_URL="https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
 UA="GenomeObservatoryLive/0.2 (public research dashboard; contact via repository)"
-# Genometrics bootstrap version: 3
+# Genometrics bootstrap version: 4
 VIRIDIPLANTAE=33090
 METAZOA=33208
 FUNGI=4751
