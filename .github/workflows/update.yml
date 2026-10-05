@@ -18,9 +18,12 @@ permissions:
   pages: write
   id-token: write
 
+# Keep scheduled/manual data refreshes serialized, but do not let ordinary
+# UI pushes cancel one another while GitHub is still waiting to assign a runner.
+# Each push gets its own lane; Pages itself will publish the newest completed run.
 concurrency:
-  group: genome-observatory-live-refresh
-  cancel-in-progress: true
+  group: ${{ github.event_name == 'push' && format('genome-observatory-live-push-{0}', github.run_id) || 'genome-observatory-live-refresh' }}
+  cancel-in-progress: false
 
 jobs:
   refresh:
