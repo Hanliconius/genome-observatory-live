@@ -952,7 +952,6 @@ function renderStatus(){
   el('status-hero-species').textContent=fmt(s.summary.species);
   el('status-hero-first').textContent=fmt(s.summary.first_time_species);
   el('status-hero-title').textContent=label+' species genome deposits';
-  renderYearlyBars('status-hero-yearly-chart',s.yearly||[]);
 
   const x=(s.recent_assemblies||[]).find(x=>x.image?.thumb_url)||(s.recent_assemblies||[])[0];
   if(!x){
