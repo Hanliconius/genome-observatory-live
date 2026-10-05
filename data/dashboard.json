@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-04T15:22:01.694999+00:00",
+  "generated_at": "2026-10-05T14:50:14.401769+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 53,
-      "species": 22,
+      "assemblies": 28,
+      "species": 16,
       "first_time_species": 0
     },
     "year": {
-      "assemblies": 6355,
-      "species": 3967,
-      "first_time_species": 3259
+      "assemblies": 6347,
+      "species": 3960,
+      "first_time_species": 3253
     },
     "all": {
       "assemblies": 18855,
@@ -19,12 +19,6 @@
     }
   },
   "daily": [
-    {
-      "date": "2004-11-09",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-10",
       "assemblies": 0,
@@ -48018,6 +48012,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-10-05",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -48163,15 +48163,11 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 20
-    },
-    {
-      "group": "Fungi",
-      "count": 20
+      "count": 16
     },
     {
       "group": "Plants",
-      "count": 11
+      "count": 10
     },
     {
       "group": "Other",
@@ -48181,15 +48177,15 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4126
+      "count": 4123
     },
     {
       "group": "Plants",
-      "count": 1655
+      "count": 1654
     },
     {
       "group": "Fungi",
-      "count": 451
+      "count": 447
     },
     {
       "group": "Other",
@@ -48232,7 +48228,27 @@
       "date": "2025-02-16"
     }
   ],
-  "featured_assembly": null,
+  "featured_assembly": {
+    "accession": "GCA_062009434.1",
+    "organism_name": "Puccinia hordei",
+    "common_name": "rust fungi & allies",
+    "tax_id": 27345,
+    "release_date": "2026-09-28",
+    "assembly_level": "Chromosome",
+    "assembly_name": "ASM62009434v1",
+    "total_sequence_length": 140688021,
+    "chromosome_count": 18,
+    "genus": "Puccinia",
+    "family": "Pucciniaceae",
+    "phylum": "Basidiomycota",
+    "group": "Fungi",
+    "image": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+      "credit": "Mkaercher · CC BY-SA 3.0",
+      "matched_name": "Puccinia"
+    }
+  },
   "recent_assemblies": [
     {
       "accession": "GCA_062014572.1",
@@ -48840,7 +48856,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009433.1",
@@ -48856,7 +48877,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009422.1",
@@ -48872,7 +48898,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009420.1",
@@ -121451,39 +121482,6 @@
       "assembly_name": "ASM5292459v1",
       "total_sequence_length": 14477994498,
       "chromosome_count": 21
-    },
-    {
-      "accession": "GCA_052914895.1",
-      "organism_name": "Eurytemora affinis",
-      "common_name": null,
-      "tax_id": 88015,
-      "release_date": "2025-09-29",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5291489v1",
-      "total_sequence_length": 670885643,
-      "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052914885.1",
-      "organism_name": "Eurytemora gulfia (nom. nud.)",
-      "common_name": null,
-      "tax_id": 3120486,
-      "release_date": "2025-09-29",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5291488v1",
-      "total_sequence_length": 521072271,
-      "chromosome_count": 7
-    },
-    {
-      "accession": "GCA_021901455.2",
-      "organism_name": "Neodiprion lecontei",
-      "common_name": "redheaded pine sawfly",
-      "tax_id": 441921,
-      "release_date": "2025-09-29",
-      "assembly_level": "Chromosome",
-      "assembly_name": "iyNeoLeco1.1",
-      "total_sequence_length": 272073844,
-      "chromosome_count": 7
     }
   ],
   "annotations": {
