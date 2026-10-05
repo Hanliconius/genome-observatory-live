@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261004b" />
+  <link rel="stylesheet" href="styles.css?v=20261005b" />
 </head>
 <body>
   <header class="site-head">
@@ -87,7 +87,7 @@
           </div>
         </article>
 
-        <article class="panel weather-panel span-2">
+        <article class="panel weather-panel full-width">
           <div class="panel-head">
             <div>
               <p class="panel-kicker">Deposit weather</p>
@@ -99,7 +99,18 @@
           <div class="weather-key" aria-hidden="true"><span>Fewer</span><i class="weather-level-1"></i><i class="weather-level-2"></i><i class="weather-level-3"></i><i class="weather-level-4"></i><i class="weather-level-5"></i><span>More deposits</span></div>
         </article>
 
-        <article class="panel list-panel">
+        <article class="panel chart-panel full-width">
+          <div class="panel-head">
+            <div>
+              <p class="panel-kicker">Cumulative coverage</p>
+              <h2 class="panel-title">Assemblies and first-time species through time</h2>
+            </div>
+          </div>
+          <svg id="cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+        </article>
+
+        <article class="panel list-panel span-2">
           <p class="panel-kicker">RefSeq</p>
           <h2 class="panel-title">Annotation activity</h2>
           <div class="subsection">
@@ -110,17 +121,6 @@
             <h3>Recently completed</h3>
             <div id="recent-annotation-list" class="list-table"></div>
           </div>
-        </article>
-
-        <article class="panel chart-panel span-2">
-          <div class="panel-head">
-            <div>
-              <p class="panel-kicker">Cumulative coverage</p>
-              <h2 class="panel-title">Assemblies and first-time species through time</h2>
-            </div>
-          </div>
-          <svg id="cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-          <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
         </article>
 
         <article class="panel summary-panel">
