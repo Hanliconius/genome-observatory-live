@@ -32,7 +32,7 @@ const METHOD_TREND_COLORS=[
 ];
 const RANGE={week:{label:'Past week',rate:'Deposits per business day'},year:{label:'Past year',rate:'Deposits per business day'},all:{label:'All time',rate:'Deposits per year'}};
 
-fetch(D).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
+fetch(D+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
 
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
