@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261005c" />
+  <link rel="stylesheet" href="styles.css?v=20261005d" />
 </head>
 <body>
   <header class="site-head">
@@ -49,17 +49,18 @@
       </section>
 
       <section class="layout-grid">
-        <article class="panel hero-panel span-2">
-          <p class="panel-kicker" id="primary-label">Past week</p>
-          <h2 class="panel-title">Chromosome-scale genome deposits</h2>
-          <div class="hero-number" id="assemblies-count">—</div>
-          <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
-        </article>
-
-        <article class="panel photo-panel">
-          <p class="panel-kicker">Newest arrival</p>
-          <h2 class="panel-title">Most recent deposited genome with an image</h2>
-          <div id="newest-card" class="newest-card"></div>
+        <article class="panel overview-hero full-width">
+          <div class="overview-hero-count">
+            <p class="panel-kicker" id="primary-label">Past week</p>
+            <h2 class="panel-title">Chromosome-scale genome deposits</h2>
+            <div class="hero-number" id="assemblies-count">—</div>
+            <p class="hero-subline"><span id="species-count">—</span> species represented · <span id="first-count">—</span> first-time species</p>
+          </div>
+          <div class="overview-hero-arrival">
+            <p class="panel-kicker">Newest arrival</p>
+            <h2 class="panel-title">Most recent deposited genome with an image</h2>
+            <div id="newest-card" class="newest-card"></div>
+          </div>
         </article>
 
         <article class="panel full-width composition-panel">
