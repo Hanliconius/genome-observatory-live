@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261005d" />
+  <link rel="stylesheet" href="styles.css?v=20261005e" />
 </head>
 <body>
   <header class="site-head">
@@ -328,21 +328,18 @@
         </section>
 
         <section class="layout-grid">
-          <article class="panel hero-panel span-2">
-            <p class="panel-kicker" id="status-primary-label">Threatened · all time</p>
-            <h2 class="panel-title" id="status-hero-title">Threatened species genome deposits</h2>
-            <div class="hero-number" id="status-hero-count">—</div>
-            <p class="hero-subline"><span id="status-hero-species">—</span> species represented · <span id="status-hero-first">—</span> first-time species</p>
-            <div class="hero-yearly-wrap">
-              <div class="hero-yearly-head"><span>Annual deposits</span><span>current year is year-to-date</span></div>
-              <svg id="status-hero-yearly-chart" class="hero-yearly-chart" viewBox="0 0 860 170" preserveAspectRatio="none" role="img" aria-label="Matching genome deposits per year"></svg>
+          <article class="panel overview-hero full-width">
+            <div class="overview-hero-count">
+              <p class="panel-kicker" id="status-primary-label">Threatened · all time</p>
+              <h2 class="panel-title" id="status-hero-title">Threatened species genome deposits</h2>
+              <div class="hero-number" id="status-hero-count">—</div>
+              <p class="hero-subline"><span id="status-hero-species">—</span> species represented · <span id="status-hero-first">—</span> first-time species</p>
             </div>
-          </article>
-
-          <article class="panel photo-panel">
-            <p class="panel-kicker">Newest arrival</p>
-            <h2 class="panel-title">Most recent matching deposited genome</h2>
-            <div id="status-newest-card" class="newest-card"></div>
+            <div class="overview-hero-arrival">
+              <p class="panel-kicker">Newest arrival</p>
+              <h2 class="panel-title">Most recent matching deposited genome</h2>
+              <div id="status-newest-card" class="newest-card"></div>
+            </div>
           </article>
 
           <article class="panel full-width composition-panel">
@@ -600,6 +597,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261005c"></script>
+  <script src="app.js?v=20261005e"></script>
 </body>
 </html>
