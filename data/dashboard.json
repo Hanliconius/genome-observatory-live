@@ -1,30 +1,24 @@
 {
-  "generated_at": "2026-10-05T14:50:14.401769+00:00",
+  "generated_at": "2026-10-06T11:16:27.720819+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 28,
-      "species": 16,
-      "first_time_species": 0
+      "assemblies": 16,
+      "species": 10,
+      "first_time_species": 1
     },
     "year": {
-      "assemblies": 6347,
-      "species": 3960,
-      "first_time_species": 3253
+      "assemblies": 6352,
+      "species": 3962,
+      "first_time_species": 3255
     },
     "all": {
-      "assemblies": 18855,
-      "species": 10557,
-      "first_time_species": 10557
+      "assemblies": 18860,
+      "species": 10559,
+      "first_time_species": 10559
     }
   },
   "daily": [
-    {
-      "date": "2004-11-10",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-11",
       "assemblies": 0,
@@ -47973,9 +47967,9 @@
     },
     {
       "date": "2026-09-28",
-      "assemblies": 25,
-      "species": 6,
-      "first_time_species": 0
+      "assemblies": 26,
+      "species": 7,
+      "first_time_species": 1
     },
     {
       "date": "2026-09-29",
@@ -47991,13 +47985,13 @@
     },
     {
       "date": "2026-10-01",
-      "assemblies": 4,
-      "species": 4,
-      "first_time_species": 0
+      "assemblies": 5,
+      "species": 5,
+      "first_time_species": 1
     },
     {
       "date": "2026-10-02",
-      "assemblies": 4,
+      "assemblies": 7,
       "species": 4,
       "first_time_species": 0
     },
@@ -48015,6 +48009,12 @@
     },
     {
       "date": "2026-10-05",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-10-06",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -48155,29 +48155,21 @@
     },
     {
       "year": "2026",
-      "assemblies": 5236,
-      "species": 3500,
-      "first_time_species": 2515
+      "assemblies": 5241,
+      "species": 3502,
+      "first_time_species": 2517
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
       "count": 16
-    },
-    {
-      "group": "Plants",
-      "count": 10
-    },
-    {
-      "group": "Other",
-      "count": 2
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4123
+      "count": 4128
     },
     {
       "group": "Plants",
@@ -48228,27 +48220,7 @@
       "date": "2025-02-16"
     }
   ],
-  "featured_assembly": {
-    "accession": "GCA_062009434.1",
-    "organism_name": "Puccinia hordei",
-    "common_name": "rust fungi & allies",
-    "tax_id": 27345,
-    "release_date": "2026-09-28",
-    "assembly_level": "Chromosome",
-    "assembly_name": "ASM62009434v1",
-    "total_sequence_length": 140688021,
-    "chromosome_count": 18,
-    "genus": "Puccinia",
-    "family": "Pucciniaceae",
-    "phylum": "Basidiomycota",
-    "group": "Fungi",
-    "image": {
-      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
-      "credit": "Mkaercher · CC BY-SA 3.0",
-      "matched_name": "Puccinia"
-    }
-  },
+  "featured_assembly": null,
   "recent_assemblies": [
     {
       "accession": "GCA_062014572.1",
@@ -48259,6 +48231,22 @@
       "assembly_level": "Chromosome",
       "assembly_name": "fCynNeb1.hap2",
       "total_sequence_length": 662870293,
+      "chromosome_count": 24,
+      "genus": "Cynoscion",
+      "family": "Sciaenidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062014571.1",
+      "organism_name": "Cynoscion nebulosus",
+      "common_name": "spotted seatrout",
+      "tax_id": 13029,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "fCynNeb1.hap1",
+      "total_sequence_length": 674954931,
       "chromosome_count": 24,
       "genus": "Cynoscion",
       "family": "Sciaenidae",
@@ -48283,6 +48271,22 @@
       "image": null
     },
     {
+      "accession": "GCA_062014569.1",
+      "organism_name": "Pedetes capensis",
+      "common_name": "springhare",
+      "tax_id": 10023,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mPedCap2.hap1",
+      "total_sequence_length": 2799954188,
+      "chromosome_count": 19,
+      "genus": "Pedetes",
+      "family": "Pedetidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
       "accession": "GCA_062014567.1",
       "organism_name": "Columba oenas",
       "common_name": "birds",
@@ -48292,6 +48296,22 @@
       "assembly_name": "bColOen1.hap2",
       "total_sequence_length": 1261615145,
       "chromosome_count": 39,
+      "genus": "Columba",
+      "family": "Columbidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062014566.1",
+      "organism_name": "Columba oenas",
+      "common_name": "birds",
+      "tax_id": 160229,
+      "release_date": "2026-10-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bColOen1.hap1",
+      "total_sequence_length": 1288754324,
+      "chromosome_count": 41,
       "genus": "Columba",
       "family": "Columbidae",
       "phylum": "Chordata",
@@ -48375,6 +48395,22 @@
       "genus": "Leodia",
       "family": "Mellitidae",
       "phylum": "Echinodermata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062014791.1",
+      "organism_name": "Caspiomyzon wagneri",
+      "common_name": "lampreys",
+      "tax_id": 682871,
+      "release_date": "2026-10-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "UKy_Caswag_21M1.pri1.0",
+      "total_sequence_length": 1207632080,
+      "chromosome_count": 85,
+      "genus": "Caspiomyzon",
+      "family": "Petromyzontidae",
+      "phylum": "Chordata",
       "group": "Animals",
       "image": null
     },
@@ -48699,6 +48735,22 @@
       "image": null
     },
     {
+      "accession": "GCA_062014767.1",
+      "organism_name": "Geotria australis",
+      "common_name": "lampreys",
+      "tax_id": 71168,
+      "release_date": "2026-09-28",
+      "assembly_level": "Chromosome",
+      "assembly_name": "UKy_Geoaus_24M3.pri1.0",
+      "total_sequence_length": 790691722,
+      "chromosome_count": 92,
+      "genus": "Geotria",
+      "family": "Geotriidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
       "accession": "GCA_062009471.1",
       "organism_name": "Puccinia hordei",
       "common_name": "rust fungi & allies",
@@ -48824,7 +48876,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009435.1",
@@ -48840,7 +48897,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009434.1",
@@ -49140,7 +49202,12 @@
       "family": "Ursidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Female_polar_bear_%28Ursus_maritimus%29_with_cub%2C_Svalbard.jpg/960px-Female_polar_bear_%28Ursus_maritimus%29_with_cub%2C_Svalbard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Female_polar_bear_(Ursus_maritimus)_with_cub,_Svalbard.jpg",
+        "credit": "AWeith · CC BY-SA 4.0",
+        "matched_name": "Ursus maritimus"
+      }
     },
     {
       "accession": "GCA_058968885.2",
@@ -49426,7 +49493,12 @@
       "family": "Anatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/La_Roche-en-Ardenne_-_Bernache_du_Canada%2C_Branta_canadensis.jpg/960px-La_Roche-en-Ardenne_-_Bernache_du_Canada%2C_Branta_canadensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:La_Roche-en-Ardenne_-_Bernache_du_Canada,_Branta_canadensis.jpg",
+        "credit": "JackyM59 · CC BY-SA 4.0",
+        "matched_name": "Branta canadensis"
+      }
     },
     {
       "accession": "GCA_988290415.1",
@@ -49479,7 +49551,12 @@
       "family": "Anatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Common_Goldeneye_%28Bucephala_clangula%29.jpg/960px-Common_Goldeneye_%28Bucephala_clangula%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Common_Goldeneye_(Bucephala_clangula).jpg",
+        "credit": "https://www.flickr.com/photos/sbern/ · CC BY 2.0",
+        "matched_name": "Bucephala clangula"
+      }
     },
     {
       "accession": "GCA_988290375.1",
@@ -49874,7 +49951,12 @@
       "family": "Vespertilionidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Gladneus_vleermuis_%28Vespertilionidae%29_Vledermuijs._Vespertilio_Chauve-souris_%28titel_op_object%29%2C_RP-T-BR-2017-1-1-86.jpg/960px-Gladneus_vleermuis_%28Vespertilionidae%29_Vledermuijs._Vespertilio_Chauve-souris_%28titel_op_object%29%2C_RP-T-BR-2017-1-1-86.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gladneus_vleermuis_(Vespertilionidae)_Vledermuijs._Vespertilio_Chauve-souris_(titel_op_object),_RP-T-BR-2017-1-1-86.jpg",
+        "credit": "Rijksmuseum · CC0",
+        "matched_name": "Vespertilionidae"
+      }
     },
     {
       "accession": "GCA_061612795.1",
@@ -121449,78 +121531,39 @@
       "assembly_name": "ARVALIS_Lusi_Bolchoi_1.0",
       "total_sequence_length": 452835475,
       "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052928225.1",
-      "organism_name": "Salvelinus malma",
-      "common_name": "Dolly Varden",
-      "tax_id": 8039,
-      "release_date": "2025-09-30",
-      "assembly_level": "Chromosome",
-      "assembly_name": "OUC_Smalma_1.0",
-      "total_sequence_length": 3108216572,
-      "chromosome_count": 42
-    },
-    {
-      "accession": "GCA_052924935.1",
-      "organism_name": "Eleutheronema rhadinum",
-      "common_name": "East Asian fourfinger threadfin",
-      "tax_id": 1367094,
-      "release_date": "2025-09-30",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5292493v1",
-      "total_sequence_length": 586876495,
-      "chromosome_count": 26
-    },
-    {
-      "accession": "GCA_052924595.1",
-      "organism_name": "Triticum aestivum",
-      "common_name": "bread wheat",
-      "tax_id": 4565,
-      "release_date": "2025-09-30",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ASM5292459v1",
-      "total_sequence_length": 14477994498,
-      "chromosome_count": 21
     }
   ],
   "annotations": {
     "in_progress": [
       {
-        "species": "Rhopilema esculentum",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-29",
-        "assembly": "ASM5794536v1 (GCF_057945365.1)"
+        "species": "Pholcus phalangioides",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "Ppha-v1.0"
       },
       {
-        "species": "Pogonomyrmex barbatus",
+        "species": "Hakea prostrata",
         "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-28",
-        "assembly": "ASM5579846v1 (GCF_055798465.1)"
+        "freeze_date": "2026-10-01",
+        "assembly": "UWA_Hpros_2 (GCF_041222555.1)"
       },
       {
-        "species": "Artemia sp. Qi Xiang Cuo",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-28",
-        "assembly": "ASM4972408v1 (GCF_049724085.1)"
-      },
-      {
-        "species": "Salvia hispanica",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-24",
-        "assembly": "Shi_PSC_v1 (GCF_029641045.1)"
+        "species": "Oryctolagus cuniculus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "ASM5122573v1"
       },
       {
         "species": "Pocillopora damicornis",
-        "status": "Automated processing in progress",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-30",
-        "assembly": "jaPocDami1.2"
+        "assembly": "jaPocDami1.2 (GCF_964200805.1)"
       },
       {
-        "species": "Polistes dominula",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-01",
-        "assembly": "Pdom_raw_medaka (GCF_049000335.1)"
+        "species": "Diuraphis noxia",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "SU_Dnox_SAM2"
       },
       {
         "species": "Hesperophylax consimilis",
@@ -121529,28 +121572,16 @@
         "assembly": "BYU_Hcon_1.0"
       },
       {
-        "species": "Hakea prostrata",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-01",
-        "assembly": "UWA_Hpros_2 (GCF_041222555.1)"
-      },
-      {
-        "species": "Danio rerio",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-08-31",
-        "assembly": "GRCz12tu (GCF_049306965.2)"
-      },
-      {
-        "species": "Danio rerio",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-08-31",
-        "assembly": "GRCz13ab (GCF_052040795.2)"
-      },
-      {
         "species": "Pimephales promelas",
         "status": "Automated processing in progress",
         "freeze_date": "2026-09-28",
         "assembly": "fPimPro1.hap1.1"
+      },
+      {
+        "species": "Polistes dominula",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-01",
+        "assembly": "Pdom_raw_medaka (GCF_049000335.1)"
       },
       {
         "species": "Pinus tabuliformis",
@@ -121566,6 +121597,26 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Rhopilema esculentum",
+        "release_date": "2026-10-01",
+        "assembly": "ASM5794536v1 (GCF_057945365.1)"
+      },
+      {
+        "species": "Pogonomyrmex barbatus",
+        "release_date": "2026-09-30",
+        "assembly": "ASM5579846v1 (GCF_055798465.1)"
+      },
+      {
+        "species": "Artemia sp. Qi Xiang Cuo",
+        "release_date": "2026-09-30",
+        "assembly": "ASM4972408v1 (GCF_049724085.1)"
+      },
+      {
+        "species": "Salvia hispanica",
+        "release_date": "2026-09-29",
+        "assembly": "Shi_PSC_v1 (GCF_029641045.1)"
+      },
       {
         "species": "Actinia tenebrosa",
         "release_date": "2026-09-29",
@@ -121650,6 +121701,16 @@
         "species": "Pyrus communis",
         "release_date": "2026-09-22",
         "assembly": "ASM4128382v1 (GCF_041283825.1)"
+      },
+      {
+        "species": "Danio rerio",
+        "release_date": "2026-09-22",
+        "assembly": "GRCz12tu (GCF_049306965.2)"
+      },
+      {
+        "species": "Danio rerio",
+        "release_date": "2026-09-22",
+        "assembly": "GRCz13ab (GCF_052040795.2)"
       },
       {
         "species": "Zootoca vivipara",
@@ -121865,11 +121926,6 @@
         "species": "Acromyrmex echinatior",
         "release_date": "2026-08-25",
         "assembly": "ASM2471352v2 (GCF_024713525.1)"
-      },
-      {
-        "species": "Ceratotherium simum simum",
-        "release_date": "2026-08-24",
-        "assembly": "ASM5780239v1 (GCF_057802395.1)"
       }
     ]
   },
@@ -132430,7 +132486,9 @@
     "Caprimulgus europaeus": "2026-09-24",
     "Acantholabrus palloni": "2026-09-24",
     "Anser fabalis": "2026-09-24",
-    "Bucephala clangula": "2026-09-24"
+    "Bucephala clangula": "2026-09-24",
+    "Caspiomyzon wagneri": "2026-10-01",
+    "Geotria australis": "2026-09-28"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -133205,7 +133263,12 @@
       "matched_name": "Veronica officinalis"
     },
     "Verweija noviomagensis": null,
-    "Vespertilio sinensis": null,
+    "Vespertilio sinensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Gladneus_vleermuis_%28Vespertilionidae%29_Vledermuijs._Vespertilio_Chauve-souris_%28titel_op_object%29%2C_RP-T-BR-2017-1-1-86.jpg/960px-Gladneus_vleermuis_%28Vespertilionidae%29_Vledermuijs._Vespertilio_Chauve-souris_%28titel_op_object%29%2C_RP-T-BR-2017-1-1-86.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gladneus_vleermuis_(Vespertilionidae)_Vledermuijs._Vespertilio_Chauve-souris_(titel_op_object),_RP-T-BR-2017-1-1-86.jpg",
+      "credit": "Rijksmuseum · CC0",
+      "matched_name": "Vespertilionidae"
+    },
     "Vigna angularis": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg/960px-Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.651_-_Vigna_angularis_-_Y%C5%ABshi_Ishizaki_-_Cock_Blomhoff_Collection_-_pencil_drawing_-_water_colour.jpg",
@@ -133239,7 +133302,12 @@
       "credit": "DPDx Image Library · Public domain",
       "matched_name": "Trichinella spiralis"
     },
-    "Ursus maritimus": null,
+    "Ursus maritimus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Female_polar_bear_%28Ursus_maritimus%29_with_cub%2C_Svalbard.jpg/960px-Female_polar_bear_%28Ursus_maritimus%29_with_cub%2C_Svalbard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Female_polar_bear_(Ursus_maritimus)_with_cub,_Svalbard.jpg",
+      "credit": "AWeith · CC BY-SA 4.0",
+      "matched_name": "Ursus maritimus"
+    },
     "Arachis hypogaea": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
@@ -133298,9 +133366,24 @@
       "credit": "Alexis Lours · CC BY 4.0",
       "matched_name": "Aythya fuligula"
     },
-    "Branta canadensis": null,
-    "Bucephala clangula": null,
-    "Calappa ocellata": null,
+    "Branta canadensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/La_Roche-en-Ardenne_-_Bernache_du_Canada%2C_Branta_canadensis.jpg/960px-La_Roche-en-Ardenne_-_Bernache_du_Canada%2C_Branta_canadensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:La_Roche-en-Ardenne_-_Bernache_du_Canada,_Branta_canadensis.jpg",
+      "credit": "JackyM59 · CC BY-SA 4.0",
+      "matched_name": "Branta canadensis"
+    },
+    "Bucephala clangula": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Common_Goldeneye_%28Bucephala_clangula%29.jpg/960px-Common_Goldeneye_%28Bucephala_clangula%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Common_Goldeneye_(Bucephala_clangula).jpg",
+      "credit": "https://www.flickr.com/photos/sbern/ · CC BY 2.0",
+      "matched_name": "Bucephala clangula"
+    },
+    "Calappa ocellata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Calappa_ocellata_Holthouis%2C_1958.jpg/960px-Calappa_ocellata_Holthouis%2C_1958.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Calappa_ocellata_Holthouis,_1958.jpg",
+      "credit": "Domingos Afonso Jório · Public domain",
+      "matched_name": "Calappa ocellata"
+    },
     "Calonectris borealis": null,
     "Caprimulgus europaeus": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Caprimulgus_macrurus.jpg/960px-Caprimulgus_macrurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -133336,7 +133419,9 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Sigalionidae_R%C3%A9union.jpg",
       "credit": "Philippe Bourjon · CC BY-SA 4.0",
       "matched_name": "Sigalionidae"
-    }
+    },
+    "Caspiomyzon wagneri": null,
+    "Geotria australis": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -135205,7 +135290,25 @@
       "phylum": "Annelida",
       "kingdom": "Metazoa"
     },
+    "682871": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lampreys",
+      "fallback_common_name_source": "group_name",
+      "genus": "Caspiomyzon",
+      "family": "Petromyzontidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
     "3700093": {},
+    "71168": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lampreys",
+      "fallback_common_name_source": "group_name",
+      "genus": "Geotria",
+      "family": "Geotriidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
     "3680444": {}
   }
 }
