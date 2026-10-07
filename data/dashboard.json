@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-06T11:16:27.720819+00:00",
+  "generated_at": "2026-10-07T11:04:10.556639+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 16,
-      "species": 10,
-      "first_time_species": 1
+      "assemblies": 12,
+      "species": 9,
+      "first_time_species": 0
     },
     "year": {
-      "assemblies": 6352,
-      "species": 3962,
-      "first_time_species": 3255
+      "assemblies": 6330,
+      "species": 3946,
+      "first_time_species": 3235
     },
     "all": {
       "assemblies": 18860,
@@ -19,12 +19,6 @@
     }
   },
   "daily": [
-    {
-      "date": "2004-11-11",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
-    },
     {
       "date": "2004-11-12",
       "assemblies": 0,
@@ -47969,7 +47963,7 @@
       "date": "2026-09-28",
       "assemblies": 26,
       "species": 7,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-09-29",
@@ -47987,7 +47981,7 @@
       "date": "2026-10-01",
       "assemblies": 5,
       "species": 5,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-10-02",
@@ -48015,6 +48009,12 @@
     },
     {
       "date": "2026-10-06",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-10-07",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -48157,31 +48157,31 @@
       "year": "2026",
       "assemblies": 5241,
       "species": 3502,
-      "first_time_species": 2517
+      "first_time_species": 2515
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 16
+      "count": 12
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4128
+      "count": 4117
     },
     {
       "group": "Plants",
-      "count": 1654
+      "count": 1648
     },
     {
       "group": "Fungi",
-      "count": 447
+      "count": 443
     },
     {
       "group": "Other",
-      "count": 123
+      "count": 122
     }
   ],
   "groups_all": [
@@ -48220,7 +48220,27 @@
       "date": "2025-02-16"
     }
   ],
-  "featured_assembly": null,
+  "featured_assembly": {
+    "accession": "GCA_062014572.1",
+    "organism_name": "Cynoscion nebulosus",
+    "common_name": "spotted seatrout",
+    "tax_id": 13029,
+    "release_date": "2026-10-02",
+    "assembly_level": "Chromosome",
+    "assembly_name": "fCynNeb1.hap2",
+    "total_sequence_length": 662870293,
+    "chromosome_count": 24,
+    "genus": "Cynoscion",
+    "family": "Sciaenidae",
+    "phylum": "Chordata",
+    "group": "Animals",
+    "image": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg/960px-Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sciaenidae_(Rio_de_Janeiro,_Brazil,_1_June_1865).jpg",
+      "credit": "Burkhardt, Jacques · Public domain",
+      "matched_name": "Sciaenidae"
+    }
+  },
   "recent_assemblies": [
     {
       "accession": "GCA_062014572.1",
@@ -48236,7 +48256,12 @@
       "family": "Sciaenidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg/960px-Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sciaenidae_(Rio_de_Janeiro,_Brazil,_1_June_1865).jpg",
+        "credit": "Burkhardt, Jacques · Public domain",
+        "matched_name": "Sciaenidae"
+      }
     },
     {
       "accession": "GCA_062014571.1",
@@ -48348,7 +48373,12 @@
       "family": "Sigalionidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sigalionidae_R%C3%A9union.jpg/960px-Sigalionidae_R%C3%A9union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sigalionidae_R%C3%A9union.jpg",
+        "credit": "Philippe Bourjon · CC BY-SA 4.0",
+        "matched_name": "Sigalionidae"
+      }
     },
     {
       "accession": "GCA_988295065.1",
@@ -48380,7 +48410,12 @@
       "family": "Calappidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Calappa_ocellata_Holthouis%2C_1958.jpg/960px-Calappa_ocellata_Holthouis%2C_1958.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Calappa_ocellata_Holthouis,_1958.jpg",
+        "credit": "Domingos Afonso Jório · Public domain",
+        "matched_name": "Calappa ocellata"
+      }
     },
     {
       "accession": "GCA_986918845.2",
@@ -48412,7 +48447,12 @@
       "family": "Petromyzontidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg/960px-Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Caspian_Lamprey,_Gilan_Province,_Iran_imported_from_iNaturalist_photo_467295941.jpg",
+        "credit": "(c) Emad Tahaei, some rights reserved (CC BY) · CC BY 4.0",
+        "matched_name": "Caspiomyzon wagneri"
+      }
     },
     {
       "accession": "GCA_062012677.1",
@@ -48492,7 +48532,12 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
+        "credit": "Joris Joostensz Laerle (attributed) · Public domain",
+        "matched_name": "Serranidae"
+      }
     },
     {
       "accession": "GCA_062009918.1",
@@ -48508,7 +48553,12 @@
       "family": "Lamiaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dracocephalum_moldavica_Sturm_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dracocephalum_moldavica_Sturm_-_detail.jpg",
+        "credit": "Johann Georg Sturm (Painter: Jacob Sturm) · Public domain",
+        "matched_name": "Dracocephalum moldavica"
+      }
     },
     {
       "accession": "GCA_062009917.1",
@@ -48524,7 +48574,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009916.1",
@@ -48540,7 +48595,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009915.1",
@@ -48556,7 +48616,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009914.1",
@@ -48572,7 +48637,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009913.1",
@@ -48588,7 +48658,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009912.1",
@@ -48604,7 +48679,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009911.1",
@@ -48620,7 +48700,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009910.1",
@@ -48636,7 +48721,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
+        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
+        "matched_name": "Arachis hypogaea"
+      }
     },
     {
       "accession": "GCA_062009627.1",
@@ -48764,7 +48854,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009467.1",
@@ -48780,7 +48875,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009460.1",
@@ -48796,7 +48896,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009459.1",
@@ -48812,7 +48917,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009458.1",
@@ -48828,7 +48938,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009445.1",
@@ -48844,7 +48959,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009444.1",
@@ -48860,7 +48980,12 @@
       "family": "Pucciniaceae",
       "phylum": "Basidiomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
+        "credit": "Mkaercher · CC BY-SA 3.0",
+        "matched_name": "Puccinia"
+      }
     },
     {
       "accession": "GCA_062009442.1",
@@ -49456,7 +49581,12 @@
       "family": "Procellariidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Cagarro_-_Calonectris_borealis%2C_Terceira%2C_A%C3%A7ores.jpg/960px-Cagarro_-_Calonectris_borealis%2C_Terceira%2C_A%C3%A7ores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cagarro_-_Calonectris_borealis,_Terceira,_A%C3%A7ores.jpg",
+        "credit": "José Luís Ávila Silveira/Pedro Noronha e Costa · Public domain",
+        "matched_name": "Calonectris borealis"
+      }
     },
     {
       "accession": "GCA_988290435.1",
@@ -49735,7 +49865,12 @@
       "family": "Trichocomaceae",
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_%28M._Piepenbring%29.png/960px-Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_%28M._Piepenbring%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_(M._Piepenbring).png",
+        "credit": "Prof. Meike Piepenbring · CC BY-SA 3.0",
+        "matched_name": "Talaromyces"
+      }
     },
     {
       "accession": "GCA_061613735.1",
@@ -121080,472 +121215,21 @@
       "assembly_name": "ilChaForm1.hap2.1",
       "total_sequence_length": 302819245,
       "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_052939435.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Enterprise_h2",
-      "total_sequence_length": 647230618,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939425.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Enterprise_h1",
-      "total_sequence_length": 654280620,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939415.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "EsopusSpritzenburg_h2",
-      "total_sequence_length": 645902418,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939395.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "EsopusSpritzenburg_h1",
-      "total_sequence_length": 652656407,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939365.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Giambun_h2",
-      "total_sequence_length": 644677071,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939355.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Giambun_h1",
-      "total_sequence_length": 650464663,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939335.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GigaIpador_h2",
-      "total_sequence_length": 644742385,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939315.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GigaIpador_h1",
-      "total_sequence_length": 667721472,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939295.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GrannySmith_h2",
-      "total_sequence_length": 645156622,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939275.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GrannySmith_h1",
-      "total_sequence_length": 652822941,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939245.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Jonathan_h1",
-      "total_sequence_length": 649111831,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939235.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Jonathan_h2",
-      "total_sequence_length": 648630354,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939215.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Kitchkova_h2",
-      "total_sequence_length": 649794916,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939185.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Kitchkova_h1",
-      "total_sequence_length": 662227836,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939175.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Braeburn_h2",
-      "total_sequence_length": 592406660,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939155.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Braeburn_h1",
-      "total_sequence_length": 676548961,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939125.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "McIntosh_h2",
-      "total_sequence_length": 646035107,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939115.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "McIntosh_h1",
-      "total_sequence_length": 656826471,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939095.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Milwa_h2",
-      "total_sequence_length": 640838162,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939075.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Milwa_h1",
-      "total_sequence_length": 655269728,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939045.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "SQ159_h2",
-      "total_sequence_length": 642581661,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939035.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "SQ159_h1",
-      "total_sequence_length": 651434953,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052939015.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Prima_h1",
-      "total_sequence_length": 659473826,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938985.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Prima_h2",
-      "total_sequence_length": 640670118,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938975.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Rouget_h2",
-      "total_sequence_length": 647188843,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938935.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Rouget_h1",
-      "total_sequence_length": 652726344,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938925.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ScillyPearl_h2",
-      "total_sequence_length": 649223844,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938915.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ScillyPearl_h1",
-      "total_sequence_length": 649900951,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938735.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "FiessersErstling_h2",
-      "total_sequence_length": 641671596,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938715.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "FiessersErstling_h1",
-      "total_sequence_length": 655271798,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938685.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "CoxsOrangePippin_h2",
-      "total_sequence_length": 644764828,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938675.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "CoxsOrangePippin_h1",
-      "total_sequence_length": 651562139,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938615.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "EdwardVII_h2",
-      "total_sequence_length": 649482174,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938595.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "EdwardVII_h1",
-      "total_sequence_length": 651885145,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938575.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Priscilla_h2",
-      "total_sequence_length": 640006989,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938555.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Priscilla_h1",
-      "total_sequence_length": 656012943,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938535.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "TropicalBeauty_h1",
-      "total_sequence_length": 636797492,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052938515.1",
-      "organism_name": "Malus domestica",
-      "common_name": "apple",
-      "tax_id": 3750,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "TropicalBeauty_h2",
-      "total_sequence_length": 656799476,
-      "chromosome_count": 17
-    },
-    {
-      "accession": "GCA_052935155.1",
-      "organism_name": "Linum usitatissimum",
-      "common_name": "flax",
-      "tax_id": 4006,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ARVALIS_Lusi_Marquise_1.0",
-      "total_sequence_length": 441447500,
-      "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052935085.1",
-      "organism_name": "Linum usitatissimum",
-      "common_name": "flax",
-      "tax_id": 4006,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ARVALIS_Lusi_Attila_1.0",
-      "total_sequence_length": 441558088,
-      "chromosome_count": 15
-    },
-    {
-      "accession": "GCA_052935075.1",
-      "organism_name": "Linum usitatissimum",
-      "common_name": "flax",
-      "tax_id": 4006,
-      "release_date": "2025-10-01",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ARVALIS_Lusi_Bolchoi_1.0",
-      "total_sequence_length": 452835475,
-      "chromosome_count": 15
     }
   ],
   "annotations": {
     "in_progress": [
       {
         "species": "Pholcus phalangioides",
-        "status": "Automated processing in progress",
+        "status": "In sequence databases",
         "freeze_date": "2026-10-05",
-        "assembly": "Ppha-v1.0"
+        "assembly": "Ppha-v1.0 (GCF_987345545.1)"
       },
       {
-        "species": "Hakea prostrata",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-01",
-        "assembly": "UWA_Hpros_2 (GCF_041222555.1)"
+        "species": "Pimephales promelas",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-09-28",
+        "assembly": "fPimPro1.hap1.1 (GCF_988280905.1)"
       },
       {
         "species": "Oryctolagus cuniculus",
@@ -121554,28 +121238,40 @@
         "assembly": "ASM5122573v1"
       },
       {
+        "species": "Diuraphis noxia",
+        "status": "In sequence databases",
+        "freeze_date": "2026-10-05",
+        "assembly": "SU_Dnox_SAM2 (GCF_037042655.1)"
+      },
+      {
+        "species": "Orbicella faveolata",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "um_ofav_v1"
+      },
+      {
+        "species": "Limulus polyphemus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-06",
+        "assembly": "qaLimPoly3.4"
+      },
+      {
+        "species": "Drosophila navojoa",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-06",
+        "assembly": "UAZ_NAV_1.0"
+      },
+      {
         "species": "Pocillopora damicornis",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-30",
         "assembly": "jaPocDami1.2 (GCF_964200805.1)"
       },
       {
-        "species": "Diuraphis noxia",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-05",
-        "assembly": "SU_Dnox_SAM2"
-      },
-      {
         "species": "Hesperophylax consimilis",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-02",
         "assembly": "BYU_Hcon_1.0"
-      },
-      {
-        "species": "Pimephales promelas",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-28",
-        "assembly": "fPimPro1.hap1.1"
       },
       {
         "species": "Polistes dominula",
@@ -121597,6 +121293,11 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Hakea prostrata",
+        "release_date": "2026-10-02",
+        "assembly": "UWA_Hpros_2 (GCF_041222555.1)"
+      },
       {
         "species": "Rhopilema esculentum",
         "release_date": "2026-10-01",
@@ -121906,26 +121607,6 @@
         "species": "Rattus norvegicus",
         "release_date": "2026-08-26",
         "assembly": "SHRSP_T2T (GCF_021556685.1)"
-      },
-      {
-        "species": "Camelina sativa",
-        "release_date": "2026-08-25",
-        "assembly": "ASM3068613v1 (GCF_030686135.1)"
-      },
-      {
-        "species": "Lygodium microphyllum",
-        "release_date": "2026-08-25",
-        "assembly": "Lygodium_microphyllum_v1.1.10 (GCF_053477565.2)"
-      },
-      {
-        "species": "Triticum urartu",
-        "release_date": "2026-08-25",
-        "assembly": "HENAU_Tu73 (GCF_056163025.1)"
-      },
-      {
-        "species": "Acromyrmex echinatior",
-        "release_date": "2026-08-25",
-        "assembly": "ASM2471352v2 (GCF_024713525.1)"
       }
     ]
   },
@@ -133192,7 +132873,12 @@
       "matched_name": "Suncus etruscus"
     },
     "Syllis parapari": null,
-    "Talaromyces marneffei": null,
+    "Talaromyces marneffei": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_%28M._Piepenbring%29.png/960px-Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_%28M._Piepenbring%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Abb3.50_Fungi_Ascomycota_Eurotiales_Talaromyces_Penicillium_life_cycle_2021_(M._Piepenbring).png",
+      "credit": "Prof. Meike Piepenbring · CC BY-SA 3.0",
+      "matched_name": "Talaromyces"
+    },
     "Taxus wallichiana": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rota_Samtmilbe_an_Eibe_%28Taxus_baccata%2C_Taxaceae%29_%289086019673%29.jpg/960px-Rota_Samtmilbe_an_Eibe_%28Taxus_baccata%2C_Taxaceae%29_%289086019673%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Rota_Samtmilbe_an_Eibe_(Taxus_baccata,_Taxaceae)_(9086019673).jpg",
@@ -133384,7 +133070,12 @@
       "credit": "Domingos Afonso Jório · Public domain",
       "matched_name": "Calappa ocellata"
     },
-    "Calonectris borealis": null,
+    "Calonectris borealis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Cagarro_-_Calonectris_borealis%2C_Terceira%2C_A%C3%A7ores.jpg/960px-Cagarro_-_Calonectris_borealis%2C_Terceira%2C_A%C3%A7ores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cagarro_-_Calonectris_borealis,_Terceira,_A%C3%A7ores.jpg",
+      "credit": "José Luís Ávila Silveira/Pedro Noronha e Costa · Public domain",
+      "matched_name": "Calonectris borealis"
+    },
     "Caprimulgus europaeus": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Caprimulgus_macrurus.jpg/960px-Caprimulgus_macrurus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Caprimulgus_macrurus.jpg",
@@ -133406,7 +133097,12 @@
     "Columba oenas": null,
     "Columba palumbus": null,
     "Cygnus columbianus": null,
-    "Cynoscion nebulosus": null,
+    "Cynoscion nebulosus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg/960px-Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sciaenidae_(Rio_de_Janeiro,_Brazil,_1_June_1865).jpg",
+      "credit": "Burkhardt, Jacques · Public domain",
+      "matched_name": "Sciaenidae"
+    },
     "Ditrupa arietina": null,
     "Harmothoe fraserthomsoni": null,
     "Hypericum perforatum": null,
@@ -133420,7 +133116,12 @@
       "credit": "Philippe Bourjon · CC BY-SA 4.0",
       "matched_name": "Sigalionidae"
     },
-    "Caspiomyzon wagneri": null,
+    "Caspiomyzon wagneri": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg/960px-Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Caspian_Lamprey,_Gilan_Province,_Iran_imported_from_iNaturalist_photo_467295941.jpg",
+      "credit": "(c) Emad Tahaei, some rights reserved (CC BY) · CC BY 4.0",
+      "matched_name": "Caspiomyzon wagneri"
+    },
     "Geotria australis": null
   },
   "taxonomy_cache": {
@@ -135299,7 +135000,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "71168": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "lampreys",
@@ -135309,6 +135009,7 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
+    "3700093": {},
     "3680444": {}
   }
 }
