@@ -58,7 +58,7 @@ jobs:
         run: python scripts/update.py
         env:
           RECENT_DAYS: '370'
-          OVERLAP_DAYS: '14'
+          OVERLAP_DAYS: '30'
 
       - name: Build phylum and order explorer
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
@@ -79,6 +79,21 @@ jobs:
       - name: Build IUCN threatened and extinct views
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_iucn.py
+
+      - name: Validate dashboard freshness
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          d=json.loads(Path('data/dashboard.json').read_text())
+          generated=datetime.fromisoformat(d['generated_at'].replace('Z','+00:00'))
+          age=datetime.now(timezone.utc)-generated
+          assert age < timedelta(hours=12), f'Dashboard generation is stale: {age}'
+          assert d.get('daily') and d.get('recent_assemblies'), 'Dashboard missing activity data'
+          print(f'Dashboard freshness OK: generated {generated.isoformat()}, {len(d["recent_assemblies"])} recent assemblies')
+          PY
 
       - name: Commit changed data
         run: |
