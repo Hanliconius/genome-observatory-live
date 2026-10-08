@@ -144,6 +144,32 @@ The workflow in [`.github/workflows/update.yml`](.github/workflows/update.yml) r
 
 The dashboard displays its own latest data-generation timestamp, so a successful page load should not be assumed to mean the underlying metadata were refreshed at that instant.
 
+## Quarterly full-history audit (manual only)
+
+About four times per year (for example **January, April, July, and October**), open
+[GitHub Actions → Full genome history audit (manual)](https://github.com/Hanliconius/genome-observatory-live/actions/workflows/full-history-audit.yml),
+choose **Run workflow** on `main`, then inspect the run summary and download its artifact.
+
+This **read-only** workflow fetches the entire current NCBI Datasets collection
+of eukaryote GenBank chromosome/complete assemblies. It reports:
+
+- Missing, extra, or changed individual accessions within the recent ~370-day detail window.
+- Disagreements in historical per-day assembly counts, distinct organism counts, and first-time species counts.
+- Differences in the earliest qualifying release date for each organism.
+- Freshness of the dashboard, Genometrics, geography, taxonomy, and conservation JSON.
+- A CSV inventory of every qualifying NCBI accession, plus discrepancy CSVs and a Markdown summary.
+
+Because older dashboard data are deliberately stored as compact aggregates,
+the audit **cannot name a missing historical accession based on the dashboard alone**;
+it identifies discrepant historical dates and provides the full NCBI inventory for investigation.
+NCBI withdrawals and retrospective metadata corrections can also produce legitimate
+differences. Review discrepancies before making any corrections to the public dashboard.
+
+The audit never commits data, triggers a refresh, or deploys Pages. Artifacts
+are retained by GitHub Actions for **90 days**; download them if permanent
+records are needed. A successful workflow run means the comparison completed,
+**not necessarily that there were no differences**.
+
 ## Repository layout
 
 ```text
