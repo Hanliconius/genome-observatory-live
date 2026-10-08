@@ -166,7 +166,8 @@ function businessDayRows(rows){
   return (rows||[]).filter(x=>isBusinessDate(x.date));
 }
 
-const REPORTING_LAG_DAYS=3;
+// Show all available NCBI records, including the most recent dates.
+const REPORTING_LAG_DAYS=0;
 function reportingLagRows(rows,generatedAt=DATA?.generated_at){
   const anchor=generatedAt?new Date(generatedAt):new Date();
   const cutoff=new Date(Date.UTC(anchor.getUTCFullYear(),anchor.getUTCMonth(),anchor.getUTCDate()));
