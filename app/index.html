@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261006a" />
+  <link rel="stylesheet" href="styles.css?v=20261008d" />
 </head>
 <body>
   <header class="site-head">
@@ -230,25 +230,25 @@
 
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Animals</p>
-            <h2 class="panel-title">Animal genome-size distributions</h2>
-            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
-            <svg id="genometrics-size-animals" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Animals genome-size distribution across up to eight classes"></svg>
+            <h2 class="panel-title">Animal genome-size distributions · classes</h2>
+            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on the same logarithmic axis.</p>
+            <svg id="genometrics-size-animals" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Animals genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-animals-denominator"></p>
           </article>
 
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Plants</p>
-            <h2 class="panel-title">Plant genome-size distributions</h2>
-            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
-            <svg id="genometrics-size-plants" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Plants genome-size distribution across up to eight classes"></svg>
+            <h2 class="panel-title">Plant genome-size distributions · orders</h2>
+            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on the same logarithmic axis.</p>
+            <svg id="genometrics-size-plants" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Plants genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-plants-denominator"></p>
           </article>
 
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Fungi</p>
-            <h2 class="panel-title">Fungal genome-size distributions</h2>
-            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
-            <svg id="genometrics-size-fungi" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Fungi genome-size distribution across up to eight classes"></svg>
+            <h2 class="panel-title">Fungal genome-size distributions · orders</h2>
+            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on the same logarithmic axis.</p>
+            <svg id="genometrics-size-fungi" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Fungi genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-fungi-denominator"></p>
           </article>
 
@@ -610,6 +610,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261008c"></script>
+  <script src="app.js?v=20261008d"></script>
 </body>
 </html>
