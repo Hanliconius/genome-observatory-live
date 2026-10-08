@@ -588,25 +588,18 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
         })
     points.sort(key=lambda x:(x["group"],x["species"]))
 
+    # Keep each kingdom separate, so animal-heavy sampling cannot crowd out
+    # plant and fungal classes. One representative size per organism.
     class_sizes=defaultdict(list)
-    class_groups=defaultdict(Counter)
     for rec in size_rep.values():
         bp=valid_size(rec)
         if bp is None:
             continue
         tid=rec.get("taxid")
         cls=taxon_name_at_rank(tid,"class",parent,rank,sci)
-        if not cls:
-            continue
-        class_sizes[cls].append(bp/1_000_000)
-        class_groups[cls][architecture_group(tid,parent,lineage_cache)]+=1
-
-    top_classes=[
-        name for name,_ in sorted(
-            ((name,len(vals)) for name,vals in class_sizes.items()),
-            key=lambda x:(-x[1],x[0])
-        )[:8]
-    ]
+        group=architecture_group(tid,parent,lineage_cache)
+        if cls and group in ("Animals","Plants","Fungi"):
+            class_sizes[(group,cls)].append(bp/1_000_000)
 
     edges=[1,3,10,30,100,300,1000,3000,10000,30000,100000]
     labels=[]
@@ -626,31 +619,40 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
         ys=sorted(xs); n=len(ys)
         return ys[n//2] if n%2 else (ys[n//2-1]+ys[n//2])/2
 
-    distributions=[]
-    for cls in top_classes:
-        vals=class_sizes[cls]
-        counts=[0]*(len(edges)+1)
-        for mb in vals:
-            bi=next((i for i,e in enumerate(edges) if mb<e),len(edges))
-            counts[bi]+=1
-        distributions.append({
-            "taxon":cls,
-            "group":class_groups[cls].most_common(1)[0][0] if class_groups[cls] else "Other",
-            "species":len(vals),
-            "median_mb":round(median(vals),3) if vals else None,
-            "bins":[{"label":lab,"count":count} for lab,count in zip(labels,counts)],
-        })
+    grouped_distributions={}
+    for group in ("Animals","Plants","Fungi"):
+        selected=sorted(
+            ((cls,len(vals)) for (grp,cls),vals in class_sizes.items() if grp==group),
+            key=lambda x:(-x[1],x[0])
+        )[:8]
+        distributions=[]
+        for cls,_ in selected:
+            vals=class_sizes[(group,cls)]
+            counts=[0]*(len(edges)+1)
+            for mb in vals:
+                bi=next((i for i,e in enumerate(edges) if mb<e),len(edges))
+                counts[bi]+=1
+            distributions.append({
+                "taxon":cls,
+                "group":group,
+                "species":len(vals),
+                "median_mb":round(median(vals),3),
+                "bins":[{"label":lab,"count":count} for lab,count in zip(labels,counts)],
+            })
+        grouped_distributions[group]={
+            "classes":distributions,
+            "represented_species":sum(len(class_sizes[(group,cls)]) for cls,_ in selected),
+        }
 
     return {
         "species_points":points,
         "scatter_species":len(points),
         "size_species":len(size_rep),
         "size_distribution_by_class":{
-            "classes":distributions,
+            "groups":grouped_distributions,
             "bin_labels":labels,
-            "represented_species":sum(len(class_sizes[x]) for x in top_classes),
         },
-        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show the eight NCBI classes with the most species carrying size metadata."
+        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show up to eight best represented NCBI classes within each of Animals, Plants, and Fungi."
     }
 
 
