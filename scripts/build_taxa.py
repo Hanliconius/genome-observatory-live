@@ -310,6 +310,13 @@ def main():
         OUT.mkdir(parents=True, exist_ok=True)
 
         index_rows = []
+        # Convert latest per-species sizes into per-taxon lists once; avoid
+        # rescanning every organism for every taxon during JSON generation.
+        taxon_sizes = defaultdict(list)
+        for (taxon_id, _), (_, _, size_mb) in size_by_taxon_species.items():
+            taxon_sizes[taxon_id].append(size_mb)
+        for values in taxon_sizes.values():
+            values.sort()
 
         for tid, rec in agg.items():
             years = sorted(rec["yearly"])
@@ -326,10 +333,7 @@ def main():
                 for ds, count in sorted(rec["recent_daily"].items())
             ]
 
-            sizes = sorted(
-                record[2] for (taxon_id, _), record in size_by_taxon_species.items()
-                if taxon_id == tid
-            )
+            sizes = taxon_sizes.get(tid, [])
             middle = len(sizes) // 2
             median_mb = (
                 round((sizes[middle - 1] + sizes[middle]) / 2, 3)
