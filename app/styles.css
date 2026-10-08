@@ -965,3 +965,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .genometrics-dist-ribbon-hit{fill:transparent;cursor:crosshair}
 .genome-landscape-panel .genometrics-summary{min-height:0}
 .genome-landscape-panel .genometrics-size-by-taxon{margin-top:13px}
+
+/* Selected-taxon genome-size comparison */
+.taxon-size-chart{display:block;width:100%;height:auto;overflow:visible;margin-top:10px}
+.taxon-size-hit{fill:transparent;pointer-events:all;cursor:crosshair}
