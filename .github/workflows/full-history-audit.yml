@@ -1,0 +1,46 @@
+name: Full genome history audit (manual)
+
+# Run manually about four times a year (e.g. January, April, July, October).
+# Read-only: generates a report/artifact, never commits or deploys data.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: genome-observatory-full-history-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install NCBI Datasets
+        run: |
+          curl -fsSL https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets -o /usr/local/bin/datasets
+          chmod +x /usr/local/bin/datasets
+          datasets version
+      - name: Full NCBI versus dashboard reconciliation
+        run: python scripts/audit_full_history.py --output-dir audit-results
+      - name: Add audit report to job summary
+        if: always()
+        run: |
+          if [ -f audit-results/audit_report.md ]; then
+            cat audit-results/audit_report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Audit did not produce a report. Inspect the failed job log.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-history-audit-${{ github.run_id }}
+          path: audit-results/
+          if-no-files-found: warn
+          retention-days: 90
