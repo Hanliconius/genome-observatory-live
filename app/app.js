@@ -347,7 +347,13 @@ function renderWeatherMap(){
   const svg=el('weather-map');
   if(!svg||!DATA)return;
   const source=reportingLagRows(DATA.daily||[]);
-  if(!source.length){svg.innerHTML='';return;}
+  const lastRecorded=el('weather-last-recorded');
+  if(!source.length){svg.innerHTML='';if(lastRecorded)lastRecorded.textContent='No daily deposit data available.';return;}
+  if(lastRecorded){
+    const latest=source.findLast(x=>Number(x.assemblies||0)>0);
+    const generated=DATA.generated_at?new Date(DATA.generated_at).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):'unknown';
+    lastRecorded.textContent='Newest recorded deposit date: '+(latest?latest.date:'none in available history')+' · Data refreshed: '+generated+' (UTC). Recent empty days may still be backfilled by NCBI.';
+  }
 
   const end=new Date(source[source.length-1].date+'T12:00:00Z');
   const rawStart=new Date(end);
