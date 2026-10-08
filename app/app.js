@@ -781,7 +781,7 @@ function drawGenomeSizeByTaxon(svgId,dist){
     const amplitude=rowH*.41;
     const samples=[0,...counts,0];
     const points=samples.map((v,i)=>({
-      x:L+(i-.5)*bw,
+      x:i===0?L:(i===samples.length-1?L+iw:L+(i-.5)*bw),
       y:mid-amplitude*(v/peak)
     }));
     const smooth=(ps)=>{
@@ -901,7 +901,8 @@ function renderGenometrics(){
     drawGenomeSizeByTaxon('genometrics-size-'+id,{...current,bin_labels:dist.bin_labels});
     el('genometrics-size-'+id+'-denominator').textContent=
       fmt(current.represented_species||0)+' species across '+(current.classes||[]).length+
-      ' classes. Colour intensity scales to the fraction of species in each genome-size bin.';
+      ' taxa. Ribbons show relative within-taxon genome-size frequency; '+
+      (current.rank||'class/order')+'.';
   }
 
   const methods=d.methods_through_time||{};
