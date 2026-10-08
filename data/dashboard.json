@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-08T11:28:10.931674+00:00",
+  "generated_at": "2026-10-08T23:51:28.382952+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 7,
-      "species": 4,
-      "first_time_species": 0
+      "assemblies": 15,
+      "species": 9,
+      "first_time_species": 1
     },
     "year": {
-      "assemblies": 6301,
-      "species": 3920,
-      "first_time_species": 2952
+      "assemblies": 6309,
+      "species": 3922,
+      "first_time_species": 2951
     },
     "all": {
-      "assemblies": 18865,
-      "species": 10561,
-      "first_time_species": 10561
+      "assemblies": 18873,
+      "species": 10562,
+      "first_time_species": 10562
     }
   },
   "daily": [
@@ -47873,7 +47873,7 @@
       "date": "2026-09-14",
       "assemblies": 56,
       "species": 35,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-09-15",
@@ -47975,7 +47975,7 @@
       "date": "2026-10-01",
       "assemblies": 7,
       "species": 6,
-      "first_time_species": 1
+      "first_time_species": 0
     },
     {
       "date": "2026-10-02",
@@ -47997,15 +47997,15 @@
     },
     {
       "date": "2026-10-05",
-      "assemblies": 0,
-      "species": 0,
+      "assemblies": 2,
+      "species": 1,
       "first_time_species": 0
     },
     {
       "date": "2026-10-06",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
+      "assemblies": 6,
+      "species": 4,
+      "first_time_species": 1
     },
     {
       "date": "2026-10-07",
@@ -48155,29 +48155,37 @@
     },
     {
       "year": "2026",
-      "assemblies": 5246,
-      "species": 3504,
-      "first_time_species": 2262
+      "assemblies": 5254,
+      "species": 3509,
+      "first_time_species": 2261
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 7
+      "count": 13
+    },
+    {
+      "group": "Plants",
+      "count": 1
+    },
+    {
+      "group": "Fungi",
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4084
+      "count": 4090
     },
     {
       "group": "Plants",
-      "count": 1649
+      "count": 1650
     },
     {
       "group": "Fungi",
-      "count": 443
+      "count": 444
     },
     {
       "group": "Other",
@@ -48220,28 +48228,136 @@
       "date": "2025-02-16"
     }
   ],
-  "featured_assembly": {
-    "accession": "GCA_062014572.1",
-    "organism_name": "Cynoscion nebulosus",
-    "common_name": "spotted seatrout",
-    "tax_id": 13029,
-    "release_date": "2026-10-02",
-    "assembly_level": "Chromosome",
-    "assembly_name": "fCynNeb1.hap2",
-    "total_sequence_length": 662870293,
-    "chromosome_count": 24,
-    "genus": "Cynoscion",
-    "family": "Sciaenidae",
-    "phylum": "Chordata",
-    "group": "Animals",
-    "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Cynoscion_nebulosus_%28FDA_213%29.jpg/960px-Cynoscion_nebulosus_%28FDA_213%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Cynoscion_nebulosus_(FDA_213).jpg",
-      "credit": "The U.S. Food and Drug Administration · Public domain",
-      "matched_name": "Cynoscion nebulosus"
-    }
-  },
+  "featured_assembly": null,
   "recent_assemblies": [
+    {
+      "accession": "GCA_062020931.1",
+      "organism_name": "Hylocichla mustelina",
+      "common_name": "birds",
+      "tax_id": 172420,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bHylMus1.hap2",
+      "total_sequence_length": 1354631203,
+      "chromosome_count": 41,
+      "genus": "Hylocichla",
+      "family": "Turdidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062020872.1",
+      "organism_name": "Sus scrofa",
+      "common_name": "pig",
+      "tax_id": 9823,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mSusScr4.hap1",
+      "total_sequence_length": 2672891942,
+      "chromosome_count": 20,
+      "genus": "Sus",
+      "family": "Suidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062020868.1",
+      "organism_name": "Sus scrofa",
+      "common_name": "pig",
+      "tax_id": 9823,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mSusScr4.hap2",
+      "total_sequence_length": 2468170072,
+      "chromosome_count": 18,
+      "genus": "Sus",
+      "family": "Suidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062020866.1",
+      "organism_name": "Hylocichla mustelina",
+      "common_name": "birds",
+      "tax_id": 172420,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bHylMus1.hap1",
+      "total_sequence_length": 1269276815,
+      "chromosome_count": 41,
+      "genus": "Hylocichla",
+      "family": "Turdidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062020486.1",
+      "organism_name": "Descurainia sophia",
+      "common_name": "eudicots",
+      "tax_id": 89411,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62020486v1",
+      "total_sequence_length": 260956380,
+      "chromosome_count": 14,
+      "genus": "Descurainia",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062020481.1",
+      "organism_name": "Grifola frondosa",
+      "common_name": "maitake",
+      "tax_id": 5627,
+      "release_date": "2026-10-06",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62020481v1",
+      "total_sequence_length": 37592532,
+      "chromosome_count": 13,
+      "genus": "Grifola",
+      "family": "Grifolaceae",
+      "phylum": "Basidiomycota",
+      "group": "Fungi",
+      "image": null
+    },
+    {
+      "accession": "GCA_062019781.1",
+      "organism_name": "Canis lupus familiaris",
+      "common_name": "dog",
+      "tax_id": 9615,
+      "release_date": "2026-10-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ROS_Cfam_2.0_alt",
+      "total_sequence_length": 2327902378,
+      "chromosome_count": 38,
+      "genus": "Canis",
+      "family": "Canidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062019780.1",
+      "organism_name": "Canis lupus familiaris",
+      "common_name": "dog",
+      "tax_id": 9615,
+      "release_date": "2026-10-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ROS_Cfam_2.0_pri",
+      "total_sequence_length": 2469753731,
+      "chromosome_count": 40,
+      "genus": "Canis",
+      "family": "Canidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
     {
       "accession": "GCA_062014572.1",
       "organism_name": "Cynoscion nebulosus",
@@ -48256,12 +48372,7 @@
       "family": "Sciaenidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Cynoscion_nebulosus_%28FDA_213%29.jpg/960px-Cynoscion_nebulosus_%28FDA_213%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Cynoscion_nebulosus_(FDA_213).jpg",
-        "credit": "The U.S. Food and Drug Administration · Public domain",
-        "matched_name": "Cynoscion nebulosus"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062014571.1",
@@ -48277,12 +48388,7 @@
       "family": "Sciaenidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg/960px-Sciaenidae_%28Rio_de_Janeiro%2C_Brazil%2C_1_June_1865%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Sciaenidae_(Rio_de_Janeiro,_Brazil,_1_June_1865).jpg",
-        "credit": "Burkhardt, Jacques · Public domain",
-        "matched_name": "Sciaenidae"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062014570.1",
@@ -48378,12 +48484,7 @@
       "family": "Sigalionidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sigalionidae_R%C3%A9union.jpg/960px-Sigalionidae_R%C3%A9union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Sigalionidae_R%C3%A9union.jpg",
-        "credit": "Philippe Bourjon · CC BY-SA 4.0",
-        "matched_name": "Sigalionidae"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988295065.1",
@@ -48399,12 +48500,7 @@
       "family": "Serpulidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Ditrupa_arietina_01.jpg/960px-Ditrupa_arietina_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Ditrupa_arietina_01.jpg",
-        "credit": "H. Zell · CC BY-SA 3.0",
-        "matched_name": "Ditrupa arietina"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988295045.1",
@@ -48420,12 +48516,7 @@
       "family": "Calappidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Calappa_ocellata_Holthouis%2C_1958.jpg/960px-Calappa_ocellata_Holthouis%2C_1958.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Calappa_ocellata_Holthouis,_1958.jpg",
-        "credit": "Domingos Afonso Jório · Public domain",
-        "matched_name": "Calappa ocellata"
-      }
+      "image": null
     },
     {
       "accession": "GCA_986918845.2",
@@ -48489,12 +48580,7 @@
       "family": "Petromyzontidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg/960px-Caspian_Lamprey%2C_Gilan_Province%2C_Iran_imported_from_iNaturalist_photo_467295941.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Caspian_Lamprey,_Gilan_Province,_Iran_imported_from_iNaturalist_photo_467295941.jpg",
-        "credit": "(c) Emad Tahaei, some rights reserved (CC BY) · CC BY 4.0",
-        "matched_name": "Caspiomyzon wagneri"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062012677.1",
@@ -48574,12 +48660,7 @@
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gelderland1601-1603_Serranidae.jpg/960px-Gelderland1601-1603_Serranidae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Gelderland1601-1603_Serranidae.jpg",
-        "credit": "Joris Joostensz Laerle (attributed) · Public domain",
-        "matched_name": "Serranidae"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009918.1",
@@ -48595,12 +48676,7 @@
       "family": "Lamiaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Dracocephalum_moldavica_Sturm_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Dracocephalum_moldavica_Sturm_-_detail.jpg",
-        "credit": "Johann Georg Sturm (Painter: Jacob Sturm) · Public domain",
-        "matched_name": "Dracocephalum moldavica"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009917.1",
@@ -48616,12 +48692,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009916.1",
@@ -48637,12 +48708,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009915.1",
@@ -48658,12 +48724,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009914.1",
@@ -48679,12 +48740,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009913.1",
@@ -48700,12 +48756,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009912.1",
@@ -48721,12 +48772,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009911.1",
@@ -48742,12 +48788,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009910.1",
@@ -48763,12 +48804,7 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg/960px-Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Arachis_hypogaea_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-163.jpg",
-        "credit": "Franz Eugen Köhler, Köhler's Medizinal-Pflanzen · Public domain",
-        "matched_name": "Arachis hypogaea"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062009627.1",
@@ -54276,7 +54312,12 @@
       "family": null,
       "phylum": null,
       "group": "Other",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Paraplesiops_meleagris_PC079182.JPG/960px-Paraplesiops_meleagris_PC079182.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paraplesiops_meleagris_PC079182.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Paraplesiops meleagris"
+      }
     },
     {
       "accession": "GCA_988265255.1",
@@ -54292,7 +54333,12 @@
       "family": null,
       "phylum": null,
       "group": "Other",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Paraplesiops_meleagris_PC079182.JPG/960px-Paraplesiops_meleagris_PC079182.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paraplesiops_meleagris_PC079182.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Paraplesiops meleagris"
+      }
     },
     {
       "accession": "GCA_988265225.1",
@@ -54450,7 +54496,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/-_3091_%E2%80%93_Pelochrista_matutina_%28probable%29_%2829219034297%29.jpg/960px--_3091_%E2%80%93_Pelochrista_matutina_%28probable%29_%2829219034297%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:-_3091_%E2%80%93_Pelochrista_matutina_(probable)_(29219034297).jpg",
+        "credit": "Andy Reago &amp; Chrissy McClarren · CC BY 2.0",
+        "matched_name": "Pelochrista"
+      }
     },
     {
       "accession": "GCA_988265135.1",
@@ -55209,7 +55260,12 @@
       "family": "Holothuriidae",
       "phylum": "Echinodermata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Pepino_de_mar_%28Holothuria_forskali%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_15.jpg/960px-Pepino_de_mar_%28Holothuria_forskali%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pepino_de_mar_(Holothuria_forskali),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_15.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Holothuria forskali"
+      }
     },
     {
       "accession": "GCA_988242195.1",
@@ -55815,7 +55871,12 @@
       "family": "Trachichthyidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Hoplostethus_mediterraneus.jpg/960px-Hoplostethus_mediterraneus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hoplostethus_mediterraneus.jpg",
+        "credit": "Emma Kissling · Public domain",
+        "matched_name": "Hoplostethus mediterraneus"
+      }
     },
     {
       "accession": "GCA_988240775.1",
@@ -55916,7 +55977,12 @@
       "family": "Erebidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Aedia.funesta.7207.jpg/960px-Aedia.funesta.7207.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aedia.funesta.7207.jpg",
+        "credit": "Olei · CC BY-SA 3.0",
+        "matched_name": "Aedia funesta"
+      }
     },
     {
       "accession": "GCA_988240665.1",
@@ -55964,7 +56030,12 @@
       "family": "Aphididae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg/960px-Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aphis_rumicis_(Dock_aphid)_-_Flickr_-_S._Rae.jpg",
+        "credit": "S. Rae from Scotland, UK · CC BY 2.0",
+        "matched_name": "Aphis rumicis"
+      }
     },
     {
       "accession": "GCA_988240635.1",
@@ -56124,7 +56195,12 @@
       "family": "Aphididae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg/960px-Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aphis_rumicis_(Dock_aphid)_-_Flickr_-_S._Rae.jpg",
+        "credit": "S. Rae from Scotland, UK · CC BY 2.0",
+        "matched_name": "Aphis rumicis"
+      }
     },
     {
       "accession": "GCA_988240515.1",
@@ -56444,7 +56520,12 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bouteloua_gracilis_%28Poaceae%29_I.jpg/960px-Bouteloua_gracilis_%28Poaceae%29_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Bouteloua_gracilis_(Poaceae)_I.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0",
+        "matched_name": "Poaceae"
+      }
     },
     {
       "accession": "GCA_973577565.1",
@@ -56790,7 +56871,12 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Camomille_sauvage_%28Matricaria_chamomilla%29%2C_coquelicots_%28Papaver_rhoeas%29_au_bord_d%27un_champ_d%27orge_%28Hordeum_vulgare%29.jpg/960px-Camomille_sauvage_%28Matricaria_chamomilla%29%2C_coquelicots_%28Papaver_rhoeas%29_au_bord_d%27un_champ_d%27orge_%28Hordeum_vulgare%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Camomille_sauvage_(Matricaria_chamomilla),_coquelicots_(Papaver_rhoeas)_au_bord_d%27un_champ_d%27orge_(Hordeum_vulgare).jpg",
+        "credit": "JackyM59 · CC BY-SA 4.0",
+        "matched_name": "Hordeum"
+      }
     },
     {
       "accession": "GCA_061194305.1",
@@ -57643,7 +57729,12 @@
       "family": "Gerridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Bug_September_2010-1.jpg/960px-Bug_September_2010-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Bug_September_2010-1.jpg",
+        "credit": "Alvesgaspar · CC BY-SA 3.0",
+        "matched_name": "Aquarius najas"
+      }
     },
     {
       "accession": "GCA_988205575.1",
@@ -57749,7 +57840,12 @@
       "family": "Blenniidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg/960px-Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Babosa_de_cuernos_(Parablennius_tentacularis),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-31,_DD_56.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Parablennius"
+      }
     },
     {
       "accession": "GCA_988193155.1",
@@ -57882,7 +57978,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Aethes_francillana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aethes_francillana.jpg",
+        "credit": "Marko Mutanen, University of Oulu · Public domain",
+        "matched_name": "Aethes francillana"
+      }
     },
     {
       "accession": "GCA_988143675.1",
@@ -58846,7 +58947,12 @@
       "family": "Vitaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg/960px-Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Edle_Weinrebe,_%27Vitis_vinifera%27_subsp._%27vinifera.jpg",
+        "credit": "eflon (Alex from Ithaca, NY) · CC BY 2.0",
+        "matched_name": "Vitis"
+      }
     },
     {
       "accession": "GCA_965260715.1",
@@ -58862,7 +58968,12 @@
       "family": "Vitaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Vitis_Rupestris.JPG/960px-Vitis_Rupestris.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Vitis_Rupestris.JPG",
+        "credit": "Joachim Schmid, Fachgebiet Rebenzüchtung und Rebenveredlung Forschungsanstalt Geisenheim, Von-Lade-Str. 1, D-65366 Geisenheim · CC BY 3.0 de",
+        "matched_name": "Vitis rupestris"
+      }
     },
     {
       "accession": "GCA_965260665.1",
@@ -58878,7 +58989,12 @@
       "family": "Vitaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG/960px-Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG",
+        "credit": "CC BY-SA 3.0",
+        "matched_name": "Vitis riparia"
+      }
     },
     {
       "accession": "GCA_965260625.1",
@@ -58926,7 +59042,12 @@
       "family": "Vitaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Cissus_sp.%2C_Vitaceae%2C_Atlantic_forest%2C_northern_littoral_of_Bahia%2C_Brazil_%289513547911%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cissus_sp.,_Vitaceae,_Atlantic_forest,_northern_littoral_of_Bahia,_Brazil_(9513547911).jpg",
+        "credit": "Alex Popovkin, Bahia, Brazil · CC BY 2.0",
+        "matched_name": "Vitaceae"
+      }
     },
     {
       "accession": "GCA_965260575.1",
@@ -58942,7 +59063,12 @@
       "family": "Vitaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg/960px-Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Edle_Weinrebe,_%27Vitis_vinifera%27_subsp._%27vinifera.jpg",
+        "credit": "eflon (Alex from Ithaca, NY) · CC BY 2.0",
+        "matched_name": "Vitis"
+      }
     },
     {
       "accession": "GCA_964205215.2",
@@ -59448,7 +59574,12 @@
       "family": "Adelidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Adela_reaumurella-09_%28xndr%29.jpg/960px-Adela_reaumurella-09_%28xndr%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Adela_reaumurella-09_(xndr).jpg",
+        "credit": "No machine-readable author provided. Svdmolen assumed (based on copyright claims). · CC BY 2.5",
+        "matched_name": "Adela reaumurella"
+      }
     },
     {
       "accession": "GCA_987274565.1",
@@ -59906,7 +60037,12 @@
       "family": "Chrysomelidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Aphthona_nonstriata01.jpg/960px-Aphthona_nonstriata01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aphthona_nonstriata01.jpg",
+        "credit": "Attribution",
+        "matched_name": "Aphthona nonstriata"
+      }
     },
     {
       "accession": "GCA_987214555.1",
@@ -60114,7 +60250,12 @@
       "family": "Elaeagnaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/%28Elaeagnaceae_close-up_in_Yilgarn_Shire%2C_Australia%29_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg/960px-%28Elaeagnaceae_close-up_in_Yilgarn_Shire%2C_Australia%29_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:(Elaeagnaceae_close-up_in_Yilgarn_Shire,_Australia)_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg",
+        "credit": "Carlquist, Sherwin John, 1930-2021 · CC BY 4.0",
+        "matched_name": "Elaeagnaceae"
+      }
     },
     {
       "accession": "GCA_987201365.1",
@@ -61169,7 +61310,12 @@
       "family": "Polygonaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Rumex_rothschildianus_in_Israel.jpg/960px-Rumex_rothschildianus_in_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Rumex_rothschildianus_in_Israel.jpg",
+        "credit": "ראובן קרפ Reuven Karp · CC BY-SA 3.0",
+        "matched_name": "Rumex rothschildianus"
+      }
     },
     {
       "accession": "GCA_061237655.1",
@@ -134356,7 +134502,8 @@
     "Caspiomyzon wagneri": "2026-10-01",
     "Geotria australis": "2026-09-28",
     "Campanula americana": "2026-10-01",
-    "Paraplesiops meleagris": "2026-09-14"
+    "Paraplesiops meleagris": "2026-09-14",
+    "Hylocichla mustelina": "2026-10-06"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -134850,7 +134997,12 @@
       "credit": "Jim Maragos, U.S. Fish and Wildlife Service · Public domain",
       "matched_name": "Paracanthurus hepatus"
     },
-    "Pelochrista infidana": null,
+    "Pelochrista infidana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/-_3091_%E2%80%93_Pelochrista_matutina_%28probable%29_%2829219034297%29.jpg/960px--_3091_%E2%80%93_Pelochrista_matutina_%28probable%29_%2829219034297%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:-_3091_%E2%80%93_Pelochrista_matutina_(probable)_(29219034297).jpg",
+      "credit": "Andy Reago &amp; Chrissy McClarren · CC BY 2.0",
+      "matched_name": "Pelochrista"
+    },
     "Phaonia gobertii": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Lispocephala_alma_%28Muscidae%29_-_%28imago%29%2C_Nijmegen%2C_the_Netherlands_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "page_url": "https://commons.wikimedia.org/wiki/File:Lispocephala_alma_(Muscidae)_-_(imago),_Nijmegen,_the_Netherlands_-_3.jpg",
@@ -135315,7 +135467,12 @@
     "Hypericum perforatum": null,
     "Leodia sexiesperforata": null,
     "Martadoris mediterranea": null,
-    "Pedetes capensis": null,
+    "Pedetes capensis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Pedetes_capensis_%28South_African_Springhare%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pedetes_capensis_(South_African_Springhare).jpg",
+      "credit": "Revolutionrock1976 · CC BY-SA 4.0",
+      "matched_name": "Pedetes capensis"
+    },
     "Ptychobarbus chungtienensis": null,
     "Sthenelais boa": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sigalionidae_R%C3%A9union.jpg/960px-Sigalionidae_R%C3%A9union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -135348,9 +135505,24 @@
       "credit": "Billy Lindblom from Hallsberg, Sweden · CC BY 2.0",
       "matched_name": "Acrocephalus schoenobaenus"
     },
-    "Adela reaumurella": null,
-    "Aedia funesta": null,
-    "Aethes francillana": null,
+    "Adela reaumurella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Adela_reaumurella-09_%28xndr%29.jpg/960px-Adela_reaumurella-09_%28xndr%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Adela_reaumurella-09_(xndr).jpg",
+      "credit": "No machine-readable author provided. Svdmolen assumed (based on copyright claims). · CC BY 2.5",
+      "matched_name": "Adela reaumurella"
+    },
+    "Aedia funesta": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Aedia.funesta.7207.jpg/960px-Aedia.funesta.7207.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Aedia.funesta.7207.jpg",
+      "credit": "Olei · CC BY-SA 3.0",
+      "matched_name": "Aedia funesta"
+    },
+    "Aethes francillana": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Aethes_francillana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Aethes_francillana.jpg",
+      "credit": "Marko Mutanen, University of Oulu · Public domain",
+      "matched_name": "Aethes francillana"
+    },
     "Agonum muelleri": null,
     "Alcedo atthis": null,
     "Alectoris rufa": null,
@@ -135362,9 +135534,24 @@
     "Anthus pratensis": null,
     "Aphidius ervi": null,
     "Aphis fabae": null,
-    "Aphis rumicis": null,
-    "Aphthona nonstriata": null,
-    "Aquarius najas": null,
+    "Aphis rumicis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg/960px-Aphis_rumicis_%28Dock_aphid%29_-_Flickr_-_S._Rae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Aphis_rumicis_(Dock_aphid)_-_Flickr_-_S._Rae.jpg",
+      "credit": "S. Rae from Scotland, UK · CC BY 2.0",
+      "matched_name": "Aphis rumicis"
+    },
+    "Aphthona nonstriata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Aphthona_nonstriata01.jpg/960px-Aphthona_nonstriata01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Aphthona_nonstriata01.jpg",
+      "credit": "Attribution",
+      "matched_name": "Aphthona nonstriata"
+    },
+    "Aquarius najas": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Bug_September_2010-1.jpg/960px-Bug_September_2010-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bug_September_2010-1.jpg",
+      "credit": "Alvesgaspar · CC BY-SA 3.0",
+      "matched_name": "Aquarius najas"
+    },
     "Austropotamobius torrentium": null,
     "Barycnemis harpura": null,
     "Batrachedra pinicolella": null,
@@ -135478,11 +135665,36 @@
     "Hemibagrus wyckioides": null,
     "Heriades truncorum": null,
     "Heterotoma planicornis": null,
-    "Hippophae rhamnoides": null,
-    "Holothuria forskali": null,
-    "Hoplostethus mediterraneus": null,
-    "Hordeum bogdanii": null,
-    "Hordeum brachyantherum subsp. californicum": null,
+    "Hippophae rhamnoides": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/%28Elaeagnaceae_close-up_in_Yilgarn_Shire%2C_Australia%29_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg/960px-%28Elaeagnaceae_close-up_in_Yilgarn_Shire%2C_Australia%29_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:(Elaeagnaceae_close-up_in_Yilgarn_Shire,_Australia)_-_DPLA_-_7c8bb80f98898d866c558ac8b16d4340.jpg",
+      "credit": "Carlquist, Sherwin John, 1930-2021 · CC BY 4.0",
+      "matched_name": "Elaeagnaceae"
+    },
+    "Holothuria forskali": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Pepino_de_mar_%28Holothuria_forskali%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_15.jpg/960px-Pepino_de_mar_%28Holothuria_forskali%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-21%2C_DD_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pepino_de_mar_(Holothuria_forskali),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-21,_DD_15.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Holothuria forskali"
+    },
+    "Hoplostethus mediterraneus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Hoplostethus_mediterraneus.jpg/960px-Hoplostethus_mediterraneus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hoplostethus_mediterraneus.jpg",
+      "credit": "Emma Kissling · Public domain",
+      "matched_name": "Hoplostethus mediterraneus"
+    },
+    "Hordeum bogdanii": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Camomille_sauvage_%28Matricaria_chamomilla%29%2C_coquelicots_%28Papaver_rhoeas%29_au_bord_d%27un_champ_d%27orge_%28Hordeum_vulgare%29.jpg/960px-Camomille_sauvage_%28Matricaria_chamomilla%29%2C_coquelicots_%28Papaver_rhoeas%29_au_bord_d%27un_champ_d%27orge_%28Hordeum_vulgare%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Camomille_sauvage_(Matricaria_chamomilla),_coquelicots_(Papaver_rhoeas)_au_bord_d%27un_champ_d%27orge_(Hordeum_vulgare).jpg",
+      "credit": "JackyM59 · CC BY-SA 4.0",
+      "matched_name": "Hordeum"
+    },
+    "Hordeum brachyantherum subsp. californicum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bouteloua_gracilis_%28Poaceae%29_I.jpg/960px-Bouteloua_gracilis_%28Poaceae%29_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bouteloua_gracilis_(Poaceae)_I.jpg",
+      "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0",
+      "matched_name": "Poaceae"
+    },
     "Hordeum brevisubulatum": null,
     "Hordeum chilense": null,
     "Hordeum comosum": null,
@@ -135596,8 +135808,18 @@
     "Oxycera trilineata": null,
     "Oxycheilinus unifasciatus": null,
     "Oxymeris maculata": null,
-    "Parablennius pilicornis": null,
-    "Paraplesiops meleagris": null,
+    "Parablennius pilicornis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg/960px-Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Babosa_de_cuernos_(Parablennius_tentacularis),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2020-07-31,_DD_56.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Parablennius"
+    },
+    "Paraplesiops meleagris": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Paraplesiops_meleagris_PC079182.JPG/960px-Paraplesiops_meleagris_PC079182.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Paraplesiops_meleagris_PC079182.JPG",
+      "credit": "Peter Southwood · CC BY-SA 3.0",
+      "matched_name": "Paraplesiops meleagris"
+    },
     "Perdix perdix": null,
     "Perizoma albulatum": null,
     "Perophora japonica": null,
@@ -135729,14 +135951,44 @@
     "Virgichneumon maculicauda": null,
     "Vitis betulifolia": null,
     "Vitis bryoniifolia var. bryoniifolia": null,
-    "Vitis heyneana": null,
-    "Vitis labrusca": null,
-    "Vitis riparia": null,
-    "Vitis rupestris": null,
-    "Vitis sinocinerea": null,
+    "Vitis heyneana": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Cissus_sp.%2C_Vitaceae%2C_Atlantic_forest%2C_northern_littoral_of_Bahia%2C_Brazil_%289513547911%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cissus_sp.,_Vitaceae,_Atlantic_forest,_northern_littoral_of_Bahia,_Brazil_(9513547911).jpg",
+      "credit": "Alex Popovkin, Bahia, Brazil · CC BY 2.0",
+      "matched_name": "Vitaceae"
+    },
+    "Vitis labrusca": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg/960px-Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Edle_Weinrebe,_%27Vitis_vinifera%27_subsp._%27vinifera.jpg",
+      "credit": "eflon (Alex from Ithaca, NY) · CC BY 2.0",
+      "matched_name": "Vitis"
+    },
+    "Vitis riparia": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG/960px-Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vitis_riparia_HabitusLeavesFruits_BotGardBln0906.JPG",
+      "credit": "CC BY-SA 3.0",
+      "matched_name": "Vitis riparia"
+    },
+    "Vitis rupestris": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Vitis_Rupestris.JPG/960px-Vitis_Rupestris.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vitis_Rupestris.JPG",
+      "credit": "Joachim Schmid, Fachgebiet Rebenzüchtung und Rebenveredlung Forschungsanstalt Geisenheim, Von-Lade-Str. 1, D-65366 Geisenheim · CC BY 3.0 de",
+      "matched_name": "Vitis rupestris"
+    },
+    "Vitis sinocinerea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg/960px-Edle_Weinrebe%2C_%27Vitis_vinifera%27_subsp._%27vinifera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Edle_Weinrebe,_%27Vitis_vinifera%27_subsp._%27vinifera.jpg",
+      "credit": "eflon (Alex from Ithaca, NY) · CC BY 2.0",
+      "matched_name": "Vitis"
+    },
     "Vitis wuhanensis": null,
     "Vitis x champinii": null,
-    "Xestia speciosa": null
+    "Xestia speciosa": null,
+    "Canis lupus familiaris": null,
+    "Descurainia sophia": null,
+    "Grifola frondosa": null,
+    "Hylocichla mustelina": null,
+    "Sus scrofa": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -137623,7 +137875,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3088264": {},
     "13323": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "wahoo",
@@ -138326,7 +138577,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "1545314": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "true bugs",
@@ -139154,7 +139404,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3089532": {},
     "488664": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "gastropods",
@@ -139398,7 +139647,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3359044": {},
     "9052": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "grey partridge",
@@ -139561,7 +139809,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3706531": {},
     "46731": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "cauliflower coral",
@@ -140039,7 +140286,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3272347": {},
     "100828": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "little grebe",
@@ -140238,7 +140484,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3680444": {},
     "172418": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "wasps, ants & bees",
@@ -140337,6 +140582,58 @@
       "family": "Noctuidae",
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
-    }
+    },
+    "3088264": {},
+    "9615": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "dog",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Canis",
+      "family": "Canidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "89411": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Descurainia",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3700093": {},
+    "5627": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "maitake",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Grifola",
+      "family": "Grifolaceae",
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
+    },
+    "172420": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "birds",
+      "fallback_common_name_source": "group_name",
+      "genus": "Hylocichla",
+      "family": "Turdidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3089532": {},
+    "3359044": {},
+    "3706531": {},
+    "9823": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "pig",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Sus",
+      "family": "Suidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3272347": {},
+    "3680444": {}
   }
 }
