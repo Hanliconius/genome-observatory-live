@@ -24,7 +24,11 @@ const GENOMETRIC_COLORS={
   'No X/Y/Z/W label':'#d8dfdb',
   'No sex-chromosome label':'#d8dfdb',
   'Expected label(s) found':'#2e6ea6',
-  'Partial / different label':'#d59a38'
+  'Partial / different label':'#d59a38',
+  // Karyotype concordance: green = close, amber = moderate, red = substantial difference.
+  'Within 5%':'#4b9774',
+  'Within 20%':'#d59a38',
+  '>20% different':'#b85c5c'
 };
 const METHOD_TREND_COLORS=[
   '#2e6ea6','#5aa17a','#d59a38','#8b75b3','#b85c5c',
