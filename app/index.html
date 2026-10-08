@@ -500,7 +500,7 @@
         <div class="taxon-search-intro">
           <p class="panel-kicker">Comparative taxonomic history</p>
           <h2>Compare chromosome-scale sequencing by phylum or order</h2>
-          <p class="taxon-intro">Search two taxa independently. Their historical and recent charts use shared axes, and sample-origin maps use the same colour scale for direct comparison. Only phyla and orders are indexed to keep the site small, static and free to host.</p>
+          <p class="taxon-intro">Search two taxa independently. Their historical, recent and genome-size charts use shared axes, and sample-origin maps use the same colour scale for direct comparison. Only phyla and orders are indexed to keep the site small, static and free to host.</p>
         </div>
         <div class="taxon-search-pair">
           <div class="taxon-search-wrap">
@@ -544,6 +544,12 @@
               <h3 class="panel-title">Assemblies deposited per business day</h3>
               <svg id="taxon-recent-chart-left" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
             </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Genome-size landscape · shared scale</p>
+              <h3 class="panel-title">Genome-size distribution</h3>
+              <svg id="taxon-size-chart-left" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for left selected taxon"></svg>
+              <p class="genometrics-denominator" id="taxon-size-note-left"></p>
+            </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
               <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
@@ -580,6 +586,12 @@
               <h3 class="panel-title">Assemblies deposited per business day</h3>
               <svg id="taxon-recent-chart-right" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
             </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Genome-size landscape · shared scale</p>
+              <h3 class="panel-title">Genome-size distribution</h3>
+              <svg id="taxon-size-chart-right" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for right selected taxon"></svg>
+              <p class="genometrics-denominator" id="taxon-size-note-right"></p>
+            </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
               <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
@@ -610,6 +622,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261008e"></script>
+  <script src="app.js?v=20261008f"></script>
 </body>
 </html>
