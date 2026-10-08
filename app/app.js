@@ -752,45 +752,67 @@ function drawGenomeArchitecture(svgId,legendId,arch){
 
 function drawGenomeSizeByTaxon(svgId,dist){
   const svg=el(svgId);
-  const classes=dist?.classes||[];
-  if(!svg||!classes.length){if(svg)svg.innerHTML='';return;}
-  const bins=dist.bin_labels||classes[0]?.bins?.map(x=>x.label)||[];
-  const w=520,h=430,L=118,R=8,T=12,B=52,iw=w-L-R;
-  const rowH=(h-T-B)/classes.length;
-  const bw=iw/Math.max(1,bins.length);
+  if(!svg)return;
+  const rows=(dist?.classes||[]).slice(0,10);
+  if(!rows.length){
+    svg.innerHTML='<text x="260" y="200" text-anchor="middle" class="genometrics-arch-tick">No qualifying taxa in this group</text>';
+    return;
+  }
+  const bins=dist.bin_labels||rows[0].bins.map(x=>x.label);
+  const group=rows[0].group||'Other';
+  const color=COLORS[group]||COLORS.Other;
+  const w=520,h=460,L=137,R=15,T=20,B=48,iw=w-L-R;
+  const rowH=(h-T-B)/10;
+  const bw=iw/bins.length;
   let html='';
-
-  classes.forEach((row,ri)=>{
+  const tickPos=[0,2,4,6,8,10,12].filter(i=>i<=bins.length);
+  const axisNames={0:'<1 Mb',2:'3 Mb',4:'30 Mb',6:'300 Mb',8:'3 Gb',10:'30 Gb',12:'≥100 Gb'};
+  tickPos.forEach(i=>{
+    const x=L+i*bw;
+    html+=`<line class="genometrics-arch-grid" x1="${x.toFixed(2)}" y1="${T-6}" x2="${x.toFixed(2)}" y2="${h-B+5}"></line>`;
+    html+=`<text class="genometrics-dist-tick" x="${x.toFixed(2)}" y="${h-25}" text-anchor="middle">${axisNames[i]||''}</text>`;
+  });
+  const tip=el('chart-tooltip');
+  rows.forEach((row,ri)=>{
+    const counts=(row.bins||[]).map(x=>Number(x.count||0));
     const total=Number(row.species||0);
-    const vals=(row.bins||[]).map(x=>Number(x.count||0));
-    const peak=Math.max(1,...vals);
-    const base=T+(ri+1)*rowH-7;
-    html+=`<text class="genometrics-dist-label" x="${L-8}" y="${base-3}" text-anchor="end">${esc(row.taxon)}</text>`;
-    html+=`<text class="genometrics-dist-n" x="${L-8}" y="${base+9}" text-anchor="end">n=${fmt(total)}</text>`;
-    vals.forEach((v,bi)=>{
-      const bh=Math.max(v?1:0,(rowH-13)*(v/peak));
-      const x=L+bi*bw+1,y=base-bh;
-      html+=`<rect class="genometrics-dist-bar" data-taxon="${esc(row.taxon)}" data-label="${esc((row.bins||[])[bi]?.label||bins[bi]||'')}" data-count="${v}" data-total="${total}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${Math.max(1,bw-2).toFixed(2)}" height="${bh.toFixed(2)}" fill="${COLORS[row.group]||COLORS.Other}" fill-opacity="${(v ? (0.22+0.78*v/peak) : 0.06).toFixed(2)}"></rect>`;
+    const peak=Math.max(1,...counts);
+    const mid=T+(ri+.5)*rowH;
+    const amplitude=rowH*.41;
+    const samples=[0,...counts,0];
+    const points=samples.map((v,i)=>({
+      x:L+(i-.5)*bw,
+      y:mid-amplitude*(v/peak)
+    }));
+    const smooth=(ps)=>{
+      let d=`M${ps[0].x.toFixed(2)},${ps[0].y.toFixed(2)}`;
+      for(let i=0;i<ps.length-1;i++){
+        const p=ps[i],q=ps[i+1],mx=(p.x+q.x)/2;
+        d+=` C${mx.toFixed(2)},${p.y.toFixed(2)} ${mx.toFixed(2)},${q.y.toFixed(2)} ${q.x.toFixed(2)},${q.y.toFixed(2)}`;
+      }
+      return d;
+    };
+    const outline=smooth(points);
+    const last=points[points.length-1];
+    html+=`<text class="genometrics-dist-label" x="${L-9}" y="${mid-2}" text-anchor="end">${esc(row.taxon)}</text>`;
+    html+=`<text class="genometrics-dist-n" x="${L-9}" y="${mid+11}" text-anchor="end">n=${fmt(total)} · median ${fmt1(row.median_mb||0)} Mb</text>`;
+    html+=`<path class="genometrics-dist-ribbon" d="${outline} L${last.x.toFixed(2)},${mid.toFixed(2)} L${points[0].x.toFixed(2)},${mid.toFixed(2)} Z" fill="${color}" fill-opacity=".73"></path>`;
+    html+=`<path class="genometrics-dist-ribbon-edge" d="${outline}" fill="none" stroke="${color}"></path>`;
+    counts.forEach((n,i)=>{
+      html+=`<rect class="genometrics-dist-ribbon-hit" data-taxon="${esc(row.taxon)}" data-label="${esc(row.bins?.[i]?.label||bins[i]||'')}" data-count="${n}" data-total="${total}" x="${(L+i*bw).toFixed(2)}" y="${(mid-rowH*.55).toFixed(2)}" width="${bw.toFixed(2)}" height="${rowH.toFixed(2)}"></rect>`;
     });
   });
-
-  const labelIdx=[0,2,4,6,8,10,bins.length-1].filter((v,i,a)=>v>=0&&v<bins.length&&a.indexOf(v)===i);
-  labelIdx.forEach(bi=>{
-    const x=L+(bi+.5)*bw;
-    html+=`<text class="genometrics-dist-tick" x="${x.toFixed(2)}" y="${h-22}" text-anchor="end" transform="rotate(-34 ${x.toFixed(2)} ${h-22})">${esc(bins[bi])}</text>`;
-  });
-  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-3}" text-anchor="middle">Genome size · shared logarithmic bins</text>`;
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-5}" text-anchor="middle">Genome size · shared logarithmic scale</text>`;
   svg.innerHTML=html;
-
-  const tip=el('chart-tooltip');
-  svg.querySelectorAll('.genometrics-dist-bar').forEach(bar=>{
+  svg.querySelectorAll('.genometrics-dist-ribbon-hit').forEach(hit=>{
     const show=ev=>{
-      const n=Number(bar.dataset.count||0),total=Number(bar.dataset.total||0);
-      tip.innerHTML=`<strong>${esc(bar.dataset.taxon)}</strong><span>${esc(bar.dataset.label)}</span><span>${fmt(n)} species · ${total?fmt1(100*n/total):'0.0'}%</span>`;
-      tip.hidden=false;bar.classList.add('is-hovered');positionTooltip(ev,tip);
+      const n=Number(hit.dataset.count||0),total=Number(hit.dataset.total||0);
+      tip.innerHTML=`<strong>${esc(hit.dataset.taxon)}</strong><span>${esc(hit.dataset.label)}</span><span>${fmt(n)} species · ${total?fmt1(100*n/total):'0.0'}% of taxon</span>`;
+      tip.hidden=false;positionTooltip(ev,tip);
     };
-    const hide=()=>{tip.hidden=true;bar.classList.remove('is-hovered');};
-    bar.onpointerenter=show;bar.onpointermove=show;bar.onpointerleave=hide;
+    hit.onpointerenter=show;
+    hit.onpointermove=show;
+    hit.onpointerleave=()=>{tip.hidden=true;};
   });
 }
 
