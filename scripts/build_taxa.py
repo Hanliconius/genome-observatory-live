@@ -140,6 +140,8 @@ def main():
 
         agg = {}
         species_members = defaultdict(set)
+        # Latest size-bearing assembly per species/taxon, held only in memory.
+        size_by_taxon_species = {}
         recent_species = defaultdict(set)
         species_first = {}
         species_taxa = {}
@@ -194,6 +196,14 @@ def main():
                 "release_date",
                 default="",
             ))[:10]
+            size_bp = first(report, "assembly_stats.total_sequence_length",
+                            "assemblyStats.totalSequenceLength", "total_sequence_length")
+            try:
+                size_mb = round(int(size_bp) / 1_000_000, 3)
+                if size_mb <= 0:
+                    size_mb = None
+            except (ValueError, TypeError):
+                size_mb = None
             organism = first(
                 report,
                 "organism.organism_name",
@@ -269,6 +279,11 @@ def main():
                 )
                 rec["yearly"][release[:4]] += 1
                 species_members[tid].add(species_key)
+                if size_mb is not None:
+                    key_size = (tid, species_key)
+                    previous = size_by_taxon_species.get(key_size)
+                    if previous is None or (release, str(first(report, "accession", default=""))) > (previous[0], previous[1]):
+                        size_by_taxon_species[key_size] = (release, str(first(report, "accession", default="")), size_mb)
 
                 if release >= recent_cutoff:
                     rec["recent_daily"][release] += 1
@@ -311,6 +326,16 @@ def main():
                 for ds, count in sorted(rec["recent_daily"].items())
             ]
 
+            sizes = sorted(
+                record[2] for (taxon_id, _), record in size_by_taxon_species.items()
+                if taxon_id == tid
+            )
+            middle = len(sizes) // 2
+            median_mb = (
+                round((sizes[middle - 1] + sizes[middle]) / 2, 3)
+                if sizes and len(sizes) % 2 == 0
+                else (sizes[middle] if sizes else None)
+            )
             payload = {
                 "taxid": tid,
                 "name": rec["name"],
@@ -328,6 +353,11 @@ def main():
                     "origin_country_assemblies": rec["origin_assigned"],
                     "origin_marine_assemblies": rec["origin_marine"],
                     "origin_resolved_assemblies": rec["origin_assigned"] + rec["origin_marine"],
+                },
+                "genome_sizes": {
+                    "species": len(sizes),
+                    "median_mb": median_mb,
+                    "sizes_mb": sizes,
                 },
                 "yearly": yearly,
                 "recent_daily": recent_daily,
