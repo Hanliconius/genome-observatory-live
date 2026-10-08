@@ -958,3 +958,10 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .genometrics-rank-label{fill:var(--ink);font-size:10px;font-style:italic}
 .genometrics-rank-count{fill:var(--muted);font-size:9px;font-weight:700}
 .genometrics-rank-bar{transition:opacity .12s ease}
+
+/* Genome-size landscape: smooth, hoverable ridgeline ribbons. */
+.genometrics-dist-ribbon{pointer-events:none}
+.genometrics-dist-ribbon-edge{stroke-width:1.35;vector-effect:non-scaling-stroke;pointer-events:none}
+.genometrics-dist-ribbon-hit{fill:transparent;cursor:crosshair}
+.genome-landscape-panel .genometrics-summary{min-height:0}
+.genome-landscape-panel .genometrics-size-by-taxon{margin-top:13px}
