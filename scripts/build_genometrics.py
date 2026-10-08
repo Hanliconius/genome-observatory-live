@@ -630,24 +630,43 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
             ((cls,len(vals)) for (grp,cls),vals in class_sizes.items() if grp==group),
             key=lambda x:(-x[1],x[0])
         )[:10]
+        # A shared LINEAR scale within each kingdom makes ribbon shape readable.
+        # Cap the display domain at the 98th percentile of all selected species,
+        # retaining the real counts above that cap as explicit outliers.
+        combined=sorted(mb for cls,_ in selected for mb in class_sizes[(group,cls)])
+        cap=combined[min(len(combined)-1,int(.98*(len(combined)-1)))] if combined else 1
+        # Round up to a human-friendly upper tick (1/2/5 x a power of 10).
+        import math
+        magnitude=10**math.floor(math.log10(max(cap,0.001)))
+        upper=next((k*magnitude for k in (1,2,5,10) if k*magnitude>=cap),10*magnitude)
+        num_bins=40
+        width=upper/num_bins
         distributions=[]
         for cls,_ in selected:
             vals=class_sizes[(group,cls)]
-            counts=[0]*(len(edges)+1)
+            counts=[0]*num_bins
+            outliers=0
             for mb in vals:
-                bi=next((i for i,e in enumerate(edges) if mb<e),len(edges))
-                counts[bi]+=1
+                if mb>upper:
+                    outliers+=1
+                else:
+                    counts[min(num_bins-1,int(mb/width))]+=1
             distributions.append({
                 "taxon":cls,
                 "group":group,
                 "species":len(vals),
                 "median_mb":round(median(vals),3),
-                "bins":[{"label":lab,"count":count} for lab,count in zip(labels,counts)],
+                "outliers":outliers,
+                "bins":[{"label":f"{i*width:g}–{(i+1)*width:g} Mb","count":count}
+                        for i,count in enumerate(counts)],
             })
         grouped_distributions[group]={
             "classes":distributions,
             "represented_species":sum(len(class_sizes[(group,cls)]) for cls,_ in selected),
             "rank":"class" if group=="Animals" else "order (class fallback)",
+            "axis":"linear",
+            "axis_max_mb":round(upper,6),
+            "axis_note":"Common linear axis within this kingdom; values beyond the axis are counted as outliers.",
         }
 
     return {
@@ -658,7 +677,7 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
             "groups":grouped_distributions,
             "bin_labels":labels,
         },
-        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show up to ten most represented animal classes, plant orders and fungal orders (with class fallback)."
+        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show up to ten most represented animal classes, plant orders and fungal orders. Linear axes are adapted separately to each kingdom and capped near its 98th percentile; outliers remain counted."
     }
 
 
