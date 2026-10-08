@@ -1605,6 +1605,61 @@ function taxonRecentRows(t){
   return businessDayRows(recent);
 }
 
+
+function drawTaxonSizeChart(side,t,sharedMax){
+  const svg=el('taxon-size-chart-'+side);
+  const note=el('taxon-size-note-'+side);
+  if(!svg)return;
+  const sizes=(t?.genome_sizes?.sizes_mb||[]).map(Number).filter(n=>Number.isFinite(n)&&n>0);
+  if(!sizes.length){
+    svg.innerHTML='<text class="genometrics-arch-tick" x="260" y="118" text-anchor="middle">Genome-size data unavailable</text>';
+    if(note)note.textContent='Awaiting the next Taxa Explorer data rebuild.';
+    return;
+  }
+  const bins=28,w=520,h=250,L=58,R=16,T=17,B=49,iw=w-L-R,ih=h-T-B;
+  const width=sharedMax/bins,counts=Array(bins).fill(0);
+  let outliers=0;
+  for(const size of sizes){
+    if(size>sharedMax){outliers++;continue;}
+    counts[Math.min(bins-1,Math.floor(size/width))]++;
+  }
+  const maxCount=Math.max(1,...counts);
+  const smooth=counts.map((n,i)=>.25*(counts[i-1]||0)+.5*n+.25*(counts[i+1]||0));
+  const peak=Math.max(1,...smooth);
+  const pos=side==='left'?'#2e6ea6':'#5aa17a';
+  const label=v=>v>=1000?(v/1000).toFixed(1)+' Gb':v.toFixed(v<10?1:0)+' Mb';
+  let html='';
+  for(let i=0;i<=4;i++){
+    const x=L+iw*i/4;
+    html+='<line class="genometrics-arch-grid" x1="'+x+'" x2="'+x+'" y1="'+T+'" y2="'+(h-B)+'"></line>';
+    html+='<text class="genometrics-dist-tick" x="'+x+'" y="'+(h-26)+'" text-anchor="middle">'+label(sharedMax*i/4)+'</text>';
+  }
+  const pts=[{x:L,y:h-B},...smooth.map((n,i)=>({x:L+iw*(i+.5)/bins,y:h-B-ih*.88*n/peak})),{x:L+iw,y:h-B}];
+  let d='M'+pts[0].x+','+pts[0].y;
+  for(let i=0;i<pts.length-1;i++){
+    const a=pts[i],b=pts[i+1],mx=(a.x+b.x)/2;
+    d+=' C'+mx+','+a.y+' '+mx+','+b.y+' '+b.x+','+b.y;
+  }
+  html+='<path d="'+d+' Z" fill="'+pos+'" fill-opacity=".65"></path>';
+  html+='<path d="'+d+'" fill="none" stroke="'+pos+'" stroke-width="1.5"></path>';
+  if(outliers)html+='<path d="M'+(L+iw-7)+','+(T+9)+' l6,6 l-6,6" fill="none" stroke="'+pos+'" stroke-width="2"><title>'+outliers+' sizes beyond visible range</title></path>';
+  html+='<text class="genometrics-arch-axis-label" x="'+(L+iw/2)+'" y="'+(h-4)+'" text-anchor="middle">Assembly size · linear scale</text>';
+  counts.forEach((n,i)=>{
+    html+='<rect class="taxon-size-hit" data-bin="'+i+'" x="'+(L+i*iw/bins)+'" y="'+T+'" width="'+(iw/bins)+'" height="'+ih+'"></rect>';
+  });
+  svg.innerHTML=html;
+  const tip=el('chart-tooltip');
+  svg.querySelectorAll('.taxon-size-hit').forEach(hit=>{
+    const i=Number(hit.dataset.bin);
+    const show=ev=>{
+      tip.innerHTML='<strong>'+esc(t.name)+'</strong><span>'+label(i*width)+' – '+label((i+1)*width)+'</span><span>'+fmt(counts[i])+' species ('+fmt1(100*counts[i]/sizes.length)+'%)</span>';
+      tip.hidden=false;positionTooltip(ev,tip);
+    };
+    hit.onpointerenter=show;hit.onpointermove=show;hit.onpointerleave=()=>{tip.hidden=true;};
+  });
+  if(note)note.textContent=fmt(sizes.length)+' species · median '+label(Number(t.genome_sizes.median_mb)||0)+(outliers?' · '+fmt(outliers)+' above visible range':'')+'.';
+}
+
 function renderTaxonComparison(){
   const selected=[TAXON_SELECTED.left,TAXON_SELECTED.right].filter(Boolean);
   if(!selected.length)return;
@@ -1625,6 +1680,10 @@ function renderTaxonComparison(){
   const recentMax=niceMax(Math.max(0,...['left','right'].flatMap(side=>
     recent[side].map(x=>Number(x.assemblies||0))
   )));
+  const sizeValues=selected.flatMap(t=>(t.genome_sizes?.sizes_mb||[]).map(Number).filter(x=>Number.isFinite(x)&&x>0)).sort((a,b)=>a-b);
+  const percentile=sizeValues.length?sizeValues[Math.min(sizeValues.length-1,Math.floor(.98*(sizeValues.length-1)))]:100;
+  const magnitude=Math.pow(10,Math.floor(Math.log10(Math.max(percentile,.001))));
+  const sharedSizeMax=([1,2,5,10].find(n=>n*magnitude>=percentile)||10)*magnitude;
   const mapMax=Math.max(1,...selected.flatMap(t=>(t.countries||[]).map(c=>Number(c.assemblies||0))));
   const marineMax=Math.max(1,...selected.flatMap(t=>(t.marine_localities||[]).map(c=>Number(c.assemblies||0))));
 
@@ -1647,6 +1706,7 @@ function renderTaxonComparison(){
       'taxon-recent-chart-'+side,recent[side],'assemblies',
       recent[side].map(x=>x.date),'year',recentMax
     );
+    drawTaxonSizeChart(side,t,sharedSizeMax);
     drawTaxonOriginMap(side,t,mapMax,marineMax);
   });
 }
