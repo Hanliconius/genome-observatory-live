@@ -754,23 +754,24 @@ function drawGenomeSizeByTaxon(svgId,dist){
   const svg=el(svgId);
   if(!svg)return;
   const rows=(dist?.classes||[]).slice(0,10);
-  if(!rows.length){
-    svg.innerHTML='<text x="260" y="200" text-anchor="middle" class="genometrics-arch-tick">No qualifying taxa in this group</text>';
+  if(!rows.length || dist.axis!=='linear'){
+    svg.innerHTML='<text x="260" y="200" text-anchor="middle" class="genometrics-arch-tick">Awaiting refreshed linear-scale distributions</text>';
     return;
   }
-  const bins=dist.bin_labels||rows[0].bins.map(x=>x.label);
+  const bins=rows[0].bins.map(x=>x.label);
+  const maxMb=Number(dist.axis_max_mb)||1;
+  const sizeLabel=mb=>mb>=1000?fmt1(mb/1000)+' Gb':fmt1(mb)+' Mb';
   const group=rows[0].group||'Other';
   const color=COLORS[group]||COLORS.Other;
   const w=520,h=460,L=137,R=15,T=20,B=48,iw=w-L-R;
   const rowH=(h-T-B)/10;
   const bw=iw/bins.length;
   let html='';
-  const tickPos=[0,2,4,6,8,10,12].filter(i=>i<=bins.length);
-  const axisNames={0:'<1 Mb',2:'3 Mb',4:'30 Mb',6:'300 Mb',8:'3 Gb',10:'30 Gb',12:'≥100 Gb'};
+  const tickPos=[0,.25,.5,.75,1];
   tickPos.forEach(i=>{
-    const x=L+i*bw;
+    const x=L+i*iw;
     html+=`<line class="genometrics-arch-grid" x1="${x.toFixed(2)}" y1="${T-6}" x2="${x.toFixed(2)}" y2="${h-B+5}"></line>`;
-    html+=`<text class="genometrics-dist-tick" x="${x.toFixed(2)}" y="${h-25}" text-anchor="middle">${axisNames[i]||''}</text>`;
+    html+=`<text class="genometrics-dist-tick" x="${x.toFixed(2)}" y="${h-25}" text-anchor="middle">${sizeLabel(i*maxMb)}</text>`;
   });
   const tip=el('chart-tooltip');
   rows.forEach((row,ri)=>{
@@ -779,10 +780,12 @@ function drawGenomeSizeByTaxon(svgId,dist){
     const peak=Math.max(1,...counts);
     const mid=T+(ri+.5)*rowH;
     const amplitude=rowH*.41;
-    const samples=[0,...counts,0];
+    const smoothed=counts.map((v,i)=>.25*(counts[i-1]||0)+.5*v+.25*(counts[i+1]||0));
+    const samples=[0,...smoothed,0];
+    const smoothPeak=Math.max(1,...smoothed);
     const points=samples.map((v,i)=>({
       x:i===0?L:(i===samples.length-1?L+iw:L+(i-.5)*bw),
-      y:mid-amplitude*(v/peak)
+      y:mid-amplitude*(v/smoothPeak)
     }));
     const smooth=(ps)=>{
       let d=`M${ps[0].x.toFixed(2)},${ps[0].y.toFixed(2)}`;
@@ -794,15 +797,17 @@ function drawGenomeSizeByTaxon(svgId,dist){
     };
     const outline=smooth(points);
     const last=points[points.length-1];
+    const outliers=Number(row.outliers||0);
     html+=`<text class="genometrics-dist-label" x="${L-9}" y="${mid-2}" text-anchor="end">${esc(row.taxon)}</text>`;
-    html+=`<text class="genometrics-dist-n" x="${L-9}" y="${mid+11}" text-anchor="end">n=${fmt(total)} · median ${fmt1(row.median_mb||0)} Mb</text>`;
+    html+=`<text class="genometrics-dist-n" x="${L-9}" y="${mid+11}" text-anchor="end">n=${fmt(total)} · median ${sizeLabel(Number(row.median_mb)||0)}</text>`;
     html+=`<path class="genometrics-dist-ribbon" d="${outline} L${last.x.toFixed(2)},${mid.toFixed(2)} L${points[0].x.toFixed(2)},${mid.toFixed(2)} Z" fill="${color}" fill-opacity=".73"></path>`;
     html+=`<path class="genometrics-dist-ribbon-edge" d="${outline}" fill="none" stroke="${color}"></path>`;
+    if(outliers)html+=`<path d="M${(L+iw-5).toFixed(2)},${mid-5} l5,5 l-5,5" stroke="${color}" stroke-width="1.5" fill="none"><title>${fmt(outliers)} species extend beyond the plotted linear range</title></path>`;
     counts.forEach((n,i)=>{
       html+=`<rect class="genometrics-dist-ribbon-hit" data-taxon="${esc(row.taxon)}" data-label="${esc(row.bins?.[i]?.label||bins[i]||'')}" data-count="${n}" data-total="${total}" x="${(L+i*bw).toFixed(2)}" y="${(mid-rowH*.55).toFixed(2)}" width="${bw.toFixed(2)}" height="${rowH.toFixed(2)}"></rect>`;
     });
   });
-  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-5}" text-anchor="middle">Genome size · shared logarithmic scale</text>`;
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-5}" text-anchor="middle">Genome size · linear scale (range adapted to group)</text>`;
   svg.innerHTML=html;
   svg.querySelectorAll('.genometrics-dist-ribbon-hit').forEach(hit=>{
     const show=ev=>{
@@ -901,7 +906,7 @@ function renderGenometrics(){
     drawGenomeSizeByTaxon('genometrics-size-'+id,{...current,bin_labels:dist.bin_labels});
     el('genometrics-size-'+id+'-denominator').textContent=
       fmt(current.represented_species||0)+' species across '+(current.classes||[]).length+
-      ' taxa. Ribbons show relative within-taxon genome-size frequency; '+
+      ' taxa. Linear genome-size range with outliers marked; '+
       (current.rank||'class/order')+'.';
   }
 
