@@ -228,12 +228,28 @@
             <p class="genometrics-denominator" id="genometrics-architecture-denominator"></p>
           </article>
 
-          <article class="panel genometrics-card genometrics-architecture-card">
-            <p class="panel-kicker">Genome-size landscape</p>
-            <h2 class="panel-title">Genome-size distributions by major taxon</h2>
-            <p class="genometrics-summary">Size distributions for the eight NCBI classes with the broadest species coverage in the collection. Each species contributes one representative assembly and all rows share the same logarithmic genome-size axis.</p>
-            <svg id="genometrics-size-by-taxon" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Genome-size distributions for the eight best represented NCBI classes"></svg>
-            <p class="genometrics-denominator" id="genometrics-size-by-taxon-denominator"></p>
+          <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
+            <p class="panel-kicker">Genome-size landscape · Animals</p>
+            <h2 class="panel-title">Animal genome-size distributions</h2>
+            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
+            <svg id="genometrics-size-animals" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Animals genome-size distribution across up to eight classes"></svg>
+            <p class="genometrics-denominator" id="genometrics-size-animals-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
+            <p class="panel-kicker">Genome-size landscape · Plants</p>
+            <h2 class="panel-title">Plant genome-size distributions</h2>
+            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
+            <svg id="genometrics-size-plants" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Plants genome-size distribution across up to eight classes"></svg>
+            <p class="genometrics-denominator" id="genometrics-size-plants-denominator"></p>
+          </article>
+
+          <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
+            <p class="panel-kicker">Genome-size landscape · Fungi</p>
+            <h2 class="panel-title">Fungal genome-size distributions</h2>
+            <p class="genometrics-summary">Top eight NCBI classes by represented species, with one assembly per species. All three panels share the same logarithmic genome-size bins; stronger colour indicates a higher share of species within a class.</p>
+            <svg id="genometrics-size-fungi" class="genometrics-size-by-taxon" viewBox="0 0 520 430" role="img" aria-label="Fungi genome-size distribution across up to eight classes"></svg>
+            <p class="genometrics-denominator" id="genometrics-size-fungi-denominator"></p>
           </article>
 
           <article class="panel genometrics-card genometrics-top-species-card">
@@ -242,14 +258,6 @@
             <p class="genometrics-summary">Species ranked by the number of published chromosome-level or complete-genome GenBank assemblies in the tracked collection.</p>
             <svg id="genometrics-top-species" class="genometrics-top-species" viewBox="0 0 520 470" role="img" aria-label="Top 15 species by chromosome-scale or complete genome assemblies"></svg>
             <p class="genometrics-denominator" id="genometrics-top-species-denominator"></p>
-          </article>
-
-          <article class="panel genometrics-card">
-            <p class="panel-kicker">Biological context</p>
-            <h2 class="panel-title">Ploidy & sexual systems</h2>
-            <p class="genometrics-summary">Reference traits represented among tracked species with Tree of Sex records. These describe organism biology rather than assembly quality.</p>
-            <div id="genometrics-traits" class="trait-summary"></div>
-            <p class="genometrics-denominator" id="genometrics-traits-denominator"></p>
           </article>
 
           <article class="panel genometrics-card genometrics-trend-card">
@@ -602,6 +610,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261008b"></script>
+  <script src="app.js?v=20261008c"></script>
 </body>
 </html>
