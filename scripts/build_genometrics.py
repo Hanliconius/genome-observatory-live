@@ -596,8 +596,13 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
         if bp is None:
             continue
         tid=rec.get("taxid")
-        cls=taxon_name_at_rank(tid,"class",parent,rank,sci)
         group=architecture_group(tid,parent,lineage_cache)
+        # Animal classes; plant/fungal orders reveal variation hidden within
+        # Magnoliopsida and Sordariomycetes.
+        target_rank="class" if group=="Animals" else "order"
+        cls=taxon_name_at_rank(tid,target_rank,parent,rank,sci)
+        if not cls and group in ("Plants","Fungi"):
+            cls=taxon_name_at_rank(tid,"class",parent,rank,sci)
         if cls and group in ("Animals","Plants","Fungi"):
             class_sizes[(group,cls)].append(bp/1_000_000)
 
@@ -624,7 +629,7 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
         selected=sorted(
             ((cls,len(vals)) for (grp,cls),vals in class_sizes.items() if grp==group),
             key=lambda x:(-x[1],x[0])
-        )[:8]
+        )[:10]
         distributions=[]
         for cls,_ in selected:
             vals=class_sizes[(group,cls)]
@@ -642,6 +647,7 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
         grouped_distributions[group]={
             "classes":distributions,
             "represented_species":sum(len(class_sizes[(group,cls)]) for cls,_ in selected),
+            "rank":"class" if group=="Animals" else "order (class fallback)",
         }
 
     return {
@@ -652,7 +658,7 @@ def build_architecture_views(records,parent,rank,sci,lineage_cache):
             "groups":grouped_distributions,
             "bin_labels":labels,
         },
-        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show up to eight best represented NCBI classes within each of Animals, Plants, and Fungi."
+        "definition":"One newest qualifying assembly per species. Genome size is NCBI total sequence length; chromosome number is NCBI total number of chromosomes. Taxon distributions show up to ten most represented animal classes, plant orders and fungal orders (with class fallback)."
     }
 
 
