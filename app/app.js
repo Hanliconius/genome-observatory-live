@@ -770,7 +770,7 @@ function drawGenomeSizeByTaxon(svgId,dist){
     vals.forEach((v,bi)=>{
       const bh=Math.max(v?1:0,(rowH-13)*(v/peak));
       const x=L+bi*bw+1,y=base-bh;
-      html+=`<rect class="genometrics-dist-bar" data-taxon="${esc(row.taxon)}" data-label="${esc((row.bins||[])[bi]?.label||bins[bi]||'')}" data-count="${v}" data-total="${total}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${Math.max(1,bw-2).toFixed(2)}" height="${bh.toFixed(2)}" fill="${COLORS[row.group]||COLORS.Other}"></rect>`;
+      html+=`<rect class="genometrics-dist-bar" data-taxon="${esc(row.taxon)}" data-label="${esc((row.bins||[])[bi]?.label||bins[bi]||'')}" data-count="${v}" data-total="${total}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${Math.max(1,bw-2).toFixed(2)}" height="${bh.toFixed(2)}" fill="${COLORS[row.group]||COLORS.Other}" fill-opacity="${(v ? (0.22+0.78*v/peak) : 0.06).toFixed(2)}"></rect>`;
     });
   });
 
@@ -869,9 +869,18 @@ function renderGenometrics(){
   drawGenomeArchitecture('genometrics-size-chrom-scatter','genometrics-architecture-legend',arch);
   el('genometrics-architecture-denominator').textContent=
     fmt(arch.scatter_species||0)+' species have both NCBI assembly size and reported chromosome-count metadata; each species is represented once.';
-  drawGenomeSizeByTaxon('genometrics-size-by-taxon',arch.size_distribution_by_class||{});
-  el('genometrics-size-by-taxon-denominator').textContent=
-    fmt(arch.size_distribution_by_class?.represented_species||0)+' species are represented across the eight best-covered NCBI classes; one newest size-bearing assembly per species.';
+  const dist=arch.size_distribution_by_class||{};
+  for(const group of ['Animals','Plants','Fungi']){
+    const id=group.toLowerCase();
+    const current=dist.groups?.[group]||{
+      classes:(dist.classes||[]).filter(x=>x.group===group),
+      represented_species:(dist.classes||[]).filter(x=>x.group===group).reduce((n,x)=>n+Number(x.species||0),0)
+    };
+    drawGenomeSizeByTaxon('genometrics-size-'+id,{...current,bin_labels:dist.bin_labels});
+    el('genometrics-size-'+id+'-denominator').textContent=
+      fmt(current.represented_species||0)+' species across '+(current.classes||[]).length+
+      ' classes. Colour intensity scales to the fraction of species in each genome-size bin.';
+  }
 
   const methods=d.methods_through_time||{};
   drawGenometricTrend(
@@ -903,12 +912,7 @@ function renderGenometrics(){
     (tracked?' ('+fmt1(100*asmN/tracked)+'%). ':'; ')+
     'Software versions and spelling variants are normalized into named assembler families; an assembly can mention more than one family.';
 
-  const traits=kar.tree_of_sex_traits||{};
-  const traitRows=(title,rows)=>`<div class="trait-block"><strong>${esc(title)}</strong>${(rows||[]).slice(0,5).map(x=>`<span><b>${esc(x.group)}</b> ${fmt(x.count)}</span>`).join('')}</div>`;
-  el('genometrics-traits').innerHTML=
-    traitRows('Ploidy',(traits.top_ploidy||[]))+traitRows('Sexual system',(traits.top_sexual_system||[]));
-  el('genometrics-traits-denominator').textContent=
-    'Reference coverage among tracked species: '+fmt(traits.ploidy_species||0)+' with ploidy and '+fmt(traits.sexual_system_species||0)+' with sexual-system records in the Tree of Sex snapshot.';
+
 }
 
 async function loadIucn(){
