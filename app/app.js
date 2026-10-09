@@ -1669,16 +1669,8 @@ function renderTaxonComparison(){
     left:taxonCumulativeRows(TAXON_SELECTED.left,years),
     right:taxonCumulativeRows(TAXON_SELECTED.right,years)
   };
-  const recent={
-    left:taxonRecentRows(TAXON_SELECTED.left),
-    right:taxonRecentRows(TAXON_SELECTED.right)
-  };
-
   const cumulativeMax=niceMax(Math.max(0,...['left','right'].flatMap(side=>
     cumulative[side].flatMap(x=>[Number(x.assemblies||0),Number(x.first||0)])
-  )));
-  const recentMax=niceMax(Math.max(0,...['left','right'].flatMap(side=>
-    recent[side].map(x=>Number(x.assemblies||0))
   )));
   const sizeValues=selected.flatMap(t=>(t.genome_sizes?.sizes_mb||[]).map(Number).filter(x=>Number.isFinite(x)&&x>0)).sort((a,b)=>a-b);
   const percentile=sizeValues.length?sizeValues[Math.min(sizeValues.length-1,Math.floor(.98*(sizeValues.length-1)))]:100;
@@ -1702,12 +1694,8 @@ function renderTaxonComparison(){
     el('taxon-year-species-'+side).textContent=fmt(t.stats?.past_year_species);
 
     drawDualChart('taxon-cumulative-chart-'+side,cumulative[side],cumulativeMax);
-    drawLineChart(
-      'taxon-recent-chart-'+side,recent[side],'assemblies',
-      recent[side].map(x=>x.date),'year',recentMax
-    );
-    drawTaxonSizeChart(side,t,sharedSizeMax);
     drawTaxonOriginMap(side,t,mapMax,marineMax);
+    drawTaxonSizeChart(side,t,sharedSizeMax);
   });
 }
 
