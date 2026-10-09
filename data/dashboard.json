@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T03:17:16.070131+00:00",
+  "generated_at": "2026-10-09T11:20:53.001193+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -56654,10 +56654,10 @@
       "assembly_name": "ASM62009624v1",
       "total_sequence_length": 1039562372,
       "chromosome_count": 24,
-      "group": "Other",
       "genus": null,
       "family": null,
       "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -56670,10 +56670,10 @@
       "assembly_name": "ASM62009623v1",
       "total_sequence_length": 1087222971,
       "chromosome_count": 24,
-      "group": "Other",
       "genus": null,
       "family": null,
       "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -56706,7 +56706,12 @@
       "family": "Apocynaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Monolluma_faner%C3%B3gamas_Apocynaceae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Monolluma_faner%C3%B3gamas_Apocynaceae.jpg",
+        "credit": "Mountain Spectre · CC BY-SA 3.0",
+        "matched_name": "Apocynaceae"
+      }
     },
     {
       "accession": "GCA_062014767.1",
@@ -57730,9 +57735,9 @@
       "total_sequence_length": 30165745,
       "chromosome_count": 8,
       "genus": "Verweija",
+      "family": null,
       "phylum": "Ascomycota",
       "group": "Fungi",
-      "family": null,
       "image": null
     },
     {
@@ -59061,6 +59066,7 @@
       "assembly_name": "YSFRI_Yushuban_mat1.0",
       "total_sequence_length": 1077334014,
       "chromosome_count": 24,
+      "genus": null,
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
@@ -59069,8 +59075,7 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg",
         "credit": "Raimond Spekking · CC BY-SA 4.0",
         "matched_name": "Serranidae"
-      },
-      "genus": null
+      }
     },
     {
       "accession": "GCA_061495325.1",
@@ -59082,6 +59087,7 @@
       "assembly_name": "YSFRI_Yushuban_pat1.0",
       "total_sequence_length": 1083364354,
       "chromosome_count": 24,
+      "genus": null,
       "family": "Serranidae",
       "phylum": "Chordata",
       "group": "Animals",
@@ -59090,8 +59096,7 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Cromileptes_altivelis_-_Paddelbarsch_-_Panther_grouper.jpg",
         "credit": "Raimond Spekking · CC BY-SA 4.0",
         "matched_name": "Serranidae"
-      },
-      "genus": null
+      }
     },
     {
       "accession": "GCA_061481855.1",
@@ -61884,8 +61889,8 @@
       "chromosome_count": 5,
       "genus": "Aureoumbra",
       "family": "Sarcinochrysidaceae",
-      "group": "Other",
       "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -62114,16 +62119,16 @@
       "assembly_name": "Paraplesiops meleagris_haplotype_2_assembly",
       "total_sequence_length": 743765715,
       "chromosome_count": 25,
+      "genus": null,
+      "family": null,
+      "phylum": null,
       "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Paraplesiops_meleagris_PC079182.JPG/960px-Paraplesiops_meleagris_PC079182.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Paraplesiops_meleagris_PC079182.JPG",
         "credit": "Peter Southwood · CC BY-SA 3.0",
         "matched_name": "Paraplesiops meleagris"
-      },
-      "genus": null,
-      "family": null,
-      "phylum": null
+      }
     },
     {
       "accession": "GCA_988265255.1",
@@ -62135,16 +62140,16 @@
       "assembly_name": "Paraplesiops meleagris_haplotype_1_assembly",
       "total_sequence_length": 737108540,
       "chromosome_count": 24,
+      "genus": null,
+      "family": null,
+      "phylum": null,
       "group": "Other",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Paraplesiops_meleagris_PC079182.JPG/960px-Paraplesiops_meleagris_PC079182.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Paraplesiops_meleagris_PC079182.JPG",
         "credit": "Peter Southwood · CC BY-SA 3.0",
         "matched_name": "Paraplesiops meleagris"
-      },
-      "genus": null,
-      "family": null,
-      "phylum": null
+      }
     },
     {
       "accession": "GCA_988265225.1",
@@ -63214,7 +63219,12 @@
       "family": "Ambystomatidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Tigersalamander_%28Ambystoma_tigrinum%29%2C_Seitenansicht_1.jpg/960px-Tigersalamander_%28Ambystoma_tigrinum%29%2C_Seitenansicht_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tigersalamander_(Ambystoma_tigrinum),_Seitenansicht_1.jpg",
+        "credit": "Peter Paplanus · CC BY 2.0",
+        "matched_name": "Ambystoma tigrinum"
+      }
     },
     {
       "accession": "GCA_061208665.1",
@@ -63597,7 +63607,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Oxycheilinus_unifasciatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Oxycheilinus_unifasciatus.jpg",
+        "credit": "Jeffrey T. Williams · Copyrighted free use",
+        "matched_name": "Oxycheilinus unifasciatus"
+      }
     },
     {
       "accession": "GCA_988241155.1",
@@ -63634,7 +63649,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Oxycheilinus_unifasciatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Oxycheilinus_unifasciatus.jpg",
+        "credit": "Jeffrey T. Williams · Copyrighted free use",
+        "matched_name": "Oxycheilinus unifasciatus"
+      }
     },
     {
       "accession": "GCA_988240825.1",
@@ -64219,7 +64239,12 @@
       "family": "Chaetodontidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Chelmonops_curiosus_PC068863.JPG/960px-Chelmonops_curiosus_PC068863.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chelmonops_curiosus_PC068863.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Chelmonops curiosus"
+      }
     },
     {
       "accession": "GCA_988240345.1",
@@ -64235,7 +64260,12 @@
       "family": "Chaetodontidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Chelmonops_curiosus_PC068863.JPG/960px-Chelmonops_curiosus_PC068863.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chelmonops_curiosus_PC068863.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Chelmonops curiosus"
+      }
     },
     {
       "accession": "GCA_988240335.1",
@@ -64272,7 +64302,12 @@
       "family": "Orectolobidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Orectolobus_wardi_distmap.png/960px-Orectolobus_wardi_distmap.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Orectolobus_wardi_distmap.png",
+        "credit": "Chris_huh · CC BY-SA 3.0",
+        "matched_name": "Orectolobus wardi"
+      }
     },
     {
       "accession": "GCA_988222675.2",
@@ -65698,10 +65733,10 @@
       "assembly_name": "xbMytMari1.1",
       "total_sequence_length": 1747103042,
       "chromosome_count": 14,
-      "group": "Other",
       "genus": null,
       "family": null,
       "phylum": null,
+      "group": "Other",
       "image": null
     },
     {
@@ -65957,7 +65992,12 @@
       "family": "Geometridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Perizoma_albulata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Perizoma_albulata.jpg",
+        "credit": "M. Virtala · Copyrighted free use",
+        "matched_name": "Perizoma"
+      }
     },
     {
       "accession": "GCA_988137185.1",
@@ -66085,7 +66125,12 @@
       "family": "Stratiomyidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/DSC06287_Diptera_Oxycera_rara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:DSC06287_Diptera_Oxycera_rara.jpg",
+        "credit": "Mick Talbot · CC BY 2.0",
+        "matched_name": "Oxycera"
+      }
     },
     {
       "accession": "GCA_987584255.1",
@@ -66101,7 +66146,12 @@
       "family": "Stratiomyidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/DSC06287_Diptera_Oxycera_rara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:DSC06287_Diptera_Oxycera_rara.jpg",
+        "credit": "Mick Talbot · CC BY 2.0",
+        "matched_name": "Oxycera"
+      }
     },
     {
       "accession": "GCA_987576585.1",
@@ -66993,7 +67043,12 @@
       "family": "Cheirogaleidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cheirogaleus-medius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cheirogaleus-medius.jpg",
+        "credit": "Petra Lahann · CC BY-SA 2.0",
+        "matched_name": "Cheirogaleus medius"
+      }
     },
     {
       "accession": "GCA_061140435.1",
@@ -67009,7 +67064,12 @@
       "family": "Cheirogaleidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cheirogaleus-medius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cheirogaleus-medius.jpg",
+        "credit": "Petra Lahann · CC BY-SA 2.0",
+        "matched_name": "Cheirogaleus medius"
+      }
     },
     {
       "accession": "GCA_061140395.1",
@@ -131269,16 +131329,46 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Limulus polyphemus",
+        "species": "Drosophila navojoa",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-06",
-        "assembly": "qaLimPoly3.4"
+        "assembly": "UAZ_NAV_1.0"
       },
       {
         "species": "Orbicella faveolata",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-05",
         "assembly": "um_ofav_v1"
+      },
+      {
+        "species": "Pinus tabuliformis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1"
+      },
+      {
+        "species": "Urtica dioica subsp. dioica",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-28",
+        "assembly": "U.dioica_male_clone48M_v1_H2"
+      },
+      {
+        "species": "Oryctolagus cuniculus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "ASM5122573v1"
+      },
+      {
+        "species": "Octopus bimaculoides",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-07",
+        "assembly": "ASM4686630v1"
+      },
+      {
+        "species": "Limulus polyphemus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-06",
+        "assembly": "qaLimPoly3.4"
       },
       {
         "species": "Diuraphis noxia",
@@ -131299,18 +131389,6 @@
         "assembly": "fPimPro1.hap1.1 (GCF_988280905.1)"
       },
       {
-        "species": "Oryctolagus cuniculus",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-05",
-        "assembly": "ASM5122573v1"
-      },
-      {
-        "species": "Drosophila navojoa",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-06",
-        "assembly": "UAZ_NAV_1.0"
-      },
-      {
         "species": "Pocillopora damicornis",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-09-30",
@@ -131327,18 +131405,6 @@
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-10-01",
         "assembly": "Pdom_raw_medaka (GCF_049000335.1)"
-      },
-      {
-        "species": "Pinus tabuliformis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1"
-      },
-      {
-        "species": "Urtica dioica subsp. dioica",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-28",
-        "assembly": "U.dioica_male_clone48M_v1_H2"
       }
     ],
     "recent_completed": [
@@ -131636,11 +131702,6 @@
         "species": "Callionymus lyra",
         "release_date": "2026-08-28",
         "assembly": "fCalLyr1.hap1.1 (GCF_982586985.1)"
-      },
-      {
-        "species": "Nipponia nippon",
-        "release_date": "2026-08-27",
-        "assembly": "ASM4737097v1 (GCF_047370975.1)"
       }
     ]
   },
@@ -143071,7 +143132,12 @@
       "credit": "Joris Joostensz Laerle (attributed) · Public domain",
       "matched_name": "Serranidae"
     },
-    "Periploca sepium": null,
+    "Periploca sepium": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Monolluma_faner%C3%B3gamas_Apocynaceae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Monolluma_faner%C3%B3gamas_Apocynaceae.jpg",
+      "credit": "Mountain Spectre · CC BY-SA 3.0",
+      "matched_name": "Apocynaceae"
+    },
     "Puccinia hordei": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/22_puccinia_tirolensis_zwetko_13.10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "page_url": "https://commons.wikimedia.org/wiki/File:22_puccinia_tirolensis_zwetko_13.10.jpg",
@@ -143245,7 +143311,12 @@
       "credit": "Alan R Walker · CC BY-SA 3.0",
       "matched_name": "Amblyomma variegatum"
     },
-    "Ambystoma tigrinum": null,
+    "Ambystoma tigrinum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Tigersalamander_%28Ambystoma_tigrinum%29%2C_Seitenansicht_1.jpg/960px-Tigersalamander_%28Ambystoma_tigrinum%29%2C_Seitenansicht_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tigersalamander_(Ambystoma_tigrinum),_Seitenansicht_1.jpg",
+      "credit": "Peter Paplanus · CC BY 2.0",
+      "matched_name": "Ambystoma tigrinum"
+    },
     "Anthonomus pomorum": null,
     "Anthus petrosus": null,
     "Anthus pratensis": null,
@@ -143293,9 +143364,19 @@
     "Candiella odhneri": null,
     "Carduelis carduelis": null,
     "Ceratoscopelus maderensis": null,
-    "Cheirogaleus medius": null,
+    "Cheirogaleus medius": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cheirogaleus-medius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cheirogaleus-medius.jpg",
+      "credit": "Petra Lahann · CC BY-SA 2.0",
+      "matched_name": "Cheirogaleus medius"
+    },
     "Chelidonichthys obscurus": null,
-    "Chelmonops curiosus": null,
+    "Chelmonops curiosus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Chelmonops_curiosus_PC068863.JPG/960px-Chelmonops_curiosus_PC068863.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chelmonops_curiosus_PC068863.JPG",
+      "credit": "Peter Southwood · CC BY-SA 3.0",
+      "matched_name": "Chelmonops curiosus"
+    },
     "Chelon ramada": null,
     "Chicoreus ramosus": null,
     "Chortodes pygminus": null,
@@ -143552,8 +143633,18 @@
     "Otis tarda": null,
     "Ovula ovum": null,
     "Oxalis corniculata": null,
-    "Oxycera trilineata": null,
-    "Oxycheilinus unifasciatus": null,
+    "Oxycera trilineata": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/DSC06287_Diptera_Oxycera_rara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:DSC06287_Diptera_Oxycera_rara.jpg",
+      "credit": "Mick Talbot · CC BY 2.0",
+      "matched_name": "Oxycera"
+    },
+    "Oxycheilinus unifasciatus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Oxycheilinus_unifasciatus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oxycheilinus_unifasciatus.jpg",
+      "credit": "Jeffrey T. Williams · Copyrighted free use",
+      "matched_name": "Oxycheilinus unifasciatus"
+    },
     "Oxymeris maculata": null,
     "Parablennius pilicornis": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg/960px-Babosa_de_cuernos_%28Parablennius_tentacularis%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2020-07-31%2C_DD_56.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -143568,7 +143659,12 @@
       "matched_name": "Paraplesiops meleagris"
     },
     "Perdix perdix": null,
-    "Perizoma albulatum": null,
+    "Perizoma albulatum": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Perizoma_albulata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Perizoma_albulata.jpg",
+      "credit": "M. Virtala · Copyrighted free use",
+      "matched_name": "Perizoma"
+    },
     "Perophora japonica": null,
     "Phillyrea latifolia": null,
     "Philonthus carbonarius": null,
