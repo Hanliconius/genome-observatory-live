@@ -45,6 +45,9 @@ jobs:
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]') || contains(github.event.head_commit.message, '[genometrics-refresh]')
         run: pip install -r requirements.txt
 
+      - name: Compile Python builders
+        run: python -m py_compile scripts/update.py scripts/audit_full_history.py
+
       - name: Bootstrap lifetime history on first run
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         shell: bash
@@ -59,6 +62,9 @@ jobs:
         env:
           RECENT_DAYS: '370'
           OVERLAP_DAYS: '30'
+          # Only the explicitly tagged one-time repair runs a full NCBI
+          # inventory reconstruction. Ordinary daily refreshes stay incremental.
+          FULL_RECONCILE: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[reconcile]') && '1' || '0' }}
 
       - name: Build phylum and order explorer
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
@@ -95,6 +101,27 @@ jobs:
           print(f'Dashboard freshness OK: generated {generated.isoformat()}, {len(d["recent_assemblies"])} recent assemblies')
           PY
 
+      - name: Verify complete historical reconciliation before publishing
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[reconcile]')
+        run: |
+          python scripts/audit_full_history.py --output-dir reconciliation-check
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('reconciliation-check/audit_summary.json').read_text())
+          checks=['missing_recent_accessions','dashboard_only_recent_accessions',
+                  'changed_recent_metadata','historical_days_with_differences',
+                  'species_first_release_differences','duplicate_ncbi_accessions']
+          bad={k:report.get(k) for k in checks if report.get(k)}
+          if report['ncbi_unique_assemblies']!=report['dashboard_all_assemblies']:
+              bad['all_time_count']=(report['ncbi_unique_assemblies'],report['dashboard_all_assemblies'])
+          if report['ncbi_species']!=report['dashboard_all_species']:
+              bad['species_count']=(report['ncbi_species'],report['dashboard_all_species'])
+          if bad:
+              raise SystemExit(f'Reconciliation validation FAILED; no data will be published: {bad}')
+          print('PASS: independent NCBI full-history audit matches rebuilt dashboard')
+          PY
+
       - name: Commit changed data
         run: |
           git config user.name 'genome-observatory-live-bot'
@@ -108,6 +135,10 @@ jobs:
             git fetch origin main
             if [ "$(git rev-parse HEAD^)" != "$(git rev-parse origin/main)" ]; then
               echo 'main advanced during this run; regenerate from latest main to avoid generated-data merge conflicts.'
+              if [[ "${{ github.event.head_commit.message }}" == *"[reconcile]"* ]]; then
+                echo 'Refusing to discard validated reconciliation after main advanced. Re-run on latest main.'
+                exit 1
+              fi
               git reset --hard origin/main
               python scripts/build_genometrics.py
               git add data/genometrics.json cache
