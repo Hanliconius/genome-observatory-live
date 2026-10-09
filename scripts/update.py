@@ -231,6 +231,7 @@ def main():
         from audit_full_history import iterate_ncbi
         count, expected_daily, expected_first=reconstruct_full_history(
             iterate_ncbi(),old,cutoff)
+        old_recent=old.get('recent_assemblies',[])
         print(f'Full-history NCBI inventory: {count} assemblies, '
               f'{len(expected_first)} organisms, {len(expected_daily)} dates')
     query_after=cutoff if need_year_backfill or full_reconcile else after
