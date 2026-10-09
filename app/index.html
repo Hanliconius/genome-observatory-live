@@ -500,7 +500,7 @@
         <div class="taxon-search-intro">
           <p class="panel-kicker">Comparative taxonomic history</p>
           <h2>Compare chromosome-scale sequencing by phylum or order</h2>
-          <p class="taxon-intro">Select two phyla or orders. Their cumulative counts, recent business-day deposits and assembly-length distributions use paired scales; geographic-origin maps use the same colour scale. Only phyla and orders are indexed to keep the site compact.</p>
+          <p class="taxon-intro">Select two phyla or orders. Their cumulative assembly counts and assembly-length distributions use paired scales; geographic-origin maps use the same colour scale. Only phyla and orders are indexed to keep the site compact.</p>
         </div>
         <div class="taxon-search-pair">
           <div class="taxon-search-wrap">
@@ -539,23 +539,18 @@
               <svg id="taxon-cumulative-chart-left" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
               <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
             </article>
-            <article class="panel chart-panel taxon-compare-panel">
-              <p class="panel-kicker">Past year · shared scale</p>
-              <h3 class="panel-title">Assemblies deposited per business day</h3>
-              <svg id="taxon-recent-chart-left" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-            </article>
-            <article class="panel chart-panel taxon-compare-panel">
-              <p class="panel-kicker">Genome-size landscape · shared scale</p>
-              <h3 class="panel-title">Assembly-length distribution</h3>
-              <svg id="taxon-size-chart-left" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for left selected taxon"></svg>
-              <p class="genometrics-denominator" id="taxon-size-note-left"></p>
-            </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
               <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
               <svg id="taxon-map-left" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries and marine localities for left taxon"></svg>
               <div id="taxon-map-legend-left" class="taxon-map-legend"></div>
               <p id="taxon-map-status-left" class="taxon-map-status"></p>
+            </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Genome-size landscape · shared scale</p>
+              <h3 class="panel-title">Assembly-length distribution</h3>
+              <svg id="taxon-size-chart-left" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for left selected taxon"></svg>
+              <p class="genometrics-denominator" id="taxon-size-note-left"></p>
             </article>
           </section>
         </article>
@@ -581,23 +576,18 @@
               <svg id="taxon-cumulative-chart-right" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
               <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
             </article>
-            <article class="panel chart-panel taxon-compare-panel">
-              <p class="panel-kicker">Past year · shared scale</p>
-              <h3 class="panel-title">Assemblies deposited per business day</h3>
-              <svg id="taxon-recent-chart-right" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-            </article>
-            <article class="panel chart-panel taxon-compare-panel">
-              <p class="panel-kicker">Genome-size landscape · shared scale</p>
-              <h3 class="panel-title">Assembly-length distribution</h3>
-              <svg id="taxon-size-chart-right" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for right selected taxon"></svg>
-              <p class="genometrics-denominator" id="taxon-size-note-right"></p>
-            </article>
             <article class="panel taxon-map-panel">
               <p class="panel-kicker">Sample provenance · shared scale</p>
               <h3 class="panel-title">Geographic origins in BioSample metadata</h3>
               <svg id="taxon-map-right" class="taxon-map" viewBox="0 0 520 285" role="img" aria-label="World map of sample-origin countries and marine localities for right taxon"></svg>
               <div id="taxon-map-legend-right" class="taxon-map-legend"></div>
               <p id="taxon-map-status-right" class="taxon-map-status"></p>
+            </article>
+            <article class="panel chart-panel taxon-compare-panel">
+              <p class="panel-kicker">Genome-size landscape · shared scale</p>
+              <h3 class="panel-title">Assembly-length distribution</h3>
+              <svg id="taxon-size-chart-right" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for right selected taxon"></svg>
+              <p class="genometrics-denominator" id="taxon-size-note-right"></p>
             </article>
           </section>
         </article>
@@ -622,6 +612,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261009copy2"></script>
+  <script src="app.js?v=20261009taxa2"></script>
 </body>
 </html>
