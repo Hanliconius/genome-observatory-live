@@ -15,7 +15,7 @@
       <p class="byline">By <strong>Joe Hanly</strong> · <a href="https://github.com/Hanliconius" target="_blank" rel="me noopener">GitHub</a> · <a href="https://bsky.app/profile/hanliconius.bsky.social" target="_blank" rel="me noopener">Bluesky</a></p>
       <h1><span class="brand-main">Genome Observatory</span> <span class="brand-live">Live</span></h1>
       <p class="lede">Tracking the growth of chromosome-scale eukaryotic genome sequencing.</p>
-      <p class="lede-detail">Chromosome-scale eukaryote genomes entering GenBank and moving through NCBI RefSeq annotation.</p>
+      <p class="lede-detail">Chromosome-level and complete eukaryotic genome assemblies released in GenBank, with separate NCBI RefSeq annotation activity.</p>
     </div>
     <div class="head-meta">
       <div class="meta-pair"><span class="meta-label">Updated</span><span id="updated">loading…</span></div>
@@ -62,7 +62,7 @@
           </div>
           <div class="overview-hero-arrival">
             <p class="panel-kicker">Newest arrival</p>
-            <h2 class="panel-title">Most recent deposited genome with an image</h2>
+            <h2 class="panel-title">Latest qualifying assembly with an available image</h2>
             <div id="newest-card" class="newest-card"></div>
           </div>
         </article>
@@ -71,7 +71,7 @@
           <div class="panel-head">
             <div>
               <p class="panel-kicker">Composition</p>
-              <h2 class="panel-title">What is being sequenced now compared with the long run?</h2>
+              <h2 class="panel-title">Broad taxonomic composition: recent versus all-time deposits</h2>
             </div>
           </div>
           <div class="donut-pair">
@@ -210,10 +210,10 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Assembly architecture</p>
             <h2 class="panel-title">Genome size & contiguity</h2>
-            <p class="genometrics-summary">Collection-wide assembly size and contiguity from NCBI assembly statistics. This describes deposited assemblies; an independent biological genome-size reference can be layered on when sufficiently broad data are available.</p>
+            <p class="genometrics-summary">NCBI assembly statistics across all qualifying deposits. The summaries include median assembly length, contig N50 and reported chromosome count; the histograms show assembly-length and chromosome-count bins.</p>
             <div id="genometrics-quality-stats" class="genometrics-stat-grid"></div>
             <div class="genometrics-histograms">
-              <div><h3>Genome size</h3><svg id="genometrics-size-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of assembly genome sizes"></svg></div>
+              <div><h3>Assembly length (binned)</h3><svg id="genometrics-size-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of assembly genome sizes"></svg></div>
               <div><h3>Chromosome number</h3><svg id="genometrics-chrom-hist" class="genometrics-hist" viewBox="0 0 520 210" role="img" aria-label="Distribution of reported chromosome counts"></svg></div>
             </div>
             <p class="genometrics-denominator" id="genometrics-quality-denominator"></p>
@@ -222,7 +222,7 @@
           <article class="panel genometrics-card genometrics-architecture-card">
             <p class="panel-kicker">Genome architecture</p>
             <h2 class="panel-title">Genome size × chromosome number</h2>
-            <p class="genometrics-summary">One representative chromosome-scale assembly per species. Both axes are logarithmic so compact genomes and biological extremes remain visible together.</p>
+            <p class="genometrics-summary">One representative assembly per species with both measurements. The horizontal axis is reported chromosome count and the vertical axis is assembly length; both are logarithmic.</p>
             <svg id="genometrics-size-chrom-scatter" class="genometrics-architecture" viewBox="0 0 520 390" role="img" aria-label="Genome size versus reported chromosome number, one point per species"></svg>
             <div id="genometrics-architecture-legend" class="genometrics-architecture-legend"></div>
             <p class="genometrics-denominator" id="genometrics-architecture-denominator"></p>
@@ -231,7 +231,7 @@
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Animals</p>
             <h2 class="panel-title">Animal genome-size distributions · classes</h2>
-            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on a linear axis; the range is tailored to this group and unusually large genomes are indicated.</p>
+            <p class="genometrics-summary">Up to ten groups ranked by species coverage, with one assembly per species. Each ribbon shows the relative distribution within its row (height normalized separately). The horizontal Mb/Gb axis is linear and shared within this panel; genomes beyond the displayed range are flagged.</p>
             <svg id="genometrics-size-animals" class="genometrics-size-by-taxon" viewBox="0 0 520 460" role="img" aria-label="Animals genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-animals-denominator"></p>
           </article>
@@ -239,7 +239,7 @@
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Plants</p>
             <h2 class="panel-title">Plant genome-size distributions · orders</h2>
-            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on a linear axis; the range is tailored to this group and unusually large genomes are indicated.</p>
+            <p class="genometrics-summary">Up to ten groups ranked by species coverage, with one assembly per species. Each ribbon shows the relative distribution within its row (height normalized separately). The horizontal Mb/Gb axis is linear and shared within this panel; genomes beyond the displayed range are flagged.</p>
             <svg id="genometrics-size-plants" class="genometrics-size-by-taxon" viewBox="0 0 520 460" role="img" aria-label="Plants genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-plants-denominator"></p>
           </article>
@@ -247,7 +247,7 @@
           <article class="panel genometrics-card genometrics-architecture-card genome-landscape-panel">
             <p class="panel-kicker">Genome-size landscape · Fungi</p>
             <h2 class="panel-title">Fungal genome-size distributions · orders</h2>
-            <p class="genometrics-summary">Top ten represented taxa, one assembly per species. Each ribbon shows relative genome-size frequency on a linear axis; the range is tailored to this group and unusually large genomes are indicated.</p>
+            <p class="genometrics-summary">Up to ten groups ranked by species coverage, with one assembly per species. Each ribbon shows the relative distribution within its row (height normalized separately). The horizontal Mb/Gb axis is linear and shared within this panel; genomes beyond the displayed range are flagged.</p>
             <svg id="genometrics-size-fungi" class="genometrics-size-by-taxon" viewBox="0 0 520 460" role="img" aria-label="Fungi genome-size distribution across up to ten taxa"></svg>
             <p class="genometrics-denominator" id="genometrics-size-fungi-denominator"></p>
           </article>
@@ -255,7 +255,7 @@
           <article class="panel genometrics-card genometrics-top-species-card">
             <p class="panel-kicker">Repeat sequencing</p>
             <h2 class="panel-title">Species ranked by published chromosome-scale assemblies</h2>
-            <p class="genometrics-summary">Species ranked by the number of published chromosome-level or complete-genome GenBank assemblies in the tracked collection.</p>
+            <p class="genometrics-summary">Top 15 organism names ranked by the number of qualifying chromosome-level or complete GenBank assemblies; repeated deposits for the same organism count separately.</p>
             <svg id="genometrics-top-species" class="genometrics-top-species" viewBox="0 0 520 470" role="img" aria-label="Top 15 species by chromosome-scale or complete genome assemblies"></svg>
             <p class="genometrics-denominator" id="genometrics-top-species-denominator"></p>
           </article>
@@ -290,7 +290,7 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Observed vs expected</p>
             <h2 class="panel-title">Expected sex-chromosome annotation</h2>
-            <p class="genometrics-summary">For genome deposits from species with an explicit Tree of Sex karyotype, compare the expected sex-chromosome system with the labels actually present in NCBI sequence reports.</p>
+            <p class="genometrics-summary">For species with a Tree of Sex sex-chromosome-system record, compare expected sex-chromosome labels with labels explicitly found in NCBI sequence reports.</p>
             <div id="genometrics-sex-comparison" class="sex-compare" hidden></div>
             <p class="genometrics-denominator" id="genometrics-sex-comparison-denominator"></p>
             <p class="genometrics-source-note">Expected system: <a href="https://www.treeofsex.org/database" target="_blank" rel="noopener">Tree of Sex</a> · observed labels: NCBI sequence reports.</p>
@@ -500,7 +500,7 @@
         <div class="taxon-search-intro">
           <p class="panel-kicker">Comparative taxonomic history</p>
           <h2>Compare chromosome-scale sequencing by phylum or order</h2>
-          <p class="taxon-intro">Search two taxa independently. Their historical, recent and genome-size charts use shared axes, and sample-origin maps use the same colour scale for direct comparison. Only phyla and orders are indexed to keep the site small, static and free to host.</p>
+          <p class="taxon-intro">Select two phyla or orders. Their cumulative counts, recent business-day deposits and assembly-length distributions use paired scales; geographic-origin maps use the same colour scale. Only phyla and orders are indexed to keep the site compact.</p>
         </div>
         <div class="taxon-search-pair">
           <div class="taxon-search-wrap">
@@ -514,7 +514,7 @@
             <div id="taxon-results-right" class="taxon-results"></div>
           </div>
         </div>
-        <p class="taxon-compare-note">Shared scales update whenever either selection changes. Maps show the BioSample geographic origin attached to qualifying assemblies, including controlled ocean/sea localities; they describe sample provenance, not the natural geographic range of the taxon.</p>
+        <p class="taxon-compare-note">Paired scales update when either taxon changes. Assembly-length curves use a shared linear Mb/Gb range with high-end outliers flagged. Maps use BioSample origin, including ocean/sea localities—not the natural ranges of the taxa.</p>
       </article>
 
       <section class="taxon-compare-grid">
@@ -546,7 +546,7 @@
             </article>
             <article class="panel chart-panel taxon-compare-panel">
               <p class="panel-kicker">Genome-size landscape · shared scale</p>
-              <h3 class="panel-title">Genome-size distribution</h3>
+              <h3 class="panel-title">Assembly-length distribution</h3>
               <svg id="taxon-size-chart-left" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for left selected taxon"></svg>
               <p class="genometrics-denominator" id="taxon-size-note-left"></p>
             </article>
@@ -588,7 +588,7 @@
             </article>
             <article class="panel chart-panel taxon-compare-panel">
               <p class="panel-kicker">Genome-size landscape · shared scale</p>
-              <h3 class="panel-title">Genome-size distribution</h3>
+              <h3 class="panel-title">Assembly-length distribution</h3>
               <svg id="taxon-size-chart-right" class="taxon-size-chart" viewBox="0 0 520 250" role="img" aria-label="Genome-size distribution for right selected taxon"></svg>
               <p class="genometrics-denominator" id="taxon-size-note-right"></p>
             </article>
@@ -622,6 +622,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261008g"></script>
+  <script src="app.js?v=20261009copy1"></script>
 </body>
 </html>
