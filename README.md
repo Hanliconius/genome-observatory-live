@@ -23,10 +23,10 @@ The dashboard currently includes:
 - **Live deposition activity** — assemblies, species represented, first-time species, recent daily activity, annual totals, cumulative growth, and milestone dates.
 - **Newest arrivals** — recent qualifying assemblies with organism metadata, common-name fallbacks, assembly links, and representative imagery when available.
 - **RefSeq annotation activity** — eukaryotic annotations currently in progress and recently completed.
-- **Genometrics** — assembly-size and chromosome-number distributions, contiguity statistics, mitochondrial and plastid associations, sex-chromosome labels, karyotype comparisons, ploidy/sexual-system context, and observed-versus-expected sex-chromosome annotation.
+- **Genometrics** — assembly-length and chromosome-number distributions, contiguity statistics, three taxon-specific assembly-length ribbon panels, mitochondrial and plastid associations, sex-chromosome labels, karyotype comparisons, and observed-versus-expected sex-chromosome annotation.
 - **Conservation status** — chromosome-scale genome deposition for threatened (VU/EN/CR) and extinct (EW/EX) taxa using the IUCN Red List.
 - **Geography** — sample-origin geography plus a separate sequencing/institute-country view.
-- **Taxonomic explorer** — searchable summaries at phylum and order level, including historical and recent deposition activity.
+- **Taxonomic explorer** — searchable comparisons at phylum and order level, including historical and recent deposition activity, assembly-length distributions and sample-origin maps.
 
 The site uses **Past week**, **Past year**, and **All time** views where appropriate. Rate-oriented geographical displays use a trailing **30-day business-day** window to avoid unstable very-short-window estimates.
 
@@ -93,7 +93,7 @@ For species with suitable Tree of Sex chromosome-count information, the reported
 
 ### Assembly architecture
 
-Genome-size and chromosome-number histograms describe the deposited collection. Assembly size and contig N50 come from NCBI assembly statistics. They should not be interpreted as independent experimental estimates of biological genome size.
+Assembly-length and chromosome-number histograms describe the deposited collection. Assembly length and contig N50 come from NCBI assembly statistics. The genome-architecture scatterplot uses logarithmic axes; the three Animal/Plant/Fungi ribbon panels use separate linear Mb/Gb axes, with heights normalized within each taxon and high-end values beyond the visible range counted separately.
 
 ## Conservation views
 
