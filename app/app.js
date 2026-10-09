@@ -727,7 +727,7 @@ function drawGenomeArchitecture(svgId,legendId,arch){
     html+=`<line class="genometrics-arch-grid" x1="${L}" x2="${L+iw}" y1="${y}" y2="${y}"></line><text class="genometrics-arch-tick" x="${L-7}" y="${y+3}" text-anchor="end">${sizeLabel(v)}</text>`;
   });
   html+=`<line class="genometrics-arch-axis" x1="${L}" x2="${L+iw}" y1="${T+ih}" y2="${T+ih}"></line><line class="genometrics-arch-axis" x1="${L}" x2="${L}" y1="${T}" y2="${T+ih}"></line>`;
-  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-4}" text-anchor="middle">Reported chromosome count · log scale</text><text class="genometrics-arch-axis-label" transform="translate(12 ${T+ih/2}) rotate(-90)" text-anchor="middle">Genome size · log scale</text>`;
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-4}" text-anchor="middle">Reported chromosome count · log scale</text><text class="genometrics-arch-axis-label" transform="translate(12 ${T+ih/2}) rotate(-90)" text-anchor="middle">Assembly length (Mb) · log scale</text>`;
 
   pts.forEach(p=>{
     const group=p.group||'Other';
@@ -807,7 +807,7 @@ function drawGenomeSizeByTaxon(svgId,dist){
       html+=`<rect class="genometrics-dist-ribbon-hit" data-taxon="${esc(row.taxon)}" data-label="${esc(row.bins?.[i]?.label||bins[i]||'')}" data-count="${n}" data-total="${total}" x="${(L+i*bw).toFixed(2)}" y="${(mid-rowH*.55).toFixed(2)}" width="${bw.toFixed(2)}" height="${rowH.toFixed(2)}"></rect>`;
     });
   });
-  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-5}" text-anchor="middle">Genome size · linear scale (range adapted to group)</text>`;
+  html+=`<text class="genometrics-arch-axis-label" x="${L+iw/2}" y="${h-5}" text-anchor="middle">Assembly length · linear scale (group-specific range)</text>`;
   svg.innerHTML=html;
   svg.querySelectorAll('.genometrics-dist-ribbon-hit').forEach(hit=>{
     const show=ev=>{
@@ -884,13 +884,13 @@ function renderGenometrics(){
     `<div><strong>${mb(q.median_assembly_size_bp)}</strong><span>median assembly size</span></div>
      <div><strong>${mb(q.median_contig_n50_bp)}</strong><span>median contig N50</span></div>
      <div><strong>${q.median_chromosomes_reported==null?'—':fmt1(q.median_chromosomes_reported)}</strong><span>median chromosomes reported</span></div>`;
-  drawGenometricHistogram('genometrics-size-hist',q.assembly_size_histogram||[],'Genome size');
+  drawGenometricHistogram('genometrics-size-hist',q.assembly_size_histogram||[],'Assembly length');
   drawGenometricHistogram('genometrics-chrom-hist',q.chromosome_count_histogram||[],'Reported chromosome count');
   const topSpecies=d.top_species_by_assemblies?.species||[];
   drawTopSpecies('genometrics-top-species',topSpecies);
   el('genometrics-top-species-denominator').textContent='Ranked across all '+fmt(q.assemblies||0)+' tracked chromosome-level and complete GenBank assembly deposits.';
   el('genometrics-quality-denominator').textContent=
-    fmt(q.assembly_size_available||0)+' assemblies contribute genome size; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
+    fmt(q.assembly_size_available||0)+' assemblies have reported assembly length; '+fmt(q.chromosome_count_available||0)+' have an NCBI-reported chromosome count.';
 
   const arch=d.genome_architecture||{};
   drawGenomeArchitecture('genometrics-size-chrom-scatter','genometrics-architecture-legend',arch);
@@ -906,7 +906,7 @@ function renderGenometrics(){
     drawGenomeSizeByTaxon('genometrics-size-'+id,{...current,bin_labels:dist.bin_labels});
     el('genometrics-size-'+id+'-denominator').textContent=
       fmt(current.represented_species||0)+' species across '+(current.classes||[]).length+
-      ' taxa. Linear genome-size range with outliers marked; '+
+      ' taxa. Each row is normalized to its own peak; linear assembly-length axis with high-end outliers flagged; '+
       (current.rank||'class/order')+'.';
   }
 
@@ -1612,7 +1612,7 @@ function drawTaxonSizeChart(side,t,sharedMax){
   if(!svg)return;
   const sizes=(t?.genome_sizes?.sizes_mb||[]).map(Number).filter(n=>Number.isFinite(n)&&n>0);
   if(!sizes.length){
-    svg.innerHTML='<text class="genometrics-arch-tick" x="260" y="118" text-anchor="middle">Genome-size data unavailable</text>';
+    svg.innerHTML='<text class="genometrics-arch-tick" x="260" y="118" text-anchor="middle">Assembly-length data unavailable</text>';
     if(note)note.textContent='Awaiting the next Taxa Explorer data rebuild.';
     return;
   }
@@ -1643,7 +1643,7 @@ function drawTaxonSizeChart(side,t,sharedMax){
   html+='<path d="'+d+' Z" fill="'+pos+'" fill-opacity=".65"></path>';
   html+='<path d="'+d+'" fill="none" stroke="'+pos+'" stroke-width="1.5"></path>';
   if(outliers)html+='<path d="M'+(L+iw-7)+','+(T+9)+' l6,6 l-6,6" fill="none" stroke="'+pos+'" stroke-width="2"><title>'+outliers+' sizes beyond visible range</title></path>';
-  html+='<text class="genometrics-arch-axis-label" x="'+(L+iw/2)+'" y="'+(h-4)+'" text-anchor="middle">Assembly size · linear scale</text>';
+  html+='<text class="genometrics-arch-axis-label" x="'+(L+iw/2)+'" y="'+(h-4)+'" text-anchor="middle">Assembly length · linear scale</text>';
   counts.forEach((n,i)=>{
     html+='<rect class="taxon-size-hit" data-bin="'+i+'" x="'+(L+i*iw/bins)+'" y="'+T+'" width="'+(iw/bins)+'" height="'+ih+'"></rect>';
   });
