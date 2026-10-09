@@ -158,6 +158,67 @@ def load():
 
 def write(d): DASH.write_text(json.dumps(d,indent=2,ensure_ascii=False)+"\n")
 
+def accession_stem(accession):
+    # GCA_123456789.1 -> GCA_123456789; versions of the same
+    # GenBank assembly accession are not independent deposit records.
+    return str(accession or '').split('.', 1)[0]
+
+
+def reconstruct_full_history(reports, old, cutoff):
+    """Make a complete, checkable baseline from current NCBI records.
+
+    Historical dates, earliest species dates and retained recent accessions
+    must come from the SAME full inventory. Nothing is written until update
+    finishes and validates its output.
+    """
+    by_accession={}
+    for raw in reports:
+        rec=normalise(raw)
+        accession=rec['accession']
+        day=rec['release_date']
+        if not accession or not rec['organism_name'] or not day:
+            raise RuntimeError('Full inventory contains an incomplete assembly')
+        date.fromisoformat(day)
+        if accession in by_accession:
+            raise RuntimeError('Duplicate accession in full inventory: '+accession)
+        by_accession[accession]=rec
+
+    previous=int(old.get('summary',{}).get('all',{}).get('assemblies',0) or 0)
+    if not by_accession or (previous and len(by_accession)<previous*.8):
+        raise RuntimeError('Full inventory is unexpectedly incomplete; refusing reconciliation')
+
+    # Reuse existing enriched display metadata when an accession is unchanged.
+    cached={x.get('accession'):x for x in old.get('recent_assemblies',[]) if x.get('accession')}
+    for accession,rec in by_accession.items():
+        if accession in cached:
+            extra=cached[accession]
+            for key in ('genus','family','phylum','group','image'):
+                if extra.get(key): rec[key]=extra[key]
+            if not rec.get('common_name'): rec['common_name']=extra.get('common_name')
+
+    daily=defaultdict(lambda:{'assemblies':0,'species':set()})
+    first_seen={}
+    for rec in by_accession.values():
+        day=rec['release_date']
+        name=rec['organism_name']
+        daily[day]['assemblies']+=1
+        daily[day]['species'].add(name)
+        if name not in first_seen or day<first_seen[name]:
+            first_seen[name]=day
+    first_dates=Counter(first_seen.values())
+    historical=[{'date':day,'assemblies':row['assemblies'],
+                 'species':len(row['species']),
+                 'first_time_species':first_dates[day]}
+                for day,row in sorted(daily.items())]
+    old['daily']=historical
+    old['species_first_seen']=first_seen
+    old['recent_assemblies']=[x for x in by_accession.values()
+                              if x['release_date']>=cutoff]
+    # Recompute all-time kingdom counts after an inventory reconciliation.
+    old['groups_all']=None
+    return len(by_accession),historical,first_seen
+
+
 def main():
     old=load(); today=date.today(); after=(today-timedelta(days=OVERLAP)).isoformat()
     cutoff=(today-timedelta(days=DAYS_RECENT)).isoformat()
@@ -165,10 +226,25 @@ def main():
     oldest=min((x.get('release_date','9999-99-99') for x in old_recent),default='9999-99-99')
     metadata_version=int(old.get('metadata_schema_version',0) or 0)
     need_year_backfill=(not old_recent) or oldest>(today-timedelta(days=DAYS_RECENT-30)).isoformat() or metadata_version<2
-    query_after=cutoff if need_year_backfill else after
-    incoming=[normalise(r) for r in get_reports(query_after)]
+    full_reconcile=os.getenv('FULL_RECONCILE','0')=='1'
+    if full_reconcile:
+        from audit_full_history import iterate_ncbi
+        count, expected_daily, expected_first=reconstruct_full_history(
+            iterate_ncbi(),old,cutoff)
+        print(f'Full-history NCBI inventory: {count} assemblies, '
+              f'{len(expected_first)} organisms, {len(expected_daily)} dates')
+    query_after=cutoff if need_year_backfill or full_reconcile else after
+    incoming=(list(old['recent_assemblies']) if full_reconcile else
+              [normalise(r) for r in get_reports(query_after)])
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
     byacc={x['accession']:x for x in old_recent if x.get('release_date','')<query_after}
+    # Retire old accession versions when the NCBI response provides a new one.
+    # Ordinary incremental updates cannot detect unrelated withdrawals outside
+    # the overlap window; the quarterly full reconciliation handles those.
+    incoming_stems={accession_stem(x['accession']) for x in incoming}
+    for accession in list(byacc):
+        if accession_stem(accession) in incoming_stems:
+            del byacc[accession]
     image_cache=old.get('image_cache',{})
     tax_cache={k:v for k,v in (old.get('taxonomy_cache') or {}).items() if isinstance(v,dict) and v.get('_source')=='datasets_taxonomy_v1'}
     old_byacc={x.get('accession'):x for x in old_recent if x.get('accession')}
@@ -185,6 +261,9 @@ def main():
             key=x['organism_name']
             if not image_cache.get(key): image_cache[key]=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
             x['image']=image_cache.get(key)
+        stem=accession_stem(x['accession'])
+        for obsolete in [a for a in byacc if accession_stem(a)==stem and a!=x['accession']]:
+            del byacc[obsolete]
         byacc[x['accession']]=x
     recent=sorted([x for x in byacc.values() if x['release_date']>=cutoff],key=lambda z:(z['release_date'],z['accession']),reverse=True)
 
@@ -209,9 +288,13 @@ def main():
         if x['release_date']>=after:grouped[x['release_date']].append(x)
     first_seen=old.get('species_first_seen',{})
     for ds,xs in grouped.items():
-        orgs={x['organism_name'] for x in xs};new=0
+        orgs={x['organism_name'] for x in xs}
         for o in orgs:
-            if o not in first_seen or ds<first_seen[o]: first_seen[o]=ds;new+=1
+            if o not in first_seen or ds<first_seen[o]:
+                first_seen[o]=ds
+        # Rebuilding a previously recorded day must still credit the first
+        # release of species whose earliest date is exactly this day.
+        new=sum(first_seen[o]==ds for o in orgs)
         daily[ds]={'date':ds,'assemblies':len(xs),'species':len(orgs),'first_time_species':new}
     start=min([date.fromisoformat(x) for x in daily] or [today]);cur=start
     while cur<=today:
@@ -301,7 +384,23 @@ def main():
             {'group':'Fungi','count':fungi},
             {'group':'Other','count':max(0,total-animals-plants-fungi)}
         ]
-    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows[-8000:],'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows,'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
+    if full_reconcile:
+        expected_by_date={row['date']:row for row in expected_daily}
+        actual_by_date={row['date']:row for row in daily_rows}
+        for ds,ref in expected_by_date.items():
+            if any(int(actual_by_date.get(ds,{}).get(k,-1))!=ref[k]
+                   for k in ('assemblies','species','first_time_species')):
+                raise RuntimeError('Reconciliation mismatch on date '+ds)
+        if (all_summary['assemblies']!=count or
+                all_summary['species']!=len(expected_first) or
+                first_seen!=expected_first):
+            raise RuntimeError('Reconciliation failed source inventory invariants')
+        current_recent={x['accession'] for x in recent}
+        source_recent={x['accession'] for x in old_recent if x['release_date']>=cutoff}
+        if current_recent!=source_recent:
+            raise RuntimeError('Reconciliation recent accession mismatch')
+        print('PASS: full-history assembly, species, daily and recent-accession invariants')
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
 
