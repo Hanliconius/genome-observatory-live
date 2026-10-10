@@ -36,7 +36,7 @@ const METHOD_TREND_COLORS=[
   '#2e6ea6','#5aa17a','#d59a38','#8b75b3','#b85c5c',
   '#3f8f9d','#8a6f4d','#657786','#9a5f87','#4d7a52'
 ];
-const RANGE={week:{label:'Past week',rate:'Deposits per business day'},year:{label:'Past year',rate:'Deposits per business day'},all:{label:'All time',rate:'Deposits per year'}};
+const RANGE={week:{label:'Past week',rate:'Deposits per calendar day'},year:{label:'Past year',rate:'Deposits per calendar day'},all:{label:'All time',rate:'Deposits per year'}};
 
 fetch(D+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{DATA=d;render()}).catch(err=>{console.error(err);el('updated').textContent='data unavailable'});
 
@@ -127,7 +127,7 @@ function render(){
   el('top-pipeline').textContent=fmt(DATA.annotations.in_progress.length);
   el('top-completed').textContent=fmt(DATA.annotations.recent_completed.length);
   const last30=reportingLagRows(DATA.daily).slice(-30);
-  const currentPace=businessDayPace(last30);
+  const currentPace=calendarDayPace(last30);
   el('top-rate').textContent=fmt1(currentPace);
   el('primary-label').textContent=RANGE[range].label;
   el('assemblies-count').textContent=fmt(s.assemblies);
@@ -165,17 +165,6 @@ function prettyDate(ds){
   return Number.isNaN(d.getTime())?ds:d.toLocaleDateString([], {year:'numeric',month:'short',day:'numeric'});
 }
 
-function isBusinessDate(ds){
-  const d=new Date(String(ds||'')+'T12:00:00');
-  if(Number.isNaN(d.getTime()))return false;
-  const day=d.getDay();
-  return day>=1&&day<=5;
-}
-
-function businessDayRows(rows){
-  return (rows||[]).filter(x=>isBusinessDate(x.date));
-}
-
 // Show all available NCBI records, including the most recent dates.
 const REPORTING_LAG_DAYS=0;
 function reportingLagRows(rows,generatedAt=DATA?.generated_at){
@@ -185,15 +174,14 @@ function reportingLagRows(rows,generatedAt=DATA?.generated_at){
   const ds=cutoff.toISOString().slice(0,10);
   return (rows||[]).filter(x=>String(x.date||'')<=ds);
 }
-function recentBusinessDays(rows,n,generatedAt=DATA?.generated_at){
-  return businessDayRows(reportingLagRows(rows,generatedAt)).slice(-n);
+function recentCalendarDays(rows,n,generatedAt=DATA?.generated_at){
+  return reportingLagRows(rows,generatedAt).slice(-n);
 }
 
-function businessDayPace(rows){
+function calendarDayPace(rows){
   const xs=rows||[];
-  const businessDays=businessDayRows(xs).length;
   const assemblies=xs.reduce((a,b)=>a+Number(b.assemblies||0),0);
-  return businessDays?assemblies/businessDays:0;
+  return xs.length?assemblies/xs.length:0;
 }
 
 function paceChange(current,previous){
@@ -433,15 +421,15 @@ function renderWeatherMap(){
 function renderRate(){
   let rows,labels;
   if(range==='week'){
-    rows=recentBusinessDays(DATA.daily,10);
+    rows=recentCalendarDays(DATA.daily,10);
     labels=rows.map(x=>new Date(x.date+'T12:00:00').toLocaleDateString([], {weekday:'short',month:'numeric',day:'numeric'}));
   }
   else if(range==='year'){
-    rows=businessDayRows(reportingLagRows(DATA.daily).slice(-365));
+    rows=reportingLagRows(DATA.daily).slice(-365);
     labels=rows.map(x=>x.date);
   }
   else{rows=(DATA.yearly||[]).map(x=>({date:String(x.year),assemblies:x.assemblies}));labels=rows.map(x=>x.date);}
-  el('rate-title').textContent=range==='week'?'Deposits per business day · last 10 business days':RANGE[range].rate;
+  el('rate-title').textContent=range==='week'?'Deposits per calendar day · last 10 calendar days':RANGE[range].rate;
   drawLineChart('rate-chart',rows,'assemblies',labels,range);
 }
 
@@ -987,7 +975,7 @@ function renderStatus(){
   const label=statusMode==='threatened'?'Threatened':'Extinct';
   const last60=dailyWindow(s.recent_daily,60,IUCN_DATA.generated_at);
   const last30=last60.slice(-30);
-  const currentPace=businessDayPace(last30);
+  const currentPace=calendarDayPace(last30);
   el('status-loading').hidden=true;
   el('status-content').hidden=false;
   el('status-primary-label').textContent=label+' · all time';
@@ -1095,7 +1083,7 @@ function renderVectors(){
   const label='Vector / surveillance';
   const last60=dailyWindow(s.recent_daily,60,VECTOR_DATA.generated_at);
   const last30=last60.slice(-30);
-  const currentPace=businessDayPace(last30);
+  const currentPace=calendarDayPace(last30);
   el('vector-loading').hidden=true;
   el('vector-content').hidden=false;
   el('vector-primary-label').textContent=label+' · all time';
@@ -1409,7 +1397,7 @@ function countryByNumeric(id){
 }
 
 function countryRateValue(c){
-  return Number(c?.genomes_per_business_day??c?.genomes_per_day??0);
+  return Number(c?.genomes_per_day??0);
 }
 
 function countryRateLabel(v){
@@ -1455,7 +1443,7 @@ function renderCountryMap(){
       if(c){
         const primary=alltime
           ? `<span>${fmt(c.assemblies)} assemblies · all time</span>`
-          : `<span>${countryRateLabel(countryRateValue(c))} genomes per business day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
+          : `<span>${countryRateLabel(countryRateValue(c))} genomes per calendar day</span><span>${fmt(c.window_assemblies)} assemblies · past 30 days</span>`;
         const base=`<strong>${esc(name)}</strong>${primary}${alltime?'':`<span>${fmt(c.assemblies)} assemblies · all time</span>`}<span>${fmt(c.species)} species represented</span>`;
         const institutes=countryFacet==='sequencing' && (c.top_institutes?.length||c.top_centers?.length)
           ? '<span>Top institutes: '+(c.top_institutes||c.top_centers).slice(0,3).map(x=>esc(x.name)).join(' · ')+'</span>'
@@ -1494,7 +1482,7 @@ function renderCountryMap(){
         d3.select(this).classed('is-hovered',true);
         const primary=alltime
           ? '<span>'+fmt(d.assemblies)+' assemblies · all time</span>'
-          : '<span>'+countryRateLabel(valueOf(d))+' genomes per business day</span><span>'+fmt(d.window_assemblies)+' assemblies · past 30 days</span>';
+          : '<span>'+countryRateLabel(valueOf(d))+' genomes per calendar day</span><span>'+fmt(d.window_assemblies)+' assemblies · past 30 days</span>';
         tip.innerHTML='<strong>'+esc(d.name)+'</strong>'+primary+'<span>'+fmt(d.species)+' species represented</span><span>INSDC ocean/sea geo_loc_name</span>';
         tip.hidden=false;positionTooltip(ev,tip);
       })
@@ -1506,9 +1494,9 @@ function renderCountryMap(){
 
   el('country-map').setAttribute('aria-label',alltime
     ? 'World map of all-time genome deposits by sample-origin country'
-    : 'World map of genomes deposited per business day by country');
+    : 'World map of genomes deposited per calendar day by country');
   el('country-map-legend').innerHTML=
-    '<span>'+(alltime?'Total genome deposits · all time':'Genomes per business day · trailing 30-day pace')+'</span>'+
+    '<span>'+(alltime?'Total genome deposits · all time':'Genomes per calendar day · trailing 30-day pace')+'</span>'+
     '<div class="map-gradient"></div>'+
     '<div class="map-legend-ticks"><span>0</span><span>'+(alltime?fmt(maxValue):countryRateLabel(maxValue))+'</span></div>'+
     (countryFacet==='sequencing'?'':'<div class="marine-legend-key"><i></i><span>Ocean / sea locality · marker size reflects the same time view</span></div>');
@@ -1543,7 +1531,7 @@ function renderCountryMatches(raw){
   const context=countryFacet==='sequencing'?'linked assemblies':'all-time assemblies';
   const heading=countryMapIsAllTime()?'Most sequenced · all time':'Most active · trailing 30 days';
   box.innerHTML=(q?'':'<div class="taxon-results-label">'+heading+'</div>')+
-    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryMapIsAllTime()?fmt(x.assemblies):countryRateLabel(countryRateValue(x))+'/business day'}</span></button>`).join('');
+    rows.map(x=>`<button type="button" data-iso3="${esc(x.iso3)}" class="taxon-result"><span><strong>${esc(x.name)}</strong><small>${esc(x.iso3)} · ${fmt(x.assemblies)} ${context}</small></span><span>${countryMapIsAllTime()?fmt(x.assemblies):countryRateLabel(countryRateValue(x))+'/calendar day'}</span></button>`).join('');
   box.querySelectorAll('button[data-iso3]').forEach(btn=>btn.addEventListener('click',()=>{
     const meta=data.countries.find(x=>x.iso3===btn.dataset.iso3);
     if(meta)selectCountry(meta);
@@ -1717,7 +1705,7 @@ function taxonRecentRows(t){
     const ds=d.toISOString().slice(0,10);
     recent.push({date:ds,assemblies:sparse.get(ds)||0});
   }
-  return businessDayRows(recent);
+  return recent;
 }
 
 

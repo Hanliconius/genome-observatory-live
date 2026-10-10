@@ -279,10 +279,6 @@ def main():
     rate_window_days = 30
     window_start = today - timedelta(days=rate_window_days - 1)
     window_cutoff = window_start.isoformat()
-    business_days_in_window = sum(
-        1 for i in range(rate_window_days)
-        if (window_start + timedelta(days=i)).weekday() < 5
-    )
 
     countries = {}
     marine_localities = {}
@@ -384,9 +380,7 @@ def main():
             "species": len(rec["species"]),
             "first_time_species": len(rec["first_seen"]),
             "window_assemblies": rec["window_assemblies"],
-            "business_days_in_window": business_days_in_window,
             "genomes_per_day": rec["window_assemblies"] / float(rate_window_days),
-            "genomes_per_business_day": rec["window_assemblies"] / float(max(1, business_days_in_window)),
             "yearly": yearly,
         })
 
@@ -400,9 +394,7 @@ def main():
             "assemblies": rec["assemblies"],
             "species": len(rec["species"]),
             "window_assemblies": rec["window_assemblies"],
-            "business_days_in_window": business_days_in_window,
             "genomes_per_day": rec["window_assemblies"] / float(rate_window_days),
-            "genomes_per_business_day": rec["window_assemblies"] / float(max(1, business_days_in_window)),
         }
         for rec in sorted(marine_localities.values(), key=lambda x: x["name"])
     ]

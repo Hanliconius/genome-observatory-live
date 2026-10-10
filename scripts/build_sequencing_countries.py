@@ -660,10 +660,6 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
     today = date.today()
     window_start = today - timedelta(days=RATE_WINDOW_DAYS - 1)
     cutoff = window_start.isoformat()
-    business_days_in_window = sum(
-        1 for i in range(RATE_WINDOW_DAYS)
-        if (window_start + timedelta(days=i)).weekday() < 5
-    )
     countries = {}
     coverage = Counter()
     unresolved_centers = Counter()
@@ -779,9 +775,7 @@ def aggregate(records, sra_cache, ror_cache, submitter_cache):
             "species": len(rec["species"]),
             "first_time_species": len(rec["first_seen"]),
             "window_assemblies": rec["window_assemblies"],
-            "business_days_in_window": business_days_in_window,
             "genomes_per_day": rec["window_assemblies"] / float(RATE_WINDOW_DAYS),
-            "genomes_per_business_day": rec["window_assemblies"] / float(max(1, business_days_in_window)),
             "top_institutes": top_institutes,
             "top_centers": top_institutes,
             "provenance_counts": dict(rec["provenance"]),

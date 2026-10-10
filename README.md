@@ -28,7 +28,7 @@ The dashboard currently includes:
 - **Geography** — sample-origin geography plus a separate sequencing/institute-country view.
 - **Taxonomic explorer** — searchable comparisons at phylum and order level, including historical and recent deposition activity, assembly-length distributions and sample-origin maps.
 
-The site uses **Past week**, **Past year**, and **All time** views where appropriate. Rate-oriented geographical displays use a trailing **30-day business-day** window to avoid unstable very-short-window estimates.
+The site uses **Past week**, **Past year**, and **All time** views where appropriate. Rate-oriented geographical displays use a trailing **30-day calendar-day** window to avoid unstable very-short-window estimates.
 
 ## Definitions
 
@@ -238,7 +238,7 @@ The **Vector species** tab uses the MapVEu/VectorBase sample export dated 10 Oct
 
 The tab is a source-defined view of vectors and related surveillance taxa, rather than a registry of demonstrated disease transmission. Exact scientific binomials are matched against the current GenBank chromosome-scale and complete assembly collection. Named subspecies are combined at species level; genus, complex, group, hybrid and uncertain labels are excluded. Synonyms are not inferred. NCBI taxids returned for matched assemblies are retained, but are not treated as independently verified source taxids. A zero match means no qualifying assembly was matched, not that no genome exists.
 
-[`scripts/build_vectors.py`](scripts/build_vectors.py) rebuilds the genome history on every publication and scheduled refresh. The searchable inventory includes source species with zero matches; charts and summary counts include only matched qualifying genomes. Deposition pace retains the trailing 30-day business-day window.
+[`scripts/build_vectors.py`](scripts/build_vectors.py) rebuilds the genome history on every publication and scheduled refresh. The searchable inventory includes source species with zero matches; charts and summary counts include only matched qualifying genomes. Deposition pace retains the trailing 30-day calendar-day window.
 
 ## Acknowledgements
 
