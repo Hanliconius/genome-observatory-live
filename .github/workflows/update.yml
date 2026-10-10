@@ -12,6 +12,7 @@ on:
       - 'index.html'
       - 'scripts/**'
       - 'data/status/mapveu_species.tsv'
+      - 'data/status/vector_types.json'
       - '.github/workflows/update.yml'
 
 permissions:

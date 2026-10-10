@@ -240,6 +240,8 @@ The tab is a source-defined view of vectors and related surveillance taxa, rathe
 
 [`scripts/build_vectors.py`](scripts/build_vectors.py) rebuilds the genome history on every publication and scheduled refresh. The searchable inventory includes source species with zero matches; charts and summary counts include only matched qualifying genomes. Deposition pace retains the trailing 30-day calendar-day window.
 
+Broader groupings (mosquitoes, ticks, sand flies, biting midges and triatomine bugs) use the source-attributed genus mapping in [`data/status/vector_types.json`](data/status/vector_types.json). The comparison includes both matched genomes and zero-match source species, with genus composition still available as an alternate view. Unmapped labels remain **Other / unresolved**; categories absent from the source export are not assigned a zero-genome count.
+
 ## Acknowledgements
 
 The visual concept was inspired by Kate Morley's [National Grid: Live](https://grid.iamkate.com/), which demonstrates how a continuously changing technical system can be made immediately legible through a compact public dashboard.

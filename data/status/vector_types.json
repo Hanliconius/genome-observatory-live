@@ -1,0 +1,76 @@
+{
+  "definition": "Taxonomic groupings of the source species inventory; group membership does not imply vector competence.",
+  "types": [
+    {
+      "name": "Mosquitoes",
+      "taxon": "Culicidae",
+      "genera": [
+        "Acartomyia",
+        "Aedeomyia",
+        "Aedes",
+        "Anopheles",
+        "Armigeres",
+        "Collessius",
+        "Coquillettidia",
+        "Culex",
+        "Culiseta",
+        "Deinocerites",
+        "Ficalbia",
+        "Heizmannia",
+        "Lutzia",
+        "Malaya",
+        "Mansonia",
+        "Mimomyia",
+        "Ochlerotatus",
+        "Orthopodomyia",
+        "Phagomyia",
+        "Psorophora",
+        "Toxorhynchites",
+        "Tripteroides",
+        "Uranotaenia",
+        "Verrallina",
+        "Wyeomyia"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=7157&mode=tree"
+    },
+    {
+      "name": "Ticks",
+      "taxon": "Ixodidae in this export",
+      "genera": [
+        "Amblyomma",
+        "Dermacentor",
+        "Haemaphysalis",
+        "Hyalomma",
+        "Ixodes",
+        "Rhipicephalus"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6939&mode=tree"
+    },
+    {
+      "name": "Sand flies",
+      "taxon": "Psychodidae \u00b7 Phlebotominae",
+      "genera": [
+        "Lutzomyia",
+        "Phlebotomus",
+        "Sergentomyia"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/mesh/68011576"
+    },
+    {
+      "name": "Biting midges",
+      "taxon": "Ceratopogonidae \u00b7 Culicoides",
+      "genera": [
+        "Culicoides"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=41820&mode=Info"
+    },
+    {
+      "name": "Triatomine bugs",
+      "taxon": "Reduviidae \u00b7 Triatominae",
+      "genera": [
+        "Rhodnius"
+      ],
+      "source_url": "https://www.cdc.gov/dpdx/trypanosomiasisAmerican/index.html"
+    }
+  ]
+}

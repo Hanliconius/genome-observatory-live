@@ -16,6 +16,42 @@ LABELS = ROOT / 'data/status/mapveu_species.tsv'
 OUT = ROOT / 'data/status/vectors.json'
 
 
+def add_type_summaries(payload):
+    config = json.loads((ROOT / 'data/status/vector_types.json').read_text())
+    lookup = {}
+    for group in config['types']:
+        for genus in group['genera']:
+            if genus in lookup:
+                raise ValueError('Duplicate vector-type genus: ' + genus)
+            lookup[genus] = group['name']
+    groups = {g['name']: dict(g, assemblies=0, source_species=0,
+                             genome_species=0, sample_rows=0) for g in config['types']}
+    groups['Other / unresolved'] = {'name': 'Other / unresolved',
+        'taxon': 'Unmapped source genus labels', 'genera': [], 'source_url': None,
+        'assemblies': 0, 'source_species': 0, 'genome_species': 0, 'sample_rows': 0}
+    for item in payload['species_inventory']:
+        genus = item['species'].split()[0]
+        name = lookup.get(genus, 'Other / unresolved')
+        item['vector_type'] = name
+        group = groups[name]
+        group['source_species'] += 1
+        group['genome_species'] += int(item['assemblies'] > 0)
+        group['assemblies'] += item['assemblies']
+        group['sample_rows'] += item['sample_rows']
+        if name == 'Other / unresolved' and genus not in group['genera']:
+            group['genera'].append(genus)
+    for item in payload['recent_assemblies']:
+        item['vector_type'] = lookup.get(item['species_name'].split()[0], 'Other / unresolved')
+    if payload.get('latest_assembly'):
+        item = payload['latest_assembly']
+        item['vector_type'] = lookup.get(item['species_name'].split()[0], 'Other / unresolved')
+    payload['type_summary'] = [g for g in groups.values() if g['source_species']]
+    payload['type_breakdown'] = [{'group': g['name'], 'count': g['assemblies']}
+                                 for g in payload['type_summary'] if g['assemblies']]
+    payload['source']['type_grouping'] = config['definition']
+    return payload
+
+
 def species_name(value):
     # Do not turn genus, hybrid, complex or uncertain labels into species.
     value = ' '.join(value.split())
@@ -86,7 +122,7 @@ def build(inventory=None):
                         'tax_ids': sorted({x['tax_id'] for x in xs if x['tax_id']}),
                         'first_release': first.get(name),
                         'latest_release': xs[-1]['release_date'] if xs else None})
-    return {
+    return add_type_summaries({
         'generated_at': datetime.now(timezone.utc).isoformat(),
         'source': {'dataset': 'MapVEu / VectorBase surveillance sample export',
                    'export_date': '2026-10-10', 'sample_rows': 1834448,
@@ -104,7 +140,7 @@ def build(inventory=None):
         'latest_assembly': rows[-1] if rows else None,
         'annotations': {k: [x for x in dashboard.get('annotations', {}).get(k, []) if ann_match(x)] for k in ('in_progress', 'recent_completed')},
         'species_inventory': species, 'audit': {'ncbi_assemblies_scanned': scanned},
-    }
+    })
 
 
 if __name__ == '__main__':

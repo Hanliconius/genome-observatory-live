@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261010vectors-20261008g" />
+  <link rel="stylesheet" href="styles.css?v=20261010vectortypes1" />
 </head>
 <body>
   <header class="site-head">
@@ -457,12 +457,12 @@
             <div class="panel-head">
               <div>
                 <p class="panel-kicker">Composition</p>
-                <h2 class="panel-title">Genome deposits by genus and source species coverage</h2>
+                <h2 class="panel-title">Genome deposits by vector type and species coverage</h2>
               </div>
             </div>
             <div class="donut-pair">
               <div class="donut-block">
-                <h3>Genus</h3>
+                <div class="vector-composition-picker"><label for="vector-composition-mode">Group genome deposits by</label><select id="vector-composition-mode"><option value="type">Vector type</option><option value="genus">Genus</option></select></div>
                 <div class="donut-wrap"><svg id="vector-donut-genus" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
                 <div id="vector-donut-genus-legend" class="donut-legend"></div>
               </div>
@@ -472,6 +472,13 @@
                 <div id="vector-donut-groups-legend" class="donut-legend"></div>
               </div>
             </div>
+          </article>
+
+          <article class="panel full-width">
+            <p class="panel-kicker">All-time comparison</p><h2 class="panel-title">Genome coverage by broader vector type</h2>
+            <p class="note">Taxonomic groups of the MapVEu species inventory. Click a type to explore its species below. Coverage is the fraction of source species with at least one matched chromosome-scale or complete genome.</p>
+            <div id="vector-type-table" class="recent-table vector-type-table"></div>
+            <p class="note">Groups absent from this source export, such as tsetse flies, are not represented here. A group with zero matched assemblies remains visible. These groupings describe taxonomy, not demonstrated transmission.</p>
           </article>
 
           <article class="panel chart-panel span-2">
@@ -494,7 +501,7 @@
 
           <article class="panel summary-panel">
             <p class="panel-kicker">All time</p>
-            <h2 class="panel-title">Broad groups</h2>
+            <h2 class="panel-title">Vector types</h2>
             <div id="vector-group-table" class="simple-table"></div>
             <div class="subsection milestone-section" hidden>
               <p class="panel-kicker">Milestones</p><h2 class="panel-title">When did we cross each total?</h2>
@@ -510,7 +517,7 @@
             <div id="vector-recent-list" class="recent-table vector-recent-table"></div>
           </article>
         </section>
-        <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Synonyms are not inferred. Genus, complex, group and uncertain source labels are excluded from species matching.</p><a href="../data/status/mapveu_species.tsv" download>Download the original taxon-label summary</a></article>
+        <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-type-filter">Vector type</label><select id="vector-type-filter"><option value="">All types</option></select><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><p class="note" id="vector-filter-count"></p><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Synonyms are not inferred. Genus, complex, group and uncertain source labels are excluded from species matching.</p><a href="../data/status/mapveu_species.tsv" download>Download the original taxon-label summary</a></article>
       </section>
     </section>
 
@@ -711,6 +718,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261010calendar1"></script>
+  <script src="app.js?v=20261010vectortypes1"></script>
 </body>
 </html>
