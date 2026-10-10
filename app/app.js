@@ -1,5 +1,7 @@
 const D='../data/dashboard.json';
 const TAXA_INDEX_URL='../data/taxa/index.json';
+const VECTOR_URL='../data/status/vectors.json';
+let VECTOR_DATA=null, VECTOR_LOADING=null;
 const IUCN_URL='../data/status/iucn.json';
 const COUNTRY_URL='../data/countries.json';
 const SEQUENCING_COUNTRY_URL='../data/sequencing_countries.json';
@@ -50,6 +52,7 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   el('overview-view').hidden=view!=='overview';
   el('taxa-view').hidden=view!=='taxa';
   el('status-view').hidden=view!=='status';
+  el('vector-view').hidden=view!=='vectors';
   el('countries-view').hidden=view!=='countries';
   el('genometrics-view').hidden=view!=='genometrics';
   if(view==='taxa'){
@@ -58,6 +61,9 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   }else if(view==='status'){
     el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
     loadIucn();
+  }else if(view==='vectors'){
+    el('range-label').textContent='Vector species · all time';
+    loadVectors();
   }else if(view==='countries'){
     el('range-label').textContent='By country';
     loadCountries();
@@ -1067,6 +1073,115 @@ function renderStatus(){
   el('status-source-note').textContent=(source.scope||'IUCN Red List categories')+' · '+(source.matching||'species-name matching');
 }
 
+async function loadVectors(){
+  if(VECTOR_DATA){renderVectors();return;}
+  if(VECTOR_LOADING)return VECTOR_LOADING;
+  VECTOR_LOADING=fetch(VECTOR_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(d=>{VECTOR_DATA=d;renderVectors();}).catch(err=>{el('vector-loading').textContent='Vector data unavailable. Reopen this tab to retry.';console.error(err);}).finally(()=>{VECTOR_LOADING=null;});
+  return VECTOR_LOADING;
+}
+function renderVectorInventory(){
+  if(!VECTOR_DATA)return;
+  const d=VECTOR_DATA, q=el('vector-search').value.trim().toLowerCase();
+  el('vector-coverage').textContent=fmt(d.summary.species)+' species with qualifying genomes out of '+fmt(d.source.species_names)+' distinct source binomials; '+fmt(d.source.taxon_labels)+' original taxon labels from '+fmt(d.source.sample_rows)+' sample records. Export: '+d.source.export_date+'.';
+  const xs=d.species_inventory.filter(x=>x.species.toLowerCase().includes(q));
+  el('vector-species-list').innerHTML='<div class="header"><span>Species</span><span>Assemblies</span><span>Sample records</span><span>First genome</span><span>Latest genome</span></div>'+xs.map(x=>'<div class="row"><span class="species">'+(x.tax_ids.length?'<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+esc(x.tax_ids[0])+'" target="_blank" rel="noopener"><em>'+esc(x.species)+'</em></a>':'<em>'+esc(x.species)+'</em>')+'</span><span>'+fmt(x.assemblies)+'</span><span>'+fmt(x.sample_rows)+'</span><span>'+esc(x.first_release||'—')+'</span><span>'+esc(x.latest_release||'—')+'</span></div>').join('');
+}
+el('vector-search').addEventListener('input',renderVectorInventory);
+
+function renderVectors(){
+  if(!VECTOR_DATA)return;
+  const s=VECTOR_DATA;
+  if(!s)return;
+  const label='Vector / surveillance';
+  const last60=dailyWindow(s.recent_daily,60,VECTOR_DATA.generated_at);
+  const last30=last60.slice(-30);
+  const currentPace=businessDayPace(last30);
+  el('vector-loading').hidden=true;
+  el('vector-content').hidden=false;
+  el('vector-primary-label').textContent=label+' · all time';
+  el('vector-assemblies').textContent=fmt(s.summary.assemblies);
+  el('vector-species').textContent=fmt(s.summary.species);
+  el('vector-first').textContent=fmt(s.summary.first_time_species);
+  el('vector-pipeline').textContent=fmt(s.annotations?.in_progress?.length||0);
+  el('vector-completed').textContent=fmt(s.annotations?.recent_completed?.length||0);
+  el('vector-rate').textContent=fmt1(currentPace);
+  el('vector-hero-count').textContent=fmt(s.summary.assemblies);
+  el('vector-hero-species').textContent=fmt(s.summary.species);
+  el('vector-hero-first').textContent=fmt(s.summary.first_time_species);
+  el('vector-hero-title').textContent=label+' species genome deposits';
+
+  const x=s.latest_assembly;
+  if(!x){
+    el('vector-newest-card').innerHTML='<div class="image-placeholder">No recent matching assembly metadata available</div>';
+  }else{
+    const image=x.image?.thumb_url
+      ? `<img class="taxon-image" src="${x.image.thumb_url}" alt="${esc(x.organism_name)}" loading="lazy">`
+      : '<div class="image-placeholder">No cached Wikimedia image available</div>';
+    const details=[
+      x.common_name?esc(x.common_name):null,
+      x.chromosome_count?fmt(x.chromosome_count)+' chromosomes':null,
+      x.total_sequence_length?fmt1(x.total_sequence_length/1e6)+' Mb genome':null
+    ].filter(Boolean).join(' · ');
+    el('vector-newest-card').innerHTML=`${image}<div>
+      <h3>${assemblySpeciesLink(x)}</h3>
+      ${details?`<p class="featured-details">${details}</p>`:''}
+      <p>${esc(label)} · ${esc(x.assembly_level||'Assembly')} · ${esc(x.accession||'')}</p>
+      <p>Released ${esc(x.release_date||'')}</p>
+      ${x.image?.credit?`<p class="credit">Image credit: ${x.image.credit}</p>`:''}
+    </div>`;
+  }
+
+  drawDonut('vector-donut-genus','vector-donut-genus-legend',s.genus_breakdown||[],'assemblies','Genus',Object.fromEntries((s.genus_breakdown||[]).map((g,i)=>[g.group,METHOD_TREND_COLORS[i%METHOD_TREND_COLORS.length]])));
+  drawDonut('vector-donut-groups','vector-donut-groups-legend',[{group:'With qualifying genomes',count:s.summary.species},{group:'No matched qualifying genome',count:s.source.species_names-s.summary.species}],'species','Coverage',{'With qualifying genomes':'#2e6ea6','No matched qualifying genome':'#d8dfdb'});
+
+  const yearly=(s.yearly||[]).map(x=>({date:String(x.year),assemblies:Number(x.assemblies||0)}));
+  drawLineChart('vector-rate-chart',yearly,'assemblies',yearly.map(x=>x.date),'all');
+
+  let a=0,f=0;
+  const cumulative=(s.yearly||[]).map(x=>({
+    year:String(x.year),
+    assemblies:(a+=Number(x.assemblies||0)),
+    first:(f+=Number(x.first_time_species||0))
+  }));
+  drawDualChart('vector-cumulative-chart',cumulative);
+
+  el('vector-pipeline-list').innerHTML=(s.annotations?.in_progress||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.status||'')}</span></div>`).join('')||'<p class="note">No matching annotation runs listed.</p>';
+  el('vector-recent-annotation-list').innerHTML=(s.annotations?.recent_completed||[]).slice(0,7).map(x=>`<div class="list-row"><strong><em>${esc(x.species)}</em></strong><span>${esc(x.release_date||'')}</span></div>`).join('')||'<p class="note">No matching recent annotations listed.</p>';
+
+  const groups=normalizedGroups(s.groups_all),gtotal=groups.reduce((a,b)=>a+b.count,0)||1;
+  el('vector-group-table').innerHTML=groups.map(x=>`<div class="table-row"><strong>${x.group}</strong><span>${fmt(x.count)}</span><span>${fmt1(100*x.count/gtotal)}%</span></div>`).join('');
+
+  const milestones=s.milestones||[];
+  el('vector-milestone-table').innerHTML=milestones.length
+    ? milestones.map(x=>`<div class="table-row milestone-row"><strong>${fmt(x.threshold)}</strong><span class="milestone-date">${prettyDate(x.date)}</span><span></span></div>`).join('')
+    : '<p class="note">No assembly-count milestones crossed yet.</p>';
+
+  const recent=s.recent_assemblies||[];
+  const recentBySpecies=new Map();
+  recent.forEach(x=>{
+    const species=String(x.organism_name||'').trim()||String(x.accession||'');
+    const key=species+'\u0000'+String(x.release_date||'');
+    if(!recentBySpecies.has(key))recentBySpecies.set(key,[]);
+    recentBySpecies.get(key).push(x);
+  });
+  const recentSpeciesRows=[...recentBySpecies.values()].slice(0,18);
+  const recentAccessionLinks=xs=>xs.map(x=>{
+    const acc=esc(x.accession||'');
+    const url=assemblyUrl(x.accession);
+    return url ? `<a class="assembly-link" href="${url}" target="_blank" rel="noopener">${acc}</a>` : acc;
+  }).join('<br>');
+  const recentUniqueText=(xs,key)=>[...new Set(xs.map(x=>String(x[key]||'').trim()).filter(Boolean))].map(esc).join('<br>');
+  el('vector-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>Source</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
+    recentSpeciesRows.map(xs=>{
+      const x=xs[0];
+      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'common_name')||'—'}</span><span class="muted">${'MapVEu'}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
+    }).join('');
+
+  renderVectorInventory();
+  const source=VECTOR_DATA.source||{};
+  el('vector-source-note').textContent=source.scope+' '+source.matching;
+}
+
 function activeCountryData(){
   return countryFacet==='sequencing' ? SEQ_COUNTRY_DATA : COUNTRY_DATA;
 }
@@ -1872,3 +1987,5 @@ function positionTooltip(ev,tip){
   if(top+th+pad>window.innerHeight)top=ev.clientY-th-16;
   tip.style.left=left+'px';tip.style.top=top+'px';
 }
+
+if(location.hash==='#vectors')document.querySelector('.section-tab[data-view="vectors"]').click();

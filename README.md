@@ -232,6 +232,14 @@ A few boundaries are intentional:
 
 These constraints are kept visible because the project is intended to make the dynamics of public genome sequencing easier to inspect without implying more precision than the source databases provide.
 
+## Vector species and surveillance coverage
+
+The **Vector species** tab uses the MapVEu/VectorBase sample export dated 10 October 2026 (1,834,448 sample records; 536 taxonomic labels). The compact source table is [`data/status/mapveu_species.tsv`](data/status/mapveu_species.tsv). It preserves the original labels and sample/study counts without distributing the sample-level export.
+
+The tab is a source-defined view of vectors and related surveillance taxa, rather than a registry of demonstrated disease transmission. Exact scientific binomials are matched against the current GenBank chromosome-scale and complete assembly collection. Named subspecies are combined at species level; genus, complex, group, hybrid and uncertain labels are excluded. Synonyms are not inferred. NCBI taxids returned for matched assemblies are retained, but are not treated as independently verified source taxids. A zero match means no qualifying assembly was matched, not that no genome exists.
+
+[`scripts/build_vectors.py`](scripts/build_vectors.py) rebuilds the genome history on every publication and scheduled refresh. The searchable inventory includes source species with zero matches; charts and summary counts include only matched qualifying genomes. Deposition pace retains the trailing 30-day business-day window.
+
 ## Acknowledgements
 
 The visual concept was inspired by Kate Morley's [National Grid: Live](https://grid.iamkate.com/), which demonstrates how a continuously changing technical system can be made immediately legible through a compact public dashboard.

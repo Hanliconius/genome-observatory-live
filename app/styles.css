@@ -969,3 +969,9 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 /* Selected-taxon genome-size comparison */
 .taxon-size-chart{display:block;width:100%;height:auto;overflow:visible;margin-top:10px}
 .taxon-size-hit{fill:transparent;pointer-events:all;cursor:crosshair}
+
+.vector-recent-table .header,.vector-recent-table .row{grid-template-columns:100px 1.45fr 1.05fr 1fr 1.15fr 105px 120px}
+.vector-inventory{max-height:540px;overflow:auto}
+.vector-inventory .header,.vector-inventory .row{grid-template-columns:2fr 1fr 1fr 1fr 1fr}
+.vector-inventory .header{position:sticky;top:0;background:var(--paper,#fff)}
+@media(max-width:900px){.vector-recent-table .header,.vector-recent-table .row,.vector-inventory .header,.vector-inventory .row{grid-template-columns:1.5fr 1fr}}

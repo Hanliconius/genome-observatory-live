@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261008g" />
+  <link rel="stylesheet" href="styles.css?v=20261010vectors-20261008g" />
 </head>
 <body>
   <header class="site-head">
@@ -28,6 +28,7 @@
       <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
       <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12 17 8M5.5 16.5h13"/><path d="M7 7.5 5.5 6M17 7.5 18.5 6"/></svg><span>Genometrics</span></button>
       <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
+      <button class="section-tab" data-view="vectors"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l5 5M14 14l5 5M5 19l5-5M14 10l5-5"/></svg><span>Vector species</span></button>
       <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
       <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
     </nav>
@@ -415,6 +416,104 @@
       </section>
     </section>
 
+    <section id="vector-view" hidden>
+      <article class="vector-intro">
+        <div>
+          <p class="panel-kicker">MapVEu · VectorBase</p>
+          <h2>Vector species and surveillance taxa</h2>
+          <p class="taxon-intro">Chromosome-scale and complete GenBank assemblies, restricted to taxa carrying current MapVEu · VectorBase categories.</p>
+        </div>
+
+      </article>
+
+      <div id="vector-loading" class="vector-loading">Loading vector genome history…</div>
+
+      <section id="vector-content" hidden>
+        <section class="stat-strip vector-stats">
+          <div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value" id="vector-assemblies">—</span></div>
+          <div class="stat-box"><span class="stat-label">Species</span><span class="stat-value" id="vector-species">—</span></div>
+          <div class="stat-box"><span class="stat-label">First-time species</span><span class="stat-value" id="vector-first">—</span></div>
+          <div class="stat-box"><span class="stat-label">In annotation</span><span class="stat-value" id="vector-pipeline">—</span></div>
+          <div class="stat-box"><span class="stat-label">Recent annotations</span><span class="stat-value" id="vector-completed">—</span></div>
+          <div class="stat-box"><span class="stat-label">30-day business-day pace</span><span class="stat-value" id="vector-rate">—</span></div>
+        </section>
+
+        <section class="layout-grid">
+          <article class="panel overview-hero full-width">
+            <div class="overview-hero-count">
+              <p class="panel-kicker" id="vector-primary-label">Vector / surveillance · all time</p>
+              <h2 class="panel-title" id="vector-hero-title">Vector / surveillance species genome deposits</h2>
+              <div class="hero-number" id="vector-hero-count">—</div>
+              <p class="hero-subline"><span id="vector-hero-species">—</span> species represented · <span id="vector-hero-first">—</span> first-time species</p>
+            </div>
+            <div class="overview-hero-arrival">
+              <p class="panel-kicker">Newest arrival</p>
+              <h2 class="panel-title">Most recent matching deposited genome</h2>
+              <div id="vector-newest-card" class="newest-card"></div>
+            </div>
+          </article>
+
+          <article class="panel full-width composition-panel">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Composition</p>
+                <h2 class="panel-title">Genome deposits by genus and source species coverage</h2>
+              </div>
+            </div>
+            <div class="donut-pair">
+              <div class="donut-block">
+                <h3>Genus</h3>
+                <div class="donut-wrap"><svg id="vector-donut-genus" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+                <div id="vector-donut-genus-legend" class="donut-legend"></div>
+              </div>
+              <div class="donut-block">
+                <h3>Source species coverage</h3>
+                <div class="donut-wrap"><svg id="vector-donut-groups" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
+                <div id="vector-donut-groups-legend" class="donut-legend"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel chart-panel span-2">
+            <div class="panel-head"><div><p class="panel-kicker">Assemblies over time</p><h2 class="panel-title">Deposits per year</h2></div></div>
+            <svg id="vector-rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+          </article>
+
+          <article class="panel list-panel">
+            <p class="panel-kicker">RefSeq</p>
+            <h2 class="panel-title">Matching annotation activity</h2>
+            <div class="subsection"><h3>In progress</h3><div id="vector-pipeline-list" class="list-table"></div></div>
+            <div class="subsection"><h3>Recently completed</h3><div id="vector-recent-annotation-list" class="list-table"></div></div>
+          </article>
+
+          <article class="panel chart-panel span-2">
+            <div class="panel-head"><div><p class="panel-kicker">Cumulative coverage</p><h2 class="panel-title">Assemblies and first-time species through time</h2></div></div>
+            <svg id="vector-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+          </article>
+
+          <article class="panel summary-panel">
+            <p class="panel-kicker">All time</p>
+            <h2 class="panel-title">Broad groups</h2>
+            <div id="vector-group-table" class="simple-table"></div>
+            <div class="subsection milestone-section" hidden>
+              <p class="panel-kicker">Milestones</p><h2 class="panel-title">When did we cross each total?</h2>
+              <div id="vector-milestone-table" class="simple-table milestone-table"></div>
+            </div>
+          </article>
+
+          <article class="panel full-width">
+            <div class="panel-head">
+              <div><p class="panel-kicker">Recent deposits</p><h2 class="panel-title">Rolling matching assembly metadata</h2></div>
+              <p class="note" id="vector-source-note">MapVEu · VectorBase categories · species-name matching</p>
+            </div>
+            <div id="vector-recent-list" class="recent-table vector-recent-table"></div>
+          </article>
+        </section>
+        <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Synonyms are not inferred. Genus, complex, group and uncertain source labels are excluded from species matching.</p><a href="../data/status/mapveu_species.tsv" download>Download the original taxon-label summary</a></article>
+      </section>
+    </section>
+
     <section id="countries-view" hidden>
       <article class="country-facet-header">
         <div>
@@ -612,6 +711,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261009taxa2"></script>
+  <script src="app.js?v=20261010vectors1"></script>
 </body>
 </html>
