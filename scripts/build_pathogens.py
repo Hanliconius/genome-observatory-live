@@ -10,6 +10,7 @@ from pathlib import Path
 from audit_full_history import iterate_ncbi
 from build_iucn import normalize_assembly
 from build_vectors import build as build_vectors
+from build_countries import geo_loc_name, country_from_geo, marine_from_geo
 
 ROOT = Path(__file__).resolve().parents[1]
 LIST = ROOT / 'data/status/pathogens.tsv'
@@ -23,6 +24,34 @@ def binomial(name):
         return None
     name = ' '.join(parts[:2])
     return name if re.fullmatch(r'[A-Z][a-z]+ [a-z][a-z-]+', name) else None
+
+
+def origin_maps(rows):
+    def broad(x):
+        group = x['vector_type']
+        return 'Parasitic worms' if group in ('Parasitic nematodes', 'Parasitic flatworms', 'Other parasitic worms') else 'Pathogenic fungi' if group == 'Fungal parasites' else group
+    def summarise(selected):
+        countries, marine = {}, {}
+        for x in selected:
+            location = x.get('geo_loc_name')
+            c = country_from_geo(location)
+            m = None if c else marine_from_geo(location)
+            rec, key, target = (c, c['iso3'], countries) if c else (m, m['name'], marine) if m else (None, None, None)
+            if rec:
+                target.setdefault(key, dict(rec, assemblies=0, species=set()))
+                target[key]['assemblies'] += 1
+                target[key]['species'].add(x['species_name'])
+        for rec in list(countries.values()) + list(marine.values()):
+            rec['species'] = len(rec['species'])
+        assigned = sum(x['assemblies'] for x in countries.values())
+        ocean = sum(x['assemblies'] for x in marine.values())
+        return {'countries': sorted(countries.values(), key=lambda x: x['name']),
+                'marine_localities': sorted(marine.values(), key=lambda x: x['name']),
+                'stats': {'assemblies': len(selected), 'origin_country_assemblies': assigned,
+                          'origin_marine_assemblies': ocean, 'origin_resolved_assemblies': assigned + ocean,
+                          'unassigned_assemblies': len(selected) - assigned - ocean}}
+    groups = sorted({broad(x) for x in rows})
+    return {'all': summarise(rows), 'groups': {g: summarise([x for x in rows if broad(x) == g]) for g in groups}}
 
 
 def aggregate(rows, species, dashboard, vector_source):
@@ -70,6 +99,7 @@ def aggregate(rows, species, dashboard, vector_source):
                    'curated_list': '../data/status/pathogens.tsv'},
         'summary': {'assemblies': len(rows), 'species': len(first), 'first_time_species': len(first)},
         'species_inventory': inventory, 'type_summary': types,
+        'origin_maps': origin_maps(rows),
         'type_breakdown': [{'group': g['name'], 'count': g['assemblies']} for g in types if g['assemblies']],
         'genus_breakdown': [{'group': g, 'count': n} for g,n in genera.most_common()],
         'yearly': [{'year': y, 'assemblies': yearly[y], 'first_time_species': first_year[y]} for y in sorted(yearly)],
@@ -117,7 +147,8 @@ def build(reports):
     vector_types = {x['species']: x['vector_type'] for x in vector_species}
     vector_rows = [dict(x, vector_type=vector_types[x['species_name']], role='Vector / surveillance', disease='Vector surveillance', source_url=MAPVEU) for x in vector['assembly_inventory']]
     all_species = {x['species']: x for x in vector_species+species}
-    all_rows = vector_rows+rows
+    locations = {r.get('accession'): geo_loc_name(r) for r in reports}
+    all_rows = [dict(x, geo_loc_name=locations.get(x['accession'])) for x in vector_rows+rows]
     payload = aggregate(all_rows, list(all_species.values()), dashboard, vector)
     views = {}
     for name, chosen in {

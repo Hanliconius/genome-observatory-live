@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from build_pathogens import build, binomial
+from build_pathogens import build, binomial, origin_maps
 
 
 def report(i, name, level='Chromosome'):
@@ -32,6 +32,21 @@ class PathogenMatching(unittest.TestCase):
         for view in [d]+list(d['views'].values()):
             self.assertEqual(sum(x['assemblies'] for x in view['species_inventory']),view['summary']['assemblies'])
         self.assertFalse(any(x['assemblies'] for x in d['species_inventory'] if x['species']=='Entamoeba coli'))
+
+    def test_origin_maps_groups_and_missing_locations(self):
+        rows = [dict(species_name='Schistosoma mansoni', vector_type='Parasitic flatworms', geo_loc_name='UK: London'),
+                dict(species_name='Ascaris lumbricoides', vector_type='Parasitic nematodes', geo_loc_name='United Kingdom'),
+                dict(species_name='Trypanosoma brucei', vector_type='Protist parasites', geo_loc_name='Pacific Ocean'),
+                dict(species_name='Candida albicans', vector_type='Pathogenic fungi', geo_loc_name='not collected')]
+        maps = origin_maps(rows)
+        self.assertEqual(maps['all']['stats']['origin_resolved_assemblies'],3)
+        self.assertEqual(maps['all']['stats']['unassigned_assemblies'],1)
+        worms = maps['groups']['Parasitic worms']
+        self.assertEqual(worms['countries'][0]['iso3'],'GBR')
+        self.assertEqual(worms['countries'][0]['assemblies'],2)
+        self.assertEqual(worms['countries'][0]['species'],2)
+        self.assertEqual(maps['groups']['Protist parasites']['marine_localities'][0]['name'],'Pacific Ocean')
+        self.assertEqual(sum(g['stats']['assemblies'] for g in maps['groups'].values()),4)
 
     def test_uncertain_names(self):
         self.assertIsNone(binomial('Plasmodium sp.'))

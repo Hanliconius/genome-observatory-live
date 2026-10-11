@@ -1208,6 +1208,33 @@ function renderVectors(){
   renderVectorInventory();
   const source=s.source||{};
   el('vector-source-note').textContent=source.scope+' '+source.matching;
+  renderDiseaseMap();
+}
+
+el('disease-map-group').addEventListener('change',renderDiseaseMap);
+function renderDiseaseMap(){
+  const d=selectedDiseaseData();
+  if(!d)return;
+  const maps=d.origin_maps;
+  const select=el('disease-map-group'), chosen=select.value;
+  const groups=Object.keys(maps?.groups||{});
+  select.innerHTML='<option value="">All groups</option>'+groups.map(g=>'<option value="'+esc(g)+'">'+esc(g)+'</option>').join('');
+  select.value=groups.includes(chosen)?chosen:'';
+  const label=diseaseMode==='vectors'?'Vector':'Pathogen';
+  el('disease-map-title').textContent=label+' genome sample origins';
+  const data=select.value?maps?.groups[select.value]:maps?.all;
+  if(!data){el('taxon-map-status-disease').textContent='Geographic origin data unavailable.';return;}
+  if(!WORLD_DATA){
+    el('taxon-map-status-disease').textContent='Loading world map…';
+    ensureWorldData().then(renderDiseaseMap).catch(()=>{el('taxon-map-status-disease').textContent='World map unavailable. Reopen this tab to retry.';});
+    return;
+  }
+  const max=Math.max(0,...data.countries.map(x=>x.assemblies));
+  const marineMax=Math.max(0,...data.marine_localities.map(x=>x.assemblies));
+  drawTaxonOriginMap('disease',{...data,name:select.value||label.toLowerCase()},max,marineMax);
+  el('taxon-map-legend-disease').innerHTML=el('taxon-map-legend-disease').innerHTML.replaceAll('shared fill scale','fill scale').replaceAll('shared marker-size scale','marker-size scale');
+  const stats=data.stats;
+  el('taxon-map-status-disease').textContent=fmt(stats.origin_resolved_assemblies)+' of '+fmt(stats.assemblies)+' assemblies have resolved sample origins: '+fmt(stats.origin_country_assemblies)+' country, '+fmt(stats.origin_marine_assemblies)+' ocean/sea; '+fmt(stats.unassigned_assemblies)+' unassigned.';
 }
 
 function activeCountryData(){
