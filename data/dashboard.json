@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-10T10:40:16.342316+00:00",
+  "generated_at": "2026-10-11T10:50:46.339889+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 84,
-      "species": 69,
-      "first_time_species": 54
+      "assemblies": 53,
+      "species": 42,
+      "first_time_species": 24
     },
     "year": {
-      "assemblies": 6438,
-      "species": 4019,
-      "first_time_species": 3458
+      "assemblies": 6435,
+      "species": 4008,
+      "first_time_species": 3446
     },
     "all": {
-      "assemblies": 19056,
+      "assemblies": 19070,
       "species": 10679,
       "first_time_species": 10679
     }
@@ -55767,33 +55767,33 @@
     },
     {
       "date": "2026-10-03",
-      "assemblies": 93,
-      "species": 76,
+      "assemblies": 100,
+      "species": 77,
       "first_time_species": 67
     },
     {
       "date": "2026-10-04",
-      "assemblies": 33,
+      "assemblies": 38,
       "species": 30,
-      "first_time_species": 28
+      "first_time_species": 26
     },
     {
       "date": "2026-10-05",
       "assemblies": 13,
       "species": 9,
-      "first_time_species": 8
+      "first_time_species": 7
     },
     {
       "date": "2026-10-06",
-      "assemblies": 10,
-      "species": 7,
+      "assemblies": 11,
+      "species": 8,
       "first_time_species": 2
     },
     {
       "date": "2026-10-07",
-      "assemblies": 28,
-      "species": 24,
-      "first_time_species": 16
+      "assemblies": 29,
+      "species": 25,
+      "first_time_species": 15
     },
     {
       "date": "2026-10-08",
@@ -55809,6 +55809,12 @@
     },
     {
       "date": "2026-10-10",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-10-11",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -55967,19 +55973,19 @@
     },
     {
       "year": "2026",
-      "assemblies": 5426,
-      "species": 3652,
-      "first_time_species": 2803
+      "assemblies": 5440,
+      "species": 3655,
+      "first_time_species": 2799
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 64
+      "count": 41
     },
     {
       "group": "Plants",
-      "count": 17
+      "count": 9
     },
     {
       "group": "Fungi",
@@ -55989,15 +55995,15 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4192
+      "count": 4195
     },
     {
       "group": "Plants",
-      "count": 1672
+      "count": 1669
     },
     {
       "group": "Fungi",
-      "count": 447
+      "count": 444
     },
     {
       "group": "Other",
@@ -56040,27 +56046,7 @@
       "date": "2025-02-13"
     }
   ],
-  "featured_assembly": {
-    "accession": "GCA_988425235.1",
-    "organism_name": "Clava multicornis",
-    "common_name": "club hydroid",
-    "tax_id": 498518,
-    "release_date": "2026-10-07",
-    "assembly_level": "Chromosome",
-    "assembly_name": "jhClaMult1.1",
-    "total_sequence_length": 339922362,
-    "chromosome_count": 15,
-    "genus": "Clava",
-    "family": "Hydractiniidae",
-    "phylum": "Cnidaria",
-    "group": "Animals",
-    "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Clava_multicornis_%28YPM_IZ_029349%29_001.jpeg/960px-Clava_multicornis_%28YPM_IZ_029349%29_001.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Clava_multicornis_(YPM_IZ_029349)_001.jpeg",
-      "credit": "Eric A. Lazo-Wasem · CC0",
-      "matched_name": "Clava multicornis"
-    }
-  },
+  "featured_assembly": null,
   "recent_assemblies": [
     {
       "accession": "GCA_988425565.1",
@@ -56332,12 +56318,7 @@
       "family": "Hydractiniidae",
       "phylum": "Cnidaria",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Clava_multicornis_%28YPM_IZ_029349%29_001.jpeg/960px-Clava_multicornis_%28YPM_IZ_029349%29_001.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Clava_multicornis_(YPM_IZ_029349)_001.jpeg",
-        "credit": "Eric A. Lazo-Wasem · CC0",
-        "matched_name": "Clava multicornis"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988384785.1",
@@ -56353,12 +56334,7 @@
       "family": "Bathyergidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg/960px-%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:(A)_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_(arrow)_in_Heterocephalus_glaber.jpg",
-        "credit": "van der Horst G, Kotzé SH, O’Riain MJ and Maree L · CC BY 4.0",
-        "matched_name": "Heterocephalus"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988384755.1",
@@ -56374,12 +56350,7 @@
       "family": "Bathyergidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg/960px-%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:(A)_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_(arrow)_in_Heterocephalus_glaber.jpg",
-        "credit": "van der Horst G, Kotzé SH, O’Riain MJ and Maree L · CC BY 4.0",
-        "matched_name": "Heterocephalus"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988382735.1",
@@ -56395,12 +56366,7 @@
       "family": "Bathyergidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg/960px-%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:(A)_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_(arrow)_in_Heterocephalus_glaber.jpg",
-        "credit": "van der Horst G, Kotzé SH, O’Riain MJ and Maree L · CC BY 4.0",
-        "matched_name": "Heterocephalus"
-      }
+      "image": null
     },
     {
       "accession": "GCA_988382695.1",
@@ -56416,12 +56382,7 @@
       "family": "Bathyergidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg/960px-%28A%29_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_%28arrow%29_in_Heterocephalus_glaber.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:(A)_Pre-leptotene_primary_spermatocyte_showing_inter-cellular_bridge_(arrow)_in_Heterocephalus_glaber.jpg",
-        "credit": "van der Horst G, Kotzé SH, O’Riain MJ and Maree L · CC BY 4.0",
-        "matched_name": "Heterocephalus"
-      }
+      "image": null
     },
     {
       "accession": "GCA_977050835.1",
@@ -56434,6 +56395,22 @@
       "total_sequence_length": 10881024180,
       "chromosome_count": 14,
       "genus": "Triticum",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062025986.1",
+      "organism_name": "Oryza sativa",
+      "common_name": "Asian cultivated rice",
+      "tax_id": 4530,
+      "release_date": "2026-10-07",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62025986v1",
+      "total_sequence_length": 371687919,
+      "chromosome_count": 12,
+      "genus": "Oryza",
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
@@ -56536,6 +56513,22 @@
       "image": null
     },
     {
+      "accession": "GCA_988324905.1",
+      "organism_name": "Lissotriton montandoni",
+      "common_name": "Carpathian newt",
+      "tax_id": 323754,
+      "release_date": "2026-10-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "aLisMon1.hap2.1",
+      "total_sequence_length": 24862578473,
+      "chromosome_count": 18,
+      "genus": "Lissotriton",
+      "family": "Salamandridae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
       "accession": "GCA_988324765.1",
       "organism_name": "Triticum aestivum",
       "common_name": "bread wheat",
@@ -56549,12 +56542,7 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
-        "credit": "Bijay chaurasia · CC BY-SA 4.0",
-        "matched_name": "Triticum aestivum"
-      }
+      "image": null
     },
     {
       "accession": "GCA_062022351.1",
@@ -56762,7 +56750,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG/960px-Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG",
+        "credit": "Michael Kurz · CC BY-SA 3.0 at",
+        "matched_name": "Eana argentana"
+      }
     },
     {
       "accession": "GCA_988331635.1",
@@ -56778,7 +56771,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG/960px-Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG",
+        "credit": "Michael Kurz · CC BY-SA 3.0 at",
+        "matched_name": "Eana argentana"
+      }
     },
     {
       "accession": "GCA_988331215.1",
@@ -56927,7 +56925,12 @@
       "family": "Pseudophasmatidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Anisomorpha_ferruginea_%28Northern_Two-striped_Walkingstick%29.jpg/960px-Anisomorpha_ferruginea_%28Northern_Two-striped_Walkingstick%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anisomorpha_ferruginea_(Northern_Two-striped_Walkingstick).jpg",
+        "credit": "Sesamehoneytart · CC BY-SA 3.0",
+        "matched_name": "Anisomorpha ferruginea"
+      }
     },
     {
       "accession": "GCA_988324805.1",
@@ -57054,6 +57057,43 @@
       "family": "Stenocephalidae",
       "phylum": "Arthropoda",
       "group": "Animals",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dicranocephalus_adamsi_%28from_projects.biodiversity.be%29_ID-2262.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dicranocephalus_adamsi_(from_projects.biodiversity.be)_ID-2262.jpg",
+        "credit": "Noël Mal · CC BY-SA 4.0",
+        "matched_name": "Dicranocephalus"
+      }
+    },
+    {
+      "accession": "GCA_988324645.1",
+      "organism_name": "Ciconia episcopus",
+      "common_name": "birds",
+      "tax_id": 52776,
+      "release_date": "2026-10-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bCicEpi1.hap2.1",
+      "total_sequence_length": 1296470194,
+      "chromosome_count": 27,
+      "genus": "Ciconia",
+      "family": "Ciconiidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988324605.1",
+      "organism_name": "Larus fuscus",
+      "common_name": "birds",
+      "tax_id": 8915,
+      "release_date": "2026-10-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bLarFus1.hap2.3",
+      "total_sequence_length": 1272834896,
+      "chromosome_count": 35,
+      "genus": "Larus",
+      "family": "Laridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -57103,6 +57143,27 @@
       "phylum": "Chordata",
       "group": "Animals",
       "image": null
+    },
+    {
+      "accession": "GCA_988324365.1",
+      "organism_name": "Raja brachyura",
+      "common_name": "blonde ray",
+      "tax_id": 223862,
+      "release_date": "2026-10-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "sRajBra1.hap1.2",
+      "total_sequence_length": 2956406024,
+      "chromosome_count": 49,
+      "genus": "Raja",
+      "family": "Rajidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Blonde_Ray_%28Raja_brachyura%29%2C_Tenerife%2C_Canary_Islands%2C_Spain_-_panoramio.jpg/960px-Blonde_Ray_%28Raja_brachyura%29%2C_Tenerife%2C_Canary_Islands%2C_Spain_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Blonde_Ray_(Raja_brachyura),_Tenerife,_Canary_Islands,_Spain_-_panoramio.jpg",
+        "credit": "Николай Максимович · CC BY 3.0",
+        "matched_name": "Raja brachyura"
+      }
     },
     {
       "accession": "GCA_988324355.1",
@@ -57347,6 +57408,27 @@
       "family": "Anyphaenidae",
       "phylum": "Arthropoda",
       "group": "Animals",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Anyphaena_sabina.png/960px-Anyphaena_sabina.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anyphaena_sabina.png",
+        "credit": "jtch · CC BY 4.0",
+        "matched_name": "Anyphaena sabina"
+      }
+    },
+    {
+      "accession": "GCA_988273205.2",
+      "organism_name": "Hipposideros jonesi",
+      "common_name": "bats",
+      "tax_id": 584997,
+      "release_date": "2026-10-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mHipJon1.1.hap2.chr_update",
+      "total_sequence_length": 2279908644,
+      "chromosome_count": 16,
+      "genus": "Hipposideros",
+      "family": "Hipposideridae",
+      "phylum": "Chordata",
+      "group": "Animals",
       "image": null
     },
     {
@@ -57409,6 +57491,22 @@
       "chromosome_count": 19,
       "genus": "Mystacina",
       "family": "Mystacinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_985611765.2",
+      "organism_name": "Hipposideros caffer",
+      "common_name": "Sundevall's roundleaf bat",
+      "tax_id": 302402,
+      "release_date": "2026-10-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mHipCaf1.1.hap1.chr_update",
+      "total_sequence_length": 2218523329,
+      "chromosome_count": 16,
+      "genus": "Hipposideros",
+      "family": "Hipposideridae",
       "phylum": "Chordata",
       "group": "Animals",
       "image": null
@@ -57559,6 +57657,22 @@
       "genus": "Rivellia",
       "family": "Platystomatidae",
       "phylum": "Arthropoda",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988324425.1",
+      "organism_name": "Phalacrocorax aristotelis",
+      "common_name": "birds",
+      "tax_id": 126867,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bGulAri2.hap2.2",
+      "total_sequence_length": 1205254948,
+      "chromosome_count": 35,
+      "genus": "Phalacrocorax",
+      "family": "Phalacrocoracidae",
+      "phylum": "Chordata",
       "group": "Animals",
       "image": null
     },
@@ -57792,6 +57906,22 @@
       "image": null
     },
     {
+      "accession": "GCA_988324045.1",
+      "organism_name": "Threskiornis aethiopicus",
+      "common_name": "Sacred ibis",
+      "tax_id": 100858,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bThrAet1.hap2.1",
+      "total_sequence_length": 1297780135,
+      "chromosome_count": 35,
+      "genus": "Threskiornis",
+      "family": "Threskiornithidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
       "accession": "GCA_988323965.1",
       "organism_name": "Acaena novae-zelandiae",
       "common_name": "eudicots",
@@ -57842,7 +57972,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tortricidae-Kadavoor-2016-03-23-001.jpg/960px-Tortricidae-Kadavoor-2016-03-23-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tortricidae-Kadavoor-2016-03-23-001.jpg",
+        "credit": "Jeevan Jose, Kerala, India · CC BY-SA 4.0",
+        "matched_name": "Tortricidae"
+      }
     },
     {
       "accession": "GCA_988323895.1",
@@ -58026,6 +58161,22 @@
       "image": null
     },
     {
+      "accession": "GCA_988323675.1",
+      "organism_name": "Larus canus",
+      "common_name": "birds",
+      "tax_id": 28681,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "bLarCan2.hap1.2",
+      "total_sequence_length": 1367416470,
+      "chromosome_count": 35,
+      "genus": "Larus",
+      "family": "Laridae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
+    {
       "accession": "GCA_988323655.1",
       "organism_name": "Alchemilla alpina",
       "common_name": "eudicots",
@@ -58111,6 +58262,22 @@
       "chromosome_count": 31,
       "genus": "Notodonta",
       "family": "Notodontidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_988323525.1",
+      "organism_name": "Heliconius doris",
+      "common_name": "butterflies",
+      "tax_id": 33455,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilLapDori3.hap2.1",
+      "total_sequence_length": 411088506,
+      "chromosome_count": 25,
+      "genus": "Heliconius",
+      "family": "Nymphalidae",
       "phylum": "Arthropoda",
       "group": "Animals",
       "image": null
@@ -58305,6 +58472,27 @@
       "family": "Apiaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Anethum_graveolens_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anethum_graveolens_02.jpg",
+        "credit": "Tepeyac · CC BY-SA 3.0",
+        "matched_name": "Anethum graveolens"
+      }
+    },
+    {
+      "accession": "GCA_988323365.1",
+      "organism_name": "Eristalis tenax",
+      "common_name": "drone fly",
+      "tax_id": 198635,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "idEriTena62.hap1.1",
+      "total_sequence_length": 524736396,
+      "chromosome_count": 6,
+      "genus": "Eristalis",
+      "family": "Syrphidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
       "image": null
     },
     {
@@ -58433,6 +58621,22 @@
         "credit": "Hans Hillewaert · CC BY-SA 4.0",
         "matched_name": "Episyrphus balteatus"
       }
+    },
+    {
+      "accession": "GCA_988323255.1",
+      "organism_name": "Sticharium dorsale",
+      "common_name": "sand crawler",
+      "tax_id": 57860,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Sticharium dorsale_haplotype_2_assembly",
+      "total_sequence_length": 570144997,
+      "chromosome_count": 29,
+      "genus": "Sticharium",
+      "family": "Clinidae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
     },
     {
       "accession": "GCA_988323235.1",
@@ -58639,7 +58843,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg/960px-Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Rosac%C3%A9e_(Rosaceae)_(18).jpg",
+        "credit": "Gzen92 · CC BY-SA 4.0",
+        "matched_name": "Rosaceae"
+      }
     },
     {
       "accession": "GCA_988322945.1",
@@ -58655,7 +58864,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg/960px-Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Rosac%C3%A9e_(Rosaceae)_(18).jpg",
+        "credit": "Gzen92 · CC BY-SA 4.0",
+        "matched_name": "Rosaceae"
+      }
     },
     {
       "accession": "GCA_988322925.1",
@@ -58672,6 +58886,27 @@
       "phylum": "Nematoda",
       "group": "Animals",
       "image": null
+    },
+    {
+      "accession": "GCA_988322905.1",
+      "organism_name": "Anethum graveolens",
+      "common_name": "dill",
+      "tax_id": 40922,
+      "release_date": "2026-10-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "drAneGrav1.hap1.1",
+      "total_sequence_length": 1232971294,
+      "chromosome_count": 11,
+      "genus": "Anethum",
+      "family": "Apiaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Anethum_graveolens_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anethum_graveolens_02.jpg",
+        "credit": "Tepeyac · CC BY-SA 3.0",
+        "matched_name": "Anethum graveolens"
+      }
     },
     {
       "accession": "GCA_988322895.1",
@@ -59355,7 +59590,12 @@
       "family": "Cyprinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cyprinidae_-_Barbus_plebejus.JPG/960px-Cyprinidae_-_Barbus_plebejus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cyprinidae_-_Barbus_plebejus.JPG",
+        "credit": "Hectonichus · CC BY-SA 3.0",
+        "matched_name": "Cyprinidae"
+      }
     },
     {
       "accession": "GCA_062012673.1",
@@ -59371,7 +59611,12 @@
       "family": "Cyprinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cyprinidae_-_Barbus_plebejus.JPG/960px-Cyprinidae_-_Barbus_plebejus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cyprinidae_-_Barbus_plebejus.JPG",
+        "credit": "Hectonichus · CC BY-SA 3.0",
+        "matched_name": "Cyprinidae"
+      }
     },
     {
       "accession": "GCA_062012672.1",
@@ -59387,7 +59632,12 @@
       "family": "Cyprinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cyprinidae_-_Barbus_plebejus.JPG/960px-Cyprinidae_-_Barbus_plebejus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cyprinidae_-_Barbus_plebejus.JPG",
+        "credit": "Hectonichus · CC BY-SA 3.0",
+        "matched_name": "Cyprinidae"
+      }
     },
     {
       "accession": "GCA_062012670.1",
@@ -59403,7 +59653,12 @@
       "family": "Cyprinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cyprinidae_-_Barbus_plebejus.JPG/960px-Cyprinidae_-_Barbus_plebejus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cyprinidae_-_Barbus_plebejus.JPG",
+        "credit": "Hectonichus · CC BY-SA 3.0",
+        "matched_name": "Cyprinidae"
+      }
     },
     {
       "accession": "GCA_062009919.1",
@@ -62836,7 +63091,12 @@
       "family": "Moridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif/960px-Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pseudophycis_breviuscula_(Northern_bastard_codling).gif",
+        "credit": "Dr Tony Ayling · CC BY-SA 1.0",
+        "matched_name": "Pseudophycis breviuscula"
+      }
     },
     {
       "accession": "GCA_988281415.1",
@@ -62936,7 +63196,12 @@
       "family": "Moridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif/960px-Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pseudophycis_breviuscula_(Northern_bastard_codling).gif",
+        "credit": "Dr Tony Ayling · CC BY-SA 1.0",
+        "matched_name": "Pseudophycis breviuscula"
+      }
     },
     {
       "accession": "GCA_988281365.1",
@@ -63321,7 +63586,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG/960px-Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Pseudolabrus"
+      }
     },
     {
       "accession": "GCA_988281135.1",
@@ -63337,7 +63607,12 @@
       "family": "Labridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG/960px-Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG",
+        "credit": "Peter Southwood · CC BY-SA 3.0",
+        "matched_name": "Pseudolabrus"
+      }
     },
     {
       "accession": "GCA_988281125.1",
@@ -64867,7 +65142,12 @@
       "family": "Pseudocerotidae",
       "phylum": "Platyhelminthes",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Pseudocerotidae_%2837044393063%29.jpg/960px-Pseudocerotidae_%2837044393063%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Pseudocerotidae_(37044393063).jpg",
+        "credit": "Rickard Zerpe · CC BY 2.0",
+        "matched_name": "Pseudocerotidae"
+      }
     },
     {
       "accession": "GCA_988277115.1",
@@ -66068,7 +66348,12 @@
       "family": "Donacidae",
       "phylum": "Mollusca",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Donax_trunculus_MHNT.jpg/960px-Donax_trunculus_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Donax_trunculus_MHNT.jpg",
+        "credit": "Didier Descouens · CC BY-SA 4.0",
+        "matched_name": "Donax trunculus"
+      }
     },
     {
       "accession": "GCA_988242205.1",
@@ -66121,7 +66406,12 @@
       "family": "Nepticulidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/04.089_BF37_Ectoedemia_albifasciella_%285652898871%29.jpg/960px-04.089_BF37_Ectoedemia_albifasciella_%285652898871%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:04.089_BF37_Ectoedemia_albifasciella_(5652898871).jpg",
+        "credit": "Patrick Clement from West Midlands, England · CC BY 2.0",
+        "matched_name": "Ectoedemia albifasciella"
+      }
     },
     {
       "accession": "GCA_988242165.1",
@@ -134231,103 +134521,21 @@
       "assembly_name": "ASM5300802v1",
       "total_sequence_length": 12491856,
       "chromosome_count": 7
-    },
-    {
-      "accession": "GCA_976985105.1",
-      "organism_name": "Lewinskya rupestris",
-      "common_name": null,
-      "tax_id": 478074,
-      "release_date": "2025-10-05",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbLewRupe4.1",
-      "total_sequence_length": 267087206,
-      "chromosome_count": 6
-    },
-    {
-      "accession": "GCA_976984775.1",
-      "organism_name": "Orthonama vittatum",
-      "common_name": null,
-      "tax_id": 986949,
-      "release_date": "2025-10-05",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilOrtVita1.hap1.1",
-      "total_sequence_length": 286323224,
-      "chromosome_count": 20
-    },
-    {
-      "accession": "GCA_976943355.1",
-      "organism_name": "Sympodiomycopsis kandeliae",
-      "common_name": null,
-      "tax_id": 574677,
-      "release_date": "2025-10-05",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "symKanA1",
-      "total_sequence_length": 19249932,
-      "chromosome_count": 6
-    },
-    {
-      "accession": "GCA_976943345.1",
-      "organism_name": "Jaminaea pallidilutea",
-      "common_name": null,
-      "tax_id": 2878321,
-      "release_date": "2025-10-05",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "jamPalA1",
-      "total_sequence_length": 17225416,
-      "chromosome_count": 16
-    },
-    {
-      "accession": "GCA_976943335.1",
-      "organism_name": "Parajaminaea phylloscopi",
-      "common_name": null,
-      "tax_id": 1463510,
-      "release_date": "2025-10-05",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "jamPhyA2",
-      "total_sequence_length": 18271894,
-      "chromosome_count": 3
-    },
-    {
-      "accession": "GCA_976943325.1",
-      "organism_name": "Jaminaea angkorensis CBS 10918",
-      "common_name": null,
-      "tax_id": 1294688,
-      "release_date": "2025-10-05",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "jamAngA5",
-      "total_sequence_length": 20721755,
-      "chromosome_count": 20
-    },
-    {
-      "accession": "GCA_976941425.1",
-      "organism_name": "Dailognatha quadricollis",
-      "common_name": null,
-      "tax_id": 575809,
-      "release_date": "2025-10-05",
-      "assembly_level": "Chromosome",
-      "assembly_name": "icDaiQuad1.1 alternate haplotype",
-      "total_sequence_length": 320412652,
-      "chromosome_count": 11
-    },
-    {
-      "accession": "GCA_965287055.1",
-      "organism_name": "Lutjanus erythropterus",
-      "common_name": "crimson snapper",
-      "tax_id": 211835,
-      "release_date": "2025-10-05",
-      "assembly_level": "Chromosome",
-      "assembly_name": "KFi220850_Lutjanus_malabaricus_holotype",
-      "total_sequence_length": 16540,
-      "chromosome_count": 1
     }
   ],
   "annotations": {
     "in_progress": [
       {
-        "species": "Oryctolagus cuniculus",
+        "species": "Drosophila arizonae",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-05",
-        "assembly": "ASM5122573v1"
+        "freeze_date": "2026-10-09",
+        "assembly": "UAZ_ARI_1.0"
+      },
+      {
+        "species": "Tetranychus urticae",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-08",
+        "assembly": "NJAU_TeUrti_SD_1.0"
       },
       {
         "species": "Drosophila navojoa",
@@ -134348,22 +134556,16 @@
         "assembly": "um_ofav_v1"
       },
       {
-        "species": "Drosophila arizonae",
+        "species": "Oryctolagus cuniculus",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-09",
-        "assembly": "UAZ_ARI_1.0"
+        "freeze_date": "2026-10-05",
+        "assembly": "ASM5122573v1"
       },
       {
         "species": "Diuraphis noxia",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-10-05",
         "assembly": "SU_Dnox_SAM2 (GCF_037042655.1)"
-      },
-      {
-        "species": "Tetranychus urticae",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-08",
-        "assembly": "NJAU_TeUrti_SD_1.0"
       },
       {
         "species": "Pinus tabuliformis",
@@ -145982,9 +146184,24 @@
       "credit": "José Roberto Peruca from Araçatuba/SP, Brasil · CC BY 2.0",
       "matched_name": "Psathyrellaceae"
     },
-    "Pseudoceros maximus": null,
-    "Pseudolabrus biserialis": null,
-    "Pseudophycis breviuscula": null,
+    "Pseudoceros maximus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Pseudocerotidae_%2837044393063%29.jpg/960px-Pseudocerotidae_%2837044393063%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pseudocerotidae_(37044393063).jpg",
+      "credit": "Rickard Zerpe · CC BY 2.0",
+      "matched_name": "Pseudocerotidae"
+    },
+    "Pseudolabrus biserialis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG/960px-Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pseudolabrus_biserialis_Redband_wrasse_PC269971.JPG",
+      "credit": "Peter Southwood · CC BY-SA 3.0",
+      "matched_name": "Pseudolabrus"
+    },
+    "Pseudophycis breviuscula": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif/960px-Pseudophycis_breviuscula_%28Northern_bastard_codling%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pseudophycis_breviuscula_(Northern_bastard_codling).gif",
+      "credit": "Dr Tony Ayling · CC BY-SA 1.0",
+      "matched_name": "Pseudophycis breviuscula"
+    },
     "Psittacula krameri": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Psittacula_krameri%2C_Israel.jpg/960px-Psittacula_krameri%2C_Israel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Psittacula_krameri,_Israel.jpg",
@@ -146364,7 +146581,12 @@
       "credit": "Revolutionrock1976 · CC BY-SA 4.0",
       "matched_name": "Pedetes capensis"
     },
-    "Ptychobarbus chungtienensis": null,
+    "Ptychobarbus chungtienensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cyprinidae_-_Barbus_plebejus.JPG/960px-Cyprinidae_-_Barbus_plebejus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cyprinidae_-_Barbus_plebejus.JPG",
+      "credit": "Hectonichus · CC BY-SA 3.0",
+      "matched_name": "Cyprinidae"
+    },
     "Sthenelais boa": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Sigalionidae_R%C3%A9union.jpg/960px-Sigalionidae_R%C3%A9union.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Sigalionidae_R%C3%A9union.jpg",
@@ -146569,8 +146791,18 @@
       "credit": "janet graham · CC BY 2.0",
       "matched_name": "Dixa nubilipennis"
     },
-    "Donax trunculus": null,
-    "Ectoedemia albifasciella": null,
+    "Donax trunculus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Donax_trunculus_MHNT.jpg/960px-Donax_trunculus_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Donax_trunculus_MHNT.jpg",
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "matched_name": "Donax trunculus"
+    },
+    "Ectoedemia albifasciella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/04.089_BF37_Ectoedemia_albifasciella_%285652898871%29.jpg/960px-04.089_BF37_Ectoedemia_albifasciella_%285652898871%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:04.089_BF37_Ectoedemia_albifasciella_(5652898871).jpg",
+      "credit": "Patrick Clement from West Midlands, England · CC BY 2.0",
+      "matched_name": "Ectoedemia albifasciella"
+    },
     "Elsholtzia ciliata": null,
     "Emberiza calandra": null,
     "Emberiza citrinella": null,
@@ -146995,9 +147227,24 @@
       "credit": "S. Rae from Scotland, UK · CC BY 2.0",
       "matched_name": "Alchemilla alpina"
     },
-    "Anethum graveolens": null,
-    "Anisomorpha ferruginea": null,
-    "Anyphaena sabina": null,
+    "Anethum graveolens": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Anethum_graveolens_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Anethum_graveolens_02.jpg",
+      "credit": "Tepeyac · CC BY-SA 3.0",
+      "matched_name": "Anethum graveolens"
+    },
+    "Anisomorpha ferruginea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Anisomorpha_ferruginea_%28Northern_Two-striped_Walkingstick%29.jpg/960px-Anisomorpha_ferruginea_%28Northern_Two-striped_Walkingstick%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Anisomorpha_ferruginea_(Northern_Two-striped_Walkingstick).jpg",
+      "credit": "Sesamehoneytart · CC BY-SA 3.0",
+      "matched_name": "Anisomorpha ferruginea"
+    },
+    "Anyphaena sabina": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Anyphaena_sabina.png/960px-Anyphaena_sabina.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Anyphaena_sabina.png",
+      "credit": "jtch · CC BY 4.0",
+      "matched_name": "Anyphaena sabina"
+    },
     "Apamea lateritia": null,
     "Ara militaris": null,
     "Arbutus unedo": null,
@@ -147026,9 +147273,24 @@
     "Cydia pomonella": null,
     "Delichon urbicum": null,
     "Dichrorampha alpinana": null,
-    "Dichrorampha heegerana": null,
-    "Dicranocephalus agilis": null,
-    "Eana argentana": null,
+    "Dichrorampha heegerana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tortricidae-Kadavoor-2016-03-23-001.jpg/960px-Tortricidae-Kadavoor-2016-03-23-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tortricidae-Kadavoor-2016-03-23-001.jpg",
+      "credit": "Jeevan Jose, Kerala, India · CC BY-SA 4.0",
+      "matched_name": "Tortricidae"
+    },
+    "Dicranocephalus agilis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dicranocephalus_adamsi_%28from_projects.biodiversity.be%29_ID-2262.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dicranocephalus_adamsi_(from_projects.biodiversity.be)_ID-2262.jpg",
+      "credit": "Noël Mal · CC BY-SA 4.0",
+      "matched_name": "Dicranocephalus"
+    },
+    "Eana argentana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG/960px-Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Eana-argentana-Josef-Waach-Str13-2012-06-15a.JPG",
+      "credit": "Michael Kurz · CC BY-SA 3.0 at",
+      "matched_name": "Eana argentana"
+    },
     "Emydomyces testavorans": null,
     "Ennomos alniaria": null,
     "Epinotia cinereana": {
@@ -147125,7 +147387,12 @@
     "Platycephalus bassensis": null,
     "Platyrrhinus guianensis": null,
     "Propylea quattuordecimpunctata": null,
-    "Prunus lusitanica": null,
+    "Prunus lusitanica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg/960px-Rosac%C3%A9e_%28Rosaceae%29_%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Rosac%C3%A9e_(Rosaceae)_(18).jpg",
+      "credit": "Gzen92 · CC BY-SA 4.0",
+      "matched_name": "Rosaceae"
+    },
     "Pusa hispida": null,
     "Quercus trojana": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Leaf_of_Macedonian_Oak_Quercus_trojana.jpg/960px-Leaf_of_Macedonian_Oak_Quercus_trojana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -147169,7 +147436,8 @@
     "Vicia tetrasperma": null,
     "Vulgichneumon saturatorius": null,
     "Watsonalla uncinula": null,
-    "Zostera noltei": null
+    "Zostera noltei": null,
+    "Oryza sativa": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -152133,7 +152401,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "1100982": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "moths & butterflies",
@@ -152629,7 +152896,6 @@
       "phylum": "Nematoda",
       "kingdom": "Metazoa"
     },
-    "3359044": {},
     "2732611": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "ascomycete fungi",
@@ -152702,7 +152968,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3706531": {},
     "558720": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "beetles",
@@ -152856,7 +153121,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3272347": {},
     "662506": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "wasps, ants & bees",
@@ -152965,7 +153229,6 @@
       "phylum": "Mollusca",
       "kingdom": "Metazoa"
     },
-    "3680444": {},
     "237945": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "wayfaring-tree",
@@ -153028,6 +153291,20 @@
       "family": "Zosteraceae",
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
-    }
+    },
+    "3700093": {},
+    "4530": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Asian cultivated rice",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Oryza",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3359044": {},
+    "3706531": {},
+    "3272347": {},
+    "3680444": {}
   }
 }
