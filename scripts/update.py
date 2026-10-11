@@ -373,18 +373,21 @@ def main():
         {'group':'Other','count':max(0,year_total-year_animals-year_plants-year_fungi)}
     ]
 
-    groups_all=old.get('groups_all')
-    if not groups_all:
-        animals=count_all('Metazoa')
-        plants=count_all('Viridiplantae')
-        fungi=count_all('Fungi')
-        total=all_summary['assemblies']
-        groups_all=[
-            {'group':'Animals','count':animals},
-            {'group':'Plants','count':plants},
-            {'group':'Fungi','count':fungi},
-            {'group':'Other','count':max(0,total-animals-plants-fungi)}
-        ]
+    # Lifetime composition changes with every refresh; never reuse the old
+    # snapshot while the headline total is rebuilt from updated daily history.
+    animals=count_all('Metazoa')
+    plants=count_all('Viridiplantae')
+    fungi=count_all('Fungi')
+    total=all_summary['assemblies']
+    if animals+plants+fungi>total:
+        raise RuntimeError('All-time category counts exceed the assembly total; '
+                           'reconcile the historical inventory before publishing')
+    groups_all=[
+        {'group':'Animals','count':animals},
+        {'group':'Plants','count':plants},
+        {'group':'Fungi','count':fungi},
+        {'group':'Other','count':total-animals-plants-fungi}
+    ]
     out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows,'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
     if full_reconcile:
         expected_by_date={row['date']:row for row in expected_daily}

@@ -103,6 +103,8 @@ jobs:
           age=datetime.now(timezone.utc)-generated
           assert age < timedelta(hours=12), f'Dashboard generation is stale: {age}'
           assert d.get('daily') and d.get('recent_assemblies'), 'Dashboard missing activity data'
+          group_total=sum(int(row['count']) for row in d['groups_all'])
+          assert group_total == d['summary']['all']['assemblies'], f'All-time donut total differs from headline: {group_total}'
           print(f'Dashboard freshness OK: generated {generated.isoformat()}, {len(d["recent_assemblies"])} recent assemblies')
           PY
 
