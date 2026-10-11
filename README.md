@@ -232,15 +232,17 @@ A few boundaries are intentional:
 
 These constraints are kept visible because the project is intended to make the dynamics of public genome sequencing easier to inspect without implying more precision than the source databases provide.
 
-## Vector species and surveillance coverage
+## Pathogens & vectors
 
-The **Vector species** tab uses the MapVEu/VectorBase sample export dated 10 October 2026 (1,834,448 sample records; 536 taxonomic labels). The compact source table is [`data/status/mapveu_species.tsv`](data/status/mapveu_species.tsv). It preserves the original labels and sample/study counts without distributing the sample-level export.
+The **Pathogens & vectors** tab combines vector surveillance taxa with a curated catalogue of disease-causing protists, parasitic worms and selected pathogenic fungi. Its filters update the summaries, composition, deposition history and species inventory for all organisms, vectors, protists, worms or fungi.
 
-The tab is a source-defined view of vectors and related surveillance taxa, rather than a registry of demonstrated disease transmission. Exact scientific binomials are matched against the current GenBank chromosome-scale and complete assembly collection. Named subspecies are combined at species level; genus, complex, group, hybrid and uncertain labels are excluded. Synonyms are not inferred. NCBI taxids returned for matched assemblies are retained, but are not treated as independently verified source taxids. A zero match means no qualifying assembly was matched, not that no genome exists.
+The vector source remains the MapVEu/VectorBase sample export dated 10 October 2026 (1,834,448 records; 536 taxonomic labels), summarized in [`data/status/mapveu_species.tsv`](data/status/mapveu_species.tsv). Broader vector groups use [`data/status/vector_types.json`](data/status/vector_types.json). Source membership does not establish vector competence; categories absent from that export are not represented.
 
-[`scripts/build_vectors.py`](scripts/build_vectors.py) rebuilds the genome history on every publication and scheduled refresh. The searchable inventory includes source species with zero matches; charts and summary counts include only matched qualifying genomes. Deposition pace retains the trailing 30-day calendar-day window.
+The downloadable, editable [`data/status/pathogens.tsv`](data/status/pathogens.tsv) records each selected species, organism group, disease association, source URL, explicit aliases and curation notes. The initial catalogue was reviewed on 11 October 2026 using [CDC DPDx](https://www.cdc.gov/dpdx/az.html) disease pages and selected species from the [WHO fungal priority pathogen list](https://www.who.int/publications/i/item/9789240060241). It focuses on human and zoonotic disease; it is not an exhaustive catalogue of veterinary, plant or fungal pathogens. Non-pathogenic diagnostic comparison organisms are excluded.
 
-Broader groupings (mosquitoes, ticks, sand flies, biting midges and triatomine bugs) use the source-attributed genus mapping in [`data/status/vector_types.json`](data/status/vector_types.json). The comparison includes both matched genomes and zero-match source species, with genus composition still available as an alternate view. Unmapped labels remain **Other / unresolved**; categories absent from the source export are not assigned a zero-genome count.
+To extend the catalogue, add a species-level scientific name with a disease-specific source and one of the existing organism groups. List a verified alternative binomial in `aliases`, separated by `|` when multiple aliases are needed. Do not add an entire genus merely because some members cause disease. The next publication rebuilds the view automatically.
+
+[`scripts/build_pathogens.py`](scripts/build_pathogens.py) combines the sources and rebuilds the tab on every publication and scheduled refresh, using [`scripts/build_vectors.py`](scripts/build_vectors.py) for the retained vector inventory. Current GenBank Chromosome and Complete Genome assemblies qualify. Pathogen strains and subspecies roll up to their curated species; aliases are matched only when explicitly listed. Each accession is counted once, including when multiple sources refer to it. A zero means no qualifying assembly matched, rather than no genome exists. Coverage denominators describe the selected catalogue, not every pathogen. Pace retains the trailing 30-calendar-day window.
 
 ## Acknowledgements
 

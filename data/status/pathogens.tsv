@@ -1,0 +1,135 @@
+species	group	disease	source_url	aliases	notes
+Acanthamoeba castellanii	Protist parasites	Acanthamoeba infections	https://www.cdc.gov/dpdx/freelivingamebic/index.html		
+Ancylostoma braziliense	Parasitic nematodes	Hookworm (Extraintestinal)	https://www.cdc.gov/dpdx/zoonotichookworm/index.html		
+Ancylostoma caninum	Parasitic nematodes	Hookworm (Extraintestinal)	https://www.cdc.gov/dpdx/zoonotichookworm/index.html		
+Ancylostoma ceylanicum	Parasitic nematodes	Hookworm (Intestinal)	https://www.cdc.gov/dpdx/hookworm/index.html		
+Ancylostoma duodenale	Parasitic nematodes	Hookworm (Intestinal)	https://www.cdc.gov/dpdx/hookworm/index.html		
+Angiostrongylus cantonensis	Parasitic nematodes	Angiostrongyliasis, Neural	https://www.cdc.gov/dpdx/angiostrongyliasis_can/index.html		
+Angiostrongylus costaricensis	Parasitic nematodes	Abdominal angiostrongyliasis	https://www.cdc.gov/dpdx/angiostrongyliasis_cos/index.html		
+Anisakis simplex	Parasitic nematodes	Anisakiasis	https://www.cdc.gov/dpdx/anisakiasis/index.html		
+Ascaris lumbricoides	Parasitic nematodes	Ascariasis	https://www.cdc.gov/dpdx/ascariasis/index.html		
+Ascaris suum	Parasitic nematodes	Ascariasis	https://www.cdc.gov/dpdx/ascariasis/index.html		
+Aspergillus fumigatus	Pathogenic fungi	Aspergillosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Babesia divergens	Protist parasites	Babesiosis	https://www.cdc.gov/dpdx/babesiosis/index.html		
+Babesia microti	Protist parasites	Babesiosis	https://www.cdc.gov/dpdx/babesiosis/index.html		
+Balamuthia mandrillaris	Protist parasites	Free Living Amebic Infections	https://www.cdc.gov/dpdx/freelivingamebic/index.html		
+Balantidium coli	Protist parasites	Balantidiasis	https://www.cdc.gov/dpdx/balantidiasis/index.html	Balantioides coli	
+Baylisascaris procyonis	Parasitic nematodes	Baylisascariasis	https://www.cdc.gov/dpdx/baylisascariasis/index.html		
+Bertiella mucronata	Parasitic flatworms	Bertiella Infection	https://www.cdc.gov/dpdx/bertiella/index.html		
+Bertiella studeri	Parasitic flatworms	Bertiella Infection	https://www.cdc.gov/dpdx/bertiella/index.html		
+Brugia malayi	Parasitic nematodes	Lymphatic Filariasis	https://www.cdc.gov/dpdx/lymphaticfilariasis/index.html		
+Brugia timori	Parasitic nematodes	Lymphatic Filariasis	https://www.cdc.gov/dpdx/lymphaticfilariasis/index.html		
+Candida albicans	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Candida auris	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241	Candidozyma auris	Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Candida parapsilosis	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Candida tropicalis	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Capillaria hepatica	Parasitic nematodes	Hepatic Capillariasis	https://www.cdc.gov/dpdx/hepaticcapillariasis/index.html	Calodium hepaticum	
+Capillaria philippinensis	Parasitic nematodes	Intestinal Capillariasis	https://www.cdc.gov/dpdx/intestinalcapillariasis/index.html	Paracapillaria philippinensis	
+Clonorchis sinensis	Parasitic flatworms	Clonorchiasis	https://www.cdc.gov/dpdx/clonorchiasis/index.html		
+Coccidioides immitis	Pathogenic fungi	Coccidioidomycosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Coccidioides posadasii	Pathogenic fungi	Coccidioidomycosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Cryptococcus gattii	Pathogenic fungi	Cryptococcosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Cryptococcus neoformans	Pathogenic fungi	Cryptococcosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Cryptosporidium hominis	Protist parasites	Cryptosporidiosis	https://www.cdc.gov/dpdx/cryptosporidiosis/index.html		
+Cryptosporidium parvum	Protist parasites	Cryptosporidiosis	https://www.cdc.gov/dpdx/cryptosporidiosis/index.html		
+Cyclospora cayetanensis	Protist parasites	Cyclosporiasis	https://www.cdc.gov/dpdx/cyclosporiasis/index.html		
+Cystoisospora belli	Protist parasites	Cystoisosporiasis	https://www.cdc.gov/dpdx/cystoisosporiasis/index.html		
+Dicrocoelium dendriticum	Parasitic flatworms	Dicrocoeliasis	https://www.cdc.gov/dpdx/dicrocoeliasis/index.html		
+Dioctophyme renale	Parasitic nematodes	Dioctophymiasis	https://www.cdc.gov/dpdx/dioctophymiasis/index.html		
+Diphyllobothrium latum	Parasitic flatworms	Diphyllobothriasis	https://www.cdc.gov/dpdx/diphyllobothriasis/index.html	Dibothriocephalus latus	
+Dipylidium caninum	Parasitic flatworms	Dipylidium caninum	https://www.cdc.gov/dpdx/dipylidium/index.html		
+Dirofilaria immitis	Parasitic nematodes	Dirofilariasis	https://www.cdc.gov/dpdx/dirofilariasis/index.html		
+Dracunculus medinensis	Parasitic nematodes	Guinea worm disease	https://www.cdc.gov/dpdx/dracunculiasis/index.html		
+Echinococcus granulosus	Parasitic flatworms	Echinococcosis	https://www.cdc.gov/dpdx/echinococcosis/index.html		
+Echinococcus multilocularis	Parasitic flatworms	Echinococcosis	https://www.cdc.gov/dpdx/echinococcosis/index.html		
+Echinococcus oligarthrus	Parasitic flatworms	Echinococcosis	https://www.cdc.gov/dpdx/echinococcosis/index.html		
+Echinococcus vogeli	Parasitic flatworms	Echinococcosis	https://www.cdc.gov/dpdx/echinococcosis/index.html		
+Encephalitozoon cuniculi	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Encephalitozoon hellem	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Encephalitozoon intestinalis	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Entamoeba histolytica	Protist parasites	Amebiasis	https://www.cdc.gov/dpdx/amebiasis/index.html		
+Enterobius vermicularis	Parasitic nematodes	Enterobiasis	https://www.cdc.gov/dpdx/enterobiasis/index.html		
+Enterocytozoon bieneusi	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Fasciola gigantica	Parasitic flatworms	Fascioliasis	https://www.cdc.gov/dpdx/fascioliasis/index.html		
+Fasciola hepatica	Parasitic flatworms	Fascioliasis	https://www.cdc.gov/dpdx/fascioliasis/index.html		
+Fasciolopsis buski	Parasitic flatworms	Fasciolopsiasis	https://www.cdc.gov/dpdx/fasciolopsiasis/index.html		
+Giardia duodenalis	Protist parasites	Giardiasis	https://www.cdc.gov/dpdx/giardiasis/index.html	Giardia intestinalis|Giardia lamblia	
+Gnathostoma hispidum	Parasitic nematodes	Gnathostomiasis	https://www.cdc.gov/dpdx/gnathostomiasis/index.html		
+Gnathostoma spinigerum	Parasitic nematodes	Gnathostomiasis	https://www.cdc.gov/dpdx/gnathostomiasis/index.html		
+Gongylonema pulchrum	Parasitic nematodes	Gongylonema infection	https://www.cdc.gov/dpdx/gongylonema/index.html		
+Heterophyes heterophyes	Parasitic flatworms	Heterophyiasis	https://www.cdc.gov/dpdx/heterophyiasis/index.html		
+Histoplasma capsulatum	Pathogenic fungi	Histoplasmosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Hymenolepis diminuta	Parasitic flatworms	Hymenolepiasis	https://www.cdc.gov/dpdx/hymenolepiasis/index.html		
+Hymenolepis nana	Parasitic flatworms	Hymenolepiasis	https://www.cdc.gov/dpdx/hymenolepiasis/index.html		
+Inermicapsifer madagascariensis	Parasitic flatworms	Inermicapsifer infection	https://www.cdc.gov/dpdx/inermicapsifer/index.html		
+Leishmania amazonensis	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania braziliensis	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania donovani	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania guyanensis	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania infantum	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania major	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania mexicana	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania panamensis	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Leishmania tropica	Protist parasites	Leishmaniasis	https://www.cdc.gov/dpdx/leishmaniasis/index.html		
+Loa loa	Parasitic nematodes	Loiasis	https://www.cdc.gov/dpdx/loiasis/index.html		
+Lomentospora prolificans	Pathogenic fungi	Lomentosporiosis	https://www.who.int/publications/i/item/9789240060241	Scedosporium prolificans	Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Macracanthorhynchus hirudinaceus	Other parasitic worms	Acanthocephaliasis	https://www.cdc.gov/dpdx/acanthocephaliasis/index.html		
+Madurella mycetomatis	Pathogenic fungi	Eumycetoma	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Mansonella ozzardi	Parasitic nematodes	Mansonellosis	https://www.cdc.gov/dpdx/mansonellosis/index.html		
+Mansonella perstans	Parasitic nematodes	Mansonellosis	https://www.cdc.gov/dpdx/mansonellosis/index.html		
+Mansonella streptocerca	Parasitic nematodes	Mansonellosis	https://www.cdc.gov/dpdx/mansonellosis/index.html		
+Metagonimus yokogawai	Parasitic flatworms	Metagonimiasis	https://www.cdc.gov/dpdx/metagonimiasis/index.html		
+Moniliformis moniliformis	Other parasitic worms	Acanthocephaliasis	https://www.cdc.gov/dpdx/acanthocephaliasis/index.html		
+Naegleria fowleri	Protist parasites	Free Living Amebic Infections	https://www.cdc.gov/dpdx/freelivingamebic/index.html		
+Nakaseomyces glabratus	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241	Candida glabrata	Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Necator americanus	Parasitic nematodes	Hookworm (Intestinal)	https://www.cdc.gov/dpdx/hookworm/index.html		
+Onchocerca volvulus	Parasitic nematodes	Onchocerciasis	https://www.cdc.gov/dpdx/onchocerciasis/index.html		
+Opisthorchis felineus	Parasitic flatworms	Opisthorchiasis	https://www.cdc.gov/dpdx/opisthorchiasis/index.html		
+Opisthorchis viverrini	Parasitic flatworms	Opisthorchiasis	https://www.cdc.gov/dpdx/opisthorchiasis/index.html		
+Paracoccidioides brasiliensis	Pathogenic fungi	Paracoccidioidomycosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Paracoccidioides lutzii	Pathogenic fungi	Paracoccidioidomycosis	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Paragonimus westermani	Parasitic flatworms	Paragonimiasis	https://www.cdc.gov/dpdx/paragonimiasis/index.html		
+Pichia kudriavzevii	Pathogenic fungi	Candidiasis	https://www.who.int/publications/i/item/9789240060241	Candida krusei	Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Plasmodium falciparum	Protist parasites	Malaria	https://www.cdc.gov/dpdx/malaria/index.html		
+Plasmodium knowlesi	Protist parasites	Malaria	https://www.cdc.gov/dpdx/malaria/index.html		
+Plasmodium malariae	Protist parasites	Malaria	https://www.cdc.gov/dpdx/malaria/index.html		
+Plasmodium ovale	Protist parasites	Malaria	https://www.cdc.gov/dpdx/malaria/index.html		
+Plasmodium vivax	Protist parasites	Malaria	https://www.cdc.gov/dpdx/malaria/index.html		
+Pneumocystis jirovecii	Pathogenic fungi	Pneumocystis pneumonia	https://www.who.int/publications/i/item/9789240060241		Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Pseudoterranova decipiens	Parasitic nematodes	Anisakiasis	https://www.cdc.gov/dpdx/anisakiasis/index.html		
+Raillietina celebensis	Parasitic flatworms	Raillietina infection	https://www.cdc.gov/dpdx/raillietina/index.html		
+Sappinia pedata	Protist parasites	Free Living Amebic Infections	https://www.cdc.gov/dpdx/freelivingamebic/index.html		
+Sarcocystis hominis	Protist parasites	Sarcocystosis	https://www.cdc.gov/dpdx/sarcocystosis/index.html		
+Sarcocystis suihominis	Protist parasites	Sarcocystosis	https://www.cdc.gov/dpdx/sarcocystosis/index.html		
+Schistosoma haematobium	Parasitic flatworms	Schistosomiasis	https://www.cdc.gov/dpdx/schistosomiasis/index.html		
+Schistosoma intercalatum	Parasitic flatworms	Schistosomiasis	https://www.cdc.gov/dpdx/schistosomiasis/index.html		
+Schistosoma japonicum	Parasitic flatworms	Schistosomiasis	https://www.cdc.gov/dpdx/schistosomiasis/index.html		
+Schistosoma mansoni	Parasitic flatworms	Schistosomiasis	https://www.cdc.gov/dpdx/schistosomiasis/index.html		
+Schistosoma mekongi	Parasitic flatworms	Schistosomiasis	https://www.cdc.gov/dpdx/schistosomiasis/index.html		
+Spirometra erinacei	Parasitic flatworms	Sparganosis	https://www.cdc.gov/dpdx/sparganosis/index.html		
+Spirometra mansoni	Parasitic flatworms	Sparganosis	https://www.cdc.gov/dpdx/sparganosis/index.html		
+Spirometra mansonoides	Parasitic flatworms	Sparganosis	https://www.cdc.gov/dpdx/sparganosis/index.html		
+Spirometra ranarum	Parasitic flatworms	Sparganosis	https://www.cdc.gov/dpdx/sparganosis/index.html		
+Strongyloides stercoralis	Parasitic nematodes	Strongyloidiasis	https://www.cdc.gov/dpdx/strongyloidiasis/index.html		
+Taenia asiatica	Parasitic flatworms	Taeniasis	https://www.cdc.gov/dpdx/taeniasis/index.html		
+Taenia multiceps	Parasitic flatworms	Coenurosis	https://www.cdc.gov/dpdx/coenurosis/index.html		
+Taenia saginata	Parasitic flatworms	Taeniasis	https://www.cdc.gov/dpdx/taeniasis/index.html		
+Taenia serialis	Parasitic flatworms	Coenurosis	https://www.cdc.gov/dpdx/coenurosis/index.html		
+Taenia solium	Parasitic flatworms	Taeniasis; cysticercosis	https://www.cdc.gov/dpdx/taeniasis/index.html		
+Talaromyces marneffei	Pathogenic fungi	Talaromycosis	https://www.who.int/publications/i/item/9789240060241	Penicillium marneffei	Selected species from the WHO fungal priority pathogen list; not an exhaustive fungal pathogen catalogue.
+Toxocara canis	Parasitic nematodes	Toxocariasis	https://www.cdc.gov/dpdx/toxocariasis/index.html		
+Toxocara cati	Parasitic nematodes	Toxocariasis	https://www.cdc.gov/dpdx/toxocariasis/index.html		
+Toxoplasma gondii	Protist parasites	Toxoplasmosis	https://www.cdc.gov/dpdx/toxoplasmosis/index.html		
+Trachipleistophora hominis	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Trichinella britovi	Parasitic nematodes	Trichinellosis	https://www.cdc.gov/dpdx/trichinellosis/index.html		
+Trichinella nativa	Parasitic nematodes	Trichinellosis	https://www.cdc.gov/dpdx/trichinellosis/index.html		
+Trichinella nelsoni	Parasitic nematodes	Trichinellosis	https://www.cdc.gov/dpdx/trichinellosis/index.html		
+Trichinella pseudospiralis	Parasitic nematodes	Trichinellosis	https://www.cdc.gov/dpdx/trichinellosis/index.html		
+Trichinella spiralis	Parasitic nematodes	Trichinellosis	https://www.cdc.gov/dpdx/trichinellosis/index.html		
+Trichomonas vaginalis	Protist parasites	Trichomoniasis	https://www.cdc.gov/dpdx/trichomoniasis/index.html		
+Trichuris trichiura	Parasitic nematodes	Trichuriasis	https://www.cdc.gov/dpdx/trichuriasis/index.html		
+Trypanosoma brucei	Protist parasites	African trypanosomiasis; animal infections	https://www.cdc.gov/dpdx/trypanosomiasisafrican/index.html		
+Trypanosoma cruzi	Protist parasites	American Trypanosomiasis	https://www.cdc.gov/dpdx/trypanosomiasisamerican/index.html		
+Uncinaria stenocephala	Parasitic nematodes	Hookworm (Extraintestinal)	https://www.cdc.gov/dpdx/zoonotichookworm/index.html		
+Vittaforma corneae	Fungal parasites	Microsporidiosis	https://www.cdc.gov/dpdx/microsporidiosis/index.html		
+Wuchereria bancrofti	Parasitic nematodes	Lymphatic Filariasis	https://www.cdc.gov/dpdx/lymphaticfilariasis/index.html		

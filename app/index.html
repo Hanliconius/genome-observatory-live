@@ -28,7 +28,7 @@
       <button class="section-tab active" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
       <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12 17 8M5.5 16.5h13"/><path d="M7 7.5 5.5 6M17 7.5 18.5 6"/></svg><span>Genometrics</span></button>
       <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
-      <button class="section-tab" data-view="vectors"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l5 5M14 14l5 5M5 19l5-5M14 10l5-5"/></svg><span>Vector species</span></button>
+      <button class="section-tab" data-view="vectors"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l5 5M14 14l5 5M5 19l5-5M14 10l5-5"/></svg><span>Pathogens &amp; vectors</span></button>
       <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
       <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
     </nav>
@@ -419,14 +419,15 @@
     <section id="vector-view" hidden>
       <article class="vector-intro">
         <div>
-          <p class="panel-kicker">MapVEu · VectorBase</p>
-          <h2>Vector species and surveillance taxa</h2>
-          <p class="taxon-intro">Chromosome-scale and complete GenBank assemblies, restricted to taxa carrying current MapVEu · VectorBase categories.</p>
+          <p class="panel-kicker">Vectors · parasites · fungi</p>
+          <h2>Pathogens &amp; vectors</h2>
+          <p class="taxon-intro">Chromosome-scale and complete GenBank genomes for vector surveillance taxa, disease-causing protists, parasitic worms and selected pathogenic fungi. CDC and WHO sources define the initial pathogen catalogue; this is not an exhaustive list.</p>
         </div>
 
       </article>
 
-      <div id="vector-loading" class="vector-loading">Loading vector genome history…</div>
+      <label for="vector-scope">Explore</label><select id="vector-scope"><option value="all">All pathogens &amp; vectors</option><option value="vectors">Vectors / surveillance</option><option value="protists">Protist parasites</option><option value="worms">Parasitic worms</option><option value="fungi">Pathogenic fungi</option></select>
+      <div id="vector-loading" class="vector-loading">Loading pathogen and vector genome history…</div>
 
       <section id="vector-content" hidden>
         <section class="stat-strip vector-stats">
@@ -441,8 +442,8 @@
         <section class="layout-grid">
           <article class="panel overview-hero full-width">
             <div class="overview-hero-count">
-              <p class="panel-kicker" id="vector-primary-label">Vector / surveillance · all time</p>
-              <h2 class="panel-title" id="vector-hero-title">Vector / surveillance species genome deposits</h2>
+              <p class="panel-kicker" id="vector-primary-label">Pathogens &amp; vectors · all time</p>
+              <h2 class="panel-title" id="vector-hero-title">Pathogen and vector genome deposits</h2>
               <div class="hero-number" id="vector-hero-count">—</div>
               <p class="hero-subline"><span id="vector-hero-species">—</span> species represented · <span id="vector-hero-first">—</span> first-time species</p>
             </div>
@@ -457,12 +458,12 @@
             <div class="panel-head">
               <div>
                 <p class="panel-kicker">Composition</p>
-                <h2 class="panel-title">Genome deposits by vector type and species coverage</h2>
+                <h2 class="panel-title">Genome deposits by organism group and species coverage</h2>
               </div>
             </div>
             <div class="donut-pair">
               <div class="donut-block">
-                <div class="vector-composition-picker"><label for="vector-composition-mode">Group genome deposits by</label><select id="vector-composition-mode"><option value="type">Vector type</option><option value="genus">Genus</option></select></div>
+                <div class="vector-composition-picker"><label for="vector-composition-mode">Group genome deposits by</label><select id="vector-composition-mode"><option value="type">Organism group</option><option value="genus">Genus</option></select></div>
                 <div class="donut-wrap"><svg id="vector-donut-genus" class="donut" viewBox="0 0 240 240" role="img"></svg></div>
                 <div id="vector-donut-genus-legend" class="donut-legend"></div>
               </div>
@@ -475,10 +476,10 @@
           </article>
 
           <article class="panel full-width">
-            <p class="panel-kicker">All-time comparison</p><h2 class="panel-title">Genome coverage by broader vector type</h2>
-            <p class="note">Taxonomic groups of the MapVEu species inventory. Click a type to explore its species below. Coverage is the fraction of source species with at least one matched chromosome-scale or complete genome.</p>
+            <p class="panel-kicker">All-time comparison</p><h2 class="panel-title">Genome coverage by organism group</h2>
+            <p class="note">Click a group to explore its species below. Coverage is the fraction of species in the selected catalogue with at least one matched chromosome-scale or complete genome.</p>
             <div id="vector-type-table" class="recent-table vector-type-table"></div>
-            <p class="note">Groups absent from this source export, such as tsetse flies, are not represented here. A group with zero matched assemblies remains visible. These groupings describe taxonomy, not demonstrated transmission.</p>
+            <p class="note">Vector coverage follows the supplied MapVEu export. Parasites and fungi follow the curated species list linked below. Groups with no matched qualifying genomes remain visible; vector-list membership does not establish transmission.</p>
           </article>
 
           <article class="panel chart-panel span-2">
@@ -501,7 +502,7 @@
 
           <article class="panel summary-panel">
             <p class="panel-kicker">All time</p>
-            <h2 class="panel-title">Vector types</h2>
+            <h2 class="panel-title">Organism groups</h2>
             <div id="vector-group-table" class="simple-table"></div>
             <div class="subsection milestone-section" hidden>
               <p class="panel-kicker">Milestones</p><h2 class="panel-title">When did we cross each total?</h2>
@@ -512,12 +513,12 @@
           <article class="panel full-width">
             <div class="panel-head">
               <div><p class="panel-kicker">Recent deposits</p><h2 class="panel-title">Rolling matching assembly metadata</h2></div>
-              <p class="note" id="vector-source-note">MapVEu · VectorBase categories · species-name matching</p>
+              <p class="note" id="vector-source-note">MapVEu · CDC · WHO · curated species matching</p>
             </div>
             <div id="vector-recent-list" class="recent-table vector-recent-table"></div>
           </article>
         </section>
-        <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-type-filter">Vector type</label><select id="vector-type-filter"><option value="">All types</option></select><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><p class="note" id="vector-filter-count"></p><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Synonyms are not inferred. Genus, complex, group and uncertain source labels are excluded from species matching.</p><a href="../data/status/mapveu_species.tsv" download>Download the original taxon-label summary</a></article>
+        <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-type-filter">Organism group</label><select id="vector-type-filter"><option value="">All types</option></select><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><p class="note" id="vector-filter-count"></p><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Only explicit aliases in the curated list are matched. Strain and subspecies names of pathogens roll up to species; uncertain source labels are excluded.</p><a href="../data/status/pathogens.tsv" download>Download curated pathogen &amp; parasite list</a> · <a href="https://github.com/Hanliconius/genome-observatory-live/blob/main/data/status/pathogens.tsv" target="_blank" rel="noopener">Review the list on GitHub</a> · <a href="../data/status/mapveu_species.tsv" download>Download original vector taxon labels</a></article>
       </section>
     </section>
 
@@ -718,6 +719,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261010vectortypes1"></script>
+  <script src="app.js?v=20261011pathogens1"></script>
 </body>
 </html>

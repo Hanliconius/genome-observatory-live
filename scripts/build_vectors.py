@@ -61,7 +61,7 @@ def species_name(value):
     return None
 
 
-def build(inventory=None):
+def build(inventory=None, reports=None):
     with LABELS.open() as f:
         labels = list(csv.DictReader(f, delimiter='\t'))
     accepted = defaultdict(list)
@@ -74,11 +74,12 @@ def build(inventory=None):
             excluded.append(item['species_label'])
     dashboard = json.loads((ROOT / 'data/dashboard.json').read_text())
     cached = {x['accession']: x for x in dashboard.get('recent_assemblies', [])}
-    if inventory:
-        with Path(inventory).open() as f:
-            reports = list(csv.DictReader(f))
-    else:
-        reports = iterate_ncbi()
+    if reports is None:
+        if inventory:
+            with Path(inventory).open() as f:
+                reports = list(csv.DictReader(f))
+        else:
+            reports = iterate_ncbi()
     rows = {}
     scanned = 0
     for report in reports:
@@ -139,7 +140,7 @@ def build(inventory=None):
         'recent_assemblies': list(reversed([x for x in rows if x['release_date'] >= cutoff]))[:200],
         'latest_assembly': rows[-1] if rows else None,
         'annotations': {k: [x for x in dashboard.get('annotations', {}).get(k, []) if ann_match(x)] for k in ('in_progress', 'recent_completed')},
-        'species_inventory': species, 'audit': {'ncbi_assemblies_scanned': scanned},
+        'species_inventory': species, 'assembly_inventory': rows, 'audit': {'ncbi_assemblies_scanned': scanned},
     })
 
 

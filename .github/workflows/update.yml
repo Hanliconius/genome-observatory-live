@@ -13,6 +13,7 @@ on:
       - 'scripts/**'
       - 'data/status/mapveu_species.tsv'
       - 'data/status/vector_types.json'
+      - 'data/status/pathogens.tsv'
       - '.github/workflows/update.yml'
 
 permissions:
@@ -48,7 +49,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Compile Python builders
-        run: python -m py_compile scripts/update.py scripts/audit_full_history.py
+        run: python -m py_compile scripts/update.py scripts/audit_full_history.py scripts/build_vectors.py scripts/build_pathogens.py
+
+      - name: Validate curated pathogen matching
+        run: python -m unittest discover -s tests -p 'test_pathogens.py'
 
       - name: Bootstrap lifetime history on first run
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
@@ -88,8 +92,8 @@ jobs:
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_iucn.py
 
-      - name: Build vector and surveillance species view
-        run: python scripts/build_vectors.py
+      - name: Build pathogen, parasite and vector view
+        run: python scripts/build_pathogens.py
 
       - name: Validate dashboard freshness
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')

@@ -62,7 +62,7 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
     el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
     loadIucn();
   }else if(view==='vectors'){
-    el('range-label').textContent='Vector species · all time';
+    el('range-label').textContent='Pathogens & vectors · all time';
     loadVectors();
   }else if(view==='countries'){
     el('range-label').textContent='By country';
@@ -1064,30 +1064,38 @@ function renderStatus(){
 async function loadVectors(){
   if(VECTOR_DATA){renderVectors();return;}
   if(VECTOR_LOADING)return VECTOR_LOADING;
-  VECTOR_LOADING=fetch(VECTOR_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(d=>{VECTOR_DATA=d;renderVectors();}).catch(err=>{el('vector-loading').textContent='Vector data unavailable. Reopen this tab to retry.';console.error(err);}).finally(()=>{VECTOR_LOADING=null;});
+  VECTOR_LOADING=fetch(VECTOR_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(d=>{VECTOR_DATA=d;renderVectors();}).catch(err=>{el('vector-loading').textContent='Pathogen and vector data unavailable. Reopen this tab to retry.';console.error(err);}).finally(()=>{VECTOR_LOADING=null;});
   return VECTOR_LOADING;
 }
+function selectedDiseaseData(){
+  const scope=el('vector-scope').value;
+  return scope==='all'?VECTOR_DATA:VECTOR_DATA?.views?.[scope]||VECTOR_DATA;
+}
+el('vector-scope').addEventListener('change',()=>{
+  el('vector-type-filter').value='';
+  renderVectors();
+});
 function renderVectorComposition(){
   if(!VECTOR_DATA)return;
-  const mode=el('vector-composition-mode').value;
-  const groups=mode==='genus'?VECTOR_DATA.genus_breakdown:VECTOR_DATA.type_breakdown;
+  const d=selectedDiseaseData(), mode=el('vector-composition-mode').value;
+  const groups=mode==='genus'?d.genus_breakdown:d.type_breakdown;
   const colors=Object.fromEntries(groups.map((g,i)=>[g.group,METHOD_TREND_COLORS[i%METHOD_TREND_COLORS.length]]));
-  drawDonut('vector-donut-genus','vector-donut-genus-legend',groups,'assemblies',mode==='genus'?'Genus':'Vector type',colors);
+  drawDonut('vector-donut-genus','vector-donut-genus-legend',groups,'assemblies',mode==='genus'?'Genus':'Organism group',colors);
 }
 function renderVectorInventory(){
   if(!VECTOR_DATA)return;
-  const d=VECTOR_DATA, q=el('vector-search').value.trim().toLowerCase(), type=el('vector-type-filter').value;
-  el('vector-coverage').textContent=fmt(d.summary.species)+' species with qualifying genomes out of '+fmt(d.source.species_names)+' distinct source binomials; '+fmt(d.source.taxon_labels)+' original taxon labels from '+fmt(d.source.sample_rows)+' sample records. Export: '+d.source.export_date+'.';
+  const d=selectedDiseaseData(), q=el('vector-search').value.trim().toLowerCase(), type=el('vector-type-filter').value;
+  el('vector-coverage').textContent=fmt(d.summary.species)+' species with qualifying genomes out of '+fmt(d.source.species_names)+' species in the selected source catalogue. Coverage describes this catalogue, not every pathogen or vector.';
   const xs=d.species_inventory.filter(x=>x.species.toLowerCase().includes(q)&&(!type||x.vector_type===type));
   el('vector-filter-count').textContent=fmt(xs.length)+' species shown';
-  el('vector-species-list').innerHTML='<div class="header"><span>Species</span><span>Assemblies</span><span>Vector type</span><span>Sample records</span><span>First genome</span><span>Latest genome</span></div>'+xs.map(x=>'<div class="row"><span class="species">'+(x.tax_ids.length?'<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+esc(x.tax_ids[0])+'" target="_blank" rel="noopener"><em>'+esc(x.species)+'</em></a>':'<em>'+esc(x.species)+'</em>')+'</span><span>'+fmt(x.assemblies)+'</span><span>'+esc(x.vector_type)+'</span><span>'+fmt(x.sample_rows)+'</span><span>'+esc(x.first_release||'—')+'</span><span>'+esc(x.latest_release||'—')+'</span></div>').join('');
+  el('vector-species-list').innerHTML='<div class="header"><span>Species</span><span>Assemblies</span><span>Organism group</span><span>Disease / role</span><span>First genome</span><span>Latest genome</span></div>'+xs.map(x=>'<div class="row"><span class="species">'+(x.tax_ids.length?'<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+esc(x.tax_ids[0])+'" target="_blank" rel="noopener"><em>'+esc(x.species)+'</em></a>':'<em>'+esc(x.species)+'</em>')+(x.source_url?'<br><a href="'+esc(x.source_url)+'" target="_blank" rel="noopener">Source</a>':'')+'</span><span>'+fmt(x.assemblies)+'</span><span>'+esc(x.vector_type)+'</span><span>'+esc(x.disease||'Vector surveillance')+'</span><span>'+esc(x.first_release||'—')+'</span><span>'+esc(x.latest_release||'—')+'</span></div>').join('');
 }
 function renderVectorTypes(){
-  const groups=VECTOR_DATA.type_summary;
+  const groups=selectedDiseaseData().type_summary;
   const selected=el('vector-type-filter').value;
   el('vector-type-filter').innerHTML='<option value="">All types</option>'+groups.map(g=>'<option value="'+esc(g.name)+'">'+esc(g.name)+'</option>').join('');
   el('vector-type-filter').value=selected;
-  el('vector-type-table').innerHTML='<div class="header"><span>Vector type</span><span>Taxonomic group</span><span>Assemblies</span><span>Species with genomes</span><span>Source species coverage</span></div>'+groups.map(g=>'<div class="row"><span><button type="button" data-vector-type="'+esc(g.name)+'">'+esc(g.name)+'</button></span><span>'+(g.source_url?'<a href="'+esc(g.source_url)+'" target="_blank" rel="noopener">'+esc(g.taxon)+'</a>':esc(g.taxon))+'</span><span>'+fmt(g.assemblies)+'</span><span>'+fmt(g.genome_species)+'</span><span><progress value="'+g.genome_species+'" max="'+g.source_species+'" aria-label="'+esc(g.name)+' source species genome coverage"></progress> '+fmt(g.genome_species)+' / '+fmt(g.source_species)+' ('+fmt1(100*g.genome_species/g.source_species)+'%)</span></div>').join('');
+  el('vector-type-table').innerHTML='<div class="header"><span>Organism group</span><span>Taxonomic group</span><span>Assemblies</span><span>Species with genomes</span><span>Source species coverage</span></div>'+groups.map(g=>'<div class="row"><span><button type="button" data-vector-type="'+esc(g.name)+'">'+esc(g.name)+'</button></span><span>'+(g.source_url?'<a href="'+esc(g.source_url)+'" target="_blank" rel="noopener">'+esc(g.taxon)+'</a>':esc(g.taxon))+'</span><span>'+fmt(g.assemblies)+'</span><span>'+fmt(g.genome_species)+'</span><span><progress value="'+g.genome_species+'" max="'+g.source_species+'" aria-label="'+esc(g.name)+' source species genome coverage"></progress> '+fmt(g.genome_species)+' / '+fmt(g.source_species)+' ('+fmt1(100*g.genome_species/g.source_species)+'%)</span></div>').join('');
   el('vector-type-table').querySelectorAll('button[data-vector-type]').forEach(b=>b.addEventListener('click',()=>{el('vector-type-filter').value=b.dataset.vectorType;renderVectorInventory();el('vector-search').scrollIntoView({behavior:'smooth',block:'center'});}));
 }
 el('vector-search').addEventListener('input',renderVectorInventory);
@@ -1096,10 +1104,11 @@ el('vector-composition-mode').addEventListener('change',renderVectorComposition)
 
 function renderVectors(){
   if(!VECTOR_DATA)return;
-  const s=VECTOR_DATA;
+  const s=selectedDiseaseData();
   if(!s)return;
-  const label='Vector / surveillance';
-  const last60=dailyWindow(s.recent_daily,60,VECTOR_DATA.generated_at);
+  const labels={all:'Pathogens & vectors',vectors:'Vectors / surveillance',protists:'Protist parasites',worms:'Parasitic worms',fungi:'Pathogenic fungi'};
+  const label=labels[el('vector-scope').value];
+  const last60=dailyWindow(s.recent_daily,60,s.generated_at);
   const last30=last60.slice(-30);
   const currentPace=calendarDayPace(last30);
   el('vector-loading').hidden=true;
@@ -1179,12 +1188,12 @@ function renderVectors(){
   el('vector-recent-list').innerHTML=`<div class="header"><span>Date</span><span>Species</span><span>Common name</span><span>Source</span><span>Assembly</span><span>Level</span><span>Accession</span></div>`+
     recentSpeciesRows.map(xs=>{
       const x=xs[0];
-      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'common_name')||'—'}</span><span class="muted">${'MapVEu'}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
+      return `<div class="row"><span class="muted">${esc(x.release_date||'')}</span><span class="species">${assemblySpeciesLink(x)}</span><span class="muted">${recentUniqueText(xs,'common_name')||'—'}</span><span class="muted">${esc(x.role||'Curated catalogue')}</span><span class="muted">${recentUniqueText(xs,'assembly_name')}</span><span>${recentUniqueText(xs,'assembly_level')}</span><span class="muted">${recentAccessionLinks(xs)}</span></div>`;
     }).join('');
 
   renderVectorTypes();
   renderVectorInventory();
-  const source=VECTOR_DATA.source||{};
+  const source=s.source||{};
   el('vector-source-note').textContent=source.scope+' '+source.matching;
 }
 
