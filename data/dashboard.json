@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T10:50:46.339889+00:00",
+  "generated_at": "2026-10-11T17:05:56.753623+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -56013,19 +56013,19 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 10775
+      "count": 10919
     },
     {
       "group": "Plants",
-      "count": 5221
+      "count": 5257
     },
     {
       "group": "Fungi",
-      "count": 2449
+      "count": 2452
     },
     {
       "group": "Other",
-      "count": 439
+      "count": 442
     }
   ],
   "milestones": [
@@ -57296,7 +57296,12 @@
       "family": "Uloboridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Distribution.uloboridae.1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Distribution.uloboridae.1.png",
+        "credit": "User:Sarefo · CC BY-SA 3.0",
+        "matched_name": "Uloboridae"
+      }
     },
     {
       "accession": "GCA_988323955.1",
@@ -57360,7 +57365,12 @@
       "family": "Uloboridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Distribution.uloboridae.1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Distribution.uloboridae.1.png",
+        "credit": "User:Sarefo · CC BY-SA 3.0",
+        "matched_name": "Uloboridae"
+      }
     },
     {
       "accession": "GCA_988323795.1",
@@ -57834,7 +57844,12 @@
       "family": "Rosaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Geum_macrophyllum_15-p.bot-geum.macro-05.jpg/960px-Geum_macrophyllum_15-p.bot-geum.macro-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Geum_macrophyllum_15-p.bot-geum.macro-05.jpg",
+        "credit": "Ayotte, Gilles, 1948- · CC BY-SA 4.0",
+        "matched_name": "Geum macrophyllum"
+      }
     },
     {
       "accession": "GCA_988324135.1",
@@ -58057,7 +58072,12 @@
       "family": "Threskiornithidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Geronticus_eremita.jpg/960px-Geronticus_eremita.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Geronticus_eremita.jpg",
+        "credit": "MPF · CC BY 2.5",
+        "matched_name": "Geronticus eremita"
+      }
     },
     {
       "accession": "GCA_988323805.1",
@@ -58126,7 +58146,12 @@
       "family": "Tytonidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/960px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Tyto"
+      }
     },
     {
       "accession": "GCA_988323735.1",
@@ -58991,7 +59016,12 @@
       "family": "Noctuidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Apamea_lateritia.jpg/960px-Apamea_lateritia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Apamea_lateritia.jpg",
+        "credit": "M. Virtala · Copyrighted free use",
+        "matched_name": "Apamea lateritia"
+      }
     },
     {
       "accession": "GCA_988322815.1",
@@ -59023,7 +59053,12 @@
       "family": "Hepialidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Hepialidae-_Zenophassus_schamyl.jpg/960px-Hepialidae-_Zenophassus_schamyl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hepialidae-_Zenophassus_schamyl.jpg",
+        "credit": "Kristof Zyskowski &amp; Yulia Bereshpolova · CC BY 2.0",
+        "matched_name": "Hepialidae"
+      }
     },
     {
       "accession": "GCA_988322765.1",
@@ -59167,7 +59202,12 @@
       "family": "Veneridae",
       "phylum": "Mollusca",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Venus_casina_%28Sowerby%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Venus_casina_(Sowerby).jpg",
+        "credit": "George Brettingham Sowerby II · Public domain",
+        "matched_name": "Venus casina"
+      }
     },
     {
       "accession": "GCA_988322485.1",
@@ -59458,7 +59498,12 @@
       "family": "Psittacidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Military_Macaw_%28Ara_militaris%29_%285912310266%29.jpg/960px-Military_Macaw_%28Ara_militaris%29_%285912310266%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Military_Macaw_(Ara_militaris)_(5912310266).jpg",
+        "credit": "Dominic Sherony · CC BY-SA 2.0",
+        "matched_name": "Ara militaris"
+      }
     },
     {
       "accession": "GCA_988293565.1",
@@ -59985,7 +60030,12 @@
       "family": "Geotriidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Lamprey_%28Geotria_australis%29%2C_Northland.jpg/960px-Lamprey_%28Geotria_australis%29%2C_Northland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lamprey_(Geotria_australis),_Northland.jpg",
+        "credit": "Peter Anderson · CC BY-SA 4.0",
+        "matched_name": "Geotria australis"
+      }
     },
     {
       "accession": "GCA_062009471.1",
@@ -65747,7 +65797,12 @@
       "family": "Sciaenidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/FMIB_35480_Umbrina_sinaloae.jpeg/960px-FMIB_35480_Umbrina_sinaloae.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_35480_Umbrina_sinaloae.jpeg",
+        "credit": "David Starr Jordan · Public domain",
+        "matched_name": "Umbrina"
+      }
     },
     {
       "accession": "GCA_988264955.1",
@@ -66485,7 +66540,12 @@
       "family": "Psammobiidae",
       "phylum": "Mollusca",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Gari_depressa_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gari_depressa_001.jpg",
+        "credit": "Georges Jansoone (JoJan) · CC BY 3.0",
+        "matched_name": "Gari depressa"
+      }
     },
     {
       "accession": "GCA_965362985.2",
@@ -146387,7 +146447,12 @@
       "credit": "Charles J. Sharp · CC BY-SA 4.0",
       "matched_name": "Troglodytes"
     },
-    "Umbrina canariensis": null,
+    "Umbrina canariensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/FMIB_35480_Umbrina_sinaloae.jpeg/960px-FMIB_35480_Umbrina_sinaloae.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:FMIB_35480_Umbrina_sinaloae.jpeg",
+      "credit": "David Starr Jordan · Public domain",
+      "matched_name": "Umbrina"
+    },
     "Urogymnus asperrimus": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Dasyatidae%2C_Sunshine_Aquarium.jpg/960px-Dasyatidae%2C_Sunshine_Aquarium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Dasyatidae,_Sunshine_Aquarium.jpg",
@@ -146599,7 +146664,12 @@
       "credit": "(c) Emad Tahaei, some rights reserved (CC BY) · CC BY 4.0",
       "matched_name": "Caspiomyzon wagneri"
     },
-    "Geotria australis": null,
+    "Geotria australis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Lamprey_%28Geotria_australis%29%2C_Northland.jpg/960px-Lamprey_%28Geotria_australis%29%2C_Northland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Lamprey_(Geotria_australis),_Northland.jpg",
+      "credit": "Peter Anderson · CC BY-SA 4.0",
+      "matched_name": "Geotria australis"
+    },
     "Acanthocardia deshayesii": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Acanthocardia_deshayesii_%28MNHN-IM-2000-3975%29.jpeg/960px-Acanthocardia_deshayesii_%28MNHN-IM-2000-3975%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Acanthocardia_deshayesii_(MNHN-IM-2000-3975).jpeg",
@@ -146818,7 +146888,12 @@
     "Galeopsis angustifolia": null,
     "Galinsoga quadriradiata": null,
     "Gallinago gallinago": null,
-    "Gari depressa": null,
+    "Gari depressa": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Gari_depressa_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gari_depressa_001.jpg",
+      "credit": "Georges Jansoone (JoJan) · CC BY 3.0",
+      "matched_name": "Gari depressa"
+    },
     "Garrulus glandarius": null,
     "Geokichla citrina": null,
     "Glycyrrhiza glabra": null,
@@ -147245,9 +147320,24 @@
       "credit": "jtch · CC BY 4.0",
       "matched_name": "Anyphaena sabina"
     },
-    "Apamea lateritia": null,
-    "Ara militaris": null,
-    "Arbutus unedo": null,
+    "Apamea lateritia": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Apamea_lateritia.jpg/960px-Apamea_lateritia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Apamea_lateritia.jpg",
+      "credit": "M. Virtala · Copyrighted free use",
+      "matched_name": "Apamea lateritia"
+    },
+    "Ara militaris": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Military_Macaw_%28Ara_militaris%29_%285912310266%29.jpg/960px-Military_Macaw_%28Ara_militaris%29_%285912310266%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Military_Macaw_(Ara_militaris)_(5912310266).jpg",
+      "credit": "Dominic Sherony · CC BY-SA 2.0",
+      "matched_name": "Ara militaris"
+    },
+    "Arbutus unedo": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Arbouse.jpg/960px-Arbouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Arbouse.jpg",
+      "credit": "Didier Descouens · CC BY-SA 4.0",
+      "matched_name": "Arbutus unedo"
+    },
     "Argyroploce arbutella": null,
     "Beryx splendens": null,
     "Betula pubescens": null,
@@ -147316,9 +147406,24 @@
     "Eudocimus ruber": null,
     "Euphorbia helioscopia": null,
     "Fringilla montifringilla": null,
-    "Gazoryctra fuscoargenteus": null,
-    "Geronticus eremita": null,
-    "Geum macrophyllum": null,
+    "Gazoryctra fuscoargenteus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Hepialidae-_Zenophassus_schamyl.jpg/960px-Hepialidae-_Zenophassus_schamyl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hepialidae-_Zenophassus_schamyl.jpg",
+      "credit": "Kristof Zyskowski &amp; Yulia Bereshpolova · CC BY 2.0",
+      "matched_name": "Hepialidae"
+    },
+    "Geronticus eremita": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Geronticus_eremita.jpg/960px-Geronticus_eremita.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Geronticus_eremita.jpg",
+      "credit": "MPF · CC BY 2.5",
+      "matched_name": "Geronticus eremita"
+    },
+    "Geum macrophyllum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Geum_macrophyllum_15-p.bot-geum.macro-05.jpg/960px-Geum_macrophyllum_15-p.bot-geum.macro-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Geum_macrophyllum_15-p.bot-geum.macro-05.jpg",
+      "credit": "Ayotte, Gilles, 1948- · CC BY-SA 4.0",
+      "matched_name": "Geum macrophyllum"
+    },
     "Grus grus": null,
     "Haematopus ostralegus": null,
     "Hedlundia anglica": null,
@@ -147427,9 +147532,24 @@
     "Trifolium michelianum": null,
     "Triticum turgidum": null,
     "Tropheus sp. 'black'": null,
-    "Tyto alba": null,
-    "Uloborus plumipes": null,
-    "Venus casina": null,
+    "Tyto alba": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/960px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "matched_name": "Tyto"
+    },
+    "Uloborus plumipes": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Distribution.uloboridae.1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Distribution.uloboridae.1.png",
+      "credit": "User:Sarefo · CC BY-SA 3.0",
+      "matched_name": "Uloboridae"
+    },
+    "Venus casina": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Venus_casina_%28Sowerby%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Venus_casina_(Sowerby).jpg",
+      "credit": "George Brettingham Sowerby II · Public domain",
+      "matched_name": "Venus casina"
+    },
     "Viburnum lantana": null,
     "Vicia benghalensis": null,
     "Vicia pannonica": null,
@@ -153292,7 +153412,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3700093": {},
     "4530": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "Asian cultivated rice",
@@ -153302,6 +153421,7 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
+    "3700093": {},
     "3359044": {},
     "3706531": {},
     "3272347": {},
