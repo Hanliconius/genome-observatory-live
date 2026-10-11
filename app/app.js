@@ -53,6 +53,7 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   el('taxa-view').hidden=view!=='taxa';
   el('status-view').hidden=view!=='status';
   el('vector-view').hidden=view!=='vectors';
+  el('agriculture-view').hidden=view!=='agriculture';
   el('countries-view').hidden=view!=='countries';
   el('genometrics-view').hidden=view!=='genometrics';
   if(view==='taxa'){
@@ -64,6 +65,9 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
   }else if(view==='vectors'){
     el('range-label').textContent='Pathogens & vectors · all time';
     loadVectors();
+  }else if(view==='agriculture'){
+    el('range-label').textContent='Agriculture';
+    loadAgriculture();
   }else if(view==='countries'){
     el('range-label').textContent='By country';
     loadCountries();
@@ -1237,6 +1241,76 @@ function renderDiseaseMap(){
   el('taxon-map-status-disease').textContent=fmt(stats.origin_resolved_assemblies)+' of '+fmt(stats.assemblies)+' assemblies have resolved sample origins: '+fmt(stats.origin_country_assemblies)+' country, '+fmt(stats.origin_marine_assemblies)+' ocean/sea; '+fmt(stats.unassigned_assemblies)+' unassigned.';
 }
 
+const AGRICULTURE_URL='../data/status/agriculture.json';
+let AG_DATA=null,AG_LOADING=null,agMode='organisms';
+const AG_LABELS={organisms:'Agricultural organisms',pests:'Agricultural pests',pathogens:'Agricultural pathogens'};
+async function loadAgriculture(){
+  if(AG_DATA){renderAgriculture();return;}
+  if(AG_LOADING)return AG_LOADING;
+  AG_LOADING=fetch(AGRICULTURE_URL+'?refresh='+Date.now(),{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw Error(r.status);return r.json();})
+    .then(d=>{AG_DATA=d;renderAgriculture();})
+    .catch(err=>{el('ag-loading').textContent='Agriculture data unavailable. Reopen this tab to retry.';console.error(err);})
+    .finally(()=>{AG_LOADING=null;});
+  return AG_LOADING;
+}
+function selectedAgData(){
+  const view=AG_DATA?.views?.[agMode];
+  return el('ag-group').value?view?.groups?.[el('ag-group').value]:view;
+}
+document.querySelectorAll('.ag-tab').forEach(b=>b.addEventListener('click',()=>{
+  agMode=b.dataset.ag;
+  document.querySelectorAll('.ag-tab').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
+  el('ag-group').value='';el('ag-search').value='';renderAgriculture();
+}));
+el('ag-group').addEventListener('change',renderAgriculture);
+el('ag-search').addEventListener('input',renderAgInventory);
+function renderAgInventory(){
+  const d=selectedAgData();if(!d)return;
+  const q=el('ag-search').value.trim().toLowerCase();
+  const xs=d.species_inventory.filter(x=>x.species.toLowerCase().includes(q));
+  el('ag-filter-count').textContent=fmt(xs.length)+' source taxa shown';
+  el('ag-species-list').innerHTML='<div class="header"><span>Species / taxon</span><span>Assemblies</span><span>Broad group</span><span>Agricultural role</span><span>First genome</span><span>Latest genome</span></div>'+xs.map(x=>'<div class="row"><span class="species">'+(x.tax_ids.length?'<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+esc(x.tax_ids[0])+'" target="_blank" rel="noopener"><em>'+esc(x.species)+'</em></a>':'<em>'+esc(x.species)+'</em>')+'<br><a href="'+esc(x.source_url)+'" target="_blank" rel="noopener">Source</a></span><span>'+fmt(x.assemblies)+'</span><span>'+esc(x.vector_type)+'</span><span>'+esc(x.disease)+'</span><span>'+esc(x.first_release||'—')+'</span><span>'+esc(x.latest_release||'—')+'</span></div>').join('');
+}
+function renderAgMap(){
+  const d=selectedAgData();if(!d)return;
+  if(!WORLD_DATA){
+    el('taxon-map-status-ag').textContent='Loading world map…';
+    ensureWorldData().then(renderAgMap).catch(()=>{el('taxon-map-status-ag').textContent='World map unavailable. Reopen this tab to retry.';});return;
+  }
+  const map=d.origin_maps.all;
+  drawTaxonOriginMap('ag',{...map,name:el('ag-group').value||AG_LABELS[agMode].toLowerCase()},Math.max(0,...map.countries.map(x=>x.assemblies)),Math.max(0,...map.marine_localities.map(x=>x.assemblies)));
+  el('taxon-map-legend-ag').innerHTML=el('taxon-map-legend-ag').innerHTML.replaceAll('shared fill scale','fill scale').replaceAll('shared marker-size scale','marker-size scale');
+  const s=map.stats;
+  el('taxon-map-status-ag').textContent=fmt(s.origin_resolved_assemblies)+' of '+fmt(s.assemblies)+' assemblies have resolved sample origins: '+fmt(s.origin_country_assemblies)+' country, '+fmt(s.origin_marine_assemblies)+' ocean/sea; '+fmt(s.unassigned_assemblies)+' unassigned.';
+}
+function renderAgriculture(){
+  const view=AG_DATA?.views?.[agMode];if(!view)return;
+  const groups=Object.keys(view.groups),chosen=el('ag-group').value;
+  el('ag-group').innerHTML='<option value="">All groups</option>'+groups.map(g=>'<option value="'+esc(g)+'">'+esc(g)+'</option>').join('');
+  el('ag-group').value=groups.includes(chosen)?chosen:'';
+  const d=selectedAgData(),label=el('ag-group').value||AG_LABELS[agMode];
+  el('ag-loading').hidden=true;el('ag-content').hidden=false;
+  el('range-label').textContent=label+' · all time';
+  el('ag-primary-label').textContent=label+' · all time';
+  for(const [id,key] of [['ag-assemblies','assemblies'],['ag-species','species'],['ag-first','first_time_species'],['ag-hero-count','assemblies']])el(id).textContent=fmt(d.summary[key]);
+  el('ag-pipeline').textContent=fmt(d.annotations.in_progress.length);
+  el('ag-completed').textContent=fmt(d.annotations.recent_completed.length);
+  el('ag-rate').textContent=fmt1(calendarDayPace(dailyWindow(d.recent_daily,30,d.generated_at)));
+  el('ag-coverage').textContent=fmt(d.summary.species)+' taxa with genomes out of '+fmt(d.source.species_names)+' in the selected catalogue';
+  const x=d.latest_assembly;
+  el('ag-newest-card').innerHTML=x?(x.image?.thumb_url?'<img class="taxon-image" src="'+esc(x.image.thumb_url)+'" alt="'+esc(x.organism_name)+'" loading="lazy">':'<div class="image-placeholder">No cached image available</div>')+'<div><h3>'+assemblySpeciesLink(x)+'</h3><p>'+esc(x.common_name||x.species_name)+'</p><p>'+esc(x.assembly_level)+' · Released '+esc(x.release_date)+'</p>'+(x.image?.credit?'<p class="credit">Image credit: '+x.image.credit+'</p>':'')+'</div>':'<p class="note">No qualifying genome matched for this group.</p>';
+  const colors=Object.fromEntries(d.type_breakdown.map((g,i)=>[g.group,METHOD_TREND_COLORS[i%METHOD_TREND_COLORS.length]]));
+  drawDonut('ag-donut-groups','ag-donut-groups-legend',d.type_breakdown,'assemblies','Broad group',colors);
+  drawDonut('ag-donut-coverage','ag-donut-coverage-legend',[{group:'With qualifying genomes',count:d.summary.species},{group:'No matched qualifying genome',count:d.source.species_names-d.summary.species}],'taxa','Coverage',{'With qualifying genomes':'#2e6ea6','No matched qualifying genome':'#d8dfdb'});
+  const yearly=d.yearly.map(x=>({date:String(x.year),assemblies:x.assemblies}));
+  drawLineChart('ag-rate-chart',yearly,'assemblies',yearly.map(x=>x.date),'all');
+  let a=0,f=0;drawDualChart('ag-cumulative-chart',d.yearly.map(x=>({year:String(x.year),assemblies:(a+=x.assemblies),first:(f+=x.first_time_species)})));
+  el('ag-recent-list').innerHTML='<div class="header"><span>Date</span><span>Species / taxon</span><span>Broad group</span><span>Assembly level</span><span>Accession</span></div>'+d.recent_assemblies.slice(0,18).map(x=>'<div class="row"><span>'+esc(x.release_date)+'</span><span class="species">'+assemblySpeciesLink(x)+'</span><span>'+esc(x.vector_type)+'</span><span>'+esc(x.assembly_level)+'</span><span><a href="'+esc(assemblyUrl(x.accession))+'" target="_blank" rel="noopener">'+esc(x.accession)+'</a></span></div>').join('');
+  el('ag-source-note').textContent=d.source.scope+' '+d.source.matching;
+  renderAgInventory();renderAgMap();
+}
+
 function activeCountryData(){
   return countryFacet==='sequencing' ? SEQ_COUNTRY_DATA : COUNTRY_DATA;
 }
@@ -2044,3 +2118,5 @@ function positionTooltip(ev,tip){
 }
 
 if(location.hash==='#vectors')document.querySelector('.section-tab[data-view="vectors"]').click();
+
+if(location.hash==='#agriculture')document.querySelector('.section-tab[data-view="agriculture"]').click();

@@ -261,3 +261,13 @@ Code in this repository can be cited by linking to the relevant GitHub commit or
 ---
 
 **Genome Observatory Live** · [Live dashboard](https://hanliconius.github.io/genome-observatory-live/app/) · [Source code](https://github.com/Hanliconius/genome-observatory-live) · [Joe Hanly](https://github.com/Hanliconius)
+
+## Agriculture
+
+The **Agriculture** tab has three separate subtabs: **Organisms**, **Pests** and **Pathogens**. Each has its own all-time summaries, newest genome, catalogue coverage, deposition history, recent assemblies, species inventory and BioSample sample-origin map. The broad-group selector filters every panel. Maps sit beside the yearly and cumulative charts.
+
+The editable, downloadable [`data/status/agriculture.tsv`](data/status/agriculture.tsv) supplies explicit scientific names, roles, broad groups, source links, aliases and curation notes. The initial selection uses the botanical crop entries in the [FAO agricultural census crop classification](https://www.fao.org/4/a0135e/A0135E10.htm), selected [FAO livestock](https://www.fao.org/livestock-systems/global-distributions/en/) and [aquaculture](https://www.fao.org/4/W2333E/W2333E00.htm) taxa, individual [EPPO](https://gd.eppo.int/) records for additional crops, animal pests, weeds and plant pathogens, and [WOAH](https://www.woah.org/en/disease/theileriosis/) livestock pathogen records. It is a selected catalogue, not a complete global list of cultivated organisms, agricultural pests or diseases.
+
+[`scripts/build_agriculture.py`](scripts/build_agriculture.py) refreshes the data on every publication and daily update. Eligibility remains current GenBank Chromosome/Complete eukaryotic assemblies. Only explicit species names and aliases match; named cultivated hybrids can be listed individually. Varieties, strains and breeds roll up to their listed taxon. Unspecified hybrids and unlisted wild relatives are excluded; wild individuals of a listed species can still qualify. Therefore these counts describe genomes of agriculturally relevant taxa, not exclusively farmed samples. Pest/pathogen membership does not prove that each sample caused damage or disease. Bacteria and viruses are outside the dashboard's eukaryotic scope.
+
+Geography uses reported BioSample collection countries and named marine localities, with unassigned assemblies shown explicitly. These maps describe sequenced sample origins, rather than agricultural production or pest/disease prevalence. Catalogue coverage uses the selected source taxa as its denominator. Pace retains the 30-calendar-day window.

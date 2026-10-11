@@ -992,3 +992,9 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 .disease-time-geography .chart-panel{grid-column:1}
 .disease-time-geography .disease-origin-panel{grid-column:2;grid-row:1 / span 2}
 @media(max-width:900px){.disease-time-geography{grid-template-columns:1fr}.disease-time-geography .chart-panel,.disease-time-geography .disease-origin-panel{grid-column:auto;grid-row:auto}}
+
+#agriculture-view{margin-top:22px}
+#ag-group,#ag-search{padding:8px 12px;margin:8px 12px 8px 0;border:1px solid var(--line);border-radius:5px;background:var(--paper,#fff);color:inherit;font:inherit}
+
+#ag-recent-list .header,#ag-recent-list .row{grid-template-columns:100px 1.5fr 1.2fr 120px 140px}
+@media(max-width:900px){#ag-recent-list .header,#ag-recent-list .row{grid-template-columns:95px 1fr}}

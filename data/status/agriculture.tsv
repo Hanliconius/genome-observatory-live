@@ -1,0 +1,263 @@
+species	section	group	disease	source_url	aliases	notes
+Crassostrea gigas	organisms	Aquaculture	Pacific oyster	https://www.fao.org/4/W2333E/W2333E00.htm	Magallana gigas	
+Crassostrea virginica	organisms	Aquaculture	Eastern oyster	https://www.fao.org/4/W2333E/W2333E00.htm		
+Ctenopharyngodon idella	organisms	Aquaculture	Grass carp	https://www.fao.org/4/W2333E/W2333E00.htm		
+Cyprinus carpio	organisms	Aquaculture	Common carp	https://www.fao.org/4/W2333E/W2333E00.htm		
+Hypophthalmichthys molitrix	organisms	Aquaculture	Silver carp	https://www.fao.org/4/W2333E/W2333E00.htm		
+Hypophthalmichthys nobilis	organisms	Aquaculture	Bighead carp	https://www.fao.org/4/W2333E/W2333E00.htm		
+Ictalurus punctatus	organisms	Aquaculture	Channel catfish	https://www.fao.org/4/W2333E/W2333E00.htm		
+Mytilus edulis	organisms	Aquaculture	Blue mussel	https://www.fao.org/4/W2333E/W2333E00.htm		
+Oncorhynchus mykiss	organisms	Aquaculture	Rainbow trout	https://www.fao.org/4/W2333E/W2333E00.htm		
+Oreochromis niloticus	organisms	Aquaculture	Nile tilapia	https://www.fao.org/4/W2333E/W2333E00.htm		
+Ostrea edulis	organisms	Aquaculture	European flat oyster	https://www.fao.org/4/W2333E/W2333E00.htm		
+Penaeus monodon	organisms	Aquaculture	Giant tiger prawn	https://www.fao.org/4/W2333E/W2333E00.htm		
+Penaeus vannamei	organisms	Aquaculture	Whiteleg shrimp	https://www.fao.org/4/W2333E/W2333E00.htm	Litopenaeus vannamei	
+Salmo salar	organisms	Aquaculture	Atlantic salmon	https://www.fao.org/4/W2333E/W2333E00.htm		
+Chenopodium quinoa	organisms	Cereals	Quinoa	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Echinochloa esculenta	organisms	Cereals	Millet, Japanese	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Eleusine coracana	organisms	Cereals	Millet, finger	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Eragrostis abyssinica	organisms	Cereals	Tef	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Fagopyrum esculentum	organisms	Cereals	Buckwheat	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Hordeum vulgare	organisms	Cereals	Barley	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Mixture of	organisms	Cereals	Maslin (mixed cereals)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Oryza glaberrima	organisms	Cereals	Rice	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Oryza sativa	organisms	Cereals	Rice	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Panicum miliaceum	organisms	Cereals	Millet, proso	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pennisetum americanum	organisms	Cereals	Bajra (Pearl millet)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Secale cereale	organisms	Cereals	Maslin (mixed cereals)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Setaria italica	organisms	Cereals	Millet, foxtail	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Sorghum bicolour	organisms	Cereals	Durra (sorghum)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Triticum aestivum	organisms	Cereals	Wheat	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Triticum spelta	organisms	Cereals	Spelt wheat	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Triticum turgidum	organisms	Cereals	Durum wheat	https://www.fao.org/4/a0135e/A0135E10.htm	Triticum durum	Includes cultivated durum and emmer names; species-level scope can include wild relatives.
+Zea mays	organisms	Cereals	Corn (maize), for cereals	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Apis mellifera	organisms	Farmed insects	Honey bee	https://www.fao.org/4/a0135e/A0135E10.htm		
+Bombyx mori	organisms	Farmed insects	Silkworm	https://www.fao.org/4/a0135e/A0135E10.htm		
+Beta vulgaris	organisms	Forage crops	Beet, fodder (mangel)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Dactylis glomerata	organisms	Forage crops	Grass, orchard	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Helianthus annuus	organisms	Forage crops	Sunflower for fodder	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Helianthus tuberosus	organisms	Forage crops	Jerusalem artichoke	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Hybrid of	organisms	Forage crops	Triticale for fodder	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Medicago sativa	organisms	Forage crops	Alfalfa for fodder	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Onobrychis viciifolia	organisms	Forage crops	Sainfoin	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Phleum pratense	organisms	Forage crops	Timothy	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Saccharum officinarum	organisms	Forage crops	Sugarcane for fodder	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Achras sapota	organisms	Fruit & nuts	Sapodilla	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Anacardium occidentale	organisms	Fruit & nuts	Cashew nuts	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ananas comosus	organisms	Fruit & nuts	Pineapple	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Annona reticulate	organisms	Fruit & nuts	Custard apple	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Artocarpus altilis	organisms	Fruit & nuts	Breadfruit	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Bertholletia excelsa	organisms	Fruit & nuts	Brazil nut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Carica papaya	organisms	Fruit & nuts	Papaya (pawpaw)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Carya illinoensis	organisms	Fruit & nuts	Pecan nut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Castanea sativa	organisms	Fruit & nuts	Chestnut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ceratonia siliqua	organisms	Fruit & nuts	Carob	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus aurantifolia	organisms	Fruit & nuts	Lime, sour	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus aurantium	organisms	Fruit & nuts	Orange, bitter	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus bergamia	organisms	Fruit & nuts	Bergamot	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus grandis	organisms	Fruit & nuts	Pomelo	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus limetta	organisms	Fruit & nuts	Lime, sweet	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus limon	organisms	Fruit & nuts	Lemon	https://www.fao.org/4/a0135e/A0135E10.htm	Citrus x limon	FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus medica	organisms	Fruit & nuts	Citron	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus paradisi	organisms	Fruit & nuts	Grapefruit	https://www.fao.org/4/a0135e/A0135E10.htm	Citrus x paradisi	FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus reticulata	organisms	Fruit & nuts	Clementine	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrus sinensis	organisms	Fruit & nuts	Orange	https://www.fao.org/4/a0135e/A0135E10.htm	Citrus x sinensis	FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Corylus avellana	organisms	Fruit & nuts	Filbert (Hazelnut)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cydonia oblonga	organisms	Fruit & nuts	Quince	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Diospyros kaki	organisms	Fruit & nuts	Persimmon	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Diospyros virginiana	organisms	Fruit & nuts	Persimmon	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Eriobotrya japonica	organisms	Fruit & nuts	Loquat	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ficus carica	organisms	Fruit & nuts	Fig	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Fragaria vesca	organisms	Fruit & nuts	Woodland strawberry	https://gd.eppo.int/taxon/FRAVE		Selected source-linked agricultural taxon; species-level scope includes wild individuals.
+Fragaria x ananassa	organisms	Fruit & nuts	Cultivated strawberry	https://gd.eppo.int/taxon/FRAAN	Fragaria ananassa	Selected source-linked agricultural taxon; species-level scope includes wild individuals.
+Litchi chinensis	organisms	Fruit & nuts	Litchi	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Malus domestica	organisms	Fruit & nuts	Apple	https://www.fao.org/4/a0135e/A0135E10.htm	Pyrus malus	Cultivated apple; wild Malus sylvestris is excluded.
+Mangifera indica	organisms	Fruit & nuts	Mango	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Mespilus germanica	organisms	Fruit & nuts	Medlar	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Musa acuminata	organisms	Fruit & nuts	Banana	https://www.fao.org/4/ae216e/ae216e0m.htm		Species-level scope includes cultivars and wild samples; unspecified interspecific hybrids are excluded.
+Musa balbisiana	organisms	Fruit & nuts	Banana and plantain progenitor	https://www.fao.org/4/ae216e/ae216e0m.htm		Species-level scope includes cultivars and wild samples; unspecified interspecific hybrids are excluded.
+Musa paradisiaca	organisms	Fruit & nuts	Banana	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Musa sapientum	organisms	Fruit & nuts	Plantain	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Persea americana	organisms	Fruit & nuts	Avocado	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Phoenix dactylifera	organisms	Fruit & nuts	Dates	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pistacia vera	organisms	Fruit & nuts	Pistachio nut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Prunus armeniaca	organisms	Fruit & nuts	Apricot	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Prunus domestica	organisms	Fruit & nuts	Plum	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Prunus dulcis	organisms	Fruit & nuts	Almond	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Prunus persica	organisms	Fruit & nuts	Nectarine	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Psidium guajava	organisms	Fruit & nuts	Guava	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Punica granatum	organisms	Fruit & nuts	Pomegranate	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pyrus communis	organisms	Fruit & nuts	Pear	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vitis vinifera	organisms	Fruit & nuts	Grape	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Acacia mearnsii	organisms	Industrial, oil & specialty crops	Black wattle	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Agave atrovirens	organisms	Industrial, oil & specialty crops	Maguey	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Agave fourcroydes	organisms	Industrial, oil & specialty crops	Henequen	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Agave sisalana	organisms	Industrial, oil & specialty crops	Sisal	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Allium cepa	organisms	Industrial, oil & specialty crops	Onion seed	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Arachis hypogaea	organisms	Industrial, oil & specialty crops	Groundnut (peanut)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Areca catechu	organisms	Industrial, oil & specialty crops	Areca (betel nut)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Boehmeria nivea	organisms	Industrial, oil & specialty crops	Ramie	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Borassus flabellifer	organisms	Industrial, oil & specialty crops	Palm palmyra	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Brassica napus	organisms	Industrial, oil & specialty crops	Colza (rapeseed)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Brassica nigra	organisms	Industrial, oil & specialty crops	Mustard	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Camellia sinensis	organisms	Industrial, oil & specialty crops	Tea	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cannabis sativa	organisms	Industrial, oil & specialty crops	Hemp fibre	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Carthamus tinctorius	organisms	Industrial, oil & specialty crops	Safflower	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Carum carvi	organisms	Industrial, oil & specialty crops	Caraway seeds	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ceiba pentandra	organisms	Industrial, oil & specialty crops	Kapok	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Chrysanthemum cinerariaefolium	organisms	Industrial, oil & specialty crops	Pyrethum	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cichorium intybus	organisms	Industrial, oil & specialty crops	Chicory	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cinnamomum verum	organisms	Industrial, oil & specialty crops	Cinnamon	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cocos nucifera	organisms	Industrial, oil & specialty crops	Coconut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cola acuminata	organisms	Industrial, oil & specialty crops	Cola nut (all varieties)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Crotalaria juncea	organisms	Industrial, oil & specialty crops	Hemp, sun	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cymbopogon citratus	organisms	Industrial, oil & specialty crops	Lemon grass	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Elaeis guineensis	organisms	Industrial, oil & specialty crops	Oil palm	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Elettaria cardamomum	organisms	Industrial, oil & specialty crops	Cardamom	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Furcraea macrophylla	organisms	Industrial, oil & specialty crops	Fique	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Glycine max	organisms	Industrial, oil & specialty crops	Soybean	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Glycyrrhiza glabra	organisms	Industrial, oil & specialty crops	Liquorice	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Guizotia abyssinica	organisms	Industrial, oil & specialty crops	Niger seed	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Hevea brasiliensis	organisms	Industrial, oil & specialty crops	Rubber	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Hibiscus cannabinus	organisms	Industrial, oil & specialty crops	Kenaf	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Humulus lupulus	organisms	Industrial, oil & specialty crops	Hop	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ilex paraguariensis	organisms	Industrial, oil & specialty crops	Yerba mate	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Indigofera tinctoria	organisms	Industrial, oil & specialty crops	Indigo	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lawsonia inermis	organisms	Industrial, oil & specialty crops	Henna	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Linum usitatissimum	organisms	Industrial, oil & specialty crops	Flax for fibre	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lygeum spartum	organisms	Industrial, oil & specialty crops	Grass esparto	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Metroxylon sagu	organisms	Industrial, oil & specialty crops	Palm, sago	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Moringa oleifera	organisms	Industrial, oil & specialty crops	Drumstick tree	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Morus alba	organisms	Industrial, oil & specialty crops	Mulberry for silkworms	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Musa textilis	organisms	Industrial, oil & specialty crops	Abaca (Manila hemp)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Myristica fragrans	organisms	Industrial, oil & specialty crops	Mace	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Nicotiana tabacum	organisms	Industrial, oil & specialty crops	Tobacco	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Olea europaea	organisms	Industrial, oil & specialty crops	Olive	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Papaver somniferum	organisms	Industrial, oil & specialty crops	Opium	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Phormium tenax	organisms	Industrial, oil & specialty crops	Formio (New Zealand flax)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pimpinella anisum	organisms	Industrial, oil & specialty crops	Anise seeds	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Piper nigrum	organisms	Industrial, oil & specialty crops	Black pepper	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ricinus communis	organisms	Industrial, oil & specialty crops	Castor bean	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Sesamum indicum	organisms	Industrial, oil & specialty crops	Sesame	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Sinapis alba	organisms	Industrial, oil & specialty crops	Mustard	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Sorghum bicolor	organisms	Industrial, oil & specialty crops	Broom millet	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Syzygium aromaticum	organisms	Industrial, oil & specialty crops	Clove	https://www.fao.org/4/a0135e/A0135E10.htm	Eugenia aromatica	FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Theobroma cacao	organisms	Industrial, oil & specialty crops	Cacao (cocoa)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Urena lobata	organisms	Industrial, oil & specialty crops	Urena (Congo jute)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vanilla planifolia	organisms	Industrial, oil & specialty crops	Vanilla	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vitellaria paradoxa	organisms	Industrial, oil & specialty crops	Shea butter (nut)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Zingiber officinale	organisms	Industrial, oil & specialty crops	Ginger	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cajanus cajan	organisms	Legumes	Pigeon pea	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cicer arietinum	organisms	Legumes	Chickpea (gram pea)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lens culinaris	organisms	Legumes	Lentil	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Phaseolus vulgaris	organisms	Legumes	Beans, dry, edible, for grains	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pisum sativum	organisms	Legumes	Pea, edible dry, for grain	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Trigonella foenum-graecum	organisms	Legumes	Fenugreek	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vicia faba	organisms	Legumes	Broad bean, dry	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vicia sativa	organisms	Legumes	Vetch for grain	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vigna subterranea	organisms	Legumes	Bambara groundnut	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Vigna unguiculata	organisms	Legumes	Cowpea, for grain	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Anas platyrhynchos	organisms	Livestock & poultry	Domestic ducks / mallard	https://www.fao.org/livestock-systems/global-distributions/ducks/en/		Species-level scope; assemblies need not be from farmed individuals.
+Bos indicus	organisms	Livestock & poultry	Zebu cattle	https://www.fao.org/livestock-systems/global-distributions/cattle/en/		Species-level scope; assemblies need not be from farmed individuals.
+Bos taurus	organisms	Livestock & poultry	Cattle	https://www.fao.org/livestock-systems/global-distributions/cattle/en/		Species-level scope; assemblies need not be from farmed individuals.
+Bubalus bubalis	organisms	Livestock & poultry	Water buffalo	https://www.fao.org/livestock-systems/global-distributions/buffaloes/en/		Species-level scope; assemblies need not be from farmed individuals.
+Capra hircus	organisms	Livestock & poultry	Goats	https://www.fao.org/livestock-systems/global-distributions/goats/en/		Species-level scope; assemblies need not be from farmed individuals.
+Equus caballus	organisms	Livestock & poultry	Horses	https://www.fao.org/livestock-systems/global-distributions/horses/en/		Species-level scope; assemblies need not be from farmed individuals.
+Gallus gallus	organisms	Livestock & poultry	Chickens	https://www.fao.org/livestock-systems/global-distributions/chickens/en/		Species-level scope; assemblies need not be from farmed individuals.
+Ovis aries	organisms	Livestock & poultry	Sheep	https://www.fao.org/livestock-systems/global-distributions/sheep/en/		Species-level scope; assemblies need not be from farmed individuals.
+Sus scrofa	organisms	Livestock & poultry	Pigs	https://www.fao.org/livestock-systems/global-distributions/pigs/en/		Species-level scope; assemblies need not be from farmed individuals.
+Allium sativum	organisms	Roots & tubers	Garlic, dry	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Arracacia xanthorrhiza	organisms	Roots & tubers	Arracha	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Colocasia esculenta	organisms	Roots & tubers	Cocoyam	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Ipomoea batatas	organisms	Roots & tubers	Potato, sweet	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lopmoea batatas	organisms	Roots & tubers	Sweet potato	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Manihot esculenta	organisms	Roots & tubers	Cassava (manioc)	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Maranta arundinacea	organisms	Roots & tubers	Arrowroot	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Solamum tuberosum	organisms	Roots & tubers	Potato	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Xanthosoma sagittifolium	organisms	Roots & tubers	Tannia	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Abelmoschus esculentus	organisms	Vegetables	Okra	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Allium ampeloprasum	organisms	Vegetables	Leek	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Allium porrum	organisms	Vegetables	Leek	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Apium graveolens	organisms	Vegetables	Celeriac	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Armoracia rusticana	organisms	Vegetables	Horseradish	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Asparagus officinalis	organisms	Vegetables	Asparagus	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Brassica chinensis	organisms	Vegetables	Cabbage, Chinese	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Brassica oleracea	organisms	Vegetables	Broccoli	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Brassica rapa	organisms	Vegetables	Turnip, edible	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Capsicum annuum	organisms	Vegetables	Sweet pepper	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cichorium endivia	organisms	Vegetables	Endive	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Citrullus lanatus	organisms	Vegetables	Watermelon	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cucumis melo	organisms	Vegetables	Cantaloupe	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cucumis sativus	organisms	Vegetables	Cucumber	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cynara cardunculus	organisms	Vegetables	Cardoon	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Cynara scolymus	organisms	Vegetables	Artichoke	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Daucus carota	organisms	Vegetables	Carrot, edible	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Foeniculum vulgare	organisms	Vegetables	Fennel	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lactuca sativa	organisms	Vegetables	Lettuce	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Lepidium sativum	organisms	Vegetables	Cress	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Pastinaca sativa	organisms	Vegetables	Parsnip	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Phaseolus and	organisms	Vegetables	Beans, harvested green	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Raphanus sativus	organisms	Vegetables	Radish	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Scorzonera hispanica	organisms	Vegetables	Scorzonera - black salsify	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Sechium edule	organisms	Vegetables	Chayote	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Solanum lycopersicum	organisms	Vegetables	Tomato	https://www.fao.org/4/a0135e/A0135E10.htm	Lycopersicon esculentum	FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Solanum melongena	organisms	Vegetables	Eggplant	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Spinacia oleracea	organisms	Vegetables	Spinach	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Tragopogon porrifolius	organisms	Vegetables	Salsify	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Valerianella locusta	organisms	Vegetables	Corn for salad	https://www.fao.org/4/a0135e/A0135E10.htm		FAO botanical crop entry; species-level scope includes wild individuals and crop varieties.
+Botrytis cinerea	pathogens	Fungal plant pathogens	Grey mould	https://gd.eppo.int/taxon/BOTRCI		
+Colletotrichum graminicola	pathogens	Fungal plant pathogens	Maize anthracnose	https://gd.eppo.int/taxon/COLLGR		
+Fusarium graminearum	pathogens	Fungal plant pathogens	Fusarium head blight	https://gd.eppo.int/taxon/GIBBZE		
+Fusarium oxysporum	pathogens	Fungal plant pathogens	Fusarium wilt	https://gd.eppo.int/taxon/FUSAOX		
+Puccinia graminis	pathogens	Fungal plant pathogens	Stem rust	https://gd.eppo.int/taxon/PUCCGR		
+Puccinia striiformis	pathogens	Fungal plant pathogens	Stripe rust	https://gd.eppo.int/taxon/PUCCST		
+Pyricularia oryzae	pathogens	Fungal plant pathogens	Rice blast	https://gd.eppo.int/taxon/PYRIOR	Magnaporthe oryzae	Selected source-linked agricultural taxon.
+Sclerotinia sclerotiorum	pathogens	Fungal plant pathogens	White mould	https://gd.eppo.int/taxon/SCLESC		
+Ustilago maydis	pathogens	Fungal plant pathogens	Corn smut	https://gd.eppo.int/taxon/USTIMA		
+Verticillium dahliae	pathogens	Fungal plant pathogens	Verticillium wilt	https://gd.eppo.int/taxon/VERTDA		
+Zymoseptoria tritici	pathogens	Fungal plant pathogens	Septoria leaf blotch	https://gd.eppo.int/taxon/SEPTTR	Mycosphaerella graminicola	Selected source-linked agricultural taxon; species-level scope includes wild individuals.
+Babesia bigemina	pathogens	Livestock protist pathogens	Bovine babesiosis	https://www.woah.org/en/disease/bovine-babesiosis/		
+Babesia bovis	pathogens	Livestock protist pathogens	Bovine babesiosis	https://www.woah.org/en/disease/bovine-babesiosis/		
+Babesia divergens	pathogens	Livestock protist pathogens	Bovine babesiosis	https://www.woah.org/en/disease/bovine-babesiosis/		
+Theileria annulata	pathogens	Livestock protist pathogens	Bovine theileriosis	https://www.woah.org/en/disease/theileriosis/		
+Theileria orientalis	pathogens	Livestock protist pathogens	Bovine theileriosis	https://www.woah.org/fileadmin/Home/eng/Health_standards/tahc/2024/en_chapitre_theileriosis.htm		
+Theileria parva	pathogens	Livestock protist pathogens	Bovine theileriosis	https://www.woah.org/en/disease/theileriosis/		
+Phytophthora capsici	pathogens	Oomycete plant pathogens	Phytophthora blight	https://gd.eppo.int/taxon/PHYTCP		Selected source-linked agricultural taxon.
+Phytophthora infestans	pathogens	Oomycete plant pathogens	Potato late blight	https://gd.eppo.int/taxon/PHYTIN		
+Phytophthora nicotianae	pathogens	Oomycete plant pathogens	Black shank	https://gd.eppo.int/taxon/PHYTNN		Selected source-linked agricultural taxon; species-level scope includes wild individuals.
+Phytophthora ramorum	pathogens	Oomycete plant pathogens	Sudden oak death and nursery disease	https://gd.eppo.int/taxon/PHYTRA		
+Plasmodiophora brassicae	pathogens	Protist plant pathogens	Clubroot	https://gd.eppo.int/taxon/PLADBR		Selected source-linked agricultural taxon.
+Acyrthosiphon pisum	pests	Insect pests	Pea aphid	https://gd.eppo.int/taxon/ACYRON		Species-level scope includes cultivars and wild samples; unspecified interspecific hybrids are excluded.
+Aphis gossypii	pests	Insect pests	Cotton aphid	https://gd.eppo.int/taxon/APHIGO		
+Bactrocera dorsalis	pests	Insect pests	Oriental fruit fly	https://gd.eppo.int/taxon/DACUDO		
+Bemisia tabaci	pests	Insect pests	Whitefly	https://gd.eppo.int/taxon/BEMITA		
+Ceratitis capitata	pests	Insect pests	Mediterranean fruit fly	https://gd.eppo.int/taxon/CERTCA		
+Cydia pomonella	pests	Insect pests	Codling moth	https://gd.eppo.int/taxon/CARPPO		Selected source-linked agricultural taxon.
+Diabrotica virgifera	pests	Insect pests	Western corn rootworm	https://gd.eppo.int/taxon/DIABVI		
+Drosophila suzukii	pests	Insect pests	Spotted-wing drosophila	https://gd.eppo.int/taxon/DROSSU		
+Frankliniella occidentalis	pests	Insect pests	Western flower thrips	https://gd.eppo.int/taxon/FRANOC		
+Halyomorpha halys	pests	Insect pests	Brown marmorated stink bug	https://gd.eppo.int/taxon/HALYHA		
+Helicoverpa armigera	pests	Insect pests	Cotton bollworm	https://gd.eppo.int/taxon/HELIAR		
+Helicoverpa zea	pests	Insect pests	Corn earworm	https://gd.eppo.int/taxon/HELIZE		
+Leptinotarsa decemlineata	pests	Insect pests	Colorado potato beetle	https://gd.eppo.int/taxon/LPTNDE		Selected source-linked agricultural taxon.
+Myzus persicae	pests	Insect pests	Peach-potato aphid	https://gd.eppo.int/taxon/MYZUPE		
+Plutella xylostella	pests	Insect pests	Diamondback moth	https://gd.eppo.int/taxon/PLUTMA		
+Spodoptera eridania	pests	Insect pests	Southern armyworm	https://gd.eppo.int/taxon/PRODER		
+Spodoptera frugiperda	pests	Insect pests	Fall armyworm	https://gd.eppo.int/taxon/LAPHFR		
+Spodoptera littoralis	pests	Insect pests	Cotton leafworm	https://gd.eppo.int/taxon/SPODLI		
+Spodoptera litura	pests	Insect pests	Tobacco cutworm	https://gd.eppo.int/taxon/PRODLI		
+Thrips palmi	pests	Insect pests	Melon thrips	https://gd.eppo.int/taxon/THRIPL		Selected source-linked agricultural taxon.
+Panonychus citri	pests	Mite pests	Citrus red mite	https://gd.eppo.int/taxon/METTCI		Selected source-linked agricultural taxon; species-level scope includes wild individuals.
+Tetranychus urticae	pests	Mite pests	Two-spotted spider mite	https://gd.eppo.int/taxon/TETRUR		
+Pomacea canaliculata	pests	Mollusc pests	Apple snail	https://gd.eppo.int/taxon/POMACA		
+Globodera pallida	pests	Nematode pests	Pale potato cyst nematode	https://gd.eppo.int/taxon/HETDPA		Selected source-linked agricultural taxon.
+Globodera rostochiensis	pests	Nematode pests	Golden potato cyst nematode	https://gd.eppo.int/taxon/HETDRO		
+Heterodera glycines	pests	Nematode pests	Soybean cyst nematode	https://gd.eppo.int/taxon/HETDGL		
+Meloidogyne enterolobii	pests	Nematode pests	Root-knot nematode	https://gd.eppo.int/taxon/MELGMY		
+Meloidogyne hapla	pests	Nematode pests	Northern root-knot nematode	https://gd.eppo.int/taxon/MELGHA		
+Meloidogyne incognita	pests	Nematode pests	Root-knot nematode	https://gd.eppo.int/taxon/MELGIN		
+Meloidogyne javanica	pests	Nematode pests	Root-knot nematode	https://gd.eppo.int/taxon/MELGJA		
+Amaranthus palmeri	pests	Weeds	Palmer amaranth	https://gd.eppo.int/taxon/AMAPA		
+Echinochloa crus-galli	pests	Weeds	Barnyard grass	https://gd.eppo.int/taxon/ECHCG		
+Lolium rigidum	pests	Weeds	Annual ryegrass	https://gd.eppo.int/taxon/LOLRI		
+Striga hermonthica	pests	Weeds	Witchweed	https://gd.eppo.int/taxon/STRHE		
