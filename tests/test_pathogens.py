@@ -19,13 +19,16 @@ class PathogenMatching(unittest.TestCase):
         d = build(records)
         self.assertEqual(d['summary']['assemblies'],5)
         self.assertEqual(d['summary']['species'],4)
+        self.assertEqual(d['views']['pathogens']['summary']['assemblies'],4)
+        self.assertEqual(d['views']['pathogens']['summary']['species'],3)
+        self.assertFalse(any(x['role']=='Vector / surveillance' for x in d['views']['pathogens']['species_inventory']))
         fungi = d['views']['fungi']
         self.assertEqual(fungi['summary']['assemblies'],2)
         self.assertEqual(fungi['summary']['species'],1)
         self.assertEqual(d['views']['vectors']['summary']['assemblies'],1)
         self.assertEqual(d['views']['worms']['summary']['assemblies'],1)
         self.assertEqual(d['views']['protists']['summary']['assemblies'],1)
-        self.assertEqual(sum(v['summary']['assemblies'] for v in d['views'].values()),5)
+        self.assertEqual(sum(d['views'][k]['summary']['assemblies'] for k in ('vectors','protists','worms','fungi')),5)
         for view in [d]+list(d['views'].values()):
             self.assertEqual(sum(x['assemblies'] for x in view['species_inventory']),view['summary']['assemblies'])
         self.assertFalse(any(x['assemblies'] for x in d['species_inventory'] if x['species']=='Entamoeba coli'))

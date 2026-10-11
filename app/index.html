@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261010vectortypes1" />
+  <link rel="stylesheet" href="styles.css?v=20261011subtabs1" />
 </head>
 <body>
   <header class="site-head">
@@ -417,16 +417,19 @@
     </section>
 
     <section id="vector-view" hidden>
-      <article class="vector-intro">
+      <article class="status-intro vector-intro">
         <div>
           <p class="panel-kicker">Vectors · parasites · fungi</p>
           <h2>Pathogens &amp; vectors</h2>
-          <p class="taxon-intro">Chromosome-scale and complete GenBank genomes for vector surveillance taxa, disease-causing protists, parasitic worms and selected pathogenic fungi. CDC and WHO sources define the initial pathogen catalogue; this is not an exhaustive list.</p>
+          <p class="taxon-intro">Chromosome-scale and complete GenBank genomes for vector surveillance taxa, disease-causing protists, parasitic worms and selected pathogenic fungi. Explore disease-causing organisms and vector surveillance taxa separately. CDC and WHO sources define the initial pathogen catalogue; this is not an exhaustive list.</p>
         </div>
-
+        <nav class="status-tabs" aria-label="Pathogens or vectors">
+          <button type="button" class="status-tab disease-tab active" data-disease="pathogens" aria-pressed="true">Pathogens <span>Protists · worms · fungi</span></button>
+          <button type="button" class="status-tab disease-tab" data-disease="vectors" aria-pressed="false">Vectors <span>MapVEu surveillance taxa</span></button>
+        </nav>
       </article>
 
-      <label for="vector-scope">Explore</label><select id="vector-scope"><option value="all">All pathogens &amp; vectors</option><option value="vectors">Vectors / surveillance</option><option value="protists">Protist parasites</option><option value="worms">Parasitic worms</option><option value="fungi">Pathogenic fungi</option></select>
+      <div id="pathogen-filters"><label for="vector-scope">Pathogen group</label><select id="vector-scope"><option value="pathogens">All pathogens &amp; parasites</option><option value="protists">Protist parasites</option><option value="worms">Parasitic worms</option><option value="fungi">Pathogenic fungi</option></select></div>
       <div id="vector-loading" class="vector-loading">Loading pathogen and vector genome history…</div>
 
       <section id="vector-content" hidden>
@@ -719,6 +722,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261011pathogens1"></script>
+  <script src="app.js?v=20261011subtabs1"></script>
 </body>
 </html>

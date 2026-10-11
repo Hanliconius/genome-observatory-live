@@ -122,12 +122,16 @@ def build(reports):
     views = {}
     for name, chosen in {
         'vectors': {x['vector_type'] for x in vector_species},
+        'pathogens': {x['vector_type'] for x in species},
         'protists': {'Protist parasites'},
         'worms': {'Parasitic nematodes','Parasitic flatworms','Other parasitic worms'},
         'fungi': {'Pathogenic fungi','Fungal parasites'},
     }.items():
         views[name] = aggregate([x for x in all_rows if x['vector_type'] in chosen],
                                [x for x in all_species.values() if x['vector_type'] in chosen], dashboard, vector)
+    views['vectors']['source'].update(dataset='MapVEu vector / surveillance taxa', scope=vector['source']['scope'], matching=vector['source']['matching'])
+    for name in ('pathogens', 'protists', 'worms', 'fungi'):
+        views[name]['source'].update(dataset='Curated CDC parasites and selected WHO-priority fungi', scope='Selected human and zoonotic parasites and pathogenic fungi from CDC and WHO sources. This catalogue is not exhaustive.')
     payload['views'] = views
     payload['audit'] = {'ncbi_assemblies_scanned': len(reports), 'curated_species': len(curated)}
     assert views['vectors']['summary'] == vector['summary'], 'Existing vector totals changed'

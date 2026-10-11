@@ -76,7 +76,7 @@ document.querySelectorAll('.section-tab').forEach(b=>b.addEventListener('click',
 }));
 
 document.querySelectorAll('.status-tab[data-status]').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.status-tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.status-tab[data-status]').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');
   statusMode=b.dataset.status;
   el('range-label').textContent='IUCN · '+(statusMode==='threatened'?'Threatened':'Extinct');
@@ -1067,10 +1067,22 @@ async function loadVectors(){
   VECTOR_LOADING=fetch(VECTOR_URL+'?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json();}).then(d=>{VECTOR_DATA=d;renderVectors();}).catch(err=>{el('vector-loading').textContent='Pathogen and vector data unavailable. Reopen this tab to retry.';console.error(err);}).finally(()=>{VECTOR_LOADING=null;});
   return VECTOR_LOADING;
 }
+let diseaseMode='pathogens';
 function selectedDiseaseData(){
-  const scope=el('vector-scope').value;
-  return scope==='all'?VECTOR_DATA:VECTOR_DATA?.views?.[scope]||VECTOR_DATA;
+  const scope=diseaseMode==='vectors'?'vectors':el('vector-scope').value;
+  return VECTOR_DATA?.views?.[scope];
 }
+document.querySelectorAll('.disease-tab').forEach(b=>b.addEventListener('click',()=>{
+  diseaseMode=b.dataset.disease;
+  document.querySelectorAll('.disease-tab').forEach(x=>{
+    x.classList.toggle('active',x===b);
+    x.setAttribute('aria-pressed',String(x===b));
+  });
+  el('pathogen-filters').hidden=diseaseMode==='vectors';
+  el('vector-type-filter').value='';
+  el('vector-search').value='';
+  renderVectors();
+}));
 el('vector-scope').addEventListener('change',()=>{
   el('vector-type-filter').value='';
   renderVectors();
@@ -1106,8 +1118,9 @@ function renderVectors(){
   if(!VECTOR_DATA)return;
   const s=selectedDiseaseData();
   if(!s)return;
-  const labels={all:'Pathogens & vectors',vectors:'Vectors / surveillance',protists:'Protist parasites',worms:'Parasitic worms',fungi:'Pathogenic fungi'};
-  const label=labels[el('vector-scope').value];
+  const labels={pathogens:'Pathogens & parasites',vectors:'Vectors / surveillance',protists:'Protist parasites',worms:'Parasitic worms',fungi:'Pathogenic fungi'};
+  const label=labels[diseaseMode==='vectors'?'vectors':el('vector-scope').value];
+  el('range-label').textContent=label+' · all time';
   const last60=dailyWindow(s.recent_daily,60,s.generated_at);
   const last30=last60.slice(-30);
   const currentPace=calendarDayPace(last30);
