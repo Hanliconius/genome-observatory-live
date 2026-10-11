@@ -68,6 +68,12 @@ def build(reports, catalogue=None):
             matching='Current GenBank chromosome/complete assemblies. Species-level matching includes varieties, breeds and wild samples of listed taxa; only explicit aliases and named cultivated hybrids are included.',
             curated_list='../data/status/agriculture.tsv')
         for group in views[section]['groups'].values(): group['source'].update(views[section]['source'], species_names=len(group['species_inventory']))
+        for view in [views[section]] + list(views[section]['groups'].values()):
+            represented = {x['species'] for x in view['species_inventory'] if x['assemblies']}
+            def annotation_match(x):
+                item = lookup.get(taxon_key(x.get('species')))
+                return item is not None and item['species'] in represented
+            view['annotations'] = {k: [x for x in dashboard.get('annotations',{}).get(k,[]) if annotation_match(x)] for k in ('in_progress','recent_completed')}
     return {'generated_at': views['organisms']['generated_at'], 'views': views,
             'audit': {'ncbi_assemblies_scanned':len(reports), 'curated_taxa':len(catalogue)}}
 
