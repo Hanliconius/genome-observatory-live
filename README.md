@@ -236,7 +236,7 @@ These constraints are kept visible because the project is intended to make the d
 
 The **Pathogens & vectors** tab combines vector surveillance taxa with a curated catalogue of disease-causing protists, parasitic worms and selected pathogenic fungi. Separate **Pathogens** and **Vectors** subtabs keep their totals, composition, deposition history and species inventories distinct. Pathogens opens with all curated pathogens and parasites, with an additional filter for protists, worms or fungi; Vectors uses only the MapVEu surveillance catalogue.
 
-Each subtab also has an all-time BioSample sample-origin map at the bottom, filterable by broad organism group. Countries and marine localities use the same parsing rules as the country explorer; assemblies without a resolved locality are reported explicitly. These maps show sequenced sample origins, not disease prevalence or species ranges.
+Each subtab also has an all-time BioSample sample-origin map alongside the yearly and cumulative deposit charts, filterable by broad organism group. Countries and marine localities use the same parsing rules as the country explorer; assemblies without a resolved locality are reported explicitly. These maps show sequenced sample origins, not disease prevalence or species ranges.
 
 The vector source remains the MapVEu/VectorBase sample export dated 10 October 2026 (1,834,448 records; 536 taxonomic labels), summarized in [`data/status/mapveu_species.tsv`](data/status/mapveu_species.tsv). Broader vector groups use [`data/status/vector_types.json`](data/status/vector_types.json). Source membership does not establish vector competence; categories absent from that export are not represented.
 

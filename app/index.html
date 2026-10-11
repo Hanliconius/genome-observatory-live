@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261011maps1" />
+  <link rel="stylesheet" href="styles.css?v=20261011maplayout1" />
 </head>
 <body>
   <header class="site-head">
@@ -485,23 +485,35 @@
             <p class="note">Vector coverage follows the supplied MapVEu export. Parasites and fungi follow the curated species list linked below. Groups with no matched qualifying genomes remain visible; vector-list membership does not establish transmission.</p>
           </article>
 
-          <article class="panel chart-panel span-2">
+          <section class="disease-time-geography full-width" aria-label="Genome deposits through time and sample origins">
+          <article class="panel chart-panel">
             <div class="panel-head"><div><p class="panel-kicker">Assemblies over time</p><h2 class="panel-title">Deposits per year</h2></div></div>
             <svg id="vector-rate-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
           </article>
+          <article class="panel chart-panel">
+            <div class="panel-head"><div><p class="panel-kicker">Cumulative coverage</p><h2 class="panel-title">Assemblies and first-time species through time</h2></div></div>
+            <svg id="vector-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
+            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
+          </article>
+        <article class="panel disease-origin-panel">
+          <div class="panel-head"><div><p class="panel-kicker">Geographic origin</p><h2 class="panel-title" id="disease-map-title">Pathogen genome sample origins</h2></div></div>
+          <label for="disease-map-group">Broad group</label><select id="disease-map-group"><option value="">All groups</option></select>
+          <p class="note">All-time qualifying assemblies by reported BioSample collection country. This shows the origins of sequenced samples, not disease prevalence or the full distribution of a species. Ocean markers represent named water bodies, not precise collection coordinates.</p>
+          <svg id="taxon-map-disease" class="country-map" viewBox="0 0 520 285" role="img" aria-label="Genome sample origins by country"></svg>
+          <div id="taxon-map-legend-disease" class="map-legend"></div>
+          <p id="taxon-map-status-disease" class="note" aria-live="polite">Loading geographic origins…</p>
+        </article>
+          </section>
 
-          <article class="panel list-panel">
+
+          <article class="panel list-panel span-2">
             <p class="panel-kicker">RefSeq</p>
             <h2 class="panel-title">Matching annotation activity</h2>
             <div class="subsection"><h3>In progress</h3><div id="vector-pipeline-list" class="list-table"></div></div>
             <div class="subsection"><h3>Recently completed</h3><div id="vector-recent-annotation-list" class="list-table"></div></div>
           </article>
 
-          <article class="panel chart-panel span-2">
-            <div class="panel-head"><div><p class="panel-kicker">Cumulative coverage</p><h2 class="panel-title">Assemblies and first-time species through time</h2></div></div>
-            <svg id="vector-cumulative-chart" class="chart" viewBox="0 0 860 320" preserveAspectRatio="none" role="img"></svg>
-            <div class="legend"><span><i class="swatch swatch-a"></i>Assemblies</span><span><i class="swatch swatch-b"></i>First-time species</span></div>
-          </article>
+
 
           <article class="panel summary-panel">
             <p class="panel-kicker">All time</p>
@@ -522,14 +534,7 @@
           </article>
         </section>
         <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><p class="note" id="vector-coverage"></p><label for="vector-type-filter">Organism group</label><select id="vector-type-filter"><option value="">All types</option></select><label for="vector-search">Find a species</label><input id="vector-search" type="search" placeholder="Scientific name" style="display:block;margin:12px 0;padding:10px;width:min(100%,420px)"><p class="note" id="vector-filter-count"></p><div id="vector-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly was matched, rather than no genome exists. Only explicit aliases in the curated list are matched. Strain and subspecies names of pathogens roll up to species; uncertain source labels are excluded.</p><a href="../data/status/pathogens.tsv" download>Download curated pathogen &amp; parasite list</a> · <a href="https://github.com/Hanliconius/genome-observatory-live/blob/main/data/status/pathogens.tsv" target="_blank" rel="noopener">Review the list on GitHub</a> · <a href="../data/status/mapveu_species.tsv" download>Download original vector taxon labels</a></article>
-        <article class="panel full-width disease-origin-panel">
-          <div class="panel-head"><div><p class="panel-kicker">Geographic origin</p><h2 class="panel-title" id="disease-map-title">Pathogen genome sample origins</h2></div></div>
-          <label for="disease-map-group">Broad group</label><select id="disease-map-group"><option value="">All groups</option></select>
-          <p class="note">All-time qualifying assemblies by reported BioSample collection country. This shows the origins of sequenced samples, not disease prevalence or the full distribution of a species. Ocean markers represent named water bodies, not precise collection coordinates.</p>
-          <svg id="taxon-map-disease" class="country-map" viewBox="0 0 520 285" role="img" aria-label="Genome sample origins by country"></svg>
-          <div id="taxon-map-legend-disease" class="map-legend"></div>
-          <p id="taxon-map-status-disease" class="note" aria-live="polite">Loading geographic origins…</p>
-        </article>
+
       </section>
     </section>
 
@@ -730,6 +735,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261011maps1"></script>
+  <script src="app.js?v=20261011maplayout1"></script>
 </body>
 </html>
