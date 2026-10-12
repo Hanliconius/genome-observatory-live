@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-11T17:05:56.753623+00:00",
+  "generated_at": "2026-10-12T11:59:07.097482+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 53,
-      "species": 42,
-      "first_time_species": 24
+      "assemblies": 40,
+      "species": 33,
+      "first_time_species": 17
     },
     "year": {
-      "assemblies": 6435,
-      "species": 4008,
-      "first_time_species": 3446
+      "assemblies": 6427,
+      "species": 4002,
+      "first_time_species": 3442
     },
     "all": {
       "assemblies": 19070,
@@ -55818,6 +55818,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-10-12",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -55981,7 +55987,7 @@
   "groups_week": [
     {
       "group": "Animals",
-      "count": 41
+      "count": 29
     },
     {
       "group": "Plants",
@@ -55989,17 +55995,17 @@
     },
     {
       "group": "Fungi",
-      "count": 3
+      "count": 2
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4195
+      "count": 4190
     },
     {
       "group": "Plants",
-      "count": 1669
+      "count": 1666
     },
     {
       "group": "Fungi",
@@ -57349,7 +57355,12 @@
       "family": "Nymphaeaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Nuphar_lutea_%28flower%29.jpg/960px-Nuphar_lutea_%28flower%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Nuphar_lutea_(flower).jpg",
+        "credit": "(Hans Hillewaert) · CC BY-SA 3.0",
+        "matched_name": "Nuphar lutea"
+      }
     },
     {
       "accession": "GCA_988323875.1",
@@ -57620,7 +57631,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Argyroploce_arbutella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Argyroploce_arbutella.jpg",
+        "credit": "J. Lång · Copyrighted free use",
+        "matched_name": "Argyroploce arbutella"
+      }
     },
     {
       "accession": "GCA_988324535.1",
@@ -57652,7 +57668,12 @@
       "family": "Ichneumonidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Ichneumon_wasp_%28Ichneumonidae_sp%29_female.jpg/960px-Ichneumon_wasp_%28Ichneumonidae_sp%29_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Ichneumon_wasp_(Ichneumonidae_sp)_female.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Ichneumonidae"
+      }
     },
     {
       "accession": "GCA_988324465.1",
@@ -58056,7 +58077,12 @@
       "family": "Scolopacidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Actitis_macularius_%28Scolopacidae%29_-_%28adult%29%2C_Lake_Ontario_%28NY%29%2C_United_States.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Actitis_macularius_(Scolopacidae)_-_(adult),_Lake_Ontario_(NY),_United_States.jpg",
+        "credit": "This image is created by user B. Schoenmakers at Observation.org, a global biodiversity recording project. · CC BY 3.0",
+        "matched_name": "Scolopacidae"
+      }
     },
     {
       "accession": "GCA_988323815.1",
@@ -58289,7 +58315,12 @@
       "family": "Notodontidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/%282003%29_Pebble_Prominent_%28Notodonta_ziczac%29_%283474183825%29.jpg/960px-%282003%29_Pebble_Prominent_%28Notodonta_ziczac%29_%283474183825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:(2003)_Pebble_Prominent_(Notodonta_ziczac)_(3474183825).jpg",
+        "credit": "Ben Sale from UK · CC BY 2.0",
+        "matched_name": "Notodonta"
+      }
     },
     {
       "accession": "GCA_988323525.1",
@@ -147338,7 +147369,12 @@
       "credit": "Didier Descouens · CC BY-SA 4.0",
       "matched_name": "Arbutus unedo"
     },
-    "Argyroploce arbutella": null,
+    "Argyroploce arbutella": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Argyroploce_arbutella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Argyroploce_arbutella.jpg",
+      "credit": "J. Lång · Copyrighted free use",
+      "matched_name": "Argyroploce arbutella"
+    },
     "Beryx splendens": null,
     "Betula pubescens": null,
     "Bidens cernua": null,
@@ -147472,10 +147508,30 @@
     "Mycetophagus quadripustulatus": null,
     "Mystacina tuberculata": null,
     "Neofaculta taigana": null,
-    "Netelia cristata": null,
-    "Notodonta tritophus": null,
-    "Numenius arquata": null,
-    "Nuphar lutea": null,
+    "Netelia cristata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Ichneumon_wasp_%28Ichneumonidae_sp%29_female.jpg/960px-Ichneumon_wasp_%28Ichneumonidae_sp%29_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Ichneumon_wasp_(Ichneumonidae_sp)_female.jpg",
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "matched_name": "Ichneumonidae"
+    },
+    "Notodonta tritophus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/%282003%29_Pebble_Prominent_%28Notodonta_ziczac%29_%283474183825%29.jpg/960px-%282003%29_Pebble_Prominent_%28Notodonta_ziczac%29_%283474183825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:(2003)_Pebble_Prominent_(Notodonta_ziczac)_(3474183825).jpg",
+      "credit": "Ben Sale from UK · CC BY 2.0",
+      "matched_name": "Notodonta"
+    },
+    "Numenius arquata": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Actitis_macularius_%28Scolopacidae%29_-_%28adult%29%2C_Lake_Ontario_%28NY%29%2C_United_States.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Actitis_macularius_(Scolopacidae)_-_(adult),_Lake_Ontario_(NY),_United_States.jpg",
+      "credit": "This image is created by user B. Schoenmakers at Observation.org, a global biodiversity recording project. · CC BY 3.0",
+      "matched_name": "Scolopacidae"
+    },
+    "Nuphar lutea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Nuphar_lutea_%28flower%29.jpg/960px-Nuphar_lutea_%28flower%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Nuphar_lutea_(flower).jpg",
+      "credit": "(Hans Hillewaert) · CC BY-SA 3.0",
+      "matched_name": "Nuphar lutea"
+    },
     "Operophtera brumata": null,
     "Oryzias curvinotus": null,
     "Osphya bipunctata": null,
