@@ -1,0 +1,13 @@
+source_id	name	url	version	retrieved_at	scope	license	sha256
+fao_crops	FAO crops	https://www.fao.org/4/a0135e/A0135E10.htm	legacy catalogue reviewed 2026-10-11	2026-10-13	Agricultural census botanical crop entries		
+fao_livestock	FAO livestock	https://www.fao.org/livestock-systems/global-distributions/en/	legacy catalogue reviewed 2026-10-11	2026-10-13	Livestock and poultry		
+fao_aquaculture	FAO aquaculture	https://www.fao.org/4/W2333E/W2333E00.htm	legacy catalogue reviewed 2026-10-11	2026-10-13	Selected cultured aquatic species		
+eppo	EPPO	https://gd.eppo.int/datasheets/	datasheet index snapshot 2026-10-13	2026-10-13	Selected legacy records plus the complete public datasheet index; plant health, forestry and invasive weeds		1b3b15a3657a8c190c7644e71ea69cba45f85d62e37c34c9cd5b69c3f43ea98a
+woah	WOAH	https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-diseases/	legacy catalogue reviewed 2026-10-11	2026-10-13	Selected livestock disease records		
+ag100_targets	Ag100Pest targets	https://i5k.github.io/ag100pest	2021-03-09 target table	2026-10-13	USDA agricultural arthropod project targets; includes biological-control associates		2354d30ce950ed1b4dd3ed5a9157f43947614ba3e98eec3b039bdfb8d2dd2d0b
+ag100_releases	Ag100Pest BioProject	https://www.ncbi.nlm.nih.gov/bioproject/PRJNA555319	2026-10-13	2026-10-13	Species in qualifying GenBank reports whose BioProject lineage includes PRJNA555319; complements the older target list		
+caps_2026	USDA CAPS 2026	https://approvedmethods.ceris.purdue.edu/2026	2026	2026-10-13	US national priority plant-pest surveillance; includes crop, forestry and ornamental hosts		b7d017b8d9bc4c274a533cbf70664fff6da850bb94231093aef4567f278aaf90
+aphis_vet	USDA APHIS veterinary	https://www.aphis.usda.gov/animal-product-import/organisms-vectors/livestock-poultry-pathogens	2026-09-03	2026-10-13	Partial regulated livestock/poultry agents and vectors list; species-level eukaryotes only		83b1d30bdd670b12023d8ef8e36dbe0dda32d8983701695984e6c66b55dfee1b
+phibase_5_6	PHI-base 5.6	https://zenodo.org/records/21196331	5.6 (2026-07-04)	2026-10-13	Experimentally studied interactions involving listed agricultural hosts; bacteria and non-agricultural hosts excluded	CC-BY-4.0	cca480e9b8f8d4cea262ce972f916fa1850a262b93e7dba6b0b180a4c9b5c847
+ncbi_taxonomy	NCBI Taxonomy	https://www.ncbi.nlm.nih.gov/taxonomy	2026-10-13	2026-10-13	Name resolution and eukaryotic lineage checks; not evidence of agricultural role		0584c0d803d83ee4a29176bd0fc9065437fcec0ff0dd9d1059da263e9377e145
+role_review	Role evidence	https://github.com/Hanliconius/genome-observatory-live/blob/main/data/status/agriculture_role_overrides.tsv	2026-10-13	2026-10-13	Explicit role review backed by individual USDA, FAO and other primary evidence links		

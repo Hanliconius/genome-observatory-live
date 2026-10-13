@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261011agriculture1" />
+  <link rel="stylesheet" href="styles.css?v=20261013agsources1" />
 </head>
 <body>
   <header class="site-head">
@@ -541,11 +541,11 @@
 
     <section id="agriculture-view" hidden>
       <article class="status-intro">
-        <div><p class="panel-kicker">Food · farming · crop protection</p><h2>Agricultural genomes</h2><p class="taxon-intro">Chromosome-scale and complete GenBank genomes for cultivated crops, livestock and aquaculture, agricultural pests, and eukaryotic pathogens of plants and livestock. Explore a selected FAO, EPPO and WOAH catalogue; this is not an exhaustive list.</p></div>
+        <div><p class="panel-kicker">Food · farming · crop protection</p><h2>Agricultural genomes</h2><p class="taxon-intro">Chromosome-scale and complete GenBank genomes for cultivated crops, livestock and aquaculture, agricultural pests, and eukaryotic pathogens of plants and livestock. Explore a union of FAO, EPPO, USDA Ag100Pest/CAPS/APHIS, WOAH and PHI-base records. Source membership is recorded for each taxon; this is not an exhaustive list.</p></div>
         <nav class="status-tabs" aria-label="Agricultural role">
-          <button type="button" class="status-tab ag-tab active" data-ag="organisms" aria-pressed="true">Organisms <span>Crops · livestock · aquaculture</span></button>
+          <button type="button" class="status-tab ag-tab active" data-ag="organisms" aria-pressed="true">Organisms <span>Crops · livestock · beneficials</span></button>
           <button type="button" class="status-tab ag-tab" data-ag="pests" aria-pressed="false">Pests <span>Animals · weeds</span></button>
-          <button type="button" class="status-tab ag-tab" data-ag="pathogens" aria-pressed="false">Pathogens <span>Plants · livestock</span></button>
+          <button type="button" class="status-tab ag-tab" data-ag="pathogens" aria-pressed="false">Pathogens <span>Plants · farmed animals</span></button>
         </nav>
       </article>
       <label for="ag-group">Broad group</label><select id="ag-group"><option value="">All groups</option></select>
@@ -574,7 +574,8 @@
             <article class="panel disease-origin-panel"><div class="panel-head"><div><p class="panel-kicker">Geographic origin</p><h2 class="panel-title">Genome sample origins</h2></div></div><p class="note">The broad-group filter also updates this map. Locations show reported BioSample collection origins, rather than agricultural production, pest prevalence or species distributions. Ocean markers represent named water bodies.</p><svg id="taxon-map-ag" class="country-map" viewBox="0 0 520 285" role="img" aria-label="Agricultural genome sample origins"></svg><div id="taxon-map-legend-ag" class="map-legend"></div><p id="taxon-map-status-ag" class="note" aria-live="polite">Loading map…</p></article>
           </section>
           <article class="panel full-width"><p class="panel-kicker">Recent deposits</p><h2 class="panel-title">Latest matching assemblies</h2><div id="ag-recent-list" class="recent-table"></div></article>
-          <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><label for="ag-search">Find a species</label><input id="ag-search" type="search" placeholder="Scientific name"><p id="ag-filter-count" class="note"></p><div id="ag-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly matched. Names roll up to listed species or explicitly named cultivated hybrids; varieties and breeds are not counted as new species. Matching genomes can include wild individuals. Pest or pathogen membership does not establish that each sequenced sample caused damage or disease. Bacteria and viruses fall outside this eukaryotic dashboard.</p><a href="../data/status/agriculture.tsv" download>Download agricultural catalogue</a> · <a href="https://github.com/Hanliconius/genome-observatory-live/blob/main/data/status/agriculture.tsv" target="_blank" rel="noopener">Review the list on GitHub</a><p class="note" id="ag-source-note"></p></article>
+          <article class="panel full-width"><p class="panel-kicker">Source coverage</p><h2 class="panel-title">Species inventory</h2><label for="ag-search">Find a species</label><input id="ag-search" type="search" placeholder="Scientific name"><label for="ag-source-filter">Inventory source</label><select id="ag-source-filter"><option value="">All sources</option></select><p id="ag-filter-count" class="note"></p><div id="ag-species-list" class="recent-table vector-inventory"></div><p class="note">Zero means no qualifying assembly matched. Names roll up to listed species or explicitly named cultivated hybrids; varieties and breeds are not counted as new species. Matching genomes can include wild individuals. Pest or pathogen membership does not establish that each sequenced sample caused damage or disease. Bacteria and viruses fall outside this eukaryotic dashboard.</p><a href="../data/status/agriculture.tsv" download>Download agricultural catalogue</a> · <a href="https://github.com/Hanliconius/genome-observatory-live/blob/main/data/status/agriculture.tsv" target="_blank" rel="noopener">Review the list on GitHub</a><p class="note" id="ag-source-note"></p></article>
+          <article class="panel full-width"><p class="panel-kicker">Sources &amp; methods</p><h2 class="panel-title">A documented union of agricultural catalogues</h2><p class="note">Each canonical taxon and GenBank accession is counted once. Taxa can belong to several source lists, and all memberships are retained. One primary display role separates agricultural organisms, pests and pathogens. Agricultural relevance includes forestry, stored products and regulated plant-health priorities. Source listing does not establish damage or disease for every strain or sequenced individual.</p><p class="note">PHI-base is restricted to experimentally studied interactions with listed agricultural hosts. Documented beneficial crop associations and biological-control uses receive an explicit role review; an interaction record alone does not label them as crop pathogens. No genus-wide pathogen rules or bacteria/viruses are imported. The source filter applies to the species inventory; the broad-group filter updates the summaries, charts and map.</p><ul id="ag-sources-list" class="ag-sources-list"></ul><p><a href="../data/status/agriculture_sources.tsv" download>Download source registry</a> · <a href="../data/status/agriculture_memberships.tsv" download>Download all source memberships &amp; evidence</a> · <a href="../data/status/agriculture_exclusions.tsv" download>Download exclusions</a> · <a href="../data/status/agriculture_role_overrides.tsv" download>Download role reviews</a></p></article>
         </section>
       </section>
     </section>
@@ -776,6 +777,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261011agriculture1"></script>
+  <script src="app.js?v=20261013agsources1"></script>
 </body>
 </html>

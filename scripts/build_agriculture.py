@@ -28,9 +28,25 @@ def taxon_key(name):
 
 def build(reports, catalogue=None):
     reports = list(reports)
+    sources, memberships = [], []
     if catalogue is None:
         with LIST.open() as f:
             catalogue = list(csv.DictReader(f, delimiter='\t'))
+        with (ROOT / 'data/status/agriculture_sources.tsv').open() as f:
+            sources = list(csv.DictReader(f, delimiter='\t'))
+        with (ROOT / 'data/status/agriculture_memberships.tsv').open() as f:
+            memberships = list(csv.DictReader(f, delimiter='\t'))
+        registry = {x['source_id']:x for x in sources}
+        for item in catalogue:
+            grouped = {}
+            for m in memberships:
+                if m['species'] != item['species']: continue
+                source = registry[m['source_id']]
+                evidence = grouped.setdefault(m['source_id'],dict(source_id=m['source_id'],name=source['name'],url=m['evidence_url'],version=source['version'],hosts=set(),references=set()))
+                if m['host_or_commodity']: evidence['hosts'].add(m['host_or_commodity'])
+                evidence['references'].update(x for x in m['reference_urls'].split('|') if x)
+            if not grouped: raise ValueError('Taxon has no recorded source membership: '+item['species'])
+            item['sources'] = [dict(x,hosts=sorted(x['hosts']),references=sorted(x['references'])[:3]) for x in grouped.values()]
     lookup = {}
     for item in catalogue:
         if item['section'] not in SECTIONS or not taxon_key(item['species']):
@@ -57,14 +73,14 @@ def build(reports, catalogue=None):
                  geo_loc_name=geo_loc_name(report),
                  tax_id=str(report.get('tax_id') or report.get('organism',{}).get('tax_id') or ''))
         matched.append(x)
-    source = {'type_summary': [], 'source': {'taxon_labels': len(catalogue), 'sample_rows': 0, 'export_date': '2026-10-11'}}
+    source = {'type_summary': [], 'source': {'taxon_labels': len(catalogue), 'sample_rows': 0, 'export_date': max((x['retrieved_at'] for x in sources),default='2026-10-11')}}
     views = {}
     for section,label in SECTIONS.items():
         species = [dict(x,vector_type=x['group'],role=label,sample_rows=0) for x in catalogue if x['section']==section]
         views[section] = aggregate([x for x in matched if x['section']==section],species,dashboard,source)
         views[section]['groups'] = {g: aggregate([x for x in matched if x['section']==section and x['vector_type']==g], [x for x in species if x['vector_type']==g], dashboard, source) for g in sorted({x['vector_type'] for x in species})}
-        views[section]['source'].update(dataset='Curated FAO, EPPO and WOAH agricultural catalogue',
-            scope=label+' in a selected, source-linked catalogue; this is not an exhaustive list.',
+        views[section]['source'].update(dataset='Union of curated FAO, EPPO, USDA Ag100Pest/CAPS/APHIS, WOAH and PHI-base records',
+            scope=label+' in a source-linked union catalogue covering crops, livestock, aquaculture, forestry, stored products and plant-health priorities. One primary display role per taxon; documented biological-control organisms are separated from pests. This is not an exhaustive list.',
             matching='Current GenBank chromosome/complete assemblies. Species-level matching includes varieties, breeds and wild samples of listed taxa; only explicit aliases and named cultivated hybrids are included.',
             curated_list='../data/status/agriculture.tsv')
         for group in views[section]['groups'].values(): group['source'].update(views[section]['source'], species_names=len(group['species_inventory']))
@@ -75,7 +91,8 @@ def build(reports, catalogue=None):
                 return item is not None and item['species'] in represented
             view['annotations'] = {k: [x for x in dashboard.get('annotations',{}).get(k,[]) if annotation_match(x)] for k in ('in_progress','recent_completed')}
     return {'generated_at': views['organisms']['generated_at'], 'views': views,
-            'audit': {'ncbi_assemblies_scanned':len(reports), 'curated_taxa':len(catalogue)}}
+            'sources': sources,
+            'audit': {'ncbi_assemblies_scanned':len(reports), 'curated_taxa':len(catalogue), 'source_memberships':len(memberships)}}
 
 
 if __name__ == '__main__':

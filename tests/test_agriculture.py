@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build_agriculture import build, taxon_key
+from import_agriculture_sources import reconcile
 
 
 def item(species,section,group,aliases=''):
@@ -40,6 +41,38 @@ class AgricultureMatching(unittest.TestCase):
         self.assertEqual(taxon_key('Oryza cf. sativa'),'')
         with self.assertRaises(ValueError):
             build([], [item('Oryza sativa','organisms','Cereals'),item('Oryza glaberrima','organisms','Cereals','Oryza sativa')])
+
+
+class AgricultureProvenance(unittest.TestCase):
+    def test_overlapping_sources_retained_without_duplicate_taxa_or_assemblies(self):
+        name='Diorhabda carinulata'
+        evidence=dict(species=name,tax_id='101061',lineage='Eukaryota; Arthropoda',eukaryote=True)
+        def candidate(source,original=name,host=''):
+            return dict(source_id=source,original_name=original,tax_id='',section='pests',group='Insect pests',
+                        disease='Project target',host_or_commodity=host,evidence_url='https://example.org/'+source,
+                        reference_urls='https://pubmed.ncbi.nlm.nih.gov/1/',basis='Species listed')
+        override={name:dict(section='organisms',group='Biological control',role='Tamarisk control',
+                            evidence_url='https://www.ars.usda.gov/',notes='Documented control agent')}
+        rejected=[]
+        cat,members=reconcile([], [candidate('ag100_targets'),candidate('ag100_targets'),candidate('phibase_5_6',host='Tamarix')],
+                              {},{taxon_key(name):{'101061':evidence}},override,rejected)
+        self.assertEqual(len(cat),1)
+        self.assertEqual(cat[0]['section'],'organisms')
+        self.assertEqual({m['source_id'] for m in members},{'ag100_targets','phibase_5_6','role_review'})
+        self.assertTrue(all(m['assigned_role']=='organisms' for m in members))
+        self.assertFalse(rejected)
+        d=build([report(1,name),report(1,name)],cat)
+        self.assertEqual(d['views']['organisms']['summary']['assemblies'],1)
+        self.assertEqual(d['views']['pests']['summary']['assemblies'],0)
+
+    def test_unresolved_or_non_eukaryotic_labels_do_not_enter_catalogue(self):
+        c=dict(source_id='caps_2026',original_name='Escherichia coli',tax_id='',section='',group='',
+               disease='',host_or_commodity='',evidence_url='',reference_urls='',basis='Species listed')
+        rejected=[]
+        cat,members=reconcile([], [c,dict(c,original_name='Unknown species')],{},
+                              {'escherichia coli':{'562':dict(species='Escherichia coli',tax_id='562',lineage='Bacteria',eukaryote=False)}},
+                              {},rejected)
+        self.assertFalse(cat);self.assertFalse(members);self.assertEqual(len(rejected),2)
 
 
 if __name__ == '__main__':

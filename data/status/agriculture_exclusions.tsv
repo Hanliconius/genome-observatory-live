@@ -1,0 +1,760 @@
+source_id	original_name	reason
+ag100_targets	Aonidiella aurantii	Non-eukaryotic, ambiguous or unresolved species
+ag100_targets	NA	Not an explicit species or named hybrid
+ag100_targets	Oncopeltus fasciatus	Project association retained in exclusions; agricultural pest role requires further species-level evidence.
+ag100_targets	Plecia nearctica	Project association retained in exclusions; agricultural pest role requires further species-level evidence.
+ag100_targets	Sitophilus oryzae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Acinetobacter spp. **	Not an explicit species or named hybrid
+aphis_vet	Actinobacillus pleuropneumoniae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Actinomyces bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Aedes mosquito	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Aedes mosquito eggs	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Aeromonas hydrophila	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Aeromonas spp. **	Not an explicit species or named hybrid
+aphis_vet	African horse sickness	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	African swine fever (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Akabane virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Alcaligenes faecalis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Amblyomma spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Amidostomum anseri	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Amycolaptosis spp. **	Not an explicit species or named hybrid
+aphis_vet	Anaplasma centrale	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Anaplasma marginale	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Anaplasma phagocytophilum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Anopheles mosquito eggs	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Anopheles mosquitos	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Argas spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Arthrobacter equi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Arthrobacter spp. **	Not an explicit species or named hybrid
+aphis_vet	Ascaridia dissimilis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Aspergillus spp. **	Not an explicit species or named hybrid
+aphis_vet	Avian adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian encephalomyelitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian hepatitis E virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian herpesvirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian infectious bronchitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian influenza H7N9 attenuated vaccine	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian influenza H7N9 wild type	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian influenza virus (high pathogenic) (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian leukosis virus (retrovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian metapneumoviruses	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian mycoplasma spp. **	Not an explicit species or named hybrid
+aphis_vet	Avian myelocytomatosis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian nephritis virus 1,2 (astrovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian paramyxovirus serotypes 2-9	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian pneumovirus type C (Colorado strain)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian polyoma virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian pox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian reticuloendothelial virus (REV)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian rotavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avian viral arthritis virus (Tenosynovitis; Avian reovirus; Orthoreovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Avibacterium paragallinarum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Babesia perroncitoi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Babesia trautmanni	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bacillus anthracis (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bacillus anthracis, Pasteur strain (only the excluded select agent*)	Not an explicit species or named hybrid
+aphis_vet	Bacillus cereus, Biovar Anthracis (only the excluded select agent*)	Not an explicit species or named hybrid
+aphis_vet	Bacteroides fragilis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bibersteinia trehalosi (formerly Pasteurella trehalosi)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bluetongue virus (domestic)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bluetongue virus (exotic)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Boophilus spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Border disease virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bordetella avium	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bordetella bronchiseptica	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bordetella parapertussis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Borna disease virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Borrelia bissettii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Borrelia burgdorferi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine coronavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine cytomegalovirus (Bovine herpesvirus 3)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine enteric calicivirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine enterovirus (enteric cytopathic bovine orphan virus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine ephemeral fever virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine herpes mammillitis virus (Pseudo-lumpy skin disease; Bovine herpesvirus 2)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine immunodeficiency virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine infectious rhinotracheitis virus (Bovine herpesvirus 1)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine leukemia virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine nebovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine norovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine papillomavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine papular stomatitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine parainfluenzae 3 virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine parvovirus (Haemadsorbing enteric virus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine polyoma virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine reovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine respiratory syncytial virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine rhinitis B virus (Bovine rhinovirus; Picornavirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine rotavirus group A, B	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine spongiform encephalopathy	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine viral diarrhea virus (types 1 and 2) (BVD)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Bovine viral diarrhea virus, HoBi-like strain	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brachyspira hyodisenteriae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella abortus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella abortus strain 19	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella abortus strain RB51	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella melitensis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella microti	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella neotomae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella ovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Brucella suis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Burkholderia cepacia	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Burkholderia mallei (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Burkholderia pseudomallei (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Camelpox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Campylobacter coli	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Campylobacter fetus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Campylobacter jejuni	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Campylobacter spp. **	Not an explicit species or named hybrid
+aphis_vet	Capillaria caudinflata	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Caprine adenovirus type 1, 2	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Caprine arthritis and encephalitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Caprine herpesvirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chaburtia ovina	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chicken anemia virus (circovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chlamydophila abortus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chlamydophila pecorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chlamydophila psittaci	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Chronic wasting disease (CWD)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Citrobacter freundii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Classical swine fever virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridioides difficile (also known as Clostridium difficile)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium botulinum (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium chauvoei	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium haemolyticum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium novyi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium perfringens	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium septicum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium sordelli	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium sporogenes	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Clostridium tetani	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Coenurus cerebralis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Contagious ecthyma (orf; contagious pustular dermatitis)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Corynebacterium bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Corynebacterium pseudotuberculosis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Corynebacterium renale	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Cowpox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Coxiella burnetii (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Crossiella equi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Culex spp. - mosquito	Not an explicit species or named hybrid
+aphis_vet	Culicoides spp. - mosquito	Not an explicit species or named hybrid
+aphis_vet	Cyrnea colini	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Davainea proglottina	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Dermacenter spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Dichelobacter nodosus (Bacterioides nodosus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Dicrocoelium dentriticum - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Duck adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Duck enteritis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Duck hepatitis type 1	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Duck infectious anemia virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Duck plague virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Dung beetles	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Eastern equine encephalitis virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Echinococcus spp. **	Not an explicit species or named hybrid
+aphis_vet	Ehrlichia fergusonii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ehrlichia ruminantium (Cowdria ruminatum )(heartwater)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Eimeria spp. **	Not an explicit species or named hybrid
+aphis_vet	Encephalomyocarditis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterobacter aerogenes	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterobacter cloacae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterococcus cecorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterococcus durans	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterococcus hirae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Enterococcus spp. **	Not an explicit species or named hybrid
+aphis_vet	Ephemeral fever virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Epizootic haemorrhagic disease virus (EHDV)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine coital exanthema virus (Equine herpesvirus 3)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine coronavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine hepacivirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine herpesvirus 2	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine herpesvirus 3 (Equine coital exanthema)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine infectious anemia virus (EIAV)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine influenza virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine papilloma virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine rhinitis virus (picornavirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine rhinopneumonitis virus (EHV-1 and EHV-4)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine rotavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Equine viral arteritis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Erysipelothrix rhusiopathiae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Escherichia coli, enteropathogenic to livestock or poultry: F 18, K88, VTEC O5:H-, VTEC O8:H9, VTEC O26:H11, VTEC O26:O26, VTEC O80:H- and VTEC O111:H-, non-O157 EHEC serogroups O26, O111, O118 and O103	Not an explicit species or named hybrid
+aphis_vet	Eurytrema ovis - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Fasciola magna - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Foot and mouth disease virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Fowl adenovirus type 1	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Fowl calicivirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Fowlpox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Francisella tularensis (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Francisella tularensis subspecies holartica LVS	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Fusarium spp. **	Not an explicit species or named hybrid
+aphis_vet	Fusobacterium necrophorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Gaigeria pachyscelis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Gallibacterium anatis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Gasterophilus spp. - horse bot	Not an explicit species or named hybrid
+aphis_vet	Getah virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Giardia spp. **	Not an explicit species or named hybrid
+aphis_vet	Glaesserella australis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Globicatella sanguinis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Goat pox virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Gongylonema ingluvicola	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Goose parvovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Guggenheimella bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemaphysalis spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Haemophilus agni	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemophilus paragallinarum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemophilus parahemolyticus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemophilus parasuis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemophilus somnis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemophilus suis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Haemotobia irritans – fly	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Halicephalobus deletrix	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Helicobacter pullorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Helicobacter suis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Hemagglultinating encephalomyelitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Hemorrhagic enteritis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Hendra virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Herpesvirus of turkey (HVT) virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Histophilus somni	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Hyalomma spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Infectious bovine rhinotracheitis (Bovine herpesvirus 1)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Infectious bronchitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Infectious bursal disease virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Infectious laryngotracheitis (Avian Herpesvirus 1)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Infectious pancreatic necrosis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Infectious salmon anemia virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Isospora spp. **	Not an explicit species or named hybrid
+aphis_vet	Ixodes spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Jamestown canyon virus (aka Jerry Slough virus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Japanese encephalitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Klebsiella oxytoca	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Klebsiella pneumoniae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Kunjin virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Lawsonia spp. **	Not an explicit species or named hybrid
+aphis_vet	Leishmania siamensis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Leishmania spp. **	Not an explicit species or named hybrid
+aphis_vet	Lentzea kentuckyensis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Leptospira interrogans (various serovars- hardjo, pomona, icterohaemorrhagiae, grippotyphosa, canicola)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Listeria ivanovii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Listeria monocytogenes	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Louping ill virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Lumpy skin disease virus (Neethling virus) (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Madariaga virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Malignant catarrhal fever (Alcelephine herpesvirus 1) (wildebeest-associated) (exotic)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Malignant catarrhal fever (Ovine herpesvirus 2) (sheep associated ) (domestic)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mammaliicoccus sciuri	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mannheimia glucosida	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mannheimia granulomatis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mannheimia haemolytica	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mannheimia ruminalis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mannheimia varigena	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Margaropus spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Menangle virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Micrococcus luteus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Microsporum gypseum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Middleburg virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Monkeypox virus (Mpox virus) (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Moraxella bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Moraxella bovoculi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Moraxella ovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Morbilivirus spp. **	Not an explicit species or named hybrid
+aphis_vet	Mouse pox	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Musca spp. - fly	Not an explicit species or named hybrid
+aphis_vet	Mycobacterium africanum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium avium	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium bovis BCG	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium caprae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium fortuitum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium kansasii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium microti	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium paratuberculosis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium pinnipedii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycobacterium tuberculosis complex organisms (excluding M tuberculosis)	Not an explicit species or named hybrid
+aphis_vet	Mycoplasma agalactiae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma bovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma capricolum (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma dispar	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma gallisepticum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma hyopneumoniae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma hyorhinis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma hyosynoviae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma iowae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma meleagridis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma mycodies (contagious bovine pleuropneumonia)(only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma ovipneumoniae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Mycoplasma synoviae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Myxoma virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Nairobi sheep disease	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Neospora hughsi - coccidian parasite	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Newcastle disease virus (avirulent) (Avian paramyxovirus type 1)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Newcastle disease virus (virulent) (Avian paramyxovirus type 1)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Nipah virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Nocardia spp. **	Not an explicit species or named hybrid
+aphis_vet	Oesophagostomum clumbianum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Organism and Vectors	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ornithobacterium rhinotracheale	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ostertagia orloffi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ostertagia podjapolskyi (Grosspiculagia podjapolskyi)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Otobius spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Ovine adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ovine astrovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ovine ecthyma virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ovine herpesvirus 1	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ovine parainfluenza 3	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ovine pulmonary adenocarcinoma virus (Pulmonary adenomatosis; Jaagsiekte sheep retrovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Parelaphostrongylus tenius	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pasteurella multocida (Fowl cholera)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pasteurella trehalosi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Peptostreptococcus spp. **	Not an explicit species or named hybrid
+aphis_vet	Peste des petits ruminants (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Phlebotumus spp. - sandfly	Not an explicit species or named hybrid
+aphis_vet	Pigeon paramyxovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pigeon pox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Plasmodium hermani	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pleisiomonas spp. **	Not an explicit species or named hybrid
+aphis_vet	Porcine acute gastroenteritis (Porcine astrovirus)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine circovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine cytomegalovirus (Porcine herpesvirus 2)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine delta coronavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine enteric calicivirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine enterovirus (Teschen; Talfan; Benign enzootic paresis; Poliomyelitis suum; Porcine enteroviral encephalomyelitis)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine epidemic diarrhea virus (PEDv) asian lineage	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine epidemic diarrhea virus (PEDv) non-asian lineage	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine hemagglutinating encephalitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine hepatitis E	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine herpesvirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine kobuvirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine paramyxovirus (Menangle)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine parvovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine reproductive and respiratory syndrome virus (PRRS)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine respiratory coronavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine rotavirus group A	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine rotavirus group B	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine rotavirus group C	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine rotavirus group E	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	"Porcine rubulavirus (""blue eye"")"	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine sapelovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine sapovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine teschovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine torovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porcine transmissible gasteroenteritis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Porphyromonas spp. **	Not an explicit species or named hybrid
+aphis_vet	Powassan virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Prevotella melaninogenica	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Propionibacterium spp. **	Not an explicit species or named hybrid
+aphis_vet	Prosthogonimus macrorchis - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Proteus mirabilis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Proteus vulgaris	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Providencia rettgeri	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Providencia stuarti	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pseudocowpox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pseudomonas aeruginosa	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Pseudomonas spp. **	Not an explicit species or named hybrid
+aphis_vet	Pseudorabies virus (Porcine herpesvirus; Aujeszky's disease)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Psoroptes spp. - mite	Not an explicit species or named hybrid
+aphis_vet	Quail bronchitis virus (Avian adenovirus group 1) 002-ADV	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rabbit pox	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rabies virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Raccoonpox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rhipicentor spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Rhipicephalus spp. - tick	Not an explicit species or named hybrid
+aphis_vet	Rhodococcus equi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rickettsia gravesii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rickettsia risticii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Riemerella anatipestifer	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rift valley fever virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rinderpest virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rodent adapted scrapie	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Rous associated virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella abortusovis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella anatum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella arizonae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella choleraesuis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella dublin	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella enterica	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella enteritidis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella gallinarum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella hadar	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella heidelberg	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella kentucky	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella montevideo	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella newport	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella pullorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella saintpaul	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonella typhimurium	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Salmonid alphavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Sand fly	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Sarcocystis spp.**	Not an explicit species or named hybrid
+aphis_vet	Schistosoma nasale - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Schistosoma spindale - fluke	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Schmallenberg virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Serratia liquefaciens	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Serratia marcescens	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Sheep pox (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Simulium spp. - blackfly	Not an explicit species or named hybrid
+aphis_vet	Sindbis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Spring viremia of carp virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus arlettae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus aureus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus capitis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus chromogenes	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus epidermidis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus equorum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus haemolyticus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus hyicus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus intermedius	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus lugdunensis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus nepalensis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus sciuri	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus spp	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Staphylococcus warneri	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Streptococcus agalactiae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Streptococcus dysgalactiae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Streptococcus equi	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Streptococcus pneumoniae	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Streptococcus suis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Strongyloides avium	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Strongyloides edentatus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Strongyloides equinus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Strongyloides vulgaris	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Subulura brumpti	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine adenovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine astrovirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine enteric coronavirus (SECoV)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine hepatitis E virus, genotype 3	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine heptatitis E virus, genotype 4	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine influenza virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine papillomavirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine poxvirus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Swine vesicular disease virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Tabanus spp. - horse fly	Not an explicit species or named hybrid
+aphis_vet	Taylorella asinigenetalis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Taylorella equigenitalis (Contagious equine metritis)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Tetrameres americana	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Theileria lowenshuni	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Transmissible gastroenteritis virus (TGE)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Treponema denticola	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Treponema phagedenis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Treponema vincentii	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Triatoma spp. (Kissing Bug)	Not an explicit species or named hybrid
+aphis_vet	Trichostongylus colubiformis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Tridontophorus tenuicollis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Truperella pyogenes	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Trychophyton verrucosum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Trypanosoma brucei brucei	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Trypanosoma brucei gambiense	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Trypanosoma brucei rhodesiense	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Tsetse fly (glossina)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Turkey astrovirus (Poultry enteritis and mortality syndrome)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Turkey enteritis coronavirus (Bluecomb disease)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Ureaplasma diversum	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Vaccinia virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Venezuelan equine encephalitis virus (only the excluded select agent*)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Vesicular exanthema of swine virus (VESV)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Vesicular stomatitis virus (Indiana or NJ strain)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Vesicular stomatitis virus (strains exotic to US)	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Volepox virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Waddlia chondrophila	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Wesselsbron virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Western equine encephalitis virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Yaba monkey tumor virus	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Yersinia enterocolytica	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Yersinia pseudotubercuolosis	Non-eukaryotic, ambiguous or unresolved species
+aphis_vet	Yersinia vaccine strain	Non-eukaryotic, ambiguous or unresolved species
+caps_2026	Candidatus Phytoplasma australiense 16SrXII-B	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma citri 16SrII-B	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma mali 16SrX-A	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma palmae 16SrIV	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma phoenicium 16SrIX-B	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma prunorum 16SrX-F	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma solani 16SrXII-A	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma vitis 16SrV-C	Not an explicit species or named hybrid
+caps_2026	Candidatus Phytoplasma ziziphi 16SrV-B	Not an explicit species or named hybrid
+caps_2026	Cerambycidae	Not an explicit species or named hybrid
+caps_2026	Crocidosema aporema	Non-eukaryotic, ambiguous or unresolved species
+caps_2026	Orthotospovirus Groundnut Bud Necrosis Virus	Not an explicit species or named hybrid
+caps_2026	Phytophthora alni	Non-eukaryotic, ambiguous or unresolved species
+caps_2026	Plant Production	Not an explicit species or named hybrid
+caps_2026	Pospiviroid Potato Spindle Tuber Viroid	Not an explicit species or named hybrid
+caps_2026	Potyvirus Plum Pox Virus	Not an explicit species or named hybrid
+caps_2026	Previous find(s)	Not an explicit species or named hybrid
+caps_2026	Ralstonia solanacearum race 3 biovar 2	Non-eukaryotic, ambiguous or unresolved species
+caps_2026	Shipping Containers	Not an explicit species or named hybrid
+caps_2026	Tobamovirus Cucumber Green Mottle Mosaic Virus	Not an explicit species or named hybrid
+caps_2026	Tobamovirus Tomato Brown Rugose Fruit Virus	Not an explicit species or named hybrid
+caps_2026	Xanthomonas oryzae pv. oryzae	Non-eukaryotic, ambiguous or unresolved species
+caps_2026	Xanthomonas oryzae pv. oryzicola	Non-eukaryotic, ambiguous or unresolved species
+eppo	'Candidatus Liberibacter africanus'	Source group outside eukaryotic scope
+eppo	'Candidatus Liberibacter americanus'	Source group outside eukaryotic scope
+eppo	'Candidatus Liberibacter asiaticus'	Source group outside eukaryotic scope
+eppo	'Candidatus Liberibacter solanacearum'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma aurantifolia'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma fraxini'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma mali'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma phoenicium'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma pruni'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma pyri'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma solani'	Source group outside eukaryotic scope
+eppo	'Candidatus Phytoplasma ulmi'	Source group outside eukaryotic scope
+eppo	Acidovorax citrulli	Source group outside eukaryotic scope
+eppo	Adelges lapponicus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Agrilus fleischeri	Non-eukaryotic, ambiguous or unresolved species
+eppo	American plum line pattern virus	Source group outside eukaryotic scope
+eppo	Anthonomus bisignifer	Non-eukaryotic, ambiguous or unresolved species
+eppo	Apple fruit crinkle viroid	Source group outside eukaryotic scope
+eppo	Apple mosaic virus	Source group outside eukaryotic scope
+eppo	Apple stem grooving virus	Source group outside eukaryotic scope
+eppo	Apriona cinerea	Non-eukaryotic, ambiguous or unresolved species
+eppo	Arabis mosaic virus	Source group outside eukaryotic scope
+eppo	Arceuthobium campylopodum	Non-eukaryotic, ambiguous or unresolved species
+eppo	Arceuthobium douglasii	Non-eukaryotic, ambiguous or unresolved species
+eppo	Arracacha virus B oca strain	Source group outside eukaryotic scope
+eppo	Atropellis pinicola	Non-eukaryotic, ambiguous or unresolved species
+eppo	Badnavirus venavitis	Source group outside eukaryotic scope
+eppo	Bean golden mosaic virus	Source group outside eukaryotic scope
+eppo	Beet leaf curl virus	Source group outside eukaryotic scope
+eppo	Begomovirus coheni	Source group outside eukaryotic scope
+eppo	Begomovirus cucurbitapeponis	Source group outside eukaryotic scope
+eppo	Begomovirus solanumdelhiense	Source group outside eukaryotic scope
+eppo	Benyvirus necrobetae	Source group outside eukaryotic scope
+eppo	Burkholderia caryophylli	Source group outside eukaryotic scope
+eppo	Byakushincecis eppoi	Non-eukaryotic, ambiguous or unresolved species
+eppo	Carlavirus latensolani	Source group outside eukaryotic scope
+eppo	Carlavirus vignae	Source group outside eukaryotic scope
+eppo	Caulimovirus venafragariae	Source group outside eukaryotic scope
+eppo	Cecidomyia pumila	Non-eukaryotic, ambiguous or unresolved species
+eppo	Ceratothripoides claratris	Non-eukaryotic, ambiguous or unresolved species
+eppo	Cheravirus avii	Source group outside eukaryotic scope
+eppo	Cherry leaf roll virus	Source group outside eukaryotic scope
+eppo	Citrus blight agent	Source group outside eukaryotic scope
+eppo	Citrus leprosis disease	Source group outside eukaryotic scope
+eppo	Citrus psorosis ophiovirus	Source group outside eukaryotic scope
+eppo	Citrus vein enation virus	Source group outside eukaryotic scope
+eppo	Citrus yellow mosaic virus	Source group outside eukaryotic scope
+eppo	Clavibacter insidiosus	Source group outside eukaryotic scope
+eppo	Clavibacter michiganensis	Source group outside eukaryotic scope
+eppo	Clavibacter sepedonicus	Source group outside eukaryotic scope
+eppo	Closterovirus tristezae	Source group outside eukaryotic scope
+eppo	Cocadviroid cadangi	Source group outside eukaryotic scope
+eppo	Cocadviroid rimocitri	Source group outside eukaryotic scope
+eppo	Coleophora dahurica	Non-eukaryotic, ambiguous or unresolved species
+eppo	Comovirus andesense	Source group outside eukaryotic scope
+eppo	Corymbia succedanea	Non-eukaryotic, ambiguous or unresolved species
+eppo	Crinivirus contagichlorosis	Source group outside eukaryotic scope
+eppo	Crinivirus cucurbitae	Source group outside eukaryotic scope
+eppo	Crinivirus lactucaflavi	Source group outside eukaryotic scope
+eppo	Crinivirus tomatichlorosis	Source group outside eukaryotic scope
+eppo	Cronartium himalayense	Non-eukaryotic, ambiguous or unresolved species
+eppo	Cronartium kamtschaticum	Non-eukaryotic, ambiguous or unresolved species
+eppo	Curtobacterium flaccumfaciens pv. flaccumfaciens	Source group outside eukaryotic scope
+eppo	Curtovirus betae	Source group outside eukaryotic scope
+eppo	Cydia prunivora	Non-eukaryotic, ambiguous or unresolved species
+eppo	Dasychira albodentata	Non-eukaryotic, ambiguous or unresolved species
+eppo	Dendrolimus superans	Non-eukaryotic, ambiguous or unresolved species
+eppo	Dickeya chrysanthemi	Source group outside eukaryotic scope
+eppo	Dickeya dianthicola	Source group outside eukaryotic scope
+eppo	Dokhtouroffia baeckmanni	Non-eukaryotic, ambiguous or unresolved species
+eppo	Eichhornia crassipes	Non-eukaryotic, ambiguous or unresolved species
+eppo	Elsinoë australis	Not an explicit species or named hybrid
+eppo	Elsinoë fawcettii	Not an explicit species or named hybrid
+eppo	Emaravirus rosae	Source group outside eukaryotic scope
+eppo	Erwinia amylovora	Source group outside eukaryotic scope
+eppo	Euphorbia mosaic virus	Source group outside eukaryotic scope
+eppo	Euphranta japonica	Non-eukaryotic, ambiguous or unresolved species
+eppo	Euproctis karghalica	Non-eukaryotic, ambiguous or unresolved species
+eppo	Fusarium oxysporum f. sp. albedinis	Not an explicit species or named hybrid
+eppo	Gonipterus gibberus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Gonipterus scutellatus species complex	Not an explicit species or named hybrid
+eppo	Grablovirus vitis	Source group outside eukaryotic scope
+eppo	Grapevine flavescence dorée phytoplasma	Source group outside eukaryotic scope
+eppo	Hylobius albosparsus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Ilarvirus SNSV	Source group outside eukaryotic scope
+eppo	Ipomovirus cucumisvenaflavi	Source group outside eukaryotic scope
+eppo	Ipomovirus lycopersici	Source group outside eukaryotic scope
+eppo	Lepidosaphes ussuriensis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Little cherry virus 1	Source group outside eukaryotic scope
+eppo	Little cherry virus 2	Source group outside eukaryotic scope
+eppo	Malacosoma parallela	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes capensis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes greeni	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes prieskaensis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes trimeni	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes vitis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Margarodes vredendalensis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Melampsora farlowii	Non-eukaryotic, ambiguous or unresolved species
+eppo	Melanophila guttulata	Non-eukaryotic, ambiguous or unresolved species
+eppo	Melanotus communis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Mycodiella laricis-leptolepidis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Nepovirus lycopersici	Source group outside eukaryotic scope
+eppo	Nepovirus myrtilli	Source group outside eukaryotic scope
+eppo	Nepovirus nicotianae	Source group outside eukaryotic scope
+eppo	Nepovirus persicae	Source group outside eukaryotic scope
+eppo	Nepovirus solani	Source group outside eukaryotic scope
+eppo	Orthotospovirus chrysanthinecrocaulis	Source group outside eukaryotic scope
+eppo	Orthotospovirus impatiensnecromaculae	Source group outside eukaryotic scope
+eppo	Orthotospovirus tomatomaculae	Source group outside eukaryotic scope
+eppo	Palm lethal yellowing type syndromes	Source group outside eukaryotic scope
+eppo	Pantoea stewartii subsp. stewartii	Source group outside eukaryotic scope
+eppo	Peach rosette phytoplasma	Source group outside eukaryotic scope
+eppo	Peach yellows phytoplasma	Source group outside eukaryotic scope
+eppo	Pheletes californicus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Phyllosticta solitaria	Non-eukaryotic, ambiguous or unresolved species
+eppo	Phytophthora fragariae	Non-eukaryotic, ambiguous or unresolved species
+eppo	Phytoplasma americanum	Source group outside eukaryotic scope
+eppo	Phytoplasma prunorum	Source group outside eukaryotic scope
+eppo	Pissodes cibriani	Non-eukaryotic, ambiguous or unresolved species
+eppo	Pissodes fasciatus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Pissodes nitidus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Pissodes zitacuarense	Non-eukaryotic, ambiguous or unresolved species
+eppo	Polyphylla alba	Non-eukaryotic, ambiguous or unresolved species
+eppo	Pospiviroid fusituberis	Source group outside eukaryotic scope
+eppo	Pospiviroid impedichrysanthemi	Source group outside eukaryotic scope
+eppo	Potato yellow dwarf virus	Source group outside eukaryotic scope
+eppo	Potato yellow vein virus	Source group outside eukaryotic scope
+eppo	Potato yellowing virus	Source group outside eukaryotic scope
+eppo	Potexvirus pepini	Source group outside eukaryotic scope
+eppo	Potyvirus plumpoxi	Source group outside eukaryotic scope
+eppo	Pseudomonas syringae pv. actinidiae	Source group outside eukaryotic scope
+eppo	Pseudomonas syringae pv. persicae	Source group outside eukaryotic scope
+eppo	Ralstonia pseudosolanacearum	Source group outside eukaryotic scope
+eppo	Ralstonia solanacearum	Source group outside eukaryotic scope
+eppo	Ralstonia solanacearum species complex	Source group outside eukaryotic scope
+eppo	Ralstonia syzygii	Source group outside eukaryotic scope
+eppo	Raspberry leaf curl virus	Source group outside eukaryotic scope
+eppo	Raspberry ringspot virus	Source group outside eukaryotic scope
+eppo	Resseliella ingrica	Non-eukaryotic, ambiguous or unresolved species
+eppo	Robigovirus robigomaculae	Source group outside eukaryotic scope
+eppo	Sadwavirus citri	Source group outside eukaryotic scope
+eppo	Saperda candida	Non-eukaryotic, ambiguous or unresolved species
+eppo	Scaphoideus luteolus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Spiroplasma citri	Source group outside eukaryotic scope
+eppo	Strawberry crinkle virus	Source group outside eukaryotic scope
+eppo	Strawberry latent C virus	Source group outside eukaryotic scope
+eppo	Strawberry latent ringspot virus	Source group outside eukaryotic scope
+eppo	Strawberry mild yellow edge virus	Source group outside eukaryotic scope
+eppo	Strawberry witches' broom phytoplasma	Source group outside eukaryotic scope
+eppo	Strobilomyia luteoforceps	Non-eukaryotic, ambiguous or unresolved species
+eppo	Tepovirus tafsolani	Source group outside eukaryotic scope
+eppo	Tobamovirus fructirugosum	Source group outside eukaryotic scope
+eppo	Tomato black ring virus	Source group outside eukaryotic scope
+eppo	Tomato mottle virus	Source group outside eukaryotic scope
+eppo	Torradovirus marchitezum	Source group outside eukaryotic scope
+eppo	Trichovirus persicae	Source group outside eukaryotic scope
+eppo	Trirachys sartus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Turcmenigena varentsovi	Non-eukaryotic, ambiguous or unresolved species
+eppo	Tymovirus latandigenum	Source group outside eukaryotic scope
+eppo	Tymovirus mosandigenum	Source group outside eukaryotic scope
+eppo	Verticillium dahliae hop strains	Non-eukaryotic, ambiguous or unresolved species
+eppo	Watermelon silver mottle virus	Source group outside eukaryotic scope
+eppo	Xanthomonas alfalfae subsp. citrumelonis	Source group outside eukaryotic scope
+eppo	Xanthomonas arboricola pv. corylina	Source group outside eukaryotic scope
+eppo	Xanthomonas arboricola pv. pruni	Source group outside eukaryotic scope
+eppo	Xanthomonas axonopodis pv. dieffenbachiae	Source group outside eukaryotic scope
+eppo	Xanthomonas citri pv. aurantifolii	Source group outside eukaryotic scope
+eppo	Xanthomonas citri pv. citri	Source group outside eukaryotic scope
+eppo	Xanthomonas citri pv. fuscans	Source group outside eukaryotic scope
+eppo	Xanthomonas euvesicatoria pv. euvesicatoria	Source group outside eukaryotic scope
+eppo	Xanthomonas euvesicatoria pv. perforans	Source group outside eukaryotic scope
+eppo	Xanthomonas fragariae	Source group outside eukaryotic scope
+eppo	Xanthomonas hortorum pv. gardneri	Source group outside eukaryotic scope
+eppo	Xanthomonas oryzae pv. oryzae	Source group outside eukaryotic scope
+eppo	Xanthomonas oryzae pv. oryzicola	Source group outside eukaryotic scope
+eppo	Xanthomonas phaseoli pv. phaseoli	Source group outside eukaryotic scope
+eppo	Xanthomonas translucens pv. translucens	Source group outside eukaryotic scope
+eppo	Xanthomonas vesicatoria	Source group outside eukaryotic scope
+eppo	Xiphinema bricolense	Non-eukaryotic, ambiguous or unresolved species
+eppo	Xylella fastidiosa	Source group outside eukaryotic scope
+eppo	Xylophilus ampelinus	Source group outside eukaryotic scope
+eppo	Xylotrechus altaicus	Non-eukaryotic, ambiguous or unresolved species
+eppo	Xylotrechus namanganensis	Non-eukaryotic, ambiguous or unresolved species
+eppo	Xyphon fulgidum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Acidovorax avenae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Acidovorax citrulli	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Acidovorax oryzae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Actinobacillus pleuropneumoniae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Aeromonas hydrophila	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Aeromonas salmonicida	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Agrobacterium tumefaciens	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Agrobacterium vitis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Avibacterium paragallinarum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Bacillus anthracis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Bordetella bronchiseptica	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Burkholderia cenocepacia	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Burkholderia gladioli	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Burkholderia glumae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Burkholderia plantarii	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Campylobacter jejuni	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Candidatus Liberibacter asiaticus	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Cercospora cf. flagellaris	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Clavibacter michiganensis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Clostridioides difficile	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Clostridium perfringens	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Dickeya dadantii	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Dickeya fangzhongdai	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Dickeya oryzae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Dickeya solani	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Dickeya zeae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Edwardsiella ictaluri	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Edwardsiella piscicida	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Edwardsiella tarda	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Erwinia amylovora	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Erwinia tracheiphila	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Escherichia coli	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Flavobacterium psychrophilum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Francisella tularensis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Glaesserella parasuis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Listeria monocytogenes	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Mycobacterium marinum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Mycoplasmoides gallisepticum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Mycoplasmopsis agalactiae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Mycoplasmopsis bovis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Paenibacillus larvae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pantoea ananatis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pantoea stewartii	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Paracidovorax citrulli	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pectobacterium actinidiae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pectobacterium atrosepticum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pectobacterium carotovorum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pectobacterium wasabiae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Porphyromonas gingivalis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas aeruginosa	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas amygdali	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas cannabina	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas cichorii	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas fluorescens	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas savastanoi	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Pseudomonas syringae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Ralstonia pseudosolanacearum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Ralstonia solanacearum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Rhynchosporium commune	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Riemerella anatipestifer	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Salmonella enterica	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Serratia marcescens	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Shigella flexneri	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Staphylococcus aureus	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Streptococcus agalactiae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Streptococcus suis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Streptococcus uberis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Streptomyces scabiei	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Streptomyces turgidiscabies	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Valsa mali	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Valsa pyri	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Vibrio anguillarum	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Vibrio campbellii	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Vibrio cholerae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Vibrio parahaemolyticus	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Vibrio tasmaniensis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas albilineans	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas axonopodis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas campestris	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas citri	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas euvesicatoria	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas oryzae	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas perforans	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xanthomonas translucens	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Xylella fastidiosa	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Yersinia enterocolitica	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Yersinia pseudotuberculosis	Non-eukaryotic, ambiguous or unresolved species
+phibase_5_6	Yersinia ruckeri	Non-eukaryotic, ambiguous or unresolved species
