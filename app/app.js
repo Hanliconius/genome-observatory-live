@@ -1261,19 +1261,20 @@ function selectedAgData(){
 document.querySelectorAll('.ag-tab').forEach(b=>b.addEventListener('click',()=>{
   agMode=b.dataset.ag;
   document.querySelectorAll('.ag-tab').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
-  el('ag-group').value='';el('ag-search').value='';el('ag-source-filter').value='';renderAgriculture();
+  el('ag-group').value='';el('ag-search').value='';el('ag-source-filter').value='';el('ag-source-country').value='';renderAgriculture();
 }));
 el('ag-group').addEventListener('change',renderAgriculture);
 el('ag-search').addEventListener('input',renderAgInventory);
 el('ag-source-filter').addEventListener('change',renderAgInventory);
+el('ag-source-country').addEventListener('change',renderAgInventory);
 function agSourceBadges(x){
-  return (x.sources||[]).map(s=>'<a class="ag-source-badge" href="'+esc(s.url)+'" target="_blank" rel="noopener" title="'+esc(s.version+(s.hosts.length?' · Hosts / commodities: '+s.hosts.join(', '):''))+'">'+esc(s.name)+'</a>'+s.references.map((r,i)=>'<a class="ag-reference" href="'+esc(r)+'" target="_blank" rel="noopener" aria-label="'+esc(x.species+' '+s.name+' publication '+(i+1))+'">['+(i+1)+']</a>').join('')).join(' ');
+  return (x.sources||[]).map(s=>'<a class="ag-source-badge" href="'+esc(s.url)+'" target="_blank" rel="noopener" title="'+esc(s.version+((s.contexts||[]).length?' · '+s.contexts.join('; '):'')+(s.hosts.length?' · Hosts / commodities: '+s.hosts.join(', '):''))+'">'+esc(s.name)+'</a>'+s.references.map((r,i)=>'<a class="ag-reference" href="'+esc(r)+'" target="_blank" rel="noopener" aria-label="'+esc(x.species+' '+s.name+' publication '+(i+1))+'">['+(i+1)+']</a>').join('')).join(' ');
 }
 function renderAgInventory(){
   const d=selectedAgData();if(!d)return;
   const q=el('ag-search').value.trim().toLowerCase();
-  const source=el('ag-source-filter').value;
-  const xs=d.species_inventory.filter(x=>x.species.toLowerCase().includes(q)&&(!source||(x.sources||[]).some(s=>s.source_id===source)));
+  const source=el('ag-source-filter').value,country=el('ag-source-country').value;
+  const xs=d.species_inventory.filter(x=>x.species.toLowerCase().includes(q)&&(!source||(x.sources||[]).some(s=>s.source_id===source))&&(!country||(x.sources||[]).some(s=>s.country===country)));
   el('ag-filter-count').textContent=fmt(xs.length)+' source taxa shown';
   el('ag-species-list').innerHTML='<div class="header"><span>Species / taxon</span><span>Assemblies</span><span>Broad group</span><span>Agricultural role</span><span>First genome</span><span>Latest genome</span></div>'+xs.map(x=>'<div class="row"><span class="species">'+(x.tax_ids.length?'<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id='+esc(x.tax_ids[0])+'" target="_blank" rel="noopener"><em>'+esc(x.species)+'</em></a>':'<em>'+esc(x.species)+'</em>')+'<div class="ag-source-badges">'+agSourceBadges(x)+'</div></span><span>'+fmt(x.assemblies)+'</span><span>'+esc(x.vector_type)+'</span><span>'+esc(x.disease)+'</span><span>'+esc(x.first_release||'—')+'</span><span>'+esc(x.latest_release||'—')+'</span></div>').join('');
 }
@@ -1316,7 +1317,10 @@ function renderAgriculture(){
   const sourceIds=new Set(d.species_inventory.flatMap(x=>(x.sources||[]).map(s=>s.source_id))), oldSource=el('ag-source-filter').value;
   el('ag-source-filter').innerHTML='<option value="">All sources</option>'+(AG_DATA.sources||[]).filter(s=>sourceIds.has(s.source_id)).map(s=>'<option value="'+esc(s.source_id)+'">'+esc(s.name)+'</option>').join('');
   el('ag-source-filter').value=sourceIds.has(oldSource)?oldSource:'';
-  el('ag-sources-list').innerHTML=(AG_DATA.sources||[]).filter(s=>s.source_id!=='ncbi_taxonomy').map(s=>'<li><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.name)+'</a> · '+esc(s.version)+' · Retrieved '+esc(s.retrieved_at)+'<br>'+esc(s.scope)+'</li>').join('');
+  const countries=[...new Set(d.species_inventory.flatMap(x=>(x.sources||[]).map(s=>s.country)).filter(Boolean))].sort(),oldCountry=el('ag-source-country').value;
+  el('ag-source-country').innerHTML='<option value="">All source countries</option>'+countries.map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('');
+  el('ag-source-country').value=countries.includes(oldCountry)?oldCountry:'';
+  el('ag-sources-list').innerHTML=(AG_DATA.sources||[]).filter(s=>s.source_id!=='ncbi_taxonomy').map(s=>'<li><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.name)+'</a> · '+esc(s.version)+(s.country?' · '+esc(s.country):'')+' · Retrieved '+esc(s.retrieved_at)+'<br>'+esc(s.scope)+'</li>').join('');
   renderAgInventory();renderAgMap();
 }
 

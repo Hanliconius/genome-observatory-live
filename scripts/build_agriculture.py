@@ -42,11 +42,12 @@ def build(reports, catalogue=None):
             for m in memberships:
                 if m['species'] != item['species']: continue
                 source = registry[m['source_id']]
-                evidence = grouped.setdefault(m['source_id'],dict(source_id=m['source_id'],name=source['name'],url=m['evidence_url'],version=source['version'],hosts=set(),references=set()))
+                evidence = grouped.setdefault(m['source_id'],dict(source_id=m['source_id'],name=source['name'],url=m['evidence_url'],version=source['version'],country=source.get('country',''),contexts=set(),hosts=set(),references=set()))
                 if m['host_or_commodity']: evidence['hosts'].add(m['host_or_commodity'])
+                if source.get('country'): evidence['contexts'].add(m['basis'])
                 evidence['references'].update(x for x in m['reference_urls'].split('|') if x)
             if not grouped: raise ValueError('Taxon has no recorded source membership: '+item['species'])
-            item['sources'] = [dict(x,hosts=sorted(x['hosts']),references=sorted(x['references'])[:3]) for x in grouped.values()]
+            item['sources'] = [dict(x,contexts=sorted(x['contexts']),hosts=sorted(x['hosts']),references=sorted(x['references'])[:3]) for x in grouped.values()]
     lookup = {}
     for item in catalogue:
         if item['section'] not in SECTIONS or not taxon_key(item['species']):
@@ -79,8 +80,8 @@ def build(reports, catalogue=None):
         species = [dict(x,vector_type=x['group'],role=label,sample_rows=0) for x in catalogue if x['section']==section]
         views[section] = aggregate([x for x in matched if x['section']==section],species,dashboard,source)
         views[section]['groups'] = {g: aggregate([x for x in matched if x['section']==section and x['vector_type']==g], [x for x in species if x['vector_type']==g], dashboard, source) for g in sorted({x['vector_type'] for x in species})}
-        views[section]['source'].update(dataset='Union of curated FAO, EPPO, USDA Ag100Pest/CAPS/APHIS, WOAH and PHI-base records',
-            scope=label+' in a source-linked union catalogue covering crops, livestock, aquaculture, forestry, stored products and plant-health priorities. One primary display role per taxon; documented biological-control organisms are separated from pests. This is not an exhaustive list.',
+        views[section]['source'].update(dataset='Union of curated international and national agricultural organism, pest and pathogen records',
+            scope=label+' in a source-linked union catalogue covering crops, livestock, aquaculture, forestry, stored products and plant-health priorities. One primary display role per taxon; documented crop pollinators and biological-control organisms are separated from pests. This is not an exhaustive list.',
             matching='Current GenBank chromosome/complete assemblies. Species-level matching includes varieties, breeds and wild samples of listed taxa; only explicit aliases and named cultivated hybrids are included.',
             curated_list='../data/status/agriculture.tsv')
         for group in views[section]['groups'].values(): group['source'].update(views[section]['source'], species_names=len(group['species_inventory']))

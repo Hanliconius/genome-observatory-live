@@ -3,7 +3,11 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build_agriculture import build, taxon_key
-from import_agriculture_sources import reconcile
+from import_agriculture_sources import reconcile, category, taxonomy
+import csv
+import hashlib
+import json
+import tempfile
 
 
 def item(species,section,group,aliases=''):
@@ -73,6 +77,44 @@ class AgricultureProvenance(unittest.TestCase):
                               {'escherichia coli':{'562':dict(species='Escherichia coli',tax_id='562',lineage='Bacteria',eukaryote=False)}},
                               {},rejected)
         self.assertFalse(cat);self.assertFalse(members);self.assertEqual(len(rejected),2)
+
+
+class CountryAgricultureSources(unittest.TestCase):
+    def test_reviewed_australian_roles_and_scientific_matching_names(self):
+        path=Path(__file__).resolve().parents[1]/'data/status/agriculture_country_candidates.tsv'
+        with path.open() as f:
+            rows=list(csv.DictReader(f,delimiter='\t'))
+        rows=[x for x in rows if x['source_id']=='au_bioplatforms_ipm']
+        indexed={x['match_name']:x for x in rows if x['group']!='excluded'}
+        self.assertEqual(indexed['Phaulacridium vittatum']['section'],'pests')
+        self.assertEqual(indexed['Pezothrips kellyanus']['section'],'pests')
+        self.assertEqual(indexed['Austroplebeia australis']['group'],'Pollinators')
+        self.assertEqual(indexed['Spalangia endius']['group'],'Biological control')
+        self.assertNotIn('Wingless grasshopper',indexed)
+        self.assertTrue(any(x['group']=='excluded' and 'Dongara weevil' in x['original_name'] for x in rows))
+
+    def test_national_plant_lists_use_lineage_for_broad_groups(self):
+        x=dict(source_id='jp_maff_quarantine',section='',group='plant')
+        for lineage,expected in [('Eukaryota; Arthropoda; Acari',('pests','Mite pests')),
+                                 ('Eukaryota; Mollusca',('pests','Mollusc pests')),
+                                 ('Eukaryota; Fungi',('pathogens','Fungal plant pathogens')),
+                                 ('Eukaryota; Oomycetes',('pathogens','Oomycete plant pathogens'))]:
+            self.assertEqual(category(x,dict(lineage=lineage)),expected)
+
+
+class TaxonomyResolution(unittest.TestCase):
+    def test_current_canonical_name_wins_over_truncated_historical_synonym(self):
+        xml="""<TaxaSet>
+        <Taxon><TaxId>1</TaxId><ScientificName>Anoplophora chinensis</ScientificName><Rank>species</Rank><Lineage>Eukaryota; Arthropoda</Lineage></Taxon>
+        <Taxon><TaxId>2</TaxId><ScientificName>Anoplophora malasiaca</ScientificName><Rank>species</Rank><Lineage>Eukaryota; Arthropoda</Lineage><OtherNames><Synonym>Anoplophora chinensis malasiaca</Synonym></OtherNames></Taxon>
+        <Taxon><TaxId>3</TaxId><ScientificName>Anoplophora</ScientificName><Rank>genus</Rank><Lineage>Eukaryota; Arthropoda</Lineage></Taxon>
+        </TaxaSet>"""
+        signature=hashlib.sha256(json.dumps([[],[]]).encode()).hexdigest()[:12]
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/('ag_taxonomy_'+signature+'.xml');path.write_text(xml)
+            by_id,by_name,_=taxonomy(Path(tmp),[])
+            self.assertEqual(set(by_name['anoplophora chinensis']),{'1'})
+            self.assertNotIn('3',by_id)
 
 
 if __name__ == '__main__':

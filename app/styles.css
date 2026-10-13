@@ -999,7 +999,7 @@ h1{margin:3px 0 0;font-size:clamp(2.4rem,5vw,4.9rem);line-height:.95;letter-spac
 #ag-recent-list .header,#ag-recent-list .row{grid-template-columns:100px 1.5fr 1.2fr 120px 140px}
 @media(max-width:900px){#ag-recent-list .header,#ag-recent-list .row{grid-template-columns:95px 1fr}}
 
-#ag-source-filter{padding:8px 12px;margin:8px 12px 8px 0;border:1px solid var(--line);border-radius:5px;background:var(--paper,#fff);color:inherit;font:inherit}
+#ag-source-filter,#ag-source-country{padding:8px 12px;margin:8px 12px 8px 0;border:1px solid var(--line);border-radius:5px;background:var(--paper,#fff);color:inherit;font:inherit}
 .ag-source-badges{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:5px;font-style:normal}
 .ag-source-badge{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:2px 5px;font-size:.68rem;text-decoration:none;background:#eef3f5;color:var(--ink)}
 .ag-source-badge:hover{background:#dbe9ef}.ag-reference{font-size:.65rem}.ag-sources-list{padding-left:20px}.ag-sources-list li{margin:12px 0;color:var(--muted);font-size:.86rem}

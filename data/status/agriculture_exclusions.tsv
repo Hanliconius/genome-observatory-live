@@ -1,9 +1,7 @@
 source_id	original_name	reason
-ag100_targets	Aonidiella aurantii	Non-eukaryotic, ambiguous or unresolved species
 ag100_targets	NA	Not an explicit species or named hybrid
 ag100_targets	Oncopeltus fasciatus	Project association retained in exclusions; agricultural pest role requires further species-level evidence.
 ag100_targets	Plecia nearctica	Project association retained in exclusions; agricultural pest role requires further species-level evidence.
-ag100_targets	Sitophilus oryzae	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Acinetobacter spp. **	Not an explicit species or named hybrid
 aphis_vet	Actinobacillus pleuropneumoniae	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Actinomyces bovis	Non-eukaryotic, ambiguous or unresolved species
@@ -443,9 +441,6 @@ aphis_vet	Trichostongylus colubiformis	Non-eukaryotic, ambiguous or unresolved s
 aphis_vet	Tridontophorus tenuicollis	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Truperella pyogenes	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Trychophyton verrucosum	Non-eukaryotic, ambiguous or unresolved species
-aphis_vet	Trypanosoma brucei brucei	Non-eukaryotic, ambiguous or unresolved species
-aphis_vet	Trypanosoma brucei gambiense	Non-eukaryotic, ambiguous or unresolved species
-aphis_vet	Trypanosoma brucei rhodesiense	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Tsetse fly (glossina)	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Turkey astrovirus (Poultry enteritis and mortality syndrome)	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Turkey enteritis coronavirus (Bluecomb disease)	Non-eukaryotic, ambiguous or unresolved species
@@ -463,6 +458,369 @@ aphis_vet	Yaba monkey tumor virus	Non-eukaryotic, ambiguous or unresolved specie
 aphis_vet	Yersinia enterocolytica	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Yersinia pseudotubercuolosis	Non-eukaryotic, ambiguous or unresolved species
 aphis_vet	Yersinia vaccine strain	Non-eukaryotic, ambiguous or unresolved species
+au_bioplatforms_ipm	Asian tiger mosquito (Aedes albopictus)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Australian backyard mosquito (Aedes notoscriptus)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Citrus blossom bug (Austropeplus sp.)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Dongara weevil	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Eastern Paralysis Tick (Ixodes holocyclus)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Eucalypt ringbarker Longicorn (Phoracantha mastersi)	Non-eukaryotic, ambiguous or unresolved species
+au_bioplatforms_ipm	Eucalyptus weevil (Gonipterus sp. n. 2)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Fruit spotting bug (Amblypelta nitida)	Non-eukaryotic, ambiguous or unresolved species
+au_bioplatforms_ipm	Orange Blowflies (Calliphora ochracea and Calliphora nigrithorax)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Portuguese millipede (Ommatoiulus moreleti)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_bioplatforms_ipm	Tiphiid wasp (Neozeloboria cryptoides)	Australia — Review exclusion: unidentified taxon or no explicit agricultural role in project description
+au_daff_priority	Caracollina spp.	Not an explicit species or named hybrid
+au_daff_priority	Chilo orichalcociliella	Non-eukaryotic, ambiguous or unresolved species
+au_daff_priority	Chilo polychrysus	Non-eukaryotic, ambiguous or unresolved species
+au_daff_priority	Fusarium oxysporum f. sp. cubense Tropical Race 4	Not an explicit species or named hybrid
+au_daff_priority	Globodera spp. (exotic strains)	Not an explicit species or named hybrid
+au_daff_priority	Massylaea spp.	Not an explicit species or named hybrid
+au_daff_priority	Monacha spp.	Not an explicit species or named hybrid
+au_daff_priority	Monochamus spp. (vector)	Not an explicit species or named hybrid
+au_daff_priority	Oncometopia fascialis (vector)	Non-eukaryotic, ambiguous or unresolved species
+au_daff_priority	Puccinia graminis f. sp. tritici (exotic strains)	Not an explicit species or named hybrid
+au_daff_priority	Puccinia striiformis f. sp. hordei (exotic strains)	Not an explicit species or named hybrid
+au_daff_priority	Xyphon fulgidum (vector)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Aceria oleae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Aegorhinus phaleratus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Aleurocanthus spp. (Exceto A. woglumi)	Not an explicit species or named hybrid
+br_mapa_absent	Alphanucleorhabdovirus melongenae (Eggplant mottled dwarf virus - EMDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Amphicerus bimaculatus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Anoplophora spp.	Not an explicit species or named hybrid
+br_mapa_absent	Anthonomus spp. (Exceto A. grandis e A. tomentosus)	Not an explicit species or named hybrid
+br_mapa_absent	Apple chat fruit viroid (ACFVd)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Apriona cinerea	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Arceuthobium spp.	Not an explicit species or named hybrid
+br_mapa_absent	Archips spp.	Not an explicit species or named hybrid
+br_mapa_absent	Babuvirus musae (Banana bunchy top virus - BBTV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Bactrocera spp. (Exceto B. carambolae)	Not an explicit species or named hybrid
+br_mapa_absent	Balansia oryzae-sativae (Ephelis oryzae)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Begomovirus coheni (Tomato yellow leaf curl virus - TYLCV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Begomovirus manihotis (African cassava mosaic virus - ACMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Begomovirus solanumdelhiense (Tomato Leaf Curl New Delhi Virus - ToLCNDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Brachycerus spp.	Not an explicit species or named hybrid
+br_mapa_absent	Brenneria salicis (Erwinia salicis)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Bruchidius spp.	Not an explicit species or named hybrid
+br_mapa_absent	Bruchus spp.	Not an explicit species or named hybrid
+br_mapa_absent	Burkholderia glumae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cacao swollen shoot virus (CSSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cadra calidella (Ephestia calidella)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Calacarus citrifolii	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus americanense (American hop latent virus - AHLV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus humuli (Hop mosaic virus - HpMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus latenshumuli (Hop latent virus - HpLV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus populi (Poplar mosaic virus - PopMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus trifolii (Red clover vein mosaic virus - RCVMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carlavirus vaccinii (Blueberry scorch virus - BlScV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Carpophilus freemani	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Celavirus apii (Celery latent virus - CeLV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ceratitis spp. (Exceto C. capitata)	Not an explicit species or named hybrid
+br_mapa_absent	Cercospora insulana	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cheravirus arracaciae (Arracacha virus B - AVB)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Chilecomadia moorei	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Choristoneura spp.	Not an explicit species or named hybrid
+br_mapa_absent	Citrivirus citri (Citrus leaf blotch virus)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Citrus impietratura agent	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Clavibacter insidiosus (Clavibacter michiganensis subsp. insidiosus)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Clavibacter nebraskensis (Clavibacter michiganensis subsp. nebraskensis)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Clavibacter sepedonicus (Clavibacter michiganensis subsp. sepedonicus)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cocadviroid cadangi (Coconut cadang-cadang viroid - CCCVd)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Coccus capparidis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Coleviroid epsiloncolei (Coleus blumei viroid 5 - CbVd-5)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Compsus viridivittatus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Conoderus vespertinus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Conotrachelus aguacatae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Conotrachelus perseae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Contarinia pyrivora	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Copitarsia uncilata	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Crinivirus contagichlorosis (Tomato infectious chlorosis virus - TICV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Crinivirus palidofragariae (Strawberry pallidosis-associated virus - SpaV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Crinivirus pseudobetae (Beet pseudoyellows virus - BPYV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cronartium spp.	Not an explicit species or named hybrid
+br_mapa_absent	Curtovirus betae (Beet curly top virus - BCTV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Cydia spp. (Exceto C. araucariae)	Not an explicit species or named hybrid
+br_mapa_absent	Cylindrocopturus adspersus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Dacus spp.	Not an explicit species or named hybrid
+br_mapa_absent	Dalaca chiliensis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Dalaca pallens	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Delia spp. (Exceto D. sanctijacobi)	Not an explicit species or named hybrid
+br_mapa_absent	Dendroctonus spp.	Not an explicit species or named hybrid
+br_mapa_absent	Dexicrates robustus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Diaspidiotus pyri	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Dickeya fangzhongdai	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Diocalandra taitense	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Discula pyri (Phacidiopycnis pyri)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Drepanopeziza castagnei (Drepanopeziza populi-albae, Marssonina castagnei)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Drepanopeziza populi (Drepanopeziza populorum, Marssonina populi)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Earias biplaga	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Epicaerus cognatus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Erwinia amylovora	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Erwinia mallotivora	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Erwinia papayae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Erwinia pyrifoliae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Erwinia rhapontici (Pectobacterium rhapontici)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Fabavirus alphaviciae (Broad bean wilt virus 1)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Fabavirus betaviciae (Broad bean wilt virus 2)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Fijivirus fijiense (Fiji disease virus - FDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Fusicoccum putrefaciens	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Grapevine flavescence dorée phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Grapevine yellows phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Gymnosporangium spp.	Not an explicit species or named hybrid
+br_mapa_absent	Helicoceras spp.	Not an explicit species or named hybrid
+br_mapa_absent	Helopeltis anacardii	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Helopeltis schoutedeni	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Homoeocerus pallens	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Hordeivirus hordei (Barley stripe mosaic virus - BSMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Horidiplosis ficifolii	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Hylesinus taranio (Hylesinus oleiperda)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Hypocryphalus scabricollis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Idaeovirus rubi (Raspberry bushy dwarf virus - RBDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ipomovirus brunusmanihotis (Cassava brown streak virus - CBSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ipomovirus manihotis (Ugandan cassava brown streak virus - UCBSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ips spp.	Not an explicit species or named hybrid
+br_mapa_absent	Lema pectoralis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Lepidosaphes conchiformis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Leptocoris rufomarginatus (Leptocoris rufomarginata)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Leucoptera meyricki	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Macluravirus scolymus (Artichoke latent virus - ArLV, ranunculus latent virus)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Malacosoma spp.	Not an explicit species or named hybrid
+br_mapa_absent	Megastigmus spp. (Exceto M. transvaalensis e M. brasiliensis)	Not an explicit species or named hybrid
+br_mapa_absent	Melanotus communis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Mercetaspis halli	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Microtermes spp.	Not an explicit species or named hybrid
+br_mapa_absent	Monochamus spp.	Not an explicit species or named hybrid
+br_mapa_absent	Neodiprion spp.	Not an explicit species or named hybrid
+br_mapa_absent	Nepovirus arabis (Arabis mosaic virus - ArMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus arracaciae (Arracacha virus A - AVA)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus cichorii (Chicory yellow mottle virus - ChYMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus cycas (Cycas necrotic stunt virus)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus cynarae (Artichoke yellow ringspot virus - AYRSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus italiaense (Artichoke Italian latent virus - AILV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus lycopersici (Tomato ringspot virus - ToRSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus myrtilli (Blueberry leaf mottle virus - BLMoV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus nicotianae (Tobacco ringspot virus - TRSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus nigranuli (Tomato black ring virus - TBRV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus persicae (Peach rosette mosaic virus - PRMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nepovirus rubi (Raspberry ringspot virus - RpRSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Nysius nubilus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Oligonychus bicolor	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ootheca bennigseni	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ophiovirus freesiae (Freesia sneak virus - FreSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ophiovirus ranunculi (Ranunculus white mottle virus - RWMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Ophiovirus vaccinii (Blueberry mosaic associated virus - BlMaV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orchidophilus peregrinator	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orchidophilus ran	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orobanche spp.	Not an explicit species or named hybrid
+br_mapa_absent	Orthotospovirus alstroemerinecrosis (Alstroemeria necrotic streak virus - ANSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orthotospovirus capsiciflavi (Capsicum chlorosis virus - CaCV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orthotospovirus impatiensnecromaculae (Impatiens necrotic spot virus - INSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Orthotospovirus tomatanuli (Tomato yellow ring virus - TYRV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pantoea stewartii subsp. stewartii (Erwinia stewartii; Pantoea stewartii)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Peach rosette phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Peach yellows phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pecluvirus indicum (Indian peanut clump virus - IPCV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pectobacterium wasabiae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Phelipanche spp.	Not an explicit species or named hybrid
+br_mapa_absent	Phonapate frontalis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Phyllosticta solitaria	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Phytophthora cambivora	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Planococcoides njalensis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pollinia pollini	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pomovirus solani (Potato mop-top virus - PMTV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pospiviroid chloronani (Tomato chlorotic dwarf viroid - TCDVd)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pospiviroid fusituberis (Potato spindle tuber viroid - PSTVd)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pospiviroid parvicapsici (Pepper chat fruit viroid - PCFVd)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potato yellowing virus (PYV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potexvirus ecslilii (Lily virus X - LVX)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potexvirus pepini (Pepino mosaic virus - PepMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus atuberosi (Potato virus A - PVA)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus freesiae (Freesia mosaic virus - FreMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus musae (Banana bract mosaic virus - BBrMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus plumpoxi (Plum pox virus - PPV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus ranunculi (Ranunculus mosaic virus - RanMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus ranunculideformationis (Ranunculus leaf distortion virus - RanLDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus ranunculitenuis (Ranunculus mild mosaic virus - RanMMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus trifolii (Clover yellow vein virus - ClYVV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus trompetae (Colombian datura virus - CDV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Potyvirus tulipadefractum (Tulip breaking virus - TBV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Premnotrypes spp.	Not an explicit species or named hybrid
+br_mapa_absent	Proeulia auraria	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Proeulia chrysopteris	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudomonas cannabina pv. alisalensis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudomonas syringae pv. aptata	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudomonas syringae pv. atrofaciens	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudomonas syringae pv. atropurpurea	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudomonas syringae pv. tagetis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudotheraptus devastans	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Pseudotheraptus wayi	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Rabdophaga saliciperda (Helicomyia saliciperda)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Rhagoletis spp. (Exceto R. adusta, R. blanchardi, R. ferruginea, R. macquarti)	Not an explicit species or named hybrid
+br_mapa_absent	Rhigopsidius tucumanus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Rhodococcus fascians	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Rhyacionia spp.	Not an explicit species or named hybrid
+br_mapa_absent	Riptortus dentipes	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Robigovirus elaeis (African oil palm ringspot virus - AOPRV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Saperda spp.	Not an explicit species or named hybrid
+br_mapa_absent	Sclerophthora rayssiae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Selitrichodes globulus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Sinoxylon spp. (Exceto S. unidentatum)	Not an explicit species or named hybrid
+br_mapa_absent	Soymovirus maculavaccinii (Blueberry red ringspot virus - BRRV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Spiroplasma citri	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Stagonospora sacchari	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Stralarivirus fragariae (Strawberry latent ringspot virus - SLRSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Striga spp.	Not an explicit species or named hybrid
+br_mapa_absent	Tanymecus dilaticollis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Targionia vitis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tepovirus tafsolani (Potato virus T - PVT)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus fructirugosum (Tomato brown rugose fruit virus - ToBRFV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus kyuri (Kyuri green mottle mosaic virus - KGMMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus maculacapsici (Bell pepper mottle virus - BPeMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus maculafructi (Cucumber fruit mottle mosaic virus - CFMMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus plantagonis (Ribgrass mosaic virus - RMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobamovirus viridimaculae (Cucumber green mottle mosaic virus - CGMMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobravirus pisi (Pea early-browning virus - PEBV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tobravirus tabaci (Tobacco rattle virus - TRV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tombusvirus algeriaense (Grapevine Algerian latent virus - GALV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tombusvirus cynarae (Artichoke mottled crinkle virus - AMCV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tombusvirus lycopersici (Tomato bushy stunt virus - TBSV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tombusvirus petuniae (Petunia asteroid mosaic virus - PeAMV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Tremex spp.	Not an explicit species or named hybrid
+br_mapa_absent	Trogoderma spp.	Not an explicit species or named hybrid
+br_mapa_absent	Tymovirus latandigenum (Andean potato latent virus - APLV)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Vesperus luridus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas cassavae (Xanthomonas campestris pv. cassavae)	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas fuscans subsp. aurantifolii grupo B (Xanthomonas axonopodis pv. aurantifolii raça	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas hydrangeae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas oryzae pv. oryzae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas oryzae pv. oryzicola	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas populi	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas translucens pv. graminis	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xanthomonas vasicola pv. musacearum	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xylella fastidiosa subsp. fastidiosa	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xylopertha retusa	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_absent	Xylophilus ampelinus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_present	Rhizoctonia theobromae	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_present	Schizotetranychus hindustanicus	Non-eukaryotic, ambiguous or unresolved species
+br_mapa_present	Xanthomonas citri subsp. citri	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Andean potato latent virus (APLV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Andean potato mottle virus (APMoV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Anoplophora spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Anthonomus bisignifer (Schenkling)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Aphanostigma iaksuiense (Kishida)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Aphanostigma piri (Cholodkovsky)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple chat fruit disease	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple chlorotic leaf spot trichovirus (ACLSV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple ringspot agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple rosette agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple rough bark agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple rubbery wood virus 1 (ARWV-1)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple rubbery wood virus 2 (ARWV-2)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple scar skin viroid (ASSVd)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple star crack agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple stem grooving capillovirus (ASGV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Apple stem pitting foveavirus (ASPV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Archachatina degneri Bequaert & Clench	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Archachatina purpurea Gmelin	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Archachatina ventricosa Gould	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Archips breviplicanus (Walsingham)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Archips semistructa (Meyrick)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Arracacha B virus, oca strain (AVB-O)	Not an explicit species or named hybrid
+ca_cfia_regulated	Artichoke Italian latent virus (AILV)	Not an explicit species or named hybrid
+ca_cfia_regulated	Beet curly top virus (BCTV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Berberis spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Black currant reversion virus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Brenneria salicis (Day) Hauben et al.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cacopsylla liaoli (Yang & Li)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cadidatus Phytoplasma prunorum	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma mali	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma pruni	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma pyri	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma rubi	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma solani	Not an explicit species or named hybrid
+ca_cfia_regulated	Candidatus Phytoplasma vitis	Not an explicit species or named hybrid
+ca_cfia_regulated	Cherry green ring mottle foveavirus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry mottle leaf trichovirus (CMLV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry necrotic rusty mottle virus (CNRMV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry pink fruit agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry rasp leaf nepovirus (CRLV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry rough fruit agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry rusty mottle associated virus (CRMaV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry short stem agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cherry twisted leaf associated virus (CTLaV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Chrysanthemum stem necrosis tospovirus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Clavibacter sepedonicus (Davis, Gillaspies, Vidaver and Harris) Nouioui et al.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Cydia inopinata Heinrich	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Diaspidiotus pyri Lichtenstein	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine (Hungarian) chrome mosaic virus (GCMV)	Not an explicit species or named hybrid
+ca_cfia_regulated	Grapevine Bulgarian latent virus (GBLV)	Not an explicit species or named hybrid
+ca_cfia_regulated	Grapevine asteroid mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine chasselas latent agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine corky bark virus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine enation agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine vein mosaic or necrosis virus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Grapevine yellows	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Guignardia baccae (Cavara) Jacz.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Helix spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Kober stem grooving (associated with Grapevine Virus A)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	LN33 stem grooving	Not an explicit species or named hybrid
+ca_cfia_regulated	Little cherry closterovirus 1, 2 & 3 (LchV-1, LchV-2, LchV-3)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Longidorus spp. Micoletzky	Not an explicit species or named hybrid
+ca_cfia_regulated	Mahoberberis spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Mahonia spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Monochamus spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Nepovirus avii	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Nippoptilia vitis (Sasaki)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Numonia pyrivorella Matsumura	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Otiorhynchus corruptor (Host)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Peach mosaic trichovirus (PMV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Peach rosette mosaic nepovirus (PRMV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Pear blister canker viroid (PBCVd)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Pear bud drop agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Pear rough bark agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Peronospora hyoscyami f.sp. tabacina (Adam) Skalicky	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Phoma exigua var . foveata (Foister) Boerema	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Phytophthora spp. Except for: Phytophthora brassicae Phytophthora cactorum Phytophthora cambivora Phytophthora capsici Phytophthora cinnamomi Phytophthora citricola Phytophthora cryptogea Phytophthora drechsleri Phytophthora erythroseptica Phytophthora fragariae Phytophthora ilicis Phytophthora infestans Phytophthora lateralis Phytophthora medicaginis Phytophthora nicotianae Phytophthora pini Phytophthora plurivora Phytophthora rubi Phytophthora sojae Phytophthora syringae Phytophthora foliorum	Not an explicit species or named hybrid
+ca_cfia_regulated	Plum pox potyvirus (PPV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Plum rusty blotch	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato deforming mosaic virus (PDMV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato mop top virus (PMTV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato spindle tuber viroid (PSTVd)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus T (PVT)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus U (PVU)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus V (PVV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus Y C (PVY C )	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus Y N (PVY N )	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato virus Y NTN (PVY NTN )	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato yellow vein virus (PYVV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Potato yellowing virus (PYV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Proeulia spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Prune dwarf ilavirus (PDV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Prunus necrotic ringspot ilavirus (PNRSV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Pseudomonas syringae pv. aesculi	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Pseudomonas syringae pv. cannabina (Sutic & Dowson) Young et al.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Quadraspidiotus pyri Lichtenstein	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Ralstonia solanacearum (Smith) Yabuuchi et al. emend. Safni et al.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Raspberry ringspot nepovirus (RRSV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Rhacodiella vitis Sterenberg	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Rhamnus spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Sclerotinia fructigena ( Pers .) J. Schrot .	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Spur cherry agent	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Strawberry latent ringspot nepovirus (SLRV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Striga spp.	Not an explicit species or named hybrid
+ca_cfia_regulated	Tobacco rattle virus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tobacco ringspot nepovirus (TRSV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tobacco ringspot virus, potato calico strain (TBRSV-CA)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tomato black ring nepovirus (TBRV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tomato black ring virus (beet ringspot strain)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tomato bushy stunt tombusvirus (TBSV)	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Tomato ringspot nepovirus	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Trichodorus spp. Cobb	Not an explicit species or named hybrid
+ca_cfia_regulated	Xanthomonas ampelina Panagopoulos	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Xanthomonas campestris pv. cannabis * Severin	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Xanthomonas populi ( Ridé ) Ridé & Ridé	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Xiphinema spp. Cobb	Not an explicit species or named hybrid
+ca_cfia_regulated	Xylella fastidiosa Wells et al.	Non-eukaryotic, ambiguous or unresolved species
+ca_cfia_regulated	Xylophilus ampelinus (Panagopoulos) Willems et al.	Non-eukaryotic, ambiguous or unresolved species
 caps_2026	Candidatus Phytoplasma australiense 16SrXII-B	Not an explicit species or named hybrid
 caps_2026	Candidatus Phytoplasma citri 16SrII-B	Not an explicit species or named hybrid
 caps_2026	Candidatus Phytoplasma mali 16SrX-A	Not an explicit species or named hybrid
@@ -486,6 +844,225 @@ caps_2026	Tobamovirus Cucumber Green Mottle Mosaic Virus	Not an explicit species
 caps_2026	Tobamovirus Tomato Brown Rugose Fruit Virus	Not an explicit species or named hybrid
 caps_2026	Xanthomonas oryzae pv. oryzae	Non-eukaryotic, ambiguous or unresolved species
 caps_2026	Xanthomonas oryzae pv. oryzicola	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Acidovorax avenae subsp. cattleyae ( Pavarino) Willems et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Acidovorax avenae subsp. citrulli ( Schaad et al. ) Willems	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Acidovorax konjaci ( Goto ) Willems et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	African cassava mosaic virus, ACMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Agrilus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Albugo tragopogi (Persoon) Schröter var. helianthi	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Alder yellows phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Ambrosia spp.	Not an explicit species or named hybrid
+cn_import_quarantine	Anastrepha Schiner	Not an explicit species or named hybrid
+cn_import_quarantine	Anisogramma anomala（Peck）E. Muller	Not an explicit species or named hybrid
+cn_import_quarantine	Aphanostigma piri (Cholodkovsky)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Apple fruit crinkle viroid, AFCVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Apple proliferation phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Apple stem grooving virus, ASPV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Apricot chlorotic leafroll phtoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Arabis mosaic virus, ArMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Arx	Not an explicit species or named hybrid
+cn_import_quarantine	Ash yellows phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Athow et Caldwell	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Atropellis pinicola Zaller et Goodding	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Avocado sunblotch viroid, ASBVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Bactrocera Macquart	Not an explicit species or named hybrid
+cn_import_quarantine	Banana bract mosaic virus, BBrMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Baris granulipennis (Tournier)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Batocera spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Bean pod mottle virus, BPMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Blueberry stunt phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Broad bean stain virus, BBSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Bruchidius incarnates (Boheman)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Bruchus spp. (non-Chinese )	Not an explicit species or named hybrid
+cn_import_quarantine	Burkholderia caryophylli ( Burkholder ) Yabuuchi et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Burkholderia gladioli pv. alliicola ( Burkholder ) Urakami	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Burkholderia glumae ( Kurita et Tabei ) Urakami et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cacao swollen shoot virus, CSSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Callosobruchus spp. (maculatus（F.）and non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Candidatus Liberibacter solanacearum Liefting et al.	Not an explicit species or named hybrid
+cn_import_quarantine	Candidatus Liberobacter africanum Jagoueix et al.	Not an explicit species or named hybrid
+cn_import_quarantine	Candidatus Liberobacter asiaticum Jagoueix et al.	Not an explicit species or named hybrid
+cn_import_quarantine	Candidatus Phytoplasma australiense	Not an explicit species or named hybrid
+cn_import_quarantine	Carnation ringspot virus, CRSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Caucalis latifolia L.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cenchrus spp. (non-Chinese species)	Not an explicit species or named hybrid
+cn_import_quarantine	Ceratitis Macleay	Not an explicit species or named hybrid
+cn_import_quarantine	Clavibacter michiganensis subsp. insidiosus ( McCulloch )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Clavibacter michiganensis subsp. michiganensis ( Smith )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Clavibacter michiganensis subsp. nebraskensis ( Vidaver et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Clavibacter michiganensis subsp. sepedonicus ( Spieckermann	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Coconut cadang-cadang viroid, CCCVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Coconut lethal yellowing phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Coconut tinangaja viroid, CTiVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Collins et Jones	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Columnea latent viroid, CLVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Conotrachelus Schoenherr	Not an explicit species or named hybrid
+cn_import_quarantine	Contarinia sorghicola (Coquillett)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Coptotermes spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Cotton leaf crumple virus, CLCrV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cotton leaf curl virus, CLCuV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cowpea severe mosaic virus, CPSMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Craponius inaequalis (Say)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Crossotarsus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Cryptorrhynchus lapathi L.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cucumber green mottle mosaic virus, CGMMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Curtobacterium flaccumfaciens pv. flaccumfaciens ( Hedges )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Curtobacterium flaccumfaciens pv. oortii ( Saaltink et al. )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cuscuta spp.	Not an explicit species or named hybrid
+cn_import_quarantine	Cydia janthinana (Duponchel)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cydia prunivora (Walsh)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Cydia pyrivora (Danilevskii)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Dacus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Davis et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Dendroctonus spp. (valens LeConte and non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Diabrotica Chevrolat	Not an explicit species or named hybrid
+cn_import_quarantine	Duncan	Not an explicit species or named hybrid
+cn_import_quarantine	Dye	Not an explicit species or named hybrid
+cn_import_quarantine	Dysmicoccus grassi Leonari	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Elm phloem necrosis phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Enterobacter cancerogenus ( Urosevi ) Dickey et Zumoff	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Eriosoma lanigerum（Hausmann）	Not an explicit species or named hybrid
+cn_import_quarantine	Erwinia amylovora ( Burrill ) Winslow et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Erwinia chrysanthemi Burkhodler et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Erwinia pyrifoliae Kim, Gardan, Rhim et Geider	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Eulecanium gigantea (Shinji)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Eurytoma schreineri Schreiner	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Gardan et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Grapevine flavescence dorée phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Hans (Race 4 non-Chinese races)	Not an explicit species or named hybrid
+cn_import_quarantine	Hemerocampa leucostigma (Smith)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	High Plains wheat mosaic virus  , HPWMoV	Not an explicit species or named hybrid
+cn_import_quarantine	Hop latent viroid, HLVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Hordeolicoccus nephelii (Takahashi)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Ips spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Iva xanthifolia Nutt.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Lactuca pulchella (Pursh) DC.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Leptosphaeria libanotis (Fuckel) Sacc.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Leucostoma cincta (Fr.:Fr.) Hohn.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Lime witches’ broom phytoplasma	Not an explicit species or named hybrid
+cn_import_quarantine	Longidorus (Filipjev) Micoletzky（The species transmit	Not an explicit species or named hybrid
+cn_import_quarantine	Maize chlorotic dwarf virus, MCDV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Maize chlorotic mottle virus, MCMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Maize dwarf mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Melampsora farlowii (J.C.Arthur) J.J.Davis	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Meloidogyne Goeldi  (non-Chinese species)	Not an explicit species or named hybrid
+cn_import_quarantine	Mercetaspis halli (Green)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Monacrostichus citricola Bezzi	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Monochamus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Nacobbus abberans (Thorne ) Thorne et Allen	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Novotelnova	Not an explicit species or named hybrid
+cn_import_quarantine	Oat mosaic virus, OMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Orobanche spp.	Not an explicit species or named hybrid
+cn_import_quarantine	Pantoea stewartii subsp. stewartii ( Smith ) Mergaert et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Paracoccus interceptus Lit	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Paratrichodorus Siddiqi （The species transmit viruses）	Not an explicit species or named hybrid
+cn_import_quarantine	Payak et Renfro	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Peach X-disease phytoplasma	Not an explicit species or named hybrid
+cn_import_quarantine	Peach rosette mosaic virus, PRMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Peanut stunt virus, PSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pear blister canker viroid, PBCVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pear decline phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pepper chat fruit viroid, PCFVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Periconia circinata（M.Mangin）Sacc.	Not an explicit species or named hybrid
+cn_import_quarantine	Peronosclerospora spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Peronospora hyoscyami de Bary f.sp. tabacina (Adam) Skalicky	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Petrov	Not an explicit species or named hybrid
+cn_import_quarantine	Pharaxonotha kirschi Reither	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Phellinus noxius (Corner) G.H.Cunn.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Phloeosinus cupressi Hopkins	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Phoma exigua Desmazières f.sp. foveata (Foister) Boerema	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Phytophthora cambivora (Petri) Buisman	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pissodes Germar	Not an explicit species or named hybrid
+cn_import_quarantine	Planococcus lilacius Cockerell	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Platypus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Plum pox virus, PPV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Potato mop-top virus, PMTV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Potato spindle tuber viroid, PSTVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Potato virus A,  PVA	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Potato virus V,  PVV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Potato witches’ broom phytoplasma	Not an explicit species or named hybrid
+cn_import_quarantine	Potato yellow dwarf virus, PYDV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pratylenchus Filipjev (non-Chinese species)	Not an explicit species or named hybrid
+cn_import_quarantine	Promecotheca cumingi Baly	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Prunus necrotic ringspot virus, PNRSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudococcus aurantiacus Williams	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas cannabina pv. alisalensis	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas savastanoi pv. phaseolicola ( Burkholder )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas syringae pv. maculicola (McCulloch) Young et al	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas syringae pv. morsprunorum ( Wormald  ) Young et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas syringae pv. persicae ( Prunier et al. ) Young	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas syringae pv. pisi ( Sackett ) Young et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Pseudomonas syringae pv. tomato ( Okabe ) Young et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Ralstonia solanacearum ( Smith ) Yabuuchi et al.（race 2）	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Ralstonia syzygii subsp.celebesensis	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Rathayibacter rathayi ( Smith ) Zgurskaya et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Reticulitermes lucifugus（Rossi）	Not an explicit species or named hybrid
+cn_import_quarantine	Rhagoletis spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Saissetia neglecta De Lotto	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Saperda spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Sclerophthora rayssiae Kenneth, Kaltin et Wahl var. zeae	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Sinoxylon spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Southern bean mosaic virus, SBMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Sowbane mosaic virus, SoMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Spiroplasma citri Saglio et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Spodoptera littoralis（Boisduval）	Not an explicit species or named hybrid
+cn_import_quarantine	Stagonospora avenae Bissett f. sp. triticea T. Johnson	Not an explicit species or named hybrid
+cn_import_quarantine	Stagonospora sacchari Lo et Ling	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Stathmopoda skelloni Butler	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Sternochetus Pierce	Not an explicit species or named hybrid
+cn_import_quarantine	Strawberry latent ringspot virus, SLRSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Strawberry multiplier phytoplasma	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Striga spp. (non-Chinese species)	Not an explicit species or named hybrid
+cn_import_quarantine	Subgen Acnida L.	Not an explicit species or named hybrid
+cn_import_quarantine	Sugarcane streak virus, SSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tetropium spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Tobacco ringspot virus, TRSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato black ring virus, TBRV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato brown rugose fruit virus	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato chlorotic dwarf viroid, TCDVd	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato leaf curl New Delhi virus, ToLCNDV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato ringspot virus, ToRSV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Tomato spotted wilt virus, TSWV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Trichodorus Cobb （The species transmit viruses）	Not an explicit species or named hybrid
+cn_import_quarantine	Trogoderma spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Vauterin et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Vesperus Latreile	Not an explicit species or named hybrid
+cn_import_quarantine	Vinsonia stellifera (Westwood)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Wheat streak mosaic virus, WSMV	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Williams	Not an explicit species or named hybrid
+cn_import_quarantine	Xanthium spp. (non-Chinese species)）	Not an explicit species or named hybrid
+cn_import_quarantine	Xanthomonas albilineans ( Ashby ) Dowson	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas arboricola pv. celebensis ( Gaumann ) Vauterin	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas axonopodis pv. betlicola ( Patel et al. )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas axonopodis pv. citri ( Hasse ) Vauterin et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas axonopodis pv. manihotis ( Bondar ) Vauterin et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas axonopodis pv. vasculorum ( Cobb ) Vauterin et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas campestris pv. mangiferaeindicae ( Patel et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas campestris pv. musacearum ( Yirgou et Bradbury )	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas cassavae ( ex Wiehe et Dowson ) Vauterin et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas fragariae Kennedy et King	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas hyacinthi ( Wakker ) Vauterin et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas oryzae pv. oryzae ( Ishiyama ) Swings et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas oryzae pv. oryzicola ( Fang et al. ) Swings et	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas populi ( ex Ride ) Ride et Ride	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xanthomonas vasicola pv. vasculorum	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xiphinema Cobb （The species transmit viruses）	Not an explicit species or named hybrid
+cn_import_quarantine	Xyleborus spp. (non-Chinese)	Not an explicit species or named hybrid
+cn_import_quarantine	Xylella fastidiosa Wells et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xyloperthella crinitarsis (Imhoff)	Non-eukaryotic, ambiguous or unresolved species
+cn_import_quarantine	Xylophilus ampelinus ( Panagopoulos ) Willems et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Acidovorax citrulli Schaad et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Clavibacter michiganensis subsp. michiganensis Smith et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Cucumber green mottle mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Erwinia amylovora Burrill et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Erwinia pyrifoliae Kim et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Liberibacter asiaticum Jagoueix et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Maize chlorotic mottle virus	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Orobanche spp.	Not an explicit species or named hybrid
+cn_mara_domestic	Prunus necrotic ringspot virus	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Pseudomonas syringae pv. maculicola McCulloch et al.	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Tomato brown rugose fruit virus	Non-eukaryotic, ambiguous or unresolved species
+cn_mara_domestic	Xanthomonas oryzae pv. oryzicola Swings et al.	Non-eukaryotic, ambiguous or unresolved species
 eppo	'Candidatus Liberibacter africanus'	Source group outside eukaryotic scope
 eppo	'Candidatus Liberibacter americanus'	Source group outside eukaryotic scope
 eppo	'Candidatus Liberibacter asiaticus'	Source group outside eukaryotic scope
@@ -508,8 +1085,6 @@ eppo	Apple mosaic virus	Source group outside eukaryotic scope
 eppo	Apple stem grooving virus	Source group outside eukaryotic scope
 eppo	Apriona cinerea	Non-eukaryotic, ambiguous or unresolved species
 eppo	Arabis mosaic virus	Source group outside eukaryotic scope
-eppo	Arceuthobium campylopodum	Non-eukaryotic, ambiguous or unresolved species
-eppo	Arceuthobium douglasii	Non-eukaryotic, ambiguous or unresolved species
 eppo	Arracacha virus B oca strain	Source group outside eukaryotic scope
 eppo	Atropellis pinicola	Non-eukaryotic, ambiguous or unresolved species
 eppo	Badnavirus venavitis	Source group outside eukaryotic scope
@@ -552,7 +1127,6 @@ eppo	Curtobacterium flaccumfaciens pv. flaccumfaciens	Source group outside eukar
 eppo	Curtovirus betae	Source group outside eukaryotic scope
 eppo	Cydia prunivora	Non-eukaryotic, ambiguous or unresolved species
 eppo	Dasychira albodentata	Non-eukaryotic, ambiguous or unresolved species
-eppo	Dendrolimus superans	Non-eukaryotic, ambiguous or unresolved species
 eppo	Dickeya chrysanthemi	Source group outside eukaryotic scope
 eppo	Dickeya dianthicola	Source group outside eukaryotic scope
 eppo	Dokhtouroffia baeckmanni	Non-eukaryotic, ambiguous or unresolved species
@@ -601,7 +1175,6 @@ eppo	Peach rosette phytoplasma	Source group outside eukaryotic scope
 eppo	Peach yellows phytoplasma	Source group outside eukaryotic scope
 eppo	Pheletes californicus	Non-eukaryotic, ambiguous or unresolved species
 eppo	Phyllosticta solitaria	Non-eukaryotic, ambiguous or unresolved species
-eppo	Phytophthora fragariae	Non-eukaryotic, ambiguous or unresolved species
 eppo	Phytoplasma americanum	Source group outside eukaryotic scope
 eppo	Phytoplasma prunorum	Source group outside eukaryotic scope
 eppo	Pissodes cibriani	Non-eukaryotic, ambiguous or unresolved species
@@ -646,7 +1219,6 @@ eppo	Trirachys sartus	Non-eukaryotic, ambiguous or unresolved species
 eppo	Turcmenigena varentsovi	Non-eukaryotic, ambiguous or unresolved species
 eppo	Tymovirus latandigenum	Source group outside eukaryotic scope
 eppo	Tymovirus mosandigenum	Source group outside eukaryotic scope
-eppo	Verticillium dahliae hop strains	Non-eukaryotic, ambiguous or unresolved species
 eppo	Watermelon silver mottle virus	Source group outside eukaryotic scope
 eppo	Xanthomonas alfalfae subsp. citrumelonis	Source group outside eukaryotic scope
 eppo	Xanthomonas arboricola pv. corylina	Source group outside eukaryotic scope
@@ -670,6 +1242,305 @@ eppo	Xylophilus ampelinus	Source group outside eukaryotic scope
 eppo	Xylotrechus altaicus	Non-eukaryotic, ambiguous or unresolved species
 eppo	Xylotrechus namanganensis	Non-eukaryotic, ambiguous or unresolved species
 eppo	Xyphon fulgidum	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Acanthomytilus sacchari Hall	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Aceria (Eriophyes) lycopersici Massee	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Aceria sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Acrocercops spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Acromyrmex sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Aegeria erythromma Hampson	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Antestiopsis sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Antilenchus (Mecistorhinus) tripterus F.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Aperitmetus brunneus (Hust.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Axonopodis pv manihotis Xam	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Bacterial blight	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Baris helleri	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Barley yellow dwarf virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cassava antholysis	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cassava brown streak virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cassava witches broom	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Celema sorghiella Riley	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Ceracoccus catenarius (Fonseca)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cercoplastes floridensis Comstock	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Ceroplastes spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Chilo diffusilineux	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Chrytophlebia peltastica (Meyrick)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cicadulina arachidis China	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cicadulina niger Ghauri	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Clavibacter michiganensis Davis et al.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Clavibacter michiganensis subsp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Clemora (Phytalus) smithi Arrow	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Conotrachelus spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cryphalus hevea	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Cucumber mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dasynus piperis China	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Delia (Hylema) antigua	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Diatraea sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dichocrosis crocodora Meyrick	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dicladispa gestrei	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dicladispa virid	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Diconocoris hewetti (Dist)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dicyphus minimusn Uhler	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Diocalandra taitense (Guer)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dioscorea basiliform virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Dioscorea latent virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Ditylenchus dispsaci kuhn	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Drecheslera turcica (Pass.) Subram. &	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Encya strigiscutata Fairmaire	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Epilachna bifasciata (Linnaeus)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Epitrix parvula (F.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Erwinia stewartii (Smith) Dye.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Eurygaster spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Filaree red Leaf virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Frogskin disease	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Fursarium verticilliodes Sacc.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Fusarium andayazi	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Gloesporium pestis Massee	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Goplana dioscoreae Racib.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Grass natal mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Heilipius lauri	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Helopeltis clavifer (Walker)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Helopeltis westwoodi White	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Hemiberlesia tectonae Lindinger	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Hemileia dioscoreae (Racib.) Syd.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Hieroglyphus africanus Uvarov	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Indian cassava mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Jacobiasca (Empoasca) libyca	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Lachnosterna (Holotrichia) helleri	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Leaf grain spot	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Leptosphaera turcica	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Lonchotus crassus (Klug)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Lophobaris piperis M.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize chlorotic dwarf virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize lethal virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize rough dwarf virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize stripe virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize stunt virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Maize wallaby ear virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Melittomma insulare Fairm	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Mellitoma insulare Fairm	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Mylabris acculata uniformis L.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Mylabris bicinta	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Olethreutes tosoria	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Oligonychus mangiferae (R.& S.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Onion mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Onion ye	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Onion yellow dwarf virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pachydiplosis oryzae (Wood-Mason)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pantoea stewartii (Smith) Mergaert et al.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pantorhytes spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Paranaleptes reticulata (Thomson)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Parlatoria blanchardii (Targ.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Peliococcus triponosus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Penincillium sclerotigenum Yamam	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pentolonia nigronervosa Coq.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Peronosclerospora graminicola	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Peronosclerospora macrospora Sacc.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Peronosclespora philippinensis (Rac.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phaenomerus sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phaeramularia disocoreae Paul &	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phricodus sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phyllostica beaumarisii sp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Physpora zeae	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phytophthora cinnamoni Rands	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Phytophthora cryptogera	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pratylenchus oelattrei	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Protopulvinaria (Coccus) mangiferae	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pseudaulacapsis pentagona (Targ.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pseudomonas alboprecipitans Rosen	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pseudomonas andropogoni Smith	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pseudomonas syringae van Hall	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Pseudophilis testaceus Gah.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Rhabdoscelis obscurus Boisd.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Rhagoletis spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Rhinostomus niger Drury	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sclerospora indica Butler	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sclerospora sacchari Miyake	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sclerospora spontaneum L.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sclerospora spotaneum	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sericothrips occipitalisHood	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sesamia nonagroides (Leg.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Shallot latent colour virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sheath blight	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sinuessa subinerma	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sphacelia (Claviceps) sorghi McRae	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sugarcane mosaic virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Sylepta (Haritala) balteataF.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Taylorilygus (Lygus) vosseleri (Pepp.)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tetranychus schoeni	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tildenia (Phthorimaea) gudmanella	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tobacco streak virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tolyposporium ehrenbergii (Kühn) Pat.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tomato apical stunt viroid	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tomato big bud virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tomato black ring virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tomato bunchy top viroid	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tomato spotted wilt virus	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Trichispa sericea (Guerin)	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Tylenchorhynchus martini Fielding	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Urocystis dioscorea	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Uromyces spp.	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Xanthomonas axonopodis pv allii	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Xanthomonas cassavae Wiehe &	Non-eukaryotic, ambiguous or unresolved species
+gh_nppo_quarantine	Zeuzera pyrna L.	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Acalolepta australis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aceratagallia californica	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aceratagallia longula	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aleuroclava neolitseae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aleurotuba jelinekii	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Amblypelta cocophaga	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Amblypelta nitida	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Amphicerus cornutus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Anaphothrips varii	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aonidomytilus albus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Apterothrips apteris	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Archips argyrospilus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Archips fraterna	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Archips micaceana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Archips podana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aristotelia palamota	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Arorathrips spiniceps	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Artona catoxantha	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aspidiotus coryphae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Aulacaspis tegalensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Bactrocera dorsalis species complex	Not an explicit species or named hybrid
+jp_maff_quarantine	Bactrocera luzonae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Bactrocera mcgregori	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Baileyothrips arizonensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Balansia oryzae-sativae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Bathycoelia thalassina	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Botryosphaeria festucae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Brevipalpus essigi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Capitophorus horni	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Capua intractana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Cheirolasia burkei	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Chloridolum alcmene	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Chloridolum thomsoni	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Chlorocala africana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Cnephasia jactatana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Coccotrypes subcribrosus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Cohicaleyrodes caerulescens	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Cordylomera torrida	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Crenidorsum aroidephagus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Cryphalus latus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Darna diducta	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Desmothrips tenuicornis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Diabolocatantops axillaris	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Diaprepes spengleri	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Diapus minutissimus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus agnatus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus biuncus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus forficula	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus luniger	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus pallidus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dinoplatypus uncatus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Drechslera iridis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dumbletoniella eucalypti	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dysaphis cynarae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dysmicoccus grassii	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Dysmicoccus mackenziei	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Elophila responsalis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Euryphagus lundi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Furcaspis oceanica	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Gatesclarkeana domestica	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Genyocerus abdominalis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Genyocerus borneensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Genyocerus pendleburyi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Genyocerus spinatus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Gonipterus gibberus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Graphania ustistriga	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Haplothrips anceps	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Haplothrips varius	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Hemiberlesia ocellata	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Holotrichia disparilis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Hordeolicoccus nephelii	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Lepidosaphes eurychlidonis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Leucopholis irrorata	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Limothrips angulicornis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Liriomyza betae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Liriomyza nietzkei	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Malacosoma parallela	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Melanagromyza hibisci	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Melanotus communis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Mesoplatys cincta	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Monacrostichus citricola	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Myzus cymbalariae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Neides muticus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Octaspidiotus australiensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Oligonychus peruvianus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Oncastichus goughi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Opogona aurisquamosa	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Orchamoplatus mammaeferus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Organothrips indicus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Oryctes monoceros	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Oxycarenus luctuosus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Papuana uninodis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Paracoccus interceptus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Paraputo theaecola	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Parlatoria citri	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Parlatoria pittospori	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pentamerismus erythreus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Phenacoccus gregosus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Phenacoccus stelli	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Phloeosinus cupressi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Phyllophaga smithi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pinnaspis musae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Placosternus difficilis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Planococcus mali	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus excedens	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus porcellus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus pseudocurtus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus shoreanus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus subdepressus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Platypus westwoodi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Polychrosis viteana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Polygraphus occidentalis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Proeulia auraria	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Proeulia chrysopteris	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia aeruginosa	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia auripes	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia bipunctata	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia celebica	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia cretica	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia himalayana	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia milani	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Protaetia nox	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pseudaulacaspis papayae	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pseudococcus aurantiacus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pseudococcus epidendrus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pseudococcus solenedyos	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Pseudotheraptus wayi	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Rhachisphora alishanensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Riptortus dentipes	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Saissetia vivipara	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Saperda candida	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Schizotetranychus malayanus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Scolypopa australis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Semanotus ligneus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Sinicaepermenia sauropophaga	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Strategus anachoreta	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Strategus barbigerus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Strategus simson	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Strategus validus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Tenuipalpus caudatus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Tenuipalpus rhagicus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Tetrapriocera longicornis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Thrips madronii	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Thrips nelsoni	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Thrips safrus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Thrips sumatrensis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Trogoxylon spinifrons	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Trypodendron rufitarsis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Vinsonia stellifera	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus abscissus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus amplexicauda	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus costatomorphus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus fastigatus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus latecornis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyleborus macropterus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xylechinus montanus	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xylocis tortilicornis	Non-eukaryotic, ambiguous or unresolved species
+jp_maff_quarantine	Xyloperthella crinitarsis	Non-eukaryotic, ambiguous or unresolved species
 phibase_5_6	Acidovorax avenae	Non-eukaryotic, ambiguous or unresolved species
 phibase_5_6	Acidovorax citrulli	Non-eukaryotic, ambiguous or unresolved species
 phibase_5_6	Acidovorax oryzae	Non-eukaryotic, ambiguous or unresolved species

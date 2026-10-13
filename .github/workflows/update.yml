@@ -49,7 +49,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Compile Python builders
-        run: python -m py_compile scripts/update.py scripts/audit_full_history.py scripts/build_vectors.py scripts/build_pathogens.py scripts/build_agriculture.py scripts/import_agriculture_sources.py
+        run: python -m py_compile scripts/update.py scripts/audit_full_history.py scripts/build_vectors.py scripts/build_pathogens.py scripts/build_agriculture.py scripts/import_agriculture_sources.py scripts/extract_country_agriculture.py
 
       - name: Validate curated species matching
         run: python -m unittest discover -s tests -p 'test_*.py'
