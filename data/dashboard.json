@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-12T11:59:07.097482+00:00",
+  "generated_at": "2026-10-13T11:49:09.367072+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 40,
-      "species": 33,
-      "first_time_species": 17
+      "assemblies": 35,
+      "species": 29,
+      "first_time_species": 16
     },
     "year": {
-      "assemblies": 6427,
-      "species": 4002,
-      "first_time_species": 3442
+      "assemblies": 6419,
+      "species": 3995,
+      "first_time_species": 3433
     },
     "all": {
-      "assemblies": 19070,
-      "species": 10679,
-      "first_time_species": 10679
+      "assemblies": 19076,
+      "species": 10680,
+      "first_time_species": 10680
     }
   },
   "daily": [
@@ -55809,9 +55809,9 @@
     },
     {
       "date": "2026-10-10",
-      "assemblies": 0,
-      "species": 0,
-      "first_time_species": 0
+      "assemblies": 6,
+      "species": 4,
+      "first_time_species": 1
     },
     {
       "date": "2026-10-11",
@@ -55821,6 +55821,12 @@
     },
     {
       "date": "2026-10-12",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-10-13",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -55979,33 +55985,33 @@
     },
     {
       "year": "2026",
-      "assemblies": 5440,
-      "species": 3655,
-      "first_time_species": 2799
+      "assemblies": 5446,
+      "species": 3659,
+      "first_time_species": 2800
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 29
+      "count": 24
     },
     {
       "group": "Plants",
-      "count": 9
+      "count": 10
     },
     {
       "group": "Fungi",
-      "count": 2
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4190
+      "count": 4186
     },
     {
       "group": "Plants",
-      "count": 1666
+      "count": 1662
     },
     {
       "group": "Fungi",
@@ -56019,11 +56025,11 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 10919
+      "count": 10921
     },
     {
       "group": "Plants",
-      "count": 5257
+      "count": 5261
     },
     {
       "group": "Fungi",
@@ -56054,6 +56060,102 @@
   ],
   "featured_assembly": null,
   "recent_assemblies": [
+    {
+      "accession": "GCA_062029961.1",
+      "organism_name": "Fragaria x ananassa",
+      "common_name": "strawberry",
+      "tax_id": 3747,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Fxananassa_Earliglow_1",
+      "total_sequence_length": 762283123,
+      "chromosome_count": 28,
+      "genus": "Fragaria",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062029960.1",
+      "organism_name": "Fragaria x ananassa",
+      "common_name": "strawberry",
+      "tax_id": 3747,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Fxananassa_Earliglow_2",
+      "total_sequence_length": 763907504,
+      "chromosome_count": 28,
+      "genus": "Fragaria",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062029957.1",
+      "organism_name": "Lolium perenne",
+      "common_name": "monocots",
+      "tax_id": 4522,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lperenne_Lpman_hap2_1.0",
+      "total_sequence_length": 2286290473,
+      "chromosome_count": 7,
+      "genus": "Lolium",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062029956.1",
+      "organism_name": "Lolium perenne",
+      "common_name": "monocots",
+      "tax_id": 4522,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lperenne_Lpman_hap1_1.0",
+      "total_sequence_length": 2261789309,
+      "chromosome_count": 7,
+      "genus": "Lolium",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
+    {
+      "accession": "GCA_062029496.1",
+      "organism_name": "Drosophila melanogaster",
+      "common_name": "fruit fly",
+      "tax_id": 7227,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "UCI-dmel_w1118",
+      "total_sequence_length": 134217716,
+      "chromosome_count": 7,
+      "genus": "Drosophila",
+      "family": "Drosophilidae",
+      "phylum": "Arthropoda",
+      "group": "Animals",
+      "image": null
+    },
+    {
+      "accession": "GCA_062029495.1",
+      "organism_name": "Jinshaia abbreviata",
+      "common_name": "ray-finned fishes",
+      "tax_id": 278181,
+      "release_date": "2026-10-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Jab_genome.fasta",
+      "total_sequence_length": 593694009,
+      "chromosome_count": 25,
+      "genus": "Jinshaia",
+      "family": "Balitoridae",
+      "phylum": "Chordata",
+      "group": "Animals",
+      "image": null
+    },
     {
       "accession": "GCA_988425565.1",
       "organism_name": "Mergus serrator",
@@ -56628,7 +56730,12 @@
       "family": "Suidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/960px-Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Jabal%C3%AD_(Sus_scrofa),_Zoo_de_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_01.JPG",
+        "credit": "Diego Delso · CC BY-SA 3.0",
+        "matched_name": "Sus scrofa"
+      }
     },
     {
       "accession": "GCA_062020868.1",
@@ -56644,7 +56751,12 @@
       "family": "Suidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/960px-Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Jabal%C3%AD_(Sus_scrofa),_Zoo_de_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_01.JPG",
+        "credit": "Diego Delso · CC BY-SA 3.0",
+        "matched_name": "Sus scrofa"
+      }
     },
     {
       "accession": "GCA_062020866.1",
@@ -57010,7 +57122,12 @@
       "family": "Haematopodidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg/960px-Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg",
+        "credit": "Richard Bartz · CC BY-SA 3.0",
+        "matched_name": "Haematopus ostralegus"
+      }
     },
     {
       "accession": "GCA_988324715.1",
@@ -58692,7 +58809,12 @@
       "family": "Clinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Sticharium_sp.jpg/960px-Sticharium_sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sticharium_sp.jpg",
+        "credit": "Peter Crowcroft · CC BY 4.0",
+        "matched_name": "Sticharium"
+      }
     },
     {
       "accession": "GCA_988323235.1",
@@ -60613,7 +60735,12 @@
       "family": "Polynoidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg/960px-Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Harmothoe_anderssoni_(10.3897-zookeys.938.49349)_Figure_2.jpg",
+        "credit": "Neal L, Paterson GLJ, Blockley D, Scott B, Sherlock E, Huque C, Glover AG (2020) Biodiversity data and new species descriptions of polychaetes from offshore waters of the Falkland Islands, an area undergoing hydrocarbon exploration. ZooKeys 938: 1-86. https://doi.org/10.3897/zookeys.938.49349 · CC BY 4.0",
+        "matched_name": "Harmothoe"
+      }
     },
     {
       "accession": "GCA_988291715.1",
@@ -60719,7 +60846,12 @@
       "family": "Penthaleidae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Halotydeus_destructor_226289008.jpg/960px-Halotydeus_destructor_226289008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Halotydeus_destructor_226289008.jpg",
+        "credit": "Saryu Mae · CC BY 4.0",
+        "matched_name": "Halotydeus"
+      }
     },
     {
       "accession": "GCA_988291745.1",
@@ -60735,7 +60867,12 @@
       "family": "Polynoidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg/960px-Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Harmothoe_anderssoni_(10.3897-zookeys.938.49349)_Figure_2.jpg",
+        "credit": "Neal L, Paterson GLJ, Blockley D, Scott B, Sherlock E, Huque C, Glover AG (2020) Biodiversity data and new species descriptions of polychaetes from offshore waters of the Falkland Islands, an area undergoing hydrocarbon exploration. ZooKeys 938: 1-86. https://doi.org/10.3897/zookeys.938.49349 · CC BY 4.0",
+        "matched_name": "Harmothoe"
+      }
     },
     {
       "accession": "GCA_988291175.1",
@@ -65244,7 +65381,12 @@
       "family": "Halimedaceae",
       "phylum": "Chlorophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Alga_%28Halimeda_minima%29%2C_Nosy_Antanimora%2C_Madagascar%2C_2025-09-15%2C_DD_93.jpg/960px-Alga_%28Halimeda_minima%29%2C_Nosy_Antanimora%2C_Madagascar%2C_2025-09-15%2C_DD_93.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Alga_(Halimeda_minima),_Nosy_Antanimora,_Madagascar,_2025-09-15,_DD_93.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Halimeda"
+      }
     },
     {
       "accession": "GCA_988277065.1",
@@ -134370,252 +134512,16 @@
       "assembly_name": "ilPsyFili1.hap1.1",
       "total_sequence_length": 483495060,
       "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976954485.1",
-      "organism_name": "Ips sexdentatus",
-      "common_name": null,
-      "tax_id": 55985,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "icIpsSexd1.hap2.1",
-      "total_sequence_length": 264120532,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_976918355.1",
-      "organism_name": "Eriocrania sparrmannella",
-      "common_name": null,
-      "tax_id": 871382,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEriSpar1.hap1.1",
-      "total_sequence_length": 605702979,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_976918005.1",
-      "organism_name": "Helobdella europaea",
-      "common_name": null,
-      "tax_id": 270691,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "wcHelEuro1.1",
-      "total_sequence_length": 243872151,
-      "chromosome_count": 18
-    },
-    {
-      "accession": "GCA_976917515.1",
-      "organism_name": "Forcipomyia palustris",
-      "common_name": null,
-      "tax_id": 1525512,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "idForPals1.1",
-      "total_sequence_length": 167290829,
-      "chromosome_count": 3
-    },
-    {
-      "accession": "GCA_976915165.1",
-      "organism_name": "Cydia pactolana",
-      "common_name": null,
-      "tax_id": 1660612,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilCydPact1.hap1.1",
-      "total_sequence_length": 452166417,
-      "chromosome_count": 25
-    },
-    {
-      "accession": "GCA_976483725.1",
-      "organism_name": "Fissidens taxifolius",
-      "common_name": null,
-      "tax_id": 52983,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbFisTaxi1.1",
-      "total_sequence_length": 270844412,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_976234845.1",
-      "organism_name": "Heliothis viriplaca",
-      "common_name": null,
-      "tax_id": 542985,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilHelViri1.hap1.1",
-      "total_sequence_length": 424324771,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_976225245.1",
-      "organism_name": "Dichomeris juniperella",
-      "common_name": null,
-      "tax_id": 753173,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilDicJuni1.hap1.1",
-      "total_sequence_length": 318575410,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_975961605.1",
-      "organism_name": "Russula gracillima",
-      "common_name": null,
-      "tax_id": 176794,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "gfRusGrai3.1",
-      "total_sequence_length": 41361926,
-      "chromosome_count": 11
-    },
-    {
-      "accession": "GCA_975705895.1",
-      "organism_name": "Pleurozia purpurea",
-      "common_name": null,
-      "tax_id": 280637,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cjPlePurp2.1",
-      "total_sequence_length": 1095082609,
-      "chromosome_count": 9
-    },
-    {
-      "accession": "GCA_975259165.1",
-      "organism_name": "Ancylis laetana",
-      "common_name": null,
-      "tax_id": 1100911,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAncLaet1.hap1.1",
-      "total_sequence_length": 410834036,
-      "chromosome_count": 29
-    },
-    {
-      "accession": "GCA_975146675.1",
-      "organism_name": "Pexicopia malvella",
-      "common_name": null,
-      "tax_id": 753401,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPexMalv1.hap1.1",
-      "total_sequence_length": 571691840,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_975146385.1",
-      "organism_name": "Teucrium botrys",
-      "common_name": null,
-      "tax_id": 1209845,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "daTeuBotr5.1",
-      "total_sequence_length": 232474983,
-      "chromosome_count": 16
-    },
-    {
-      "accession": "GCA_974992335.1",
-      "organism_name": "Ceratodon purpureus",
-      "common_name": null,
-      "tax_id": 3225,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbCerPurp3.1",
-      "total_sequence_length": 340428360,
-      "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_974392525.1",
-      "organism_name": "Grapholita aureolana",
-      "common_name": null,
-      "tax_id": 1195450,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilGraAure1.hap1.1",
-      "total_sequence_length": 530824696,
-      "chromosome_count": 27
-    },
-    {
-      "accession": "GCA_973897035.1",
-      "organism_name": "Scapania ornithopodioides",
-      "common_name": null,
-      "tax_id": 264777,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cjScaOrni3.1",
-      "total_sequence_length": 929845968,
-      "chromosome_count": 9
-    },
-    {
-      "accession": "GCA_973838845.1",
-      "organism_name": "Syntrichia ruraliformis",
-      "common_name": null,
-      "tax_id": 1286807,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbSynRurl1.1",
-      "total_sequence_length": 340050964,
-      "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_973404375.1",
-      "organism_name": "Phaulernis dentella",
-      "common_name": null,
-      "tax_id": 753405,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPhaDent1.hap1.1",
-      "total_sequence_length": 291767912,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_973358925.1",
-      "organism_name": "Ethmia candidella",
-      "common_name": null,
-      "tax_id": 3373431,
-      "release_date": "2025-10-07",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEthCand1.hap1.1",
-      "total_sequence_length": 485308446,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_053009075.1",
-      "organism_name": "Candidozyma auris",
-      "common_name": null,
-      "tax_id": 498019,
-      "release_date": "2025-10-07",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5300907v1",
-      "total_sequence_length": 12059323,
-      "chromosome_count": 8
-    },
-    {
-      "accession": "GCA_053008035.1",
-      "organism_name": "Candidozyma auris",
-      "common_name": null,
-      "tax_id": 498019,
-      "release_date": "2025-10-07",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5300803v1",
-      "total_sequence_length": 12403009,
-      "chromosome_count": 7
-    },
-    {
-      "accession": "GCA_053008025.1",
-      "organism_name": "Candidozyma auris",
-      "common_name": null,
-      "tax_id": 498019,
-      "release_date": "2025-10-07",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "ASM5300802v1",
-      "total_sequence_length": 12491856,
-      "chromosome_count": 7
     }
   ],
   "annotations": {
     "in_progress": [
+      {
+        "species": "Pinus tabuliformis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1"
+      },
       {
         "species": "Drosophila arizonae",
         "status": "Automated processing in progress",
@@ -134657,12 +134563,6 @@
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-10-05",
         "assembly": "SU_Dnox_SAM2 (GCF_037042655.1)"
-      },
-      {
-        "species": "Pinus tabuliformis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1"
       },
       {
         "species": "Urtica dioica subsp. dioica",
@@ -145667,7 +145567,8 @@
     "Phalacrocorax aristotelis": "2026-10-03",
     "Trifolium michelianum": "2026-10-03",
     "Ara militaris": "2026-10-01",
-    "Agapornis nigrigenis": "2026-10-01"
+    "Agapornis nigrigenis": "2026-10-01",
+    "Jinshaia abbreviata": "2026-10-10"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -145989,8 +145890,18 @@
       "credit": "JMK · CC BY-SA 4.0",
       "matched_name": "Greyia sutherlandii"
     },
-    "Halimeda cylindracea": null,
-    "Halotydeus destructor": null,
+    "Halimeda cylindracea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Alga_%28Halimeda_minima%29%2C_Nosy_Antanimora%2C_Madagascar%2C_2025-09-15%2C_DD_93.jpg/960px-Alga_%28Halimeda_minima%29%2C_Nosy_Antanimora%2C_Madagascar%2C_2025-09-15%2C_DD_93.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Alga_(Halimeda_minima),_Nosy_Antanimora,_Madagascar,_2025-09-15,_DD_93.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Halimeda"
+    },
+    "Halotydeus destructor": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Halotydeus_destructor_226289008.jpg/960px-Halotydeus_destructor_226289008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Halotydeus_destructor_226289008.jpg",
+      "credit": "Saryu Mae · CC BY 4.0",
+      "matched_name": "Halotydeus"
+    },
     "Hemadas nubilipennis": null,
     "Hermenia verruculosa": null,
     "Hesperophylax consimilis": {
@@ -146662,7 +146573,12 @@
       "credit": "H. Zell · CC BY-SA 3.0",
       "matched_name": "Ditrupa arietina"
     },
-    "Harmothoe fraserthomsoni": null,
+    "Harmothoe fraserthomsoni": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg/960px-Harmothoe_anderssoni_%2810.3897-zookeys.938.49349%29_Figure_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Harmothoe_anderssoni_(10.3897-zookeys.938.49349)_Figure_2.jpg",
+      "credit": "Neal L, Paterson GLJ, Blockley D, Scott B, Sherlock E, Huque C, Glover AG (2020) Biodiversity data and new species descriptions of polychaetes from offshore waters of the Falkland Islands, an area undergoing hydrocarbon exploration. ZooKeys 938: 1-86. https://doi.org/10.3897/zookeys.938.49349 · CC BY 4.0",
+      "matched_name": "Harmothoe"
+    },
     "Hypericum perforatum": null,
     "Leodia sexiesperforata": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Leodia-sexiesperforata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -147302,7 +147218,12 @@
     "Descurainia sophia": null,
     "Grifola frondosa": null,
     "Hylocichla mustelina": null,
-    "Sus scrofa": null,
+    "Sus scrofa": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG/960px-Jabal%C3%AD_%28Sus_scrofa%29%2C_Zoo_de_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Jabal%C3%AD_(Sus_scrofa),_Zoo_de_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_01.JPG",
+      "credit": "Diego Delso · CC BY-SA 3.0",
+      "matched_name": "Sus scrofa"
+    },
     "Acaena novae-zelandiae": {
       "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Acaena_novae-zelandiae1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "page_url": "https://commons.wikimedia.org/wiki/File:Acaena_novae-zelandiae1.jpg",
@@ -147461,7 +147382,12 @@
       "matched_name": "Geum macrophyllum"
     },
     "Grus grus": null,
-    "Haematopus ostralegus": null,
+    "Haematopus ostralegus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg/960px-Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Austernfischer_Haematopus_ostralegus_Iceland_RB.jpg",
+      "credit": "Richard Bartz · CC BY-SA 3.0",
+      "matched_name": "Haematopus ostralegus"
+    },
     "Hedlundia anglica": null,
     "Heliconius congener": null,
     "Heliconius doris": null,
@@ -147577,8 +147503,18 @@
     "Silene noctiflora": null,
     "Sonchus palustris": null,
     "Sphagnum fallax": null,
-    "Sticharium dorsale": null,
-    "Suaeda japonica": null,
+    "Sticharium dorsale": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Sticharium_sp.jpg/960px-Sticharium_sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sticharium_sp.jpg",
+      "credit": "Peter Crowcroft · CC BY 4.0",
+      "matched_name": "Sticharium"
+    },
+    "Suaeda japonica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Suaeda_dendroides_%28GBIF_1697781129%29.jpg/960px-Suaeda_dendroides_%28GBIF_1697781129%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Suaeda_dendroides_(GBIF_1697781129).jpg",
+      "credit": "ELAR corporation (Moscow, Russia) · CC BY 4.0",
+      "matched_name": "Suaeda"
+    },
     "Syrphoctonus tarsatorius": null,
     "Teinoptera olivina": null,
     "Tetratrichobothrius flavicaudis": null,
@@ -147613,7 +147549,11 @@
     "Vulgichneumon saturatorius": null,
     "Watsonalla uncinula": null,
     "Zostera noltei": null,
-    "Oryza sativa": null
+    "Oryza sativa": null,
+    "Drosophila melanogaster": null,
+    "Fragaria x ananassa": null,
+    "Jinshaia abbreviata": null,
+    "Lolium perenne": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -153477,7 +153417,43 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
+    "7227": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "fruit fly",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Drosophila",
+      "family": "Drosophilidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
     "3700093": {},
+    "3747": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "strawberry",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Fragaria",
+      "family": "Rosaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "278181": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Jinshaia",
+      "family": "Balitoridae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "4522": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "monocots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lolium",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
     "3359044": {},
     "3706531": {},
     "3272347": {},
