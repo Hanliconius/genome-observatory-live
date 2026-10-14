@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-13T11:49:09.367072+00:00",
+  "generated_at": "2026-10-14T09:33:09.026141+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 35,
-      "species": 29,
-      "first_time_species": 16
+      "assemblies": 7,
+      "species": 5,
+      "first_time_species": 1
     },
     "year": {
-      "assemblies": 6419,
-      "species": 3995,
-      "first_time_species": 3433
+      "assemblies": 6387,
+      "species": 3967,
+      "first_time_species": 3406
     },
     "all": {
-      "assemblies": 19076,
+      "assemblies": 19077,
       "species": 10680,
       "first_time_species": 10680
     }
@@ -55815,8 +55815,8 @@
     },
     {
       "date": "2026-10-11",
-      "assemblies": 0,
-      "species": 0,
+      "assemblies": 1,
+      "species": 1,
       "first_time_species": 0
     },
     {
@@ -55827,6 +55827,12 @@
     },
     {
       "date": "2026-10-13",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-10-14",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -55985,33 +55991,29 @@
     },
     {
       "year": "2026",
-      "assemblies": 5446,
-      "species": 3659,
+      "assemblies": 5447,
+      "species": 3660,
       "first_time_species": 2800
     }
   ],
   "groups_week": [
     {
-      "group": "Animals",
-      "count": 24
-    },
-    {
       "group": "Plants",
-      "count": 10
+      "count": 5
     },
     {
-      "group": "Fungi",
-      "count": 1
+      "group": "Animals",
+      "count": 2
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4186
+      "count": 4167
     },
     {
       "group": "Plants",
-      "count": 1662
+      "count": 1649
     },
     {
       "group": "Fungi",
@@ -56029,7 +56031,7 @@
     },
     {
       "group": "Plants",
-      "count": 5261
+      "count": 5262
     },
     {
       "group": "Fungi",
@@ -56060,6 +56062,22 @@
   ],
   "featured_assembly": null,
   "recent_assemblies": [
+    {
+      "accession": "GCA_062031094.1",
+      "organism_name": "Helianthus annuus",
+      "common_name": "common sunflower",
+      "tax_id": 4232,
+      "release_date": "2026-10-11",
+      "assembly_level": "Chromosome",
+      "assembly_name": "HA412HO v2.0",
+      "total_sequence_length": 3191422761,
+      "chromosome_count": 17,
+      "genus": "Helianthus",
+      "family": "Asteraceae",
+      "phylum": "Streptophyta",
+      "group": "Plants",
+      "image": null
+    },
     {
       "accession": "GCA_062029961.1",
       "organism_name": "Fragaria x ananassa",
@@ -56995,7 +57013,12 @@
       "family": "Hipposideridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg/960px-Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Commerson%27s_leaf-nosed_bat_(Hipposideros_commersoni).jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Hipposideros"
+      }
     },
     {
       "accession": "GCA_062019781.1",
@@ -57355,7 +57378,12 @@
       "family": "Adoxaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flowers_of_Viburnum_lantana_01.jpg/960px-Flowers_of_Viburnum_lantana_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Flowers_of_Viburnum_lantana_01.jpg",
+        "credit": "Krzysztof Golik · CC BY-SA 4.0",
+        "matched_name": "Viburnum lantana"
+      }
     },
     {
       "accession": "GCA_988324195.1",
@@ -57530,7 +57558,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Vicia_benghalensis_1DS-II_3-8869.jpg/960px-Vicia_benghalensis_1DS-II_3-8869.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Vicia_benghalensis_1DS-II_3-8869.jpg",
+        "credit": "SAplants · CC BY-SA 4.0",
+        "matched_name": "Vicia benghalensis"
+      }
     },
     {
       "accession": "GCA_988323685.1",
@@ -57615,7 +57648,12 @@
       "family": "Hipposideridae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg/960px-Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Commerson%27s_leaf-nosed_bat_(Hipposideros_commersoni).jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0",
+        "matched_name": "Hipposideros"
+      }
     },
     {
       "accession": "GCA_985612315.2",
@@ -58416,7 +58454,12 @@
       "family": "Clinidae",
       "phylum": "Chordata",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Sticharium_sp.jpg/960px-Sticharium_sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sticharium_sp.jpg",
+        "credit": "Peter Crowcroft · CC BY 4.0",
+        "matched_name": "Sticharium"
+      }
     },
     {
       "accession": "GCA_988323535.1",
@@ -59132,7 +59175,12 @@
       "family": "Fabaceae",
       "phylum": "Streptophyta",
       "group": "Plants",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_%2825866151748%29.jpg/960px-Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_%2825866151748%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_(25866151748).jpg",
+        "credit": "Len Worthington · CC BY-SA 2.0",
+        "matched_name": "Vicia tetrasperma"
+      }
     },
     {
       "accession": "GCA_988322835.1",
@@ -61925,7 +61973,12 @@
       "family": "Ormyridae",
       "phylum": "Arthropoda",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Hemadas_nubilipennis.jpg/960px-Hemadas_nubilipennis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Hemadas_nubilipennis.jpg",
+        "credit": "Ben Armstrong · CC BY 4.0",
+        "matched_name": "Hemadas nubilipennis"
+      }
     },
     {
       "accession": "GCA_061584375.1",
@@ -62793,7 +62846,12 @@
       "family": "Polynoidae",
       "phylum": "Annelida",
       "group": "Animals",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Annelida_polychaeta_polynoidae_%2848724570088%29.jpg/960px-Annelida_polychaeta_polynoidae_%2848724570088%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Annelida_polychaeta_polynoidae_(48724570088).jpg",
+        "credit": "Auckland Museum  Collections from Auckland, Aotearoa New Zealand · CC BY 2.0",
+        "matched_name": "Polynoidae"
+      }
     },
     {
       "accession": "GCA_988282195.1",
@@ -134138,390 +134196,10 @@
       "assembly_name": "GPE008350",
       "total_sequence_length": 1098408355,
       "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_976983035.1",
-      "organism_name": "Formica gagates",
-      "common_name": null,
-      "tax_id": 485107,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "iyForGaga1.1",
-      "total_sequence_length": 289531942,
-      "chromosome_count": 25
-    },
-    {
-      "accession": "GCA_976974305.1",
-      "organism_name": "Lobesia virulenta",
-      "common_name": null,
-      "tax_id": 1639166,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilLobViru1.hap1.1",
-      "total_sequence_length": 485243603,
-      "chromosome_count": 28
-    },
-    {
-      "accession": "GCA_976954875.1",
-      "organism_name": "Axinella verrucosa",
-      "common_name": null,
-      "tax_id": 237119,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "odAxiVerr1.1",
-      "total_sequence_length": 247428952,
-      "chromosome_count": 13
-    },
-    {
-      "accession": "GCA_976954785.1",
-      "organism_name": "Adscita statices",
-      "common_name": null,
-      "tax_id": 753147,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAdsStat1.hap1.1",
-      "total_sequence_length": 686913448,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976954725.1",
-      "organism_name": "Depressaria daucella",
-      "common_name": null,
-      "tax_id": 1448897,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilDepDauc1.hap1.1",
-      "total_sequence_length": 467823665,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976954535.1",
-      "organism_name": "Ips sexdentatus",
-      "common_name": null,
-      "tax_id": 55985,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "icIpsSexd1.hap1.1",
-      "total_sequence_length": 284381969,
-      "chromosome_count": 14
-    },
-    {
-      "accession": "GCA_976954495.1",
-      "organism_name": "Wockia asperipunctella",
-      "common_name": null,
-      "tax_id": 534398,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilWocAspe1.hap1.1",
-      "total_sequence_length": 785033167,
-      "chromosome_count": 20
-    },
-    {
-      "accession": "GCA_976954455.1",
-      "organism_name": "Endromopoda detrita",
-      "common_name": null,
-      "tax_id": 1888416,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "iyEndDetr3.1",
-      "total_sequence_length": 514255586,
-      "chromosome_count": 14
-    },
-    {
-      "accession": "GCA_976954445.1",
-      "organism_name": "Aproaerema cinctella",
-      "common_name": null,
-      "tax_id": 2566302,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAprCint1.hap1.1",
-      "total_sequence_length": 453122976,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976954175.1",
-      "organism_name": "Zygaena laeta",
-      "common_name": null,
-      "tax_id": 287327,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilZygLaet5.1",
-      "total_sequence_length": 362567023,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976929165.1",
-      "organism_name": "Anacampsis temerella",
-      "common_name": null,
-      "tax_id": 2560951,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAnaTeme1.hap1.1",
-      "total_sequence_length": 430837568,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976921925.1",
-      "organism_name": "Longalatedes elymi",
-      "common_name": null,
-      "tax_id": 1870667,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilLonElym1.hap1.1",
-      "total_sequence_length": 648873406,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976921905.1",
-      "organism_name": "Longalatedes elymi",
-      "common_name": null,
-      "tax_id": 1870667,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilLonElym1.hap2.1",
-      "total_sequence_length": 647220025,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976917565.1",
-      "organism_name": "Cedestis gysseleniella",
-      "common_name": null,
-      "tax_id": 1101090,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilCedGyss1.hap1.1",
-      "total_sequence_length": 799902381,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976917495.1",
-      "organism_name": "Coleophora mayrella",
-      "common_name": null,
-      "tax_id": 691564,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilColMayr1.hap1.1",
-      "total_sequence_length": 518536048,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976914395.1",
-      "organism_name": "Eupithecia pygmaeata",
-      "common_name": null,
-      "tax_id": 1906381,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEupPygm1.hap1.1",
-      "total_sequence_length": 333232216,
-      "chromosome_count": 31
-    },
-    {
-      "accession": "GCA_976777915.1",
-      "organism_name": "Chionodes distinctella",
-      "common_name": null,
-      "tax_id": 1588098,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilChiDist1.hap1.1",
-      "total_sequence_length": 814292613,
-      "chromosome_count": 30
-    },
-    {
-      "accession": "GCA_976289765.1",
-      "organism_name": "Epinotia tetraquetrana",
-      "common_name": null,
-      "tax_id": 1391527,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEpiTetr1.hap1.1",
-      "total_sequence_length": 707249027,
-      "chromosome_count": 28
-    },
-    {
-      "accession": "GCA_976238515.1",
-      "organism_name": "Idaea pallidata",
-      "common_name": "pale wave",
-      "tax_id": 1441554,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilIdaPall1.hap1.1",
-      "total_sequence_length": 402581264,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_976231855.1",
-      "organism_name": "Plebejus idas",
-      "common_name": "Idas blue",
-      "tax_id": 155166,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPleIdas1.hap2.1",
-      "total_sequence_length": 400735333,
-      "chromosome_count": 24
-    },
-    {
-      "accession": "GCA_976227255.1",
-      "organism_name": "Epiblema sticticana",
-      "common_name": null,
-      "tax_id": 1594291,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEpiStic1.hap1.1",
-      "total_sequence_length": 710458189,
-      "chromosome_count": 25
-    },
-    {
-      "accession": "GCA_976227175.1",
-      "organism_name": "Epiblema grandaevana",
-      "common_name": null,
-      "tax_id": 1594290,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEpiGran1.hap1.1",
-      "total_sequence_length": 595911508,
-      "chromosome_count": 27
-    },
-    {
-      "accession": "GCA_976226945.1",
-      "organism_name": "Strophedra nitidana",
-      "common_name": null,
-      "tax_id": 2561782,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilStrNiti1.hap1.1",
-      "total_sequence_length": 617037493,
-      "chromosome_count": 29
-    },
-    {
-      "accession": "GCA_976225495.1",
-      "organism_name": "Aethes deutschiana",
-      "common_name": null,
-      "tax_id": 1195447,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAetDeut1.hap1.1",
-      "total_sequence_length": 446297655,
-      "chromosome_count": 29
-    },
-    {
-      "accession": "GCA_976225385.1",
-      "organism_name": "Carpatolechia proximella",
-      "common_name": null,
-      "tax_id": 687318,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilCarProx1.hap1.1",
-      "total_sequence_length": 478226497,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_975968925.1",
-      "organism_name": "Pammene luedersiana",
-      "common_name": null,
-      "tax_id": 1870150,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPamLued1.hap1.1",
-      "total_sequence_length": 666852198,
-      "chromosome_count": 6
-    },
-    {
-      "accession": "GCA_975259125.1",
-      "organism_name": "Ancylis laetana",
-      "common_name": null,
-      "tax_id": 1100911,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAncLaet1.hap2.1",
-      "total_sequence_length": 343971393,
-      "chromosome_count": 27
-    },
-    {
-      "accession": "GCA_974891035.1",
-      "organism_name": "Aplidium pallidum",
-      "common_name": null,
-      "tax_id": 2980188,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "kaAplPall1.1",
-      "total_sequence_length": 807877887,
-      "chromosome_count": 18
-    },
-    {
-      "accession": "GCA_974392615.1",
-      "organism_name": "Helobdella europaea",
-      "common_name": null,
-      "tax_id": 270691,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "wcHelEuro2.1",
-      "total_sequence_length": 247075744,
-      "chromosome_count": 18
-    },
-    {
-      "accession": "GCA_974392475.1",
-      "organism_name": "Brachycaudus klugkisti",
-      "common_name": null,
-      "tax_id": 486017,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ihBraKlug1.hap1.1",
-      "total_sequence_length": 373949113,
-      "chromosome_count": 5
-    },
-    {
-      "accession": "GCA_974392455.1",
-      "organism_name": "Glyphipterix haworthana",
-      "common_name": null,
-      "tax_id": 753184,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilGlyHawo1.hap1.1",
-      "total_sequence_length": 495922819,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_974117225.1",
-      "organism_name": "Bryoerythrophyllum ferruginascens",
-      "common_name": null,
-      "tax_id": 644227,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbBryFerr6.1",
-      "total_sequence_length": 333831811,
-      "chromosome_count": 12
-    },
-    {
-      "accession": "GCA_973862225.1",
-      "organism_name": "Syngrapha hochenwarthi",
-      "common_name": null,
-      "tax_id": 1241360,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilSynHoch1.hap1.1",
-      "total_sequence_length": 415026624,
-      "chromosome_count": 32
-    },
-    {
-      "accession": "GCA_973845075.1",
-      "organism_name": "Psychoides filicivora",
-      "common_name": null,
-      "tax_id": 1870269,
-      "release_date": "2025-10-08",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPsyFili1.hap1.1",
-      "total_sequence_length": 483495060,
-      "chromosome_count": 30
     }
   ],
   "annotations": {
     "in_progress": [
-      {
-        "species": "Pinus tabuliformis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1"
-      },
       {
         "species": "Drosophila arizonae",
         "status": "Automated processing in progress",
@@ -134529,16 +134207,16 @@
         "assembly": "UAZ_ARI_1.0"
       },
       {
-        "species": "Tetranychus urticae",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-08",
-        "assembly": "NJAU_TeUrti_SD_1.0"
+        "species": "Pinus tabuliformis",
+        "status": "In sequence databases",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1 (GCF_031772625.1)"
       },
       {
-        "species": "Drosophila navojoa",
+        "species": "Tetranychus urticae",
         "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-06",
-        "assembly": "UAZ_NAV_1.0 (GCF_054131105.1)"
+        "freeze_date": "2026-10-08",
+        "assembly": "NJAU_TeUrti_SD_1.0 (GCF_039701765.1)"
       },
       {
         "species": "Octopus bimaculoides",
@@ -134547,16 +134225,22 @@
         "assembly": "ASM4686630v1"
       },
       {
+        "species": "Oryctolagus cuniculus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-05",
+        "assembly": "ASM5122573v1"
+      },
+      {
         "species": "Orbicella faveolata",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-05",
         "assembly": "um_ofav_v1"
       },
       {
-        "species": "Oryctolagus cuniculus",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-05",
-        "assembly": "ASM5122573v1"
+        "species": "Drosophila navojoa",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-06",
+        "assembly": "UAZ_NAV_1.0 (GCF_054131105.1)"
       },
       {
         "species": "Diuraphis noxia",
@@ -134850,41 +134534,6 @@
         "species": "Poecilia mexicana",
         "release_date": "2026-09-03",
         "assembly": "ASM5116871v1 (GCF_051168715.1)"
-      },
-      {
-        "species": "Pantherophis guttatus",
-        "release_date": "2026-09-01",
-        "assembly": "ASM5975653v1 (GCF_059756535.1)"
-      },
-      {
-        "species": "Chiloscyllium plagiosum",
-        "release_date": "2026-09-01",
-        "assembly": "Cpla_swu_hap1 (GCF_037043375.1)"
-      },
-      {
-        "species": "Notechis scutatus",
-        "release_date": "2026-09-01",
-        "assembly": "rNotScu1.2 (GCF_049901735.1)"
-      },
-      {
-        "species": "Myodes glareolus",
-        "release_date": "2026-09-01",
-        "assembly": "mMyoGla1.1 (GCF_982192425.1)"
-      },
-      {
-        "species": "Pseudonaja textilis",
-        "release_date": "2026-09-01",
-        "assembly": "rPseTex1.2 (GCF_049901715.1)"
-      },
-      {
-        "species": "Ursus americanus",
-        "release_date": "2026-09-01",
-        "assembly": "mUrsAme1.1.p (GCF_024610735.1)"
-      },
-      {
-        "species": "Neolamprologus brichardi",
-        "release_date": "2026-09-01",
-        "assembly": "ASM5615211v1 (GCF_056152115.1)"
       }
     ]
   },
@@ -145902,8 +145551,18 @@
       "credit": "Saryu Mae · CC BY 4.0",
       "matched_name": "Halotydeus"
     },
-    "Hemadas nubilipennis": null,
-    "Hermenia verruculosa": null,
+    "Hemadas nubilipennis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Hemadas_nubilipennis.jpg/960px-Hemadas_nubilipennis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hemadas_nubilipennis.jpg",
+      "credit": "Ben Armstrong · CC BY 4.0",
+      "matched_name": "Hemadas nubilipennis"
+    },
+    "Hermenia verruculosa": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Annelida_polychaeta_polynoidae_%2848724570088%29.jpg/960px-Annelida_polychaeta_polynoidae_%2848724570088%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Annelida_polychaeta_polynoidae_(48724570088).jpg",
+      "credit": "Auckland Museum  Collections from Auckland, Aotearoa New Zealand · CC BY 2.0",
+      "matched_name": "Polynoidae"
+    },
     "Hesperophylax consimilis": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Hesperophylax_P1470947a.jpg/960px-Hesperophylax_P1470947a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Hesperophylax_P1470947a.jpg",
@@ -147393,7 +147052,12 @@
     "Heliconius doris": null,
     "Heliconius eleuchia": null,
     "Heliconius sara": null,
-    "Hipposideros abae": null,
+    "Hipposideros abae": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg/960px-Commerson%27s_leaf-nosed_bat_%28Hipposideros_commersoni%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Commerson%27s_leaf-nosed_bat_(Hipposideros_commersoni).jpg",
+      "credit": "Charles J. Sharp · CC BY-SA 4.0",
+      "matched_name": "Hipposideros"
+    },
     "Hipposideros caffer": null,
     "Hipposideros jonesi": null,
     "Hysterophora maculosana": null,
@@ -147542,18 +147206,44 @@
       "credit": "George Brettingham Sowerby II · Public domain",
       "matched_name": "Venus casina"
     },
-    "Viburnum lantana": null,
-    "Vicia benghalensis": null,
-    "Vicia pannonica": null,
-    "Vicia tetrasperma": null,
-    "Vulgichneumon saturatorius": null,
+    "Viburnum lantana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flowers_of_Viburnum_lantana_01.jpg/960px-Flowers_of_Viburnum_lantana_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Flowers_of_Viburnum_lantana_01.jpg",
+      "credit": "Krzysztof Golik · CC BY-SA 4.0",
+      "matched_name": "Viburnum lantana"
+    },
+    "Vicia benghalensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Vicia_benghalensis_1DS-II_3-8869.jpg/960px-Vicia_benghalensis_1DS-II_3-8869.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vicia_benghalensis_1DS-II_3-8869.jpg",
+      "credit": "SAplants · CC BY-SA 4.0",
+      "matched_name": "Vicia benghalensis"
+    },
+    "Vicia pannonica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Vicia_pannonica2_W.jpg/960px-Vicia_pannonica2_W.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vicia_pannonica2_W.jpg",
+      "credit": "Fornax · CC BY-SA 3.0",
+      "matched_name": "Vicia pannonica"
+    },
+    "Vicia tetrasperma": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_%2825866151748%29.jpg/960px-Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_%2825866151748%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dasineura_loewiana_on_Smooth_Tare_Vicia_tetrasperma_(25866151748).jpg",
+      "credit": "Len Worthington · CC BY-SA 2.0",
+      "matched_name": "Vicia tetrasperma"
+    },
+    "Vulgichneumon saturatorius": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/2020_10_24_Vulgichneumon_saturatorius_w.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:2020_10_24_Vulgichneumon_saturatorius_w.jpg",
+      "credit": "Slimguy · CC BY 4.0",
+      "matched_name": "Vulgichneumon saturatorius"
+    },
     "Watsonalla uncinula": null,
     "Zostera noltei": null,
     "Oryza sativa": null,
     "Drosophila melanogaster": null,
     "Fragaria x ananassa": null,
     "Jinshaia abbreviata": null,
-    "Lolium perenne": null
+    "Lolium perenne": null,
+    "Helianthus annuus": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -153426,7 +153116,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3700093": {},
     "3747": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "strawberry",
@@ -153451,6 +153140,16 @@
       "fallback_common_name_source": "group_name",
       "genus": "Lolium",
       "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3700093": {},
+    "4232": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "common sunflower",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Helianthus",
+      "family": "Asteraceae",
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
