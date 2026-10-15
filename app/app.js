@@ -826,6 +826,7 @@ function renderGenometrics(){
   const mito=d.mitochondrial_association||{};
   const plastid=d.plastid_association||{};
   const sex=d.sex_chromosome_labels||{};
+  const pendingNote=d.metadata_pending_assemblies?' Metadata comparisons exclude '+fmt(d.metadata_pending_assemblies)+' assemblies awaiting Datasets details.':'';
   el('genometrics-loading').hidden=true;
   el('genometrics-content').hidden=false;
   el('genometrics-updated').textContent='Updated '+new Date(d.generated_at).toLocaleString([], {dateStyle:'medium',timeStyle:'short'});
@@ -839,7 +840,7 @@ function renderGenometrics(){
     fmt1(mito.percentage||0)+'%','associated','Mitochondrial association'
   );
   el('genometrics-mito-denominator').textContent=
-    fmt(mito.associated)+' of '+fmt(mito.denominator)+' tracked genome deposits have an associated mitochondrial genome.';
+    fmt(mito.associated)+' of '+fmt(mito.denominator)+' genome deposits with available metadata have an associated mitochondrial genome.'+pendingNote;
 
   const plastidRows=[
     {group:'Plastid associated',count:Number(plastid.associated||0)},
@@ -850,7 +851,7 @@ function renderGenometrics(){
     fmt1(plastid.percentage||0)+'%','associated','Plastid association'
   );
   el('genometrics-plastid-denominator').textContent=
-    fmt(plastid.associated)+' of '+fmt(plastid.denominator)+' Viridiplantae genome deposits have an associated plastid/chloroplast genome.';
+    fmt(plastid.associated)+' of '+fmt(plastid.denominator)+' Viridiplantae genome deposits with available metadata have an associated plastid/chloroplast genome.'+pendingNote;
 
   const sexRows=(sex.categories||[]).map(x=>({group:x.group,count:Number(x.count||0)}));
   const sexTotal=Number(sex.denominator||sexRows.reduce((a,b)=>a+b.count,0));
@@ -863,7 +864,7 @@ function renderGenometrics(){
     fmt1(anyPct)+'%','any label','Sex-chromosome labelling'
   );
   el('genometrics-sex-denominator').textContent=
-    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' tracked genome deposits contain an explicit sex-chromosome-style label.';
+    fmt(sexTotal-noLabel)+' of '+fmt(sexTotal)+' genome deposits with available metadata contain an explicit sex-chromosome-style label.'+pendingNote;
 
   renderSexExpectedObserved(d.sex_chromosome_expected_vs_observed||null);
 

@@ -1152,7 +1152,11 @@ def bootstrap_sex_cache_package(accessions):
     return out
 
 
-def build_sex_cache(accessions,cache):
+def build_sex_cache(accessions,cache,pending_accessions=()):
+    # Pending discovery records have no Datasets sequence report yet. Do not
+    # cache missing reports as absence; retry when bundled metadata arrives.
+    pending=set(pending_accessions)
+    accessions=[a for a in accessions if a not in pending]
     # Sanitize the first historical cache generated during development.
     # Bare U/V labels are too ambiguous because they are commonly ordinary
     # Roman-numeral chromosomes; retain U/V only when future incremental
@@ -1215,13 +1219,16 @@ def main():
         "--as-json-lines"
     ]
     records=[]
-    mito=0; plants=0; plastid=0
+    mito=0; plants=0; plastid=0; metadata_total=0; pending_accessions=set()
     organelle_desc=Counter()
 
     from audit_full_history import iterate_ncbi
     for r in iterate_ncbi():
         acc=str(first(r,"accession","assembly.accession","assembly_info.assembly_accession",default="") or "")
         if not acc:continue
+        metadata_pending=bool(r.get('_observatory',{}).get('metadata_pending'))
+        if metadata_pending:pending_accessions.add(acc)
+        else:metadata_total+=1
         taxid=first(r,"organism.tax_id","organism.taxId","tax_id","organism.taxid")
         try: taxid=int(taxid)
         except (TypeError,ValueError): taxid=None
@@ -1235,11 +1242,11 @@ def main():
                 organelle_desc[d]+=1
 
         has_mito=any("mitochond" in d for d in descriptions)
-        if has_mito:mito+=1
+        if has_mito and not metadata_pending:mito+=1
 
         is_plant=bool(taxid and is_desc(taxid,VIRIDIPLANTAE,parent,lineage_cache))
         has_plastid=any(("chloroplast" in d or "plastid" in d) for d in descriptions)
-        if is_plant:
+        if is_plant and not metadata_pending:
             plants+=1
             if has_plastid:plastid+=1
 
@@ -1261,7 +1268,7 @@ def main():
 
     accessions=[x["accession"] for x in records]
     sex_cache=load_json(CACHE,{})
-    sex_cache=build_sex_cache(accessions,sex_cache)
+    sex_cache=build_sex_cache(accessions,sex_cache,pending_accessions)
 
     sex_counts=Counter()
     token_counts=Counter()
@@ -1270,6 +1277,7 @@ def main():
     fungal_x_only=0
     effective_tokens={}
     for a in accessions:
+        if a in pending_accessions:continue
         rec=sex_cache.get(a) or {}
         toks=set(rec.get("tokens") or [])
         taxid=taxid_by_accession.get(a)
@@ -1288,7 +1296,7 @@ def main():
         sex_counts[cat]+=1
 
     try:
-        expected_vs_observed=build_expected_vs_observed(records,effective_tokens,parent,rank,sci)
+        expected_vs_observed=build_expected_vs_observed([r for r in records if r['accession'] not in pending_accessions],effective_tokens,parent,rank,sci)
     except Exception as exc:
         print(f"WARNING: Tree of Sex comparison unavailable: {exc}")
         expected_vs_observed=None
@@ -1307,11 +1315,12 @@ def main():
     payload={
         "generated_at":datetime.now(timezone.utc).isoformat(),
         "scope":"GenBank Eukaryota assemblies at chromosome or complete level",
+        "metadata_pending_assemblies":len(pending_accessions),
         "mitochondrial_association":{
-            "denominator":total,
+            "denominator":metadata_total,
             "associated":mito,
-            "not_associated":total-mito,
-            "percentage":100*mito/total if total else 0,
+            "not_associated":metadata_total-mito,
+            "percentage":100*mito/metadata_total if metadata_total else 0,
             "definition":"Assembly report contains associated organelleInfo with a description containing 'mitochond'."
         },
         "plastid_association":{
@@ -1323,7 +1332,7 @@ def main():
             "definition":"Assembly report contains associated organelleInfo with a description containing 'chloroplast' or 'plastid'."
         },
         "sex_chromosome_labels":{
-            "denominator":total,
+            "denominator":metadata_total,
             "categories":[
                 {"group":c,"count":sex_counts.get(c,0)} for c in categories
             ],

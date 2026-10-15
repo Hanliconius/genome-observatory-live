@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0d1b22" />
   <title>Genome Observatory Live</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20261015assemblysources1" />
+  <link rel="stylesheet" href="styles.css?v=20261015assemblysources2" />
 </head>
 <body>
   <header class="site-head">
@@ -168,7 +168,7 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Organelle association</p>
             <h2 class="panel-title">Mitochondrial genome associated</h2>
-            <p class="genometrics-summary">Share of all tracked genome deposits with an associated mitochondrial genome in the NCBI assembly record.</p>
+            <p class="genometrics-summary">Share of tracked genome deposits with available metadata and an associated mitochondrial genome in the NCBI assembly record.</p>
             <div class="genometrics-donut-row">
               <div class="donut-wrap"><svg id="genometrics-mito-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Mitochondrial genome association"></svg></div>
               <div id="genometrics-mito-legend" class="donut-legend"></div>
@@ -179,7 +179,7 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Plant organelles</p>
             <h2 class="panel-title">Plastid genome associated</h2>
-            <p class="genometrics-summary">Share of tracked Viridiplantae genome deposits with an associated chloroplast/plastid genome in the NCBI assembly record.</p>
+            <p class="genometrics-summary">Share of tracked Viridiplantae genome deposits with available metadata and an associated chloroplast/plastid genome in the NCBI assembly record.</p>
             <div class="genometrics-donut-row">
               <div class="donut-wrap"><svg id="genometrics-plastid-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Plastid genome association"></svg></div>
               <div id="genometrics-plastid-legend" class="donut-legend"></div>
@@ -190,7 +190,7 @@
           <article class="panel genometrics-card">
             <p class="panel-kicker">Chromosome labelling</p>
             <h2 class="panel-title">Sex-chromosome labels</h2>
-            <p class="genometrics-summary">Explicit X/Y/Z/W-style labels or explicitly identified other sex-chromosome names in NCBI sequence reports, across all tracked genome deposits.</p>
+            <p class="genometrics-summary">Explicit X/Y/Z/W-style labels or explicitly identified other sex-chromosome names in NCBI sequence reports, across tracked genome deposits with available sequence reports.</p>
             <div class="genometrics-donut-row">
               <div class="donut-wrap"><svg id="genometrics-sex-donut" class="donut" viewBox="0 0 240 240" role="img" aria-label="Sex chromosome labels in assemblies"></svg></div>
               <div id="genometrics-sex-legend" class="donut-legend"></div>
@@ -778,6 +778,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-  <script src="app.js?v=20261015assemblysources1"></script>
+  <script src="app.js?v=20261015assemblysources2"></script>
 </body>
 </html>

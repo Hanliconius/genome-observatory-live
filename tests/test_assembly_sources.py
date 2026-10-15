@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from assembly_sources import merge_reports, assembly_report, enrich_biosamples
 from update import reconstruct_full_history
+from build_genometrics import build_sex_cache
 
 
 def report(acc='GCA_000000001.1',day='2026-10-12',source='datasets',size=100):
@@ -17,6 +18,17 @@ def report(acc='GCA_000000001.1',day='2026-10-12',source='datasets',size=100):
 
 
 class AssemblyInventory(unittest.TestCase):
+    def test_pending_sequence_metadata_is_not_cached_as_absence_and_is_retried(self):
+        cache={'GCA_000000001.1':{'tokens':['X'],'category':'Other / partial label','candidate_labels':['X']}}
+        pending='GCA_000000002.1'
+        with patch('build_genometrics.resolve_sex_batch',return_value={pending:{'tokens':['Z','W']}}) as resolve, patch('build_genometrics.write_json'):
+            build_sex_cache(list(cache)+[pending],cache,[pending])
+            resolve.assert_not_called()
+            self.assertNotIn(pending,cache)
+            build_sex_cache(list(cache)+[pending],cache)
+            resolve.assert_called_once_with([pending])
+            self.assertEqual(cache[pending]['tokens'],['Z','W'])
+
     def test_shared_biosample_enriches_each_assembly(self):
         rows=[report(),report('GCA_000000002.1')]
         for r in rows:r['assembly_info']['biosample']={'accession':'SAMN123'}
