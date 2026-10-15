@@ -31,7 +31,7 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
-      GENOME_REPORTS_JSONL: ${{ runner.temp }}/genome-observatory-current.jsonl
+      GENOME_REPORTS_JSONL: /tmp/genome-observatory-current.jsonl
     steps:
       - uses: actions/checkout@v4
 
