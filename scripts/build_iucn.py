@@ -280,22 +280,8 @@ def load_iucn_names():
 
 
 def stream_assemblies():
-    cmd = [
-        "datasets", "summary", "genome", "taxon", "Eukaryota",
-        "--assembly-source", "GenBank",
-        "--assembly-level", "chromosome,complete",
-        "--as-json-lines",
-    ]
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
-    assert proc.stdout is not None
-    for line in proc.stdout:
-        line = line.strip()
-        if line:
-            yield json.loads(line)
-    stderr = proc.stderr.read() if proc.stderr else ""
-    code = proc.wait()
-    if code:
-        raise RuntimeError(f"NCBI datasets failed with exit code {code}: {stderr[-4000:]}")
+    from audit_full_history import iterate_ncbi
+    yield from iterate_ncbi()
 
 
 def normalize_assembly(report):

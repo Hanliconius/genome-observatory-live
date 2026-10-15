@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -53,6 +54,7 @@ def normalize(obj):
 
 
 def iterate_ncbi(reports_jsonl=None):
+    reports_jsonl=reports_jsonl or os.getenv('GENOME_REPORTS_JSONL')
     if reports_jsonl:
         with Path(reports_jsonl).open(encoding='utf-8') as fh:
             for number, line in enumerate(fh, 1):

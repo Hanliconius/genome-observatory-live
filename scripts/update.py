@@ -15,16 +15,34 @@ S=requests.Session(); S.headers.update({'User-Agent':UA})
 def run(*args):
     p=subprocess.run(args,text=True,capture_output=True,check=True); return p.stdout
 
+def shared_inventory():
+    path=os.getenv('GENOME_REPORTS_JSONL')
+    if not path:return None
+    if not hasattr(shared_inventory,'records'):
+        from assembly_sources import read_jsonl
+        shared_inventory.records=list(read_jsonl(path))
+    return shared_inventory.records
+
 def get_reports(after:str):
+    records=shared_inventory()
+    if records is not None:return [r for r in records if r['assembly_info']['release_date']>=after]
     cmd=['datasets','summary','genome','taxon','Eukaryota','--assembly-source','GenBank','--assembly-level','chromosome,complete','--released-after',after,'--as-json-lines']
     out=run(*cmd); return [json.loads(x) for x in out.splitlines() if x.strip()]
 
 def count_all(taxon:str):
+    records=shared_inventory()
+    if records is not None:
+        from assembly_sources import GROUPS
+        return sum(r.get('_observatory',{}).get('group')==GROUPS[taxon] for r in records)
     cmd=['datasets','summary','genome','taxon',taxon,'--assembly-source','GenBank','--assembly-level','chromosome,complete','--as-json-lines']
     out=run(*cmd)
     return sum(1 for x in out.splitlines() if x.strip())
 
 def count_since(taxon:str, after:str):
+    records=shared_inventory()
+    if records is not None:
+        from assembly_sources import GROUPS
+        return sum(r.get('_observatory',{}).get('group')==GROUPS[taxon] and r['assembly_info']['release_date']>=after for r in records)
     cmd=['datasets','summary','genome','taxon',taxon,'--assembly-source','GenBank','--assembly-level','chromosome,complete','--released-after',after,'--as-json-lines']
     out=run(*cmd)
     return sum(1 for x in out.splitlines() if x.strip())
@@ -48,7 +66,7 @@ def normalise(r):
     name=first(r,'assembly_info.assembly_name','assemblyInfo.assemblyName','assembly_name',default='')
     length=first(r,'assembly_stats.total_sequence_length','assemblyStats.totalSequenceLength','assembly_stats.total_sequence_length_bp','total_sequence_length',default=0) or 0
     chromosomes=first(r,'assembly_stats.total_number_of_chromosomes','assemblyStats.totalNumberOfChromosomes','total_number_of_chromosomes',default=0) or 0
-    return {'accession':acc,'organism_name':org,'common_name':common,'tax_id':taxid,'release_date':release,'assembly_level':level,'assembly_name':name,'total_sequence_length':int(length or 0),'chromosome_count':int(chromosomes or 0)}
+    return {'source_provenance':r.get('_observatory',{}),'group':r.get('_observatory',{}).get('group'),'accession':acc,'organism_name':org,'common_name':common,'tax_id':taxid,'release_date':release,'assembly_level':level,'assembly_name':name,'total_sequence_length':int(length or 0),'chromosome_count':int(chromosomes or 0)}
 
 def taxonomy(taxid):
     if not taxid:return {}
@@ -171,7 +189,7 @@ def reconstruct_full_history(reports, old, cutoff):
     must come from the SAME full inventory. Nothing is written until update
     finishes and validates its output.
     """
-    by_accession={}
+    by_accession={};seen_stems=set()
     for raw in reports:
         rec=normalise(raw)
         accession=rec['accession']
@@ -181,6 +199,9 @@ def reconstruct_full_history(reports, old, cutoff):
         date.fromisoformat(day)
         if accession in by_accession:
             raise RuntimeError('Duplicate accession in full inventory: '+accession)
+        if accession_stem(accession) in seen_stems:
+            raise RuntimeError('Multiple versions of one GenBank accession in source inventory')
+        seen_stems.add(accession_stem(accession))
         by_accession[accession]=rec
 
     previous=int(old.get('summary',{}).get('all',{}).get('assemblies',0) or 0)
@@ -193,7 +214,7 @@ def reconstruct_full_history(reports, old, cutoff):
         if accession in cached:
             extra=cached[accession]
             for key in ('genus','family','phylum','group','image'):
-                if extra.get(key): rec[key]=extra[key]
+                if extra.get(key) and not rec.get(key): rec[key]=extra[key]
             if not rec.get('common_name'): rec['common_name']=extra.get('common_name')
 
     daily=defaultdict(lambda:{'assemblies':0,'species':set()})
@@ -220,13 +241,13 @@ def reconstruct_full_history(reports, old, cutoff):
 
 
 def main():
-    old=load(); today=date.today(); after=(today-timedelta(days=OVERLAP)).isoformat()
+    old=load(); today=datetime.now(timezone.utc).date(); after=(today-timedelta(days=OVERLAP)).isoformat()
     cutoff=(today-timedelta(days=DAYS_RECENT)).isoformat()
     old_recent=old.get('recent_assemblies',[])
     oldest=min((x.get('release_date','9999-99-99') for x in old_recent),default='9999-99-99')
     metadata_version=int(old.get('metadata_schema_version',0) or 0)
     need_year_backfill=(not old_recent) or oldest>(today-timedelta(days=DAYS_RECENT-30)).isoformat() or metadata_version<2
-    full_reconcile=os.getenv('FULL_RECONCILE','0')=='1'
+    full_reconcile=bool(os.getenv('GENOME_REPORTS_JSONL')) or os.getenv('FULL_RECONCILE','0')=='1'
     if full_reconcile:
         from audit_full_history import iterate_ncbi
         count, expected_daily, expected_first=reconstruct_full_history(
@@ -240,8 +261,8 @@ def main():
     incoming=[x for x in incoming if x['accession'] and x['release_date']]
     byacc={x['accession']:x for x in old_recent if x.get('release_date','')<query_after}
     # Retire old accession versions when the NCBI response provides a new one.
-    # Ordinary incremental updates cannot detect unrelated withdrawals outside
-    # the overlap window; the quarterly full reconciliation handles those.
+    # The shared inventory rebuild also removes unrelated withdrawals outside
+    # the overlap window.
     incoming_stems={accession_stem(x['accession']) for x in incoming}
     for accession in list(byacc):
         if accession_stem(accession) in incoming_stems:
@@ -256,7 +277,7 @@ def main():
             tx=tax_cache[tid]
             previous=old_byacc.get(x['accession'],{})
             x.update({k:(tx.get(k) or previous.get(k)) for k in ('genus','family','phylum')})
-            x['group']=broad_group(tx) if tx else previous.get('group','Other')
+            x['group']=x.get('group') or (broad_group(tx) if tx else previous.get('group','Other'))
             if not x.get('common_name'):
                 x['common_name']=tx.get('fallback_common_name') or previous.get('common_name')
             key=x['organism_name']
@@ -389,6 +410,8 @@ def main():
         {'group':'Other','count':total-animals-plants-fungi}
     ]
     out={'generated_at':datetime.now(timezone.utc).isoformat(),'metadata_schema_version':2,'summary':{'week':period_summary(7),'year':period_summary(365),'all':all_summary},'daily':daily_rows,'yearly':yearly,'groups_week':[{'group':k,'count':v} for k,v in groups.most_common()],'groups_year':groups_year,'groups_all':groups_all,'milestones':milestones,'featured_assembly':featured,'recent_assemblies':recent,'annotations':annotation_status(),'species_first_seen':first_seen,'image_cache':image_cache,'taxonomy_cache':tax_cache}
+    if shared_inventory() is not None:
+        out['assembly_sources']=json.loads((ROOT/'data/audits/assembly_sources.json').read_text())
     if full_reconcile:
         expected_by_date={row['date']:row for row in expected_daily}
         actual_by_date={row['date']:row for row in daily_rows}

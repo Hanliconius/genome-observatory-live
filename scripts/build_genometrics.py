@@ -1218,7 +1218,8 @@ def main():
     mito=0; plants=0; plastid=0
     organelle_desc=Counter()
 
-    for r in stream(cmd):
+    from audit_full_history import iterate_ncbi
+    for r in iterate_ncbi():
         acc=str(first(r,"accession","assembly.accession","assembly_info.assembly_accession",default="") or "")
         if not acc:continue
         taxid=first(r,"organism.tax_id","organism.taxId","tax_id","organism.taxid")

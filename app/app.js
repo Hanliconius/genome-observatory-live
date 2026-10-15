@@ -123,6 +123,7 @@ el('country-search').addEventListener('keydown',e=>{
 
 function render(){
   const s=DATA.summary[range];
+  if(el('assembly-source-status')){const n=DATA.assembly_sources?.pending_metadata_accessions?.length||0;el('assembly-source-status').textContent=n?fmt(n)+' recently discovered assemblies are counted while detailed metadata catches up. Missing details remain unassigned.':'Assembly records are deduplicated across sources and accession versions.';}
   el('updated').textContent=new Date(DATA.generated_at).toLocaleString([], {dateStyle:'medium',timeStyle:'short'});
   if(!el('overview-view').hidden) el('range-label').textContent=RANGE[range].label;
   el('top-assemblies').textContent=fmt(s.assemblies);

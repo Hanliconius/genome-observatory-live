@@ -22,16 +22,16 @@ permissions:
   pages: write
   id-token: write
 
-# Keep scheduled/manual data refreshes serialized, but do not let ordinary
-# UI pushes cancel one another while GitHub is still waiting to assign a runner.
-# Each push gets its own lane; Pages itself will publish the newest completed run.
+# Serialize all inventory builds so panels and metadata publish one snapshot.
 concurrency:
-  group: ${{ github.event_name == 'push' && format('genome-observatory-live-push-{0}', github.run_id) || 'genome-observatory-live-refresh' }}
+  group: genome-observatory-live-refresh
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      GENOME_REPORTS_JSONL: ${{ runner.temp }}/genome-observatory-current.jsonl
     steps:
       - uses: actions/checkout@v4
 
@@ -49,13 +49,15 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Compile Python builders
-        run: python -m py_compile scripts/update.py scripts/audit_full_history.py scripts/build_vectors.py scripts/build_pathogens.py scripts/build_agriculture.py scripts/import_agriculture_sources.py scripts/extract_country_agriculture.py
+        run: python -m py_compile scripts/update.py scripts/audit_full_history.py scripts/build_vectors.py scripts/build_pathogens.py scripts/build_agriculture.py scripts/import_agriculture_sources.py scripts/extract_country_agriculture.py scripts/assembly_sources.py
 
       - name: Validate curated species matching
         run: python -m unittest discover -s tests -p 'test_*.py'
 
+      - name: Prepare shared deduplicated NCBI inventory
+        run: python scripts/assembly_sources.py --output "$GENOME_REPORTS_JSONL"
+
       - name: Bootstrap lifetime history on first run
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         shell: bash
         run: |
           if grep -q '"demo_seed": true' data/dashboard.json; then
@@ -63,33 +65,24 @@ jobs:
           fi
 
       - name: Refresh recent assemblies, annotations and images
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/update.py
         env:
           RECENT_DAYS: '370'
           OVERLAP_DAYS: '30'
-          # Only the explicitly tagged one-time repair runs a full NCBI
-          # inventory reconstruction. Ordinary daily refreshes stay incremental.
-          FULL_RECONCILE: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[reconcile]') && '1' || '0' }}
 
       - name: Build phylum and order explorer
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_taxa.py
 
       - name: Build country explorer
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_countries.py
 
       - name: Build sequencing-center country explorer
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_sequencing_countries.py
 
       - name: Build genometrics
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[genometrics-refresh]')
         run: python scripts/build_genometrics.py
 
       - name: Build IUCN threatened and extinct views
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: python scripts/build_iucn.py
 
       - name: Build pathogen, parasite and vector view
@@ -99,7 +92,6 @@ jobs:
         run: python scripts/build_agriculture.py
 
       - name: Validate dashboard freshness
-        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
         run: |
           python - <<'PY'
           import json
@@ -109,14 +101,15 @@ jobs:
           generated=datetime.fromisoformat(d['generated_at'].replace('Z','+00:00'))
           age=datetime.now(timezone.utc)-generated
           assert age < timedelta(hours=12), f'Dashboard generation is stale: {age}'
+          a=json.loads(Path('data/audits/assembly_sources.json').read_text())
+          assert a['merged_assemblies']==a['unique_accession_stems']==d['summary']['all']['assemblies'], 'Shared inventory differs from headline'
           assert d.get('daily') and d.get('recent_assemblies'), 'Dashboard missing activity data'
           group_total=sum(int(row['count']) for row in d['groups_all'])
           assert group_total == d['summary']['all']['assemblies'], f'All-time donut total differs from headline: {group_total}'
           print(f'Dashboard freshness OK: generated {generated.isoformat()}, {len(d["recent_assemblies"])} recent assemblies')
           PY
 
-      - name: Verify complete historical reconciliation before publishing
-        if: github.event_name == 'push' && contains(github.event.head_commit.message, '[reconcile]')
+      - name: Verify shared inventory reconciliation before publishing
         run: |
           python scripts/audit_full_history.py --output-dir reconciliation-check
           python - <<'PY'
@@ -133,7 +126,7 @@ jobs:
               bad['species_count']=(report['ncbi_species'],report['dashboard_all_species'])
           if bad:
               raise SystemExit(f'Reconciliation validation FAILED; no data will be published: {bad}')
-          print('PASS: independent NCBI full-history audit matches rebuilt dashboard')
+          print('PASS: shared NCBI inventory matches rebuilt dashboard')
           PY
 
       - name: Commit changed data
@@ -153,14 +146,8 @@ jobs:
                 echo 'Refusing to discard validated reconciliation after main advanced. Re-run on latest main.'
                 exit 1
               fi
-              git reset --hard origin/main
-              python scripts/build_genometrics.py
-              git add data/genometrics.json cache
-              if git diff --cached --quiet; then
-                echo 'No genometrics changes remain after regeneration.'
-              else
-                git commit -m 'data: refresh NCBI genome activity'
-              fi
+              echo 'Refusing to publish a mixed snapshot after main advanced. Re-run on latest main.'
+              exit 1
             fi
             git push origin HEAD:main
           fi
