@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 826,
+  "overlapping_or_superseded_rows_removed": 673,
   "date_conflicts": [
     {
       "accession": "GCA_002917755.1",
@@ -27,12 +27,12 @@
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/15\"[GRLS]:\"2026/10/15\"[GRLS] OR \"2026/09/15\"[SRDT]:\"2026/10/15\"[SRDT] OR \"2026/09/15\"[UPDT]:\"2026/10/15\"[UPDT])",
-  "matched_uids": 845,
-  "held_uids_rechecked": 0,
-  "generated_at": "2026-10-15T23:50:41.606014+00:00",
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/16\"[GRLS]:\"2026/10/16\"[GRLS] OR \"2026/09/16\"[SRDT]:\"2026/10/16\"[SRDT] OR \"2026/09/16\"[UPDT]:\"2026/10/16\"[UPDT])",
+  "matched_uids": 692,
+  "held_uids_rechecked": 20,
+  "generated_at": "2026-10-16T00:04:39.452420+00:00",
   "datasets_rows": 19074,
-  "assembly_index_rows": 845,
+  "assembly_index_rows": 692,
   "merged_assemblies": 19093,
   "unique_accession_stems": 19093,
   "pending_metadata_accessions": [
@@ -179,5 +179,5 @@
       "level": "Chromosome"
     }
   ],
-  "previous_dashboard_assemblies": 19077
+  "previous_dashboard_assemblies": 19093
 }
