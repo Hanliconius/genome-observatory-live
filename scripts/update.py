@@ -9,8 +9,30 @@ from bs4 import BeautifulSoup
 
 ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'; DATA.mkdir(exist_ok=True)
 DASH=DATA/'dashboard.json'; DAYS_RECENT=int(os.getenv('RECENT_DAYS','370')); OVERLAP=int(os.getenv('OVERLAP_DAYS','14'))
-UA='EukaryoteGenomeWatch/0.3 (public research dashboard; contact via repository)'
+UA='GenomeObservatoryLive/0.4 (https://github.com/Hanliconius/genome-observatory-live)'
 S=requests.Session(); S.headers.update({'User-Agent':UA})
+IMAGE_CACHE=ROOT/'cache/wikimedia_images.json'
+_IMAGE_LOOKUPS={}
+_WIKI_DISABLED=set()
+
+def wiki_json(api,params):
+    """Retry transient failures; report outages instead of treating them as absence."""
+    if api in _WIKI_DISABLED:return {}
+    for attempt in range(2):
+        try:
+            response=S.get(api,params=params,timeout=15)
+            response.raise_for_status()
+            result=response.json()
+            if result.get('error'):raise ValueError(str(result['error']))
+            return result
+        except (requests.RequestException,ValueError) as exc:
+            status=getattr(getattr(exc,'response',None),'status_code',None)
+            if attempt==0 and (status is None or status==429 or status>=500):
+                time.sleep(1)
+                continue
+            print(f'Wikimedia lookup unavailable ({api}): {exc}; retaining cached images')
+            _WIKI_DISABLED.add(api)
+    return {}
 
 def run(*args):
     p=subprocess.run(args,text=True,capture_output=True,check=True); return p.stdout
@@ -102,7 +124,7 @@ def broad_group(tx):
 def commons_file_info(title):
     api='https://commons.wikimedia.org/w/api.php'
     try:
-        q=S.get(api,params={'action':'query','titles':title,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'},timeout=25).json()
+        q=wiki_json(api,{'action':'query','titles':title,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'})
         for p in ((q.get('query') or {}).get('pages') or {}).values():
             ii=(p.get('imageinfo') or [{}])[0]; thumb=ii.get('thumburl')
             if not thumb: continue
@@ -117,11 +139,13 @@ def wikidata_image(name):
     if not name: return None
     api='https://www.wikidata.org/w/api.php'
     try:
-        hits=S.get(api,params={'action':'wbsearchentities','search':name,'language':'en','type':'item','limit':5,'format':'json'},timeout=25).json().get('search',[])
+        hits=wiki_json(api,{'action':'wbsearchentities','search':name,'language':'en','type':'item','limit':5,'format':'json'}).get('search',[])
         for hit in hits:
             qid=hit.get('id')
             if not qid: continue
-            ent=(S.get(api,params={'action':'wbgetentities','ids':qid,'props':'claims','format':'json'},timeout=25).json().get('entities') or {}).get(qid) or {}
+            ent=(wiki_json(api,{'action':'wbgetentities','ids':qid,'props':'claims','format':'json'}).get('entities') or {}).get(qid) or {}
+            scientific=first(ent,'claims.P225.0.mainsnak.datavalue.value',default='')
+            if str(scientific).strip().casefold()!=name.strip().casefold():continue
             p18=(ent.get('claims') or {}).get('P18') or []
             filename=first(p18[0],'mainsnak.datavalue.value') if p18 else None
             if filename:
@@ -135,8 +159,8 @@ def wikidata_image(name):
 def commons_search(name):
     api='https://commons.wikimedia.org/w/api.php'
     try:
-        q=S.get(api,params={'action':'query','generator':'search','gsrsearch':f'intitle:"{name}" filetype:bitmap','gsrnamespace':6,'gsrlimit':6,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'},timeout=25).json()
-        for p in ((q.get('query') or {}).get('pages') or {}).values():
+        q=wiki_json(api,{'action':'query','generator':'search','gsrsearch':f'intitle:"{name}" filetype:bitmap','gsrnamespace':6,'gsrlimit':6,'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':900,'format':'json','origin':'*'})
+        for p in sorted(((q.get('query') or {}).get('pages') or {}).values(),key=lambda p:p.get('index',999)):
             ii=(p.get('imageinfo') or [{}])[0]; thumb=ii.get('thumburl')
             if not thumb: continue
             meta=ii.get('extmetadata') or {}
@@ -148,9 +172,28 @@ def commons_search(name):
 
 def commons_image(names):
     for name in [n for n in names if n]:
-        info=wikidata_image(name) or commons_search(name)
+        if name not in _IMAGE_LOOKUPS:
+            _IMAGE_LOOKUPS[name]=wikidata_image(name) or commons_search(name)
+        info=_IMAGE_LOOKUPS[name]
         if info: return info
         time.sleep(.1)
+    return None
+
+def select_featured_assembly(recent,image_cache,tax_cache):
+    for x in sorted(recent,key=lambda r:(r['release_date'],r['accession']),reverse=True)[:40]:
+        key=x['organism_name']
+        tx={k:x.get(k) for k in ('genus','family','phylum') if x.get(k)}
+        if not tx.get('genus') or not tx.get('family'):
+            tid=str(x.get('tax_id') or '')
+            if tid not in tax_cache:tax_cache[tid]=taxonomy(x.get('tax_id'))
+            tx={**tax_cache.get(tid,{}),**tx}
+            x.update({k:tx.get(k) for k in ('genus','family','phylum') if tx.get(k)})
+            if not x.get('group'):x['group']=broad_group(tx)
+        image=commons_image([key,tx.get('genus'),tx.get('family')]) or image_cache.get(key) or x.get('image')
+        if image and image.get('thumb_url'):
+            image_cache[key]=image
+            x['image']=image
+            return x
     return None
 
 def annotation_status():
@@ -268,6 +311,8 @@ def main():
         if accession_stem(accession) in incoming_stems:
             del byacc[accession]
     image_cache=old.get('image_cache',{})
+    if IMAGE_CACHE.exists():
+        image_cache.update({k:v for k,v in json.loads(IMAGE_CACHE.read_text()).items() if v and v.get('thumb_url')})
     tax_cache={k:v for k,v in (old.get('taxonomy_cache') or {}).items() if isinstance(v,dict) and v.get('_source')=='datasets_taxonomy_v1'}
     old_byacc={x.get('accession'):x for x in old_recent if x.get('accession')}
     for x in incoming:
@@ -356,29 +401,8 @@ def main():
             milestones.append({'threshold':milestone_targets[target_i],'date':row['date']})
             target_i += 1
 
-    # Choose the newest recent assembly for which Wikimedia can provide an image.
-    # Re-resolve each candidate in chronological order (species -> genus -> family)
-    # so stale cache state cannot select the card. If the newest species has no
-    # image, continue down the current genome list until one does.
-    featured=None
-    for x in recent[:40]:
-        key=x['organism_name']
-        tx={k:x.get(k) for k in ('genus','family','phylum') if x.get(k)}
-        if not tx.get('genus') or not tx.get('family'):
-            tid=str(x.get('tax_id') or '')
-            if tid not in tax_cache: tax_cache[tid]=taxonomy(x.get('tax_id'))
-            tx={**tax_cache.get(tid,{}),**tx}
-            x.update({k:tx.get(k) for k in ('genus','family','phylum') if tx.get(k)})
-            if not x.get('group'): x['group']=broad_group(tx)
-        image=commons_image([x['organism_name'],tx.get('genus'),tx.get('family')])
-        if image:
-            image_cache[key]=image
-            x['image']=image
-            featured=x
-            break
-        # A previous cached image may be stale or no longer resolve; do not let it
-        # keep this species featured when the current Wikimedia lookup failed.
-        x['image']=None
+    # Preserve a successful same-species image if an external lookup fails.
+    featured=select_featured_assembly(recent,image_cache,tax_cache)
 
     groups=Counter(x.get('group','Other') for x in recent if x['release_date']>=(today-timedelta(days=6)).isoformat())
 
@@ -428,6 +452,8 @@ def main():
         if current_recent!=source_recent:
             raise RuntimeError('Reconciliation recent accession mismatch')
         print('PASS: full-history assembly, species, daily and recent-accession invariants')
+    IMAGE_CACHE.parent.mkdir(parents=True,exist_ok=True)
+    IMAGE_CACHE.write_text(json.dumps({k:v for k,v in image_cache.items() if v and v.get('thumb_url')},indent=2)+'\n')
     write(out);print(f"wrote {DASH}: {len(recent)} recent assemblies, {len(daily_rows)} daily summaries, year_backfill={need_year_backfill}")
 if __name__=='__main__':main()
 
