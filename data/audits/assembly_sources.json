@@ -1,10 +1,15 @@
 {
-  "overlapping_or_superseded_rows_removed": 673,
+  "overlapping_or_superseded_rows_removed": 667,
   "date_conflicts": [
     {
       "accession": "GCA_002917755.1",
       "index_date": "2021-10-13",
       "datasets_date": "2018-02-06"
+    },
+    {
+      "accession": "GCA_054131065.1",
+      "index_date": "2025-12-23",
+      "datasets_date": "2025-12-22"
     },
     {
       "accession": "GCA_054131105.1",
@@ -27,16 +32,18 @@
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/16\"[GRLS]:\"2026/10/16\"[GRLS] OR \"2026/09/16\"[SRDT]:\"2026/10/16\"[SRDT] OR \"2026/09/16\"[UPDT]:\"2026/10/16\"[UPDT])",
-  "matched_uids": 692,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/17\"[GRLS]:\"2026/10/17\"[GRLS] OR \"2026/09/17\"[SRDT]:\"2026/10/17\"[SRDT] OR \"2026/09/17\"[UPDT]:\"2026/10/17\"[UPDT])",
+  "matched_uids": 746,
   "held_uids_rechecked": 20,
-  "generated_at": "2026-10-16T09:01:11.150852+00:00",
+  "generated_at": "2026-10-17T08:33:39.906894+00:00",
   "datasets_rows": 19074,
-  "assembly_index_rows": 692,
-  "merged_assemblies": 19093,
-  "unique_accession_stems": 19093,
+  "assembly_index_rows": 746,
+  "merged_assemblies": 19153,
+  "unique_accession_stems": 19153,
   "pending_metadata_accessions": [
+    "GCA_008828725.2",
     "GCA_029449355.2",
+    "GCA_049725155.2",
     "GCA_054507245.2",
     "GCA_062029888.1",
     "GCA_062029890.1",
@@ -54,15 +61,86 @@
     "GCA_062034340.1",
     "GCA_062038065.1",
     "GCA_062038069.1",
+    "GCA_062039084.1",
+    "GCA_062039086.1",
+    "GCA_062039092.1",
+    "GCA_062039093.1",
+    "GCA_062039094.1",
+    "GCA_062039095.1",
+    "GCA_062041539.1",
+    "GCA_062041551.1",
+    "GCA_062041556.1",
+    "GCA_062041557.1",
+    "GCA_062041574.1",
+    "GCA_062041578.1",
+    "GCA_062041579.1",
+    "GCA_062041587.1",
+    "GCA_062041590.1",
+    "GCA_062041591.1",
+    "GCA_062041595.1",
+    "GCA_062041607.1",
+    "GCA_062041608.1",
+    "GCA_062041609.1",
+    "GCA_062041622.1",
+    "GCA_062041623.1",
+    "GCA_062041627.1",
+    "GCA_062041637.1",
+    "GCA_062041641.1",
+    "GCA_062041642.1",
+    "GCA_062041649.1",
+    "GCA_062041652.1",
+    "GCA_062041667.1",
+    "GCA_062041671.1",
+    "GCA_062041673.1",
+    "GCA_062042531.1",
+    "GCA_062042533.1",
+    "GCA_062042534.1",
+    "GCA_062042535.1",
+    "GCA_062042536.1",
+    "GCA_062042537.1",
+    "GCA_062042538.1",
+    "GCA_062042539.1",
+    "GCA_062042540.1",
+    "GCA_062042541.1",
+    "GCA_062042542.1",
+    "GCA_062042543.1",
+    "GCA_062042544.1",
+    "GCA_062042545.1",
+    "GCA_062042546.1",
+    "GCA_062042547.1",
+    "GCA_062042548.1",
+    "GCA_062042554.1",
+    "GCA_062042555.1",
+    "GCA_062042556.1",
+    "GCA_062042557.1",
+    "GCA_062042558.1",
+    "GCA_062042559.1",
+    "GCA_062042561.1",
+    "GCA_062042563.1",
+    "GCA_062042565.1",
+    "GCA_062042614.1",
+    "GCA_062042632.1",
     "GCA_988425695.1",
     "GCA_988427225.1"
   ],
   "pending_records": [
     {
+      "accession": "GCA_008828725.2",
+      "species": "Saccharina japonica",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
       "accession": "GCA_029449355.2",
       "species": "Emydomyces testavorans",
       "release_date": "2026-10-07",
       "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_049725155.2",
+      "species": "Cannabis sativa",
+      "release_date": "2026-10-10",
+      "level": "Chromosome"
     },
     {
       "accession": "GCA_054507245.2",
@@ -165,6 +243,360 @@
       "species": "Primula sinensis",
       "release_date": "2026-10-13",
       "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039084.1",
+      "species": "Zea mays",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039086.1",
+      "species": "Atypus heterothecus",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039092.1",
+      "species": "Ichthyomyzon gagei",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039093.1",
+      "species": "Ichthyomyzon gagei",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039094.1",
+      "species": "Ichthyomyzon gagei",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062039095.1",
+      "species": "Ichthyomyzon gagei",
+      "release_date": "2026-10-13",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041539.1",
+      "species": "Primula forbesii",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041551.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041556.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041557.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041574.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041578.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041579.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041587.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041590.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041591.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041595.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041607.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041608.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041609.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041622.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041623.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041627.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041637.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041641.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041642.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041649.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041652.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041667.1",
+      "species": "Xanthopappus subacaulis",
+      "release_date": "2026-10-14",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062041671.1",
+      "species": "Actinidia eriantha",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062041673.1",
+      "species": "Bostrychus donghaiensis",
+      "release_date": "2026-10-14",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042531.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042533.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042534.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042535.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042536.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042537.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042538.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042539.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042540.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042541.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042542.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042543.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042544.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042545.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042546.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042547.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042548.1",
+      "species": "Colletotrichum lini",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042554.1",
+      "species": "Vitis vinifera",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042555.1",
+      "species": "Vitis piasezkii",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042556.1",
+      "species": "Vitis piasezkii",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042557.1",
+      "species": "Vitis vinifera",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042558.1",
+      "species": "Diutina cutanea",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042559.1",
+      "species": "Corymbia citriodora",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042561.1",
+      "species": "Pyricularia oryzae",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062042563.1",
+      "species": "Coreius guichenoti",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042565.1",
+      "species": "Sclerotinia nivalis",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042614.1",
+      "species": "Aegilops markgrafii",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062042632.1",
+      "species": "Monelliopsis pecanis",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
     },
     {
       "accession": "GCA_988425695.1",
