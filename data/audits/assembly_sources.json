@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 629,
+  "overlapping_or_superseded_rows_removed": 627,
   "date_conflicts": [
     {
       "accession": "GCA_002917755.1",
@@ -32,14 +32,14 @@
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/18\"[GRLS]:\"2026/10/18\"[GRLS] OR \"2026/09/18\"[SRDT]:\"2026/10/18\"[SRDT] OR \"2026/09/18\"[UPDT]:\"2026/10/18\"[UPDT])",
-  "matched_uids": 661,
-  "held_uids_rechecked": 81,
-  "generated_at": "2026-10-18T08:51:20.922321+00:00",
-  "datasets_rows": 19091,
-  "assembly_index_rows": 661,
-  "merged_assemblies": 19123,
-  "unique_accession_stems": 19123,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/19\"[GRLS]:\"2026/10/19\"[GRLS] OR \"2026/09/19\"[SRDT]:\"2026/10/19\"[SRDT] OR \"2026/09/19\"[UPDT]:\"2026/10/19\"[UPDT])",
+  "matched_uids": 647,
+  "held_uids_rechecked": 32,
+  "generated_at": "2026-10-19T09:52:57.851905+00:00",
+  "datasets_rows": 19105,
+  "assembly_index_rows": 647,
+  "merged_assemblies": 19125,
+  "unique_accession_stems": 19125,
   "pending_metadata_accessions": [
     "GCA_008828725.2",
     "GCA_062042531.1",
@@ -59,20 +59,8 @@
     "GCA_062042546.1",
     "GCA_062042547.1",
     "GCA_062042548.1",
-    "GCA_062042554.1",
-    "GCA_062042555.1",
-    "GCA_062042556.1",
-    "GCA_062042557.1",
-    "GCA_062042558.1",
-    "GCA_062042559.1",
-    "GCA_062042561.1",
-    "GCA_062042563.1",
-    "GCA_062042565.1",
-    "GCA_062042614.1",
-    "GCA_062042632.1",
-    "GCA_062043728.1",
-    "GCA_062043729.1",
-    "GCA_062044026.1"
+    "GCA_062045533.1",
+    "GCA_062045534.1"
   ],
   "pending_records": [
     {
@@ -184,89 +172,17 @@
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062042554.1",
-      "species": "Vitis vinifera",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042555.1",
-      "species": "Vitis piasezkii",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042556.1",
-      "species": "Vitis piasezkii",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042557.1",
-      "species": "Vitis vinifera",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042558.1",
-      "species": "Diutina cutanea",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042559.1",
-      "species": "Corymbia citriodora",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042561.1",
-      "species": "Pyricularia oryzae",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062042563.1",
-      "species": "Coreius guichenoti",
-      "release_date": "2026-10-15",
+      "accession": "GCA_062045533.1",
+      "species": "Hordeum vulgare",
+      "release_date": "2026-10-17",
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062042565.1",
-      "species": "Sclerotinia nivalis",
-      "release_date": "2026-10-15",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062042614.1",
-      "species": "Aegilops markgrafii",
-      "release_date": "2026-10-15",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062042632.1",
-      "species": "Monelliopsis pecanis",
-      "release_date": "2026-10-15",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062043728.1",
-      "species": "Brassica fruticulosa",
-      "release_date": "2026-10-14",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062043729.1",
-      "species": "Brassica fruticulosa",
-      "release_date": "2026-10-14",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062044026.1",
-      "species": "Sepiella japonica",
-      "release_date": "2026-10-16",
+      "accession": "GCA_062045534.1",
+      "species": "Triticum aestivum",
+      "release_date": "2026-10-17",
       "level": "Chromosome"
     }
   ],
-  "previous_dashboard_assemblies": 19153
+  "previous_dashboard_assemblies": 19123
 }
