@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-19T09:53:15.338818+00:00",
+  "generated_at": "2026-10-20T09:25:37.171927+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
       "assemblies": 68,
-      "species": 25,
-      "first_time_species": 14
+      "species": 21,
+      "first_time_species": 11
     },
     "year": {
-      "assemblies": 6431,
-      "species": 3966,
-      "first_time_species": 3401
+      "assemblies": 6437,
+      "species": 3968,
+      "first_time_species": 3403
     },
     "all": {
-      "assemblies": 19125,
-      "species": 10681,
-      "first_time_species": 10681
+      "assemblies": 19131,
+      "species": 10684,
+      "first_time_species": 10684
     }
   },
   "daily": [
@@ -53171,7 +53171,7 @@
       "date": "2025-07-27",
       "assemblies": 16,
       "species": 15,
-      "first_time_species": 14
+      "first_time_species": 15
     },
     {
       "date": "2025-07-28",
@@ -55299,8 +55299,8 @@
     },
     {
       "date": "2026-07-17",
-      "assemblies": 9,
-      "species": 6,
+      "assemblies": 6,
+      "species": 5,
       "first_time_species": 4
     },
     {
@@ -55857,12 +55857,18 @@
     },
     {
       "date": "2026-10-18",
-      "assemblies": 0,
-      "species": 0,
+      "assemblies": 6,
+      "species": 1,
       "first_time_species": 0
     },
     {
       "date": "2026-10-19",
+      "assemblies": 3,
+      "species": 2,
+      "first_time_species": 2
+    },
+    {
+      "date": "2026-10-20",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56017,13 +56023,13 @@
       "year": "2025",
       "assemblies": 4123,
       "species": 3116,
-      "first_time_species": 2455
+      "first_time_species": 2456
     },
     {
       "year": "2026",
-      "assemblies": 5498,
-      "species": 3672,
-      "first_time_species": 2802
+      "assemblies": 5504,
+      "species": 3674,
+      "first_time_species": 2804
     }
   ],
   "groups_week": [
@@ -56033,11 +56039,11 @@
     },
     {
       "group": "Fungi",
-      "count": 20
+      "count": 26
     },
     {
       "group": "Animals",
-      "count": 11
+      "count": 5
     },
     {
       "group": "Other",
@@ -56047,15 +56053,15 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4153
+      "count": 4154
     },
     {
       "group": "Plants",
-      "count": 1685
+      "count": 1687
     },
     {
       "group": "Fungi",
-      "count": 466
+      "count": 469
     },
     {
       "group": "Other",
@@ -56065,15 +56071,15 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 10908
+      "count": 10909
     },
     {
       "group": "Plants",
-      "count": 5303
+      "count": 5305
     },
     {
       "group": "Fungi",
-      "count": 2473
+      "count": 2476
     },
     {
       "group": "Other",
@@ -56104,29 +56110,30 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "36687871",
+      "assembly_uid": "36704791",
       "group": "Plants",
-      "sequence_release_date": "2026-10-17",
-      "assembly_publication_date": "2026-10-18"
+      "sequence_release_date": "2026-10-19",
+      "assembly_publication_date": "2026-10-19",
+      "biosample_enriched": true
     },
     "group": "Plants",
-    "accession": "GCA_062045534.1",
-    "organism_name": "Triticum aestivum",
-    "common_name": "bread wheat",
-    "tax_id": 4565,
-    "release_date": "2026-10-17",
+    "accession": "GCA_062046226.1",
+    "organism_name": "Agrostis capillaris",
+    "common_name": "colonial bentgrass",
+    "tax_id": 204232,
+    "release_date": "2026-10-19",
     "assembly_level": "Chromosome",
-    "assembly_name": "Boost_v1.0",
-    "total_sequence_length": 14575251071,
-    "chromosome_count": 21,
-    "genus": "Triticum",
+    "assembly_name": "A.capillaris_BCD_hap1v1.0",
+    "total_sequence_length": 2718031985,
+    "chromosome_count": 14,
+    "genus": "Agrostis",
     "family": "Poaceae",
     "phylum": "Streptophyta",
     "image": {
-      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Tarweaar.jpg",
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gewoon_struisgras_Agrostis_tenuis.jpg/960px-Gewoon_struisgras_Agrostis_tenuis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gewoon_struisgras_Agrostis_tenuis.jpg",
       "credit": "Rasbak · CC BY-SA 3.0",
-      "matched_name": "Triticum aestivum"
+      "matched_name": "Agrostis capillaris"
     }
   },
   "recent_assemblies": [
@@ -56136,6 +56143,295 @@
           "assembly_index"
         ],
         "metadata_pending": true,
+        "assembly_uid": "36704791",
+        "group": "Plants",
+        "sequence_release_date": "2026-10-19",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062046226.1",
+      "organism_name": "Agrostis capillaris",
+      "common_name": "colonial bentgrass",
+      "tax_id": 204232,
+      "release_date": "2026-10-19",
+      "assembly_level": "Chromosome",
+      "assembly_name": "A.capillaris_BCD_hap1v1.0",
+      "total_sequence_length": 2718031985,
+      "chromosome_count": 14,
+      "genus": "Agrostis",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gewoon_struisgras_Agrostis_tenuis.jpg/960px-Gewoon_struisgras_Agrostis_tenuis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gewoon_struisgras_Agrostis_tenuis.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
+        "matched_name": "Agrostis capillaris"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36704781",
+        "group": "Plants",
+        "sequence_release_date": "2026-10-19",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062046224.1",
+      "organism_name": "Agrostis capillaris",
+      "common_name": "colonial bentgrass",
+      "tax_id": 204232,
+      "release_date": "2026-10-19",
+      "assembly_level": "Chromosome",
+      "assembly_name": "A.capillaris_BCD_hap2v1.0",
+      "total_sequence_length": 2751049118,
+      "chromosome_count": 14,
+      "genus": "Agrostis",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gewoon_struisgras_Agrostis_tenuis.jpg/960px-Gewoon_struisgras_Agrostis_tenuis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gewoon_struisgras_Agrostis_tenuis.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
+        "matched_name": "Agrostis capillaris"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36702711",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-19",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062046045.1",
+      "organism_name": "Fejervarya cancrivora",
+      "common_name": "crab-eating frog",
+      "tax_id": 111367,
+      "release_date": "2026-10-19",
+      "assembly_level": "Chromosome",
+      "assembly_name": "GXU_FC_1.1",
+      "total_sequence_length": 2526622726,
+      "chromosome_count": 13,
+      "genus": "Fejervarya",
+      "family": "Dicroglossidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Fejer_cancri_050403_002_tdp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Fejer_cancri_050403_002_tdp.jpg",
+        "credit": "W.A. Djatmiko (Wie146) · CC BY-SA 3.0",
+        "matched_name": "Fejervarya cancrivora"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700991",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_059492065.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Chromosome",
+      "assembly_name": "EIMB_Clin_390-3_2.0",
+      "total_sequence_length": 54465130,
+      "chromosome_count": 14,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700981",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_059492035.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "EIMB_Clin_391-4_2.0",
+      "total_sequence_length": 54478514,
+      "chromosome_count": 14,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700941",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_059492005.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "EIMB_Clin_655-1_2.0",
+      "total_sequence_length": 54696727,
+      "chromosome_count": 14,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700911",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_034638275.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Chromosome",
+      "assembly_name": "EIMB_Clin_757_2.0",
+      "total_sequence_length": 53699754,
+      "chromosome_count": 12,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700961",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_034638235.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Chromosome",
+      "assembly_name": "EIMB_Clin_390-1_2.0",
+      "total_sequence_length": 54532420,
+      "chromosome_count": 14,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36700921",
+        "group": "Fungi",
+        "sequence_release_date": "2026-10-18",
+        "assembly_publication_date": "2026-10-19",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_034638215.2",
+      "organism_name": "Colletotrichum lini",
+      "common_name": "ascomycete fungi",
+      "tax_id": 500171,
+      "release_date": "2026-10-18",
+      "assembly_level": "Chromosome",
+      "assembly_name": "EIMB_Clin_771_2.0",
+      "total_sequence_length": 54363915,
+      "chromosome_count": 13,
+      "genus": "Colletotrichum",
+      "family": "Glomerellaceae",
+      "phylum": "Ascomycota",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Colletotrichum_lindemuthianum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Colletotrichum_lindemuthianum.jpg",
+        "credit": "David B. Langston, University of Georgia, Bugwood.org · CC BY 3.0",
+        "matched_name": "Colletotrichum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index",
+          "datasets"
+        ],
+        "metadata_pending": false,
         "assembly_uid": "36687871",
         "group": "Plants",
         "sequence_release_date": "2026-10-17",
@@ -56164,9 +56460,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "36687621",
         "group": "Plants",
         "sequence_release_date": "2026-10-17",
@@ -56234,8 +56531,7 @@
         "assembly_uid": "36646051",
         "group": "Animals",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Animals",
       "accession": "GCA_062042632.1",
@@ -56267,8 +56563,7 @@
         "assembly_uid": "36647051",
         "group": "Plants",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062042614.1",
@@ -56300,8 +56595,7 @@
         "assembly_uid": "36645011",
         "group": "Fungi",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Fungi",
       "accession": "GCA_062042565.1",
@@ -56333,8 +56627,7 @@
         "assembly_uid": "36645431",
         "group": "Animals",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Animals",
       "accession": "GCA_062042563.1",
@@ -56425,8 +56718,7 @@
         "assembly_uid": "36644891",
         "group": "Fungi",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Fungi",
       "accession": "GCA_062042558.1",
@@ -56453,8 +56745,7 @@
         "assembly_uid": "36644991",
         "group": "Plants",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062042557.1",
@@ -56486,8 +56777,7 @@
         "assembly_uid": "36644941",
         "group": "Plants",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062042556.1",
@@ -56519,8 +56809,7 @@
         "assembly_uid": "36644921",
         "group": "Plants",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062042555.1",
@@ -56552,8 +56841,7 @@
         "assembly_uid": "36644901",
         "group": "Plants",
         "sequence_release_date": "2026-10-15",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062042554.1",
@@ -57129,8 +57417,7 @@
         "assembly_uid": "36658441",
         "group": "Plants",
         "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062043729.1",
@@ -57162,8 +57449,7 @@
         "assembly_uid": "36658401",
         "group": "Plants",
         "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-16",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-16"
       },
       "group": "Plants",
       "accession": "GCA_062043728.1",
@@ -60007,9 +60293,9 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
-        "credit": "Bijay chaurasia · CC BY-SA 4.0",
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tarweaar.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
         "matched_name": "Triticum aestivum"
       }
     },
@@ -66904,9 +67190,9 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
-        "credit": "Bijay chaurasia · CC BY-SA 4.0",
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tarweaar.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
         "matched_name": "Triticum aestivum"
       }
     },
@@ -66936,9 +67222,9 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
-        "credit": "Bijay chaurasia · CC BY-SA 4.0",
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tarweaar.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
         "matched_name": "Triticum aestivum"
       }
     },
@@ -69193,9 +69479,9 @@
       "family": "Poaceae",
       "phylum": "Streptophyta",
       "image": {
-        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg/960px-Naked_wheat%28Triticum_aestivum%29_in_Nepal-September_27%2C_2016-IMG_8014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "page_url": "https://commons.wikimedia.org/wiki/File:Naked_wheat(Triticum_aestivum)_in_Nepal-September_27,_2016-IMG_8014.jpg",
-        "credit": "Bijay chaurasia · CC BY-SA 4.0",
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tarweaar.jpg",
+        "credit": "Rasbak · CC BY-SA 3.0",
         "matched_name": "Triticum aestivum"
       }
     },
@@ -69771,15 +70057,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "35908461",
-        "group": "Animals",
-        "sequence_release_date": "2026-09-18",
-        "assembly_publication_date": "2026-09-19"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_061402765.1",
@@ -98406,63 +98688,6 @@
     },
     {
       "source_provenance": {
-        "group": "Fungi",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Fungi",
-      "accession": "GCA_059492065.1",
-      "organism_name": "Colletotrichum lini",
-      "common_name": null,
-      "tax_id": 500171,
-      "release_date": "2026-07-17",
-      "assembly_level": "Chromosome",
-      "assembly_name": "EIMB_Clin_390-3_1.0",
-      "total_sequence_length": 54426042,
-      "chromosome_count": 13
-    },
-    {
-      "source_provenance": {
-        "group": "Fungi",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Fungi",
-      "accession": "GCA_059492035.1",
-      "organism_name": "Colletotrichum lini",
-      "common_name": null,
-      "tax_id": 500171,
-      "release_date": "2026-07-17",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "EIMB_Clin_391-4_1.0",
-      "total_sequence_length": 54489426,
-      "chromosome_count": 13
-    },
-    {
-      "source_provenance": {
-        "group": "Fungi",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Fungi",
-      "accession": "GCA_059492005.1",
-      "organism_name": "Colletotrichum lini",
-      "common_name": null,
-      "tax_id": 500171,
-      "release_date": "2026-07-17",
-      "assembly_level": "Complete Genome",
-      "assembly_name": "EIMB_Clin_655-1_1.0",
-      "total_sequence_length": 54657639,
-      "chromosome_count": 13
-    },
-    {
-      "source_provenance": {
         "group": "Animals",
         "sources": [
           "datasets"
@@ -98919,15 +99144,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "34788681",
-        "group": "Animals",
-        "sequence_release_date": "2026-07-16",
-        "assembly_publication_date": "2026-07-16"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_059453375.1",
@@ -187328,682 +187549,21 @@
       "assembly_name": "ddEriCili1.hap1.2",
       "total_sequence_length": 438596535,
       "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976986565.1",
-      "organism_name": "Gordionus wolterstorffii",
-      "common_name": null,
-      "tax_id": 190562,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "tfGorWolt8.1",
-      "total_sequence_length": 210545467,
-      "chromosome_count": 4
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976986415.1",
-      "organism_name": "Ancylis tineana",
-      "common_name": null,
-      "tax_id": 942940,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAncTine1.hap1.1",
-      "total_sequence_length": 452848408,
-      "chromosome_count": 28
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976986405.1",
-      "organism_name": "Cyclophora puppillaria",
-      "common_name": null,
-      "tax_id": 190339,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilCycPupp1.hap1.1",
-      "total_sequence_length": 295484078,
-      "chromosome_count": 31
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976986395.1",
-      "organism_name": "Xanthorhoe decoloraria",
-      "common_name": null,
-      "tax_id": 685396,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilXanDeco1.hap1.1",
-      "total_sequence_length": 322950671,
-      "chromosome_count": 30
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976985715.1",
-      "organism_name": "Evergestis pallidata",
-      "common_name": null,
-      "tax_id": 688592,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilEvePall1.hap1.1",
-      "total_sequence_length": 737751516,
-      "chromosome_count": 32
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976985145.1",
-      "organism_name": "Laelia coenosa",
-      "common_name": null,
-      "tax_id": 1706499,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilLaeCoen1.hap1.1",
-      "total_sequence_length": 1109062206,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984755.1",
-      "organism_name": "Nemophora bellela",
-      "common_name": null,
-      "tax_id": 1888591,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilNemBell1.hap1.1",
-      "total_sequence_length": 565852813,
-      "chromosome_count": 29
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984745.1",
-      "organism_name": "Scopula rubiginata",
-      "common_name": "tawny wave",
-      "tax_id": 190361,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilScoRubi1.hap1.1",
-      "total_sequence_length": 314697563,
-      "chromosome_count": 30
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984715.1",
-      "organism_name": "Odontosia sieversii",
-      "common_name": null,
-      "tax_id": 1848059,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilOdoSiev1.hap1.1",
-      "total_sequence_length": 382723390,
-      "chromosome_count": 29
-    },
-    {
-      "source_provenance": {
-        "sources": [
-          "assembly_index",
-          "datasets"
-        ],
-        "metadata_pending": false,
-        "assembly_uid": "30418541",
-        "group": "Animals",
-        "sequence_release_date": "2025-10-14",
-        "assembly_publication_date": "2025-11-25"
-      },
-      "group": "Animals",
-      "accession": "GCA_976984685.1",
-      "organism_name": "Phyllonorycter messaniella",
-      "common_name": null,
-      "tax_id": 199053,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilPhyMess1.hap1.1",
-      "total_sequence_length": 317734046,
-      "chromosome_count": 32
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984575.1",
-      "organism_name": "Argolamprotes micella",
-      "common_name": null,
-      "tax_id": 1594443,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilArgMice1.hap1.1",
-      "total_sequence_length": 425623986,
-      "chromosome_count": 30
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984565.1",
-      "organism_name": "Dicallomera fascelina",
-      "common_name": null,
-      "tax_id": 987471,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilDicFasc1.hap1.1",
-      "total_sequence_length": 857742702,
-      "chromosome_count": 16
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976917945.1",
-      "organism_name": "Prochoreutis myllerana",
-      "common_name": null,
-      "tax_id": 753411,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilProMyll1.hap1.1",
-      "total_sequence_length": 367350859,
-      "chromosome_count": 32
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_975302115.1",
-      "organism_name": "Diamesa serratosioi",
-      "common_name": null,
-      "tax_id": 2578515,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "idDiaSerr1.1.h2",
-      "total_sequence_length": 98976556,
-      "chromosome_count": 3
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_975146945.1",
-      "organism_name": "Agonopterix alstromeriana",
-      "common_name": null,
-      "tax_id": 1869417,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilAgoAlst3.hap1.1",
-      "total_sequence_length": 519969865,
-      "chromosome_count": 31
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_975146365.1",
-      "organism_name": "Aulacomnium androgynum",
-      "common_name": null,
-      "tax_id": 67247,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbAulAndr5.1",
-      "total_sequence_length": 236879187,
-      "chromosome_count": 11
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_975143445.1",
-      "organism_name": "Rhabdoweisia crispata",
-      "common_name": null,
-      "tax_id": 115595,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbRhaCris3.1",
-      "total_sequence_length": 264189154,
-      "chromosome_count": 14
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_975085575.1",
-      "organism_name": "Cratena peregrina",
-      "common_name": null,
-      "tax_id": 154642,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "xgCraPere1.2",
-      "total_sequence_length": 795812008,
-      "chromosome_count": 15
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965654925.1",
-      "organism_name": "Solanum melongena",
-      "common_name": "eggplant",
-      "tax_id": 4111,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GPE046410",
-      "total_sequence_length": 1137303959,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965654805.1",
-      "organism_name": "Solanum melongena",
-      "common_name": "eggplant",
-      "tax_id": 4111,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GPE022640",
-      "total_sequence_length": 1140494751,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965654685.1",
-      "organism_name": "Solanum melongena",
-      "common_name": "eggplant",
-      "tax_id": 4111,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GPE019650",
-      "total_sequence_length": 1139294359,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965654635.1",
-      "organism_name": "Solanum melongena",
-      "common_name": "eggplant",
-      "tax_id": 4111,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "GPE032610",
-      "total_sequence_length": 1135692562,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965214765.2",
-      "organism_name": "Juncus squarrosus",
-      "common_name": null,
-      "tax_id": 223678,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "lpJunSqua1.hap2.2",
-      "total_sequence_length": 318489289,
-      "chromosome_count": 20
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965214595.2",
-      "organism_name": "Juncus squarrosus",
-      "common_name": null,
-      "tax_id": 223678,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "lpJunSqua1.hap1.2",
-      "total_sequence_length": 318492659,
-      "chromosome_count": 20
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_965177985.2",
-      "organism_name": "Eunicella cavolini",
-      "common_name": null,
-      "tax_id": 317547,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "jaEunCavo1.2",
-      "total_sequence_length": 489950242,
-      "chromosome_count": 17
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965151555.2",
-      "organism_name": "Scirpus sylvaticus",
-      "common_name": null,
-      "tax_id": 434052,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "lpSciSylv1.hap1.2",
-      "total_sequence_length": 320827370,
-      "chromosome_count": 31
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_965113285.2",
-      "organism_name": "Hypnum cupressiforme",
-      "common_name": null,
-      "tax_id": 53011,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbHypCupr5.2",
-      "total_sequence_length": 374411614,
-      "chromosome_count": 10
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_964662295.2",
-      "organism_name": "Loboptera decipiens",
-      "common_name": null,
-      "tax_id": 242713,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ibLobDeci3.2",
-      "total_sequence_length": 2216271299,
-      "chromosome_count": 17
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_964656825.2",
-      "organism_name": "Bitoma crenata",
-      "common_name": null,
-      "tax_id": 346746,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "icBitCren1.2",
-      "total_sequence_length": 154473035,
-      "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_964467675.2",
-      "organism_name": "Rhynchostegium megapolitanum",
-      "common_name": null,
-      "tax_id": 568243,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbRhyMega1.2",
-      "total_sequence_length": 315331462,
-      "chromosome_count": 11
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_964340665.2",
-      "organism_name": "Rhynchostegiella tenella",
-      "common_name": null,
-      "tax_id": 170457,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbRhyTene4.2",
-      "total_sequence_length": 317076584,
-      "chromosome_count": 10
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_964340565.2",
-      "organism_name": "Cratoneuron filicinum",
-      "common_name": null,
-      "tax_id": 99398,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "cbCraFili2.2",
-      "total_sequence_length": 272861983,
-      "chromosome_count": 10
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_964305475.2",
-      "organism_name": "Verbascum nigrum",
-      "common_name": null,
-      "tax_id": 90364,
-      "release_date": "2025-10-14",
-      "assembly_level": "Chromosome",
-      "assembly_name": "daVerNigr1.hap1.2",
-      "total_sequence_length": 335794948,
-      "chromosome_count": 15
     }
   ],
   "annotations": {
     "in_progress": [
       {
-        "species": "Octopus bimaculoides",
+        "species": "Tetranychus urticae",
         "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-07",
-        "assembly": "ASM4686630v1 (GCF_046866305.1)"
+        "freeze_date": "2026-10-08",
+        "assembly": "NJAU_TeUrti_SD_1.0 (GCF_039701765.1)"
       },
       {
-        "species": "Drosophila arizonae",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-09",
-        "assembly": "UAZ_ARI_1.0 (GCF_054131065.1)"
-      },
-      {
-        "species": "Oryctolagus cuniculus",
+        "species": "Copidosoma floridanum",
         "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-05",
-        "assembly": "ASM5122573v1 (GCF_051225735.1)"
-      },
-      {
-        "species": "Pinus tabuliformis",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-09-23",
-        "assembly": "CPIR1 (GCF_031772625.1)"
-      },
-      {
-        "species": "Sceloporus occidentalis",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-14",
-        "assembly": "rSceOcc1.0.p (GCF_023333645.1)"
-      },
-      {
-        "species": "Urtica dioica subsp. dioica",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-09-28",
-        "assembly": "U.dioica_male_clone48M_v1_H2"
-      },
-      {
-        "species": "Orbicella faveolata",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-05",
-        "assembly": "um_ofav_v1 (GCF_042242905.1)"
+        "freeze_date": "2026-10-15",
+        "assembly": "Cflo_Japanese_pri (GCF_036245765.1)"
       },
       {
         "species": "Amblyomma mixtum",
@@ -188012,10 +187572,40 @@
         "assembly": "ASM5582458v1 (GCF_055824585.1)"
       },
       {
-        "species": "Copidosoma floridanum",
+        "species": "Oryctolagus cuniculus",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-05",
+        "assembly": "ASM5122573v1 (GCF_051225735.1)"
+      },
+      {
+        "species": "Orbicella faveolata",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-05",
+        "assembly": "um_ofav_v1 (GCF_042242905.1)"
+      },
+      {
+        "species": "Sceloporus occidentalis",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-14",
+        "assembly": "rSceOcc1.0.p (GCF_023333645.1)"
+      },
+      {
+        "species": "Octopus bimaculoides",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-07",
+        "assembly": "ASM4686630v1 (GCF_046866305.1)"
+      },
+      {
+        "species": "Pinus tabuliformis",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-09-23",
+        "assembly": "CPIR1 (GCF_031772625.1)"
+      },
+      {
+        "species": "Urtica dioica subsp. dioica",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-15",
-        "assembly": "Cflo_Japanese_pri"
+        "freeze_date": "2026-09-28",
+        "assembly": "U.dioica_male_clone48M_v1_H2"
       },
       {
         "species": "Colias eurytheme",
@@ -188036,12 +187626,6 @@
         "assembly": "ASM2855479v2"
       },
       {
-        "species": "Tetranychus urticae",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-08",
-        "assembly": "NJAU_TeUrti_SD_1.0 (GCF_039701765.1)"
-      },
-      {
         "species": "Hesperophylax consimilis",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-02",
@@ -188049,6 +187633,11 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Drosophila arizonae",
+        "release_date": "2026-10-14",
+        "assembly": "UAZ_ARI_1.0 (GCF_054131065.1)"
+      },
       {
         "species": "Drosophila navojoa",
         "release_date": "2026-10-09",
@@ -188428,7 +188017,7 @@
     "Zymoseptoria tritici IPO323": "2011-07-06",
     "Macaca fascicularis": "2011-07-23",
     "Komagataella phaffii CBS 7435": "2011-04-06",
-    "Ciona intestinalis": "2013-09-17",
+    "Ciona robusta": "2013-09-17",
     "Linum usitatissimum": "2018-03-27",
     "Thermothelomyces thermophilus ATCC 42464": "2011-09-16",
     "Thermothielavioides terrestris NRRL 8126": "2011-09-16",
@@ -188910,7 +188499,7 @@
     "Heterodera glycines": "2021-07-20",
     "Actinidia eriantha": "2019-02-08",
     "Tachypleus tridentatus": "2019-04-03",
-    "Metschnikowia aff. pulcherrima": "2019-02-20",
+    "Metschnikowia pulcherrima": "2019-02-20",
     "Talaromyces funiculosus": "2019-02-26",
     "Cercospora sojina": "2019-02-26",
     "Spatholobus suberectus": "2019-03-07",
@@ -189025,6 +188614,7 @@
     "Mikania micrantha": "2019-10-28",
     "Bos grunniens x Bos taurus": "2019-11-04",
     "Clavispora lusitaniae": "2019-11-04",
+    "Ciona intestinalis": "2025-07-27",
     "Drosophila albomicans": "2022-08-16",
     "Cryptococcus hyracis": "2019-11-14",
     "Corvus moneduloides": "2019-11-14",
@@ -190829,6 +190419,7 @@
     "Mycalesis mineus": "2023-12-27",
     "Brassica oleracea var. gongylodes": "2023-12-28",
     "Brassica oleracea var. ramosa": "2023-12-28",
+    "Colletotrichum lini": "2024-10-28",
     "Phortica okadai": "2023-12-27",
     "Ciconia boyciana": "2023-12-27",
     "Brassica oleracea var. gemmifera": "2023-12-28",
@@ -191530,7 +191121,6 @@
     "Kappaphycus striatus": "2024-10-25",
     "Hexagrammos otakii": "2024-10-25",
     "Kibakoganea sinica": "2024-10-25",
-    "Colletotrichum lini": "2024-10-28",
     "Salmo trutta": "2021-04-24",
     "Wolfiporia hoelen": "2024-10-25",
     "Eriobotrya japonica": "2024-10-25",
@@ -193534,6 +193124,8 @@
     "Monelliopsis pecanis": "2026-10-15",
     "Brassica fruticulosa": "2026-10-14",
     "Sepiella japonica": "2026-10-16",
+    "Fejervarya cancrivora": "2026-10-19",
+    "Agrostis capillaris": "2026-10-19",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -201872,6 +201464,18 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Sepiella_japonica_Yawatahama.jpg",
       "credit": "Kingfiser · CC BY-SA 4.0",
       "matched_name": "Sepiella japonica"
+    },
+    "Fejervarya cancrivora": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Fejer_cancri_050403_002_tdp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Fejer_cancri_050403_002_tdp.jpg",
+      "credit": "W.A. Djatmiko (Wie146) · CC BY-SA 3.0",
+      "matched_name": "Fejervarya cancrivora"
+    },
+    "Agrostis capillaris": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gewoon_struisgras_Agrostis_tenuis.jpg/960px-Gewoon_struisgras_Agrostis_tenuis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gewoon_struisgras_Agrostis_tenuis.jpg",
+      "credit": "Rasbak · CC BY-SA 3.0",
+      "matched_name": "Agrostis capillaris"
     }
   },
   "taxonomy_cache": {
@@ -208070,10 +207674,28 @@
     "3680444": {},
     "3700093": {},
     "3405230": {},
+    "111367": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "crab-eating frog",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Fejervarya",
+      "family": "Dicroglossidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "204232": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "colonial bentgrass",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Agrostis",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
     "3451521": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 627,
+    "overlapping_or_superseded_rows_removed": 633,
     "date_conflicts": [
       {
         "accession": "GCA_002917755.1",
@@ -208106,16 +207728,22 @@
         "datasets_date": "2013-03-18"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/19\"[GRLS]:\"2026/10/19\"[GRLS] OR \"2026/09/19\"[SRDT]:\"2026/10/19\"[SRDT] OR \"2026/09/19\"[UPDT]:\"2026/10/19\"[UPDT])",
-    "matched_uids": 647,
-    "held_uids_rechecked": 32,
-    "generated_at": "2026-10-19T09:52:57.851905+00:00",
-    "datasets_rows": 19105,
-    "assembly_index_rows": 647,
-    "merged_assemblies": 19125,
-    "unique_accession_stems": 19125,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/20\"[GRLS]:\"2026/10/20\"[GRLS] OR \"2026/09/20\"[SRDT]:\"2026/10/20\"[SRDT] OR \"2026/09/20\"[UPDT]:\"2026/10/20\"[UPDT])",
+    "matched_uids": 657,
+    "held_uids_rechecked": 20,
+    "generated_at": "2026-10-20T09:25:19.882063+00:00",
+    "datasets_rows": 19107,
+    "assembly_index_rows": 657,
+    "merged_assemblies": 19131,
+    "unique_accession_stems": 19131,
     "pending_metadata_accessions": [
       "GCA_008828725.2",
+      "GCA_034638215.2",
+      "GCA_034638235.2",
+      "GCA_034638275.2",
+      "GCA_059492005.2",
+      "GCA_059492035.2",
+      "GCA_059492065.2",
       "GCA_062042531.1",
       "GCA_062042533.1",
       "GCA_062042534.1",
@@ -208133,14 +207761,51 @@
       "GCA_062042546.1",
       "GCA_062042547.1",
       "GCA_062042548.1",
-      "GCA_062045533.1",
-      "GCA_062045534.1"
+      "GCA_062046045.1",
+      "GCA_062046224.1",
+      "GCA_062046226.1"
     ],
     "pending_records": [
       {
         "accession": "GCA_008828725.2",
         "species": "Saccharina japonica",
         "release_date": "2026-10-14",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_034638215.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_034638235.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_034638275.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_059492005.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
+        "level": "Complete Genome"
+      },
+      {
+        "accession": "GCA_059492035.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
+        "level": "Complete Genome"
+      },
+      {
+        "accession": "GCA_059492065.2",
+        "species": "Colletotrichum lini",
+        "release_date": "2026-10-18",
         "level": "Chromosome"
       },
       {
@@ -208246,18 +207911,24 @@
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062045533.1",
-        "species": "Hordeum vulgare",
-        "release_date": "2026-10-17",
+        "accession": "GCA_062046045.1",
+        "species": "Fejervarya cancrivora",
+        "release_date": "2026-10-19",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062045534.1",
-        "species": "Triticum aestivum",
-        "release_date": "2026-10-17",
+        "accession": "GCA_062046224.1",
+        "species": "Agrostis capillaris",
+        "release_date": "2026-10-19",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062046226.1",
+        "species": "Agrostis capillaris",
+        "release_date": "2026-10-19",
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19123
+    "previous_dashboard_assemblies": 19125
   }
 }

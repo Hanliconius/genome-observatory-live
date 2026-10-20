@@ -2632,5 +2632,17 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Sepiella_japonica_Yawatahama.jpg",
     "credit": "Kingfiser \u00b7 CC BY-SA 4.0",
     "matched_name": "Sepiella japonica"
+  },
+  "Fejervarya cancrivora": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Fejer_cancri_050403_002_tdp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Fejer_cancri_050403_002_tdp.jpg",
+    "credit": "W.A. Djatmiko (Wie146) \u00b7 CC BY-SA 3.0",
+    "matched_name": "Fejervarya cancrivora"
+  },
+  "Agrostis capillaris": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gewoon_struisgras_Agrostis_tenuis.jpg/960px-Gewoon_struisgras_Agrostis_tenuis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Gewoon_struisgras_Agrostis_tenuis.jpg",
+    "credit": "Rasbak \u00b7 CC BY-SA 3.0",
+    "matched_name": "Agrostis capillaris"
   }
 }
