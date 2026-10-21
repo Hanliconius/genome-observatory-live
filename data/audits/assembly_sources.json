@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 633,
+  "overlapping_or_superseded_rows_removed": 659,
   "date_conflicts": [
     {
       "accession": "GCA_002917755.1",
@@ -32,22 +32,16 @@
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/20\"[GRLS]:\"2026/10/20\"[GRLS] OR \"2026/09/20\"[SRDT]:\"2026/10/20\"[SRDT] OR \"2026/09/20\"[UPDT]:\"2026/10/20\"[UPDT])",
-  "matched_uids": 657,
-  "held_uids_rechecked": 20,
-  "generated_at": "2026-10-20T09:25:19.882063+00:00",
-  "datasets_rows": 19107,
-  "assembly_index_rows": 657,
-  "merged_assemblies": 19131,
-  "unique_accession_stems": 19131,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/21\"[GRLS]:\"2026/10/21\"[GRLS] OR \"2026/09/21\"[SRDT]:\"2026/10/21\"[SRDT] OR \"2026/09/21\"[UPDT]:\"2026/10/21\"[UPDT])",
+  "matched_uids": 681,
+  "held_uids_rechecked": 27,
+  "generated_at": "2026-10-21T09:22:02.647286+00:00",
+  "datasets_rows": 19110,
+  "assembly_index_rows": 681,
+  "merged_assemblies": 19132,
+  "unique_accession_stems": 19132,
   "pending_metadata_accessions": [
     "GCA_008828725.2",
-    "GCA_034638215.2",
-    "GCA_034638235.2",
-    "GCA_034638275.2",
-    "GCA_059492005.2",
-    "GCA_059492035.2",
-    "GCA_059492065.2",
     "GCA_062042531.1",
     "GCA_062042533.1",
     "GCA_062042534.1",
@@ -67,49 +61,14 @@
     "GCA_062042548.1",
     "GCA_062046045.1",
     "GCA_062046224.1",
-    "GCA_062046226.1"
+    "GCA_062046226.1",
+    "GCA_062046548.1"
   ],
   "pending_records": [
     {
       "accession": "GCA_008828725.2",
       "species": "Saccharina japonica",
       "release_date": "2026-10-14",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_034638215.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_034638235.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_034638275.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_059492005.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_059492035.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_059492065.2",
-      "species": "Colletotrichum lini",
-      "release_date": "2026-10-18",
       "level": "Chromosome"
     },
     {
@@ -231,7 +190,13 @@
       "species": "Agrostis capillaris",
       "release_date": "2026-10-19",
       "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062046548.1",
+      "species": "Abelmoschus esculentus",
+      "release_date": "2026-10-19",
+      "level": "Complete Genome"
     }
   ],
-  "previous_dashboard_assemblies": 19125
+  "previous_dashboard_assemblies": 19131
 }
