@@ -2878,5 +2878,29 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Ebro_chub_imported_from_iNaturalist_photo_8970277_on_9_August_2023.jpg",
     "credit": "(c) Julien Renoult, some rights reserved (CC BY) \u00b7 CC BY 4.0",
     "matched_name": "Squalius laietanus"
+  },
+  "Parvimolge townsendi": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/P.townsendi.png/960px-P.townsendi.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:P.townsendi.png",
+    "credit": "Sandoval-Comte A, Pineda E, Aguilar-L\u00f3pez JL \u00b7 CC BY 4.0",
+    "matched_name": "Parvimolge townsendi"
+  },
+  "Equus asinus x Equus caballus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/960px-Plains_Zebra_Equus_quagga.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Plains_Zebra_Equus_quagga.jpg",
+    "credit": "Muhammad Mahdi Karim \u00b7 GFDL 1.2",
+    "matched_name": "Equus"
+  },
+  "Homatula wuliangensis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Homatula_guanheensis_%2810.3897-BDJ.9.e65130%29_Figure_1.png/960px-Homatula_guanheensis_%2810.3897-BDJ.9.e65130%29_Figure_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Homatula_guanheensis_(10.3897-BDJ.9.e65130)_Figure_1.png",
+    "credit": "Zhou C, Ma W, Wang X, Tang Y, Meng X, Nie G (2021) Homatula guanheensis sp. nov. (Teleostei: Nemacheilidae), a new species of loach from Henan Province, China. Biodiversity Data Journal 9: e65130. \u00b7 CC BY 4.0",
+    "matched_name": "Homatula"
+  },
+  "Daphnia magna": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Daphnia_magna-female_adult.jpg/960px-Daphnia_magna-female_adult.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Daphnia_magna-female_adult.jpg",
+    "credit": "Hajime Watanabe \u00b7 CC BY 2.5",
+    "matched_name": "Daphnia magna"
   }
 }
