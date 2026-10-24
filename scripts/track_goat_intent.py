@@ -61,13 +61,16 @@ def main():
     current = fetch_current()
     old = json.loads(OUT.read_text()) if OUT.exists() else None
     saved_timeline = json.loads(TIMELINE_OUT.read_text()) if TIMELINE_OUT.exists() else {}
+    saved_snapshots = saved_timeline.get("snapshots", old.get("snapshots", []) if old else [])
+    previous_capture_date = saved_snapshots[-1].get("date") if saved_snapshots else None
     if old is None:
         # First run establishes a baseline; it must not mislabel existing records as new.
         records = {}
         for k, v in current.items():
             event_dates = {f"{field}::{project}": today
                            for field, values in v["declarations"].items() for project in values}
-            records[k] = {**v, "first_observed": today, "event_first_seen": event_dates}
+            records[k] = {**v, "first_observed": today,
+                          "intent_interval_start": None, "event_first_seen": event_dates}
         history = {"schema_version": 1, "monitoring_started": today,
                    "updated_at": datetime.now(timezone.utc).isoformat(),
                    "baseline_only": True, "snapshots": [{"date": today,
@@ -82,7 +85,8 @@ def main():
         for taxid, now in current.items():
             prev = records.get(taxid)
             if prev is None:
-                records[taxid] = {**now, "first_observed": today}
+                records[taxid] = {**now, "first_observed": today,
+                                  "intent_interval_start": previous_capture_date}
                 records[taxid]["event_first_seen"] = {f"{field}::{project}": today
                     for field, values in now["declarations"].items() for project in values}
                 new_taxa += 1
@@ -104,6 +108,13 @@ def main():
                     event_dates.setdefault(f"{field}::{project}", baseline)
             prev["name"] = now["name"] or prev.get("name", "")
         snaps = saved_timeline.get("snapshots", old.get("snapshots", []))
+        # Archived releases bound first observation between two checkpoints.
+        # New taxa will be bounded by the previous daily capture instead.
+        previous_by_date = {snap["date"]: (snaps[i - 1]["date"] if i else None)
+                            for i, snap in enumerate(snaps)}
+        for record in records.values():
+            record.setdefault("intent_interval_start",
+                              previous_by_date.get(record.get("first_observed")))
         if not snaps or snaps[-1].get("date") != today:
             snaps.append({"date": today, "taxa_with_direct_declarations": len(current),
                           "declarations": sum(len(v) for x in current.values() for v in x["declarations"].values()),
@@ -149,17 +160,26 @@ def main():
         prior_connectors = {}
     connector_records = {str(row["taxon_id"]): row
                         for row in prior_connectors.get("records", [])}
+    connector_snapshots = history.get("snapshots", [])
+    connector_previous_by_date = {
+        snap["date"]: (connector_snapshots[i - 1]["date"] if i else None)
+        for i, snap in enumerate(connector_snapshots)
+    }
+    for record in connector_records.values():
+        record.setdefault("intent_interval_start",
+                          connector_previous_by_date.get(record.get("intent_date")))
     releases = first_release if dashboard_path.exists() else {}
     for taxid, record in current.items():
         if taxid not in connector_records:
             connector_records[taxid] = {"taxon_id": taxid, "name": record.get("name", ""),
-                                        "intent_date": today}
+                                        "intent_date": today,
+                                        "intent_interval_start": previous_capture_date}
     cutoff = calendar_date.fromisoformat(today).replace(
         year=calendar_date.fromisoformat(today).year - 4)
     end = calendar_date.fromisoformat(today)
     plotted = []
     counts = {"published_after_intent": 0, "published_before_intent": 0,
-              "awaiting_release": 0}
+              "publication_within_intent_window": 0, "awaiting_release": 0}
     for record in connector_records.values():
         intent = calendar_date.fromisoformat(record["intent_date"])
         if intent < cutoff or intent > end:
@@ -167,14 +187,22 @@ def main():
         publication = releases.get(record.get("name", ""))
         lag = ((calendar_date.fromisoformat(publication) - intent).days
                if publication else None)
+        lag_max = ((calendar_date.fromisoformat(publication) -
+                    calendar_date.fromisoformat(record["intent_interval_start"])).days
+                   if publication and record.get("intent_interval_start") else None)
         status = ("awaiting_release" if publication is None else
-                  "published_after_intent" if lag >= 0 else "published_before_intent")
+                  "published_after_intent" if lag >= 0 else
+                  "published_before_intent" if lag_max is not None and lag_max < 0 else
+                  "publication_within_intent_window")
         counts[status] += 1
-        plotted.append({**record, "publication_date": publication,
-                        "lag_days": lag, "status": status})
+        plotted.append({**record, "intent_interval_end": record["intent_date"],
+                        "publication_date": publication, "lag_days": lag,
+                        "lag_min_days": lag, "lag_max_days": lag_max,
+                        "status": status})
     sorted_records = sorted(plotted, key=lambda x: (x["intent_date"], x["name"].casefold()))
     state = {"updated_at": history["updated_at"],
-             "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date")}
+             "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date",
+                                                "intent_interval_start")}
                          for r in sorted(connector_records.values(),
                                          key=lambda x: (x["intent_date"], x["name"].casefold()))]}
     CONNECTOR_STATE_OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -185,7 +213,9 @@ def main():
     tmp_state.replace(CONNECTOR_STATE_OUT)
     connectors = {"window_start": cutoff.isoformat(), "window_end": today,
                   "updated_at": history["updated_at"], "counts": counts,
-                  "records": [{k: r[k] for k in ("name", "intent_date", "publication_date", "lag_days")}
+                  "records": [{k: r[k] for k in ("name", "intent_date", "intent_interval_start",
+                                                    "intent_interval_end", "publication_date",
+                                                    "lag_days", "lag_min_days", "lag_max_days")}
                               for r in sorted_records if r["status"] == "published_after_intent"]}
     tmp_connectors = CONNECTORS_OUT.with_suffix(".tmp")
     with gzip.open(tmp_connectors, "wt", encoding="utf-8") as handle:

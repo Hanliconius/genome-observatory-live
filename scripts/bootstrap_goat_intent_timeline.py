@@ -52,6 +52,7 @@ def main():
     first_observed = {}
     previous_declarations = set()
     previous_taxa = set()
+    previous_date = None
     for version in versions:
         daily = collected[version]
         label = date.today().isoformat() if version == "live" else version.replace(".", "-")
@@ -76,7 +77,8 @@ def main():
                     declarations.add((taxid, field, str(v)))
                     # Preserve the first checkpoint where this taxon had any direct intent.
                     first_observed.setdefault(taxid, {
-                        "taxon_id": taxid, "name": names[taxid], "intent_date": label})
+                        "taxon_id": taxid, "name": names[taxid], "intent_date": label,
+                        "intent_interval_start": previous_date})
         taxa = {t for t, _, _ in declarations}
         new_declarations = declarations - previous_declarations
         new_taxa = taxa - previous_taxa
@@ -86,6 +88,7 @@ def main():
                           "kind": "live baseline" if version == "live" else "GoaT archived release"})
         previous_declarations = declarations
         previous_taxa = taxa
+        previous_date = label
 
     # GoAT query results are returned by field; ensure live count matches the existing baseline.
     existing = json.loads(OUT.read_text()) if OUT.exists() else {}
@@ -99,7 +102,7 @@ def main():
     connector_records = []
     lags = []
     status_counts = {"published_after_intent": 0, "published_before_intent": 0,
-                     "awaiting_release": 0}
+                     "publication_within_intent_window": 0, "awaiting_release": 0}
     for record in first_observed.values():
         intent = date.fromisoformat(record["intent_date"])
         if intent < cutoff or intent > today:
@@ -109,12 +112,20 @@ def main():
         if publication:
             release_day = date.fromisoformat(publication)
             lag = (release_day - intent).days
-            status = "published_after_intent" if lag >= 0 else "published_before_intent"
+        lag_max = ((date.fromisoformat(publication) -
+                    date.fromisoformat(record["intent_interval_start"])).days
+                   if publication and record.get("intent_interval_start") else None)
+        if publication:
+            status = ("published_after_intent" if lag >= 0 else
+                      "published_before_intent" if lag_max is not None and lag_max < 0 else
+                      "publication_within_intent_window")
         else:
             status = "awaiting_release"
+        connector_records.append({**record, "intent_interval_end": record["intent_date"],
+                                  "publication_date": publication,
+                                  "lag_days": lag, "lag_min_days": lag,
+                                  "lag_max_days": lag_max, "status": status})
         status_counts[status] += 1
-        connector_records.append({**record, "publication_date": publication,
-                                  "lag_days": lag, "status": status})
         if status == "published_after_intent":
             lags.append(lag)
     bins = [{"range": label, "count": sum(1 for n in lags if lo <= n < hi)}
@@ -126,7 +137,7 @@ def main():
         "p25_days": statistics.quantiles(lags, n=4)[0] if len(lags) >= 4 else None,
         "p75_days": statistics.quantiles(lags, n=4)[2] if len(lags) >= 4 else None,
         "bins": bins,
-        "definition": "Exact-name match to the Observatory's first qualifying NCBI assembly date; only releases on or after first observed archived intent are included."}
+        "definition": "Exact-name match to the Observatory's first qualifying NCBI assembly date. Lags from archived intent use the latest possible observation date, so they are minimum waits; only releases on or after that date are included."}
     timeline = {"archive_start": snapshots[0]["date"],
                 "monitoring_started": existing.get("monitoring_started", snapshots[-1]["date"]),
                 "updated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
@@ -136,7 +147,8 @@ def main():
     tmp.replace(TIMELINE_OUT)
     sorted_records = sorted(connector_records, key=lambda x: (x["intent_date"], x["name"].casefold()))
     connector_state = {"updated_at": timeline["updated_at"],
-                       "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date")}
+                       "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date",
+                                                          "intent_interval_start")}
                                    for r in sorted_records]}
     CONNECTOR_STATE_OUT.parent.mkdir(parents=True, exist_ok=True)
     tmp_state = CONNECTOR_STATE_OUT.with_suffix(".tmp")
@@ -146,7 +158,10 @@ def main():
     tmp_state.replace(CONNECTOR_STATE_OUT)
     connectors = {"window_start": cutoff.isoformat(), "window_end": today.isoformat(),
                   "updated_at": timeline["updated_at"], "counts": status_counts,
-                  "records": [{k: r[k] for k in ("name", "intent_date", "publication_date", "lag_days")}
+                  "records": [{k: r[k] for k in ("name", "intent_date", "intent_interval_start",
+                                                    "intent_interval_end",
+                                                    "publication_date", "lag_days",
+                                                    "lag_min_days", "lag_max_days")}
                               for r in sorted_records if r["status"] == "published_after_intent"]}
     tmp_connectors = CONNECTORS_OUT.with_suffix(".tmp")
     with gzip.open(tmp_connectors, "wt", encoding="utf-8") as handle:
