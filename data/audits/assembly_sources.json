@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 697,
+  "overlapping_or_superseded_rows_removed": 720,
   "date_conflicts": [
     {
       "accession": "GCA_002917755.1",
@@ -17,11 +17,6 @@
       "datasets_date": "2025-12-22"
     },
     {
-      "accession": "GCA_056151865.1",
-      "index_date": "2026-03-20",
-      "datasets_date": "2026-03-19"
-    },
-    {
       "accession": "GCA_061612785.1",
       "index_date": "2026-09-24",
       "datasets_date": "2026-09-23"
@@ -37,134 +32,95 @@
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/23\"[GRLS]:\"2026/10/23\"[GRLS] OR \"2026/09/23\"[SRDT]:\"2026/10/23\"[SRDT] OR \"2026/09/23\"[UPDT]:\"2026/10/23\"[UPDT])",
-  "matched_uids": 716,
-  "held_uids_rechecked": 59,
-  "generated_at": "2026-10-23T09:20:54.862130+00:00",
-  "datasets_rows": 19177,
-  "assembly_index_rows": 716,
-  "merged_assemblies": 19196,
-  "unique_accession_stems": 19196,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/24\"[GRLS]:\"2026/10/24\"[GRLS] OR \"2026/09/24\"[SRDT]:\"2026/10/24\"[SRDT] OR \"2026/09/24\"[UPDT]:\"2026/10/24\"[UPDT])",
+  "matched_uids": 794,
+  "held_uids_rechecked": 21,
+  "generated_at": "2026-10-24T08:52:45.449383+00:00",
+  "datasets_rows": 19196,
+  "assembly_index_rows": 794,
+  "merged_assemblies": 19270,
+  "unique_accession_stems": 19270,
   "pending_metadata_accessions": [
-    "GCA_049724855.2",
-    "GCA_053574225.2",
-    "GCA_062051543.1",
-    "GCA_062051544.1",
-    "GCA_062051548.1",
-    "GCA_062051549.1",
-    "GCA_062051553.1",
-    "GCA_062051823.1",
-    "GCA_062051824.1",
-    "GCA_062051825.1",
-    "GCA_062051826.1",
-    "GCA_062051827.1",
-    "GCA_062051828.1",
-    "GCA_062051883.1",
-    "GCA_062052781.1",
-    "GCA_062052783.1",
     "GCA_062052847.1",
-    "GCA_062052848.1",
-    "GCA_062052849.1",
-    "GCA_062052855.1",
-    "GCA_062052859.1"
+    "GCA_062053291.1",
+    "GCA_062053295.1",
+    "GCA_062053298.1",
+    "GCA_062053299.1",
+    "GCA_062053318.1",
+    "GCA_062053367.1",
+    "GCA_062053368.1",
+    "GCA_062053373.1",
+    "GCA_062053374.1",
+    "GCA_062053376.1",
+    "GCA_062053382.1",
+    "GCA_062053391.1",
+    "GCA_062053534.1",
+    "GCA_982298635.1",
+    "GCA_985608535.3",
+    "GCA_985610605.3",
+    "GCA_985611765.3",
+    "GCA_985612315.3",
+    "GCA_988426545.1",
+    "GCA_988426555.1",
+    "GCA_988426565.1",
+    "GCA_988426615.1",
+    "GCA_988426735.1",
+    "GCA_988426745.1",
+    "GCA_988426755.1",
+    "GCA_988426815.1",
+    "GCA_988426825.1",
+    "GCA_988426835.1",
+    "GCA_988426875.1",
+    "GCA_988426895.1",
+    "GCA_988426965.1",
+    "GCA_988426975.1",
+    "GCA_988426985.1",
+    "GCA_988426995.1",
+    "GCA_988427015.1",
+    "GCA_988427125.1",
+    "GCA_988427135.1",
+    "GCA_988427155.1",
+    "GCA_988427165.1",
+    "GCA_988427205.1",
+    "GCA_988427215.1",
+    "GCA_988434665.1",
+    "GCA_988434825.1",
+    "GCA_988435035.1",
+    "GCA_988437305.1",
+    "GCA_988437745.1",
+    "GCA_988440105.1",
+    "GCA_988441725.1",
+    "GCA_988454285.1",
+    "GCA_988455295.1",
+    "GCA_988460425.1",
+    "GCA_988467115.1",
+    "GCA_988468365.1",
+    "GCA_988506355.1",
+    "GCA_988506455.1",
+    "GCA_988536335.1",
+    "GCA_988572565.1",
+    "GCA_988574155.1",
+    "GCA_988578875.1",
+    "GCA_988895875.1",
+    "GCA_988902605.1",
+    "GCA_988903455.1",
+    "GCA_988911925.1",
+    "GCA_988916665.1",
+    "GCA_988923885.1",
+    "GCA_988932915.1",
+    "GCA_988943385.1",
+    "GCA_988951925.1",
+    "GCA_989089815.1",
+    "GCA_989470475.1",
+    "GCA_989516015.1",
+    "GCA_989607655.1",
+    "GCA_989614475.1",
+    "GCA_989614485.1",
+    "GCA_989614565.1",
+    "GCA_989828145.1",
+    "GCA_989907995.1"
   ],
   "pending_records": [
-    {
-      "accession": "GCA_049724855.2",
-      "species": "Cannabis sativa",
-      "release_date": "2026-10-10",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_053574225.2",
-      "species": "Canis aureus",
-      "release_date": "2025-11-21",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051543.1",
-      "species": "Mormyrops zanclirostris",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051544.1",
-      "species": "Apteronotus albifrons",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051548.1",
-      "species": "Eigenmannia sp. fish3",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051549.1",
-      "species": "Mormyrops nigricans",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051553.1",
-      "species": "Petrocephalus pallidomaculatus",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051823.1",
-      "species": "Forsterygion lapillum",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051824.1",
-      "species": "Reithrodontomys humulis",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051825.1",
-      "species": "Reithrodontomys humulis",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051826.1",
-      "species": "Forsterygion lapillum",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051827.1",
-      "species": "Coloeus monedula",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051828.1",
-      "species": "Coloeus monedula",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062051883.1",
-      "species": "Zeugodacus tau",
-      "release_date": "2026-10-20",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062052781.1",
-      "species": "Picochlorum renovo (nom. nud.)",
-      "release_date": "2026-10-20",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_062052783.1",
-      "species": "Picochlorum renovo (nom. nud.)",
-      "release_date": "2026-10-20",
-      "level": "Complete Genome"
-    },
     {
       "accession": "GCA_062052847.1",
       "species": "Parvimolge townsendi",
@@ -172,29 +128,467 @@
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062052848.1",
-      "species": "Equus asinus x Equus caballus",
+      "accession": "GCA_062053291.1",
+      "species": "Aphis craccivora",
       "release_date": "2026-10-21",
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062052849.1",
-      "species": "Parvimolge townsendi",
+      "accession": "GCA_062053295.1",
+      "species": "Zea mays subsp. mays",
       "release_date": "2026-10-21",
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062052855.1",
-      "species": "Homatula wuliangensis",
+      "accession": "GCA_062053298.1",
+      "species": "Medicago sativa subsp. falcata",
       "release_date": "2026-10-21",
       "level": "Chromosome"
     },
     {
-      "accession": "GCA_062052859.1",
-      "species": "Daphnia magna",
+      "accession": "GCA_062053299.1",
+      "species": "Medicago sativa subsp. falcata",
       "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053318.1",
+      "species": "Osmia cornuta",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053367.1",
+      "species": "Homo sapiens",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053368.1",
+      "species": "Homo sapiens",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053373.1",
+      "species": "Abies koreana",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053374.1",
+      "species": "Marmota himalayana",
+      "release_date": "2026-10-22",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062053376.1",
+      "species": "Abies koreana",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053382.1",
+      "species": "Sargassum hemiphyllum var. chinense",
+      "release_date": "2026-10-22",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062053391.1",
+      "species": "Dermestes undulatus",
+      "release_date": "2026-10-22",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062053534.1",
+      "species": "Colletotrichum fioriniae",
+      "release_date": "2026-10-22",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_982298635.1",
+      "species": "Euhadra quaesita",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_985608535.3",
+      "species": "Hipposideros caffer",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_985610605.3",
+      "species": "Hipposideros jonesi",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_985611765.3",
+      "species": "Hipposideros caffer",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_985612315.3",
+      "species": "Mystacina tuberculata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426545.1",
+      "species": "Ara militaris",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426555.1",
+      "species": "Erodium cicutarium",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426565.1",
+      "species": "Virgularia mirabilis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426615.1",
+      "species": "Molgula manhattensis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426735.1",
+      "species": "Hymenoloma crispulum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426745.1",
+      "species": "Somateria mollissima",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426755.1",
+      "species": "Ficedula hypoleuca",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426815.1",
+      "species": "Herbertus borealis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426825.1",
+      "species": "Lotus tenuis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426835.1",
+      "species": "Arenaria interpres",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426875.1",
+      "species": "Medicago polymorpha",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426895.1",
+      "species": "Batrachedra confusella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426965.1",
+      "species": "Aphis thalictri",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426975.1",
+      "species": "Diastrophus rubi",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426985.1",
+      "species": "Medicago polymorpha",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988426995.1",
+      "species": "Monochroa rumicetella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427015.1",
+      "species": "Trifolium vesiculosum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427125.1",
+      "species": "Oxalis debilis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427135.1",
+      "species": "Batrachedra confusella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427155.1",
+      "species": "Clinitrachus argentatus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427165.1",
+      "species": "Barbatia barbata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427205.1",
+      "species": "Ciona edwardsi",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427215.1",
+      "species": "Anamobaea orstedii",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988434665.1",
+      "species": "Talochlamys multistriata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988434825.1",
+      "species": "Parasalenia gratiosa",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988435035.1",
+      "species": "Dunaliella salina",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988437305.1",
+      "species": "Pseudanchomenus aptinoides",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988437745.1",
+      "species": "Talochlamys multistriata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988440105.1",
+      "species": "Holothuria princeps",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988441725.1",
+      "species": "Conus judaeus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988454285.1",
+      "species": "Trigla lyra",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988455295.1",
+      "species": "Cedestis subfasciella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988460425.1",
+      "species": "Callophrys rubi",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988467115.1",
+      "species": "Phoenicopterus roseus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988468365.1",
+      "species": "Phoenicopterus roseus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988506355.1",
+      "species": "Caloptilia populetorum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988506455.1",
+      "species": "Trifolium hybridum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988536335.1",
+      "species": "Caloptilia populetorum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988572565.1",
+      "species": "Dyckia consimilis",
+      "release_date": "2026-10-19",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988574155.1",
+      "species": "Geitodoris planata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988578875.1",
+      "species": "Eubothrium crassum",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988895875.1",
+      "species": "Jynx torquilla",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988902605.1",
+      "species": "Psylliodes napi",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988903455.1",
+      "species": "Trichodon cylindricus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988911925.1",
+      "species": "Prociphilus bumeliae",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988916665.1",
+      "species": "Idioptera maculata",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988923885.1",
+      "species": "Tachydromia aemula",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988932915.1",
+      "species": "Davidaster rubiginosus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988943385.1",
+      "species": "Jynx torquilla",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988951925.1",
+      "species": "Macrotus waterhousii",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989089815.1",
+      "species": "Epeolus variegatus",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989470475.1",
+      "species": "Silene nutans",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989516015.1",
+      "species": "Drosera regia",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989607655.1",
+      "species": "Cedestis subfasciella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989614475.1",
+      "species": "Aristotelia brizella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989614485.1",
+      "species": "Aristotelia brizella",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989614565.1",
+      "species": "Pseudo-fumaria lutea",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989828145.1",
+      "species": "Drosera capensis",
+      "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_989907995.1",
+      "species": "Dyckia rariflora",
+      "release_date": "2026-10-19",
       "level": "Chromosome"
     }
   ],
-  "previous_dashboard_assemblies": 19189
+  "previous_dashboard_assemblies": 19196
 }
