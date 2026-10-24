@@ -8,6 +8,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
+from goat_intent_groups import classify_intent_projects
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "goat_intent_history.json"
@@ -58,6 +59,7 @@ def main():
         label = date.today().isoformat() if version == "live" else version.replace(".", "-")
         declarations = set()
         names = {}
+        projects_by_taxon = {}
         for field, rows in daily.items():
             for row in rows:
                 result = row.get("result", {})
@@ -75,10 +77,16 @@ def main():
                     if not v:
                         continue
                     declarations.add((taxid, field, str(v)))
+                    projects_by_taxon.setdefault(taxid, set()).add(str(v))
                     # Preserve the first checkpoint where this taxon had any direct intent.
                     first_observed.setdefault(taxid, {
                         "taxon_id": taxid, "name": names[taxid], "intent_date": label,
-                        "intent_interval_start": previous_date})
+                        "intent_interval_start": previous_date,
+                        "intent_projects": []})
+        for taxid, record in first_observed.items():
+            if record["intent_date"] == label:
+                record["intent_projects"] = sorted(projects_by_taxon.get(taxid, set()))
+                record["intent_group"] = classify_intent_projects(record["intent_projects"])
         taxa = {t for t, _, _ in declarations}
         new_declarations = declarations - previous_declarations
         new_taxa = taxa - previous_taxa
@@ -148,7 +156,7 @@ def main():
     sorted_records = sorted(connector_records, key=lambda x: (x["intent_date"], x["name"].casefold()))
     connector_state = {"updated_at": timeline["updated_at"],
                        "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date",
-                                                          "intent_interval_start")}
+                                                          "intent_interval_start", "intent_projects", "intent_group")}
                                    for r in sorted_records]}
     CONNECTOR_STATE_OUT.parent.mkdir(parents=True, exist_ok=True)
     tmp_state = CONNECTOR_STATE_OUT.with_suffix(".tmp")
@@ -158,7 +166,8 @@ def main():
     tmp_state.replace(CONNECTOR_STATE_OUT)
     connectors = {"window_start": cutoff.isoformat(), "window_end": today.isoformat(),
                   "updated_at": timeline["updated_at"], "counts": status_counts,
-                  "records": [{k: r[k] for k in ("name", "intent_date", "intent_interval_start",
+                  "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date", "intent_interval_start",
+                                                    "intent_projects", "intent_group",
                                                     "intent_interval_end",
                                                     "publication_date", "lag_days",
                                                     "lag_min_days", "lag_max_days")}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "consortia": [
+    "DTOL", "B10K", "ATLASEA", "PSYCHE", "CANBP", "959NG", "ASG", "1KFG",
+    "ERGA-BGE", "VGP", "BEENOME100", "METAINVERT", "BAT1K", "CCGP", "CBP",
+    "EBPN", "GAGA", "ZOONOMIA", "AG100PEST", "i5K", "ERGA-PIL", "ERGA-CH",
+    "AFRICABP", "R2K", "ERGA-COM", "AEGIS", "PRGP", "EBPHK", "CANSEQ150",
+    "CGP", "SQUALOMIX", "EUROFISH", "GIGA", "CFGP", "HUNTOMICS", "PGP",
+    "1000GCH", "ENDEMIXIT", "ERGA"
+  ],
+  "institutional_programmes": [
+    "CNGB", "LOEWE-TBG", "OG", "OMG", "YGG", "GBB", "TSI", "ILEBP",
+    "LMGP", "BPA", "OGG", "GAP", "WA", "AGI", "CULI", "GBR"
+  ],
+  "definitions": {
+    "consortia": "Taxa whose direct project tags at first GoaT observation all map to a named coordinated programme in the curated list.",
+    "small_groups": "Proxy only: taxa with one direct project tag not mapped to a named consortium or institutional programme. This does not verify team size.",
+    "excluded": "Missing tags, institutional programmes, and mixed or multi-project records that do not map wholly to consortia are not assigned to either comparison group. Each taxon is counted once."
+  }
+}

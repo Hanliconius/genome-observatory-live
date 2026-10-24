@@ -7,6 +7,7 @@ import urllib.request
 from datetime import datetime, timezone
 from datetime import date as calendar_date
 from pathlib import Path
+from goat_intent_groups import classify_intent_projects
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "goat_intent_history.json"
@@ -160,6 +161,18 @@ def main():
         prior_connectors = {}
     connector_records = {str(row["taxon_id"]): row
                         for row in prior_connectors.get("records", [])}
+    # Keep first-observed GoaT project tags across deployments that upgrade the
+    # connector schema before the cached state file has been refreshed.
+    if CONNECTORS_OUT.exists():
+        with gzip.open(CONNECTORS_OUT, "rt", encoding="utf-8") as handle:
+            previous_output = json.load(handle)
+        output_by_taxid = {str(row["taxon_id"]): row for row in previous_output.get("records", [])
+                           if row.get("taxon_id")}
+        for taxid, record in connector_records.items():
+            old_output = output_by_taxid.get(taxid, {})
+            if not record.get("intent_projects") and old_output.get("intent_projects"):
+                record["intent_projects"] = old_output["intent_projects"]
+                record["intent_group"] = old_output.get("intent_group")
     connector_snapshots = history.get("snapshots", [])
     connector_previous_by_date = {
         snap["date"]: (connector_snapshots[i - 1]["date"] if i else None)
@@ -168,12 +181,16 @@ def main():
     for record in connector_records.values():
         record.setdefault("intent_interval_start",
                           connector_previous_by_date.get(record.get("intent_date")))
+        record["intent_group"] = classify_intent_projects(record.get("intent_projects"))
     releases = first_release if dashboard_path.exists() else {}
     for taxid, record in current.items():
         if taxid not in connector_records:
             connector_records[taxid] = {"taxon_id": taxid, "name": record.get("name", ""),
                                         "intent_date": today,
-                                        "intent_interval_start": previous_capture_date}
+                                        "intent_interval_start": previous_capture_date,
+                                        "intent_projects": sorted({project for values in record.get("declarations", {}).values() for project in values})}
+            connector_records[taxid]["intent_group"] = classify_intent_projects(
+                connector_records[taxid].get("intent_projects"))
     cutoff = calendar_date.fromisoformat(today).replace(
         year=calendar_date.fromisoformat(today).year - 4)
     end = calendar_date.fromisoformat(today)
@@ -201,8 +218,8 @@ def main():
                         "status": status})
     sorted_records = sorted(plotted, key=lambda x: (x["intent_date"], x["name"].casefold()))
     state = {"updated_at": history["updated_at"],
-             "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date",
-                                                "intent_interval_start")}
+                         "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date",
+                                                "intent_interval_start", "intent_projects", "intent_group")}
                          for r in sorted(connector_records.values(),
                                          key=lambda x: (x["intent_date"], x["name"].casefold()))]}
     CONNECTOR_STATE_OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -213,7 +230,8 @@ def main():
     tmp_state.replace(CONNECTOR_STATE_OUT)
     connectors = {"window_start": cutoff.isoformat(), "window_end": today,
                   "updated_at": history["updated_at"], "counts": counts,
-                  "records": [{k: r[k] for k in ("name", "intent_date", "intent_interval_start",
+                  "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date", "intent_interval_start",
+                                                    "intent_projects", "intent_group",
                                                     "intent_interval_end", "publication_date",
                                                     "lag_days", "lag_min_days", "lag_max_days")}
                               for r in sorted_records if r["status"] == "published_after_intent"]}
