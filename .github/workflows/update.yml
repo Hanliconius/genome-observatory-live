@@ -140,6 +140,7 @@ jobs:
           git add data/dashboard.json data/taxa data/status data/countries.json data/sequencing_countries.json data/genometrics.json cache
           if [ -f data/goat_intent_history.json ]; then git add data/goat_intent_history.json; fi
           if [ -f data/goat_intent_timeline.json ]; then git add data/goat_intent_timeline.json; fi
+          if [ -f data/goat_intent_connectors.json.gz ]; then git add data/goat_intent_connectors.json.gz; fi
           if [ -d data/audits ]; then git add data/audits; fi
           if git diff --cached --quiet; then
             echo 'No data changes to commit.'

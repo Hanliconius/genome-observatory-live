@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """Track first-observed direct GoaT sample/work declarations across daily runs."""
 import json
+import gzip
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from datetime import date as calendar_date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "goat_intent_history.json"
 TIMELINE_OUT = ROOT / "data" / "goat_intent_timeline.json"
+CONNECTORS_OUT = ROOT / "data" / "goat_intent_connectors.json.gz"
+CONNECTOR_STATE_OUT = ROOT / "cache" / "goat_intent_connector_state.json.gz"
 API = "https://goat.genomehubs.org/api/v2/search?"
 FIELDS = ("sample_collected", "sample_acquired", "in_progress")
 PAGE_SIZE = 30000
@@ -136,6 +140,58 @@ def main():
     tmp_timeline = TIMELINE_OUT.with_suffix(".tmp")
     tmp_timeline.write_text(json.dumps(timeline, separators=(",", ":"), sort_keys=True) + "\n")
     tmp_timeline.replace(TIMELINE_OUT)
+    # Keep the small, plot-ready cohort separate from the full tracker history.
+    # Archived rows retain their earliest checkpoint date; daily-only taxa start today.
+    if CONNECTOR_STATE_OUT.exists():
+        with gzip.open(CONNECTOR_STATE_OUT, "rt", encoding="utf-8") as handle:
+            prior_connectors = json.load(handle)
+    else:
+        prior_connectors = {}
+    connector_records = {str(row["taxon_id"]): row
+                        for row in prior_connectors.get("records", [])}
+    releases = first_release if dashboard_path.exists() else {}
+    for taxid, record in current.items():
+        if taxid not in connector_records:
+            connector_records[taxid] = {"taxon_id": taxid, "name": record.get("name", ""),
+                                        "intent_date": today}
+    cutoff = calendar_date.fromisoformat(today).replace(
+        year=calendar_date.fromisoformat(today).year - 4)
+    end = calendar_date.fromisoformat(today)
+    plotted = []
+    counts = {"published_after_intent": 0, "published_before_intent": 0,
+              "awaiting_release": 0}
+    for record in connector_records.values():
+        intent = calendar_date.fromisoformat(record["intent_date"])
+        if intent < cutoff or intent > end:
+            continue
+        publication = releases.get(record.get("name", ""))
+        lag = ((calendar_date.fromisoformat(publication) - intent).days
+               if publication else None)
+        status = ("awaiting_release" if publication is None else
+                  "published_after_intent" if lag >= 0 else "published_before_intent")
+        counts[status] += 1
+        plotted.append({**record, "publication_date": publication,
+                        "lag_days": lag, "status": status})
+    sorted_records = sorted(plotted, key=lambda x: (x["intent_date"], x["name"].casefold()))
+    state = {"updated_at": history["updated_at"],
+             "records": [{k: r[k] for k in ("taxon_id", "name", "intent_date")}
+                         for r in sorted(connector_records.values(),
+                                         key=lambda x: (x["intent_date"], x["name"].casefold()))]}
+    CONNECTOR_STATE_OUT.parent.mkdir(parents=True, exist_ok=True)
+    tmp_state = CONNECTOR_STATE_OUT.with_suffix(".tmp")
+    with gzip.open(tmp_state, "wt", encoding="utf-8") as handle:
+        json.dump(state, handle, separators=(",", ":"), sort_keys=True)
+        handle.write("\n")
+    tmp_state.replace(CONNECTOR_STATE_OUT)
+    connectors = {"window_start": cutoff.isoformat(), "window_end": today,
+                  "updated_at": history["updated_at"], "counts": counts,
+                  "records": [{k: r[k] for k in ("name", "intent_date", "publication_date", "lag_days")}
+                              for r in sorted_records if r["status"] == "published_after_intent"]}
+    tmp_connectors = CONNECTORS_OUT.with_suffix(".tmp")
+    with gzip.open(tmp_connectors, "wt", encoding="utf-8") as handle:
+        json.dump(connectors, handle, separators=(",", ":"), sort_keys=True)
+        handle.write("\n")
+    tmp_connectors.replace(CONNECTORS_OUT)
     print(f"GoaT direct-intent taxa: {len(current)}; snapshots: {len(history['snapshots'])}")
 
 
