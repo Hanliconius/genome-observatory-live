@@ -34,8 +34,8 @@
   ],
   "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/24\"[GRLS]:\"2026/10/24\"[GRLS] OR \"2026/09/24\"[SRDT]:\"2026/10/24\"[SRDT] OR \"2026/09/24\"[UPDT]:\"2026/10/24\"[UPDT])",
   "matched_uids": 794,
-  "held_uids_rechecked": 21,
-  "generated_at": "2026-10-24T08:52:45.449383+00:00",
+  "held_uids_rechecked": 78,
+  "generated_at": "2026-10-24T16:57:56.271793+00:00",
   "datasets_rows": 19196,
   "assembly_index_rows": 794,
   "merged_assemblies": 19270,
@@ -590,5 +590,5 @@
       "level": "Chromosome"
     }
   ],
-  "previous_dashboard_assemblies": 19196
+  "previous_dashboard_assemblies": 19270
 }

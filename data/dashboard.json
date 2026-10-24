@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T08:54:09.364472+00:00",
+  "generated_at": "2026-10-24T16:58:23.897363+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
@@ -56249,13 +56249,13 @@
       "chromosome_count": 32,
       "genus": "Sargassum",
       "family": "Sargassaceae",
-      "phylum": null,
       "image": {
         "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Sargassum_weeds_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "page_url": "https://commons.wikimedia.org/wiki/File:Sargassum_weeds_closeup.jpg",
         "credit": "Unknown authorUnknown author · Public domain",
         "matched_name": "Sargassum"
-      }
+      },
+      "phylum": null
     },
     {
       "source_provenance": {
@@ -56313,7 +56313,12 @@
       "genus": "Drosera",
       "family": "Droseraceae",
       "phylum": "Streptophyta",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Drosera_capensis_bend.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Drosera_capensis_bend.JPG",
+        "credit": "NoahElhardt · CC BY-SA 3.0",
+        "matched_name": "Drosera capensis"
+      }
     },
     {
       "source_provenance": {
@@ -56339,7 +56344,12 @@
       "genus": "Pseudo-fumaria",
       "family": "Papaveraceae",
       "phylum": "Streptophyta",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Poppy_flower%2C_Torcello%2C_Italy.jpg/960px-Poppy_flower%2C_Torcello%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Poppy_flower,_Torcello,_Italy.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0",
+        "matched_name": "Papaveraceae"
+      }
     },
     {
       "source_provenance": {
@@ -56365,7 +56375,12 @@
       "genus": "Aristotelia",
       "family": "Gelechiidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Aristotelia_brizella_01.jpg/960px-Aristotelia_brizella_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aristotelia_brizella_01.jpg",
+        "credit": "Marko Mutanen · CC BY-SA 4.0",
+        "matched_name": "Aristotelia brizella"
+      }
     },
     {
       "source_provenance": {
@@ -56391,7 +56406,12 @@
       "genus": "Aristotelia",
       "family": "Gelechiidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Aristotelia_brizella_01.jpg/960px-Aristotelia_brizella_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Aristotelia_brizella_01.jpg",
+        "credit": "Marko Mutanen · CC BY-SA 4.0",
+        "matched_name": "Aristotelia brizella"
+      }
     },
     {
       "source_provenance": {
@@ -56480,7 +56500,12 @@
       "genus": "Drosera",
       "family": "Droseraceae",
       "phylum": "Streptophyta",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/DroseraRegia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:DroseraRegia.jpg",
+        "credit": "user:Denis Barthel · CC BY-SA 3.0",
+        "matched_name": "Drosera regia"
+      }
     },
     {
       "source_provenance": {
@@ -56506,7 +56531,12 @@
       "genus": "Silene",
       "family": "Caryophyllaceae",
       "phylum": "Streptophyta",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Silene_nutans_220505.jpg/960px-Silene_nutans_220505.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Silene_nutans_220505.jpg",
+        "credit": "Bernd Haynold · CC BY 2.5",
+        "matched_name": "Silene nutans"
+      }
     },
     {
       "source_provenance": {
@@ -56532,7 +56562,12 @@
       "genus": "Epeolus",
       "family": "Apidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Epeolus_fg01.jpg/960px-Epeolus_fg01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Epeolus_fg01.jpg",
+        "credit": "Fritz Geller-Grimm · CC BY-SA 3.0",
+        "matched_name": "Epeolus variegatus"
+      }
     },
     {
       "source_provenance": {
@@ -56558,7 +56593,12 @@
       "genus": "Macrotus",
       "family": "Phyllostomidae",
       "phylum": "Chordata",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg/960px-Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg",
+        "credit": "CC0",
+        "matched_name": "Macrotus waterhousii"
+      }
     },
     {
       "source_provenance": {
@@ -56584,7 +56624,12 @@
       "genus": "Jynx",
       "family": "Picidae",
       "phylum": "Chordata",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Jynx_torquilla_%2834536504885%29.jpg/960px-Jynx_torquilla_%2834536504885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg",
+        "credit": "Donald Hobern from Copenhagen, Denmark · CC BY 2.0",
+        "matched_name": "Jynx torquilla"
+      }
     },
     {
       "source_provenance": {
@@ -56610,7 +56655,12 @@
       "genus": "Davidaster",
       "family": "Comatulidae",
       "phylum": "Echinodermata",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Davidaster_rubiginosus.jpg/960px-Davidaster_rubiginosus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Davidaster_rubiginosus.jpg",
+        "credit": "James St. John · CC BY 2.0",
+        "matched_name": "Davidaster rubiginosus"
+      }
     },
     {
       "source_provenance": {
@@ -56636,7 +56686,12 @@
       "genus": "Tachydromia",
       "family": "Hybotidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Tachydromia.cf.arrogans.1.jpg/960px-Tachydromia.cf.arrogans.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tachydromia.cf.arrogans.1.jpg",
+        "credit": "Sarefo · CC BY-SA 4.0",
+        "matched_name": "Tachydromia"
+      }
     },
     {
       "source_provenance": {
@@ -56662,7 +56717,12 @@
       "genus": "Idioptera",
       "family": "Limoniidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Idioptera_linnei%2C_Arenig%2C_North_Wales%2C_June_2017_3_%2834951619862%29.jpg/960px-Idioptera_linnei%2C_Arenig%2C_North_Wales%2C_June_2017_3_%2834951619862%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Idioptera_linnei,_Arenig,_North_Wales,_June_2017_3_(34951619862).jpg",
+        "credit": "janet graham · CC BY 2.0",
+        "matched_name": "Idioptera"
+      }
     },
     {
       "source_provenance": {
@@ -56688,7 +56748,12 @@
       "genus": "Prociphilus",
       "family": "Aphididae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg/960px-%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg",
+        "credit": "栃内新 · CC BY-SA 3.0",
+        "matched_name": "Prociphilus"
+      }
     },
     {
       "source_provenance": {
@@ -56714,7 +56779,12 @@
       "genus": "Trichodon",
       "family": "Ditrichaceae",
       "phylum": "Streptophyta",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Trichodon_cylindricus_%28a%2C_150452-482253%29_0119.JPG/960px-Trichodon_cylindricus_%28a%2C_150452-482253%29_0119.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Trichodon_cylindricus_(a,_150452-482253)_0119.JPG",
+        "credit": "HermannSchachner · CC0",
+        "matched_name": "Trichodon cylindricus"
+      }
     },
     {
       "source_provenance": {
@@ -56740,7 +56810,12 @@
       "genus": "Psylliodes",
       "family": "Chrysomelidae",
       "phylum": "Arthropoda",
-      "image": null
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Psylliodes_napi%2C_Bala_lakeshore%2C_North_Wales%2C_Oct_2014_-_Flickr_-_janetgraham84.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Psylliodes_napi,_Bala_lakeshore,_North_Wales,_Oct_2014_-_Flickr_-_janetgraham84.jpg",
+        "credit": "Janet Graham · CC BY 2.0",
+        "matched_name": "Psylliodes napi"
+      }
     },
     {
       "source_provenance": {
@@ -56766,7 +56841,12 @@
       "genus": "Jynx",
       "family": "Picidae",
       "phylum": "Chordata",
-      "image": null
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Jynx_torquilla_%2834536504885%29.jpg/960px-Jynx_torquilla_%2834536504885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg",
+        "credit": "Donald Hobern from Copenhagen, Denmark · CC BY 2.0",
+        "matched_name": "Jynx torquilla"
+      }
     },
     {
       "source_provenance": {
@@ -57157,15 +57237,15 @@
       "assembly_name": "ehHolPrin1.1",
       "total_sequence_length": 1226494088,
       "chromosome_count": 23,
-      "genus": null,
-      "family": null,
-      "phylum": null,
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Holothuria_princeps.jpg/960px-Holothuria_princeps.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Holothuria_princeps.jpg",
         "credit": "Fluffberger · CC BY-SA 4.0",
         "matched_name": "Holothuria princeps"
-      }
+      },
+      "genus": null,
+      "family": null,
+      "phylum": null
     },
     {
       "source_provenance": {
@@ -58520,8 +58600,7 @@
         "assembly_uid": "36786611",
         "group": "Animals",
         "sequence_release_date": "2026-10-21",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062052855.1",
@@ -58553,8 +58632,7 @@
         "assembly_uid": "36787151",
         "group": "Animals",
         "sequence_release_date": "2026-10-21",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062052849.1",
@@ -58586,8 +58664,7 @@
         "assembly_uid": "36786581",
         "group": "Animals",
         "sequence_release_date": "2026-10-21",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062052848.1",
@@ -59692,8 +59769,7 @@
         "assembly_uid": "36785261",
         "group": "Plants",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Plants",
       "accession": "GCA_062052783.1",
@@ -59720,8 +59796,7 @@
         "assembly_uid": "36787551",
         "group": "Plants",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Plants",
       "accession": "GCA_062052781.1",
@@ -59748,8 +59823,7 @@
         "assembly_uid": "36774561",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051883.1",
@@ -59781,8 +59855,7 @@
         "assembly_uid": "36773941",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051828.1",
@@ -59814,8 +59887,7 @@
         "assembly_uid": "36773891",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051827.1",
@@ -59847,8 +59919,7 @@
         "assembly_uid": "36773861",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051826.1",
@@ -59880,8 +59951,7 @@
         "assembly_uid": "36774001",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051825.1",
@@ -59913,8 +59983,7 @@
         "assembly_uid": "36780021",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051824.1",
@@ -59946,8 +60015,7 @@
         "assembly_uid": "36779711",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051823.1",
@@ -59979,8 +60047,7 @@
         "assembly_uid": "36776351",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051553.1",
@@ -60012,8 +60079,7 @@
         "assembly_uid": "36776261",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051549.1",
@@ -60045,8 +60111,7 @@
         "assembly_uid": "36776221",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051548.1",
@@ -60078,8 +60143,7 @@
         "assembly_uid": "36776141",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051544.1",
@@ -60111,8 +60175,7 @@
         "assembly_uid": "36776161",
         "group": "Animals",
         "sequence_release_date": "2026-10-20",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_062051543.1",
@@ -63669,8 +63732,7 @@
         "assembly_uid": "36786351",
         "group": "Plants",
         "sequence_release_date": "2026-10-10",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Plants",
       "accession": "GCA_049724855.2",
@@ -179943,8 +180005,7 @@
         "assembly_uid": "36779081",
         "group": "Animals",
         "sequence_release_date": "2025-11-21",
-        "assembly_publication_date": "2026-10-21",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-10-21"
       },
       "group": "Animals",
       "accession": "GCA_053574225.2",
@@ -206012,20 +206073,90 @@
       "matched_name": "Geitodoris planata"
     },
     "Eubothrium crassum": null,
-    "Jynx torquilla": null,
-    "Psylliodes napi": null,
-    "Trichodon cylindricus": null,
-    "Prociphilus bumeliae": null,
-    "Idioptera maculata": null,
-    "Tachydromia aemula": null,
-    "Davidaster rubiginosus": null,
-    "Macrotus waterhousii": null,
-    "Epeolus variegatus": null,
-    "Silene nutans": null,
-    "Drosera regia": null,
-    "Aristotelia brizella": null,
-    "Pseudo-fumaria lutea": null,
-    "Drosera capensis": null,
+    "Jynx torquilla": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Jynx_torquilla_%2834536504885%29.jpg/960px-Jynx_torquilla_%2834536504885%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Jynx_torquilla_(34536504885).jpg",
+      "credit": "Donald Hobern from Copenhagen, Denmark · CC BY 2.0",
+      "matched_name": "Jynx torquilla"
+    },
+    "Psylliodes napi": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Psylliodes_napi%2C_Bala_lakeshore%2C_North_Wales%2C_Oct_2014_-_Flickr_-_janetgraham84.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Psylliodes_napi,_Bala_lakeshore,_North_Wales,_Oct_2014_-_Flickr_-_janetgraham84.jpg",
+      "credit": "Janet Graham · CC BY 2.0",
+      "matched_name": "Psylliodes napi"
+    },
+    "Trichodon cylindricus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Trichodon_cylindricus_%28a%2C_150452-482253%29_0119.JPG/960px-Trichodon_cylindricus_%28a%2C_150452-482253%29_0119.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Trichodon_cylindricus_(a,_150452-482253)_0119.JPG",
+      "credit": "HermannSchachner · CC0",
+      "matched_name": "Trichodon cylindricus"
+    },
+    "Prociphilus bumeliae": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg/960px-%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:%E3%83%88%E3%83%89%E3%83%8E%E3%83%8D%E3%82%AA%E3%82%AA%E3%83%AF%E3%82%BF%E3%83%A0%E3%82%B7.jpg",
+      "credit": "栃内新 · CC BY-SA 3.0",
+      "matched_name": "Prociphilus"
+    },
+    "Idioptera maculata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Idioptera_linnei%2C_Arenig%2C_North_Wales%2C_June_2017_3_%2834951619862%29.jpg/960px-Idioptera_linnei%2C_Arenig%2C_North_Wales%2C_June_2017_3_%2834951619862%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Idioptera_linnei,_Arenig,_North_Wales,_June_2017_3_(34951619862).jpg",
+      "credit": "janet graham · CC BY 2.0",
+      "matched_name": "Idioptera"
+    },
+    "Tachydromia aemula": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Tachydromia.cf.arrogans.1.jpg/960px-Tachydromia.cf.arrogans.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tachydromia.cf.arrogans.1.jpg",
+      "credit": "Sarefo · CC BY-SA 4.0",
+      "matched_name": "Tachydromia"
+    },
+    "Davidaster rubiginosus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Davidaster_rubiginosus.jpg/960px-Davidaster_rubiginosus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Davidaster_rubiginosus.jpg",
+      "credit": "James St. John · CC BY 2.0",
+      "matched_name": "Davidaster rubiginosus"
+    },
+    "Macrotus waterhousii": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg/960px-Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.MAM.20939.a_lat_-_Macrotus_waterhousii_-_skull.jpeg",
+      "credit": "CC0",
+      "matched_name": "Macrotus waterhousii"
+    },
+    "Epeolus variegatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Epeolus_fg01.jpg/960px-Epeolus_fg01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Epeolus_fg01.jpg",
+      "credit": "Fritz Geller-Grimm · CC BY-SA 3.0",
+      "matched_name": "Epeolus variegatus"
+    },
+    "Silene nutans": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Silene_nutans_220505.jpg/960px-Silene_nutans_220505.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Silene_nutans_220505.jpg",
+      "credit": "Bernd Haynold · CC BY 2.5",
+      "matched_name": "Silene nutans"
+    },
+    "Drosera regia": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/DroseraRegia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:DroseraRegia.jpg",
+      "credit": "user:Denis Barthel · CC BY-SA 3.0",
+      "matched_name": "Drosera regia"
+    },
+    "Aristotelia brizella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Aristotelia_brizella_01.jpg/960px-Aristotelia_brizella_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Aristotelia_brizella_01.jpg",
+      "credit": "Marko Mutanen · CC BY-SA 4.0",
+      "matched_name": "Aristotelia brizella"
+    },
+    "Pseudo-fumaria lutea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Poppy_flower%2C_Torcello%2C_Italy.jpg/960px-Poppy_flower%2C_Torcello%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Poppy_flower,_Torcello,_Italy.jpg",
+      "credit": "Vyacheslav Argenberg · CC BY 4.0",
+      "matched_name": "Papaveraceae"
+    },
+    "Drosera capensis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Drosera_capensis_bend.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Drosera_capensis_bend.JPG",
+      "credit": "NoahElhardt · CC BY-SA 3.0",
+      "matched_name": "Drosera capensis"
+    },
     "Dyckia rariflora": {
       "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Dyckia_maracasensis_Habitus_BotGardBln0906b.JPG/960px-Dyckia_maracasensis_Habitus_BotGardBln0906b.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "page_url": "https://commons.wikimedia.org/wiki/File:Dyckia_maracasensis_Habitus_BotGardBln0906b.JPG",
@@ -212646,9 +212777,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3680444": {},
-    "3700093": {},
-    "3405230": {},
     "307492": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "cowpea aphid",
@@ -212908,8 +213036,6 @@
       "phylum": "Annelida",
       "kingdom": "Metazoa"
     },
-    "3451521": {},
-    "3465513": {},
     "509997": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "bivalves",
@@ -212946,7 +213072,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3256806": {},
     "257330": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "gastropods",
@@ -212956,7 +213081,6 @@
       "phylum": "Mollusca",
       "kingdom": "Metazoa"
     },
-    "3451525": {},
     "430084": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "ray-finned fishes",
@@ -213011,7 +213135,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3451528": {},
     "3414989": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "monocots",
@@ -213173,7 +213296,15 @@
       "family": "Bromeliaceae",
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
-    }
+    },
+    "3680444": {},
+    "3700093": {},
+    "3405230": {},
+    "3451521": {},
+    "3465513": {},
+    "3256806": {},
+    "3451525": {},
+    "3451528": {}
   },
   "assembly_sources": {
     "overlapping_or_superseded_rows_removed": 720,
@@ -213211,8 +213342,8 @@
     ],
     "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/24\"[GRLS]:\"2026/10/24\"[GRLS] OR \"2026/09/24\"[SRDT]:\"2026/10/24\"[SRDT] OR \"2026/09/24\"[UPDT]:\"2026/10/24\"[UPDT])",
     "matched_uids": 794,
-    "held_uids_rechecked": 21,
-    "generated_at": "2026-10-24T08:52:45.449383+00:00",
+    "held_uids_rechecked": 78,
+    "generated_at": "2026-10-24T16:57:56.271793+00:00",
     "datasets_rows": 19196,
     "assembly_index_rows": 794,
     "merged_assemblies": 19270,
@@ -213767,6 +213898,6 @@
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19196
+    "previous_dashboard_assemblies": 19270
   }
 }
