@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1b22">
+  <title>GoaT intent timeline · Genome Observatory</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body{max-width:1180px;margin:auto;padding:24px;color:#e9f1f3;background:#0d1b22;font-family:system-ui,sans-serif}
+    a{color:#8bd5ca}.intro{max-width:850px;color:#c1d0d4;line-height:1.55}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:24px 0}
+    .card,.panel{background:#142830;border:1px solid #29424a;border-radius:14px;padding:18px}.label{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:#9ab1b8}
+    .value{font-size:2rem;font-weight:700;margin:.25rem 0}.panel{margin:18px 0}.bars{height:250px;display:flex;align-items:end;gap:8px;border-bottom:1px solid #45616a;padding:14px 8px 0;overflow-x:auto}
+    .bar-wrap{min-width:44px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:end;height:100%;gap:6px}.bar{width:min(28px,75%);background:#65c9b0;border-radius:6px 6px 0 0;min-height:2px}.bar-n{font-size:.75rem;color:#d8e5e8}.bar-date{font-size:.65rem;color:#9ab1b8;white-space:nowrap;transform:rotate(-35deg);transform-origin:top center;margin-top:6px}
+    .note{font-size:.88rem;color:#aebfc4;line-height:1.5}.table{width:100%;border-collapse:collapse;margin-top:12px}.table th,.table td{text-align:left;border-bottom:1px solid #29424a;padding:9px;font-size:.88rem}.scroll{overflow:auto}
+  </style>
+</head>
+<body>
+  <p class="label">Genome Observatory · research preview</p>
+  <h1>GoaT sequencing intent over time</h1>
+  <p class="intro">A daily record of taxa with direct GoaT declarations that samples have been collected, acquired, or sequencing is in progress. Counts show newly observed taxon–project declarations between captures; they are not counts of genomes or proof of when a project first announced its plans.</p>
+  <div id="status" class="note">Loading tracker…</div>
+  <section class="cards" id="cards"></section>
+  <section class="panel"><h2>New declarations observed per capture</h2><div id="chart" class="bars" role="img" aria-label="New GoaT declarations per daily capture"></div><p class="note">A taxon–project pair is counted once per declaration field. The first run establishes the baseline and is not counted as new. This initial view counts additions; it does not yet classify removals or changed values.</p></section>
+  <section class="panel"><h2>Longest observed waits for an NCBI assembly</h2><p class="note">Waiting-time estimates will appear after declaration records can be joined to first qualifying NCBI release dates. At present the tracker records observation dates prospectively; unreleased taxa will need to be treated as still waiting.</p><div class="scroll"><table class="table"><thead><tr><th>Taxon</th><th>First observed</th><th>First qualifying release</th><th>Elapsed</th></tr></thead><tbody id="delays"><tr><td colspan="4">Not yet estimable</td></tr></tbody></table></div></section>
+  <script>
+  fetch('../../data/goat_intent_history.json').then(r=>{if(!r.ok)throw Error('Tracker data is not available yet');return r.json()}).then(d=>{
+    const snaps=d.snapshots||[], last=snaps.at(-1)||{}, prior=snaps.at(-2)||{};
+    const records=Object.values(d.records||{});
+    const declarations=records.reduce((n,x)=>n+Object.values(x.declarations||{}).reduce((m,v)=>m+v.length,0),0);
+    const released=records.flatMap(x=>Object.entries(x.release_delays||{}).filter(([,days])=>Number.isFinite(days)).map(([key,days])=>({name:x.name,key,days,date:x.first_qualifying_release,observed:x.event_first_seen[key]})));
+    document.querySelector('#status').textContent=`Updated ${new Date(d.updated_at).toLocaleString()} · daily snapshots since ${d.monitoring_started}.`;
+    document.querySelector('#cards').innerHTML=`<article class="card"><div class="label">Active taxa</div><div class="value">${(last.taxa_with_direct_declarations||0).toLocaleString()}</div><div class="note">with direct work declarations</div></article><article class="card"><div class="label">Tracked declarations</div><div class="value">${declarations.toLocaleString()}</div><div class="note">taxon × field × project values</div></article><article class="card"><div class="label">New since last capture</div><div class="value">${(last.new_declarations||0).toLocaleString()}</div><div class="note">first capture is baseline only</div></article><article class="card"><div class="label">Observed releases</div><div class="value">${released.length.toLocaleString()}</div><div class="note">since monitoring began</div></article>`;
+    const max=Math.max(1,...snaps.map(s=>s.new_declarations||0));
+    document.querySelector('#chart').innerHTML=snaps.slice(-36).map(s=>`<div class="bar-wrap"><span class="bar-n">${s.new_declarations||0}</span><div class="bar" style="height:${Math.max(1,100*(s.new_declarations||0)/max)}%"></div><span class="bar-date">${s.date}</span></div>`).join('')||'<p class="note">Waiting for first capture.</p>';
+    const rows=released.sort((a,b)=>b.date.localeCompare(a.date)).slice(0,20);
+    if(rows.length) document.querySelector('#delays').innerHTML=rows.map(x=>`<tr><td>${x.name}<br><span class="note">${x.key}</span></td><td>${x.observed}</td><td>${x.date}</td><td>${x.days} days</td></tr>`).join('');
+  }).catch(e=>document.querySelector('#status').textContent=e.message);
+  </script>
+</body>
+</html>
