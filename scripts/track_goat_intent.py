@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "goat_intent_history.json"
+TIMELINE_OUT = ROOT / "data" / "goat_intent_timeline.json"
 API = "https://goat.genomehubs.org/api/v2/search?"
 FIELDS = ("sample_collected", "sample_acquired", "in_progress")
 PAGE_SIZE = 30000
@@ -55,6 +56,7 @@ def main():
     today = datetime.now(timezone.utc).date().isoformat()
     current = fetch_current()
     old = json.loads(OUT.read_text()) if OUT.exists() else None
+    saved_timeline = json.loads(TIMELINE_OUT.read_text()) if TIMELINE_OUT.exists() else {}
     if old is None:
         # First run establishes a baseline; it must not mislabel existing records as new.
         records = {}
@@ -65,15 +67,21 @@ def main():
         history = {"schema_version": 1, "monitoring_started": today,
                    "updated_at": datetime.now(timezone.utc).isoformat(),
                    "baseline_only": True, "snapshots": [{"date": today,
-                   "taxa_with_direct_declarations": len(current), "new_declarations": 0}],
+                   "taxa_with_direct_declarations": len(current),
+                   "declarations": sum(len(v) for x in current.values() for v in x["declarations"].values()),
+                   "new_taxa": 0, "new_declarations": 0}],
                    "records": records}
     else:
         records = old.get("records", {})
         new_count = 0
+        new_taxa = 0
         for taxid, now in current.items():
             prev = records.get(taxid)
             if prev is None:
                 records[taxid] = {**now, "first_observed": today}
+                records[taxid]["event_first_seen"] = {f"{field}::{project}": today
+                    for field, values in now["declarations"].items() for project in values}
+                new_taxa += 1
                 new_count += sum(len(v) for v in now["declarations"].values())
                 continue
             prev_decls = prev.setdefault("declarations", {})
@@ -91,10 +99,12 @@ def main():
                 for project in values:
                     event_dates.setdefault(f"{field}::{project}", baseline)
             prev["name"] = now["name"] or prev.get("name", "")
-        snaps = old.get("snapshots", [])
+        snaps = saved_timeline.get("snapshots", old.get("snapshots", []))
         if not snaps or snaps[-1].get("date") != today:
             snaps.append({"date": today, "taxa_with_direct_declarations": len(current),
-                          "new_declarations": new_count})
+                          "declarations": sum(len(v) for x in current.values() for v in x["declarations"].values()),
+                          "new_taxa": new_taxa, "new_declarations": new_count,
+                          "kind": "daily live capture"})
         history = {"schema_version": 1, "monitoring_started": old.get("monitoring_started", today),
                    "updated_at": datetime.now(timezone.utc).isoformat(),
                    "baseline_only": False, "snapshots": snaps, "records": records}
@@ -115,6 +125,17 @@ def main():
     temp = OUT.with_suffix(".tmp")
     temp.write_text(json.dumps(history, separators=(",", ":"), sort_keys=True) + "\n")
     temp.replace(OUT)
+    if old is None:
+        snapshots = history["snapshots"]
+    else:
+        snapshots = saved_timeline.get("snapshots", history["snapshots"])
+    timeline = {"archive_start": saved_timeline.get("archive_start", snapshots[0]["date"]),
+                "monitoring_started": history.get("monitoring_started", today),
+                "updated_at": history["updated_at"], "snapshots": snapshots,
+                "release_lag_summary": saved_timeline.get("release_lag_summary", {})}
+    tmp_timeline = TIMELINE_OUT.with_suffix(".tmp")
+    tmp_timeline.write_text(json.dumps(timeline, separators=(",", ":"), sort_keys=True) + "\n")
+    tmp_timeline.replace(TIMELINE_OUT)
     print(f"GoaT direct-intent taxa: {len(current)}; snapshots: {len(history['snapshots'])}")
 
 
