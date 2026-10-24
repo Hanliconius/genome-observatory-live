@@ -1,6 +1,11 @@
 name: Deploy static pages only
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'app/goat-intent/index.html'
   workflow_dispatch:
 
 permissions:

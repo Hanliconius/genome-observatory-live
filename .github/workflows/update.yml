@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - 'app/**'
+      - '!app/goat-intent/index.html'
       - 'index.html'
       - 'scripts/**'
       - 'data/status/mapveu_species.tsv'
