@@ -1,10 +1,10 @@
 {
-  "overlapping_or_superseded_rows_removed": 720,
+  "overlapping_or_superseded_rows_removed": 689,
   "date_conflicts": [
     {
-      "accession": "GCA_002917755.1",
-      "index_date": "2021-10-13",
-      "datasets_date": "2018-02-06"
+      "accession": "GCA_061535455.1",
+      "index_date": "2026-09-22",
+      "datasets_date": "2026-09-21"
     },
     {
       "accession": "GCA_054131065.1",
@@ -22,24 +22,19 @@
       "datasets_date": "2026-09-23"
     },
     {
-      "accession": "GCA_055504915.1",
-      "index_date": "2026-02-25",
-      "datasets_date": "2026-02-24"
-    },
-    {
       "accession": "GCA_000346735.1",
       "index_date": "2014-02-28",
       "datasets_date": "2013-03-18"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/24\"[GRLS]:\"2026/10/24\"[GRLS] OR \"2026/09/24\"[SRDT]:\"2026/10/24\"[SRDT] OR \"2026/09/24\"[UPDT]:\"2026/10/24\"[UPDT])",
-  "matched_uids": 794,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/25\"[GRLS]:\"2026/10/25\"[GRLS] OR \"2026/09/25\"[SRDT]:\"2026/10/25\"[SRDT] OR \"2026/09/25\"[UPDT]:\"2026/10/25\"[UPDT])",
+  "matched_uids": 766,
   "held_uids_rechecked": 78,
-  "generated_at": "2026-10-24T20:00:28.068925+00:00",
+  "generated_at": "2026-10-25T09:09:02.875584+00:00",
   "datasets_rows": 19196,
-  "assembly_index_rows": 794,
-  "merged_assemblies": 19270,
-  "unique_accession_stems": 19270,
+  "assembly_index_rows": 766,
+  "merged_assemblies": 19273,
+  "unique_accession_stems": 19273,
   "pending_metadata_accessions": [
     "GCA_062052847.1",
     "GCA_062053291.1",
@@ -55,6 +50,7 @@
     "GCA_062053382.1",
     "GCA_062053391.1",
     "GCA_062053534.1",
+    "GCA_062055664.1",
     "GCA_982298635.1",
     "GCA_985608535.3",
     "GCA_985610605.3",
@@ -81,6 +77,8 @@
     "GCA_988427135.1",
     "GCA_988427155.1",
     "GCA_988427165.1",
+    "GCA_988427175.1",
+    "GCA_988427195.1",
     "GCA_988427205.1",
     "GCA_988427215.1",
     "GCA_988434665.1",
@@ -203,6 +201,12 @@
       "accession": "GCA_062053534.1",
       "species": "Colletotrichum fioriniae",
       "release_date": "2026-10-22",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062055664.1",
+      "species": "Elaeagnus mollis",
+      "release_date": "2026-10-23",
       "level": "Chromosome"
     },
     {
@@ -359,6 +363,18 @@
       "accession": "GCA_988427165.1",
       "species": "Barbatia barbata",
       "release_date": "2026-10-21",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427175.1",
+      "species": "Secale cereale",
+      "release_date": "2026-10-23",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_988427195.1",
+      "species": "Secale cereale",
+      "release_date": "2026-10-22",
       "level": "Chromosome"
     },
     {

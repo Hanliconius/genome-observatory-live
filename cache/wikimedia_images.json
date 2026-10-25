@@ -3250,5 +3250,17 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Dyckia_maracasensis_Habitus_BotGardBln0906b.JPG",
     "credit": "CC BY-SA 3.0",
     "matched_name": "Dyckia"
+  },
+  "Elaeagnus mollis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Elaeagnus_commutata_USDA.jpg/960px-Elaeagnus_commutata_USDA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Elaeagnus_commutata_USDA.jpg",
+    "credit": "Public domain",
+    "matched_name": "Elaeagnus"
+  },
+  "Secale cereale": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Ear_of_rye.jpg/960px-Ear_of_rye.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ear_of_rye.jpg",
+    "credit": "LSDSL \u00b7 CC BY-SA 3.0",
+    "matched_name": "Secale cereale"
   }
 }
