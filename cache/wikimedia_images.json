@@ -3262,5 +3262,11 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Ear_of_rye.jpg",
     "credit": "LSDSL \u00b7 CC BY-SA 3.0",
     "matched_name": "Secale cereale"
+  },
+  "Aglaophenia octodonta": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Aglaphenoia_sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Aglaphenoia_sp.jpg",
+    "credit": "This photo has been taken by Elapied and released under the licenses stated below. You are free to use it for any purpose as long as you credit me as author, Wikimedia Commons as site and follow the terms of the licenses. Could you be kind enough to leave me a message on this page to inform me about your use of this picture. \u00b7 CC BY-SA 3.0",
+    "matched_name": "Aglaophenia"
   }
 }
