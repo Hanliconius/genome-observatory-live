@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-26T10:07:11.918383+00:00",
+  "generated_at": "2026-10-27T09:49:51.557193+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 135,
-      "species": 108,
-      "first_time_species": 94
+      "assemblies": 98,
+      "species": 84,
+      "first_time_species": 67
     },
     "year": {
-      "assemblies": 6400,
-      "species": 3931,
-      "first_time_species": 3370
+      "assemblies": 6411,
+      "species": 3938,
+      "first_time_species": 3376
     },
     "all": {
-      "assemblies": 19274,
-      "species": 10784,
-      "first_time_species": 10784
+      "assemblies": 19286,
+      "species": 10791,
+      "first_time_species": 10791
     }
   },
   "daily": [
@@ -55899,12 +55899,18 @@
     },
     {
       "date": "2026-10-25",
+      "assemblies": 12,
+      "species": 12,
+      "first_time_species": 7
+    },
+    {
+      "date": "2026-10-26",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-10-26",
+      "date": "2026-10-27",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56063,37 +56069,37 @@
     },
     {
       "year": "2026",
-      "assemblies": 5648,
-      "species": 3794,
-      "first_time_species": 2904
+      "assemblies": 5660,
+      "species": 3806,
+      "first_time_species": 2911
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 98
+      "count": 71
     },
     {
       "group": "Plants",
-      "count": 28
-    },
-    {
-      "group": "Other",
-      "count": 5
+      "count": 25
     },
     {
       "group": "Fungi",
-      "count": 4
+      "count": 1
+    },
+    {
+      "group": "Other",
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4162
+      "count": 4171
     },
     {
       "group": "Plants",
-      "count": 1631
+      "count": 1633
     },
     {
       "group": "Fungi",
@@ -56107,11 +56113,11 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11005
+      "count": 11015
     },
     {
       "group": "Plants",
-      "count": 5339
+      "count": 5341
     },
     {
       "group": "Fungi",
@@ -56146,32 +56152,413 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "36886851",
-      "group": "Animals",
-      "sequence_release_date": "2026-10-23",
-      "assembly_publication_date": "2026-10-24"
+      "assembly_uid": "36979961",
+      "group": "Plants",
+      "sequence_release_date": "2026-10-25",
+      "assembly_publication_date": "2026-10-26",
+      "biosample_enriched": true
     },
-    "group": "Animals",
-    "accession": "GCA_990001253.1",
-    "organism_name": "Aglaophenia octodonta",
-    "common_name": "hydrozoans",
-    "tax_id": 401953,
-    "release_date": "2026-10-23",
-    "assembly_level": "Chromosome",
-    "assembly_name": "jhAglOcto1",
-    "total_sequence_length": 452560764,
-    "chromosome_count": 15,
-    "genus": "Aglaophenia",
-    "family": "Aglaopheniidae",
-    "phylum": "Cnidaria",
+    "group": "Plants",
+    "accession": "GCA_062058197.1",
+    "organism_name": "Glycine max",
+    "common_name": "soybean",
+    "tax_id": 3847,
+    "release_date": "2026-10-25",
+    "assembly_level": "Complete Genome",
+    "assembly_name": "ASM62058197v1",
+    "total_sequence_length": 1018872806,
+    "chromosome_count": 20,
+    "genus": "Glycine",
+    "family": "Fabaceae",
+    "phylum": "Streptophyta",
     "image": {
-      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Aglaphenoia_sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Aglaphenoia_sp.jpg",
-      "credit": "This photo has been taken by Elapied and released under the licenses stated below. You are free to use it for any purpose as long as you credit me as author, Wikimedia Commons as site and follow the terms of the licenses. Could you be kind enough to leave me a message on this page to inform me about your use of this picture. · CC BY-SA 3.0",
-      "matched_name": "Aglaophenia"
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Soybean.USDA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Soybean.USDA.jpg",
+      "credit": "Public domain",
+      "matched_name": "Glycine max"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979961",
+        "group": "Plants",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062058197.1",
+      "organism_name": "Glycine max",
+      "common_name": "soybean",
+      "tax_id": 3847,
+      "release_date": "2026-10-25",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62058197v1",
+      "total_sequence_length": 1018872806,
+      "chromosome_count": 20,
+      "genus": "Glycine",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Soybean.USDA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Soybean.USDA.jpg",
+        "credit": "Public domain",
+        "matched_name": "Glycine max"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36980021",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26"
+      },
+      "group": "Animals",
+      "accession": "GCA_062058196.1",
+      "organism_name": "Correlophus ciliatus",
+      "common_name": "crested gecko",
+      "tax_id": 143539,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3857.female.muscle",
+      "total_sequence_length": 1721596334,
+      "chromosome_count": 20,
+      "genus": "Correlophus",
+      "family": "Diplodactylidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Correlophus_ciliatus_33606417.jpg/960px-Correlophus_ciliatus_33606417.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Correlophus_ciliatus_33606417.jpg",
+        "credit": "Lennart Hudel · CC BY 4.0",
+        "matched_name": "Correlophus ciliatus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36980111",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26"
+      },
+      "group": "Animals",
+      "accession": "GCA_062058195.1",
+      "organism_name": "Eublepharis macularius",
+      "common_name": "lizards & snakes",
+      "tax_id": 481883,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG1477.male.muscle",
+      "total_sequence_length": 2213130556,
+      "chromosome_count": 19,
+      "genus": "Eublepharis",
+      "family": "Eublepharidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Eublepharis_macularius1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Eublepharis_macularius1.jpg",
+        "credit": "Matt Reinbold · CC BY-SA 2.0",
+        "matched_name": "Eublepharis macularius"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36980051",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058194.1",
+      "organism_name": "Sphaerodactylus inigoi",
+      "common_name": "lizards & snakes",
+      "tax_id": 2608859,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3032.male.muscle",
+      "total_sequence_length": 1976794924,
+      "chromosome_count": 18,
+      "genus": "Sphaerodactylus",
+      "family": "Sphaerodactylidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Sphaerodactylus_inigoi_24995094.jpg/960px-Sphaerodactylus_inigoi_24995094.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Sphaerodactylus_inigoi_24995094.jpg",
+        "credit": "Sara Lovotti · CC BY 4.0",
+        "matched_name": "Sphaerodactylus inigoi"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36980041",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058193.1",
+      "organism_name": "Tarentola mauritanica",
+      "common_name": "Moorish gecko",
+      "tax_id": 8569,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3281.male.muscle",
+      "total_sequence_length": 2244857334,
+      "chromosome_count": 21,
+      "genus": "Tarentola",
+      "family": "Phyllodactylidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Moorish_Gecko_%28Tarentola_mauritanica%29%28found_by_Jean_NICOLAS%29_%2834844955103%29.jpg/960px-Moorish_Gecko_%28Tarentola_mauritanica%29%28found_by_Jean_NICOLAS%29_%2834844955103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Moorish_Gecko_(Tarentola_mauritanica)(found_by_Jean_NICOLAS)_(34844955103).jpg",
+        "credit": "Bernard DUPONT from FRANCE · CC BY-SA 2.0",
+        "matched_name": "Tarentola mauritanica"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979911",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26"
+      },
+      "group": "Animals",
+      "accession": "GCA_062058192.1",
+      "organism_name": "Phelsuma laticauda",
+      "common_name": "broad-tailed day gecko",
+      "tax_id": 143529,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3338.male.muscle",
+      "total_sequence_length": 1936819989,
+      "chromosome_count": 18,
+      "genus": "Phelsuma",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Phelsuma-laticauda-Saint-Denis.JPG/960px-Phelsuma-laticauda-Saint-Denis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Phelsuma-laticauda-Saint-Denis.JPG",
+        "credit": "Thierry Caro · CC BY-SA 3.0",
+        "matched_name": "Phelsuma laticauda"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979881",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26"
+      },
+      "group": "Animals",
+      "accession": "GCA_062058191.1",
+      "organism_name": "Paroedura stumpffi",
+      "common_name": "lizards & snakes",
+      "tax_id": 460146,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3286.female.muscle",
+      "total_sequence_length": 1874260831,
+      "chromosome_count": 19,
+      "genus": "Paroedura",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Paroedura_stumpffi_distribution.png/960px-Paroedura_stumpffi_distribution.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paroedura_stumpffi_distribution.png",
+        "credit": "compiled by rbrausse with Quantum GIS\nMap data: Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.\nRange data: Raxworthy, C.J. 2011. Paroedura stumpffi. In: IUCN 2012. IUCN Red List of Threatened Species. Version 2012.2. &lt;www.iucnredlist.org&gt;. Downloaded on 23 April 2013. · CC BY-SA 3.0",
+        "matched_name": "Paroedura stumpffi"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979811",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058190.1",
+      "organism_name": "Christinus marmoratus",
+      "common_name": "lizards & snakes",
+      "tax_id": 221556,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "CHMA-05.female.muscle",
+      "total_sequence_length": 2138900817,
+      "chromosome_count": 20,
+      "genus": "Christinus",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Christinus_marmoratus_%28Marbled_Gecko%29.jpg/960px-Christinus_marmoratus_%28Marbled_Gecko%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Christinus_marmoratus_(Marbled_Gecko).jpg",
+        "credit": "Michael Tan (Walkabout12 at en.wikipedia) · CC BY 1.0",
+        "matched_name": "Christinus marmoratus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979721",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058189.1",
+      "organism_name": "Gehyra insulensis",
+      "common_name": "lizards & snakes",
+      "tax_id": 3462650,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TG3530.female.muscle",
+      "total_sequence_length": 1933876475,
+      "chromosome_count": 21,
+      "genus": "Gehyra",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gehyra_mutil_050307_003_tdp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gehyra_mutil_050307_003_tdp.jpg",
+        "credit": "W.A. Djatmiko (Wie146) · CC BY-SA 3.0",
+        "matched_name": "Gehyra"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979791",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058188.1",
+      "organism_name": "Gekko japonicus",
+      "common_name": "lizards & snakes",
+      "tax_id": 146911,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "1-male.muscle",
+      "total_sequence_length": 2538668262,
+      "chromosome_count": 19,
+      "genus": "Gekko",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Gekko_japonicus.JPG/960px-Gekko_japonicus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gekko_japonicus.JPG",
+        "credit": "おむこさん志望 · CC BY 2.5",
+        "matched_name": "Gekko japonicus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979571",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062058185.1",
+      "organism_name": "Gallus gallus",
+      "common_name": "chicken",
+      "tax_id": 9031,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62058185v1",
+      "total_sequence_length": 1094088489,
+      "chromosome_count": 39,
+      "genus": "Gallus",
+      "family": "Phasianidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Red_jungle_fowl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Red_jungle_fowl.png",
+        "credit": "Subramanya C K · CC BY-SA 3.0",
+        "matched_name": "Gallus gallus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "36979051",
+        "group": "Plants",
+        "sequence_release_date": "2026-10-25",
+        "assembly_publication_date": "2026-10-26",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062058160.1",
+      "organism_name": "Metrosideros polymorpha var. incana",
+      "common_name": "eudicots",
+      "tax_id": 101979,
+      "release_date": "2026-10-25",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Mpolymrpha_incana.v1.1",
+      "total_sequence_length": 302766421,
+      "chromosome_count": 11,
+      "genus": "Metrosideros",
+      "family": "Myrtaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/MetrosiderosAK.jpg/960px-MetrosiderosAK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:MetrosiderosAK.jpg",
+        "credit": "Kahuroa · Public domain",
+        "matched_name": "Metrosideros"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -100405,11 +100792,15 @@
     },
     {
       "source_provenance": {
-        "group": "Plants",
         "sources": [
+          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false
+        "metadata_pending": false,
+        "assembly_uid": "34942741",
+        "group": "Plants",
+        "sequence_release_date": "2026-08-03",
+        "assembly_publication_date": "2026-08-04"
       },
       "group": "Plants",
       "accession": "GCA_059791555.1",
@@ -116905,11 +117296,15 @@
     },
     {
       "source_provenance": {
-        "group": "Plants",
         "sources": [
+          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false
+        "metadata_pending": false,
+        "assembly_uid": "34523461",
+        "group": "Plants",
+        "sequence_release_date": "2026-06-15",
+        "assembly_publication_date": "2026-07-06"
       },
       "group": "Plants",
       "accession": "GCA_984573655.1",
@@ -132483,11 +132878,15 @@
     },
     {
       "source_provenance": {
-        "group": "Animals",
         "sources": [
+          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false
+        "metadata_pending": false,
+        "assembly_uid": "34617381",
+        "group": "Animals",
+        "sequence_release_date": "2026-04-16",
+        "assembly_publication_date": "2026-07-09"
       },
       "group": "Animals",
       "accession": "GCA_982473555.1",
@@ -149462,15 +149861,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "32522731",
-        "group": "Plants",
-        "sequence_release_date": "2026-03-25",
-        "assembly_publication_date": "2026-03-25"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_056320005.1",
@@ -193054,48 +193449,46 @@
       "assembly_name": "GPE000450",
       "total_sequence_length": 1128514716,
       "chromosome_count": 12
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976984725.1",
-      "organism_name": "Macroglossum stellatarum",
-      "common_name": null,
-      "tax_id": 524428,
-      "release_date": "2025-10-21",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilMacStel1.hap1.1",
-      "total_sequence_length": 471972412,
-      "chromosome_count": 30
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_976980505.1",
-      "organism_name": "Stenosis austini",
-      "common_name": null,
-      "tax_id": 3229215,
-      "release_date": "2025-10-21",
-      "assembly_level": "Chromosome",
-      "assembly_name": "icSteAust9.1",
-      "total_sequence_length": 238605715,
-      "chromosome_count": 10
     }
   ],
   "annotations": {
     "in_progress": [
+      {
+        "species": "Oncorhynchus mykiss",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-26",
+        "assembly": "ASM5762802v1"
+      },
+      {
+        "species": "Phoenix dactylifera",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-22",
+        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1"
+      },
+      {
+        "species": "Pelodiscus sinensis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-19",
+        "assembly": "ASM5242630v1"
+      },
+      {
+        "species": "Ciona robusta",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-26",
+        "assembly": "ASM961781v2"
+      },
+      {
+        "species": "Canis aureus",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-23",
+        "assembly": "VMU_Caureus_v.1.1 (GCF_053574225.2)"
+      },
+      {
+        "species": "Jatropha curcas",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-21",
+        "assembly": "XTBG_Jcur_1.0 (GCF_041381405.1)"
+      },
       {
         "species": "Durio zibethinus",
         "status": "Automated processing in progress",
@@ -193103,10 +193496,16 @@
         "assembly": "ASM4732523v1"
       },
       {
-        "species": "Phoenix dactylifera",
+        "species": "Delphinapterus leucas",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-22",
-        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1"
+        "freeze_date": "2026-10-21",
+        "assembly": "BTC_Dleu_Yukka2"
+      },
+      {
+        "species": "Colias eurytheme",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-14",
+        "assembly": "ilColEury1 Martin Lab GWU primary"
       },
       {
         "species": "Bombyx mandarina",
@@ -193121,42 +193520,6 @@
         "assembly": "ASM2874904v1"
       },
       {
-        "species": "Colias eurytheme",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-14",
-        "assembly": "ilColEury1 Martin Lab GWU primary"
-      },
-      {
-        "species": "Canis aureus",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-23",
-        "assembly": "VMU_Caureus_v.1.1 (GCF_053574225.2)"
-      },
-      {
-        "species": "Jatropha curcas",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-21",
-        "assembly": "XTBG_Jcur_1.0"
-      },
-      {
-        "species": "Delphinapterus leucas",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-21",
-        "assembly": "BTC_Dleu_Yukka2"
-      },
-      {
-        "species": "Pelodiscus sinensis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-19",
-        "assembly": "ASM5242630v1"
-      },
-      {
-        "species": "Colias philodice",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-20",
-        "assembly": "ilColPhil1 Martin Lab GWU primary (GCF_061535455.1)"
-      },
-      {
         "species": "Sinohyriopsis cumingii",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-13",
@@ -193164,6 +193527,11 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Colias philodice",
+        "release_date": "2026-10-23",
+        "assembly": "ilColPhil1 Martin Lab GWU primary (GCF_061535455.1)"
+      },
       {
         "species": "Staurois parvus",
         "release_date": "2026-10-20",
@@ -193413,11 +193781,6 @@
         "species": "Taudactylus pleione",
         "release_date": "2026-09-15",
         "assembly": "aTauple2 (GCF_031769625.1)"
-      },
-      {
-        "species": "Hippichthys cyanospilos",
-        "release_date": "2026-09-14",
-        "assembly": "RoL_Hcya_1.0 (GCF_059441005.1)"
       }
     ]
   },
@@ -198683,6 +199046,13 @@
     "Sargassum hemiphyllum var. chinense": "2026-10-22",
     "Dermestes undulatus": "2026-10-22",
     "Colletotrichum fioriniae": "2026-10-22",
+    "Metrosideros polymorpha var. incana": "2026-10-25",
+    "Gekko japonicus": "2026-10-25",
+    "Gehyra insulensis": "2026-10-25",
+    "Christinus marmoratus": "2026-10-25",
+    "Paroedura stumpffi": "2026-10-25",
+    "Phelsuma laticauda": "2026-10-25",
+    "Sphaerodactylus inigoi": "2026-10-25",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -207742,6 +208112,72 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Aglaphenoia_sp.jpg",
       "credit": "This photo has been taken by Elapied and released under the licenses stated below. You are free to use it for any purpose as long as you credit me as author, Wikimedia Commons as site and follow the terms of the licenses. Could you be kind enough to leave me a message on this page to inform me about your use of this picture. · CC BY-SA 3.0",
       "matched_name": "Aglaophenia"
+    },
+    "Metrosideros polymorpha var. incana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/MetrosiderosAK.jpg/960px-MetrosiderosAK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:MetrosiderosAK.jpg",
+      "credit": "Kahuroa · Public domain",
+      "matched_name": "Metrosideros"
+    },
+    "Gekko japonicus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Gekko_japonicus.JPG/960px-Gekko_japonicus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gekko_japonicus.JPG",
+      "credit": "おむこさん志望 · CC BY 2.5",
+      "matched_name": "Gekko japonicus"
+    },
+    "Gehyra insulensis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gehyra_mutil_050307_003_tdp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gehyra_mutil_050307_003_tdp.jpg",
+      "credit": "W.A. Djatmiko (Wie146) · CC BY-SA 3.0",
+      "matched_name": "Gehyra"
+    },
+    "Christinus marmoratus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Christinus_marmoratus_%28Marbled_Gecko%29.jpg/960px-Christinus_marmoratus_%28Marbled_Gecko%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Christinus_marmoratus_(Marbled_Gecko).jpg",
+      "credit": "Michael Tan (Walkabout12 at en.wikipedia) · CC BY 1.0",
+      "matched_name": "Christinus marmoratus"
+    },
+    "Paroedura stumpffi": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Paroedura_stumpffi_distribution.png/960px-Paroedura_stumpffi_distribution.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Paroedura_stumpffi_distribution.png",
+      "credit": "compiled by rbrausse with Quantum GIS\nMap data: Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com.\nRange data: Raxworthy, C.J. 2011. Paroedura stumpffi. In: IUCN 2012. IUCN Red List of Threatened Species. Version 2012.2. &lt;www.iucnredlist.org&gt;. Downloaded on 23 April 2013. · CC BY-SA 3.0",
+      "matched_name": "Paroedura stumpffi"
+    },
+    "Phelsuma laticauda": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Phelsuma-laticauda-Saint-Denis.JPG/960px-Phelsuma-laticauda-Saint-Denis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phelsuma-laticauda-Saint-Denis.JPG",
+      "credit": "Thierry Caro · CC BY-SA 3.0",
+      "matched_name": "Phelsuma laticauda"
+    },
+    "Tarentola mauritanica": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Moorish_Gecko_%28Tarentola_mauritanica%29%28found_by_Jean_NICOLAS%29_%2834844955103%29.jpg/960px-Moorish_Gecko_%28Tarentola_mauritanica%29%28found_by_Jean_NICOLAS%29_%2834844955103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Moorish_Gecko_(Tarentola_mauritanica)(found_by_Jean_NICOLAS)_(34844955103).jpg",
+      "credit": "Bernard DUPONT from FRANCE · CC BY-SA 2.0",
+      "matched_name": "Tarentola mauritanica"
+    },
+    "Sphaerodactylus inigoi": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Sphaerodactylus_inigoi_24995094.jpg/960px-Sphaerodactylus_inigoi_24995094.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sphaerodactylus_inigoi_24995094.jpg",
+      "credit": "Sara Lovotti · CC BY 4.0",
+      "matched_name": "Sphaerodactylus inigoi"
+    },
+    "Eublepharis macularius": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Eublepharis_macularius1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Eublepharis_macularius1.jpg",
+      "credit": "Matt Reinbold · CC BY-SA 2.0",
+      "matched_name": "Eublepharis macularius"
+    },
+    "Correlophus ciliatus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Correlophus_ciliatus_33606417.jpg/960px-Correlophus_ciliatus_33606417.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Correlophus_ciliatus_33606417.jpg",
+      "credit": "Lennart Hudel · CC BY 4.0",
+      "matched_name": "Correlophus ciliatus"
+    },
+    "Glycine max": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Soybean.USDA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Soybean.USDA.jpg",
+      "credit": "Public domain",
+      "matched_name": "Glycine max"
     }
   },
   "taxonomy_cache": {
@@ -214895,13 +215331,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3700093": {},
-    "3405230": {},
-    "3451521": {},
-    "3465513": {},
-    "3256806": {},
-    "3451525": {},
-    "3451528": {},
     "401953": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "hydrozoans",
@@ -214910,7 +215339,113 @@
       "family": "Aglaopheniidae",
       "phylum": "Cnidaria",
       "kingdom": "Metazoa"
-    }
+    },
+    "3700093": {},
+    "3405230": {},
+    "101979": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Metrosideros",
+      "family": "Myrtaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "146911": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Gekko",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3462650": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Gehyra",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "221556": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Christinus",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "460146": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Paroedura",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "143529": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "broad-tailed day gecko",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Phelsuma",
+      "family": "Gekkonidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "8569": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Moorish gecko",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Tarentola",
+      "family": "Phyllodactylidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "2608859": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Sphaerodactylus",
+      "family": "Sphaerodactylidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "481883": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "lizards & snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Eublepharis",
+      "family": "Eublepharidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "143539": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "crested gecko",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Correlophus",
+      "family": "Diplodactylidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3847": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "soybean",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Glycine",
+      "family": "Fabaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3451521": {},
+    "3465513": {},
+    "3256806": {},
+    "3451525": {},
+    "3451528": {}
   },
   "assembly_sources": {
     "overlapping_or_superseded_rows_removed": 1296,
@@ -214941,14 +215476,14 @@
         "datasets_date": "2013-03-18"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/26\"[GRLS]:\"2026/10/26\"[GRLS] OR \"2026/09/26\"[SRDT]:\"2026/10/26\"[SRDT] OR \"2026/09/26\"[UPDT]:\"2026/10/26\"[UPDT])",
-    "matched_uids": 1374,
-    "held_uids_rechecked": 81,
-    "generated_at": "2026-10-26T10:06:41.603590+00:00",
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/09/27\"[GRLS]:\"2026/10/27\"[GRLS] OR \"2026/09/27\"[SRDT]:\"2026/10/27\"[SRDT] OR \"2026/09/27\"[UPDT]:\"2026/10/27\"[UPDT])",
+    "matched_uids": 1386,
+    "held_uids_rechecked": 82,
+    "generated_at": "2026-10-27T09:49:14.219468+00:00",
     "datasets_rows": 19196,
-    "assembly_index_rows": 1374,
-    "merged_assemblies": 19274,
-    "unique_accession_stems": 19274,
+    "assembly_index_rows": 1386,
+    "merged_assemblies": 19286,
+    "unique_accession_stems": 19286,
     "pending_metadata_accessions": [
       "GCA_062052847.1",
       "GCA_062053291.1",
@@ -214965,6 +215500,18 @@
       "GCA_062053391.1",
       "GCA_062053534.1",
       "GCA_062055664.1",
+      "GCA_062058160.1",
+      "GCA_062058185.1",
+      "GCA_062058188.1",
+      "GCA_062058189.1",
+      "GCA_062058190.1",
+      "GCA_062058191.1",
+      "GCA_062058192.1",
+      "GCA_062058193.1",
+      "GCA_062058194.1",
+      "GCA_062058195.1",
+      "GCA_062058196.1",
+      "GCA_062058197.1",
       "GCA_982298635.1",
       "GCA_985608535.3",
       "GCA_985610605.3",
@@ -215123,6 +215670,78 @@
         "species": "Elaeagnus mollis",
         "release_date": "2026-10-23",
         "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058160.1",
+        "species": "Metrosideros polymorpha var. incana",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058185.1",
+        "species": "Gallus gallus",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058188.1",
+        "species": "Gekko japonicus",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058189.1",
+        "species": "Gehyra insulensis",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058190.1",
+        "species": "Christinus marmoratus",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058191.1",
+        "species": "Paroedura stumpffi",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058192.1",
+        "species": "Phelsuma laticauda",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058193.1",
+        "species": "Tarentola mauritanica",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058194.1",
+        "species": "Sphaerodactylus inigoi",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058195.1",
+        "species": "Eublepharis macularius",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058196.1",
+        "species": "Correlophus ciliatus",
+        "release_date": "2026-10-25",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062058197.1",
+        "species": "Glycine max",
+        "release_date": "2026-10-25",
+        "level": "Complete Genome"
       },
       {
         "accession": "GCA_982298635.1",
@@ -215527,6 +216146,6 @@
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19273
+    "previous_dashboard_assemblies": 19274
   }
 }
