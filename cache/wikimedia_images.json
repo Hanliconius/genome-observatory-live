@@ -3334,5 +3334,23 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Soybean.USDA.jpg",
     "credit": "Public domain",
     "matched_name": "Glycine max"
+  },
+  "Sarcophaga bullata": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Sarcophaga_bullata.jpg/960px-Sarcophaga_bullata.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Sarcophaga_bullata.jpg",
+    "credit": "0'.12.1.0.N \u00b7 Public domain",
+    "matched_name": "Sarcophaga bullata"
+  },
+  "Selaginella orientalichinensis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Selaginella-sp.jpg/960px-Selaginella-sp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Selaginella-sp.jpg",
+    "credit": "L. Fdez. \u00b7 CC BY-SA 2.1 es",
+    "matched_name": "Selaginella"
+  },
+  "Psidium guajava": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Psidium_guajava_fruit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Psidium_guajava_fruit.jpg",
+    "credit": "CC BY-SA 3.0",
+    "matched_name": "Psidium guajava"
   }
 }
