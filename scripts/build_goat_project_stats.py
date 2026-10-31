@@ -245,8 +245,6 @@ def assemble(reports, projects, taxonomy):
             novelty = 'upgrade'
         elif earlier['date'] < day:
             novelty = 'upgrade' if (historical.get('first_lower') or {}).get('date', '9999') < day else 'earlier_high_level'
-        elif (historical.get('first_lower') or {}).get('date') == day:
-            novelty = 'unknown'
         else:
             novelty = 'first_ever'
         result.append({'accession': r['accession'], 'date': info['release_date'][:10],
@@ -264,6 +262,7 @@ def assemble(reports, projects, taxonomy):
             'novelty': novelty, 'earliest_all_level': earlier or None,
             'earliest_lower_level': historical.get('first_lower'),
             'same_stem_upgrade': same_stem_upgrade,
+            'same_day_lower': (historical.get('first_lower') or {}).get('date') == day,
             'project_metadata': p in projects, 'publications': bp.get('publications', []),
             'owner': bs.get('owner', {}).get('name', ''), 'sra_centres': centre_names,
             'parent_projects': sorted(set(lineage) - {p})})

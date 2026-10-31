@@ -29,7 +29,7 @@ first chromosome-scale genome with an earlier scaffold/contig reference, additio
 assembly, and unresolved history. A separate overlapping flag identifies current
 accessions with an older scaffold/contig version under the same accession stem.
 A same-date older version establishes version ordering; unrelated same-date lower-
-level records do not establish ordering. Earlier historical chromosome assemblies
+level records share the first species-release cohort without establishing within-day priority. Earlier historical chromosome assemblies
 prevent calling a later assembly the first chromosome-scale reference.
 
 These are record-based operational definitions, not a complete bibliographic
