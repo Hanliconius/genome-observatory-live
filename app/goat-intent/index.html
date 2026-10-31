@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1b22">
-  <title>GoaT intent timeline · Genome Observatory</title>
+  <title>GoaT research preview · Genome Observatory</title>
   <link rel="stylesheet" href="../styles.css">
   <style>
-    body{max-width:1180px;margin:auto;padding:24px;color:#e9f1f3;background:#0d1b22;font-family:system-ui,sans-serif}
+    h1{font-size:2.2rem;line-height:1.15}body{max-width:1180px;margin:auto;padding:24px;color:#e9f1f3;background:#0d1b22;font-family:system-ui,sans-serif}
     a{color:#8bd5ca}.intro{max-width:850px;color:#c1d0d4;line-height:1.55}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:24px 0}
     .card,.panel{background:#142830;border:1px solid #29424a;border-radius:14px;padding:18px}.label{font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:#9ab1b8}
     .value{font-size:2rem;font-weight:700;margin:.25rem 0}.panel{margin:18px 0}.bars{height:250px;display:flex;align-items:end;gap:8px;border-bottom:1px solid #45616a;padding:14px 8px 0;overflow-x:auto}
@@ -15,16 +15,58 @@
     .note{font-size:.88rem;color:#aebfc4;line-height:1.5}.table{width:100%;border-collapse:collapse;margin-top:12px}.table th,.table td{text-align:left;border-bottom:1px solid #29424a;padding:9px;font-size:.88rem}.scroll{overflow:auto}
     .timeline-chart svg{display:block;width:100%;min-width:720px;height:auto}.timeline-chart{overflow-x:auto}.legend{display:flex;gap:18px;flex-wrap:wrap;color:#b9c9cd;font-size:.82rem;margin:6px 8px}.legend i{display:inline-block;width:14px;height:4px;vertical-align:middle;margin-right:6px;border-radius:3px}.mint{background:#65c9b0}.gold{background:#f1c978}.lag-chart{display:grid;gap:11px;margin:18px 0}.lag-row{display:grid;grid-template-columns:120px 1fr 55px;gap:12px;align-items:center;color:#c1d0d4;font-size:.86rem}.lag-track{height:12px;background:#203941;border-radius:8px;overflow:hidden}.lag-track i{display:block;height:100%;background:#65c9b0;border-radius:8px}.lag-row b{text-align:right;color:#e9f1f3}
     .view-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 10px}.view-toggle button{color:#d8e5e8;background:#203941;border:1px solid #45616a;border-radius:7px;padding:8px 12px;cursor:pointer;font:inherit}.view-toggle button[aria-pressed="true"]{background:#65c9b0;color:#0d1b22;border-color:#65c9b0;font-weight:650}.cohort-chart{overflow-x:auto}.cohort-chart svg{display:block;width:100%;min-width:760px;height:auto}
+  .project-controls{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin:18px 0}.project-controls label{display:grid;gap:6px;font-size:.8rem;color:#b9c9cd}.project-controls select,.project-controls input,.project-controls button{max-width:100%;background:#203941;color:#e9f1f3;border:1px solid #45616a;border-radius:7px;padding:9px;font:inherit}.project-controls input{min-width:290px}.project-chart{overflow-x:auto}.project-chart svg{display:block;width:100%;min-width:650px;height:auto}.project-grid{display:grid;grid-template-columns:1fr;gap:10px}.project-grid>div{min-width:0}details{margin:20px 0}summary{cursor:pointer;color:#8bd5ca}.project-controls button{cursor:pointer}@media(max-width:850px){.project-grid{grid-template-columns:1fr}.project-controls label{width:100%}.project-chart svg{min-width:650px}}
   </style>
 </head>
 <body>
   <p class="label">Genome Observatory · research preview</p>
-  <h1>GoaT sequencing intent over time</h1>
-  <p class="intro">Archived GoaT releases show how direct sample and sequencing-work declarations changed over time; daily captures will extend the record from October 2026 onward. Counts are taxon × declaration field × project combinations, not counts of genomes or proof of when a project first announced its plans.</p>
+  <h1>GoaT intent &amp; genome-producing efforts</h1>
+  <p class="intro">Research drafts exploring who produces NCBI genomes, how species first gain reference assemblies, and how those releases relate to sequencing intent recorded in GoaT. The NCBI provenance plots below are a dated snapshot; the existing intent tracker follows archived releases and daily captures.</p>
+  <section id="project-stats" class="panel">
+  <p class="label">Draft · NCBI project provenance</p>
+  <h2>Who is producing the genomes?</h2>
+  <p class="note">Programme membership, institutional identity and observed project output are different signals. These plots keep them separate: a small BioProject is a candidate for a focused team effort, not proof of one. <a href="#project-methods">Definitions and sources</a> · <a href="#intent-history">GoaT intent timelines ↓</a></p>
+  <div id="project-status" class="note" aria-live="polite">Loading NCBI provenance snapshot…</div>
+  <div class="project-controls">
+    <label>Genome contribution<select id="project-novelty"><option value="all">All qualifying assemblies</option><option value="first_ever">First-ever genome for species</option><option value="upgrade">First chromosome-scale; earlier scaffold/contig</option><option value="additional">Additional genome for represented species</option><option value="same_stem_upgrade">Scaffold/contig → chromosome revision, same accession</option><option value="first_qualifying">First qualifying assembly per species</option><option value="unknown">Historical context unresolved</option></select></label>
+    <label>Organisms<select id="project-organisms"><option value="all">All eukaryotes</option><option>Animals</option><option>Plants</option><option>Fungi</option><option>Other eukaryotes</option></select></label>
+    <label>Low-output threshold<select id="project-threshold"><option value="1">≤1 species / BioProject</option><option value="5" selected>≤5 species / BioProject</option><option value="10">≤10 species / BioProject</option><option value="20">≤20 species / BioProject</option></select></label>
+    <label>Annual display<select id="project-mode"><option value="count">Assembly counts</option><option value="share">Share within year</option></select></label>
+  </div>
+  <div id="project-cards" class="cards"></div>
+  <div id="project-key" class="legend"></div>
+  <h3>Contributions through time</h3>
+  <div id="project-annual" class="project-chart"></div>
+  <p class="note">One current accession stem per assembly; GenBank/RefSeq pairs and older versions are not added to the totals. The latest calendar year is year to date. Reported release dates can predate a revision: this chart does not date the moment an assembly reached chromosome scale. Display groups use the evidence precedence below; overlapping signals remain available in the evidence plot and record table.</p>
+  <h3>First genomes, upgrades and additional assemblies</h3>
+  <div id="project-novelty-chart" class="project-chart"></div>
+  <p class="note">Each row is a separate denominator, divided by project evidence. Same-day additional assemblies are not each counted as a first species genome. The same-accession revision flag is an overlapping signal, not another assembly added to the total.</p>
+  <div class="project-grid">
+    <div><h3>Observed BioProject footprint</h3><div id="project-footprint" class="project-chart"></div><p class="note">Assemblies grouped by the number of distinct species associated with their direct BioProject across all-level Full GenBank eukaryote assemblies, including replaced records. Umbrella fragmentation can still make a large programme appear small.</p></div>
+    <div><h3>Overlapping evidence</h3><div id="project-evidence" class="project-chart"></div><p class="note">Labels overlap, so these bars must not be added together. An SRA centre or assembly submitter can be a service provider rather than the scientific lead.</p></div>
+  </div>
+  <div class="project-grid">
+    <div><h3>Grants: observed species footprint</h3><div id="project-grants" class="project-chart"></div><p class="note" id="project-grant-note"></p></div>
+    <div><h3>Research / low-output candidates</h3><div id="project-institutions" class="project-chart"></div><p class="note">Top 10 submitter strings by distinct species meeting the candidate rule. Case and punctuation are normalised; departments and institutional aliases are not comprehensively merged. A university can contain many independent labs.</p></div>
+  </div>
+  <details id="project-methods"><summary>Definitions, limitations and source coverage</summary>
+    <div id="project-methods-text" class="note"></div>
+    <p class="note"><strong>First-ever:</strong> one representative of the earliest qualifying assembly per NCBI species, with no earlier dated Full GenBank genome at any assembly level found in the current/replaced summaries. <strong>Upgrade:</strong> the first qualifying assembly when an earlier scaffold/contig assembly exists for that species; it may be a new accession, not a revision. <strong>Additional:</strong> other qualifying assemblies, including same-day companions and species with earlier historical chromosome assemblies. Same-date chromosome assembly ties are resolved by accession for counting only, not as a claim of priority. A lower-level assembly on the same date is part of the first-release cohort: within-day priority is unresolved. An older version of the same accession instead establishes an upgrade.</p>
+    <p class="note">The historical check is restricted to this research preview. The main Observatory still uses its existing chromosome/complete inventory and counters. Suppressed and Partial assemblies are excluded from historical context. Dates are the public release dates reported by NCBI; historical summaries do not establish the date every assembly first reached a particular quality level. Taxonomic reassignments and unavailable records can leave gaps.</p>
+    <p class="note"><strong>Display precedence:</strong> explicit named programme evidence in a linked BioProject title/description or submitter → selected production-centre submitter → research-institution submitter with direct BioProject output below the chosen threshold → other/unresolved. No programme match means “not identified”, not “independent”. Production-centre attribution does not establish who led or funded the work.</p>
+    <p class="note">Funding is optional and linked papers are incompletely recorded. Institution types are inferred from submitter-name patterns (university/college, institute/academy/laboratory, museum/botanic garden, or company suffix), and can overlap. Grant footprints are lower bounds within the enriched chromosome-scale inventory, not a grant’s total output. Grants are matched by agency plus identifier. We have not yet extracted publication authors/affiliations or verified individual lab leadership. GoaT intent tags are not used to classify the NCBI production effort.</p>
+  </details>
+  <details><summary>Inspect the evidence for individual assemblies</summary>
+    <div class="project-controls"><label>Search species, project or submitter<input id="project-search" type="search" placeholder="e.g. Heliconius, Genoscope, PRJNA…"></label><button id="project-export" type="button">Download filtered evidence CSV</button></div>
+    <p id="project-table-summary" class="note"></p><div class="scroll"><table class="table"><thead><tr><th>Species / assembly</th><th>Contribution</th><th>Project evidence</th><th>Direct BioProject</th><th>Submitter / roles</th></tr></thead><tbody id="project-records"></tbody></table></div>
+  </details>
+</section>
+
+  <h2 id="intent-history">GoaT sequencing intent over time</h2>
   <div id="status" class="note">Loading tracker…</div>
   <section class="cards" id="cards"></section>
   <section class="panel"><h2>GoaT intent declarations across archived releases</h2><div id="chart" class="timeline-chart" role="img" aria-label="New direct GoaT intent declarations and active declarations across archived releases"></div><p class="note">Bars show taxon × declaration field × project combinations newly present since the previous snapshot; the line shows declarations present at each checkpoint. Dots are archive checkpoints, not exact announcement dates. GoaT archives are irregularly spaced, so a large interval can combine additions from months between snapshots.</p></section>
-  <section class="panel"><h2>From observed intent to first publication</h2><p class="note">Time from intent to release is on the horizontal axis; GoaT intent year is on the vertical axis. Each point is one taxon with a definite post-intent first assembly. The box shows the median and middle half of estimated waits; whiskers show the non-outlier range, and faint points show individual taxa.</p><div id="connector-summary" class="cards"></div><div class="view-toggle" role="group" aria-label="Filter release-lag chart by project group"><button data-group="all" type="button" aria-pressed="true">All</button><button data-group="consortia" type="button" aria-pressed="false">Consortia</button><button data-group="small_groups_proxy" type="button" aria-pressed="false">Small groups</button></div><div id="cohort-chart" class="cohort-chart" role="img" aria-label="Scatter and box-and-whisker plot of estimated time from GoaT intent observation to first NCBI release, by intent year"></div><p class="note">Waits use the midpoint of each archived observation window; thin vertical marks show the possible wait range when both bounds are known. The earliest archive is left-censored, so those waits are minimum estimates. “Small groups” is a proxy for taxa with one project tag that is not mapped to a named consortium or institutional programme; it does not verify team size. Mixed or institutional tags stay in All and are omitted from the comparison tabs. Each taxon is counted once.</p></section>
+  <section class="panel"><h2>From observed intent to first publication</h2><p class="note">Time from intent to release is on the horizontal axis; GoaT intent year is on the vertical axis. Each point is one taxon with a definite post-intent first assembly. The box shows the median and middle half of estimated waits; whiskers show the non-outlier range, and faint points show individual taxa.</p><div id="connector-summary" class="cards"></div><div class="view-toggle" role="group" aria-label="Filter release-lag chart by project group"><button data-group="all" type="button" aria-pressed="true">All</button><button data-group="consortia" type="button" aria-pressed="false">Consortia</button><button data-group="small_groups_proxy" type="button" aria-pressed="false">Small groups</button></div><div id="cohort-chart" class="cohort-chart" role="img" aria-label="Scatter and box-and-whisker plot of estimated time from GoaT intent observation to first NCBI release, by intent year"></div><p class="note">Waits use the midpoint of each archived observation window; thin horizontal marks show the possible wait range when both bounds are known. The earliest archive is left-censored, so those waits are minimum estimates. “Small groups” is a proxy for taxa with one project tag that is not mapped to a named consortium or institutional programme; it does not verify team size. Mixed or institutional tags stay in All and are omitted from the comparison tabs. Each taxon is counted once.</p></section>
   <section class="panel"><h2>Observed declaration-to-assembly time</h2><div id="lag-summary" class="cards"></div><div id="lag-chart" class="lag-chart" role="img" aria-label="Distribution of minimum waits from first GoaT observation to first qualifying NCBI release"></div><p class="note">For archived declarations, these are minimum waits: GoaT may have received them any time after the last absent snapshot and by the first present snapshot. Daily captures will usually narrow that window to the dates between consecutive successful polls. Taxa without a qualifying release by the latest inventory remain open and are not treated as completed waits.</p></section>
   <script>
   const timelineFetch=fetch('../../data/goat_intent_timeline.json').then(r=>{if(!r.ok)throw Error('Timeline data is not available yet');return r.json()});
@@ -71,7 +113,7 @@
       const boxes=activeYears.map((yr,i)=>{
         const g=rows.filter(r=>r.year===yr), vals=g.map(r=>r.lag), q1=quantile(vals,.25), med=quantile(vals,.5), q3=quantile(vals,.75), iqr=q3-q1;
         const wl=Math.min(...vals.filter(v=>v>=q1-1.5*iqr)), wh=Math.max(...vals.filter(v=>v<=q3+1.5*iqr)), cy=rowY(i), boxH=24, c=colors[key];
-        const points=g.map(r=>{let h=0;for(const ch of (r.taxon_id||r.name))h=(h*31+ch.charCodeAt(0))|0;const jitter=((Math.abs(h)%1000)/999-.5)*boxH*.78;const low=Number.isFinite(r.lag_min_days)?r.lag_min_days/86400/monthDays:null,high=Number.isFinite(r.lag_max_days)?r.lag_max_days/86400/monthDays:null;const range=low!==null&&high!==null?`<line x1="${x(low)}" y1="${cy+jitter}" x2="${x(high)}" y2="${cy+jitter}" stroke="#9ab1b8" stroke-width=".55" opacity=".45"/>`:'';return `<g><title>${r.name}\nGoaT observed: ${r.intent_interval_start||'before earliest archive'} to ${r.intent_date}\nEstimated midpoint wait: ${r.lag.toFixed(1)} months\nFirst qualifying NCBI assembly: ${r.publication_date}</title>${range}<circle cx="${x(r.lag)}" cy="${cy+jitter}" r="2.1" fill="${c}" opacity=".27"/></g>`;}).join('');
+        const points=g.map(r=>{let h=0;for(const ch of (r.taxon_id||r.name))h=(h*31+ch.charCodeAt(0))|0;const jitter=((Math.abs(h)%1000)/999-.5)*boxH*.78;const low=Number.isFinite(r.lag_min_days)?r.lag_min_days/monthDays:null,high=Number.isFinite(r.lag_max_days)?r.lag_max_days/monthDays:null;const range=low!==null&&high!==null?`<line x1="${x(low)}" y1="${cy+jitter}" x2="${x(high)}" y2="${cy+jitter}" stroke="#9ab1b8" stroke-width=".55" opacity=".45"/>`:'';return `<g><title>${r.name}\nGoaT observed: ${r.intent_interval_start||'before earliest archive'} to ${r.intent_date}\nEstimated midpoint wait: ${r.lag.toFixed(1)} months\nFirst qualifying NCBI assembly: ${r.publication_date}</title>${range}<circle cx="${x(r.lag)}" cy="${cy+jitter}" r="2.1" fill="${c}" opacity=".27"/></g>`;}).join('');
         return `<g><title>${yr}: ${g.length} taxa\nMedian wait ${med.toFixed(1)} months\nMiddle half ${q1.toFixed(1)}–${q3.toFixed(1)} months</title><text x="${L-14}" y="${cy+4}" text-anchor="end" fill="#c1d0d4" font-size="12">${yr}</text>${points}<line x1="${x(wl)}" y1="${cy}" x2="${x(wh)}" y2="${cy}" stroke="#e9f1f3" stroke-width="1.5"/><line x1="${x(wl)}" y1="${cy-boxH*.18}" x2="${x(wl)}" y2="${cy+boxH*.18}" stroke="#e9f1f3"/><line x1="${x(wh)}" y1="${cy-boxH*.18}" x2="${x(wh)}" y2="${cy+boxH*.18}" stroke="#e9f1f3"/><rect x="${x(q1)}" y="${cy-boxH/2}" width="${Math.max(1,x(q3)-x(q1))}" height="${boxH}" fill="${c}" fill-opacity=".72" stroke="#e9f1f3"/><line x1="${x(med)}" y1="${cy-boxH/2}" x2="${x(med)}" y2="${cy+boxH/2}" stroke="#0d1b22" stroke-width="2"/><text x="${W-R}" y="${cy+4}" text-anchor="end" fill="#aebfc4" font-size="10">n=${g.length.toLocaleString()}</text></g>`;
       }).join('');
       chart.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${rows.length.toLocaleString()} taxa; estimated wait in months is on the horizontal axis, grouped by intent year">${grid.join('')}<line x1="${L}" y1="${T}" x2="${L}" y2="${H-B}" stroke="#45616a"/><line x1="${L}" y1="${H-B}" x2="${W-R}" y2="${H-B}" stroke="#45616a"/>${boxes}<text x="${L+PW/2}" y="${H-8}" text-anchor="middle" fill="#9ab1b8" font-size="12">Estimated intent-to-release wait (months)</text></svg><p class="note">${rows.length.toLocaleString()} taxa shown · median ${quantile(rows.map(r=>r.lag),.5).toFixed(1)} months · each point is one taxon</p>`;
@@ -85,5 +127,96 @@
     document.querySelector('#lag-chart').innerHTML=bins.map(x=>`<div class="lag-row"><span>${x.range}</span><div class="lag-track"><i style="width:${100*(x.count||0)/maxBin}%"></i></div><b>${(x.count||0).toLocaleString()}</b></div>`).join('');
   }).catch(e=>document.querySelector('#status').textContent=e.message);
   </script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt = n => n.toLocaleString();
+  const defs = [
+    {key:'programme', label:'Explicit programme link', color:'#65c9b0'},
+    {key:'centre', label:'Production-centre submitter', color:'#7baee3'},
+    {key:'candidate', label:'Research institution + low-output project', color:'#f1c978'},
+    {key:'unresolved', label:'Other / unresolved', color:'#8e9fa7'}
+  ];
+  let payload, filtered = [], tableRows = [];
+  const bucketFor = r => r.programme_labels.length ? 'programme' : r.production_labels.length ? 'centre' : r.research_submitter && r.project_species != null && r.project_species <= +$('project-threshold').value ? 'candidate' : 'unresolved';
+  const noveltyOf = r => r.novelty === 'earlier_high_level' ? 'additional' : r.novelty;
+  const noveltyNames = {first_ever:'First-ever genome',upgrade:'First chromosome-scale; older lower-level genome',additional:'Additional assembly',unknown:'Historical context unresolved'};
+  function svg(content,w,h,label) {return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">${content}</svg>`;}
+  function horizontal(items,{stack=false,share=false,label='Assembly counts',left=285}={}) {
+    if(!items.length) return '<p class="note">No records meet these filters.</p>';
+    const W=960,L=left,R=95,T=10,H=items.length*36+48,PW=W-L-R,max=share?1:Math.max(1,...items.map(x=>x.count));
+    let content='';
+    for(let i=0;i<items.length;i++) {
+      const row=items[i], y=T+i*36;
+      content+=`<text x="${L-10}" y="${y+15}" text-anchor="end" fill="#c1d0d4" font-size="12">${esc(row.label)}</text>`;
+      let x=L;
+      const series=stack?defs.map(d=>({count:row.parts[d.key]||0,...d})):[{count:row.count,color:'#65c9b0',label:row.label}];
+      for(const part of series) {
+        const value=share?(row.count?part.count/row.count:0):part.count,w=PW*value/max;
+        content+=`<rect x="${x}" y="${y}" width="${w}" height="22" fill="${part.color}"><title>${esc(row.label)} · ${esc(part.label)}: ${fmt(part.count)}${row.count?' ('+(100*part.count/row.count).toFixed(1)+'%)':''}</title></rect>`;
+        x+=w;
+      }
+      content+=`<text x="${W-R+10}" y="${y+15}" fill="#c1d0d4" font-size="12">${fmt(row.count)}</text>`;
+    }
+    content+=`<line x1="${L}" y1="${H-25}" x2="${W-R}" y2="${H-25}" stroke="#45616a"/><text x="${L}" y="${H-8}" fill="#9ab1b8" font-size="11">0</text><text x="${W-R}" y="${H-8}" text-anchor="end" fill="#9ab1b8" font-size="11">${share?'100%':fmt(max)}</text>`;
+    return svg(content,W,H,label);
+  }
+  function grouped(rows,keys,keyFn) {
+    return keys.map(([key,label])=>{const g=rows.filter(r=>keyFn(r)===key),parts={};for(const r of g)parts[bucketFor(r)]=(parts[bucketFor(r)]||0)+1;return {label,count:g.length,parts};});
+  }
+  function renderAnnual(rows) {
+    const years=[...new Set(payload.records.map(r=>r.date.slice(0,4)))].sort(), mode=$('project-mode').value;
+    const totals=years.map(year=>rows.filter(r=>r.date.startsWith(year))),max=mode==='share'?100:Math.max(1,...totals.map(r=>r.length));
+    const W=960,H=310,L=64,R=20,T=18,B=62,PW=W-L-R,PH=H-T-B,step=PW/years.length,bw=Math.min(26,step*.8);
+    let s='';
+    for(let t=0;t<=4;t++){const v=max*t/4,y=T+PH*(1-t/4);s+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#29424a"/><text x="${L-8}" y="${y+4}" text-anchor="end" fill="#9ab1b8" font-size="11">${mode==='share'?v+'%':fmt(Math.round(v))}</text>`;}
+    years.forEach((year,i)=>{let y=T+PH;const x=L+step*(i+.5)-bw/2,g=totals[i];for(const d of defs){const count=g.filter(r=>bucketFor(r)===d.key).length, value=mode==='share'?(g.length?100*count/g.length:0):count,h=PH*value/max;y-=h;s+=`<rect x="${x}" y="${y}" width="${bw}" height="${h}" fill="${d.color}"><title>${year}${year===new Date(payload.generated_at).getFullYear().toString()?' YTD':''} · ${d.label}: ${fmt(count)} / ${fmt(g.length)} (${g.length?(100*count/g.length).toFixed(1):0}%)</title></rect>`;}s+=`<text transform="translate(${x+bw/2},${H-B+15}) rotate(-45)" text-anchor="end" fill="#aebfc4" font-size="10">${year}</text>`;});
+    s+=`<text x="${L+PW/2}" y="${H-5}" text-anchor="middle" fill="#9ab1b8" font-size="12">NCBI reported release year · latest year is YTD</text>`;
+    $('project-annual').innerHTML=svg(s,W,H,'Annual assembly contributions by project evidence, '+mode);
+  }
+  function renderTable() {
+    const q=$('project-search').value.toLowerCase();
+    tableRows=filtered.filter(r=>[r.species,r.accession,r.submitter,r.bioproject,r.project_title,...r.programme_labels].join(' ').toLowerCase().includes(q)).sort((a,b)=>b.date.localeCompare(a.date)||a.accession.localeCompare(b.accession));
+    $('project-table-summary').textContent=`${fmt(tableRows.length)} matching assemblies; showing the first 60. CSV includes every matching record.`;
+    $('project-records').innerHTML=tableRows.slice(0,60).map(r=>`<tr><td><em>${esc(r.species)}</em><br><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/${esc(r.accession)}/" target="_blank" rel="noopener">${esc(r.accession)}</a><br>${esc(r.date)}</td><td>${esc(noveltyNames[noveltyOf(r)])}${r.same_stem_upgrade?'<br><strong>Same-accession level upgrade</strong>':r.same_day_lower?'<br><span class="note">Lower-level genome also released this day</span>':''}${r.earliest_all_level?'<br><span class="note">Earlier context: '+esc(r.earliest_all_level.level)+' · '+esc(r.earliest_all_level.date)+' · '+esc(r.earliest_all_level.accession)+'</span>':''}</td><td>${esc(defs.find(d=>d.key===bucketFor(r)).label)}<br>${r.programme_evidence.map(e=>esc(e.label)+' · <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/'+(e.source.startsWith('PRJ')?'bioproject/':'datasets/genome/')+esc(e.source)+'/">'+esc(e.source)+'</a> ('+esc(e.field)+')').join('<br>')}${r.grants.length?'<br>Grants: '+r.grants.map(g=>esc(g.agency+' '+g.id)).join('; '):''}</td><td>${r.bioproject?'<a href="https://www.ncbi.nlm.nih.gov/bioproject/'+esc(r.bioproject)+'/" target="_blank" rel="noopener">'+esc(r.bioproject)+'</a>':'Missing'}<br>${esc(r.project_title)}<br>${r.project_species==null?'Unknown':fmt(r.project_species)} species at all levels</td><td>${esc(r.submitter||'Missing')}<br><span class="note">Institution clues: ${esc(r.institution_types.join('; ')||'Unresolved')}<br>BioSample owner: ${esc(r.owner||'Not recorded')}<br>SRA centre: ${esc(r.sra_centres.join('; ')||'Not cached')}</span></td></tr>`).join('');
+  }
+  function render() {
+    const novelty=$('project-novelty').value,organisms=$('project-organisms').value;
+    filtered=payload.records.filter(r=>(organisms==='all'||r.group===organisms)&&(novelty==='all'||(novelty==='same_stem_upgrade'?r.same_stem_upgrade:novelty==='first_qualifying'?r.first:noveltyOf(r)===novelty)));
+    const n=filtered.length,count=key=>filtered.filter(r=>bucketFor(r)===key).length;
+    $('project-key').innerHTML=defs.map(d=>`<span><i style="background:${d.color}"></i>${d.label}</span>`).join('');
+    $('project-cards').innerHTML=[['Assemblies selected',n,'current accession stems'],['Explicit programme link',count('programme'),'documented programme signal'],['Production-centre submitter',count('centre'),'production attribution; leadership unverified'],['Research / low-output',count('candidate'),'candidate focused efforts; unverified team size'],['Other / unresolved',count('unresolved'),'retained in every denominator']].map(([l,v,note])=>`<article class="card"><div class="label">${l}</div><div class="value">${fmt(v)}</div><div class="note">${note}</div></article>`).join('');
+    renderAnnual(filtered);
+    $('project-novelty-chart').innerHTML=horizontal(grouped(filtered,Object.entries(noveltyNames),noveltyOf),{stack:true,share:true,label:'Project evidence composition within each genome contribution category',left:355});
+    const bins=[['one','1 species'],['few','2–5 species'],['several','6–20 species'],['many','21–100 species'],['large','>100 species'],['missing','No BioProject footprint']];
+    const sizeKey=r=>r.project_species==null?'missing':r.project_species===1?'one':r.project_species<=5?'few':r.project_species<=20?'several':r.project_species<=100?'many':'large';
+    $('project-footprint').innerHTML=horizontal(grouped(filtered,bins,sizeKey),{stack:true,left:240,label:'Assemblies by observed direct BioProject species footprint'});
+    const evidence=[['Programme title / description',r=>r.programme_evidence.some(e=>e.field==='BioProject title/description')],['Programme submitter',r=>r.programme_evidence.some(e=>e.field==='assembly submitter')],['Selected production centre',r=>r.production_labels.length>0],['University submitter',r=>r.university_submitter],['Research institute name',r=>r.institution_types.includes('Research institute')],['Museum / garden name',r=>r.institution_types.includes('Museum / garden')],['Commercial organisation name',r=>r.institution_types.includes('Commercial name')],['Low-output direct BioProject',r=>r.project_species!=null&&r.project_species<=+$('project-threshold').value],['Named grant recorded',r=>r.grants.some(g=>g.id)],['Linked publication recorded',r=>r.publications.length>0],['SRA centre in cache',r=>r.sra_centres.length>0],['Same-accession level upgrade',r=>r.same_stem_upgrade]];
+    $('project-evidence').innerHTML=horizontal(evidence.map(([label,f])=>({label,count:filtered.filter(f).length})),{label:'Overlapping metadata evidence, counts are not additive',left:295});
+    const funded=filtered.filter(r=>r.grant_species_max!=null),grantBins=[['1','1 observed species'],['5','2–5 species'],['20','6–20 species'],['100','21–100 species'],['more','>100 species']];
+    const grantKey=r=>r.grant_species_max===1?'1':r.grant_species_max<=5?'5':r.grant_species_max<=20?'20':r.grant_species_max<=100?'100':'more';
+    $('project-grants').innerHTML=horizontal(grouped(funded,grantBins,grantKey),{stack:true,left:240,label:'Assemblies by maximum observed species footprint of associated grants'});
+    $('project-grant-note').textContent=`${fmt(funded.length)} of ${fmt(n)} selected assemblies have a usable grant identifier (${n?(100*funded.length/n).toFixed(1):0}%). For multiple grants, use the largest observed footprint. These are lower bounds among enriched direct BioProjects in the chromosome-scale inventory, not total grant output. Missing funding is excluded from this chart.`;
+    const institutions=new Map();for(const r of filtered.filter(r=>bucketFor(r)==='candidate')){const key=r.submitter.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(!institutions.has(key))institutions.set(key,{label:r.submitter,species:new Set()});institutions.get(key).species.add(r.species_id||'tax:'+r.tax_id);}
+    const ranked=[...institutions.values()].map(x=>({label:x.label.length>43?x.label.slice(0,40)+'…':x.label,count:x.species.size})).sort((a,b)=>b.count-a.count).slice(0,10);
+    $('project-institutions').innerHTML=horizontal(ranked,{left:350,label:'Top ten candidate research submitters by distinct species'});
+    renderTable();
+  }
+  fetch('../../data/goat_project_stats.json.gz').then(async r=>{
+    if(!r.ok)throw Error('Draft NCBI project snapshot is not available yet');
+    return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json();
+  }).then(d=>{
+    payload=d;
+    $('project-status').textContent=`Draft snapshot ${new Date(d.generated_at).toLocaleString()} · ${fmt(d.records.length)} qualifying assemblies · ${fmt(d.coverage.fetched_projects)} / ${fmt(d.coverage.wanted_projects)} linked BioProjects enriched. Scope: current GenBank eukaryote chromosome/complete assemblies; earlier all-level genomes are context only.`;
+    $('project-methods-text').innerHTML=`<p>${esc(d.scope)}</p><p>Species identity resolved through NCBI Taxonomy for ${fmt(d.coverage.species_resolved)} / ${fmt(d.records.length)} assemblies. Direct BioProject metadata available for ${fmt(d.coverage.project_metadata)} assemblies. Historical context captured ${esc(d.history.updated_at||'not yet captured')}.</p><p>${esc(d.project_footprint)}</p><p>Historical source files: ${(d.history.sources||[]).map(s=>'<a href="'+esc(s.url)+'">'+esc(s.url.split('/').slice(-2).join('/'))+'</a> ('+fmt(s.records)+')').join(' · ')}</p>`;
+    ['project-novelty','project-organisms','project-threshold','project-mode'].forEach(id=>$(id).addEventListener('change',render));
+    $('project-search').addEventListener('input',renderTable);
+    $('project-export').addEventListener('click',()=>{const fields=['accession','species','species_id','date','novelty','same_stem_upgrade','same_day_lower','submitter','bioproject','project_species','programme_labels','production_labels','institution_types','grants','sra_centres'];const cell=v=>'"'+String(typeof v==='object'?JSON.stringify(v):v??'').replace(/"/g,'""')+'"';const csv=[fields.join(','),...tableRows.map(r=>fields.map(k=>cell(r[k])).join(','))].join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'})),a=document.createElement('a');a.href=url;a.download='genome-project-evidence.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+    render();
+  }).catch(e=>{$('project-status').textContent='Draft project analysis: '+e.message;});
+})();
+
+</script>
 </body>
 </html>
