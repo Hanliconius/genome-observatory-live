@@ -84,3 +84,20 @@ stays missing. Source caches are under `cache/goat_*metadata.json.gz` and
 Charts show annual counts/shares, contribution type, BioProject footprint,
 overlapping evidence, observed grant footprint, and candidate research submitters.
 The evidence table can be searched and exported without discarding source labels.
+
+## Unresolved audit
+
+The preview splits unresolved assemblies into mutually exclusive rule-failure
+reasons: no direct BioProject; unavailable footprint; missing submitter; recognised
+research submitter above the selected threshold; and unrecognised research names
+with footprints below/above the threshold. Missing-data reasons take precedence.
+Enrichment availability is reported separately because a footprint can be known
+without enriched project metadata. The charts follow contribution/organism and
+threshold controls. A reason selector narrows the top-15 submitter and BioProject
+rankings; evidence rows can optionally follow that unresolved subset. CSV exports
+retain the current display group and unresolved reason.
+
+Rankings count distinct species among selected unresolved qualifying assemblies,
+not total institution or BioProject output. Missing identifiers are reported but
+excluded from rankings. Species can recur between ranks. No records are reclassified
+and the underlying snapshot is unchanged.
