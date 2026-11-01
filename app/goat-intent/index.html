@@ -49,6 +49,17 @@
     <div><h3>Grants: observed species footprint</h3><div id="project-grants" class="project-chart"></div><p class="note" id="project-grant-note"></p></div>
     <div><h3>Research / low-output candidates</h3><div id="project-institutions" class="project-chart"></div><p class="note">Top 10 submitter strings by distinct species meeting the candidate rule. Case and punctuation are normalised; departments and institutional aliases are not comprehensively merged. A university can contain many independent labs.</p></div>
   </div>
+  <h3>What remains unresolved?</h3>
+  <p id="project-unresolved-summary" class="note"></p>
+  <div id="project-unresolved-reasons" class="project-chart"></div>
+  <p class="note">Reasons are mutually exclusive within Other / unresolved, using the selected low-output threshold. Missing project links or footprints take precedence, then missing submitters, then institution-name and output rules. These describe why a rule failed, not verified team size or programme independence.</p>
+  <div class="project-controls"><label>Inspect unresolved reason<select id="project-unresolved-reason"><option value="all">All unresolved reasons</option></select></label></div>
+  <p id="project-unresolved-selection" class="note"></p>
+  <h3>Unresolved submitters · top 15 by species</h3>
+  <div id="project-unresolved-submitters" class="project-chart"></div>
+  <h3>Unresolved BioProjects · top 15 by species</h3>
+  <div id="project-unresolved-projects" class="project-chart"></div>
+  <p class="note">Rankings count distinct species among the selected unresolved chromosome/complete assemblies, not a submitter’s or project’s total output. Species can occur under multiple submitters or projects, so ranks must not be summed. Missing names/links are excluded from rankings and reported above. Submitter names are normalised for case and punctuation only; universities may contain many independent labs. BioProject tooltips retain project titles.</p>
   <details id="project-methods"><summary>Definitions, limitations and source coverage</summary>
     <div id="project-methods-text" class="note"></div>
     <p class="note"><strong>First-ever:</strong> one representative of the earliest qualifying assembly per NCBI species, with no earlier dated Full GenBank genome at any assembly level found in the current/replaced summaries. <strong>Upgrade:</strong> the first qualifying assembly when an earlier scaffold/contig assembly exists for that species; it may be a new accession, not a revision. <strong>Additional:</strong> other qualifying assemblies, including same-day companions and species with earlier historical chromosome assemblies. Same-date chromosome assembly ties are resolved by accession for counting only, not as a claim of priority. A lower-level assembly on the same date is part of the first-release cohort: within-day priority is unresolved. An older version of the same accession instead establishes an upgrade.</p>
@@ -57,7 +68,7 @@
     <p class="note">Funding is optional and linked papers are incompletely recorded. Institution types are inferred from submitter-name patterns (university/college, institute/academy/laboratory, museum/botanic garden, or company suffix), and can overlap. Grant footprints are lower bounds within the enriched chromosome-scale inventory, not a grant’s total output. Grants are matched by agency plus identifier. We have not yet extracted publication authors/affiliations or verified individual lab leadership. GoaT intent tags are not used to classify the NCBI production effort.</p>
   </details>
   <details><summary>Inspect the evidence for individual assemblies</summary>
-    <div class="project-controls"><label>Search species, project or submitter<input id="project-search" type="search" placeholder="e.g. Heliconius, Genoscope, PRJNA…"></label><button id="project-export" type="button">Download filtered evidence CSV</button></div>
+    <div class="project-controls"><label>Evidence rows<select id="project-table-scope"><option value="all">All selected assemblies</option><option value="unresolved">Unresolved · selected reason above</option></select></label><label>Search species, project or submitter<input id="project-search" type="search" placeholder="e.g. Heliconius, Genoscope, PRJNA…"></label><button id="project-export" type="button">Download filtered evidence CSV</button></div>
     <p id="project-table-summary" class="note"></p><div class="scroll"><table class="table"><thead><tr><th>Species / assembly</th><th>Contribution</th><th>Project evidence</th><th>Direct BioProject</th><th>Submitter / roles</th></tr></thead><tbody id="project-records"></tbody></table></div>
   </details>
 </section>
@@ -140,6 +151,45 @@
   ];
   let payload, filtered = [], tableRows = [];
   const bucketFor = r => r.programme_labels.length ? 'programme' : r.production_labels.length ? 'centre' : r.research_submitter && r.project_species != null && r.project_species <= +$('project-threshold').value ? 'candidate' : 'unresolved';
+  const reasonDefs = [
+    ['missing_project','No direct BioProject link'],
+    ['missing_footprint','BioProject footprint unavailable'],
+    ['missing_submitter','Assembly submitter missing'],
+    ['research_above','Research name; project above threshold'],
+    ['unrecognised_small','No research-name match; low-output project'],
+    ['unrecognised_above','No research-name match; above threshold']
+  ];
+  const unresolvedReason = r => {
+    if(bucketFor(r)!=='unresolved') return '';
+    if(!r.bioproject) return 'missing_project';
+    if(r.project_species==null) return 'missing_footprint';
+    if(!r.submitter.trim()) return 'missing_submitter';
+    if(r.research_submitter) return 'research_above';
+    return r.project_species <= +$('project-threshold').value ? 'unrecognised_small' : 'unrecognised_above';
+  };
+  const reasonLabel = r => reasonDefs.find(([key])=>key===unresolvedReason(r))?.[1] || '';
+  const selectedUnresolved = rows => rows.filter(r=>bucketFor(r)==='unresolved' && ($('project-unresolved-reason').value==='all'||unresolvedReason(r)===$('project-unresolved-reason').value));
+  function rankUnresolved(rows,field) {
+    const groups=new Map();
+    for(const r of rows) {
+      const name=(r[field]||'').trim();if(!name)continue;
+      const key=field==='submitter'?name.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim():name;
+      if(!groups.has(key))groups.set(key,{label:name,species:new Set(),assemblies:0,titles:new Set()});
+      const g=groups.get(key);g.species.add(r.species_id||'tax:'+r.tax_id);g.assemblies++;
+      if(field==='bioproject'&&r.project_title)g.titles.add(r.project_title);
+    }
+    return [...groups.values()].map(g=>({label:g.label,count:g.species.size,tooltip:`${g.label} · ${g.species.size} distinct species · ${g.assemblies} assemblies${g.titles.size?' · '+[...g.titles].join('; '):''}`})).sort((a,b)=>b.count-a.count||a.label.localeCompare(b.label)).slice(0,15);
+  }
+  function renderUnresolved(rows) {
+    const unresolved=rows.filter(r=>bucketFor(r)==='unresolved'),n=unresolved.length;
+    const counts=reasonDefs.map(([key,label])=>({label,count:unresolved.filter(r=>unresolvedReason(r)===key).length})).sort((a,b)=>b.count-a.count);
+    $('project-unresolved-summary').textContent=`${fmt(n)} of ${fmt(rows.length)} selected assemblies (${rows.length?(100*n/rows.length).toFixed(1):0}%) remain unresolved at ≤${$('project-threshold').value} species per BioProject. ${fmt(unresolved.filter(r=>!r.project_metadata).length)} lack enriched direct BioProject metadata; this can coexist with a known footprint.`;
+    $('project-unresolved-reasons').innerHTML=horizontal(counts,{left:370,label:'Mutually exclusive reasons for unresolved assemblies · assembly counts'});
+    const selected=selectedUnresolved(rows);
+    $('project-unresolved-selection').textContent=`Rankings: ${fmt(selected.length)} assemblies · ${fmt(new Set(selected.map(r=>r.species_id||'tax:'+r.tax_id)).size)} distinct species. Missing submitter: ${fmt(selected.filter(r=>!r.submitter.trim()).length)} assemblies; missing BioProject: ${fmt(selected.filter(r=>!r.bioproject).length)}.`;
+    $('project-unresolved-submitters').innerHTML=horizontal(rankUnresolved(selected,'submitter'),{left:440,label:'Top 15 unresolved submitters · distinct species'});
+    $('project-unresolved-projects').innerHTML=horizontal(rankUnresolved(selected,'bioproject'),{left:190,label:'Top 15 unresolved BioProjects · distinct species'});
+  }
   const noveltyOf = r => r.novelty === 'earlier_high_level' ? 'additional' : r.novelty;
   const noveltyNames = {first_ever:'First-ever genome',upgrade:'First chromosome-scale; older lower-level genome',additional:'Additional assembly',unknown:'Historical context unresolved'};
   function svg(content,w,h,label) {return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">${content}</svg>`;}
@@ -149,12 +199,12 @@
     let content='';
     for(let i=0;i<items.length;i++) {
       const row=items[i], y=T+i*36;
-      content+=`<text x="${L-10}" y="${y+15}" text-anchor="end" fill="#c1d0d4" font-size="12">${esc(row.label)}</text>`;
+      content+=`<text x="${L-10}" y="${y+15}" text-anchor="end" fill="#c1d0d4" font-size="12">${esc(row.label.length>53?row.label.slice(0,50)+'…':row.label)}</text>`;
       let x=L;
       const series=stack?defs.map(d=>({count:row.parts[d.key]||0,...d})):[{count:row.count,color:'#65c9b0',label:row.label}];
       for(const part of series) {
         const value=share?(row.count?part.count/row.count:0):part.count,w=PW*value/max;
-        content+=`<rect x="${x}" y="${y}" width="${w}" height="22" fill="${part.color}"><title>${esc(row.label)} · ${esc(part.label)}: ${fmt(part.count)}${row.count?' ('+(100*part.count/row.count).toFixed(1)+'%)':''}</title></rect>`;
+        content+=`<rect x="${x}" y="${y}" width="${w}" height="22" fill="${part.color}"><title>${esc(row.tooltip||row.label)} · ${esc(part.label)}: ${fmt(part.count)}${row.count?' ('+(100*part.count/row.count).toFixed(1)+'%)':''}</title></rect>`;
         x+=w;
       }
       content+=`<text x="${W-R+10}" y="${y+15}" fill="#c1d0d4" font-size="12">${fmt(row.count)}</text>`;
@@ -177,9 +227,9 @@
   }
   function renderTable() {
     const q=$('project-search').value.toLowerCase();
-    tableRows=filtered.filter(r=>[r.species,r.accession,r.submitter,r.bioproject,r.project_title,...r.programme_labels].join(' ').toLowerCase().includes(q)).sort((a,b)=>b.date.localeCompare(a.date)||a.accession.localeCompare(b.accession));
+    tableRows=($('project-table-scope').value==='unresolved'?selectedUnresolved(filtered):filtered).filter(r=>[r.species,r.accession,r.submitter,r.bioproject,r.project_title,reasonLabel(r),...r.programme_labels].join(' ').toLowerCase().includes(q)).sort((a,b)=>b.date.localeCompare(a.date)||a.accession.localeCompare(b.accession));
     $('project-table-summary').textContent=`${fmt(tableRows.length)} matching assemblies; showing the first 60. CSV includes every matching record.`;
-    $('project-records').innerHTML=tableRows.slice(0,60).map(r=>`<tr><td><em>${esc(r.species)}</em><br><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/${esc(r.accession)}/" target="_blank" rel="noopener">${esc(r.accession)}</a><br>${esc(r.date)}</td><td>${esc(noveltyNames[noveltyOf(r)])}${r.same_stem_upgrade?'<br><strong>Same-accession level upgrade</strong>':r.same_day_lower?'<br><span class="note">Lower-level genome also released this day</span>':''}${r.earliest_all_level?'<br><span class="note">Earlier context: '+esc(r.earliest_all_level.level)+' · '+esc(r.earliest_all_level.date)+' · '+esc(r.earliest_all_level.accession)+'</span>':''}</td><td>${esc(defs.find(d=>d.key===bucketFor(r)).label)}<br>${r.programme_evidence.map(e=>esc(e.label)+' · <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/'+(e.source.startsWith('PRJ')?'bioproject/':'datasets/genome/')+esc(e.source)+'/">'+esc(e.source)+'</a> ('+esc(e.field)+')').join('<br>')}${r.grants.length?'<br>Grants: '+r.grants.map(g=>esc(g.agency+' '+g.id)).join('; '):''}</td><td>${r.bioproject?'<a href="https://www.ncbi.nlm.nih.gov/bioproject/'+esc(r.bioproject)+'/" target="_blank" rel="noopener">'+esc(r.bioproject)+'</a>':'Missing'}<br>${esc(r.project_title)}<br>${r.project_species==null?'Unknown':fmt(r.project_species)} species at all levels</td><td>${esc(r.submitter||'Missing')}<br><span class="note">Institution clues: ${esc(r.institution_types.join('; ')||'Unresolved')}<br>BioSample owner: ${esc(r.owner||'Not recorded')}<br>SRA centre: ${esc(r.sra_centres.join('; ')||'Not cached')}</span></td></tr>`).join('');
+    $('project-records').innerHTML=tableRows.slice(0,60).map(r=>`<tr><td><em>${esc(r.species)}</em><br><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/${esc(r.accession)}/" target="_blank" rel="noopener">${esc(r.accession)}</a><br>${esc(r.date)}</td><td>${esc(noveltyNames[noveltyOf(r)])}${r.same_stem_upgrade?'<br><strong>Same-accession level upgrade</strong>':r.same_day_lower?'<br><span class="note">Lower-level genome also released this day</span>':''}${r.earliest_all_level?'<br><span class="note">Earlier context: '+esc(r.earliest_all_level.level)+' · '+esc(r.earliest_all_level.date)+' · '+esc(r.earliest_all_level.accession)+'</span>':''}</td><td>${esc(defs.find(d=>d.key===bucketFor(r)).label)}${reasonLabel(r)?'<br><strong>'+esc(reasonLabel(r))+'</strong>':''}<br>${r.programme_evidence.map(e=>esc(e.label)+' · <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/'+(e.source.startsWith('PRJ')?'bioproject/':'datasets/genome/')+esc(e.source)+'/">'+esc(e.source)+'</a> ('+esc(e.field)+')').join('<br>')}${r.grants.length?'<br>Grants: '+r.grants.map(g=>esc(g.agency+' '+g.id)).join('; '):''}</td><td>${r.bioproject?'<a href="https://www.ncbi.nlm.nih.gov/bioproject/'+esc(r.bioproject)+'/" target="_blank" rel="noopener">'+esc(r.bioproject)+'</a>':'Missing'}<br>${esc(r.project_title)}<br>${r.project_species==null?'Unknown':fmt(r.project_species)} species at all levels</td><td>${esc(r.submitter||'Missing')}<br><span class="note">Institution clues: ${esc(r.institution_types.join('; ')||'Unresolved')}<br>BioSample owner: ${esc(r.owner||'Not recorded')}<br>SRA centre: ${esc(r.sra_centres.join('; ')||'Not cached')}</span></td></tr>`).join('');
   }
   function render() {
     const novelty=$('project-novelty').value,organisms=$('project-organisms').value;
@@ -201,6 +251,7 @@
     const institutions=new Map();for(const r of filtered.filter(r=>bucketFor(r)==='candidate')){const key=r.submitter.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(!institutions.has(key))institutions.set(key,{label:r.submitter,species:new Set()});institutions.get(key).species.add(r.species_id||'tax:'+r.tax_id);}
     const ranked=[...institutions.values()].map(x=>({label:x.label.length>43?x.label.slice(0,40)+'…':x.label,count:x.species.size})).sort((a,b)=>b.count-a.count).slice(0,10);
     $('project-institutions').innerHTML=horizontal(ranked,{left:350,label:'Top ten candidate research submitters by distinct species'});
+    renderUnresolved(filtered);
     renderTable();
   }
   fetch('../../data/goat_project_stats.json.gz').then(async r=>{
@@ -211,8 +262,11 @@
     $('project-status').textContent=`Draft snapshot ${new Date(d.generated_at).toLocaleString()} · ${fmt(d.records.length)} qualifying assemblies · ${fmt(d.coverage.fetched_projects)} / ${fmt(d.coverage.wanted_projects)} linked BioProjects enriched. Scope: current GenBank eukaryote chromosome/complete assemblies; earlier all-level genomes are context only.`;
     $('project-methods-text').innerHTML=`<p>${esc(d.scope)}</p><p>Species identity resolved through NCBI Taxonomy for ${fmt(d.coverage.species_resolved)} / ${fmt(d.records.length)} assemblies. Direct BioProject metadata available for ${fmt(d.coverage.project_metadata)} assemblies. Historical context captured ${esc(d.history.updated_at||'not yet captured')}.</p><p>${esc(d.project_footprint)}</p><p>Historical source files: ${(d.history.sources||[]).map(s=>'<a href="'+esc(s.url)+'">'+esc(s.url.split('/').slice(-2).join('/'))+'</a> ('+fmt(s.records)+')').join(' · ')}</p>`;
     ['project-novelty','project-organisms','project-threshold','project-mode'].forEach(id=>$(id).addEventListener('change',render));
+    $('project-unresolved-reason').innerHTML+=reasonDefs.map(([key,label])=>`<option value="${key}">${esc(label)}</option>`).join('');
+    $('project-unresolved-reason').addEventListener('change',()=>{renderUnresolved(filtered);renderTable();});
+    $('project-table-scope').addEventListener('change',renderTable);
     $('project-search').addEventListener('input',renderTable);
-    $('project-export').addEventListener('click',()=>{const fields=['accession','species','species_id','date','novelty','same_stem_upgrade','same_day_lower','submitter','bioproject','project_species','programme_labels','production_labels','institution_types','grants','sra_centres'];const cell=v=>'"'+String(typeof v==='object'?JSON.stringify(v):v??'').replace(/"/g,'""')+'"';const csv=[fields.join(','),...tableRows.map(r=>fields.map(k=>cell(r[k])).join(','))].join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'})),a=document.createElement('a');a.href=url;a.download='genome-project-evidence.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+    $('project-export').addEventListener('click',()=>{const fields=['display_group','unresolved_reason','accession','species','species_id','date','novelty','same_stem_upgrade','same_day_lower','submitter','bioproject','project_species','programme_labels','production_labels','institution_types','grants','sra_centres'];const cell=v=>'"'+String(typeof v==='object'?JSON.stringify(v):v??'').replace(/"/g,'""')+'"';const csv=[fields.join(','),...tableRows.map(r=>fields.map(k=>cell(k==='display_group'?bucketFor(r):k==='unresolved_reason'?reasonLabel(r):r[k])).join(','))].join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'})),a=document.createElement('a');a.href=url;a.download='genome-project-evidence.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
     render();
   }).catch(e=>{$('project-status').textContent='Draft project analysis: '+e.message;});
 })();
