@@ -3928,5 +3928,29 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Octodon_Degus_fr.jpg",
     "credit": "Jacek555 \u00b7 CC BY-SA 4.0",
     "matched_name": "Octodon degus"
+  },
+  "Volucella zonaria": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Volucella_zonaria_MHNT.jpg/960px-Volucella_zonaria_MHNT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Volucella_zonaria_MHNT.jpg",
+    "credit": "Didier Descouens \u00b7 CC BY-SA 4.0",
+    "matched_name": "Volucella zonaria"
+  },
+  "Tinagma balteolella": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Tinagma_balteolella_E-MK-16774a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Tinagma_balteolella_E-MK-16774a.jpg",
+    "credit": "Michael Kurz \u00b7 CC BY-SA 3.0 at",
+    "matched_name": "Tinagma balteolella"
+  },
+  "Bryophila ereptricula": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Bryophila_ereptricula.jpg/960px-Bryophila_ereptricula.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Bryophila_ereptricula.jpg",
+    "credit": "Dumi \u00b7 CC BY-SA 3.0",
+    "matched_name": "Bryophila ereptricula"
+  },
+  "Scythris fuscopterella": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Scythris_picaepennis_%2814368962981%29.jpg/960px-Scythris_picaepennis_%2814368962981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Scythris_picaepennis_(14368962981).jpg",
+    "credit": "Patrick Clement from West Midlands, England \u00b7 CC BY 2.0",
+    "matched_name": "Scythris"
   }
 }
