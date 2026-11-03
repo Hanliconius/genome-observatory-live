@@ -3952,5 +3952,59 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Scythris_picaepennis_(14368962981).jpg",
     "credit": "Patrick Clement from West Midlands, England \u00b7 CC BY 2.0",
     "matched_name": "Scythris"
+  },
+  "Toxabramis houdemeri": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Toxabramis_argentifer.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Toxabramis_argentifer.png",
+    "credit": "James Francis Abbott \u00b7 Public domain",
+    "matched_name": "Toxabramis"
+  },
+  "Catoptria verellus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Catoptria_verellus_01.JPG/960px-Catoptria_verellus_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_verellus_01.JPG",
+    "credit": "AfroBrazilian \u00b7 CC BY-SA 3.0",
+    "matched_name": "Catoptria verellus"
+  },
+  "Perizoma alchemillatum": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Perizoma_albulata_FvL.jpg/960px-Perizoma_albulata_FvL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Perizoma_albulata_FvL.jpg",
+    "credit": "Fvlamoen \u00b7 CC BY-SA 3.0",
+    "matched_name": "Perizoma"
+  },
+  "Phyllonorycter populifoliella": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Phyllonorycter_populifoliella_Bytom.jpg/960px-Phyllonorycter_populifoliella_Bytom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Phyllonorycter_populifoliella_Bytom.jpg",
+    "credit": "Adrian Tync \u00b7 CC BY-SA 4.0",
+    "matched_name": "Phyllonorycter populifoliella"
+  },
+  "Metzneria metzneriella": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg/960px-%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:(0726)_Metzneria_metzneriella_(19388049141).jpg",
+    "credit": "Ben Sale from UK \u00b7 CC BY 2.0",
+    "matched_name": "Metzneria metzneriella"
+  },
+  "Natrix natrix natrix": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif/lossy-page1-960px-Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif",
+    "credit": "Bouke ten Cate \u00b7 CC BY 4.0",
+    "matched_name": "Natrix natrix natrix"
+  },
+  "Calocoris alpestris": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg/960px-Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Calocoris_alpestris,_Minera,_North_Wales,_June_2018.jpg",
+    "credit": "janetgraham84new \u00b7 CC BY 2.0",
+    "matched_name": "Calocoris alpestris"
+  },
+  "Furcula bicuspis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Furcula_bicuspis.jpg/960px-Furcula_bicuspis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Furcula_bicuspis.jpg",
+    "credit": "Dumi \u00b7 CC BY-SA 3.0",
+    "matched_name": "Furcula bicuspis"
+  },
+  "Phalonidia udana": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
+    "credit": "Lazyconcrete \u00b7 CC BY-SA 4.0",
+    "matched_name": "Phalonidia udana"
   }
 }

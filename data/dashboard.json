@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-02T12:23:20.799323+00:00",
+  "generated_at": "2026-11-03T11:56:43.782936+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 99,
-      "species": 84,
-      "first_time_species": 59
+      "assemblies": 103,
+      "species": 85,
+      "first_time_species": 62
     },
     "year": {
-      "assemblies": 6553,
-      "species": 4050,
-      "first_time_species": 3473
+      "assemblies": 6566,
+      "species": 4059,
+      "first_time_species": 3482
     },
     "all": {
-      "assemblies": 19437,
-      "species": 10891,
-      "first_time_species": 10891
+      "assemblies": 19450,
+      "species": 10900,
+      "first_time_species": 10900
     }
   },
   "daily": [
@@ -55935,18 +55935,24 @@
     },
     {
       "date": "2026-10-31",
-      "assemblies": 4,
-      "species": 4,
-      "first_time_species": 4
+      "assemblies": 5,
+      "species": 5,
+      "first_time_species": 5
     },
     {
       "date": "2026-11-01",
+      "assemblies": 12,
+      "species": 9,
+      "first_time_species": 8
+    },
+    {
+      "date": "2026-11-02",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-11-02",
+      "date": "2026-11-03",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56105,15 +56111,15 @@
     },
     {
       "year": "2026",
-      "assemblies": 5813,
-      "species": 3936,
-      "first_time_species": 3013
+      "assemblies": 5826,
+      "species": 3946,
+      "first_time_species": 3022
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 62
+      "count": 73
     },
     {
       "group": "Plants",
@@ -56121,17 +56127,13 @@
     },
     {
       "group": "Fungi",
-      "count": 11
-    },
-    {
-      "group": "Other",
-      "count": 5
+      "count": 9
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4280
+      "count": 4293
     },
     {
       "group": "Plants",
@@ -56149,7 +56151,7 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11126
+      "count": 11139
     },
     {
       "group": "Plants",
@@ -56188,32 +56190,436 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "37323291",
+      "assembly_uid": "37368391",
       "group": "Animals",
-      "sequence_release_date": "2026-10-31",
-      "assembly_publication_date": "2026-10-31"
+      "sequence_release_date": "2026-11-01",
+      "assembly_publication_date": "2026-11-01"
     },
     "group": "Animals",
-    "accession": "GCA_990099106.1",
-    "organism_name": "Scythris fuscopterella",
+    "accession": "GCA_990128836.1",
+    "organism_name": "Phalonidia udana",
     "common_name": "moths & butterflies",
-    "tax_id": 2561737,
-    "release_date": "2026-10-31",
+    "tax_id": 1176460,
+    "release_date": "2026-11-01",
     "assembly_level": "Chromosome",
-    "assembly_name": "ilScyFuso1.hap1.1",
-    "total_sequence_length": 386146820,
-    "chromosome_count": 31,
-    "genus": "Scythris",
-    "family": "Scythrididae",
+    "assembly_name": "ilPhaUdan1.hap1.1",
+    "total_sequence_length": 400209068,
+    "chromosome_count": 30,
+    "genus": "Phalonidia",
+    "family": "Tortricidae",
     "phylum": "Arthropoda",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Scythris_picaepennis_%2814368962981%29.jpg/960px-Scythris_picaepennis_%2814368962981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Scythris_picaepennis_(14368962981).jpg",
-      "credit": "Patrick Clement from West Midlands, England · CC BY 2.0",
-      "matched_name": "Scythris"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
+      "credit": "Lazyconcrete · CC BY-SA 4.0",
+      "matched_name": "Phalonidia udana"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368391",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990128836.1",
+      "organism_name": "Phalonidia udana",
+      "common_name": "moths & butterflies",
+      "tax_id": 1176460,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilPhaUdan1.hap1.1",
+      "total_sequence_length": 400209068,
+      "chromosome_count": 30,
+      "genus": "Phalonidia",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
+        "credit": "Lazyconcrete · CC BY-SA 4.0",
+        "matched_name": "Phalonidia udana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368491",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990128764.1",
+      "organism_name": "Phalonidia udana",
+      "common_name": "moths & butterflies",
+      "tax_id": 1176460,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilPhaUdan1.hap2.1",
+      "total_sequence_length": 403124890,
+      "chromosome_count": 30,
+      "genus": "Phalonidia",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
+        "credit": "Lazyconcrete · CC BY-SA 4.0",
+        "matched_name": "Phalonidia udana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368441",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990128761.1",
+      "organism_name": "Furcula bicuspis",
+      "common_name": "moths & butterflies",
+      "tax_id": 987941,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilFurBicu1.hap2.1",
+      "total_sequence_length": 817650484,
+      "chromosome_count": 31,
+      "genus": "Furcula",
+      "family": "Notodontidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Furcula_bicuspis.jpg/960px-Furcula_bicuspis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Furcula_bicuspis.jpg",
+        "credit": "Dumi · CC BY-SA 3.0",
+        "matched_name": "Furcula bicuspis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368431",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990128760.1",
+      "organism_name": "Furcula bicuspis",
+      "common_name": "moths & butterflies",
+      "tax_id": 987941,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilFurBicu1.hap1.1",
+      "total_sequence_length": 814570287,
+      "chromosome_count": 31,
+      "genus": "Furcula",
+      "family": "Notodontidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Furcula_bicuspis.jpg/960px-Furcula_bicuspis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Furcula_bicuspis.jpg",
+        "credit": "Dumi · CC BY-SA 3.0",
+        "matched_name": "Furcula bicuspis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368471",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990128727.1",
+      "organism_name": "Calocoris alpestris",
+      "common_name": "true bugs",
+      "tax_id": 1545087,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ihCalAlpe1.hap1.1",
+      "total_sequence_length": 1535909913,
+      "chromosome_count": 17,
+      "genus": "Calocoris",
+      "family": "Miridae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg/960px-Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Calocoris_alpestris,_Minera,_North_Wales,_June_2018.jpg",
+        "credit": "janetgraham84new · CC BY 2.0",
+        "matched_name": "Calocoris alpestris"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368361",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990118529.1",
+      "organism_name": "Metzneria metzneriella",
+      "common_name": "moths & butterflies",
+      "tax_id": 1073588,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilMetMetz2.1",
+      "total_sequence_length": 530960805,
+      "chromosome_count": 30,
+      "genus": "Metzneria",
+      "family": "Gelechiidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg/960px-%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:(0726)_Metzneria_metzneriella_(19388049141).jpg",
+        "credit": "Ben Sale from UK · CC BY 2.0",
+        "matched_name": "Metzneria metzneriella"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368321",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990118116.1",
+      "organism_name": "Phyllonorycter populifoliella",
+      "common_name": "moths & butterflies",
+      "tax_id": 1678912,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilPhyPopl1.hap1.1",
+      "total_sequence_length": 344630100,
+      "chromosome_count": 29,
+      "genus": "Phyllonorycter",
+      "family": "Gracillariidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Phyllonorycter_populifoliella_Bytom.jpg/960px-Phyllonorycter_populifoliella_Bytom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Phyllonorycter_populifoliella_Bytom.jpg",
+        "credit": "Adrian Tync · CC BY-SA 4.0",
+        "matched_name": "Phyllonorycter populifoliella"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368291",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990099099.1",
+      "organism_name": "Perizoma alchemillatum",
+      "common_name": "moths & butterflies",
+      "tax_id": 326947,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilPerAlce3.hap1.1",
+      "total_sequence_length": 363603864,
+      "chromosome_count": 30,
+      "genus": "Perizoma",
+      "family": "Geometridae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Perizoma_albulata_FvL.jpg/960px-Perizoma_albulata_FvL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Perizoma_albulata_FvL.jpg",
+        "credit": "Fvlamoen · CC BY-SA 3.0",
+        "matched_name": "Perizoma"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368281",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990099097.1",
+      "organism_name": "Catoptria verellus",
+      "common_name": "moths & butterflies",
+      "tax_id": 1594246,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilCatVere1.hap2.1",
+      "total_sequence_length": 478096785,
+      "chromosome_count": 30,
+      "genus": "Catoptria",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Catoptria_verellus_01.JPG/960px-Catoptria_verellus_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_verellus_01.JPG",
+        "credit": "AfroBrazilian · CC BY-SA 3.0",
+        "matched_name": "Catoptria verellus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368271",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990098228.1",
+      "organism_name": "Bryophila ereptricula",
+      "common_name": "moths & butterflies",
+      "tax_id": 1869511,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilBryErep1.hap2.1",
+      "total_sequence_length": 681808209,
+      "chromosome_count": 30,
+      "genus": "Bryophila",
+      "family": "Noctuidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Bryophila_ereptricula.jpg/960px-Bryophila_ereptricula.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Bryophila_ereptricula.jpg",
+        "credit": "Dumi · CC BY-SA 3.0",
+        "matched_name": "Bryophila ereptricula"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368301",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990097813.1",
+      "organism_name": "Catoptria verellus",
+      "common_name": "moths & butterflies",
+      "tax_id": 1594246,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilCatVere1.hap1.1",
+      "total_sequence_length": 521595401,
+      "chromosome_count": 32,
+      "genus": "Catoptria",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Catoptria_verellus_01.JPG/960px-Catoptria_verellus_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_verellus_01.JPG",
+        "credit": "AfroBrazilian · CC BY-SA 3.0",
+        "matched_name": "Catoptria verellus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37376211",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-01",
+        "assembly_publication_date": "2026-11-01",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062071868.1",
+      "organism_name": "Toxabramis houdemeri",
+      "common_name": "ray-finned fishes",
+      "tax_id": 381608,
+      "release_date": "2026-11-01",
+      "assembly_level": "Chromosome",
+      "assembly_name": "T_houdemeri",
+      "total_sequence_length": 1023547327,
+      "chromosome_count": 24,
+      "genus": "Toxabramis",
+      "family": "Xenocyprididae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Toxabramis_argentifer.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Toxabramis_argentifer.png",
+        "credit": "James Francis Abbott · Public domain",
+        "matched_name": "Toxabramis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37368581",
+        "group": "Animals",
+        "sequence_release_date": "2026-10-31",
+        "assembly_publication_date": "2026-11-01"
+      },
+      "group": "Animals",
+      "accession": "GCA_990120369.1",
+      "organism_name": "Natrix natrix natrix",
+      "common_name": "snakes",
+      "tax_id": 2563697,
+      "release_date": "2026-10-31",
+      "assembly_level": "Chromosome",
+      "assembly_name": "rNatNat1.1.hap2",
+      "total_sequence_length": 1523655443,
+      "chromosome_count": 17,
+      "genus": "Natrix",
+      "family": "Natricidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif/lossy-page1-960px-Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif",
+        "credit": "Bouke ten Cate · CC BY 4.0",
+        "matched_name": "Natrix natrix natrix"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -96104,11 +96510,15 @@
     },
     {
       "source_provenance": {
-        "group": "Animals",
         "sources": [
+          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false
+        "metadata_pending": false,
+        "assembly_uid": "35469141",
+        "group": "Animals",
+        "sequence_release_date": "2026-09-01",
+        "assembly_publication_date": "2026-09-02"
       },
       "group": "Animals",
       "accession": "GCA_987193195.1",
@@ -194752,34 +195162,22 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Delphinapterus leucas",
-        "status": "Automated processing in progress",
+        "species": "Pelodiscus sinensis",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-19",
+        "assembly": "ASM5242630v1 (GCF_052426305.1)"
+      },
+      {
+        "species": "Durio zibethinus",
+        "status": "In sequence databases In Gene On the FTP",
         "freeze_date": "2026-10-21",
-        "assembly": "BTC_Dleu_Yukka2"
+        "assembly": "ASM4732523v1 (GCF_047325235.1)"
       },
       {
-        "species": "Leiobunum rupestre",
+        "species": "Phasianus colchicus",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "qqLeiRupe1.1.hap1"
-      },
-      {
-        "species": "Cupressus sempervirens",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-21",
-        "assembly": "ASM2874904v1 (GCF_028749045.1)"
-      },
-      {
-        "species": "Hydra viridissima",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "HvirCarnegie_v1"
-      },
-      {
-        "species": "Phalangium opilio",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-29",
-        "assembly": "DU_Popi_V2"
+        "freeze_date": "2026-11-02",
+        "assembly": "bPhaCol1.hap1.1"
       },
       {
         "species": "Nuphar pumila",
@@ -194788,10 +195186,22 @@
         "assembly": "dmNupPumi1.hap1.1"
       },
       {
-        "species": "Ciona robusta",
+        "species": "Physcomitrium patens",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-02",
+        "assembly": "ASM5946719v1"
+      },
+      {
+        "species": "Crocodylus siamensis",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-02",
+        "assembly": "ASM5211081v1"
+      },
+      {
+        "species": "Oncorhynchus mykiss",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-26",
-        "assembly": "ASM961781v2"
+        "assembly": "ASM5762802v1"
       },
       {
         "species": "Homo sapiens",
@@ -194806,40 +195216,10 @@
         "assembly": "T2T-CHM13v2.0 (GCF_009914755.1)"
       },
       {
-        "species": "Theobroma umbraticum",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-29",
-        "assembly": "ASM216827v3 (GCF_002168275.2)"
-      },
-      {
-        "species": "Durio zibethinus",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-21",
-        "assembly": "ASM4732523v1 (GCF_047325235.1)"
-      },
-      {
-        "species": "Pelodiscus sinensis",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-19",
-        "assembly": "ASM5242630v1 (GCF_052426305.1)"
-      },
-      {
-        "species": "Bombyx mandarina",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-23",
-        "assembly": "ASM3026744v2 (GCF_030267445.1)"
-      },
-      {
-        "species": "Colias eurytheme",
+        "species": "Sinohyriopsis cumingii",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-14",
-        "assembly": "ilColEury1 Martin Lab GWU primary"
-      },
-      {
-        "species": "Oncorhynchus mykiss",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-26",
-        "assembly": "ASM5762802v1"
+        "freeze_date": "2026-10-13",
+        "assembly": "ASM2855479v2"
       },
       {
         "species": "Phoenix dactylifera",
@@ -194848,13 +195228,60 @@
         "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1"
       },
       {
-        "species": "Sinohyriopsis cumingii",
+        "species": "Ciona robusta",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-26",
+        "assembly": "ASM961781v2 (GCF_009617815.1)"
+      },
+      {
+        "species": "Delphinapterus leucas",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-13",
-        "assembly": "ASM2855479v2"
+        "freeze_date": "2026-10-21",
+        "assembly": "BTC_Dleu_Yukka2"
+      },
+      {
+        "species": "Colias eurytheme",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-14",
+        "assembly": "ilColEury1 Martin Lab GWU primary"
+      },
+      {
+        "species": "Phalangium opilio",
+        "status": "In sequence databases",
+        "freeze_date": "2026-10-29",
+        "assembly": "DU_Popi_V2 (GCF_054372755.1)"
+      },
+      {
+        "species": "Hydra viridissima",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-30",
+        "assembly": "HvirCarnegie_v1"
+      },
+      {
+        "species": "Cupressus sempervirens",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-21",
+        "assembly": "ASM2874904v1 (GCF_028749045.1)"
+      },
+      {
+        "species": "Leiobunum rupestre",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-30",
+        "assembly": "qqLeiRupe1.1.hap1"
+      },
+      {
+        "species": "Theobroma umbraticum",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-29",
+        "assembly": "ASM216827v3 (GCF_002168275.2)"
       }
     ],
     "recent_completed": [
+      {
+        "species": "Bombyx mandarina",
+        "release_date": "2026-10-27",
+        "assembly": "ASM3026744v2 (GCF_030267445.1)"
+      },
       {
         "species": "Jatropha curcas",
         "release_date": "2026-10-26",
@@ -195079,11 +195506,6 @@
         "species": "Danio rerio",
         "release_date": "2026-09-22",
         "assembly": "GRCz13ab (GCF_052040795.2)"
-      },
-      {
-        "species": "Zootoca vivipara",
-        "release_date": "2026-09-21",
-        "assembly": "rZooViv2.hap1.1 (GCF_965207765.1)"
       }
     ]
   },
@@ -200389,6 +200811,7 @@
     "Nannoperca obscura": "2026-10-30",
     "Nannoperca australis": "2026-10-30",
     "Octodon degus": "2026-10-30",
+    "Toxabramis houdemeri": "2026-11-01",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -205975,10 +206398,18 @@
     "Mythimna turca": "2026-10-28",
     "Euxoa tritici": "2026-10-28",
     "Parathyridariella dematiacea": "2026-10-27",
+    "Catoptria verellus": "2026-11-01",
     "Trifolium squamosum": "2026-10-29",
-    "Tinagma balteolella": "2026-10-31",
     "Bryophila ereptricula": "2026-10-31",
-    "Scythris fuscopterella": "2026-10-31"
+    "Tinagma balteolella": "2026-10-31",
+    "Perizoma alchemillatum": "2026-11-01",
+    "Scythris fuscopterella": "2026-10-31",
+    "Phyllonorycter populifoliella": "2026-11-01",
+    "Metzneria metzneriella": "2026-11-01",
+    "Natrix natrix natrix": "2026-10-31",
+    "Calocoris alpestris": "2026-11-01",
+    "Furcula bicuspis": "2026-11-01",
+    "Phalonidia udana": "2026-11-01"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -210199,6 +210630,60 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Scythris_picaepennis_(14368962981).jpg",
       "credit": "Patrick Clement from West Midlands, England · CC BY 2.0",
       "matched_name": "Scythris"
+    },
+    "Toxabramis houdemeri": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Toxabramis_argentifer.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Toxabramis_argentifer.png",
+      "credit": "James Francis Abbott · Public domain",
+      "matched_name": "Toxabramis"
+    },
+    "Catoptria verellus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Catoptria_verellus_01.JPG/960px-Catoptria_verellus_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_verellus_01.JPG",
+      "credit": "AfroBrazilian · CC BY-SA 3.0",
+      "matched_name": "Catoptria verellus"
+    },
+    "Perizoma alchemillatum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Perizoma_albulata_FvL.jpg/960px-Perizoma_albulata_FvL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Perizoma_albulata_FvL.jpg",
+      "credit": "Fvlamoen · CC BY-SA 3.0",
+      "matched_name": "Perizoma"
+    },
+    "Phyllonorycter populifoliella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Phyllonorycter_populifoliella_Bytom.jpg/960px-Phyllonorycter_populifoliella_Bytom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phyllonorycter_populifoliella_Bytom.jpg",
+      "credit": "Adrian Tync · CC BY-SA 4.0",
+      "matched_name": "Phyllonorycter populifoliella"
+    },
+    "Metzneria metzneriella": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg/960px-%280726%29_Metzneria_metzneriella_%2819388049141%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:(0726)_Metzneria_metzneriella_(19388049141).jpg",
+      "credit": "Ben Sale from UK · CC BY 2.0",
+      "matched_name": "Metzneria metzneriella"
+    },
+    "Natrix natrix natrix": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif/lossy-page1-960px-Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oostelijke_ringslang_-_grass_snake_-_Natrix_natrix_natrix_3.tif",
+      "credit": "Bouke ten Cate · CC BY 4.0",
+      "matched_name": "Natrix natrix natrix"
+    },
+    "Calocoris alpestris": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg/960px-Calocoris_alpestris%2C_Minera%2C_North_Wales%2C_June_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Calocoris_alpestris,_Minera,_North_Wales,_June_2018.jpg",
+      "credit": "janetgraham84new · CC BY 2.0",
+      "matched_name": "Calocoris alpestris"
+    },
+    "Furcula bicuspis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Furcula_bicuspis.jpg/960px-Furcula_bicuspis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Furcula_bicuspis.jpg",
+      "credit": "Dumi · CC BY-SA 3.0",
+      "matched_name": "Furcula bicuspis"
+    },
+    "Phalonidia udana": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
+      "credit": "Lazyconcrete · CC BY-SA 4.0",
+      "matched_name": "Phalonidia udana"
     }
   },
   "taxonomy_cache": {
@@ -218347,7 +218832,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3405230": {},
     "511121": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "flies",
@@ -218357,11 +218841,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3451521": {},
-    "3465513": {},
-    "3256806": {},
-    "3451525": {},
-    "3451528": {},
     "1870395": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "moths & butterflies",
@@ -218388,10 +218867,97 @@
       "family": "Scythrididae",
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
+    },
+    "3405230": {},
+    "381608": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Toxabramis",
+      "family": "Xenocyprididae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "3451521": {},
+    "3465513": {},
+    "3256806": {},
+    "3451525": {},
+    "3451528": {},
+    "1594246": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Catoptria",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "326947": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Perizoma",
+      "family": "Geometridae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1678912": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Phyllonorycter",
+      "family": "Gracillariidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1073588": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Metzneria",
+      "family": "Gelechiidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "2563697": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "snakes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Natrix",
+      "family": "Natricidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "1545087": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "true bugs",
+      "fallback_common_name_source": "group_name",
+      "genus": "Calocoris",
+      "family": "Miridae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "987941": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Furcula",
+      "family": "Notodontidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1176460": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Phalonidia",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
     }
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1372,
+    "overlapping_or_superseded_rows_removed": 1375,
     "date_conflicts": [
       {
         "accession": "GCA_061535455.1",
@@ -218414,14 +218980,14 @@
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/03\"[GRLS]:\"2026/11/02\"[GRLS] OR \"2026/10/03\"[SRDT]:\"2026/11/02\"[SRDT] OR \"2026/10/03\"[UPDT]:\"2026/11/02\"[UPDT])",
-    "matched_uids": 1447,
-    "held_uids_rechecked": 74,
-    "generated_at": "2026-11-02T12:22:56.717029+00:00",
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/04\"[GRLS]:\"2026/11/03\"[GRLS] OR \"2026/10/04\"[SRDT]:\"2026/11/03\"[SRDT] OR \"2026/10/04\"[UPDT]:\"2026/11/03\"[UPDT])",
+    "matched_uids": 1463,
+    "held_uids_rechecked": 79,
+    "generated_at": "2026-11-03T11:55:53.795028+00:00",
     "datasets_rows": 19362,
-    "assembly_index_rows": 1447,
-    "merged_assemblies": 19437,
-    "unique_accession_stems": 19437,
+    "assembly_index_rows": 1463,
+    "merged_assemblies": 19450,
+    "unique_accession_stems": 19450,
     "pending_metadata_accessions": [
       "GCA_041937245.3",
       "GCA_062063604.1",
@@ -218464,6 +219030,7 @@
       "GCA_062070569.1",
       "GCA_062070570.1",
       "GCA_062070571.1",
+      "GCA_062071868.1",
       "GCA_951217065.3",
       "GCA_963966105.2",
       "GCA_987274335.2",
@@ -218497,11 +219064,23 @@
       "GCA_990078719.1",
       "GCA_990078725.1",
       "GCA_990078871.1",
+      "GCA_990097813.1",
       "GCA_990098222.1",
       "GCA_990098223.1",
+      "GCA_990098228.1",
       "GCA_990098687.1",
       "GCA_990099088.1",
-      "GCA_990099106.1"
+      "GCA_990099097.1",
+      "GCA_990099099.1",
+      "GCA_990099106.1",
+      "GCA_990118116.1",
+      "GCA_990118529.1",
+      "GCA_990120369.1",
+      "GCA_990128727.1",
+      "GCA_990128760.1",
+      "GCA_990128761.1",
+      "GCA_990128764.1",
+      "GCA_990128836.1"
     ],
     "pending_records": [
       {
@@ -218751,6 +219330,12 @@
         "level": "Chromosome"
       },
       {
+        "accession": "GCA_062071868.1",
+        "species": "Toxabramis houdemeri",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
         "accession": "GCA_951217065.3",
         "species": "Baccha elongata",
         "release_date": "2026-10-28",
@@ -218949,6 +219534,12 @@
         "level": "Chromosome"
       },
       {
+        "accession": "GCA_990097813.1",
+        "species": "Catoptria verellus",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
         "accession": "GCA_990098222.1",
         "species": "Trifolium squamosum",
         "release_date": "2026-10-29",
@@ -218958,6 +219549,12 @@
         "accession": "GCA_990098223.1",
         "species": "Trifolium squamosum",
         "release_date": "2026-10-29",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990098228.1",
+        "species": "Bryophila ereptricula",
+        "release_date": "2026-11-01",
         "level": "Chromosome"
       },
       {
@@ -218973,12 +219570,72 @@
         "level": "Chromosome"
       },
       {
+        "accession": "GCA_990099097.1",
+        "species": "Catoptria verellus",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990099099.1",
+        "species": "Perizoma alchemillatum",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
         "accession": "GCA_990099106.1",
         "species": "Scythris fuscopterella",
         "release_date": "2026-10-31",
         "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990118116.1",
+        "species": "Phyllonorycter populifoliella",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990118529.1",
+        "species": "Metzneria metzneriella",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990120369.1",
+        "species": "Natrix natrix natrix",
+        "release_date": "2026-10-31",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990128727.1",
+        "species": "Calocoris alpestris",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990128760.1",
+        "species": "Furcula bicuspis",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990128761.1",
+        "species": "Furcula bicuspis",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990128764.1",
+        "species": "Phalonidia udana",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990128836.1",
+        "species": "Phalonidia udana",
+        "release_date": "2026-11-01",
+        "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19434
+    "previous_dashboard_assemblies": 19437
   }
 }
