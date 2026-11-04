@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-03T11:56:43.782936+00:00",
+  "generated_at": "2026-11-04T12:08:12.629053+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 103,
-      "species": 85,
-      "first_time_species": 62
+      "assemblies": 56,
+      "species": 45,
+      "first_time_species": 31
     },
     "year": {
-      "assemblies": 6566,
-      "species": 4059,
-      "first_time_species": 3482
+      "assemblies": 6570,
+      "species": 4061,
+      "first_time_species": 3483
     },
     "all": {
-      "assemblies": 19450,
-      "species": 10900,
-      "first_time_species": 10900
+      "assemblies": 19456,
+      "species": 10903,
+      "first_time_species": 10903
     }
   },
   "daily": [
@@ -55419,9 +55419,9 @@
     },
     {
       "date": "2026-08-06",
-      "assemblies": 21,
-      "species": 15,
-      "first_time_species": 6
+      "assemblies": 24,
+      "species": 18,
+      "first_time_species": 8
     },
     {
       "date": "2026-08-07",
@@ -55923,7 +55923,7 @@
     },
     {
       "date": "2026-10-29",
-      "assemblies": 18,
+      "assemblies": 19,
       "species": 14,
       "first_time_species": 4
     },
@@ -55947,12 +55947,18 @@
     },
     {
       "date": "2026-11-02",
-      "assemblies": 0,
-      "species": 0,
+      "assemblies": 1,
+      "species": 1,
       "first_time_species": 0
     },
     {
       "date": "2026-11-03",
+      "assemblies": 1,
+      "species": 1,
+      "first_time_species": 1
+    },
+    {
+      "date": "2026-11-04",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56111,29 +56117,29 @@
     },
     {
       "year": "2026",
-      "assemblies": 5826,
-      "species": 3946,
-      "first_time_species": 3022
+      "assemblies": 5832,
+      "species": 3951,
+      "first_time_species": 3025
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 73
+      "count": 36
     },
     {
       "group": "Plants",
-      "count": 21
+      "count": 13
     },
     {
       "group": "Fungi",
-      "count": 9
+      "count": 7
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4293
+      "count": 4294
     },
     {
       "group": "Plants",
@@ -56145,17 +56151,17 @@
     },
     {
       "group": "Other",
-      "count": 139
+      "count": 142
     }
   ],
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11139
+      "count": 11140
     },
     {
       "group": "Plants",
-      "count": 5363
+      "count": 5365
     },
     {
       "group": "Fungi",
@@ -56163,7 +56169,7 @@
     },
     {
       "group": "Other",
-      "count": 454
+      "count": 457
     }
   ],
   "milestones": [
@@ -56190,29 +56196,30 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "37368391",
-      "group": "Animals",
-      "sequence_release_date": "2026-11-01",
-      "assembly_publication_date": "2026-11-01"
+      "assembly_uid": "37444081",
+      "group": "Plants",
+      "sequence_release_date": "2026-11-03",
+      "assembly_publication_date": "2026-11-03",
+      "biosample_enriched": true
     },
-    "group": "Animals",
-    "accession": "GCA_990128836.1",
-    "organism_name": "Phalonidia udana",
-    "common_name": "moths & butterflies",
-    "tax_id": 1176460,
-    "release_date": "2026-11-01",
-    "assembly_level": "Chromosome",
-    "assembly_name": "ilPhaUdan1.hap1.1",
-    "total_sequence_length": 400209068,
-    "chromosome_count": 30,
-    "genus": "Phalonidia",
-    "family": "Tortricidae",
-    "phylum": "Arthropoda",
+    "group": "Plants",
+    "accession": "GCA_062074677.1",
+    "organism_name": "Dendrobium moniliforme",
+    "common_name": "monocots",
+    "tax_id": 142614,
+    "release_date": "2026-11-03",
+    "assembly_level": "Complete Genome",
+    "assembly_name": "ASM62074677v1",
+    "total_sequence_length": 1205277984,
+    "chromosome_count": 19,
+    "genus": "Dendrobium",
+    "family": "Orchidaceae",
+    "phylum": "Streptophyta",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Phalonidia_udana.jpg/960px-Phalonidia_udana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
-      "credit": "Lazyconcrete · CC BY-SA 4.0",
-      "matched_name": "Phalonidia udana"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg/960px-Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dendrobium_moniliforme_(26603118095)_-_cropped.jpg",
+      "credit": "Naoki Takebayashi from Fairbanks, AK, USA · CC BY-SA 2.0",
+      "matched_name": "Dendrobium moniliforme"
     }
   },
   "recent_assemblies": [
@@ -56222,6 +56229,71 @@
           "assembly_index"
         ],
         "metadata_pending": true,
+        "assembly_uid": "37444081",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-03",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062074677.1",
+      "organism_name": "Dendrobium moniliforme",
+      "common_name": "monocots",
+      "tax_id": 142614,
+      "release_date": "2026-11-03",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62074677v1",
+      "total_sequence_length": 1205277984,
+      "chromosome_count": 19,
+      "genus": "Dendrobium",
+      "family": "Orchidaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg/960px-Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Dendrobium_moniliforme_(26603118095)_-_cropped.jpg",
+        "credit": "Naoki Takebayashi from Fairbanks, AK, USA · CC BY-SA 2.0",
+        "matched_name": "Dendrobium moniliforme"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37386771",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-02",
+        "assembly_publication_date": "2026-11-02",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062072219.1",
+      "organism_name": "Protaetia brevitarsis",
+      "common_name": "beetles",
+      "tax_id": 348688,
+      "release_date": "2026-11-02",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IOZ_Pbre_1.0",
+      "total_sequence_length": 685861187,
+      "chromosome_count": 10,
+      "genus": "Protaetia",
+      "family": "Scarabaeidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Protaetia_brevitarsis_brevitarsis_Lewis%2C_1879_%283019456898%29.jpg/960px-Protaetia_brevitarsis_brevitarsis_Lewis%2C_1879_%283019456898%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Protaetia_brevitarsis_brevitarsis_Lewis,_1879_(3019456898).jpg",
+        "credit": "Udo Schmidt from Deutschland · CC BY-SA 2.0",
+        "matched_name": "Protaetia brevitarsis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index",
+          "datasets"
+        ],
+        "metadata_pending": false,
         "assembly_uid": "37368391",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56235,7 +56307,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilPhaUdan1.hap1.1",
-      "total_sequence_length": 400209068,
+      "total_sequence_length": 400193707,
       "chromosome_count": 30,
       "genus": "Phalonidia",
       "family": "Tortricidae",
@@ -56250,9 +56322,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368491",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56281,9 +56354,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368441",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56312,9 +56386,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368431",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56328,7 +56403,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilFurBicu1.hap1.1",
-      "total_sequence_length": 814570287,
+      "total_sequence_length": 814552715,
       "chromosome_count": 31,
       "genus": "Furcula",
       "family": "Notodontidae",
@@ -56343,9 +56418,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368471",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56359,7 +56435,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ihCalAlpe1.hap1.1",
-      "total_sequence_length": 1535909913,
+      "total_sequence_length": 1535890416,
       "chromosome_count": 17,
       "genus": "Calocoris",
       "family": "Miridae",
@@ -56374,9 +56450,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368361",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56390,7 +56467,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilMetMetz2.1",
-      "total_sequence_length": 530960805,
+      "total_sequence_length": 530945498,
       "chromosome_count": 30,
       "genus": "Metzneria",
       "family": "Gelechiidae",
@@ -56405,9 +56482,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368321",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56421,7 +56499,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilPhyPopl1.hap1.1",
-      "total_sequence_length": 344630100,
+      "total_sequence_length": 344613748,
       "chromosome_count": 29,
       "genus": "Phyllonorycter",
       "family": "Gracillariidae",
@@ -56436,9 +56514,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368291",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56452,7 +56531,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilPerAlce3.hap1.1",
-      "total_sequence_length": 363603864,
+      "total_sequence_length": 363586183,
       "chromosome_count": 30,
       "genus": "Perizoma",
       "family": "Geometridae",
@@ -56467,9 +56546,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368281",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56498,9 +56578,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368271",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56529,9 +56610,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368301",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56545,7 +56627,7 @@
       "release_date": "2026-11-01",
       "assembly_level": "Chromosome",
       "assembly_name": "ilCatVere1.hap1.1",
-      "total_sequence_length": 521595401,
+      "total_sequence_length": 521580043,
       "chromosome_count": 32,
       "genus": "Catoptria",
       "family": "Crambidae",
@@ -56560,9 +56642,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37376211",
         "group": "Animals",
         "sequence_release_date": "2026-11-01",
@@ -56592,9 +56675,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37368581",
         "group": "Animals",
         "sequence_release_date": "2026-10-31",
@@ -56623,9 +56707,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37323291",
         "group": "Animals",
         "sequence_release_date": "2026-10-31",
@@ -56639,7 +56724,7 @@
       "release_date": "2026-10-31",
       "assembly_level": "Chromosome",
       "assembly_name": "ilScyFuso1.hap1.1",
-      "total_sequence_length": 386146820,
+      "total_sequence_length": 386130369,
       "chromosome_count": 31,
       "genus": "Scythris",
       "family": "Scythrididae",
@@ -56654,9 +56739,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37323301",
         "group": "Animals",
         "sequence_release_date": "2026-10-31",
@@ -56670,7 +56756,7 @@
       "release_date": "2026-10-31",
       "assembly_level": "Chromosome",
       "assembly_name": "ilBryErep1.hap1.1",
-      "total_sequence_length": 746345684,
+      "total_sequence_length": 746330226,
       "chromosome_count": 32,
       "genus": "Bryophila",
       "family": "Noctuidae",
@@ -56685,9 +56771,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37323281",
         "group": "Animals",
         "sequence_release_date": "2026-10-31",
@@ -56701,7 +56788,7 @@
       "release_date": "2026-10-31",
       "assembly_level": "Chromosome",
       "assembly_name": "ilTinBalt3.hap1.1",
-      "total_sequence_length": 738378355,
+      "total_sequence_length": 738362722,
       "chromosome_count": 30,
       "genus": "Tinagma",
       "family": "Douglasiidae",
@@ -56716,9 +56803,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37323311",
         "group": "Animals",
         "sequence_release_date": "2026-10-31",
@@ -56732,7 +56820,7 @@
       "release_date": "2026-10-31",
       "assembly_level": "Chromosome",
       "assembly_name": "idVolZona1.2",
-      "total_sequence_length": 1329628596,
+      "total_sequence_length": 1329612776,
       "chromosome_count": 7,
       "genus": "Volucella",
       "family": "Syrphidae",
@@ -56747,9 +56835,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297661",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -56779,9 +56868,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297371",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -56811,9 +56901,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297411",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -56828,7 +56919,7 @@
       "release_date": "2026-10-30",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62070569v1",
-      "total_sequence_length": 653929830,
+      "total_sequence_length": 653913325,
       "chromosome_count": 24,
       "genus": "Nannoperca",
       "family": "Percichthyidae",
@@ -56843,9 +56934,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297301",
         "group": "Plants",
         "sequence_release_date": "2026-10-30",
@@ -56875,9 +56967,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297191",
         "group": "Plants",
         "sequence_release_date": "2026-10-30",
@@ -56907,9 +57000,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297321",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -56939,9 +57033,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37297061",
         "group": "Fungi",
         "sequence_release_date": "2026-10-30",
@@ -56971,9 +57066,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296961",
         "group": "Plants",
         "sequence_release_date": "2026-10-30",
@@ -57003,9 +57099,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296911",
         "group": "Plants",
         "sequence_release_date": "2026-10-30",
@@ -57035,9 +57132,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296691",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57067,9 +57165,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296521",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57099,9 +57198,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296711",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57131,9 +57231,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296391",
         "group": "Fungi",
         "sequence_release_date": "2026-10-30",
@@ -57163,9 +57264,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296371",
         "group": "Plants",
         "sequence_release_date": "2026-10-30",
@@ -57195,9 +57297,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296431",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57227,9 +57330,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296311",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57259,9 +57363,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37296771",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57276,7 +57381,7 @@
       "release_date": "2026-10-30",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62070493v1",
-      "total_sequence_length": 1112673491,
+      "total_sequence_length": 1112656845,
       "chromosome_count": 25,
       "genus": "Rhinichthys",
       "family": "Leuciscidae",
@@ -57291,9 +57396,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37292821",
         "group": "Animals",
         "sequence_release_date": "2026-10-30",
@@ -57323,9 +57429,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282661",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57339,7 +57446,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Chromosome",
       "assembly_name": "drTriSqua1.hap1.1",
-      "total_sequence_length": 459269953,
+      "total_sequence_length": 458826445,
       "chromosome_count": 8,
       "genus": "Trifolium",
       "family": "Fabaceae",
@@ -57354,9 +57461,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282651",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57388,6 +57496,39 @@
           "assembly_index"
         ],
         "metadata_pending": true,
+        "assembly_uid": "37385101",
+        "group": "Plants",
+        "sequence_release_date": "2026-10-29",
+        "assembly_publication_date": "2026-11-02",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062072165.1",
+      "organism_name": "Morella rubra",
+      "common_name": "Chinese bayberry",
+      "tax_id": 262757,
+      "release_date": "2026-10-29",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62072165v1",
+      "total_sequence_length": 286922812,
+      "chromosome_count": 8,
+      "genus": "Morella",
+      "family": "Myricaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Morella_rubra.JPG/960px-Morella_rubra.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Morella_rubra.JPG",
+        "credit": "Nicholas Gemini · CC BY-SA 3.0",
+        "matched_name": "Morella rubra"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index",
+          "datasets"
+        ],
+        "metadata_pending": false,
         "assembly_uid": "37238211",
         "group": "Fungi",
         "sequence_release_date": "2026-10-29",
@@ -57417,9 +57558,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37239741",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57434,7 +57576,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Chromosome",
       "assembly_name": "RefTab-1",
-      "total_sequence_length": 668758069,
+      "total_sequence_length": 668608568,
       "chromosome_count": 9,
       "genus": "Beta",
       "family": "Amaranthaceae",
@@ -57449,9 +57591,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37225691",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57481,9 +57624,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37226331",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57513,9 +57657,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37225721",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57545,9 +57690,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37239261",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57562,7 +57708,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62068133v1",
-      "total_sequence_length": 225447557,
+      "total_sequence_length": 225431213,
       "chromosome_count": 16,
       "genus": "Apis",
       "family": "Apidae",
@@ -57577,9 +57723,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37225611",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57609,9 +57756,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37225201",
         "group": "Fungi",
         "sequence_release_date": "2026-10-29",
@@ -57641,9 +57789,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37239071",
         "group": "Fungi",
         "sequence_release_date": "2026-10-29",
@@ -57658,7 +57807,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62068113v1",
-      "total_sequence_length": 42234405,
+      "total_sequence_length": 42066980,
       "chromosome_count": 13,
       "genus": "Pyrenophora",
       "family": "Pleosporaceae",
@@ -57673,9 +57822,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37224931",
         "group": "Fungi",
         "sequence_release_date": "2026-10-29",
@@ -57705,9 +57855,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37225521",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57737,9 +57888,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37238911",
         "group": "Fungi",
         "sequence_release_date": "2026-10-29",
@@ -57754,7 +57906,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Complete Genome",
       "assembly_name": "EIMB_Clini_774_1.0",
-      "total_sequence_length": 54383860,
+      "total_sequence_length": 54344772,
       "chromosome_count": 12,
       "genus": "Colletotrichum",
       "family": "Glomerellaceae",
@@ -57769,9 +57921,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37239131",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
@@ -57786,7 +57939,7 @@
       "release_date": "2026-10-29",
       "assembly_level": "Chromosome",
       "assembly_name": "Maize_PHR03",
-      "total_sequence_length": 2181552025,
+      "total_sequence_length": 2180841941,
       "chromosome_count": 10,
       "genus": "Zea",
       "family": "Poaceae",
@@ -57801,9 +57954,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37224921",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57833,9 +57987,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37224791",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57865,9 +58020,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37224721",
         "group": "Animals",
         "sequence_release_date": "2026-10-29",
@@ -57897,9 +58053,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282631",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -57913,7 +58070,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilMytTurc1.hap1.1",
-      "total_sequence_length": 876708827,
+      "total_sequence_length": 876693458,
       "chromosome_count": 31,
       "genus": "Mythimna",
       "family": "Noctuidae",
@@ -57928,9 +58085,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282551",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -57944,7 +58102,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilNonTyph1.hap1.1",
-      "total_sequence_length": 580313833,
+      "total_sequence_length": 580298532,
       "chromosome_count": 31,
       "genus": "Nonagria",
       "family": "Noctuidae",
@@ -57959,9 +58117,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282601",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -57990,9 +58149,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282591",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58006,7 +58166,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilEuxTrit3.hap1.1",
-      "total_sequence_length": 801816502,
+      "total_sequence_length": 801801090,
       "chromosome_count": 31,
       "genus": "Euxoa",
       "family": "Noctuidae",
@@ -58021,9 +58181,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282561",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58052,9 +58213,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282541",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58083,9 +58245,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282621",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58099,7 +58262,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ihSteBino3.1",
-      "total_sequence_length": 749275110,
+      "total_sequence_length": 749257138,
       "chromosome_count": 17,
       "genus": "Stenotus",
       "family": "Miridae",
@@ -58114,9 +58277,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282571",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58145,9 +58309,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282501",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58161,7 +58326,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "xgTriIncr5.1",
-      "total_sequence_length": 3397190821,
+      "total_sequence_length": 3397174142,
       "chromosome_count": 34,
       "genus": "Tritia",
       "family": "Nassariidae",
@@ -58176,9 +58341,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282521",
         "group": "Plants",
         "sequence_release_date": "2026-10-28",
@@ -58192,7 +58358,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "lpPhaCana1.hap1.1",
-      "total_sequence_length": 4001925399,
+      "total_sequence_length": 4001268115,
       "chromosome_count": 6,
       "genus": "Phalaris",
       "family": "Poaceae",
@@ -58207,9 +58373,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282271",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58223,7 +58390,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilScoConf1.hap1.1",
-      "total_sequence_length": 628482215,
+      "total_sequence_length": 628465281,
       "chromosome_count": 31,
       "genus": "Scopula",
       "family": "Geometridae",
@@ -58238,9 +58405,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282241",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58269,9 +58437,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282441",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58285,7 +58454,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilLygVici1.hap1.1",
-      "total_sequence_length": 751268736,
+      "total_sequence_length": 751253185,
       "chromosome_count": 32,
       "genus": "Lygephila",
       "family": "Erebidae",
@@ -58300,9 +58469,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282301",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58331,9 +58501,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282401",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58347,7 +58518,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "qqMarMusc1.hap1.1",
-      "total_sequence_length": 3697210100,
+      "total_sequence_length": 3697195708,
       "chromosome_count": 15,
       "genus": "Marpissa",
       "family": "Salticidae",
@@ -58362,9 +58533,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282311",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58378,7 +58550,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilNolCucu4.hap1.1",
-      "total_sequence_length": 481664880,
+      "total_sequence_length": 481649425,
       "chromosome_count": 31,
       "genus": "Nola",
       "family": "Nolidae",
@@ -58393,9 +58565,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282231",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58424,9 +58597,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282481",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58440,7 +58614,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilIdaFlav1.hap1.1",
-      "total_sequence_length": 364248681,
+      "total_sequence_length": 364232052,
       "chromosome_count": 31,
       "genus": "Idaea",
       "family": "Geometridae",
@@ -58455,9 +58629,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282451",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58486,9 +58661,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282341",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58502,7 +58678,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilEupActa1.hap1.1",
-      "total_sequence_length": 508779601,
+      "total_sequence_length": 508764083,
       "chromosome_count": 32,
       "genus": "Eupithecia",
       "family": "Geometridae",
@@ -58517,9 +58693,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282221",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58533,7 +58710,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilCalRama1.hap1.1",
-      "total_sequence_length": 582676454,
+      "total_sequence_length": 582660986,
       "chromosome_count": 31,
       "genus": "Callierges",
       "family": "Noctuidae",
@@ -58548,9 +58725,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282291",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58564,7 +58742,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilAglPing1.hap1.1",
-      "total_sequence_length": 1004687867,
+      "total_sequence_length": 1004672656,
       "chromosome_count": 30,
       "genus": "Aglossa",
       "family": "Pyralidae",
@@ -58579,9 +58757,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282411",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58610,9 +58789,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282371",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58626,7 +58806,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "icCasVibe3.hap1.1",
-      "total_sequence_length": 2903533619,
+      "total_sequence_length": 2903510979,
       "chromosome_count": 11,
       "genus": "Cassida",
       "family": "Chrysomelidae",
@@ -58641,9 +58821,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282361",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58657,7 +58838,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "bFraArc42.hap1.1",
-      "total_sequence_length": 1337059933,
+      "total_sequence_length": 1337040854,
       "chromosome_count": 36,
       "genus": "Fratercula",
       "family": "Alcidae",
@@ -58672,9 +58853,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282331",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58688,7 +58870,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "bLocNae1.hap1.1",
-      "total_sequence_length": 1247183269,
+      "total_sequence_length": 1247165346,
       "chromosome_count": 40,
       "genus": "Locustella",
       "family": "Locustellidae",
@@ -58703,9 +58885,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282491",
         "group": "Plants",
         "sequence_release_date": "2026-10-28",
@@ -58719,7 +58902,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "dcSclPere1.hap1.1",
-      "total_sequence_length": 845345460,
+      "total_sequence_length": 844871983,
       "chromosome_count": 11,
       "genus": "Scleranthus",
       "family": "Caryophyllaceae",
@@ -58734,9 +58917,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282351",
         "group": "Plants",
         "sequence_release_date": "2026-10-28",
@@ -58750,7 +58934,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ddAllPeti1.hap1.1",
-      "total_sequence_length": 937754989,
+      "total_sequence_length": 937326160,
       "chromosome_count": 21,
       "genus": "Alliaria",
       "family": "Brassicaceae",
@@ -58765,9 +58949,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282431",
         "group": "Plants",
         "sequence_release_date": "2026-10-28",
@@ -58781,7 +58966,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "daNicPhys1.hap1.1",
-      "total_sequence_length": 972895799,
+      "total_sequence_length": 972253972,
       "chromosome_count": 10,
       "genus": "Nicandra",
       "family": "Solanaceae",
@@ -58796,9 +58981,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282251",
         "group": "Plants",
         "sequence_release_date": "2026-10-28",
@@ -58812,7 +58998,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ddNocCaer2.hap1.1",
-      "total_sequence_length": 234381915,
+      "total_sequence_length": 233901602,
       "chromosome_count": 7,
       "genus": "Noccaea",
       "family": "Brassicaceae",
@@ -58827,9 +59013,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282611",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58843,7 +59030,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ilScoImmo2.hap1.2",
-      "total_sequence_length": 548401049,
+      "total_sequence_length": 548382760,
       "chromosome_count": 31,
       "genus": "Scopula",
       "family": "Geometridae",
@@ -58858,9 +59045,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37282281",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -58874,7 +59062,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "idBacElon1.3",
-      "total_sequence_length": 588120264,
+      "total_sequence_length": 588103670,
       "chromosome_count": 3,
       "genus": "Baccha",
       "family": "Syrphidae",
@@ -58921,9 +59109,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37208991",
         "group": "Fungi",
         "sequence_release_date": "2026-10-28",
@@ -58938,7 +59127,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62067061v1",
-      "total_sequence_length": 76605539,
+      "total_sequence_length": 76503701,
       "chromosome_count": 18,
       "genus": "Puccinia",
       "family": "Pucciniaceae",
@@ -59177,9 +59366,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37208861",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -59194,7 +59384,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "NCLXB_PPJ_1.0",
-      "total_sequence_length": 2460698608,
+      "total_sequence_length": 2460681644,
       "chromosome_count": 20,
       "genus": "Panthera",
       "family": "Felidae",
@@ -59273,9 +59463,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37208441",
         "group": "Animals",
         "sequence_release_date": "2026-10-28",
@@ -59290,7 +59481,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62067030v1",
-      "total_sequence_length": 271526968,
+      "total_sequence_length": 271510216,
       "chromosome_count": 5,
       "genus": "Ceratosolen",
       "family": "Agaonidae",
@@ -59369,9 +59560,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37208391",
         "group": "Fungi",
         "sequence_release_date": "2026-10-28",
@@ -59386,7 +59578,7 @@
       "release_date": "2026-10-28",
       "assembly_level": "Chromosome",
       "assembly_name": "Br62v1",
-      "total_sequence_length": 44276219,
+      "total_sequence_length": 44241195,
       "chromosome_count": 8,
       "genus": "Pyricularia",
       "family": "Pyriculariaceae",
@@ -59711,9 +59903,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37099341",
         "group": "Other",
         "sequence_release_date": "2026-10-27",
@@ -104788,6 +104981,75 @@
       "assembly_name": "KEN.ecotypeID_7475.PacbioHiFiAssembly",
       "total_sequence_length": 138681478,
       "chromosome_count": 5
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37384991",
+        "group": "Other",
+        "sequence_release_date": "2026-08-06",
+        "assembly_publication_date": "2026-11-02",
+        "biosample_enriched": true
+      },
+      "group": "Other",
+      "accession": "GCA_062072164.1",
+      "organism_name": "Leishmania guyanensis",
+      "common_name": null,
+      "tax_id": 5670,
+      "release_date": "2026-08-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62072164v1",
+      "total_sequence_length": 30617286,
+      "chromosome_count": 35
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37384981",
+        "group": "Other",
+        "sequence_release_date": "2026-08-06",
+        "assembly_publication_date": "2026-11-02",
+        "biosample_enriched": true
+      },
+      "group": "Other",
+      "accession": "GCA_062072163.1",
+      "organism_name": "Leishmania sp. MHOM/BR/2002/NMT-RBO004",
+      "common_name": null,
+      "tax_id": 1234607,
+      "release_date": "2026-08-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62072163v1",
+      "total_sequence_length": 31555089,
+      "chromosome_count": 35
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37384961",
+        "group": "Other",
+        "sequence_release_date": "2026-08-06",
+        "assembly_publication_date": "2026-11-02",
+        "biosample_enriched": true
+      },
+      "group": "Other",
+      "accession": "GCA_062072162.1",
+      "organism_name": "Leishmania sp. MHOM/BR/2011/S85",
+      "common_name": null,
+      "tax_id": 3127001,
+      "release_date": "2026-08-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62072162v1",
+      "total_sequence_length": 30740732,
+      "chromosome_count": 35
     },
     {
       "source_provenance": {
@@ -170166,9 +170428,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37167121",
         "group": "Other",
         "sequence_release_date": "2026-01-30",
@@ -170183,7 +170446,7 @@
       "release_date": "2026-01-30",
       "assembly_level": "Chromosome",
       "assembly_name": "ASM62066454v1",
-      "total_sequence_length": 31272032,
+      "total_sequence_length": 31211934,
       "chromosome_count": 7
     },
     {
@@ -191757,7 +192020,7 @@
       },
       "group": "Animals",
       "accession": "GCA_977019775.1",
-      "organism_name": "Ochetostoma sp. New Caledonia",
+      "organism_name": "Ochetostoma sp. A-HT0OLUBZJ",
       "common_name": null,
       "tax_id": 3465828,
       "release_date": "2025-11-07",
@@ -195119,59 +195382,15 @@
       "assembly_name": "DICA2.2",
       "total_sequence_length": 13990122,
       "chromosome_count": 6
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_054397075.1",
-      "organism_name": "Ostrinia furnacalis",
-      "common_name": "Asian corn borer",
-      "tax_id": 93504,
-      "release_date": "2025-10-29",
-      "assembly_level": "Chromosome",
-      "assembly_name": "OfT1v1.0",
-      "total_sequence_length": 491402755,
-      "chromosome_count": 32
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_054396985.1",
-      "organism_name": "Ostrinia furnacalis",
-      "common_name": "Asian corn borer",
-      "tax_id": 93504,
-      "release_date": "2025-10-29",
-      "assembly_level": "Chromosome",
-      "assembly_name": "OfT1v2.0",
-      "total_sequence_length": 494524054,
-      "chromosome_count": 32
     }
   ],
   "annotations": {
     "in_progress": [
       {
-        "species": "Pelodiscus sinensis",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-19",
-        "assembly": "ASM5242630v1 (GCF_052426305.1)"
-      },
-      {
-        "species": "Durio zibethinus",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-21",
-        "assembly": "ASM4732523v1 (GCF_047325235.1)"
+        "species": "Colias eurytheme",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-14",
+        "assembly": "ilColEury1 Martin Lab GWU primary"
       },
       {
         "species": "Phasianus colchicus",
@@ -195180,52 +195399,10 @@
         "assembly": "bPhaCol1.hap1.1"
       },
       {
-        "species": "Nuphar pumila",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-28",
-        "assembly": "dmNupPumi1.hap1.1"
-      },
-      {
-        "species": "Physcomitrium patens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-02",
-        "assembly": "ASM5946719v1"
-      },
-      {
-        "species": "Crocodylus siamensis",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-02",
-        "assembly": "ASM5211081v1"
-      },
-      {
-        "species": "Oncorhynchus mykiss",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-26",
-        "assembly": "ASM5762802v1"
-      },
-      {
-        "species": "Homo sapiens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "GRCh38.p14 (GCF_000001405.40)"
-      },
-      {
-        "species": "Homo sapiens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "T2T-CHM13v2.0 (GCF_009914755.1)"
-      },
-      {
         "species": "Sinohyriopsis cumingii",
-        "status": "Automated processing in progress",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-10-13",
-        "assembly": "ASM2855479v2"
-      },
-      {
-        "species": "Phoenix dactylifera",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-22",
-        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1"
+        "assembly": "ASM2855479v2 (GCF_028554795.1)"
       },
       {
         "species": "Ciona robusta",
@@ -195234,16 +195411,28 @@
         "assembly": "ASM961781v2 (GCF_009617815.1)"
       },
       {
-        "species": "Delphinapterus leucas",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-21",
-        "assembly": "BTC_Dleu_Yukka2"
+        "species": "Phoenix dactylifera",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-22",
+        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1 (GCF_051530095.1)"
       },
       {
-        "species": "Colias eurytheme",
+        "species": "Crocodylus siamensis",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-14",
-        "assembly": "ilColEury1 Martin Lab GWU primary"
+        "freeze_date": "2026-11-02",
+        "assembly": "ASM5211081v1"
+      },
+      {
+        "species": "Physcomitrium patens",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-02",
+        "assembly": "ASM5946719v1"
+      },
+      {
+        "species": "Nuphar pumila",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-28",
+        "assembly": "dmNupPumi1.hap1.1 (GCF_984573655.1)"
       },
       {
         "species": "Phalangium opilio",
@@ -195252,10 +195441,28 @@
         "assembly": "DU_Popi_V2 (GCF_054372755.1)"
       },
       {
+        "species": "Delphinapterus leucas",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-10-21",
+        "assembly": "BTC_Dleu_Yukka2 (GCF_059928025.1)"
+      },
+      {
+        "species": "Oncorhynchus mykiss",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-26",
+        "assembly": "ASM5762802v1"
+      },
+      {
         "species": "Hydra viridissima",
         "status": "Automated processing in progress",
         "freeze_date": "2026-10-30",
         "assembly": "HvirCarnegie_v1"
+      },
+      {
+        "species": "Pelodiscus sinensis",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-19",
+        "assembly": "ASM5242630v1 (GCF_052426305.1)"
       },
       {
         "species": "Cupressus sempervirens",
@@ -195277,6 +195484,11 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Durio zibethinus",
+        "release_date": "2026-10-29",
+        "assembly": "ASM4732523v1 (GCF_047325235.1)"
+      },
       {
         "species": "Bombyx mandarina",
         "release_date": "2026-10-27",
@@ -195471,41 +195683,6 @@
         "species": "Rhinolophus sinicus",
         "release_date": "2026-09-23",
         "assembly": "RSI-T2T (GCF_057876585.1)"
-      },
-      {
-        "species": "Theobroma cacao",
-        "release_date": "2026-09-22",
-        "assembly": "ASM5381388v1 (GCF_053813885.1)"
-      },
-      {
-        "species": "Actinidia eriantha",
-        "release_date": "2026-09-22",
-        "assembly": "HAP1 (GCF_982292455.1)"
-      },
-      {
-        "species": "Stylophora pistillata",
-        "release_date": "2026-09-22",
-        "assembly": "jaStyPist1.2 (GCF_964205215.1)"
-      },
-      {
-        "species": "Phoenix dactylifera",
-        "release_date": "2026-09-22",
-        "assembly": "Male_Medina_1_primary_PhDact_Kaust_v1.1 (GCF_054393675.1)"
-      },
-      {
-        "species": "Pyrus communis",
-        "release_date": "2026-09-22",
-        "assembly": "ASM4128382v1 (GCF_041283825.1)"
-      },
-      {
-        "species": "Danio rerio",
-        "release_date": "2026-09-22",
-        "assembly": "GRCz12tu (GCF_049306965.2)"
-      },
-      {
-        "species": "Danio rerio",
-        "release_date": "2026-09-22",
-        "assembly": "GRCz13ab (GCF_052040795.2)"
       }
     ]
   },
@@ -200812,6 +200989,9 @@
     "Nannoperca australis": "2026-10-30",
     "Octodon degus": "2026-10-30",
     "Toxabramis houdemeri": "2026-11-01",
+    "Leishmania sp. MHOM/BR/2011/S85": "2026-08-06",
+    "Leishmania sp. MHOM/BR/2002/NMT-RBO004": "2026-08-06",
+    "Dendrobium moniliforme": "2026-11-03",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -204414,7 +204594,7 @@
     "Tylodina perversa": "2025-11-08",
     "Aroga velocella": "2025-11-07",
     "Tinagma dryadis": "2025-11-07",
-    "Ochetostoma sp. New Caledonia": "2025-11-07",
+    "Ochetostoma sp. A-HT0OLUBZJ": "2025-11-07",
     "Ancylis unculana": "2025-11-07",
     "Silba fumosa": "2025-11-08",
     "Oeneis norna": "2025-11-07",
@@ -210684,6 +210864,18 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Phalonidia_udana.jpg",
       "credit": "Lazyconcrete · CC BY-SA 4.0",
       "matched_name": "Phalonidia udana"
+    },
+    "Protaetia brevitarsis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Protaetia_brevitarsis_brevitarsis_Lewis%2C_1879_%283019456898%29.jpg/960px-Protaetia_brevitarsis_brevitarsis_Lewis%2C_1879_%283019456898%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Protaetia_brevitarsis_brevitarsis_Lewis,_1879_(3019456898).jpg",
+      "credit": "Udo Schmidt from Deutschland · CC BY-SA 2.0",
+      "matched_name": "Protaetia brevitarsis"
+    },
+    "Dendrobium moniliforme": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg/960px-Dendrobium_moniliforme_%2826603118095%29_-_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Dendrobium_moniliforme_(26603118095)_-_cropped.jpg",
+      "credit": "Naoki Takebayashi from Fairbanks, AK, USA · CC BY-SA 2.0",
+      "matched_name": "Dendrobium moniliforme"
     }
   },
   "taxonomy_cache": {
@@ -218868,7 +219060,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3405230": {},
     "381608": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "ray-finned fishes",
@@ -218878,11 +219069,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3451521": {},
-    "3465513": {},
-    "3256806": {},
-    "3451525": {},
-    "3451528": {},
     "1594246": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "moths & butterflies",
@@ -218954,10 +219140,34 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
-    }
+    },
+    "3405230": {},
+    "348688": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "beetles",
+      "fallback_common_name_source": "group_name",
+      "genus": "Protaetia",
+      "family": "Scarabaeidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "142614": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "monocots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Dendrobium",
+      "family": "Orchidaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3451521": {},
+    "3465513": {},
+    "3256806": {},
+    "3451525": {},
+    "3451528": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1375,
+    "overlapping_or_superseded_rows_removed": 1463,
     "date_conflicts": [
       {
         "accession": "GCA_061535455.1",
@@ -218980,662 +219190,60 @@
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/04\"[GRLS]:\"2026/11/03\"[GRLS] OR \"2026/10/04\"[SRDT]:\"2026/11/03\"[SRDT] OR \"2026/10/04\"[UPDT]:\"2026/11/03\"[UPDT])",
-    "matched_uids": 1463,
-    "held_uids_rechecked": 79,
-    "generated_at": "2026-11-03T11:55:53.795028+00:00",
-    "datasets_rows": 19362,
-    "assembly_index_rows": 1463,
-    "merged_assemblies": 19450,
-    "unique_accession_stems": 19450,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/05\"[GRLS]:\"2026/11/04\"[GRLS] OR \"2026/10/05\"[SRDT]:\"2026/11/04\"[SRDT] OR \"2026/10/05\"[UPDT]:\"2026/11/04\"[UPDT])",
+    "matched_uids": 1469,
+    "held_uids_rechecked": 92,
+    "generated_at": "2026-11-04T12:07:41.310595+00:00",
+    "datasets_rows": 19450,
+    "assembly_index_rows": 1469,
+    "merged_assemblies": 19456,
+    "unique_accession_stems": 19456,
     "pending_metadata_accessions": [
-      "GCA_041937245.3",
-      "GCA_062063604.1",
-      "GCA_062066454.1",
-      "GCA_062067027.1",
-      "GCA_062067030.1",
-      "GCA_062067038.1",
-      "GCA_062067061.1",
-      "GCA_062068080.1",
-      "GCA_062068081.1",
-      "GCA_062068082.1",
-      "GCA_062068089.1",
-      "GCA_062068091.1",
-      "GCA_062068101.1",
-      "GCA_062068110.1",
-      "GCA_062068113.1",
-      "GCA_062068117.1",
-      "GCA_062068127.1",
-      "GCA_062068133.1",
-      "GCA_062068135.1",
-      "GCA_062068137.1",
-      "GCA_062068138.1",
-      "GCA_062068139.1",
-      "GCA_062068774.1",
-      "GCA_062070492.1",
-      "GCA_062070493.1",
-      "GCA_062070536.1",
-      "GCA_062070538.1",
-      "GCA_062070539.1",
-      "GCA_062070544.1",
-      "GCA_062070546.1",
-      "GCA_062070549.1",
-      "GCA_062070552.1",
-      "GCA_062070559.1",
-      "GCA_062070560.1",
-      "GCA_062070562.1",
-      "GCA_062070563.1",
-      "GCA_062070564.1",
-      "GCA_062070565.1",
-      "GCA_062070569.1",
-      "GCA_062070570.1",
-      "GCA_062070571.1",
-      "GCA_062071868.1",
-      "GCA_951217065.3",
-      "GCA_963966105.2",
-      "GCA_987274335.2",
-      "GCA_990060240.1",
-      "GCA_990060395.1",
-      "GCA_990060469.1",
-      "GCA_990060473.1",
-      "GCA_990060706.1",
-      "GCA_990060741.1",
-      "GCA_990061154.1",
-      "GCA_990061284.1",
-      "GCA_990061290.1",
-      "GCA_990061524.1",
-      "GCA_990061533.1",
-      "GCA_990061540.1",
-      "GCA_990061541.1",
-      "GCA_990061545.1",
-      "GCA_990061558.1",
-      "GCA_990061594.1",
-      "GCA_990061635.1",
-      "GCA_990061641.1",
-      "GCA_990061649.1",
-      "GCA_990061653.1",
-      "GCA_990061681.1",
-      "GCA_990061979.1",
-      "GCA_990073939.1",
-      "GCA_990078541.1",
-      "GCA_990078558.1",
-      "GCA_990078559.1",
-      "GCA_990078642.1",
-      "GCA_990078719.1",
-      "GCA_990078725.1",
-      "GCA_990078871.1",
-      "GCA_990097813.1",
-      "GCA_990098222.1",
-      "GCA_990098223.1",
-      "GCA_990098228.1",
-      "GCA_990098687.1",
-      "GCA_990099088.1",
-      "GCA_990099097.1",
-      "GCA_990099099.1",
-      "GCA_990099106.1",
-      "GCA_990118116.1",
-      "GCA_990118529.1",
-      "GCA_990120369.1",
-      "GCA_990128727.1",
-      "GCA_990128760.1",
-      "GCA_990128761.1",
-      "GCA_990128764.1",
-      "GCA_990128836.1"
+      "GCA_062072162.1",
+      "GCA_062072163.1",
+      "GCA_062072164.1",
+      "GCA_062072165.1",
+      "GCA_062072219.1",
+      "GCA_062074677.1"
     ],
     "pending_records": [
       {
-        "accession": "GCA_041937245.3",
-        "species": "Toumeyella liriodendri",
-        "release_date": "2024-09-18",
+        "accession": "GCA_062072162.1",
+        "species": "Leishmania sp. MHOM/BR/2011/S85",
+        "release_date": "2026-08-06",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062063604.1",
-        "species": "Leishmania lainsoni",
-        "release_date": "2026-10-27",
+        "accession": "GCA_062072163.1",
+        "species": "Leishmania sp. MHOM/BR/2002/NMT-RBO004",
+        "release_date": "2026-08-06",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062066454.1",
-        "species": "Dictyostelium citrinum",
-        "release_date": "2026-01-30",
+        "accession": "GCA_062072164.1",
+        "species": "Leishmania guyanensis",
+        "release_date": "2026-08-06",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062067027.1",
-        "species": "Pyricularia oryzae",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062067030.1",
-        "species": "Ceratosolen solmsi marchali",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062067038.1",
-        "species": "Panthera pardus japonensis",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062067061.1",
-        "species": "Puccinia striiformis f. sp. tritici",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068080.1",
-        "species": "Sus scrofa",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068081.1",
-        "species": "Sus scrofa",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068082.1",
-        "species": "Sus scrofa",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068089.1",
-        "species": "Zea mays",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068091.1",
-        "species": "Colletotrichum lini",
-        "release_date": "2026-10-29",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062068101.1",
-        "species": "Oxygymnocypris stewartii",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068110.1",
-        "species": "Fusarium asiaticum",
-        "release_date": "2026-10-29",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062068113.1",
-        "species": "Pyrenophora teres f. maculata",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068117.1",
-        "species": "Fusarium asiaticum",
-        "release_date": "2026-10-29",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062068127.1",
-        "species": "Hemidactylus frenatus",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068133.1",
-        "species": "Apis mellifera",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068135.1",
-        "species": "Danio rerio",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068137.1",
-        "species": "Apopellia endiviifolia",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062068138.1",
+        "accession": "GCA_062072165.1",
         "species": "Morella rubra",
         "release_date": "2026-10-29",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062068139.1",
-        "species": "Beta vulgaris subsp. vulgaris",
-        "release_date": "2026-10-29",
+        "accession": "GCA_062072219.1",
+        "species": "Protaetia brevitarsis",
+        "release_date": "2026-11-02",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062068774.1",
-        "species": "Coprinellus radians",
-        "release_date": "2026-10-29",
+        "accession": "GCA_062074677.1",
+        "species": "Dendrobium moniliforme",
+        "release_date": "2026-11-03",
         "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062070492.1",
-        "species": "Rhinichthys atratulus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070493.1",
-        "species": "Rhinichthys atratulus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070536.1",
-        "species": "Fistulobalanus albicostatus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070538.1",
-        "species": "Xiphasia setifer",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070539.1",
-        "species": "Gymnosporia berberoides",
-        "release_date": "2026-10-30",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062070544.1",
-        "species": "Anisogramma anomala",
-        "release_date": "2026-10-30",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062070546.1",
-        "species": "Perna canaliculus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070549.1",
-        "species": "Anopheles sinensis",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070552.1",
-        "species": "Priapulus caudatus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070559.1",
-        "species": "Vanilla planifolia",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070560.1",
-        "species": "Vanilla planifolia",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070562.1",
-        "species": "Trichophyton indotineae",
-        "release_date": "2026-10-30",
-        "level": "Complete Genome"
-      },
-      {
-        "accession": "GCA_062070563.1",
-        "species": "Columba livia",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070564.1",
-        "species": "Oxytropis splendens",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070565.1",
-        "species": "Oxytropis arctobia",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070569.1",
-        "species": "Nannoperca obscura",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070570.1",
-        "species": "Nannoperca australis",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062070571.1",
-        "species": "Octodon degus",
-        "release_date": "2026-10-30",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062071868.1",
-        "species": "Toxabramis houdemeri",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_951217065.3",
-        "species": "Baccha elongata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_963966105.2",
-        "species": "Volucella zonaria",
-        "release_date": "2026-10-31",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_987274335.2",
-        "species": "Scopula immorata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060240.1",
-        "species": "Noccaea caerulescens",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060395.1",
-        "species": "Nicandra physalodes",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060469.1",
-        "species": "Alliaria petiolata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060473.1",
-        "species": "Scleranthus perennis",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060706.1",
-        "species": "Locustella naevia",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990060741.1",
-        "species": "Fratercula arctica",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061154.1",
-        "species": "Cassida vibex",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061284.1",
-        "species": "Coleophora discordella",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061290.1",
-        "species": "Aglossa pinguinalis",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061524.1",
-        "species": "Callierges ramosa",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061533.1",
-        "species": "Eupithecia actaeata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061540.1",
-        "species": "Eupithecia actaeata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061541.1",
-        "species": "Idaea flaveolaria",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061545.1",
-        "species": "Idaea flaveolaria",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061558.1",
-        "species": "Nola cucullatella",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061594.1",
-        "species": "Marpissa muscosa",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061635.1",
-        "species": "Lygephila viciae",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061641.1",
-        "species": "Lygephila viciae",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061649.1",
-        "species": "Scopula confinaria",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061653.1",
-        "species": "Scopula confinaria",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061681.1",
-        "species": "Phalaris canariensis",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990061979.1",
-        "species": "Tritia incrassata",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990073939.1",
-        "species": "Locustella naevia",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078541.1",
-        "species": "Stenotus binotatus",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078558.1",
-        "species": "Nonagria typhae",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078559.1",
-        "species": "Mythimna turca",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078642.1",
-        "species": "Euxoa tritici",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078719.1",
-        "species": "Euxoa tritici",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078725.1",
-        "species": "Nonagria typhae",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990078871.1",
-        "species": "Mythimna turca",
-        "release_date": "2026-10-28",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990097813.1",
-        "species": "Catoptria verellus",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990098222.1",
-        "species": "Trifolium squamosum",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990098223.1",
-        "species": "Trifolium squamosum",
-        "release_date": "2026-10-29",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990098228.1",
-        "species": "Bryophila ereptricula",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990098687.1",
-        "species": "Tinagma balteolella",
-        "release_date": "2026-10-31",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990099088.1",
-        "species": "Bryophila ereptricula",
-        "release_date": "2026-10-31",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990099097.1",
-        "species": "Catoptria verellus",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990099099.1",
-        "species": "Perizoma alchemillatum",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990099106.1",
-        "species": "Scythris fuscopterella",
-        "release_date": "2026-10-31",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990118116.1",
-        "species": "Phyllonorycter populifoliella",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990118529.1",
-        "species": "Metzneria metzneriella",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990120369.1",
-        "species": "Natrix natrix natrix",
-        "release_date": "2026-10-31",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990128727.1",
-        "species": "Calocoris alpestris",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990128760.1",
-        "species": "Furcula bicuspis",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990128761.1",
-        "species": "Furcula bicuspis",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990128764.1",
-        "species": "Phalonidia udana",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990128836.1",
-        "species": "Phalonidia udana",
-        "release_date": "2026-11-01",
-        "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19437
+    "previous_dashboard_assemblies": 19450
   }
 }
