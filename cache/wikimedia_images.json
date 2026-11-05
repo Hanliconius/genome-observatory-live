@@ -4018,5 +4018,35 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Dendrobium_moniliforme_(26603118095)_-_cropped.jpg",
     "credit": "Naoki Takebayashi from Fairbanks, AK, USA \u00b7 CC BY-SA 2.0",
     "matched_name": "Dendrobium moniliforme"
+  },
+  "Xantusia vigilis": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Xantusia_vigilis1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Xantusia_vigilis1.jpg",
+    "credit": "Public domain",
+    "matched_name": "Xantusia vigilis"
+  },
+  "Styrax faberi": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Styrax_platanifolius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Styrax_platanifolius.jpg",
+    "credit": "Public domain",
+    "matched_name": "Styrax"
+  },
+  "Galeocerdo cuvier": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Tiger_shark.jpg/960px-Tiger_shark.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg",
+    "credit": "Albert kok \u00b7 CC BY-SA 3.0",
+    "matched_name": "Galeocerdo cuvier"
+  },
+  "Anomia chinensis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Anomia_chinensis_-_Osaka_Museum_of_Natural_History_-_DSC07793.JPG/960px-Anomia_chinensis_-_Osaka_Museum_of_Natural_History_-_DSC07793.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Anomia_chinensis_-_Osaka_Museum_of_Natural_History_-_DSC07793.JPG",
+    "credit": "Daderot \u00b7 CC0",
+    "matched_name": "Anomia chinensis"
+  },
+  "Squalidus argentatus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Squalidus_argentatus.JPG/960px-Squalidus_argentatus.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Squalidus_argentatus.JPG",
+    "credit": "A. C. Tatarinov \u00b7 CC0",
+    "matched_name": "Squalidus argentatus"
   }
 }
