@@ -101,3 +101,25 @@ Rankings count distinct species among selected unresolved qualifying assemblies,
 not total institution or BioProject output. Missing identifiers are reported but
 excluded from rankings. Species can recur between ranks. No records are reclassified
 and the underlying snapshot is unchanged.
+
+## Larger BioProject origins
+
+The unlinked preview includes a separate origin view for direct BioProjects with
+more than five observed all-level species, in fixed 6–20 / 21–100 / >100 bands.
+Origin does not depend on the low-output candidate cutoff. Programme evidence
+retains precedence, followed by production-centre names, research-institution
+names, other recorded organisations, and missing origin. Institution/centre name
+patterns use the assembly submitter and cached BioProject organisation strings.
+This is recorded organisational provenance, not verified scientific leadership.
+The original display buckets are unchanged.
+
+Charts count selected qualifying assemblies. The project table counts one direct
+BioProject per row and reports both its all-level footprint and selected species/
+assembly totals. Mixed projects retain every selected origin label. Origin filters
+retain entire projects with any matching selected record. Search covers purpose,
+organisations and identifiers. Descriptions, parent links, grants and a CSV retain
+the evidence. Cached organisations/descriptions/capture dates from
+`cache/goat_project_metadata.json.gz` are embedded as the JSON element
+`project-origin-metadata`, for the projects above five species in the dated
+`data/goat_project_stats.json.gz` snapshot. Regenerate that embedded map when
+refreshing the provenance snapshot; it does not follow the daily intent refresh.
