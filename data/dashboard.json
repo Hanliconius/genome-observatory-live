@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-06T12:06:41.697844+00:00",
+  "generated_at": "2026-11-07T11:03:52.988786+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 33,
-      "species": 28,
-      "first_time_species": 24
+      "assemblies": 49,
+      "species": 40,
+      "first_time_species": 29
     },
     "year": {
-      "assemblies": 6575,
-      "species": 4065,
-      "first_time_species": 3486
+      "assemblies": 6437,
+      "species": 3944,
+      "first_time_species": 3358
     },
     "all": {
-      "assemblies": 19468,
-      "species": 10911,
-      "first_time_species": 10911
+      "assemblies": 19489,
+      "species": 10921,
+      "first_time_species": 10921
     }
   },
   "daily": [
@@ -55959,18 +55959,24 @@
     },
     {
       "date": "2026-11-04",
-      "assemblies": 7,
-      "species": 7,
-      "first_time_species": 5
+      "assemblies": 15,
+      "species": 15,
+      "first_time_species": 12
     },
     {
       "date": "2026-11-05",
+      "assemblies": 13,
+      "species": 8,
+      "first_time_species": 3
+    },
+    {
+      "date": "2026-11-06",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-11-06",
+      "date": "2026-11-07",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56129,47 +56135,47 @@
     },
     {
       "year": "2026",
-      "assemblies": 5845,
-      "species": 3963,
-      "first_time_species": 3034
+      "assemblies": 5866,
+      "species": 3979,
+      "first_time_species": 3044
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 28
+      "count": 34
     },
     {
       "group": "Plants",
-      "count": 5
+      "count": 15
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4298
+      "count": 4176
     },
     {
       "group": "Plants",
-      "count": 1651
+      "count": 1640
     },
     {
       "group": "Fungi",
-      "count": 484
+      "count": 481
     },
     {
       "group": "Other",
-      "count": 142
+      "count": 140
     }
   ],
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11148
+      "count": 11159
     },
     {
       "group": "Plants",
-      "count": 5369
+      "count": 5379
     },
     {
       "group": "Fungi",
@@ -56204,30 +56210,29 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "37518371",
-      "group": "Plants",
-      "sequence_release_date": "2026-11-04",
-      "assembly_publication_date": "2026-11-04",
-      "biosample_enriched": true
+      "assembly_uid": "37588941",
+      "group": "Animals",
+      "sequence_release_date": "2026-11-05",
+      "assembly_publication_date": "2026-11-05"
     },
-    "group": "Plants",
-    "accession": "GCA_062075716.1",
-    "organism_name": "Colocasia esculenta",
-    "common_name": "taro",
-    "tax_id": 4460,
-    "release_date": "2026-11-04",
+    "group": "Animals",
+    "accession": "GCA_990133692.1",
+    "organism_name": "Agonopterix petasitis",
+    "common_name": "moths & butterflies",
+    "tax_id": 1660578,
+    "release_date": "2026-11-05",
     "assembly_level": "Chromosome",
-    "assembly_name": "Colocasia_esculenta_GY2_v1.0",
-    "total_sequence_length": 2297272252,
-    "chromosome_count": 14,
-    "genus": "Colocasia",
-    "family": "Araceae",
-    "phylum": "Streptophyta",
+    "assembly_name": "ilAgoPeta1.hap2.1",
+    "total_sequence_length": 496027218,
+    "chromosome_count": 30,
+    "genus": "Agonopterix",
+    "family": "Depressariidae",
+    "phylum": "Arthropoda",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/%28MHNT%29_Colocasia_esculenta_-_Les_Martels%2C_Giroussens_Tarn.jpg/960px-%28MHNT%29_Colocasia_esculenta_-_Les_Martels%2C_Giroussens_Tarn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Colocasia_esculenta_-_Les_Martels,_Giroussens_Tarn.jpg",
-      "credit": "Didier Descouens · CC BY-SA 4.0",
-      "matched_name": "Colocasia esculenta"
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Agonopterix_petasitis_M.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Agonopterix_petasitis_M.jpg",
+      "credit": "Michael Kurz · CC BY-SA 3.0 at",
+      "matched_name": "Agonopterix petasitis"
     }
   },
   "recent_assemblies": [
@@ -56237,6 +56242,654 @@
           "assembly_index"
         ],
         "metadata_pending": true,
+        "assembly_uid": "37588961",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133899.1",
+      "organism_name": "Chelonaplysilla americana",
+      "common_name": null,
+      "tax_id": 3291107,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "odCheAmer1.1",
+      "total_sequence_length": 185768397,
+      "chromosome_count": 15,
+      "genus": null,
+      "family": null,
+      "phylum": null,
+      "image": null
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588941",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133692.1",
+      "organism_name": "Agonopterix petasitis",
+      "common_name": "moths & butterflies",
+      "tax_id": 1660578,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilAgoPeta1.hap2.1",
+      "total_sequence_length": 496027218,
+      "chromosome_count": 30,
+      "genus": "Agonopterix",
+      "family": "Depressariidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Agonopterix_petasitis_M.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Agonopterix_petasitis_M.jpg",
+        "credit": "Michael Kurz · CC BY-SA 3.0 at",
+        "matched_name": "Agonopterix petasitis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588981",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133690.1",
+      "organism_name": "Anarta pugnax",
+      "common_name": "moths & butterflies",
+      "tax_id": 3437166,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilAnaPugn1.hap1.1",
+      "total_sequence_length": 741876385,
+      "chromosome_count": 31,
+      "genus": "Anarta",
+      "family": "Noctuidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Anarta_pugnax.JPG/960px-Anarta_pugnax.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Anarta_pugnax.JPG",
+        "credit": "Dumi · CC BY-SA 3.0",
+        "matched_name": "Anarta pugnax"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588951",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133682.1",
+      "organism_name": "Agonopterix petasitis",
+      "common_name": "moths & butterflies",
+      "tax_id": 1660578,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilAgoPeta1.hap1.1",
+      "total_sequence_length": 496631905,
+      "chromosome_count": 30,
+      "genus": "Agonopterix",
+      "family": "Depressariidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Agonopterix_petasitis_M.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Agonopterix_petasitis_M.jpg",
+        "credit": "Michael Kurz · CC BY-SA 3.0 at",
+        "matched_name": "Agonopterix petasitis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37589351",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062076612.1",
+      "organism_name": "Nicotiana tabacum",
+      "common_name": "common tobacco",
+      "tax_id": 4097,
+      "release_date": "2026-11-05",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "ASM62076612v1",
+      "total_sequence_length": 4210468176,
+      "chromosome_count": 24,
+      "genus": "Nicotiana",
+      "family": "Solanaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Tabak_P9290021.JPG/960px-Tabak_P9290021.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tabak_P9290021.JPG",
+        "credit": "Jom / Joachim Müllerchen · CC BY 2.5",
+        "matched_name": "Nicotiana tabacum"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587781",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076611.1",
+      "organism_name": "Quercus frainetto",
+      "common_name": "eudicots",
+      "tax_id": 225354,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qfra hap2",
+      "total_sequence_length": 796230171,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Quercus_frainetto_kew1.jpg/960px-Quercus_frainetto_kew1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_frainetto_kew1.jpg",
+        "credit": "Somepics · CC BY 3.0",
+        "matched_name": "Quercus frainetto"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587791",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076610.1",
+      "organism_name": "Quercus frainetto",
+      "common_name": "eudicots",
+      "tax_id": 225354,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qfra hap1",
+      "total_sequence_length": 817435860,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Quercus_frainetto_kew1.jpg/960px-Quercus_frainetto_kew1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_frainetto_kew1.jpg",
+        "credit": "Somepics · CC BY 3.0",
+        "matched_name": "Quercus frainetto"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587771",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076607.1",
+      "organism_name": "Quercus petraea",
+      "common_name": "sessile oak",
+      "tax_id": 38865,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qpet hap1",
+      "total_sequence_length": 804747122,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Quercus_petraea_02.jpg/960px-Quercus_petraea_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_petraea_02.jpg",
+        "credit": "CC BY-SA 2.5",
+        "matched_name": "Quercus petraea"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587751",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076606.1",
+      "organism_name": "Quercus pubescens",
+      "common_name": "eudicots",
+      "tax_id": 39471,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qpub hap2",
+      "total_sequence_length": 804088946,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Lasiocampa_quercus_4th_instar_caterpillar_Keila_%28top_view%29.jpg/960px-Lasiocampa_quercus_4th_instar_caterpillar_Keila_%28top_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lasiocampa_quercus_4th_instar_caterpillar_Keila_(top_view).jpg",
+        "credit": "Ivar Leidus · CC BY-SA 4.0",
+        "matched_name": "Quercus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587761",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076605.1",
+      "organism_name": "Quercus pubescens",
+      "common_name": "eudicots",
+      "tax_id": 39471,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qpub hap1",
+      "total_sequence_length": 799113803,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Lasiocampa_quercus_4th_instar_caterpillar_Keila_%28top_view%29.jpg/960px-Lasiocampa_quercus_4th_instar_caterpillar_Keila_%28top_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lasiocampa_quercus_4th_instar_caterpillar_Keila_(top_view).jpg",
+        "credit": "Ivar Leidus · CC BY-SA 4.0",
+        "matched_name": "Quercus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587731",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076600.1",
+      "organism_name": "Quercus robur",
+      "common_name": "English oak",
+      "tax_id": 38942,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qrob hap2",
+      "total_sequence_length": 779010333,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Paprastasis_azuolas.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paprastasis_azuolas.JPG",
+        "credit": "Algirdas at Lithuanian Wikipedia · Public domain",
+        "matched_name": "Quercus robur"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587721",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076599.1",
+      "organism_name": "Quercus petraea",
+      "common_name": "sessile oak",
+      "tax_id": 38865,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qpet hap2",
+      "total_sequence_length": 799876013,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Quercus_petraea_02.jpg/960px-Quercus_petraea_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_petraea_02.jpg",
+        "credit": "CC BY-SA 2.5",
+        "matched_name": "Quercus petraea"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37587741",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_062076598.1",
+      "organism_name": "Quercus robur",
+      "common_name": "English oak",
+      "tax_id": 38942,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qrob hap1",
+      "total_sequence_length": 800375721,
+      "chromosome_count": 12,
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Paprastasis_azuolas.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Paprastasis_azuolas.JPG",
+        "credit": "Algirdas at Lithuanian Wikipedia · Public domain",
+        "matched_name": "Quercus robur"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588821",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133625.1",
+      "organism_name": "Clavelina sabbadini",
+      "common_name": "tunicates",
+      "tax_id": 2907997,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "kaClaSabb1.1",
+      "total_sequence_length": 157640194,
+      "chromosome_count": 9,
+      "genus": "Clavelina",
+      "family": "Clavelinidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Clavelina_sabbadini_Brunetti%2C_1987_et_Halocynthia_papillosa_%28Linnaeus_1767%29.jpg/960px-Clavelina_sabbadini_Brunetti%2C_1987_et_Halocynthia_papillosa_%28Linnaeus_1767%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Clavelina_sabbadini_Brunetti,_1987_et_Halocynthia_papillosa_(Linnaeus_1767).jpg",
+        "credit": "Parent Géry · Public domain",
+        "matched_name": "Clavelina sabbadini"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588931",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133606.1",
+      "organism_name": "Scomber colias",
+      "common_name": "Atlantic chub mackerel",
+      "tax_id": 338315,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "fScoCol31.1",
+      "total_sequence_length": 884145420,
+      "chromosome_count": 23,
+      "genus": "Scomber",
+      "family": "Scombridae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lanzardo_2.jpg/960px-Lanzardo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lanzardo_2.jpg",
+        "credit": "Etrusko25 · Public domain",
+        "matched_name": "Scomber colias"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588721",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133378.1",
+      "organism_name": "Caenorhabditis guadeloupensis",
+      "common_name": "nematodes",
+      "tax_id": 1094331,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "nxCaeGuad1.1",
+      "total_sequence_length": 95844055,
+      "chromosome_count": 6,
+      "genus": "Caenorhabditis",
+      "family": "Rhabditidae",
+      "phylum": "Nematoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Adult_Caenorhabditis_elegans.jpg/960px-Adult_Caenorhabditis_elegans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Adult_Caenorhabditis_elegans.jpg",
+        "credit": "The original uploader was Kbradnam at English Wikipedia.\n\n(Original text: Zeynep F. Altun, Editor of www.wormatlas.org) · CC BY-SA 2.5",
+        "matched_name": "Caenorhabditis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588731",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133377.1",
+      "organism_name": "Poecilus versicolor",
+      "common_name": "beetles",
+      "tax_id": 293750,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "icPoeVers1.hap1.1",
+      "total_sequence_length": 800605173,
+      "chromosome_count": 19,
+      "genus": "Poecilus",
+      "family": "Carabidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Poecilus-versicolor-10-fws.jpg/960px-Poecilus-versicolor-10-fws.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Poecilus-versicolor-10-fws.jpg",
+        "credit": "Francisco Welter-Schultes · CC0",
+        "matched_name": "Poecilus versicolor"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588361",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133372.1",
+      "organism_name": "Monoblastus brachyacanthus",
+      "common_name": "wasps, ants & bees",
+      "tax_id": 1504328,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "iyMonBrac1.hap2.1",
+      "total_sequence_length": 213697398,
+      "chromosome_count": 8,
+      "genus": "Monoblastus",
+      "family": "Ichneumonidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Monoblastus.brachyacanthus.-.lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Monoblastus.brachyacanthus.-.lindsey.jpg",
+        "credit": "James K. Lindsey · CC BY-SA 3.0",
+        "matched_name": "Monoblastus brachyacanthus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588381",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133370.1",
+      "organism_name": "Catoptria speculalis",
+      "common_name": "moths & butterflies",
+      "tax_id": 1100940,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilCatSpec1.hap1.1",
+      "total_sequence_length": 470066474,
+      "chromosome_count": 32,
+      "genus": "Catoptria",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Catoptria_speculalis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_speculalis.JPG",
+        "credit": "Jacob Hübner · Public domain",
+        "matched_name": "Catoptria speculalis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588331",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133364.1",
+      "organism_name": "Cynaeda dentalis",
+      "common_name": "moths & butterflies",
+      "tax_id": 753300,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilCynDent1.hap1.1",
+      "total_sequence_length": 302719751,
+      "chromosome_count": 31,
+      "genus": "Cynaeda",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Cynaeda.dentalis.mounted.jpg/960px-Cynaeda.dentalis.mounted.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cynaeda.dentalis.mounted.jpg",
+        "credit": "Sarefo · CC BY-SA 3.0",
+        "matched_name": "Cynaeda dentalis"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37588391",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-04",
+        "assembly_publication_date": "2026-11-05"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133349.1",
+      "organism_name": "Chelidonium majus",
+      "common_name": "flowering plants",
+      "tax_id": 71251,
+      "release_date": "2026-11-04",
+      "assembly_level": "Chromosome",
+      "assembly_name": "dmCheMaju1.hap1.1",
+      "total_sequence_length": 981258622,
+      "chromosome_count": 6,
+      "genus": "Chelidonium",
+      "family": "Papaveraceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Chelidonium_majus_bgiu.jpg/960px-Chelidonium_majus_bgiu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chelidonium_majus_bgiu.jpg",
+        "credit": "CC BY-SA 3.0",
+        "matched_name": "Chelidonium majus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index",
+          "datasets"
+        ],
+        "metadata_pending": false,
         "assembly_uid": "37518371",
         "group": "Plants",
         "sequence_release_date": "2026-11-04",
@@ -56266,9 +56919,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37518381",
         "group": "Animals",
         "sequence_release_date": "2026-11-04",
@@ -56282,7 +56936,7 @@
       "release_date": "2026-11-04",
       "assembly_level": "Chromosome",
       "assembly_name": "MakAnk1.0",
-      "total_sequence_length": 2841575857,
+      "total_sequence_length": 2841559517,
       "chromosome_count": 31,
       "genus": "Bos",
       "family": "Bovidae",
@@ -56297,9 +56951,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37516741",
         "group": "Plants",
         "sequence_release_date": "2026-11-04",
@@ -56329,9 +56984,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37515381",
         "group": "Animals",
         "sequence_release_date": "2026-11-04",
@@ -56361,9 +57017,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37515701",
         "group": "Animals",
         "sequence_release_date": "2026-11-04",
@@ -56393,9 +57050,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37516421",
         "group": "Animals",
         "sequence_release_date": "2026-11-04",
@@ -56425,9 +57083,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37517081",
         "group": "Animals",
         "sequence_release_date": "2026-11-04",
@@ -56457,9 +57116,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37524081",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -56476,14 +57136,14 @@
       "total_sequence_length": 49972319,
       "chromosome_count": 8,
       "genus": "Halofilum",
-      "family": null,
       "phylum": "Chlorophyta",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Halofilum_salinum_as_Heterogonium_salinum_in_Dangeard_1911.jpg/960px-Halofilum_salinum_as_Heterogonium_salinum_in_Dangeard_1911.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Halofilum_salinum_as_Heterogonium_salinum_in_Dangeard_1911.jpg",
         "credit": "Pierre Clement Augustin Dangeard (1862–1947) · Public domain",
         "matched_name": "Halofilum"
-      }
+      },
+      "family": null
     },
     {
       "source_provenance": {
@@ -56495,8 +57155,7 @@
         "assembly_uid": "37462241",
         "group": "Animals",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Animals",
       "accession": "GCA_062075056.1",
@@ -56528,8 +57187,7 @@
         "assembly_uid": "37460601",
         "group": "Animals",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Animals",
       "accession": "GCA_062075035.1",
@@ -56561,8 +57219,7 @@
         "assembly_uid": "37460491",
         "group": "Animals",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Animals",
       "accession": "GCA_062075034.1",
@@ -56594,8 +57251,7 @@
         "assembly_uid": "37460481",
         "group": "Animals",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Animals",
       "accession": "GCA_062075028.1",
@@ -56659,8 +57315,7 @@
         "assembly_uid": "37460401",
         "group": "Animals",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Animals",
       "accession": "GCA_062074919.1",
@@ -56692,8 +57347,7 @@
         "assembly_uid": "37444081",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
-        "assembly_publication_date": "2026-11-03",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-03"
       },
       "group": "Plants",
       "accession": "GCA_062074677.1",
@@ -57941,8 +58595,7 @@
         "assembly_uid": "37385101",
         "group": "Plants",
         "sequence_release_date": "2026-10-29",
-        "assembly_publication_date": "2026-11-02",
-        "biosample_enriched": true
+        "assembly_publication_date": "2026-11-02"
       },
       "group": "Plants",
       "accession": "GCA_062072165.1",
@@ -65737,9 +66390,9 @@
       "assembly_name": "uoBacSpea1.1",
       "total_sequence_length": 45443949,
       "chromosome_count": 12,
+      "phylum": "Bacillariophyta",
       "genus": null,
       "family": null,
-      "phylum": "Bacillariophyta",
       "image": null
     },
     {
@@ -70401,7 +71054,6 @@
       "assembly_name": "uoFraSpea1.1",
       "total_sequence_length": 42600426,
       "chromosome_count": 23,
-      "genus": null,
       "family": "Fragilariaceae",
       "phylum": "Bacillariophyta",
       "image": {
@@ -70409,7 +71061,8 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Asterionella_formosa.jpg",
         "credit": "Public domain",
         "matched_name": "Fragilariaceae"
-      }
+      },
+      "genus": null
     },
     {
       "source_provenance": {
@@ -71085,15 +71738,11 @@
     },
     {
       "source_provenance": {
+        "group": "Fungi",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421261",
-        "group": "Fungi",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Fungi",
       "accession": "GCA_062024761.1",
@@ -71107,20 +71756,15 @@
       "chromosome_count": 5,
       "genus": "Emydomyces",
       "family": "Nannizziopsiaceae",
-      "phylum": "Ascomycota",
-      "image": null
+      "phylum": "Ascomycota"
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426301",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062024752.1",
@@ -71144,15 +71788,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420841",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062024719.1",
@@ -71176,15 +71816,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420831",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062024718.1",
@@ -71208,15 +71844,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420331",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062024676.1",
@@ -71240,15 +71872,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426051",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-07",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_059756665.2",
@@ -71294,8 +71922,7 @@
       "chromosome_count": 5,
       "genus": "Emydomyces",
       "family": "Nannizziopsiaceae",
-      "phylum": "Ascomycota",
-      "image": null
+      "phylum": "Ascomycota"
     },
     {
       "source_provenance": {
@@ -71331,15 +71958,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36419961",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-06",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324905.1",
@@ -71363,15 +71986,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427661",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-06",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324765.1",
@@ -71395,15 +72014,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36394741",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-06",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062022351.1",
@@ -71427,15 +72042,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36394681",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-06",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062022349.1",
@@ -71459,15 +72070,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36394651",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-06",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062022347.1",
@@ -71973,15 +72580,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423701",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-05",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988273185.2",
@@ -72065,15 +72668,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422951",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324825.1",
@@ -72097,15 +72696,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423281",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324805.1",
@@ -72129,15 +72724,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427211",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324755.1",
@@ -72161,15 +72752,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36428831",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324705.1",
@@ -72193,15 +72780,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410461",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324665.1",
@@ -72225,15 +72808,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410701",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324645.1",
@@ -72257,15 +72836,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36425931",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324385.1",
@@ -72289,15 +72864,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36425371",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324355.1",
@@ -72321,15 +72892,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426161",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324345.1",
@@ -72353,15 +72920,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36408431",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324285.1",
@@ -72385,15 +72948,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36408861",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324265.1",
@@ -72417,15 +72976,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36413181",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324195.1",
@@ -72449,15 +73004,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36418391",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324095.1",
@@ -72481,15 +73032,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36418501",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324075.1",
@@ -72513,15 +73060,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36419361",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324035.1",
@@ -72545,15 +73088,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423171",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323955.1",
@@ -72577,15 +73116,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423541",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323935.1",
@@ -72609,15 +73144,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423951",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323905.1",
@@ -72641,15 +73172,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36428301",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323875.1",
@@ -72673,15 +73200,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411251",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323795.1",
@@ -72705,15 +73228,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411721",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323755.1",
@@ -72737,15 +73256,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36416301",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323685.1",
@@ -72769,15 +73284,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422401",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988273205.2",
@@ -72801,15 +73312,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423881",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988273165.2",
@@ -72833,15 +73340,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423401",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988272275.2",
@@ -72865,15 +73368,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421511",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-04",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_985612475.2",
@@ -72929,15 +73428,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410301",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324655.1",
@@ -72961,15 +73456,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410861",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324635.1",
@@ -72993,15 +73484,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36415171",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324585.1",
@@ -73025,15 +73512,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36415991",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324535.1",
@@ -73057,15 +73540,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36416281",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324515.1",
@@ -73089,15 +73568,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420411",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324465.1",
@@ -73121,15 +73596,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421101",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324405.1",
@@ -73153,15 +73624,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36424781",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324375.1",
@@ -73185,15 +73652,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426101",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324315.1",
@@ -73217,15 +73680,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426381",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324305.1",
@@ -73249,15 +73708,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36413341",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324185.1",
@@ -73281,15 +73736,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36413411",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324175.1",
@@ -73313,15 +73764,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36413591",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324165.1",
@@ -73345,15 +73792,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36413811",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324155.1",
@@ -73377,15 +73820,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36414541",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324125.1",
@@ -73409,15 +73848,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36414871",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988324115.1",
@@ -73441,15 +73876,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36418951",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988324045.1",
@@ -73473,15 +73904,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422861",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323965.1",
@@ -73505,15 +73932,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423711",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323915.1",
@@ -73537,15 +73960,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36428411",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323865.1",
@@ -73569,15 +73988,11 @@
     },
     {
       "source_provenance": {
+        "group": "Fungi",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407181",
-        "group": "Fungi",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Fungi",
       "accession": "GCA_988323835.1",
@@ -73601,15 +74016,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407481",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323815.1",
@@ -73633,15 +74044,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407671",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323805.1",
@@ -73665,15 +74072,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411381",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323785.1",
@@ -73697,15 +74100,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411291",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323775.1",
@@ -73729,15 +74128,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411831",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323745.1",
@@ -73761,15 +74156,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36412261",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323725.1",
@@ -73793,15 +74184,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36416811",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323655.1",
@@ -73825,15 +74212,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36417511",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323615.1",
@@ -73857,15 +74240,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420791",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323595.1",
@@ -73889,15 +74268,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421271",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323565.1",
@@ -73921,15 +74296,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421521",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323535.1",
@@ -73953,15 +74324,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421811",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323525.1",
@@ -73985,15 +74352,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422331",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323515.1",
@@ -74017,15 +74380,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36425491",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323495.1",
@@ -74049,15 +74408,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36425961",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323485.1",
@@ -74081,15 +74436,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426341",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323475.1",
@@ -74113,15 +74464,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426431",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323465.1",
@@ -74145,15 +74492,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426731",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323455.1",
@@ -74177,15 +74520,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36426701",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323445.1",
@@ -74209,15 +74548,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427071",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323435.1",
@@ -74241,15 +74576,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427111",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323425.1",
@@ -74273,15 +74604,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427551",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323415.1",
@@ -74305,15 +74632,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427941",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323405.1",
@@ -74337,15 +74660,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36409441",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323375.1",
@@ -74369,15 +74688,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36409701",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323365.1",
@@ -74401,15 +74716,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410181",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323345.1",
@@ -74433,15 +74744,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36409971",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323335.1",
@@ -74465,15 +74772,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410311",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323325.1",
@@ -74497,15 +74800,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410931",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323305.1",
@@ -74529,15 +74828,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36414061",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323295.1",
@@ -74561,15 +74856,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36414391",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323275.1",
@@ -74593,15 +74884,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36414951",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323265.1",
@@ -74625,15 +74912,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36415211",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323255.1",
@@ -74657,15 +74940,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36415701",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323235.1",
@@ -74689,15 +74968,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36419181",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323185.1",
@@ -74721,15 +74996,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36419321",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323175.1",
@@ -74753,15 +75024,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36419971",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323155.1",
@@ -74785,15 +75052,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420211",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323145.1",
@@ -74817,15 +75080,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36420551",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323115.1",
@@ -74849,15 +75108,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36424461",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988323065.1",
@@ -74881,15 +75136,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36424901",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988323045.1",
@@ -74913,15 +75164,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36406871",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322995.1",
@@ -74945,15 +75192,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407071",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322985.1",
@@ -74977,15 +75220,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407251",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322975.1",
@@ -75009,15 +75248,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407641",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322955.1",
@@ -75041,15 +75276,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407791",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322945.1",
@@ -75073,15 +75304,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36407881",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322925.1",
@@ -75105,15 +75332,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36408071",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322905.1",
@@ -75137,15 +75360,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411931",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322895.1",
@@ -75169,15 +75388,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411941",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322885.1",
@@ -75201,15 +75416,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36412581",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322845.1",
@@ -75233,15 +75444,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36412551",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322835.1",
@@ -75265,15 +75472,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36412601",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322825.1",
@@ -75297,15 +75500,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36412821",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322815.1",
@@ -75329,15 +75528,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36417191",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322775.1",
@@ -75361,15 +75556,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36417361",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322765.1",
@@ -75393,15 +75584,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36418451",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322725.1",
@@ -75425,15 +75612,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421671",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322695.1",
@@ -75457,15 +75640,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422101",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322685.1",
@@ -75489,15 +75668,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36421911",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322675.1",
@@ -75521,15 +75696,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422231",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322665.1",
@@ -75553,15 +75724,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36422441",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322655.1",
@@ -75585,15 +75752,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36423261",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322625.1",
@@ -75617,15 +75780,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36427751",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322575.1",
@@ -75649,15 +75808,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36410721",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988322475.1",
@@ -75681,15 +75836,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411001",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322455.1",
@@ -75713,15 +75864,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36411331",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988322445.1",
@@ -75745,15 +75892,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36418921",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-03",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988314235.1",
@@ -76057,15 +76200,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36406831",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-01",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988293595.1",
@@ -76089,15 +76228,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36406751",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-01",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988293565.1",
@@ -76121,15 +76256,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36406671",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-01",
-        "assembly_publication_date": "2026-10-07"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_988293145.1",
@@ -201105,6 +201236,9 @@
     "Contortylenchus sp. T'it'q'et": "2026-11-04",
     "Sinojackia sarcocarpa": "2026-11-04",
     "Bos taurus africanus": "2026-11-04",
+    "Quercus robur": "2022-03-11",
+    "Quercus pubescens": "2026-09-10",
+    "Quercus frainetto": "2026-09-04",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -201476,7 +201610,6 @@
     "Pandemis cinnamomeana": "2022-03-11",
     "Aporophyla lueneburgensis": "2022-03-11",
     "Diachrysia chrysitis": "2022-03-11",
-    "Quercus robur": "2022-03-11",
     "Agriopis marginaria": "2022-03-11",
     "Oscheius onirici": "2022-03-23",
     "Oscheius dolichura": "2022-03-23",
@@ -206275,7 +206408,6 @@
     "Phycitodes saxicola": "2026-09-04",
     "Chortodes pygminus": "2026-09-09",
     "Stenoptilia pterodactyla": "2026-09-05",
-    "Quercus frainetto": "2026-09-04",
     "Scythris inspersella": "2026-08-31",
     "Polemochartus liparae": "2026-09-02",
     "Therion circumflexum": "2026-09-02",
@@ -206345,7 +206477,6 @@
     "Trifolium isthmocarpum": "2026-09-10",
     "Utetheisa pulchella": "2026-09-10",
     "Trifolium resupinatum": "2026-09-10",
-    "Quercus pubescens": "2026-09-10",
     "Lupinus hispanicus": "2026-09-10",
     "Aedia funesta": "2026-09-10",
     "Pseudopodospermum hispanicum": "2026-09-10",
@@ -206703,7 +206834,17 @@
     "Calocoris alpestris": "2026-11-01",
     "Furcula bicuspis": "2026-11-01",
     "Phalonidia udana": "2026-11-01",
-    "Halofilum ramosum": "2026-11-03"
+    "Cynaeda dentalis": "2026-11-04",
+    "Catoptria speculalis": "2026-11-04",
+    "Monoblastus brachyacanthus": "2026-11-04",
+    "Poecilus versicolor": "2026-11-04",
+    "Caenorhabditis guadeloupensis": "2026-11-04",
+    "Scomber colias": "2026-11-04",
+    "Halofilum ramosum": "2026-11-03",
+    "Clavelina sabbadini": "2026-11-04",
+    "Agonopterix petasitis": "2026-11-05",
+    "Anarta pugnax": "2026-11-05",
+    "Chelonaplysilla americana": "2026-11-05"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -211072,7 +211213,92 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Halofilum_salinum_as_Heterogonium_salinum_in_Dangeard_1911.jpg",
       "credit": "Pierre Clement Augustin Dangeard (1862–1947) · Public domain",
       "matched_name": "Halofilum"
-    }
+    },
+    "Quercus robur": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Paprastasis_azuolas.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Paprastasis_azuolas.JPG",
+      "credit": "Algirdas at Lithuanian Wikipedia · Public domain",
+      "matched_name": "Quercus robur"
+    },
+    "Quercus petraea": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Quercus_petraea_02.jpg/960px-Quercus_petraea_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_petraea_02.jpg",
+      "credit": "CC BY-SA 2.5",
+      "matched_name": "Quercus petraea"
+    },
+    "Quercus frainetto": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Quercus_frainetto_kew1.jpg/960px-Quercus_frainetto_kew1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Quercus_frainetto_kew1.jpg",
+      "credit": "Somepics · CC BY 3.0",
+      "matched_name": "Quercus frainetto"
+    },
+    "Nicotiana tabacum": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Tabak_P9290021.JPG/960px-Tabak_P9290021.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tabak_P9290021.JPG",
+      "credit": "Jom / Joachim Müllerchen · CC BY 2.5",
+      "matched_name": "Nicotiana tabacum"
+    },
+    "Chelidonium majus": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Chelidonium_majus_bgiu.jpg/960px-Chelidonium_majus_bgiu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chelidonium_majus_bgiu.jpg",
+      "credit": "CC BY-SA 3.0",
+      "matched_name": "Chelidonium majus"
+    },
+    "Cynaeda dentalis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Cynaeda.dentalis.mounted.jpg/960px-Cynaeda.dentalis.mounted.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cynaeda.dentalis.mounted.jpg",
+      "credit": "Sarefo · CC BY-SA 3.0",
+      "matched_name": "Cynaeda dentalis"
+    },
+    "Catoptria speculalis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Catoptria_speculalis.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Catoptria_speculalis.JPG",
+      "credit": "Jacob Hübner · Public domain",
+      "matched_name": "Catoptria speculalis"
+    },
+    "Monoblastus brachyacanthus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Monoblastus.brachyacanthus.-.lindsey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Monoblastus.brachyacanthus.-.lindsey.jpg",
+      "credit": "James K. Lindsey · CC BY-SA 3.0",
+      "matched_name": "Monoblastus brachyacanthus"
+    },
+    "Poecilus versicolor": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Poecilus-versicolor-10-fws.jpg/960px-Poecilus-versicolor-10-fws.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Poecilus-versicolor-10-fws.jpg",
+      "credit": "Francisco Welter-Schultes · CC0",
+      "matched_name": "Poecilus versicolor"
+    },
+    "Caenorhabditis guadeloupensis": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Adult_Caenorhabditis_elegans.jpg/960px-Adult_Caenorhabditis_elegans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Adult_Caenorhabditis_elegans.jpg",
+      "credit": "The original uploader was Kbradnam at English Wikipedia.\n\n(Original text: Zeynep F. Altun, Editor of www.wormatlas.org) · CC BY-SA 2.5",
+      "matched_name": "Caenorhabditis"
+    },
+    "Scomber colias": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Lanzardo_2.jpg/960px-Lanzardo_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Lanzardo_2.jpg",
+      "credit": "Etrusko25 · Public domain",
+      "matched_name": "Scomber colias"
+    },
+    "Clavelina sabbadini": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Clavelina_sabbadini_Brunetti%2C_1987_et_Halocynthia_papillosa_%28Linnaeus_1767%29.jpg/960px-Clavelina_sabbadini_Brunetti%2C_1987_et_Halocynthia_papillosa_%28Linnaeus_1767%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Clavelina_sabbadini_Brunetti,_1987_et_Halocynthia_papillosa_(Linnaeus_1767).jpg",
+      "credit": "Parent Géry · Public domain",
+      "matched_name": "Clavelina sabbadini"
+    },
+    "Agonopterix petasitis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Agonopterix_petasitis_M.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Agonopterix_petasitis_M.jpg",
+      "credit": "Michael Kurz · CC BY-SA 3.0 at",
+      "matched_name": "Agonopterix petasitis"
+    },
+    "Anarta pugnax": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Anarta_pugnax.JPG/960px-Anarta_pugnax.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Anarta_pugnax.JPG",
+      "credit": "Dumi · CC BY-SA 3.0",
+      "matched_name": "Anarta pugnax"
+    },
+    "Chelonaplysilla americana": null
   },
   "taxonomy_cache": {
     "2248776": {
@@ -219476,7 +219702,6 @@
       "fallback_common_name_source": "group_name",
       "phylum": "Bacillariophyta"
     },
-    "3256806": {},
     "3451525": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "pelagophytes",
@@ -219498,10 +219723,138 @@
       "genus": "Halofilum",
       "phylum": "Chlorophyta",
       "kingdom": "Viridiplantae"
-    }
+    },
+    "38942": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "English oak",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "38865": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "sessile oak",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "225354": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Quercus",
+      "family": "Fagaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "4097": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "common tobacco",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Nicotiana",
+      "family": "Solanaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3256806": {},
+    "71251": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "flowering plants",
+      "fallback_common_name_source": "group_name",
+      "genus": "Chelidonium",
+      "family": "Papaveraceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "753300": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cynaeda",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1100940": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Catoptria",
+      "family": "Crambidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1504328": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "wasps, ants & bees",
+      "fallback_common_name_source": "group_name",
+      "genus": "Monoblastus",
+      "family": "Ichneumonidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "293750": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "beetles",
+      "fallback_common_name_source": "group_name",
+      "genus": "Poecilus",
+      "family": "Carabidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "1094331": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "nematodes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Caenorhabditis",
+      "family": "Rhabditidae",
+      "phylum": "Nematoda",
+      "kingdom": "Metazoa"
+    },
+    "338315": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Atlantic chub mackerel",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Scomber",
+      "family": "Scombridae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "2907997": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "tunicates",
+      "fallback_common_name_source": "group_name",
+      "genus": "Clavelina",
+      "family": "Clavelinidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "1660578": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Agonopterix",
+      "family": "Depressariidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "3437166": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Anarta",
+      "family": "Noctuidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "3291107": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1420,
+    "overlapping_or_superseded_rows_removed": 1300,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
@@ -219534,74 +219887,165 @@
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/07\"[GRLS]:\"2026/11/06\"[GRLS] OR \"2026/10/07\"[SRDT]:\"2026/11/06\"[SRDT] OR \"2026/10/07\"[UPDT]:\"2026/11/06\"[UPDT])",
-    "matched_uids": 1427,
-    "held_uids_rechecked": 9,
-    "generated_at": "2026-11-06T12:06:03.034386+00:00",
-    "datasets_rows": 19461,
-    "assembly_index_rows": 1427,
-    "merged_assemblies": 19468,
-    "unique_accession_stems": 19468,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/08\"[GRLS]:\"2026/11/07\"[GRLS] OR \"2026/10/08\"[SRDT]:\"2026/11/07\"[SRDT] OR \"2026/10/08\"[UPDT]:\"2026/11/07\"[UPDT])",
+    "matched_uids": 1321,
+    "held_uids_rechecked": 8,
+    "generated_at": "2026-11-07T11:03:15.556589+00:00",
+    "datasets_rows": 19468,
+    "assembly_index_rows": 1321,
+    "merged_assemblies": 19489,
+    "unique_accession_stems": 19489,
     "pending_metadata_accessions": [
-      "GCA_051622115.2",
-      "GCA_062075705.1",
-      "GCA_062075710.1",
-      "GCA_062075713.1",
-      "GCA_062075714.1",
-      "GCA_062075715.1",
-      "GCA_062075716.1",
-      "GCA_990133622.1"
+      "GCA_062076598.1",
+      "GCA_062076599.1",
+      "GCA_062076600.1",
+      "GCA_062076605.1",
+      "GCA_062076606.1",
+      "GCA_062076607.1",
+      "GCA_062076610.1",
+      "GCA_062076611.1",
+      "GCA_062076612.1",
+      "GCA_990133349.1",
+      "GCA_990133364.1",
+      "GCA_990133370.1",
+      "GCA_990133372.1",
+      "GCA_990133377.1",
+      "GCA_990133378.1",
+      "GCA_990133606.1",
+      "GCA_990133625.1",
+      "GCA_990133682.1",
+      "GCA_990133690.1",
+      "GCA_990133692.1",
+      "GCA_990133899.1"
     ],
     "pending_records": [
       {
-        "accession": "GCA_051622115.2",
-        "species": "Agapornis fischeri",
+        "accession": "GCA_062076598.1",
+        "species": "Quercus robur",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076599.1",
+        "species": "Quercus petraea",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076600.1",
+        "species": "Quercus robur",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076605.1",
+        "species": "Quercus pubescens",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076606.1",
+        "species": "Quercus pubescens",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076607.1",
+        "species": "Quercus petraea",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076610.1",
+        "species": "Quercus frainetto",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076611.1",
+        "species": "Quercus frainetto",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062076612.1",
+        "species": "Nicotiana tabacum",
+        "release_date": "2026-11-05",
+        "level": "Complete Genome"
+      },
+      {
+        "accession": "GCA_990133349.1",
+        "species": "Chelidonium majus",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075705.1",
-        "species": "Mespilia globulus",
+        "accession": "GCA_990133364.1",
+        "species": "Cynaeda dentalis",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075710.1",
-        "species": "Halicryptus spinulosus",
+        "accession": "GCA_990133370.1",
+        "species": "Catoptria speculalis",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075713.1",
-        "species": "Contortylenchus sp. T'it'q'et",
+        "accession": "GCA_990133372.1",
+        "species": "Monoblastus brachyacanthus",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075714.1",
-        "species": "Sinojackia sarcocarpa",
+        "accession": "GCA_990133377.1",
+        "species": "Poecilus versicolor",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075715.1",
-        "species": "Bos taurus africanus",
+        "accession": "GCA_990133378.1",
+        "species": "Caenorhabditis guadeloupensis",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_062075716.1",
-        "species": "Colocasia esculenta",
+        "accession": "GCA_990133606.1",
+        "species": "Scomber colias",
         "release_date": "2026-11-04",
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_990133622.1",
-        "species": "Halofilum ramosum",
-        "release_date": "2026-11-03",
+        "accession": "GCA_990133625.1",
+        "species": "Clavelina sabbadini",
+        "release_date": "2026-11-04",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133682.1",
+        "species": "Agonopterix petasitis",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133690.1",
+        "species": "Anarta pugnax",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133692.1",
+        "species": "Agonopterix petasitis",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133899.1",
+        "species": "Chelonaplysilla americana",
+        "release_date": "2026-11-05",
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19462
+    "previous_dashboard_assemblies": 19468
   }
 }
