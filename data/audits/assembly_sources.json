@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 1300,
+  "overlapping_or_superseded_rows_removed": 1289,
   "date_conflicts": [
     {
       "accession": "GCA_061535395.1",
@@ -32,164 +32,24 @@
       "datasets_date": "2026-09-23"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/08\"[GRLS]:\"2026/11/07\"[GRLS] OR \"2026/10/08\"[SRDT]:\"2026/11/07\"[SRDT] OR \"2026/10/08\"[UPDT]:\"2026/11/07\"[UPDT])",
-  "matched_uids": 1321,
-  "held_uids_rechecked": 8,
-  "generated_at": "2026-11-07T11:03:15.556589+00:00",
-  "datasets_rows": 19468,
-  "assembly_index_rows": 1321,
-  "merged_assemblies": 19489,
-  "unique_accession_stems": 19489,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/09\"[GRLS]:\"2026/11/08\"[GRLS] OR \"2026/10/09\"[SRDT]:\"2026/11/08\"[SRDT] OR \"2026/10/09\"[UPDT]:\"2026/11/08\"[UPDT])",
+  "matched_uids": 1290,
+  "held_uids_rechecked": 21,
+  "generated_at": "2026-11-08T11:16:44.782327+00:00",
+  "datasets_rows": 19489,
+  "assembly_index_rows": 1290,
+  "merged_assemblies": 19490,
+  "unique_accession_stems": 19490,
   "pending_metadata_accessions": [
-    "GCA_062076598.1",
-    "GCA_062076599.1",
-    "GCA_062076600.1",
-    "GCA_062076605.1",
-    "GCA_062076606.1",
-    "GCA_062076607.1",
-    "GCA_062076610.1",
-    "GCA_062076611.1",
-    "GCA_062076612.1",
-    "GCA_990133349.1",
-    "GCA_990133364.1",
-    "GCA_990133370.1",
-    "GCA_990133372.1",
-    "GCA_990133377.1",
-    "GCA_990133378.1",
-    "GCA_990133606.1",
-    "GCA_990133625.1",
-    "GCA_990133682.1",
-    "GCA_990133690.1",
-    "GCA_990133692.1",
-    "GCA_990133899.1"
+    "GCA_062077194.1"
   ],
   "pending_records": [
     {
-      "accession": "GCA_062076598.1",
-      "species": "Quercus robur",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076599.1",
-      "species": "Quercus petraea",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076600.1",
-      "species": "Quercus robur",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076605.1",
-      "species": "Quercus pubescens",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076606.1",
-      "species": "Quercus pubescens",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076607.1",
-      "species": "Quercus petraea",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076610.1",
-      "species": "Quercus frainetto",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076611.1",
-      "species": "Quercus frainetto",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_062076612.1",
-      "species": "Nicotiana tabacum",
-      "release_date": "2026-11-05",
-      "level": "Complete Genome"
-    },
-    {
-      "accession": "GCA_990133349.1",
-      "species": "Chelidonium majus",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133364.1",
-      "species": "Cynaeda dentalis",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133370.1",
-      "species": "Catoptria speculalis",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133372.1",
-      "species": "Monoblastus brachyacanthus",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133377.1",
-      "species": "Poecilus versicolor",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133378.1",
-      "species": "Caenorhabditis guadeloupensis",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133606.1",
-      "species": "Scomber colias",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133625.1",
-      "species": "Clavelina sabbadini",
-      "release_date": "2026-11-04",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133682.1",
-      "species": "Agonopterix petasitis",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133690.1",
-      "species": "Anarta pugnax",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133692.1",
-      "species": "Agonopterix petasitis",
-      "release_date": "2026-11-05",
-      "level": "Chromosome"
-    },
-    {
-      "accession": "GCA_990133899.1",
-      "species": "Chelonaplysilla americana",
-      "release_date": "2026-11-05",
+      "accession": "GCA_062077194.1",
+      "species": "Banisteriopsis caapi",
+      "release_date": "2026-11-06",
       "level": "Chromosome"
     }
   ],
-  "previous_dashboard_assemblies": 19468
+  "previous_dashboard_assemblies": 19489
 }
