@@ -123,3 +123,20 @@ the evidence. Cached organisations/descriptions/capture dates from
 `project-origin-metadata`, for the projects above five species in the dated
 `data/goat_project_stats.json.gz` snapshot. Regenerate that embedded map when
 refreshing the provenance snapshot; it does not follow the daily intent refresh.
+
+## Record recovery and page navigation (8 November 2026)
+
+See [Recovering unresolved records](goat_record_recovery.md) for the complete
+stepwise process, source requirements, rule order, reproducible commands and
+recovery counts. `resolve_goat_provenance.py` expands direct organisation evidence
+and explicit linked parent programmes while retaining original assignments. It
+is invoked by the main provenance builder and can also update the existing
+snapshot offline. This supersedes the original size-based unresolved display
+rule and the earlier embedded metadata map for larger projects: organisations
+and descriptions now live in the provenance payload for all records.
+
+The preview has six accessible, keyboard-operable tabs: Overview, BioProjects &
+origins, Funding & evidence, Resolution audit, GoaT intent, and Methods. Shared
+organism/contribution filters are retained across the provenance tabs. Existing
+`#large-project-origins`, `#intent-history` and `#project-methods` links still open
+the appropriate tab. The remaining six genome-history gaps are unchanged.

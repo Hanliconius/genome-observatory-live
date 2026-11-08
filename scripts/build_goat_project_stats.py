@@ -299,6 +299,8 @@ def main():
         'coverage': {'assemblies': len(rows), 'species_resolved': sum(r['species_resolved'] for r in rows),
             'project_metadata': sum(r['project_metadata'] for r in rows), 'wanted_projects': len(wanted),
             'fetched_projects': len(set(projects) & wanted)}, 'records': rows}
+    from resolve_goat_provenance import resolve_payload
+    payload = resolve_payload(payload, projects, PROGRAMMES, PRODUCTION)
     write_gz(OUT, payload)
     print('Wrote', len(rows), 'assemblies;', payload['coverage'], 'buckets', dict(Counter(r['bucket'] for r in rows)), flush=True)
 
