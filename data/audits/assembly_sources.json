@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 1289,
+  "overlapping_or_superseded_rows_removed": 1288,
   "date_conflicts": [
     {
       "accession": "GCA_061535395.1",
@@ -22,31 +22,397 @@
       "datasets_date": "2025-12-22"
     },
     {
-      "accession": "GCA_054131105.1",
-      "index_date": "2025-12-23",
-      "datasets_date": "2025-12-22"
-    },
-    {
       "accession": "GCA_061612785.1",
       "index_date": "2026-09-24",
       "datasets_date": "2026-09-23"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/09\"[GRLS]:\"2026/11/08\"[GRLS] OR \"2026/10/09\"[SRDT]:\"2026/11/08\"[SRDT] OR \"2026/10/09\"[UPDT]:\"2026/11/08\"[UPDT])",
-  "matched_uids": 1290,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/10\"[GRLS]:\"2026/11/09\"[GRLS] OR \"2026/10/10\"[SRDT]:\"2026/11/09\"[SRDT] OR \"2026/10/10\"[UPDT]:\"2026/11/09\"[UPDT])",
+  "matched_uids": 1342,
   "held_uids_rechecked": 1,
-  "generated_at": "2026-11-08T20:45:18.636923+00:00",
+  "generated_at": "2026-11-09T12:51:07.923715+00:00",
   "datasets_rows": 19489,
-  "assembly_index_rows": 1290,
-  "merged_assemblies": 19490,
-  "unique_accession_stems": 19490,
+  "assembly_index_rows": 1342,
+  "merged_assemblies": 19543,
+  "unique_accession_stems": 19543,
   "pending_metadata_accessions": [
-    "GCA_062077194.1"
+    "GCA_062077194.1",
+    "GCA_990133627.1",
+    "GCA_990133628.1",
+    "GCA_990133629.1",
+    "GCA_990133630.1",
+    "GCA_990133631.1",
+    "GCA_990133632.1",
+    "GCA_990133633.1",
+    "GCA_990133635.1",
+    "GCA_990133636.1",
+    "GCA_990133637.1",
+    "GCA_990133638.1",
+    "GCA_990133639.1",
+    "GCA_990133640.1",
+    "GCA_990133642.1",
+    "GCA_990133643.1",
+    "GCA_990133644.1",
+    "GCA_990133645.1",
+    "GCA_990133646.1",
+    "GCA_990133647.1",
+    "GCA_990133648.1",
+    "GCA_990133649.1",
+    "GCA_990133650.1",
+    "GCA_990133651.1",
+    "GCA_990133652.1",
+    "GCA_990133653.1",
+    "GCA_990133654.1",
+    "GCA_990133655.1",
+    "GCA_990133656.1",
+    "GCA_990133657.1",
+    "GCA_990133658.1",
+    "GCA_990133659.1",
+    "GCA_990133660.1",
+    "GCA_990133661.1",
+    "GCA_990133663.1",
+    "GCA_990133664.1",
+    "GCA_990133665.1",
+    "GCA_990133666.1",
+    "GCA_990133667.1",
+    "GCA_990133668.1",
+    "GCA_990133669.1",
+    "GCA_990133670.1",
+    "GCA_990133671.1",
+    "GCA_990133672.1",
+    "GCA_990133673.1",
+    "GCA_990133676.1",
+    "GCA_990133677.1",
+    "GCA_990133678.1",
+    "GCA_990133683.1",
+    "GCA_990133684.1",
+    "GCA_990133691.1",
+    "GCA_990133693.1",
+    "GCA_990133905.1",
+    "GCA_990135480.1"
   ],
   "pending_records": [
     {
       "accession": "GCA_062077194.1",
       "species": "Banisteriopsis caapi",
+      "release_date": "2026-11-06",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133627.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133628.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133629.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133630.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133631.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133632.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133633.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133635.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133636.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133637.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133638.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133639.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133640.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133642.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133643.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133644.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133645.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133646.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133647.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133648.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133649.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133650.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133651.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133652.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133653.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133654.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133655.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133656.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133657.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133658.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133659.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133660.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133661.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133663.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133664.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133665.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133666.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133667.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133668.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133669.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133670.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133671.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133672.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133673.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133676.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133677.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133678.1",
+      "species": "Arabidopsis thaliana",
+      "release_date": "2026-11-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133683.1",
+      "species": "Scabiosa columbaria",
+      "release_date": "2026-11-05",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133684.1",
+      "species": "Loligo forbesii",
+      "release_date": "2026-11-05",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133691.1",
+      "species": "Tritia reticulata",
+      "release_date": "2026-11-05",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133693.1",
+      "species": "Poecilocampa populi",
+      "release_date": "2026-11-05",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990133905.1",
+      "species": "Halurus flosculosus",
+      "release_date": "2026-11-05",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_990135480.1",
+      "species": "Cochylidia richteriana",
       "release_date": "2026-11-06",
       "level": "Chromosome"
     }

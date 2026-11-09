@@ -4192,5 +4192,41 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg",
     "credit": "Fran\u00e7ois Delonnay/Archivo Centro Takiwasi \u00b7 CC BY-SA 4.0",
     "matched_name": "Banisteriopsis caapi"
+  },
+  "Scabiosa columbaria": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Scabiosa_columbaria0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Scabiosa_columbaria0.jpg",
+    "credit": "Kurt St\u00fcber [1] \u00b7 CC BY-SA 3.0",
+    "matched_name": "Scabiosa columbaria"
+  },
+  "Loligo forbesii": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Loligo_forbesii.jpg/960px-Loligo_forbesii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Loligo_forbesii.jpg",
+    "credit": "Comingio Merculiano (1845\u20131915) \u00b7 Public domain",
+    "matched_name": "Loligo forbesii"
+  },
+  "Tritia reticulata": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg/960px-Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Caracoles_de_mar_(Tritia_reticulata),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2021-09-08,_DD_39.jpg",
+    "credit": "Diego Delso \u00b7 CC BY-SA 4.0",
+    "matched_name": "Tritia reticulata"
+  },
+  "Poecilocampa populi": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Poecilocampa_populi01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Poecilocampa_populi01.jpg",
+    "credit": "Walter Sch\u00f6n \u00b7 CC BY-SA 3.0",
+    "matched_name": "Poecilocampa populi"
+  },
+  "Halurus flosculosus": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Halurus_flosculosus_Crouan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Halurus_flosculosus_Crouan.jpg",
+    "credit": "Pierre-Louis Crouan (1798-1871) &amp; Hippolyte-Marie Crouan (1802-1871) \u00b7 Public domain",
+    "matched_name": "Halurus flosculosus"
+  },
+  "Cochylidia richteriana": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Cochylidia_richteriana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Cochylidia_richteriana.jpg",
+    "credit": "Marko Mutanen, University of Oulu \u00b7 Public domain",
+    "matched_name": "Cochylidia richteriana"
   }
 }

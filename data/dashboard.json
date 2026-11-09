@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-08T20:45:44.927156+00:00",
+  "generated_at": "2026-11-09T12:51:31.668945+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 38,
-      "species": 32,
-      "first_time_species": 22
+      "assemblies": 90,
+      "species": 38,
+      "first_time_species": 28
     },
     "year": {
-      "assemblies": 6352,
-      "species": 3889,
-      "first_time_species": 3309
+      "assemblies": 6404,
+      "species": 3894,
+      "first_time_species": 3314
     },
     "all": {
-      "assemblies": 19490,
-      "species": 10922,
-      "first_time_species": 10922
+      "assemblies": 19543,
+      "species": 10928,
+      "first_time_species": 10928
     }
   },
   "daily": [
@@ -55953,8 +55953,8 @@
     },
     {
       "date": "2026-11-03",
-      "assemblies": 8,
-      "species": 7,
+      "assemblies": 55,
+      "species": 8,
       "first_time_species": 6
     },
     {
@@ -55965,15 +55965,15 @@
     },
     {
       "date": "2026-11-05",
-      "assemblies": 13,
-      "species": 8,
-      "first_time_species": 3
+      "assemblies": 18,
+      "species": 13,
+      "first_time_species": 8
     },
     {
       "date": "2026-11-06",
-      "assemblies": 1,
-      "species": 1,
-      "first_time_species": 1
+      "assemblies": 2,
+      "species": 2,
+      "first_time_species": 2
     },
     {
       "date": "2026-11-07",
@@ -55983,6 +55983,12 @@
     },
     {
       "date": "2026-11-08",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-11-09",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56141,29 +56147,33 @@
     },
     {
       "year": "2026",
-      "assemblies": 5867,
-      "species": 3980,
-      "first_time_species": 3045
+      "assemblies": 5920,
+      "species": 3987,
+      "first_time_species": 3051
     }
   ],
   "groups_week": [
     {
-      "group": "Animals",
-      "count": 22
+      "group": "Plants",
+      "count": 64
     },
     {
-      "group": "Plants",
-      "count": 16
+      "group": "Animals",
+      "count": 25
+    },
+    {
+      "group": "Other",
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4126
+      "count": 4129
     },
     {
       "group": "Plants",
-      "count": 1605
+      "count": 1653
     },
     {
       "group": "Fungi",
@@ -56171,17 +56181,17 @@
     },
     {
       "group": "Other",
-      "count": 140
+      "count": 141
     }
   ],
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11159
+      "count": 11163
     },
     {
       "group": "Plants",
-      "count": 5380
+      "count": 5428
     },
     {
       "group": "Fungi",
@@ -56189,7 +56199,7 @@
     },
     {
       "group": "Other",
-      "count": 457
+      "count": 458
     }
   ],
   "milestones": [
@@ -56216,33 +56226,63 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "37631531",
-      "group": "Plants",
+      "assembly_uid": "37651091",
+      "group": "Animals",
       "sequence_release_date": "2026-11-06",
-      "assembly_publication_date": "2026-11-06",
-      "biosample_enriched": true
+      "assembly_publication_date": "2026-11-06"
     },
-    "group": "Plants",
-    "accession": "GCA_062077194.1",
-    "organism_name": "Banisteriopsis caapi",
-    "common_name": "eudicots",
-    "tax_id": 577683,
+    "group": "Animals",
+    "accession": "GCA_990135480.1",
+    "organism_name": "Cochylidia richteriana",
+    "common_name": "moths & butterflies",
+    "tax_id": 1869590,
     "release_date": "2026-11-06",
     "assembly_level": "Chromosome",
-    "assembly_name": "Tucunaca",
-    "total_sequence_length": 1114496631,
-    "chromosome_count": 10,
-    "genus": "Banisteriopsis",
-    "family": "Malpighiaceae",
-    "phylum": "Streptophyta",
+    "assembly_name": "ilCocRich1.hap1.1",
+    "total_sequence_length": 450641065,
+    "chromosome_count": 31,
+    "genus": "Cochylidia",
+    "family": "Tortricidae",
+    "phylum": "Arthropoda",
     "image": {
-      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg",
-      "credit": "François Delonnay/Archivo Centro Takiwasi · CC BY-SA 4.0",
-      "matched_name": "Banisteriopsis caapi"
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Cochylidia_richteriana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cochylidia_richteriana.jpg",
+      "credit": "Marko Mutanen, University of Oulu · Public domain",
+      "matched_name": "Cochylidia richteriana"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651091",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-06",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Animals",
+      "accession": "GCA_990135480.1",
+      "organism_name": "Cochylidia richteriana",
+      "common_name": "moths & butterflies",
+      "tax_id": 1869590,
+      "release_date": "2026-11-06",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilCocRich1.hap1.1",
+      "total_sequence_length": 450641065,
+      "chromosome_count": 31,
+      "genus": "Cochylidia",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Cochylidia_richteriana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Cochylidia_richteriana.jpg",
+        "credit": "Marko Mutanen, University of Oulu · Public domain",
+        "matched_name": "Cochylidia richteriana"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -56278,6 +56318,37 @@
     {
       "source_provenance": {
         "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651001",
+        "group": "Other",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Other",
+      "accession": "GCA_990133905.1",
+      "organism_name": "Halurus flosculosus",
+      "common_name": "red algae",
+      "tax_id": 189638,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "urHalFlos2.1",
+      "total_sequence_length": 442525308,
+      "chromosome_count": 28,
+      "genus": "Halurus",
+      "family": "Wrangeliaceae",
+      "phylum": "Rhodophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Halurus_flosculosus_Crouan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Halurus_flosculosus_Crouan.jpg",
+        "credit": "Pierre-Louis Crouan (1798-1871) &amp; Hippolyte-Marie Crouan (1802-1871) · Public domain",
+        "matched_name": "Halurus flosculosus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
           "assembly_index",
           "datasets"
         ],
@@ -56301,6 +56372,37 @@
       "family": null,
       "phylum": null,
       "image": null
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651141",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133693.1",
+      "organism_name": "Poecilocampa populi",
+      "common_name": "moths & butterflies",
+      "tax_id": 475346,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ilPoePopu1.hap2.1",
+      "total_sequence_length": 705013258,
+      "chromosome_count": 35,
+      "genus": "Poecilocampa",
+      "family": "Lasiocampidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Poecilocampa_populi01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Poecilocampa_populi01.jpg",
+        "credit": "Walter Schön · CC BY-SA 3.0",
+        "matched_name": "Poecilocampa populi"
+      }
     },
     {
       "source_provenance": {
@@ -56337,6 +56439,37 @@
     {
       "source_provenance": {
         "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651211",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133691.1",
+      "organism_name": "Tritia reticulata",
+      "common_name": "reticulate nassa",
+      "tax_id": 1934738,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "xgTriReti1.hap1.1",
+      "total_sequence_length": 2646484033,
+      "chromosome_count": 35,
+      "genus": "Tritia",
+      "family": "Nassariidae",
+      "phylum": "Mollusca",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg/960px-Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Caracoles_de_mar_(Tritia_reticulata),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2021-09-08,_DD_39.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0",
+        "matched_name": "Tritia reticulata"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
           "assembly_index",
           "datasets"
         ],
@@ -56364,6 +56497,68 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Anarta_pugnax.JPG",
         "credit": "Dumi · CC BY-SA 3.0",
         "matched_name": "Anarta pugnax"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651221",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Animals",
+      "accession": "GCA_990133684.1",
+      "organism_name": "Loligo forbesii",
+      "common_name": "northern European squid",
+      "tax_id": 6618,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "xcLolForb1.1",
+      "total_sequence_length": 4912925761,
+      "chromosome_count": 46,
+      "genus": "Loligo",
+      "family": "Loliginidae",
+      "phylum": "Mollusca",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Loligo_forbesii.jpg/960px-Loligo_forbesii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Loligo_forbesii.jpg",
+        "credit": "Comingio Merculiano (1845–1915) · Public domain",
+        "matched_name": "Loligo forbesii"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37651201",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-05",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133683.1",
+      "organism_name": "Scabiosa columbaria",
+      "common_name": "eudicots",
+      "tax_id": 180561,
+      "release_date": "2026-11-05",
+      "assembly_level": "Chromosome",
+      "assembly_name": "daScaColu1.hap1.1",
+      "total_sequence_length": 958360909,
+      "chromosome_count": 8,
+      "genus": "Scabiosa",
+      "family": "Caprifoliaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Scabiosa_columbaria0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Scabiosa_columbaria0.jpg",
+        "credit": "Kurt Stüber [1] · CC BY-SA 3.0",
+        "matched_name": "Scabiosa columbaria"
       }
     },
     {
@@ -57164,6 +57359,1463 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:046_Fischer%27s_lovebird_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg",
         "credit": "Giles Laurent · CC BY-SA 4.0",
         "matched_name": "Agapornis fischeri"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650771",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133678.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TV30.scaffold.Chronly.fasta",
+      "total_sequence_length": 122799380,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650821",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133677.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "D-UKSW06-491.scaffold.Chronly.fasta",
+      "total_sequence_length": 131845653,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650791",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133676.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "C24.scaffold.Chronly.fasta",
+      "total_sequence_length": 124101377,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650721",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133673.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Yeg8.scaffold.Chronly.fasta",
+      "total_sequence_length": 129406600,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650711",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133672.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "627RMX-1MN5.scaffold.Chronly.fasta",
+      "total_sequence_length": 122858627,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650741",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133671.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "TOM-01.scaffold.Chronly.fasta",
+      "total_sequence_length": 127036196,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650731",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133670.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Col-0.scaffold.Chronly.fasta",
+      "total_sequence_length": 128400879,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650431",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133669.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Cem0.scaffold.Chronly.fasta",
+      "total_sequence_length": 129030388,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650461",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133668.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Yeg7.scaffold.Chronly.fasta",
+      "total_sequence_length": 130988110,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650441",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133667.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP_Her12.scaffold.Chronly.fasta",
+      "total_sequence_length": 124030519,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650471",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133666.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Bd-0.scaffold.Chronly.fasta",
+      "total_sequence_length": 122066635,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650451",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133665.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Castelfeld_4_211.scaffold.Chronly.fasta",
+      "total_sequence_length": 125523121,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650491",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133664.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "NYL7.scaffold.Chronly.fasta",
+      "total_sequence_length": 122108567,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650481",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133663.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Eds9.scaffold.Chronly.fasta",
+      "total_sequence_length": 119408201,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650411",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133661.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "En_D.scaffold.Chronly.fasta",
+      "total_sequence_length": 126768661,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650421",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133660.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lag1-2.scaffold.Chronly.fasta",
+      "total_sequence_length": 125670764,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650531",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133659.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "T610.scaffold.Chronly.fasta",
+      "total_sequence_length": 120844487,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650521",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133658.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lov1.scaffold.Chronly.fasta",
+      "total_sequence_length": 122665370,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650551",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133657.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Tsu0.scaffold.Chronly.fasta",
+      "total_sequence_length": 129294025,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650541",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133656.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP_Hum2.scaffold.Chronly.fasta",
+      "total_sequence_length": 127052817,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650571",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133655.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "MIA-1.scaffold.Chronly.fasta",
+      "total_sequence_length": 119939626,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650561",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133654.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Zu-0.scaffold.Chronly.fasta",
+      "total_sequence_length": 121624655,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650591",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133653.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Qar8a.scaffold.Chronly.fasta",
+      "total_sequence_length": 123057108,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650581",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133652.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Alm-0.scaffold.Chronly.fasta",
+      "total_sequence_length": 121101722,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650511",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133651.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Vaz0.scaffold.Chronly.fasta",
+      "total_sequence_length": 120326088,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650501",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133650.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Moa-0.scaffold.Chronly.fasta",
+      "total_sequence_length": 129618055,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650601",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133649.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Sri3.scaffold.Chronly.fasta",
+      "total_sequence_length": 129029985,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650631",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133648.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Pan0.scaffold.Chronly.fasta",
+      "total_sequence_length": 128057253,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650621",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133647.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Tol7.scaffold.Chronly.fasta",
+      "total_sequence_length": 128255094,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650651",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133646.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Castelfeld_4_210.scaffold.Chronly.fasta",
+      "total_sequence_length": 124208245,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650641",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133645.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "OOE23.scaffold.Chronly.fasta",
+      "total_sequence_length": 126461962,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650671",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133644.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "T890.scaffold.Chronly.fasta",
+      "total_sequence_length": 122756799,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650661",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133643.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Ta_0.scaffold.Chronly.fasta",
+      "total_sequence_length": 119807368,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650681",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133642.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Gra0.scaffold.Chronly.fasta",
+      "total_sequence_length": 121655690,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650611",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133640.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lag1-7.scaffold.Chronly.fasta",
+      "total_sequence_length": 122781293,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650701",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133639.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Kas1.scaffold.Chronly.fasta",
+      "total_sequence_length": 128668938,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650691",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133638.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "KNO2-54.scaffold.Chronly.fasta",
+      "total_sequence_length": 129755631,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650761",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133637.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Krazo_1.scaffold.Chronly.fasta",
+      "total_sequence_length": 130193270,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650751",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133636.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "IP-Per0.scaffold.Chronly.fasta",
+      "total_sequence_length": 125852709,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650781",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133635.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "NFA10.scaffold.Chronly.fasta",
+      "total_sequence_length": 126572683,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650811",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133633.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Fri1.scaffold.Chronly.fasta",
+      "total_sequence_length": 123516073,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650801",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133632.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "T1160.scaffold.Chronly.fasta",
+      "total_sequence_length": 119547183,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650841",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133631.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "MIA-5.scaffold.Chronly.fasta",
+      "total_sequence_length": 126258744,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650831",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133630.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "UKSW06-541.scaffold.Chronly.fasta",
+      "total_sequence_length": 123283204,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650851",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133629.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "OOE3-1.scaffold.Chronly.fasta",
+      "total_sequence_length": 128257413,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650861",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133628.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "OOE2-1.scaffold.Chronly.fasta",
+      "total_sequence_length": 122807005,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "37650871",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-03",
+        "assembly_publication_date": "2026-11-06"
+      },
+      "group": "Plants",
+      "accession": "GCA_990133627.1",
+      "organism_name": "Arabidopsis thaliana",
+      "common_name": "thale cress",
+      "tax_id": 3702,
+      "release_date": "2026-11-03",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Lov5.scaffold.Chronly.fasta",
+      "total_sequence_length": 126456502,
+      "chromosome_count": 5,
+      "genus": "Arabidopsis",
+      "family": "Brassicaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Arabidopsis_thaliana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Arabidopsis_thaliana.jpg",
+        "credit": "Original uploader was Brona at en.wikipedia. User:Roepers at nl.wikipedia · CC BY-SA 3.0",
+        "matched_name": "Arabidopsis thaliana"
       }
     },
     {
@@ -183098,15 +184750,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "30856791",
-        "group": "Animals",
-        "sequence_release_date": "2025-12-23",
-        "assembly_publication_date": "2025-12-23"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_054131105.1",
@@ -195569,22 +197217,58 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Furipterus horrens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-05",
-        "assembly": "mFurHor1.1.pri"
-      },
-      {
         "species": "Hydra viridissima",
-        "status": "In sequence databases On the FTP",
+        "status": "In sequence databases In Gene On the FTP",
         "freeze_date": "2026-10-30",
         "assembly": "HvirCarnegie_v1 (GCF_058129835.1)"
       },
       {
+        "species": "Colias eurytheme",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-14",
+        "assembly": "ilColEury1 Martin Lab GWU primary (GCF_061535395.1)"
+      },
+      {
+        "species": "Homo sapiens",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-07",
+        "assembly": "GRCh38.p14 (GCF_000001405.40)"
+      },
+      {
+        "species": "Homo sapiens",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-07",
+        "assembly": "T2T-CHM13v2.0 (GCF_009914755.1)"
+      },
+      {
+        "species": "Benincasa hispida",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-05",
+        "assembly": "pf3_genome.v1.1"
+      },
+      {
+        "species": "Megascapheus bottae",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-06",
+        "assembly": "mThoBot2.hap1"
+      },
+      {
         "species": "Crocodylus siamensis",
-        "status": "In sequence databases On the FTP",
+        "status": "In sequence databases In Gene On the FTP",
         "freeze_date": "2026-11-02",
         "assembly": "ASM5211081v1 (GCF_052110815.1)"
+      },
+      {
+        "species": "Phaseolus vulgaris",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-05",
+        "assembly": "ASM5162235v1"
+      },
+      {
+        "species": "Furipterus horrens",
+        "status": "In sequence databases",
+        "freeze_date": "2026-11-05",
+        "assembly": "mFurHor1.1.pri (GCF_987537825.1)"
       },
       {
         "species": "Punica granatum",
@@ -195593,22 +197277,10 @@
         "assembly": "ASM5999427v1"
       },
       {
-        "species": "Leiobunum rupestre",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "qqLeiRupe1.1.hap1"
-      },
-      {
-        "species": "Colias eurytheme",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-14",
-        "assembly": "ilColEury1 Martin Lab GWU primary (GCF_061535395.1)"
-      },
-      {
-        "species": "Physcomitrium patens",
-        "status": "Automated processing in progress",
+        "species": "Phasianus colchicus",
+        "status": "In sequence databases",
         "freeze_date": "2026-11-02",
-        "assembly": "ASM5946719v1"
+        "assembly": "bPhaCol1.hap1.1 (GCF_987193195.1)"
       },
       {
         "species": "Oncorhynchus mykiss",
@@ -195617,55 +197289,56 @@
         "assembly": "ASM5762802v1"
       },
       {
-        "species": "Phasianus colchicus",
+        "species": "Physcomitrium patens",
         "status": "Automated processing in progress",
         "freeze_date": "2026-11-02",
-        "assembly": "bPhaCol1.hap1.1"
+        "assembly": "ASM5946719v1"
       },
       {
-        "species": "Sinohyriopsis cumingii",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-13",
-        "assembly": "ASM2855479v2 (GCF_028554795.1)"
+        "species": "Phalangium opilio",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-10-29",
+        "assembly": "DU_Popi_V2 (GCF_054372755.1)"
       },
       {
-        "species": "Phoenix dactylifera",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-22",
-        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1 (GCF_051530095.1)"
-      },
-      {
-        "species": "Nuphar pumila",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-28",
-        "assembly": "dmNupPumi1.hap1.1 (GCF_984573655.1)"
-      },
-      {
-        "species": "Delphinapterus leucas",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-21",
-        "assembly": "BTC_Dleu_Yukka2 (GCF_059928025.1)"
+        "species": "Leiobunum rupestre",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-30",
+        "assembly": "qqLeiRupe1.1.hap1"
       },
       {
         "species": "Theobroma umbraticum",
         "status": "In sequence databases In Gene On the FTP",
         "freeze_date": "2026-10-29",
         "assembly": "ASM216827v3 (GCF_002168275.2)"
-      },
-      {
-        "species": "Ciona robusta",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-26",
-        "assembly": "ASM961781v2 (GCF_009617815.1)"
-      },
-      {
-        "species": "Phalangium opilio",
-        "status": "In sequence databases",
-        "freeze_date": "2026-10-29",
-        "assembly": "DU_Popi_V2 (GCF_054372755.1)"
       }
     ],
     "recent_completed": [
+      {
+        "species": "Phoenix dactylifera",
+        "release_date": "2026-11-03",
+        "assembly": "Ajwa_hap1_PhDact_Kaust_v1.1 (GCF_051530095.1)"
+      },
+      {
+        "species": "Nuphar pumila",
+        "release_date": "2026-11-03",
+        "assembly": "dmNupPumi1.hap1.1 (GCF_984573655.1)"
+      },
+      {
+        "species": "Sinohyriopsis cumingii",
+        "release_date": "2026-11-03",
+        "assembly": "ASM2855479v2 (GCF_028554795.1)"
+      },
+      {
+        "species": "Delphinapterus leucas",
+        "release_date": "2026-11-03",
+        "assembly": "BTC_Dleu_Yukka2 (GCF_059928025.1)"
+      },
+      {
+        "species": "Ciona robusta",
+        "release_date": "2026-11-02",
+        "assembly": "ASM961781v2 (GCF_009617815.1)"
+      },
       {
         "species": "Cupressus sempervirens",
         "release_date": "2026-10-30",
@@ -195825,21 +197498,6 @@
         "species": "Prunus mume",
         "release_date": "2026-09-28",
         "assembly": "ASM2933915v1 (GCF_029339155.1)"
-      },
-      {
-        "species": "Hippocampus bargibanti",
-        "release_date": "2026-09-26",
-        "assembly": "ASM5194339v1 (GCF_051943395.1)"
-      },
-      {
-        "species": "Nelumbo lutea",
-        "release_date": "2026-09-26",
-        "assembly": "American lotus-T2T (GCF_056320005.1)"
-      },
-      {
-        "species": "Atractosteus spatula",
-        "release_date": "2026-09-25",
-        "assembly": "fAtrSpa1.hap1 (GCF_055471065.1)"
       }
     ]
   },
@@ -206764,8 +208422,14 @@
     "Halofilum ramosum": "2026-11-03",
     "Clavelina sabbadini": "2026-11-04",
     "Agonopterix petasitis": "2026-11-05",
+    "Scabiosa columbaria": "2026-11-05",
+    "Loligo forbesii": "2026-11-05",
     "Anarta pugnax": "2026-11-05",
-    "Chelonaplysilla americana": "2026-11-05"
+    "Tritia reticulata": "2026-11-05",
+    "Poecilocampa populi": "2026-11-05",
+    "Chelonaplysilla americana": "2026-11-05",
+    "Halurus flosculosus": "2026-11-05",
+    "Cochylidia richteriana": "2026-11-06"
   },
   "image_cache": {
     "[Emmonsia] soli": {
@@ -211225,6 +212889,42 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg",
       "credit": "François Delonnay/Archivo Centro Takiwasi · CC BY-SA 4.0",
       "matched_name": "Banisteriopsis caapi"
+    },
+    "Scabiosa columbaria": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Scabiosa_columbaria0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Scabiosa_columbaria0.jpg",
+      "credit": "Kurt Stüber [1] · CC BY-SA 3.0",
+      "matched_name": "Scabiosa columbaria"
+    },
+    "Loligo forbesii": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Loligo_forbesii.jpg/960px-Loligo_forbesii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Loligo_forbesii.jpg",
+      "credit": "Comingio Merculiano (1845–1915) · Public domain",
+      "matched_name": "Loligo forbesii"
+    },
+    "Tritia reticulata": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg/960px-Caracoles_de_mar_%28Tritia_reticulata%29%2C_Parque_natural_de_la_Arr%C3%A1bida%2C_Portugal%2C_2021-09-08%2C_DD_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Caracoles_de_mar_(Tritia_reticulata),_Parque_natural_de_la_Arr%C3%A1bida,_Portugal,_2021-09-08,_DD_39.jpg",
+      "credit": "Diego Delso · CC BY-SA 4.0",
+      "matched_name": "Tritia reticulata"
+    },
+    "Poecilocampa populi": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Poecilocampa_populi01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Poecilocampa_populi01.jpg",
+      "credit": "Walter Schön · CC BY-SA 3.0",
+      "matched_name": "Poecilocampa populi"
+    },
+    "Halurus flosculosus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Halurus_flosculosus_Crouan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Halurus_flosculosus_Crouan.jpg",
+      "credit": "Pierre-Louis Crouan (1798-1871) &amp; Hippolyte-Marie Crouan (1802-1871) · Public domain",
+      "matched_name": "Halurus flosculosus"
+    },
+    "Cochylidia richteriana": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Cochylidia_richteriana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cochylidia_richteriana.jpg",
+      "credit": "Marko Mutanen, University of Oulu · Public domain",
+      "matched_name": "Cochylidia richteriana"
     }
   },
   "taxonomy_cache": {
@@ -219787,10 +221487,63 @@
       "kingdom": "Viridiplantae"
     },
     "3256806": {},
-    "3291107": {}
+    "180561": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Scabiosa",
+      "family": "Caprifoliaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "6618": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "northern European squid",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Loligo",
+      "family": "Loliginidae",
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
+    },
+    "1934738": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "reticulate nassa",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Tritia",
+      "family": "Nassariidae",
+      "phylum": "Mollusca",
+      "kingdom": "Metazoa"
+    },
+    "475346": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Poecilocampa",
+      "family": "Lasiocampidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "3291107": {},
+    "189638": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "red algae",
+      "fallback_common_name_source": "group_name",
+      "genus": "Halurus",
+      "family": "Wrangeliaceae",
+      "phylum": "Rhodophyta"
+    },
+    "1869590": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "moths & butterflies",
+      "fallback_common_name_source": "group_name",
+      "genus": "Cochylidia",
+      "family": "Tortricidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    }
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1289,
+    "overlapping_or_superseded_rows_removed": 1288,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
@@ -219813,31 +221566,397 @@
         "datasets_date": "2025-12-22"
       },
       {
-        "accession": "GCA_054131105.1",
-        "index_date": "2025-12-23",
-        "datasets_date": "2025-12-22"
-      },
-      {
         "accession": "GCA_061612785.1",
         "index_date": "2026-09-24",
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/09\"[GRLS]:\"2026/11/08\"[GRLS] OR \"2026/10/09\"[SRDT]:\"2026/11/08\"[SRDT] OR \"2026/10/09\"[UPDT]:\"2026/11/08\"[UPDT])",
-    "matched_uids": 1290,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/10\"[GRLS]:\"2026/11/09\"[GRLS] OR \"2026/10/10\"[SRDT]:\"2026/11/09\"[SRDT] OR \"2026/10/10\"[UPDT]:\"2026/11/09\"[UPDT])",
+    "matched_uids": 1342,
     "held_uids_rechecked": 1,
-    "generated_at": "2026-11-08T20:45:18.636923+00:00",
+    "generated_at": "2026-11-09T12:51:07.923715+00:00",
     "datasets_rows": 19489,
-    "assembly_index_rows": 1290,
-    "merged_assemblies": 19490,
-    "unique_accession_stems": 19490,
+    "assembly_index_rows": 1342,
+    "merged_assemblies": 19543,
+    "unique_accession_stems": 19543,
     "pending_metadata_accessions": [
-      "GCA_062077194.1"
+      "GCA_062077194.1",
+      "GCA_990133627.1",
+      "GCA_990133628.1",
+      "GCA_990133629.1",
+      "GCA_990133630.1",
+      "GCA_990133631.1",
+      "GCA_990133632.1",
+      "GCA_990133633.1",
+      "GCA_990133635.1",
+      "GCA_990133636.1",
+      "GCA_990133637.1",
+      "GCA_990133638.1",
+      "GCA_990133639.1",
+      "GCA_990133640.1",
+      "GCA_990133642.1",
+      "GCA_990133643.1",
+      "GCA_990133644.1",
+      "GCA_990133645.1",
+      "GCA_990133646.1",
+      "GCA_990133647.1",
+      "GCA_990133648.1",
+      "GCA_990133649.1",
+      "GCA_990133650.1",
+      "GCA_990133651.1",
+      "GCA_990133652.1",
+      "GCA_990133653.1",
+      "GCA_990133654.1",
+      "GCA_990133655.1",
+      "GCA_990133656.1",
+      "GCA_990133657.1",
+      "GCA_990133658.1",
+      "GCA_990133659.1",
+      "GCA_990133660.1",
+      "GCA_990133661.1",
+      "GCA_990133663.1",
+      "GCA_990133664.1",
+      "GCA_990133665.1",
+      "GCA_990133666.1",
+      "GCA_990133667.1",
+      "GCA_990133668.1",
+      "GCA_990133669.1",
+      "GCA_990133670.1",
+      "GCA_990133671.1",
+      "GCA_990133672.1",
+      "GCA_990133673.1",
+      "GCA_990133676.1",
+      "GCA_990133677.1",
+      "GCA_990133678.1",
+      "GCA_990133683.1",
+      "GCA_990133684.1",
+      "GCA_990133691.1",
+      "GCA_990133693.1",
+      "GCA_990133905.1",
+      "GCA_990135480.1"
     ],
     "pending_records": [
       {
         "accession": "GCA_062077194.1",
         "species": "Banisteriopsis caapi",
+        "release_date": "2026-11-06",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133627.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133628.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133629.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133630.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133631.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133632.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133633.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133635.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133636.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133637.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133638.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133639.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133640.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133642.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133643.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133644.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133645.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133646.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133647.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133648.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133649.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133650.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133651.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133652.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133653.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133654.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133655.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133656.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133657.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133658.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133659.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133660.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133661.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133663.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133664.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133665.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133666.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133667.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133668.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133669.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133670.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133671.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133672.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133673.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133676.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133677.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133678.1",
+        "species": "Arabidopsis thaliana",
+        "release_date": "2026-11-03",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133683.1",
+        "species": "Scabiosa columbaria",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133684.1",
+        "species": "Loligo forbesii",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133691.1",
+        "species": "Tritia reticulata",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133693.1",
+        "species": "Poecilocampa populi",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990133905.1",
+        "species": "Halurus flosculosus",
+        "release_date": "2026-11-05",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_990135480.1",
+        "species": "Cochylidia richteriana",
         "release_date": "2026-11-06",
         "level": "Chromosome"
       }
