@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-09T12:51:31.668945+00:00",
+  "generated_at": "2026-11-10T12:38:50.975639+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 90,
-      "species": 38,
-      "first_time_species": 28
+      "assemblies": 35,
+      "species": 30,
+      "first_time_species": 22
     },
     "year": {
-      "assemblies": 6404,
-      "species": 3894,
-      "first_time_species": 3314
+      "assemblies": 6394,
+      "species": 3884,
+      "first_time_species": 3306
     },
     "all": {
       "assemblies": 19543,
@@ -55992,6 +55992,12 @@
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
+    },
+    {
+      "date": "2026-11-10",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
     }
   ],
   "yearly": [
@@ -56154,12 +56160,12 @@
   ],
   "groups_week": [
     {
-      "group": "Plants",
-      "count": 64
+      "group": "Animals",
+      "count": 20
     },
     {
-      "group": "Animals",
-      "count": 25
+      "group": "Plants",
+      "count": 14
     },
     {
       "group": "Other",
@@ -56169,11 +56175,11 @@
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4129
+      "count": 4122
     },
     {
       "group": "Plants",
-      "count": 1653
+      "count": 1650
     },
     {
       "group": "Fungi",
@@ -56223,9 +56229,10 @@
   "featured_assembly": {
     "source_provenance": {
       "sources": [
-        "assembly_index"
+        "assembly_index",
+        "datasets"
       ],
-      "metadata_pending": true,
+      "metadata_pending": false,
       "assembly_uid": "37651091",
       "group": "Animals",
       "sequence_release_date": "2026-11-06",
@@ -56239,7 +56246,7 @@
     "release_date": "2026-11-06",
     "assembly_level": "Chromosome",
     "assembly_name": "ilCocRich1.hap1.1",
-    "total_sequence_length": 450641065,
+    "total_sequence_length": 450625614,
     "chromosome_count": 31,
     "genus": "Cochylidia",
     "family": "Tortricidae",
@@ -56255,9 +56262,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651091",
         "group": "Animals",
         "sequence_release_date": "2026-11-06",
@@ -56271,7 +56279,7 @@
       "release_date": "2026-11-06",
       "assembly_level": "Chromosome",
       "assembly_name": "ilCocRich1.hap1.1",
-      "total_sequence_length": 450641065,
+      "total_sequence_length": 450625614,
       "chromosome_count": 31,
       "genus": "Cochylidia",
       "family": "Tortricidae",
@@ -56286,9 +56294,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37631531",
         "group": "Plants",
         "sequence_release_date": "2026-11-06",
@@ -56318,9 +56327,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651001",
         "group": "Other",
         "sequence_release_date": "2026-11-05",
@@ -56334,7 +56344,7 @@
       "release_date": "2026-11-05",
       "assembly_level": "Chromosome",
       "assembly_name": "urHalFlos2.1",
-      "total_sequence_length": 442525308,
+      "total_sequence_length": 442312118,
       "chromosome_count": 28,
       "genus": "Halurus",
       "family": "Wrangeliaceae",
@@ -56376,9 +56386,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651141",
         "group": "Animals",
         "sequence_release_date": "2026-11-05",
@@ -56439,9 +56450,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651211",
         "group": "Animals",
         "sequence_release_date": "2026-11-05",
@@ -56455,7 +56467,7 @@
       "release_date": "2026-11-05",
       "assembly_level": "Chromosome",
       "assembly_name": "xgTriReti1.hap1.1",
-      "total_sequence_length": 2646484033,
+      "total_sequence_length": 2646467447,
       "chromosome_count": 35,
       "genus": "Tritia",
       "family": "Nassariidae",
@@ -56502,9 +56514,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651221",
         "group": "Animals",
         "sequence_release_date": "2026-11-05",
@@ -56518,7 +56531,7 @@
       "release_date": "2026-11-05",
       "assembly_level": "Chromosome",
       "assembly_name": "xcLolForb1.1",
-      "total_sequence_length": 4912925761,
+      "total_sequence_length": 4912908535,
       "chromosome_count": 46,
       "genus": "Loligo",
       "family": "Loliginidae",
@@ -56533,9 +56546,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37651201",
         "group": "Plants",
         "sequence_release_date": "2026-11-05",
@@ -56549,7 +56563,7 @@
       "release_date": "2026-11-05",
       "assembly_level": "Chromosome",
       "assembly_name": "daScaColu1.hap1.1",
-      "total_sequence_length": 958360909,
+      "total_sequence_length": 957627487,
       "chromosome_count": 8,
       "genus": "Scabiosa",
       "family": "Caprifoliaceae",
@@ -57364,9 +57378,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650771",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57395,9 +57410,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650821",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57426,9 +57442,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650791",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57457,9 +57474,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650721",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57488,9 +57506,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650711",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57519,9 +57538,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650741",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57550,9 +57570,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650731",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57581,9 +57602,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650431",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57612,9 +57634,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650461",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57643,9 +57666,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650441",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57674,9 +57698,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650471",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57705,9 +57730,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650451",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57736,9 +57762,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650491",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57767,9 +57794,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650481",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57798,9 +57826,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650411",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57829,9 +57858,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650421",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57860,9 +57890,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650531",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57891,9 +57922,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650521",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57922,9 +57954,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650551",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57953,9 +57986,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650541",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -57984,9 +58018,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650571",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58015,9 +58050,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650561",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58046,9 +58082,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650591",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58077,9 +58114,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650581",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58108,9 +58146,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650511",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58139,9 +58178,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650501",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58170,9 +58210,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650601",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58201,9 +58242,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650631",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58232,9 +58274,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650621",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58263,9 +58306,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650651",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58294,9 +58338,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650641",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58325,9 +58370,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650671",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58356,9 +58402,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650661",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58387,9 +58434,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650681",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58418,9 +58466,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650611",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58449,9 +58498,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650701",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58480,9 +58530,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650691",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58511,9 +58562,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650761",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58542,9 +58594,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650751",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58573,9 +58626,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650781",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58604,9 +58658,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650811",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58635,9 +58690,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650801",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58666,9 +58722,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650841",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58697,9 +58754,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650831",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58728,9 +58786,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650851",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58759,9 +58818,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650861",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -58790,9 +58850,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37650871",
         "group": "Plants",
         "sequence_release_date": "2026-11-03",
@@ -72611,15 +72672,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36483131",
-        "group": "Animals",
-        "sequence_release_date": "2026-10-10",
-        "assembly_publication_date": "2026-10-10"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_062029496.1",
@@ -197174,101 +197231,15 @@
       "assembly_name": "ilMelMeno1.hap1.4",
       "total_sequence_length": 543559426,
       "chromosome_count": 22
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_976985625.1",
-      "organism_name": "Arabis nemorensis",
-      "common_name": null,
-      "tax_id": 586526,
-      "release_date": "2025-11-04",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Arabis_nem_parent_genome",
-      "total_sequence_length": 245093670,
-      "chromosome_count": 8
-    },
-    {
-      "source_provenance": {
-        "group": "Plants",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Plants",
-      "accession": "GCA_976985545.1",
-      "organism_name": "Arabis sagittata",
-      "common_name": null,
-      "tax_id": 571369,
-      "release_date": "2025-11-04",
-      "assembly_level": "Chromosome",
-      "assembly_name": "Arabis_sag_parent_genome",
-      "total_sequence_length": 248905625,
-      "chromosome_count": 8
     }
   ],
   "annotations": {
     "in_progress": [
       {
-        "species": "Hydra viridissima",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-30",
-        "assembly": "HvirCarnegie_v1 (GCF_058129835.1)"
-      },
-      {
-        "species": "Colias eurytheme",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-14",
-        "assembly": "ilColEury1 Martin Lab GWU primary (GCF_061535395.1)"
-      },
-      {
-        "species": "Homo sapiens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-07",
-        "assembly": "GRCh38.p14 (GCF_000001405.40)"
-      },
-      {
-        "species": "Homo sapiens",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-07",
-        "assembly": "T2T-CHM13v2.0 (GCF_009914755.1)"
-      },
-      {
-        "species": "Benincasa hispida",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-05",
-        "assembly": "pf3_genome.v1.1"
-      },
-      {
         "species": "Megascapheus bottae",
         "status": "Automated processing in progress",
         "freeze_date": "2026-11-06",
         "assembly": "mThoBot2.hap1"
-      },
-      {
-        "species": "Crocodylus siamensis",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-11-02",
-        "assembly": "ASM5211081v1 (GCF_052110815.1)"
-      },
-      {
-        "species": "Phaseolus vulgaris",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-05",
-        "assembly": "ASM5162235v1"
-      },
-      {
-        "species": "Furipterus horrens",
-        "status": "In sequence databases",
-        "freeze_date": "2026-11-05",
-        "assembly": "mFurHor1.1.pri (GCF_987537825.1)"
       },
       {
         "species": "Punica granatum",
@@ -197277,16 +197248,34 @@
         "assembly": "ASM5999427v1"
       },
       {
+        "species": "Benincasa hispida",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-05",
+        "assembly": "pf3_genome.v1.1"
+      },
+      {
+        "species": "Phaseolus vulgaris",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-05",
+        "assembly": "ASM5162235v1"
+      },
+      {
         "species": "Phasianus colchicus",
-        "status": "In sequence databases",
+        "status": "In sequence databases On the FTP",
         "freeze_date": "2026-11-02",
         "assembly": "bPhaCol1.hap1.1 (GCF_987193195.1)"
       },
       {
-        "species": "Oncorhynchus mykiss",
+        "species": "Leiobunum rupestre",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-26",
-        "assembly": "ASM5762802v1"
+        "freeze_date": "2026-10-30",
+        "assembly": "qqLeiRupe1.1.hap1"
+      },
+      {
+        "species": "Furipterus horrens",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-11-05",
+        "assembly": "mFurHor1.1.pri (GCF_987537825.1)"
       },
       {
         "species": "Physcomitrium patens",
@@ -197301,10 +197290,22 @@
         "assembly": "DU_Popi_V2 (GCF_054372755.1)"
       },
       {
-        "species": "Leiobunum rupestre",
+        "species": "Homo sapiens",
         "status": "Automated processing in progress",
-        "freeze_date": "2026-10-30",
-        "assembly": "qqLeiRupe1.1.hap1"
+        "freeze_date": "2026-11-07",
+        "assembly": "GRCh38.p14 (GCF_000001405.40)"
+      },
+      {
+        "species": "Homo sapiens",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-07",
+        "assembly": "T2T-CHM13v2.0 (GCF_009914755.1)"
+      },
+      {
+        "species": "Oncorhynchus mykiss",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-10-26",
+        "assembly": "ASM5762802v1"
       },
       {
         "species": "Theobroma umbraticum",
@@ -197314,6 +197315,21 @@
       }
     ],
     "recent_completed": [
+      {
+        "species": "Hydra viridissima",
+        "release_date": "2026-11-05",
+        "assembly": "HvirCarnegie_v1 (GCF_058129835.1)"
+      },
+      {
+        "species": "Colias eurytheme",
+        "release_date": "2026-11-04",
+        "assembly": "ilColEury1 Martin Lab GWU primary (GCF_061535395.1)"
+      },
+      {
+        "species": "Crocodylus siamensis",
+        "release_date": "2026-11-04",
+        "assembly": "ASM5211081v1 (GCF_052110815.1)"
+      },
       {
         "species": "Phoenix dactylifera",
         "release_date": "2026-11-03",
@@ -197493,11 +197509,6 @@
         "species": "Actinia tenebrosa",
         "release_date": "2026-09-29",
         "assembly": "QUT_ActTen_1.0 (GCF_029948245.1)"
-      },
-      {
-        "species": "Prunus mume",
-        "release_date": "2026-09-28",
-        "assembly": "ASM2933915v1 (GCF_029339155.1)"
       }
     ]
   },
@@ -221486,7 +221497,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3256806": {},
     "180561": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "eudicots",
@@ -221523,7 +221533,6 @@
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
     },
-    "3291107": {},
     "189638": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "red algae",
@@ -221540,10 +221549,12 @@
       "family": "Tortricidae",
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
-    }
+    },
+    "3256806": {},
+    "3291107": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1288,
+    "overlapping_or_superseded_rows_removed": 1341,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
@@ -221571,396 +221582,16 @@
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/10\"[GRLS]:\"2026/11/09\"[GRLS] OR \"2026/10/10\"[SRDT]:\"2026/11/09\"[SRDT] OR \"2026/10/10\"[UPDT]:\"2026/11/09\"[UPDT])",
-    "matched_uids": 1342,
-    "held_uids_rechecked": 1,
-    "generated_at": "2026-11-09T12:51:07.923715+00:00",
-    "datasets_rows": 19489,
-    "assembly_index_rows": 1342,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/11\"[GRLS]:\"2026/11/10\"[GRLS] OR \"2026/10/11\"[SRDT]:\"2026/11/10\"[SRDT] OR \"2026/10/11\"[UPDT]:\"2026/11/10\"[UPDT])",
+    "matched_uids": 1341,
+    "held_uids_rechecked": 54,
+    "generated_at": "2026-11-10T12:38:24.837573+00:00",
+    "datasets_rows": 19543,
+    "assembly_index_rows": 1341,
     "merged_assemblies": 19543,
     "unique_accession_stems": 19543,
-    "pending_metadata_accessions": [
-      "GCA_062077194.1",
-      "GCA_990133627.1",
-      "GCA_990133628.1",
-      "GCA_990133629.1",
-      "GCA_990133630.1",
-      "GCA_990133631.1",
-      "GCA_990133632.1",
-      "GCA_990133633.1",
-      "GCA_990133635.1",
-      "GCA_990133636.1",
-      "GCA_990133637.1",
-      "GCA_990133638.1",
-      "GCA_990133639.1",
-      "GCA_990133640.1",
-      "GCA_990133642.1",
-      "GCA_990133643.1",
-      "GCA_990133644.1",
-      "GCA_990133645.1",
-      "GCA_990133646.1",
-      "GCA_990133647.1",
-      "GCA_990133648.1",
-      "GCA_990133649.1",
-      "GCA_990133650.1",
-      "GCA_990133651.1",
-      "GCA_990133652.1",
-      "GCA_990133653.1",
-      "GCA_990133654.1",
-      "GCA_990133655.1",
-      "GCA_990133656.1",
-      "GCA_990133657.1",
-      "GCA_990133658.1",
-      "GCA_990133659.1",
-      "GCA_990133660.1",
-      "GCA_990133661.1",
-      "GCA_990133663.1",
-      "GCA_990133664.1",
-      "GCA_990133665.1",
-      "GCA_990133666.1",
-      "GCA_990133667.1",
-      "GCA_990133668.1",
-      "GCA_990133669.1",
-      "GCA_990133670.1",
-      "GCA_990133671.1",
-      "GCA_990133672.1",
-      "GCA_990133673.1",
-      "GCA_990133676.1",
-      "GCA_990133677.1",
-      "GCA_990133678.1",
-      "GCA_990133683.1",
-      "GCA_990133684.1",
-      "GCA_990133691.1",
-      "GCA_990133693.1",
-      "GCA_990133905.1",
-      "GCA_990135480.1"
-    ],
-    "pending_records": [
-      {
-        "accession": "GCA_062077194.1",
-        "species": "Banisteriopsis caapi",
-        "release_date": "2026-11-06",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133627.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133628.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133629.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133630.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133631.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133632.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133633.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133635.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133636.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133637.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133638.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133639.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133640.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133642.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133643.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133644.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133645.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133646.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133647.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133648.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133649.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133650.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133651.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133652.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133653.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133654.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133655.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133656.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133657.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133658.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133659.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133660.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133661.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133663.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133664.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133665.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133666.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133667.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133668.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133669.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133670.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133671.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133672.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133673.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133676.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133677.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133678.1",
-        "species": "Arabidopsis thaliana",
-        "release_date": "2026-11-03",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133683.1",
-        "species": "Scabiosa columbaria",
-        "release_date": "2026-11-05",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133684.1",
-        "species": "Loligo forbesii",
-        "release_date": "2026-11-05",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133691.1",
-        "species": "Tritia reticulata",
-        "release_date": "2026-11-05",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133693.1",
-        "species": "Poecilocampa populi",
-        "release_date": "2026-11-05",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990133905.1",
-        "species": "Halurus flosculosus",
-        "release_date": "2026-11-05",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_990135480.1",
-        "species": "Cochylidia richteriana",
-        "release_date": "2026-11-06",
-        "level": "Chromosome"
-      }
-    ],
-    "previous_dashboard_assemblies": 19490
+    "pending_metadata_accessions": [],
+    "pending_records": [],
+    "previous_dashboard_assemblies": 19543
   }
 }
