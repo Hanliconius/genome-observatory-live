@@ -137,7 +137,7 @@ def main():
         "taxa": len(intent_taxa), "no_qualifying_release": len(unreleased),
         "release_on_or_after_observation": len(release_after),
         "assembly_predates_observation": len(preexisting),
-        "note": "Cross-sectional inventory, not a completion probability. First observed is not necessarily the true declaration date; no release is not cancellation.",
+        "note": "Mixed-rank cross-sectional inventory, not a completion probability. Higher-rank taxa cannot directly match a species assembly. First observed is not necessarily the true declaration date; no exact release match is not cancellation.",
     }
     output["intent_tags"] = [
         {"tag": tag, "taxa": len(taxa), "without_qualifying_release": len(taxa & unreleased),
@@ -153,7 +153,7 @@ def main():
         "goat_intent_taxa": len(goat_i5k),
         "matched_taxa": len(ncbi_i5k & goat_i5k),
         "intent_no_qualifying_release": len(goat_i5k & unreleased),
-        "note": "Only explicitly flagged i5K labels in existing snapshots; not complete i5k community output or a historical advance-registration test.",
+        "note": "Only explicitly flagged i5K labels in existing snapshots; GoaT tags include higher taxa, while NCBI assembly labels are species-based. Not complete i5k community output or a historical advance-registration test.",
     }
     ncbi_i5k_by_taxon = collections.defaultdict(list)
     for row in rows:
