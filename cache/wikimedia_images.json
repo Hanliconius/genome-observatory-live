@@ -4228,5 +4228,29 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Cochylidia_richteriana.jpg",
     "credit": "Marko Mutanen, University of Oulu \u00b7 Public domain",
     "matched_name": "Cochylidia richteriana"
+  },
+  "Oryza meyeriana var. granulata": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gealypic5.JPG/960px-Gealypic5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
+    "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist \u00b7 Public domain",
+    "matched_name": "Oryza"
+  },
+  "Rhododendron platyphyllum": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Rhododendron-by-eiffel-public-domain-20040617.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Rhododendron-by-eiffel-public-domain-20040617.jpg",
+    "credit": "Eiffel \u00b7 Public domain",
+    "matched_name": "Rhododendron"
+  },
+  "Anisomorpha buprestoides": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Ocala_Ntl_Forest_29-03-00N_81-38-50W_Oct_1_2006_9.JPG/960px-Ocala_Ntl_Forest_29-03-00N_81-38-50W_Oct_1_2006_9.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ocala_Ntl_Forest_29-03-00N_81-38-50W_Oct_1_2006_9.JPG",
+    "credit": "Bugenstein at English Wikipedia \u00b7 CC BY-SA 3.0",
+    "matched_name": "Anisomorpha buprestoides"
+  },
+  "Lupinus mexicanus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Lupinus_albus_000_223_259_O.jpg/960px-Lupinus_albus_000_223_259_O.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Lupinus_albus_000_223_259_O.jpg",
+    "credit": "Jean-Claude Echardour [CC BY-SA], via Tela Botanica \u00b7 CC BY 2.0",
+    "matched_name": "Lupinus"
   }
 }
