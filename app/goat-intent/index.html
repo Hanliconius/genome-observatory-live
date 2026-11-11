@@ -23,7 +23,7 @@
   <p class="label">Genome Observatory · research preview</p>
   <h1>GoaT intent &amp; genome-producing efforts</h1>
   <p class="intro">Research drafts exploring who produces NCBI genomes, how species first gain reference assemblies, and how those releases relate to sequencing intent recorded in GoaT. The NCBI provenance plots below are a dated snapshot; the existing intent tracker follows archived releases and daily captures.</p>
-<nav class="page-tabs" role="tablist" aria-label="GoaT analysis sections"><button id="nav-overview" role="tab" type="button" aria-controls="tab-overview" aria-selected="true" tabindex="0" data-page-tab="overview">Overview</button><button id="nav-origins" role="tab" type="button" aria-controls="tab-origins" aria-selected="false" tabindex="-1" data-page-tab="origins">BioProjects & origins</button><button id="nav-evidence" role="tab" type="button" aria-controls="tab-evidence" aria-selected="false" tabindex="-1" data-page-tab="evidence">Funding & evidence</button><button id="nav-resolution" role="tab" type="button" aria-controls="tab-resolution" aria-selected="false" tabindex="-1" data-page-tab="resolution">Resolution audit</button><button id="nav-intent" role="tab" type="button" aria-controls="tab-intent" aria-selected="false" tabindex="-1" data-page-tab="intent">GoaT intent</button><button id="nav-methods" role="tab" type="button" aria-controls="tab-methods" aria-selected="false" tabindex="-1" data-page-tab="methods">Methods</button></nav>
+<nav class="page-tabs" role="tablist" aria-label="GoaT analysis sections"><button id="nav-overview" role="tab" type="button" aria-controls="tab-overview" aria-selected="true" tabindex="0" data-page-tab="overview">Overview</button><button id="nav-explore" role="tab" type="button" aria-controls="tab-explore" aria-selected="false" tabindex="-1" data-page-tab="explore">Small efforts lab</button><button id="nav-questions" role="tab" type="button" aria-controls="tab-questions" aria-selected="false" tabindex="-1" data-page-tab="questions">Meeting questions</button><button id="nav-origins" role="tab" type="button" aria-controls="tab-origins" aria-selected="false" tabindex="-1" data-page-tab="origins">BioProjects & origins</button><button id="nav-evidence" role="tab" type="button" aria-controls="tab-evidence" aria-selected="false" tabindex="-1" data-page-tab="evidence">Funding & evidence</button><button id="nav-resolution" role="tab" type="button" aria-controls="tab-resolution" aria-selected="false" tabindex="-1" data-page-tab="resolution">Resolution audit</button><button id="nav-intent" role="tab" type="button" aria-controls="tab-intent" aria-selected="false" tabindex="-1" data-page-tab="intent">GoaT intent</button><button id="nav-methods" role="tab" type="button" aria-controls="tab-methods" aria-selected="false" tabindex="-1" data-page-tab="methods">Methods</button></nav>
   <section id="project-stats" class="panel">
   <p class="label">Draft · NCBI project provenance</p>
   <h2>Who is producing the genomes?</h2>
@@ -95,6 +95,45 @@
 </div>
 
 </section>
+
+
+<div id="tab-explore" role="tabpanel" aria-labelledby="nav-explore" data-page-panel="explore" hidden>
+<h2>Small efforts lab · exploratory comparisons</h2>
+<p class="note">Live calculations from the dated NCBI provenance snapshot, using the organism and genome-contribution filters above. These are descriptive project-output proxies, <strong>not verified small laboratories</strong>. Direct BioProjects may fragment larger programmes; submitters may be sequencing centres.</p>
+<div id="explore-cards" class="cards"></div>
+<h3>How much output sits in projects of different sizes?</h3>
+<div id="explore-bands" class="project-chart"></div>
+<p class="note">Counts represent qualifying assemblies, not distinct laboratories. The direct BioProject footprint includes all assembly levels and replaced records; each displayed assembly contributes once.</p>
+<h3>Which groups contribute first genomes or upgrades?</h3>
+<div id="explore-novelty" class="project-chart"></div>
+<p class="note">Within each contribution category, compare footprint bins. “First ever” means earliest available species-level assembly in the historical NCBI cache; unknown history is kept separate.</p>
+<h3>How much of the apparent small-project output has organizational evidence?</h3>
+<div id="explore-origin" class="project-chart"></div>
+<p class="note">Overlapping evidence: a low-output BioProject may also be linked to a programme, production centre or research institution. Bars must not be added together.</p>
+<h3>Inspect the smallest projects</h3>
+<div class="project-controls"><label>Maximum BioProject footprint<select id="explore-max"><option value="1">1 species</option><option value="5" selected>5 species</option><option value="20">20 species</option></select></label><label>Search projects / taxa<input id="explore-search" type="search" placeholder="species, PRJNA, submitter…"></label><button id="explore-export" type="button">Download small-effort CSV</button></div>
+<p class="note" id="explore-summary"></p><div class="scroll"><table class="table"><thead><tr><th>BioProject / example taxon</th><th>Footprint</th><th>Current qualifying assemblies</th><th>Recorded attribution</th></tr></thead><tbody id="explore-records"></tbody></table></div>
+</div>
+<div id="tab-questions" role="tabpanel" aria-labelledby="nav-questions" data-page-panel="questions" hidden>
+<h2>Questions for the i5k / GoaT working group</h2>
+<p class="note">Exploratory prompts, not conclusions from the data. Use these views to decide which definitions and analyses are worth building next.</p>
+<div class="cards">
+<article class="card"><h3>What is a “small effort”?</h3><p>One-off BioProject, low lifetime species output, independent research leadership, or absence of production infrastructure? Which is most meaningful for the community?</p></article>
+<article class="card"><h3>Who did the biology?</h3><p>Does NCBI's submitter name identify the collecting specialist, the sequencing provider, or the archive? Which additional record fields would resolve this?</p></article>
+<article class="card"><h3>What is missing from GoaT?</h3><p>Separate assembly discoverability, project attribution and pre-sequencing intent. An assembled genome appearing in GoaT does not prove earlier intent registration.</p></article>
+<article class="card"><h3>Which taxa benefit most?</h3><p>Are independent specialists especially important for poorly represented orders, genera, parasitoids, symbionts, protists, or difficult-to-sample organisms?</p></article>
+<article class="card"><h3>Can we measure advance notice?</h3><p>Ask the GoaT team whether historical first-seen dates and status transitions can be obtained, including DToL ingestion dates versus biological events.</p></article>
+<article class="card"><h3>What would persuade a lab?</h3><p>Useful discovery by collaborators, less duplicated sampling, earlier sharing of expertise, better credit, and a genuinely simple registration route.</p></article>
+</div>
+<h3>Candidate metrics to test next</h3>
+<table class="table"><thead><tr><th>Dimension</th><th>Possible metric</th><th>Main limitation</th></tr></thead><tbody>
+<tr><td>Production pattern</td><td>Species released per active year; release bursts; project lifespan</td><td>Release date ≠ project activity date</td></tr>
+<tr><td>Organizational scale</td><td>Number of organizations, grants, linked BioProjects</td><td>Submitter ≠ scientific lead</td></tr>
+<tr><td>Taxonomic novelty</td><td>First species, genus and family genomes by effort type</td><td>Taxonomic synonyms / historical gaps</td></tr>
+<tr><td>Coordination</td><td>Intent overlap with independently released genomes</td><td>Requires dated intent history</td></tr>
+<tr><td>Visibility gap</td><td>NCBI assembly matched to GoaT taxon, project and advance intent</td><td>Three distinct outcomes</td></tr>
+</tbody></table>
+</div>
 
 <div id="tab-intent" role="tabpanel" aria-labelledby="nav-intent" data-page-panel="intent" hidden>
   <h2 id="intent-history">GoaT sequencing intent over time</h2>
@@ -339,9 +378,35 @@
     const ranked=[...institutions.values()].map(x=>({label:x.label.length>43?x.label.slice(0,40)+'…':x.label,count:x.species.size})).sort((a,b)=>b.count-a.count).slice(0,10);
     $('project-institutions').innerHTML=horizontal(ranked,{left:350,label:'Top ten candidate research submitters by distinct species'});
     renderOrigins(filtered);
+    renderExploration(filtered);
     renderUnresolved(filtered);
     renderTable();
   }
+
+  let exploreRows=[];
+  function renderExploration(rows){
+    const bands=[['1','1 species',r=>r.project_species===1],['2–5','2–5 species',r=>r.project_species>=2&&r.project_species<=5],['6–20','6–20 species',r=>r.project_species>=6&&r.project_species<=20],['21–100','21–100 species',r=>r.project_species>=21&&r.project_species<=100],['101+','>100 species',r=>r.project_species>100],['unknown','Footprint unknown',r=>r.project_species==null]];
+    const low=rows.filter(r=>r.project_species!=null&&r.project_species<=5);
+    const projects=new Set(low.map(r=>r.bioproject).filter(Boolean));
+    const first=low.filter(r=>r.novelty==='first_ever').length;
+    $('explore-cards').innerHTML=[['Selected assemblies',fmt(rows.length)],['≤5 species / BioProject',fmt(low.length)],['Direct low-output BioProjects',fmt(projects.size)],['First-ever genomes in low-output projects',fmt(first)]].map(([label,value])=>'<article class="card"><div class="label">'+label+'</div><div class="value">'+value+'</div></article>').join('');
+    $('explore-bands').innerHTML=horizontal(bands.map(([key,label,f])=>({label,count:rows.filter(f).length})),{left:240,label:'Qualifying assemblies by direct BioProject species footprint'});
+    const noveltyBins=[['first_ever','First-ever species genomes'],['upgrade','First chromosome-scale upgrades'],['additional','Additional assemblies'],['unknown','Historical status unresolved']];
+    const parts=[{key:'low',label:'1–5 species / project',color:'#f1c978'},{key:'mid',label:'6–100 species / project',color:'#65c9b0'},{key:'high',label:'>100 species / project',color:'#7baee3'},{key:'missing',label:'Unknown footprint',color:'#8e9fa7'}];
+    const size=r=>r.project_species==null?'missing':r.project_species<=5?'low':r.project_species<=100?'mid':'high';
+    $('explore-novelty').innerHTML=horizontal(noveltyBins.map(([key,label])=>{const g=rows.filter(r=>r.novelty===key),counts={};for(const r of g)counts[size(r)]=(counts[size(r)]||0)+1;return {label,count:g.length,parts:counts};}),{stack:true,seriesDefs:parts,left:295,label:'Genome contributions by BioProject output band'});
+    const originChecks=[['Programme evidence',r=>r.programme_labels.length>0],['Production centre',r=>r.production_labels.length>0],['Research origin',r=>r.research_submitter],['Grant identifier',r=>r.grants.some(g=>g.id)],['Linked publication',r=>r.publications.length>0],['Missing direct project',r=>!r.bioproject]];
+    $('explore-origin').innerHTML=horizontal(originChecks.map(([label,f])=>({label,count:low.filter(f).length})),{left:260,label:'Overlapping evidence for selected assemblies in BioProjects with five or fewer species'});
+    const max=+$('explore-max').value,q=$('explore-search').value.toLowerCase().trim(),map=new Map();
+    for(const r of rows.filter(r=>r.project_species!=null&&r.project_species<=max)){
+      const key=r.bioproject||'Unlinked';if(!map.has(key))map.set(key,{id:key,title:r.project_title||'',footprint:r.project_species,species:new Set(),assemblies:0,submitters:new Set(),example:r.species||''});
+      const g=map.get(key);g.species.add(r.species_id||r.tax_id);g.assemblies++;if(r.submitter)g.submitters.add(r.submitter);
+    }
+    exploreRows=[...map.values()].filter(g=>[g.id,g.title,g.example,...g.submitters].join(' ').toLowerCase().includes(q)).sort((a,b)=>a.footprint-b.footprint||b.assemblies-a.assemblies);
+    $('explore-summary').textContent=fmt(exploreRows.length)+' matching direct BioProjects · showing up to 80 rows (download includes all). This is not a count of independent laboratories.';
+    $('explore-records').innerHTML=exploreRows.slice(0,80).map(g=>'<tr><td><a href="https://www.ncbi.nlm.nih.gov/bioproject/'+esc(g.id)+'" target="_blank" rel="noopener">'+esc(g.id)+'</a><br>'+esc(g.title||g.example)+'</td><td>'+fmt(g.footprint)+' species</td><td>'+fmt(g.assemblies)+' assemblies · '+fmt(g.species.size)+' species in selected scope</td><td>'+esc([...g.submitters].slice(0,3).join('; ')||'Unknown')+'</td></tr>').join('');
+  }
+
   fetch('../../data/goat_project_stats.json.gz').then(async r=>{
     if(!r.ok)throw Error('Draft NCBI project snapshot is not available yet');
     return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).json();
@@ -351,6 +416,9 @@
     $('project-status').textContent=`Inventory snapshot ${new Date(d.generated_at).toLocaleString()}${d.provenance_resolution?' · origin evidence reclassified '+new Date(d.provenance_resolution.resolved_at).toLocaleDateString():''} · ${fmt(d.records.length)} qualifying assemblies · ${fmt(d.coverage.fetched_projects)} / ${fmt(d.coverage.wanted_projects)} linked BioProjects enriched. Scope: current GenBank eukaryote chromosome/complete assemblies; earlier all-level genomes are context only.`;
     $('project-methods-text').innerHTML=`<p>${esc(d.scope)}</p><p>Species identity resolved through NCBI Taxonomy for ${fmt(d.coverage.species_resolved)} / ${fmt(d.records.length)} assemblies. Direct BioProject metadata available for ${fmt(d.coverage.project_metadata)} assemblies. Historical context captured ${esc(d.history.updated_at||'not yet captured')}.</p><p>${esc(d.project_footprint)}</p><p>Historical source files: ${(d.history.sources||[]).map(s=>'<a href="'+esc(s.url)+'">'+esc(s.url.split('/').slice(-2).join('/'))+'</a> ('+fmt(s.records)+')').join(' · ')}</p>`;
     ['project-novelty','project-organisms','project-threshold','project-mode'].forEach(id=>$(id).addEventListener('change',render));
+    ['explore-max'].forEach(id=>$(id).addEventListener('change',()=>renderExploration(filtered)));
+    $('explore-search').addEventListener('input',()=>renderExploration(filtered));
+    $('explore-export').addEventListener('click',()=>{const fields=['id','title','footprint','assemblies','example'];const cell=v=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[fields.join(','),...exploreRows.map(g=>fields.map(k=>cell(g[k])).join(','))].join('\\n');const u=URL.createObjectURL(new Blob([csv],{type:'text/csv'})),a=document.createElement('a');a.href=u;a.download='small-efforts-bioprojects.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);});
     $('project-origin-filter').innerHTML+=originDefs.map(d=>`<option value="${d.key}">${esc(d.label)}</option>`).join('');
     ['project-origin-size','project-origin-filter'].forEach(id=>$(id).addEventListener('change',()=>renderOrigins(filtered)));
     $('project-origin-search').addEventListener('input',()=>renderOrigins(filtered));
