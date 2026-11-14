@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1b22">
+<title>Genome Observatory Live · Agriculture milestone preview</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css?v=20261015assemblysources2">
+<style>
+/* Shareable crop of the original Agriculture dashboard. Layout classes, header,
+   navigation, and visual tokens come from the main website stylesheet. */
+body{max-width:1600px;margin:auto}.site-head{padding-top:17px;padding-bottom:14px}
+.site-head h1{font-size:clamp(2.4rem,4vw,3.9rem)}
+.site-head .lede{margin-top:8px}.site-head .lede-detail{max-width:760px}
+.site-head::after{bottom:4px}.section-tabs{margin-top:10px;gap:20px}
+#agriculture-view{margin-top:14px}.status-intro{padding:14px 20px;gap:20px}
+.status-intro h2{font-size:1.6rem}.taxon-intro{font-size:.78rem;max-width:850px;line-height:1.35}
+#preview-stats{grid-template-columns:repeat(3,1fr);margin:14px 0 0}
+#preview-stats .stat-box{min-height:65px;padding:9px 15px 11px}
+#preview-stats .stat-value{font-size:1.35rem;margin-top:5px}
+#preview-hero .panel{min-height:0}
+#preview-hero .overview-hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);padding:22px;gap:22px;min-height:290px}
+#preview-hero .hero-number{font-size:clamp(5rem,8vw,8rem);margin:18px 0 12px}
+#preview-hero .overview-hero-arrival{padding-left:22px}
+#preview-hero .newest-card{grid-template-columns: minmax(0,.75fr) minmax(0,1fr);gap:15px;margin-top:14px;align-items:start}
+#preview-hero .newest-card .taxon-image{aspect-ratio:3/4;height:235px;width:100%;object-fit:cover}
+#preview-hero .newest-card h3{font-size:1.55rem}
+#preview-hero .newest-card p{margin:5px 0 0;font-size:.84rem;line-height:1.36}
+#preview-hero .panel-title{font-size:1.08rem}
+#preview-hero .hero-subline{max-width:420px;line-height:1.4}
+.milestone-note{font-size:.88rem;color:var(--accent);font-weight:650;margin-top:13px}
+#preview-hero a{color:var(--accent)}
+@media(max-width:900px){#preview-hero .overview-hero{grid-template-columns:1fr}#preview-hero .overview-hero-arrival{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:18px}#preview-stats{grid-template-columns:repeat(3,1fr)}.status-intro{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-head">
+    <div class="title-wrap">
+      <p class="kicker observatory-kicker"><span class="live-dot" aria-hidden="true"></span><span class="live-word">LIVE</span> · NCBI PUBLIC GENOME ACTIVITY</p>
+      <p class="byline">By <strong>Joe Hanly</strong> · <a href="https://github.com/Hanliconius" target="_blank" rel="me noopener">GitHub</a> · <a href="https://bsky.app/profile/hanliconius.bsky.social" target="_blank" rel="me noopener">Bluesky</a></p>
+      <h1><span class="brand-main">Genome Observatory</span> <span class="brand-live">Live</span></h1>
+      <p class="lede">Tracking the growth of chromosome-scale eukaryotic genome sequencing.</p>
+      <p class="lede-detail">Chromosome-level and complete eukaryotic genome assemblies released in GenBank, with separate NCBI RefSeq annotation activity.</p>
+    </div>
+    <div class="head-meta">
+      <div class="meta-pair"><span class="meta-label">Updated</span><span id="updated">14 Nov 2026 snapshot</span></div>
+      <div class="meta-pair"><span class="meta-label">View</span><span id="range-label">Agricultural organisms · all time</span></div>
+    </div>
+  </header>
+<main>
+<nav class="section-tabs" aria-label="Dashboard section">
+      <button class="section-tab" data-view="overview"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/><circle cx="12" cy="12" r="9"/></svg><span>Overview</span></button>
+      <button class="section-tab" data-view="genometrics"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 12 17 8M5.5 16.5h13"/><path d="M7 7.5 5.5 6M17 7.5 18.5 6"/></svg><span>Genometrics</span></button>
+      <button class="section-tab" data-view="status"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z"/><path d="M12 8v9M8.5 12.5 12 14l3.5-1.5"/></svg><span>Endangered</span></button>
+      <button class="section-tab" data-view="vectors"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5 5l5 5M14 14l5 5M5 19l5-5M14 10l5-5"/></svg><span>Pathogens &amp; vectors</span></button>
+      <button class="section-tab active" data-view="agriculture"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V7M12 13C5 13 3 8 4 4c6 0 8 4 8 9ZM12 17c7 0 9-5 8-9-6 0-8 4-8 9Z"/></svg><span>Agriculture</span></button>
+      <button class="section-tab" data-view="countries"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21M12 3C9.5 5.7 8.2 8.7 8.2 12S9.5 18.3 12 21"/></svg><span>By country</span></button>
+      <button class="section-tab" data-view="taxa"><svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v4M12 11 6 16M12 11l6 5"/></svg><span>Taxa explorer</span></button>
+    </nav>
+<section id="agriculture-view">
+<article class="status-intro">
+  <div><p class="panel-kicker">Food · farming · crop protection</p><h2>Agricultural genomes</h2><p class="taxon-intro">Chromosome-scale and complete GenBank genomes for cultivated crops, livestock and aquaculture, agricultural pests, and eukaryotic pathogens of plants and livestock. Explore a union of international and national agricultural records; this is not an exhaustive list.</p></div>
+  <nav class="status-tabs" aria-label="Agricultural role">
+   <button type="button" class="status-tab ag-tab active" aria-pressed="true">Organisms <span>Crops · livestock · beneficials</span></button>
+   <button type="button" class="status-tab ag-tab" aria-pressed="false">Pests <span>Animals · weeds</span></button>
+   <button type="button" class="status-tab ag-tab" aria-pressed="false">Pathogens <span>Plants · farmed animals</span></button>
+  </nav>
+</article>
+<section class="stat-strip" id="preview-stats">
+<div class="stat-box"><span class="stat-label">Assemblies</span><span class="stat-value">2,037</span></div>
+<div class="stat-box"><span class="stat-label">Species / taxa represented</span><span class="stat-value">155</span></div>
+<div class="stat-box"><span class="stat-label">Taxa in selected catalogue</span><span class="stat-value">224</span></div>
+</section>
+<section class="layout-grid" id="preview-hero">
+<article class="panel overview-hero full-width">
+<div class="overview-hero-count"><p class="panel-kicker">Agricultural organisms · all time</p><h2 class="panel-title">Genome deposits</h2><div class="hero-number">2,037</div><p class="hero-subline">155 taxa with genomes out of 224 in the selected catalogue</p><p class="milestone-note">Milestone: genome #2,000 · bread wheat</p></div>
+<div class="overview-hero-arrival">
+<p class="panel-kicker">Milestone spotlight</p><h2 class="panel-title">Genome #2,000</h2>
+<div class="newest-card">
+<img class="taxon-image" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Tarweaar.jpg" alt="Ear of bread wheat, photo by Rasbak">
+<div><h3><a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_988324765.1/" target="_blank" rel="noopener"><em>Triticum aestivum</em></a></h3>
+<p>Bread wheat</p><p>Chromosome · GCA_988324765.1</p><p>Released 6 October 2026</p><p>AEGIS / Wellcome Sanger Institute</p><p>2,000th qualifying agricultural assembly by release date, then accession.</p><p class="credit">Image: Rasbak · CC BY-SA 3.0</p></div>
+</div></div>
+</article>
+</section>
+</section>
+</main>
+</body></html>
