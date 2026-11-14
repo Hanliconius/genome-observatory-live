@@ -4264,5 +4264,23 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Ampelopsis-brevipedunculata.JPG",
     "credit": "Olivier Vanp\u00e9 \u00b7 CC BY-SA 3.0",
     "matched_name": "Ampelopsis glandulosa"
+  },
+  "Paralichthys dentatus": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Summer_flounder_photo4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Summer_flounder_photo4.jpg",
+    "credit": "U.S. Government - NOAA \u00b7 Public domain",
+    "matched_name": "Paralichthys dentatus"
+  },
+  "Malus pumila": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Malus_domestica_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-108.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Malus_domestica_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-108.jpg",
+    "credit": "Franz Eugen K\u00f6hler, K\u00f6hler's Medizinal-Pflanzen \u00b7 Public domain",
+    "matched_name": "Malus pumila"
+  },
+  "Phrynocephalus helioscopus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Phrynocephalus_helioscopus_160877960.jpg/960px-Phrynocephalus_helioscopus_160877960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Phrynocephalus_helioscopus_160877960.jpg",
+    "credit": "Kudaibergen Amirekul \u00b7 CC BY-SA 4.0",
+    "matched_name": "Phrynocephalus helioscopus"
   }
 }
