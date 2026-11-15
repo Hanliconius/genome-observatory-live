@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-14T19:55:37.566645+00:00",
+  "generated_at": "2026-11-15T11:57:33.326398+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 9,
-      "species": 7,
-      "first_time_species": 6
+      "assemblies": 11,
+      "species": 8,
+      "first_time_species": 7
     },
     "year": {
-      "assemblies": 6352,
-      "species": 3846,
-      "first_time_species": 3272
+      "assemblies": 6342,
+      "species": 3836,
+      "first_time_species": 3263
     },
     "all": {
-      "assemblies": 19560,
-      "species": 10936,
-      "first_time_species": 10936
+      "assemblies": 19562,
+      "species": 10937,
+      "first_time_species": 10937
     }
   },
   "daily": [
@@ -55995,7 +55995,7 @@
     },
     {
       "date": "2026-11-10",
-      "assemblies": 1,
+      "assemblies": 2,
       "species": 1,
       "first_time_species": 1
     },
@@ -56013,12 +56013,18 @@
     },
     {
       "date": "2026-11-13",
-      "assemblies": 3,
-      "species": 2,
-      "first_time_species": 2
+      "assemblies": 4,
+      "species": 3,
+      "first_time_species": 3
     },
     {
       "date": "2026-11-14",
+      "assemblies": 0,
+      "species": 0,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-11-15",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56177,29 +56183,29 @@
     },
     {
       "year": "2026",
-      "assemblies": 5938,
-      "species": 3998,
-      "first_time_species": 3060
+      "assemblies": 5940,
+      "species": 3999,
+      "first_time_species": 3061
     }
   ],
   "groups_week": [
     {
-      "group": "Plants",
-      "count": 5
+      "group": "Animals",
+      "count": 6
     },
     {
-      "group": "Animals",
-      "count": 4
+      "group": "Plants",
+      "count": 5
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4090
+      "count": 4081
     },
     {
       "group": "Plants",
-      "count": 1649
+      "count": 1648
     },
     {
       "group": "Fungi",
@@ -56213,7 +56219,7 @@
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11168
+      "count": 11170
     },
     {
       "group": "Plants",
@@ -56252,33 +56258,65 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "38011821",
+      "assembly_uid": "38022521",
       "group": "Animals",
       "sequence_release_date": "2026-11-13",
       "assembly_publication_date": "2026-11-13",
       "biosample_enriched": true
     },
     "group": "Animals",
-    "accession": "GCA_062085937.1",
-    "organism_name": "Phrynocephalus helioscopus",
-    "common_name": "sunwatcher toadhead agama",
-    "tax_id": 171647,
+    "accession": "GCA_062085940.1",
+    "organism_name": "Varecia rubra",
+    "common_name": "Red ruffed lemur",
+    "tax_id": 554167,
     "release_date": "2026-11-13",
     "assembly_level": "Chromosome",
-    "assembly_name": "ASM62085937v1",
-    "total_sequence_length": 1746912727,
-    "chromosome_count": 23,
-    "genus": "Phrynocephalus",
-    "family": "Agamidae",
+    "assembly_name": "Vrub_1",
+    "total_sequence_length": 2217482979,
+    "chromosome_count": 24,
+    "genus": "Varecia",
+    "family": "Lemuridae",
     "phylum": "Chordata",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Phrynocephalus_helioscopus_160877960.jpg/960px-Phrynocephalus_helioscopus_160877960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Phrynocephalus_helioscopus_160877960.jpg",
-      "credit": "Kudaibergen Amirekul · CC BY-SA 4.0",
-      "matched_name": "Phrynocephalus helioscopus"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Varecia_rubra_%28habitus%29.jpg/960px-Varecia_rubra_%28habitus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Varecia_rubra_(habitus).jpg",
+      "credit": "Hans Hillewaert · CC BY-SA 3.0",
+      "matched_name": "Varecia rubra"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38022521",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-13",
+        "assembly_publication_date": "2026-11-13",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062085940.1",
+      "organism_name": "Varecia rubra",
+      "common_name": "Red ruffed lemur",
+      "tax_id": 554167,
+      "release_date": "2026-11-13",
+      "assembly_level": "Chromosome",
+      "assembly_name": "Vrub_1",
+      "total_sequence_length": 2217482979,
+      "chromosome_count": 24,
+      "genus": "Varecia",
+      "family": "Lemuridae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Varecia_rubra_%28habitus%29.jpg/960px-Varecia_rubra_%28habitus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Varecia_rubra_(habitus).jpg",
+        "credit": "Hans Hillewaert · CC BY-SA 3.0",
+        "matched_name": "Varecia rubra"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -56378,9 +56416,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37968731",
         "group": "Animals",
         "sequence_release_date": "2026-11-12",
@@ -56409,9 +56448,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37968721",
         "group": "Animals",
         "sequence_release_date": "2026-11-12",
@@ -56467,6 +56507,38 @@
         "page_url": "https://commons.wikimedia.org/wiki/File:Ampelopsis-brevipedunculata.JPG",
         "credit": "Olivier Vanpé · CC BY-SA 3.0",
         "matched_name": "Ampelopsis glandulosa"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38023021",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-10",
+        "assembly_publication_date": "2026-11-13",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062085943.1",
+      "organism_name": "Zebrias zebrinus",
+      "common_name": "zebra sole",
+      "tax_id": 1302775,
+      "release_date": "2026-11-10",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62085943v1",
+      "total_sequence_length": 610075811,
+      "chromosome_count": 23,
+      "genus": "Zebrias",
+      "family": "Soleidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/ShimaUS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:ShimaUS.jpg",
+        "credit": "Izuzuki · CC BY-SA 3.0",
+        "matched_name": "Zebrias"
       }
     },
     {
@@ -70673,8 +70745,7 @@
       "chromosome_count": 25,
       "genus": "Coreius",
       "family": "Gobionidae",
-      "phylum": "Chordata",
-      "image": null
+      "phylum": "Chordata"
     },
     {
       "source_provenance": {
@@ -70764,8 +70835,7 @@
       "chromosome_count": 6,
       "genus": "Diutina",
       "family": "Debaryomycetaceae",
-      "phylum": "Ascomycota",
-      "image": null
+      "phylum": "Ascomycota"
     },
     {
       "source_provenance": {
@@ -71857,15 +71927,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633751",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041609.1",
@@ -71889,15 +71955,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633721",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041608.1",
@@ -71921,15 +71983,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633661",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041607.1",
@@ -71953,15 +72011,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633581",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041595.1",
@@ -71985,15 +72039,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633471",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041591.1",
@@ -72017,15 +72067,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633531",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041590.1",
@@ -72049,15 +72095,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633351",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041587.1",
@@ -72081,15 +72123,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633341",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041579.1",
@@ -72113,15 +72151,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633321",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041578.1",
@@ -72145,15 +72179,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633271",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041574.1",
@@ -72177,15 +72207,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633171",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041557.1",
@@ -72209,15 +72235,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633141",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041556.1",
@@ -72241,15 +72263,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36633121",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041551.1",
@@ -72273,15 +72291,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36632731",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-14",
-        "assembly_publication_date": "2026-10-15"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062041539.1",
@@ -177888,9 +177902,10 @@
     {
       "source_provenance": {
         "sources": [
-          "assembly_index"
+          "assembly_index",
+          "datasets"
         ],
-        "metadata_pending": true,
+        "metadata_pending": false,
         "assembly_uid": "37950481",
         "group": "Animals",
         "sequence_release_date": "2026-01-27",
@@ -192840,29 +192855,16 @@
       "assembly_name": "fAthHes1.1",
       "total_sequence_length": 1033441561,
       "chromosome_count": 24
-    },
-    {
-      "source_provenance": {
-        "group": "Animals",
-        "sources": [
-          "datasets"
-        ],
-        "metadata_pending": false
-      },
-      "group": "Animals",
-      "accession": "GCA_977020105.1",
-      "organism_name": "Choreutis diana",
-      "common_name": null,
-      "tax_id": 688368,
-      "release_date": "2025-11-09",
-      "assembly_level": "Chromosome",
-      "assembly_name": "ilChoDian1.hap1.1",
-      "total_sequence_length": 311088169,
-      "chromosome_count": 32
     }
   ],
   "annotations": {
     "in_progress": [
+      {
+        "species": "Taxus baccata",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-12",
+        "assembly": "B236-h1"
+      },
       {
         "species": "Aposthonia ceylonica",
         "status": "Automated processing in progress",
@@ -192870,16 +192872,16 @@
         "assembly": "ASM5963040v1"
       },
       {
+        "species": "Nymphaea micrantha",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-12",
+        "assembly": "ASM5979155v1"
+      },
+      {
         "species": "Mastigoproctus giganteus",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-11-10",
         "assembly": "ASM4854438v1 (GCF_048544385.1)"
-      },
-      {
-        "species": "Taxus baccata",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-12",
-        "assembly": "B236-h1"
       },
       {
         "species": "Punica granatum",
@@ -192898,12 +192900,6 @@
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-11-10",
         "assembly": "IOZ_Tvanoo_1.0 (GCF_054136105.1)"
-      },
-      {
-        "species": "Nymphaea micrantha",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-12",
-        "assembly": "ASM5979155v1"
       },
       {
         "species": "Oncorhynchus mykiss",
@@ -198456,6 +198452,7 @@
     "Paralichthys dentatus": "2026-11-12",
     "Malus pumila": "2026-11-13",
     "Phrynocephalus helioscopus": "2026-11-13",
+    "Varecia rubra": "2026-11-13",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -208619,6 +208616,12 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Phrynocephalus_helioscopus_160877960.jpg",
       "credit": "Kudaibergen Amirekul · CC BY-SA 4.0",
       "matched_name": "Phrynocephalus helioscopus"
+    },
+    "Varecia rubra": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Varecia_rubra_%28habitus%29.jpg/960px-Varecia_rubra_%28habitus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Varecia_rubra_(habitus).jpg",
+      "credit": "Hans Hillewaert · CC BY-SA 3.0",
+      "matched_name": "Varecia rubra"
     }
   },
   "taxonomy_cache": {
@@ -217314,11 +217317,20 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
+    "554167": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Red ruffed lemur",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Varecia",
+      "family": "Lemuridae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
     "3256806": {},
     "3291107": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1330,
+    "overlapping_or_superseded_rows_removed": 1302,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
@@ -217341,35 +217353,22 @@
         "datasets_date": "2026-09-23"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/15\"[GRLS]:\"2026/11/14\"[GRLS] OR \"2026/10/15\"[SRDT]:\"2026/11/14\"[SRDT] OR \"2026/10/15\"[UPDT]:\"2026/11/14\"[UPDT])",
-    "matched_uids": 1336,
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/16\"[GRLS]:\"2026/11/15\"[GRLS] OR \"2026/10/16\"[SRDT]:\"2026/11/15\"[SRDT] OR \"2026/10/16\"[UPDT]:\"2026/11/15\"[UPDT])",
+    "matched_uids": 1307,
     "held_uids_rechecked": 6,
-    "generated_at": "2026-11-14T19:55:19.313549+00:00",
-    "datasets_rows": 19554,
-    "assembly_index_rows": 1336,
-    "merged_assemblies": 19560,
-    "unique_accession_stems": 19560,
+    "generated_at": "2026-11-15T11:57:09.769004+00:00",
+    "datasets_rows": 19557,
+    "assembly_index_rows": 1307,
+    "merged_assemblies": 19562,
+    "unique_accession_stems": 19562,
     "pending_metadata_accessions": [
-      "GCA_062084528.1",
-      "GCA_062084529.1",
       "GCA_062085933.1",
       "GCA_062085934.1",
       "GCA_062085937.1",
-      "GCA_965234305.1"
+      "GCA_062085940.1",
+      "GCA_062085943.1"
     ],
     "pending_records": [
-      {
-        "accession": "GCA_062084528.1",
-        "species": "Paralichthys dentatus",
-        "release_date": "2026-11-12",
-        "level": "Chromosome"
-      },
-      {
-        "accession": "GCA_062084529.1",
-        "species": "Paralichthys dentatus",
-        "release_date": "2026-11-12",
-        "level": "Chromosome"
-      },
       {
         "accession": "GCA_062085933.1",
         "species": "Malus pumila",
@@ -217389,9 +217388,15 @@
         "level": "Chromosome"
       },
       {
-        "accession": "GCA_965234305.1",
-        "species": "Chamelea gallina",
-        "release_date": "2026-01-27",
+        "accession": "GCA_062085940.1",
+        "species": "Varecia rubra",
+        "release_date": "2026-11-13",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062085943.1",
+        "species": "Zebrias zebrinus",
+        "release_date": "2026-11-10",
         "level": "Chromosome"
       }
     ],
