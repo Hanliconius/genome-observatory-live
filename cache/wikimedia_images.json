@@ -4187,6 +4187,12 @@
     "credit": "Dumi \u00b7 CC BY-SA 3.0",
     "matched_name": "Anarta pugnax"
   },
+  "Chelonaplysilla americana": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Chelonaplysilla_violacea.jpg/960px-Chelonaplysilla_violacea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Chelonaplysilla_violacea.jpg",
+    "credit": "Philippe Bourjon \u00b7 CC BY-SA 3.0",
+    "matched_name": "Chelonaplysilla"
+  },
   "Banisteriopsis caapi": {
     "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "page_url": "https://commons.wikimedia.org/wiki/File:Ejemplar_de_Banisteriopsis_caapi_en_el_jard%C3%ADn_bot%C3%A1nico_del_Centro_Takiwasi.jpg",
@@ -4294,5 +4300,89 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Diegrossschmette02seit_0099.jpg",
     "credit": "Unknown. (Editor: Adalbert Seitz) \u00b7 Public domain",
     "matched_name": "Dicranura ulmi"
+  },
+  "Caradrina morpheus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Caradrina_morpheus_FvL.jpg/960px-Caradrina_morpheus_FvL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Caradrina_morpheus_FvL.jpg",
+    "credit": "Fvlamoen \u00b7 CC BY-SA 4.0",
+    "matched_name": "Caradrina morpheus"
+  },
+  "Periphanes delphinii": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Periphanes_delphinii.jpg/960px-Periphanes_delphinii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Periphanes_delphinii.jpg",
+    "credit": "Dumi \u00b7 CC BY-SA 3.0",
+    "matched_name": "Periphanes delphinii"
+  },
+  "Acontia titania": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Acontia_lucida.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Acontia_lucida.JPG",
+    "credit": "Lafontaine JD, Poole RW \u00b7 CC BY 3.0",
+    "matched_name": "Acontia"
+  },
+  "Caulerpa cupressoides": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Caulerpa_cupressoides_in_Harvey_1858.JPG/960px-Caulerpa_cupressoides_in_Harvey_1858.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Caulerpa_cupressoides_in_Harvey_1858.JPG",
+    "credit": "William Henry Harvey (1811\u20131866) \u00b7 Public domain",
+    "matched_name": "Caulerpa cupressoides"
+  },
+  "Macrophya duodecimpunctata": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Blattwespe_Macrophya_d._duodecimpunctata_OhWeh-001.jpg/960px-Blattwespe_Macrophya_d._duodecimpunctata_OhWeh-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Blattwespe_Macrophya_d._duodecimpunctata_OhWeh-001.jpg",
+    "credit": "OhWeh \u00b7 CC BY-SA 2.5",
+    "matched_name": "Macrophya duodecimpunctata"
+  },
+  "Hedya atropunctana": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Hedya_atropunctana%2C_North_Wales%2C_June_2014_2_%2819682602545%29.jpg/960px-Hedya_atropunctana%2C_North_Wales%2C_June_2014_2_%2819682602545%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Hedya_atropunctana,_North_Wales,_June_2014_2_(19682602545).jpg",
+    "credit": "Janet Graham \u00b7 CC BY 2.0",
+    "matched_name": "Hedya atropunctana"
+  },
+  "Agrotis cinerea": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Agrotis_cinerea.jpg/960px-Agrotis_cinerea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Agrotis_cinerea.jpg",
+    "credit": "Dumi \u00b7 CC BY-SA 3.0",
+    "matched_name": "Agrotis cinerea"
+  },
+  "Scopula decorata": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Scopula_decorata01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Scopula_decorata01.jpg",
+    "credit": "Attribution",
+    "matched_name": "Scopula decorata"
+  },
+  "Anacampsis timidella": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Anacampsis_timidella_%2828210191513%29.jpg/960px-Anacampsis_timidella_%2828210191513%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Anacampsis_timidella_(28210191513).jpg",
+    "credit": "Ben Sale from UK \u00b7 CC BY 2.0",
+    "matched_name": "Anacampsis timidella"
+  },
+  "Polyommatus orphicus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Common_blue_butterfly_%28Polyommatus_icarus%29_male_3.JPG/960px-Common_blue_butterfly_%28Polyommatus_icarus%29_male_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Common_blue_butterfly_(Polyommatus_icarus)_male_3.JPG",
+    "credit": "Charles J. Sharp \u00b7 CC BY-SA 4.0",
+    "matched_name": "Polyommatus"
+  },
+  "Jodia croceago": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Orange_Upperwing_Moths_of_the_British_Isles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Orange_Upperwing_Moths_of_the_British_Isles.jpg",
+    "credit": "Richard South \u00b7 Public domain",
+    "matched_name": "Jodia croceago"
+  },
+  "Conistra erythrocephala": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Conistra.erythrocephala.7550.jpg/960px-Conistra.erythrocephala.7550.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Conistra.erythrocephala.7550.jpg",
+    "credit": "picture taken by Olaf Leillinger \u00b7 CC BY-SA 2.5",
+    "matched_name": "Conistra erythrocephala"
+  },
+  "Pyropteron triannuliforme": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Pyropteron_triannuliforme.JPG/960px-Pyropteron_triannuliforme.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Pyropteron_triannuliforme.JPG",
+    "credit": "Pe\u0142nik \u00b7 CC BY-SA 3.0",
+    "matched_name": "Pyropteron triannuliforme"
+  },
+  "Acronicta euphorbiae": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Acronicta_euphorbiae.male.jpg/960px-Acronicta_euphorbiae.male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Acronicta_euphorbiae.male.jpg",
+    "credit": "Dumi \u00b7 CC BY-SA 3.0",
+    "matched_name": "Acronicta euphorbiae"
   }
 }
