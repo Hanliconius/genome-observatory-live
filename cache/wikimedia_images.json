@@ -4384,5 +4384,41 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Acronicta_euphorbiae.male.jpg",
     "credit": "Dumi \u00b7 CC BY-SA 3.0",
     "matched_name": "Acronicta euphorbiae"
+  },
+  "Chiropotes utahickae": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Chiropotes_utahickae.jpg/960px-Chiropotes_utahickae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Chiropotes_utahickae.jpg",
+    "credit": "Espiritossanto \u00b7 CC BY 2.0",
+    "matched_name": "Chiropotes utahickae"
+  },
+  "Leporinus friderici": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Leporinus_cf_friderici_%28juvenile%29.jpg/960px-Leporinus_cf_friderici_%28juvenile%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_cf_friderici_(juvenile).jpg",
+    "credit": "Clinton &amp; Charles Robertson \u00b7 CC BY 2.0",
+    "matched_name": "Leporinus friderici"
+  },
+  "Megaleporinus macrocephalus": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Leporinus_obtusidens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_obtusidens.jpg",
+    "credit": "CC BY-SA 2.5",
+    "matched_name": "Megaleporinus"
+  },
+  "Lyophyllum decastes": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg/960px-Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Lyophyllum_decastes_(Haute-Loire,_France)_03.jpg",
+    "credit": "Adrien BENOIT \u00e0 la GUILLAUME \u00b7 CC BY-SA 4.0",
+    "matched_name": "Lyophyllum decastes"
+  },
+  "Balaustium sp. GZU-HX-2025-01": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg/960px-CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg",
+    "credit": "division, CSIRO \u00b7 CC BY 3.0",
+    "matched_name": "Balaustium"
+  },
+  "Stachys geobombycis": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Stachys_monnieri0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Stachys_monnieri0.jpg",
+    "credit": "Kurt St\u00fcber [1] \u00b7 CC BY-SA 3.0",
+    "matched_name": "Stachys"
   }
 }

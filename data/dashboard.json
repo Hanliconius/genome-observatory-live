@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-17T13:23:58.332545+00:00",
+  "generated_at": "2026-11-18T13:02:26.424005+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 23,
-      "species": 20,
-      "first_time_species": 19
+      "assemblies": 29,
+      "species": 25,
+      "first_time_species": 23
     },
     "year": {
-      "assemblies": 6355,
-      "species": 3848,
-      "first_time_species": 3275
+      "assemblies": 6326,
+      "species": 3832,
+      "first_time_species": 3260
     },
     "all": {
-      "assemblies": 19577,
-      "species": 10951,
-      "first_time_species": 10951
+      "assemblies": 19584,
+      "species": 10955,
+      "first_time_species": 10955
     }
   },
   "daily": [
@@ -56031,12 +56031,18 @@
     },
     {
       "date": "2026-11-16",
+      "assemblies": 7,
+      "species": 6,
+      "first_time_species": 4
+    },
+    {
+      "date": "2026-11-17",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56195,51 +56201,55 @@
     },
     {
       "year": "2026",
-      "assemblies": 5955,
-      "species": 4013,
-      "first_time_species": 3075
+      "assemblies": 5962,
+      "species": 4019,
+      "first_time_species": 3079
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 19
+      "count": 24
     },
     {
       "group": "Plants",
       "count": 4
+    },
+    {
+      "group": "Fungi",
+      "count": 1
     }
   ],
   "groups_year": [
     {
       "group": "Animals",
-      "count": 4095
+      "count": 4080
     },
     {
       "group": "Plants",
-      "count": 1647
+      "count": 1645
     },
     {
       "group": "Fungi",
-      "count": 473
+      "count": 462
     },
     {
       "group": "Other",
-      "count": 140
+      "count": 139
     }
   ],
   "groups_all": [
     {
       "group": "Animals",
-      "count": 11184
+      "count": 11189
     },
     {
       "group": "Plants",
-      "count": 5441
+      "count": 5442
     },
     {
       "group": "Fungi",
-      "count": 2494
+      "count": 2495
     },
     {
       "group": "Other",
@@ -56270,32 +56280,254 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "38093761",
-      "group": "Animals",
-      "sequence_release_date": "2026-11-15",
-      "assembly_publication_date": "2026-11-15"
+      "assembly_uid": "38119031",
+      "group": "Plants",
+      "sequence_release_date": "2026-11-16",
+      "assembly_publication_date": "2026-11-16",
+      "biosample_enriched": true
     },
-    "group": "Animals",
-    "accession": "GCA_990136114.1",
-    "organism_name": "Acronicta euphorbiae",
-    "common_name": "moths & butterflies",
-    "tax_id": 987861,
-    "release_date": "2026-11-15",
+    "group": "Plants",
+    "accession": "GCA_062087892.1",
+    "organism_name": "Stachys geobombycis",
+    "common_name": "eudicots",
+    "tax_id": 587680,
+    "release_date": "2026-11-16",
     "assembly_level": "Chromosome",
-    "assembly_name": "ilAcrEuph1.1",
-    "total_sequence_length": 497919007,
-    "chromosome_count": 31,
-    "genus": "Acronicta",
-    "family": "Noctuidae",
-    "phylum": "Arthropoda",
+    "assembly_name": "ASM62087892v1",
+    "total_sequence_length": 881847224,
+    "chromosome_count": 17,
+    "genus": "Stachys",
+    "family": "Lamiaceae",
+    "phylum": "Streptophyta",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Acronicta_euphorbiae.male.jpg/960px-Acronicta_euphorbiae.male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Acronicta_euphorbiae.male.jpg",
-      "credit": "Dumi · CC BY-SA 3.0",
-      "matched_name": "Acronicta euphorbiae"
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Stachys_monnieri0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Stachys_monnieri0.jpg",
+      "credit": "Kurt Stüber [1] · CC BY-SA 3.0",
+      "matched_name": "Stachys"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38119031",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062087892.1",
+      "organism_name": "Stachys geobombycis",
+      "common_name": "eudicots",
+      "tax_id": 587680,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62087892v1",
+      "total_sequence_length": 881847224,
+      "chromosome_count": 17,
+      "genus": "Stachys",
+      "family": "Lamiaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Stachys_monnieri0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Stachys_monnieri0.jpg",
+        "credit": "Kurt Stüber [1] · CC BY-SA 3.0",
+        "matched_name": "Stachys"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38118481",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16"
+      },
+      "group": "Animals",
+      "accession": "GCA_062087863.1",
+      "organism_name": "Balaustium sp. GZU-HX-2025-01",
+      "common_name": "mites & ticks",
+      "tax_id": 3750259,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62087863v1",
+      "total_sequence_length": 149094107,
+      "chromosome_count": 9,
+      "genus": "Balaustium",
+      "family": "Erythraeidae",
+      "phylum": "Arthropoda",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg/960px-CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg",
+        "credit": "division, CSIRO · CC BY 3.0",
+        "matched_name": "Balaustium"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38118491",
+        "group": "Fungi",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16",
+        "biosample_enriched": true
+      },
+      "group": "Fungi",
+      "accession": "GCA_062087862.1",
+      "organism_name": "Lyophyllum decastes",
+      "common_name": "basidiomycete fungi",
+      "tax_id": 64660,
+      "release_date": "2026-11-16",
+      "assembly_level": "Complete Genome",
+      "assembly_name": "S9_dik2",
+      "total_sequence_length": 42517098,
+      "chromosome_count": 13,
+      "genus": "Lyophyllum",
+      "family": "Lyophyllaceae",
+      "phylum": "Basidiomycota",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg/960px-Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Lyophyllum_decastes_(Haute-Loire,_France)_03.jpg",
+        "credit": "Adrien BENOIT à la GUILLAUME · CC BY-SA 4.0",
+        "matched_name": "Lyophyllum decastes"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38118411",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062087850.1",
+      "organism_name": "Megaleporinus macrocephalus",
+      "common_name": "ray-finned fishes",
+      "tax_id": 327003,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "M.macrocephalus_mat",
+      "total_sequence_length": 1452265649,
+      "chromosome_count": 27,
+      "genus": "Megaleporinus",
+      "family": "Anostomidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Leporinus_obtusidens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_obtusidens.jpg",
+        "credit": "CC BY-SA 2.5",
+        "matched_name": "Megaleporinus"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38118311",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16",
+        "biosample_enriched": true
+      },
+      "group": "Animals",
+      "accession": "GCA_062087848.1",
+      "organism_name": "Leporinus friderici",
+      "common_name": "threespot leporinus",
+      "tax_id": 137515,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "L.friderici_pat",
+      "total_sequence_length": 1370546003,
+      "chromosome_count": 27,
+      "genus": "Leporinus",
+      "family": "Anostomidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Leporinus_cf_friderici_%28juvenile%29.jpg/960px-Leporinus_cf_friderici_%28juvenile%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_cf_friderici_(juvenile).jpg",
+        "credit": "Clinton &amp; Charles Robertson · CC BY 2.0",
+        "matched_name": "Leporinus friderici"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38114851",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16"
+      },
+      "group": "Animals",
+      "accession": "GCA_062087655.1",
+      "organism_name": "Chiropotes utahickae",
+      "common_name": "Uta Hick's bearded saki",
+      "tax_id": 280160,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mChiUta1 haplotype 1",
+      "total_sequence_length": 3042557744,
+      "chromosome_count": 28,
+      "genus": "Chiropotes",
+      "family": "Pitheciidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Chiropotes_utahickae.jpg/960px-Chiropotes_utahickae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chiropotes_utahickae.jpg",
+        "credit": "Espiritossanto · CC BY 2.0",
+        "matched_name": "Chiropotes utahickae"
+      }
+    },
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38114821",
+        "group": "Animals",
+        "sequence_release_date": "2026-11-16",
+        "assembly_publication_date": "2026-11-16"
+      },
+      "group": "Animals",
+      "accession": "GCA_062087654.1",
+      "organism_name": "Chiropotes utahickae",
+      "common_name": "Uta Hick's bearded saki",
+      "tax_id": 280160,
+      "release_date": "2026-11-16",
+      "assembly_level": "Chromosome",
+      "assembly_name": "mChiUta1 haplotype 2",
+      "total_sequence_length": 2770867128,
+      "chromosome_count": 26,
+      "genus": "Chiropotes",
+      "family": "Pitheciidae",
+      "phylum": "Chordata",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Chiropotes_utahickae.jpg/960px-Chiropotes_utahickae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Chiropotes_utahickae.jpg",
+        "credit": "Espiritossanto · CC BY 2.0",
+        "matched_name": "Chiropotes utahickae"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -67386,15 +67618,15 @@
       "assembly_name": "ehHolPrin1.1",
       "total_sequence_length": 1226478320,
       "chromosome_count": 23,
+      "genus": "Holothuria",
+      "family": "Holothuriidae",
+      "phylum": "Echinodermata",
       "image": {
         "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Holothuria_princeps.jpg/960px-Holothuria_princeps.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "page_url": "https://commons.wikimedia.org/wiki/File:Holothuria_princeps.jpg",
         "credit": "Fluffberger · CC BY-SA 4.0",
         "matched_name": "Holothuria princeps"
-      },
-      "genus": "Holothuria",
-      "family": "Holothuriidae",
-      "phylum": "Echinodermata"
+      }
     },
     {
       "source_provenance": {
@@ -70893,15 +71125,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36687871",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-17",
-        "assembly_publication_date": "2026-10-18"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062045534.1",
@@ -70925,15 +71153,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36687621",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-17",
-        "assembly_publication_date": "2026-10-18"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062045533.1",
@@ -109159,7 +109383,7 @@
         "metadata_pending": false,
         "assembly_uid": "34942741",
         "group": "Plants",
-        "sequence_release_date": "2026-08-03",
+        "sequence_release_date": "2026-08-04",
         "assembly_publication_date": "2026-08-04"
       },
       "group": "Plants",
@@ -192987,10 +193211,10 @@
   "annotations": {
     "in_progress": [
       {
-        "species": "Nymphaea micrantha",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-12",
-        "assembly": "ASM5979155v1 (GCF_059791555.1)"
+        "species": "Phoca vitulina",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-17",
+        "assembly": "mPhoVit2.hap1.1"
       },
       {
         "species": "Myotis daubentonii",
@@ -192999,10 +193223,34 @@
         "assembly": "mMyoDau2.hap1.2"
       },
       {
+        "species": "Nomascus leucogenys",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-17",
+        "assembly": "ASM4011311v1"
+      },
+      {
+        "species": "Taxus baccata",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-11-12",
+        "assembly": "B236-h1 (GCF_982231675.1)"
+      },
+      {
+        "species": "Nymphaea micrantha",
+        "status": "In sequence databases On the FTP",
+        "freeze_date": "2026-11-12",
+        "assembly": "ASM5979155v1 (GCF_059791555.1)"
+      },
+      {
         "species": "Aposthonia ceylonica",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-11-13",
         "assembly": "ASM5963040v1 (GCF_059630405.1)"
+      },
+      {
+        "species": "Clupea harengus",
+        "status": "Automated processing in progress",
+        "freeze_date": "2026-11-17",
+        "assembly": "Ch_v3.1"
       },
       {
         "species": "Homo sapiens",
@@ -193021,45 +193269,24 @@
         "status": "Automated processing in progress",
         "freeze_date": "2026-11-12",
         "assembly": "mMicOch_UCD_v1_hap1"
-      },
-      {
-        "species": "Typopeltis vanoorti",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-10",
-        "assembly": "IOZ_Tvanoo_1.0 (GCF_054136105.1)"
-      },
-      {
-        "species": "Taxus baccata",
-        "status": "Automated processing in progress",
-        "freeze_date": "2026-11-12",
-        "assembly": "B236-h1"
-      },
-      {
-        "species": "Mastigoproctus giganteus",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-10",
-        "assembly": "ASM4854438v1 (GCF_048544385.1)"
-      },
-      {
-        "species": "Punica granatum",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-05",
-        "assembly": "ASM5999427v1 (GCF_059994275.1)"
-      },
-      {
-        "species": "Oncorhynchus mykiss",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-10-26",
-        "assembly": "ASM5762802v1 (GCF_057628025.1)"
-      },
-      {
-        "species": "Theobroma umbraticum",
-        "status": "In sequence databases In Gene On the FTP",
-        "freeze_date": "2026-10-29",
-        "assembly": "ASM216827v3 (GCF_002168275.2)"
       }
     ],
     "recent_completed": [
+      {
+        "species": "Typopeltis vanoorti",
+        "release_date": "2026-11-12",
+        "assembly": "IOZ_Tvanoo_1.0 (GCF_054136105.1)"
+      },
+      {
+        "species": "Punica granatum",
+        "release_date": "2026-11-12",
+        "assembly": "ASM5999427v1 (GCF_059994275.1)"
+      },
+      {
+        "species": "Mastigoproctus giganteus",
+        "release_date": "2026-11-12",
+        "assembly": "ASM4854438v1 (GCF_048544385.1)"
+      },
       {
         "species": "Physcomitrium patens",
         "release_date": "2026-11-10",
@@ -193084,6 +193311,11 @@
         "species": "Benincasa hispida",
         "release_date": "2026-11-10",
         "assembly": "pf3_genome.v1.1 (GCF_027475165.1)"
+      },
+      {
+        "species": "Oncorhynchus mykiss",
+        "release_date": "2026-11-10",
+        "assembly": "ASM5762802v1 (GCF_057628025.1)"
       },
       {
         "species": "Furipterus horrens",
@@ -193144,6 +193376,11 @@
         "species": "Cupressus sempervirens",
         "release_date": "2026-10-30",
         "assembly": "ASM2874904v1 (GCF_028749045.1)"
+      },
+      {
+        "species": "Theobroma umbraticum",
+        "release_date": "2026-10-30",
+        "assembly": "ASM216827v3 (GCF_002168275.2)"
       },
       {
         "species": "Durio zibethinus",
@@ -193239,21 +193476,6 @@
         "species": "Drosophila navojoa",
         "release_date": "2026-10-09",
         "assembly": "UAZ_NAV_1.0 (GCF_054131105.1)"
-      },
-      {
-        "species": "Pholcus phalangioides",
-        "release_date": "2026-10-07",
-        "assembly": "Ppha-v1.0 (GCF_987345545.1)"
-      },
-      {
-        "species": "Diuraphis noxia",
-        "release_date": "2026-10-06",
-        "assembly": "SU_Dnox_SAM2 (GCF_037042655.1)"
-      },
-      {
-        "species": "Pimephales promelas",
-        "release_date": "2026-10-06",
-        "assembly": "fPimPro1.hap1.1 (GCF_988280905.1)"
       }
     ]
   },
@@ -198581,6 +198803,10 @@
     "Malus pumila": "2026-11-13",
     "Phrynocephalus helioscopus": "2026-11-13",
     "Varecia rubra": "2026-11-13",
+    "Chiropotes utahickae": "2026-11-16",
+    "Leporinus friderici": "2026-11-16",
+    "Balaustium sp. GZU-HX-2025-01": "2026-11-16",
+    "Stachys geobombycis": "2026-11-16",
     "Plasmodium chabaudi chabaudi": "2016-11-23",
     "Plasmodium berghei ANKA": "2019-06-14",
     "Plasmodium yoelii": "2014-08-27",
@@ -208859,6 +209085,42 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Acronicta_euphorbiae.male.jpg",
       "credit": "Dumi · CC BY-SA 3.0",
       "matched_name": "Acronicta euphorbiae"
+    },
+    "Chiropotes utahickae": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Chiropotes_utahickae.jpg/960px-Chiropotes_utahickae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chiropotes_utahickae.jpg",
+      "credit": "Espiritossanto · CC BY 2.0",
+      "matched_name": "Chiropotes utahickae"
+    },
+    "Leporinus friderici": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Leporinus_cf_friderici_%28juvenile%29.jpg/960px-Leporinus_cf_friderici_%28juvenile%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_cf_friderici_(juvenile).jpg",
+      "credit": "Clinton &amp; Charles Robertson · CC BY 2.0",
+      "matched_name": "Leporinus friderici"
+    },
+    "Megaleporinus macrocephalus": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Leporinus_obtusidens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Leporinus_obtusidens.jpg",
+      "credit": "CC BY-SA 2.5",
+      "matched_name": "Megaleporinus"
+    },
+    "Lyophyllum decastes": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg/960px-Lyophyllum_decastes_%28Haute-Loire%2C_France%29_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Lyophyllum_decastes_(Haute-Loire,_France)_03.jpg",
+      "credit": "Adrien BENOIT à la GUILLAUME · CC BY-SA 4.0",
+      "matched_name": "Lyophyllum decastes"
+    },
+    "Balaustium sp. GZU-HX-2025-01": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg/960px-CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_18_The_Balaustium_mite_Balaustium_medicagoense.jpg",
+      "credit": "division, CSIRO · CC BY 3.0",
+      "matched_name": "Balaustium"
+    },
+    "Stachys geobombycis": {
+      "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Stachys_monnieri0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Stachys_monnieri0.jpg",
+      "credit": "Kurt Stüber [1] · CC BY-SA 3.0",
+      "matched_name": "Stachys"
     }
   },
   "taxonomy_cache": {
@@ -217715,10 +217977,64 @@
       "family": "Noctuidae",
       "phylum": "Arthropoda",
       "kingdom": "Metazoa"
+    },
+    "280160": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "Uta Hick's bearded saki",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Chiropotes",
+      "family": "Pitheciidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "137515": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "threespot leporinus",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Leporinus",
+      "family": "Anostomidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "327003": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "ray-finned fishes",
+      "fallback_common_name_source": "group_name",
+      "genus": "Megaleporinus",
+      "family": "Anostomidae",
+      "phylum": "Chordata",
+      "kingdom": "Metazoa"
+    },
+    "64660": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "basidiomycete fungi",
+      "fallback_common_name_source": "group_name",
+      "genus": "Lyophyllum",
+      "family": "Lyophyllaceae",
+      "phylum": "Basidiomycota",
+      "kingdom": "Fungi"
+    },
+    "3750259": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "mites & ticks",
+      "fallback_common_name_source": "group_name",
+      "genus": "Balaustium",
+      "family": "Erythraeidae",
+      "phylum": "Arthropoda",
+      "kingdom": "Metazoa"
+    },
+    "587680": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "eudicots",
+      "fallback_common_name_source": "group_name",
+      "genus": "Stachys",
+      "family": "Lamiaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
     }
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1248,
+    "overlapping_or_superseded_rows_removed": 1246,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
@@ -217739,17 +218055,29 @@
         "accession": "GCA_061612785.1",
         "index_date": "2026-09-24",
         "datasets_date": "2026-09-23"
+      },
+      {
+        "accession": "GCA_059791555.1",
+        "index_date": "2026-08-04",
+        "datasets_date": "2026-08-03"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/18\"[GRLS]:\"2026/11/17\"[GRLS] OR \"2026/10/18\"[SRDT]:\"2026/11/17\"[SRDT] OR \"2026/10/18\"[UPDT]:\"2026/11/17\"[UPDT])",
-    "matched_uids": 1263,
-    "held_uids_rechecked": 1,
-    "generated_at": "2026-11-17T13:23:22.796764+00:00",
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/19\"[GRLS]:\"2026/11/18\"[GRLS] OR \"2026/10/19\"[SRDT]:\"2026/11/18\"[SRDT] OR \"2026/10/19\"[UPDT]:\"2026/11/18\"[UPDT])",
+    "matched_uids": 1268,
+    "held_uids_rechecked": 16,
+    "generated_at": "2026-11-18T13:02:04.966033+00:00",
     "datasets_rows": 19562,
-    "assembly_index_rows": 1263,
-    "merged_assemblies": 19577,
-    "unique_accession_stems": 19577,
+    "assembly_index_rows": 1268,
+    "merged_assemblies": 19584,
+    "unique_accession_stems": 19584,
     "pending_metadata_accessions": [
+      "GCA_062087654.1",
+      "GCA_062087655.1",
+      "GCA_062087848.1",
+      "GCA_062087850.1",
+      "GCA_062087862.1",
+      "GCA_062087863.1",
+      "GCA_062087892.1",
       "GCA_988221835.2",
       "GCA_990135671.1",
       "GCA_990135676.1",
@@ -217768,6 +218096,48 @@
       "GCA_990136114.1"
     ],
     "pending_records": [
+      {
+        "accession": "GCA_062087654.1",
+        "species": "Chiropotes utahickae",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062087655.1",
+        "species": "Chiropotes utahickae",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062087848.1",
+        "species": "Leporinus friderici",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062087850.1",
+        "species": "Megaleporinus macrocephalus",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062087862.1",
+        "species": "Lyophyllum decastes",
+        "release_date": "2026-11-16",
+        "level": "Complete Genome"
+      },
+      {
+        "accession": "GCA_062087863.1",
+        "species": "Balaustium sp. GZU-HX-2025-01",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
+      {
+        "accession": "GCA_062087892.1",
+        "species": "Stachys geobombycis",
+        "release_date": "2026-11-16",
+        "level": "Chromosome"
+      },
       {
         "accession": "GCA_988221835.2",
         "species": "Caradrina morpheus",
@@ -217865,6 +218235,6 @@
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19563
+    "previous_dashboard_assemblies": 19577
   }
 }
