@@ -1,5 +1,5 @@
 {
-  "overlapping_or_superseded_rows_removed": 1254,
+  "overlapping_or_superseded_rows_removed": 1193,
   "date_conflicts": [
     {
       "accession": "GCA_061535395.1",
@@ -22,15 +22,17 @@
       "datasets_date": "2026-08-03"
     }
   ],
-  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/21\"[GRLS]:\"2026/11/20\"[GRLS] OR \"2026/10/21\"[SRDT]:\"2026/11/20\"[SRDT] OR \"2026/10/21\"[UPDT]:\"2026/11/20\"[UPDT])",
-  "matched_uids": 1279,
+  "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/22\"[GRLS]:\"2026/11/21\"[GRLS] OR \"2026/10/22\"[SRDT]:\"2026/11/21\"[SRDT] OR \"2026/10/22\"[UPDT]:\"2026/11/21\"[UPDT])",
+  "matched_uids": 1264,
   "held_uids_rechecked": 29,
-  "generated_at": "2026-11-20T12:53:11.958834+00:00",
+  "generated_at": "2026-11-21T12:38:06.018061+00:00",
   "datasets_rows": 19584,
-  "assembly_index_rows": 1279,
-  "merged_assemblies": 19609,
-  "unique_accession_stems": 19609,
+  "assembly_index_rows": 1264,
+  "merged_assemblies": 19655,
+  "unique_accession_stems": 19655,
   "pending_metadata_accessions": [
+    "GCA_054859325.2",
+    "GCA_054859385.2",
     "GCA_059995475.2",
     "GCA_062089263.1",
     "GCA_062089264.1",
@@ -39,6 +41,50 @@
     "GCA_062089362.1",
     "GCA_062089364.1",
     "GCA_062090755.1",
+    "GCA_062090757.1",
+    "GCA_062090759.1",
+    "GCA_062090765.1",
+    "GCA_062090769.1",
+    "GCA_062090770.1",
+    "GCA_062090771.1",
+    "GCA_062090802.1",
+    "GCA_062090803.1",
+    "GCA_062090804.1",
+    "GCA_062090805.1",
+    "GCA_062090806.1",
+    "GCA_062090808.1",
+    "GCA_062090812.1",
+    "GCA_062090813.1",
+    "GCA_062090814.1",
+    "GCA_062090815.1",
+    "GCA_062090816.1",
+    "GCA_062090817.1",
+    "GCA_062090818.1",
+    "GCA_062090819.1",
+    "GCA_062090820.1",
+    "GCA_062090821.1",
+    "GCA_062090822.1",
+    "GCA_062090823.1",
+    "GCA_062090824.1",
+    "GCA_062090825.1",
+    "GCA_062090826.1",
+    "GCA_062090827.1",
+    "GCA_062090885.1",
+    "GCA_062090886.1",
+    "GCA_062090887.1",
+    "GCA_062090888.1",
+    "GCA_062090889.1",
+    "GCA_062090890.1",
+    "GCA_062090891.1",
+    "GCA_062090892.1",
+    "GCA_062090893.1",
+    "GCA_062090907.1",
+    "GCA_062091627.1",
+    "GCA_062091653.1",
+    "GCA_062091672.1",
+    "GCA_062091701.1",
+    "GCA_062093095.1",
+    "GCA_062093096.1",
     "GCA_978846395.1",
     "GCA_978850055.1",
     "GCA_982319175.2",
@@ -62,6 +108,18 @@
     "GCA_990200048.1"
   ],
   "pending_records": [
+    {
+      "accession": "GCA_054859325.2",
+      "species": "Dictyostelium citrinum",
+      "release_date": "2026-01-30",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_054859385.2",
+      "species": "Dictyostelium discoideum",
+      "release_date": "2026-01-30",
+      "level": "Chromosome"
+    },
     {
       "accession": "GCA_059995475.2",
       "species": "Kalidium schrenkianum",
@@ -109,6 +167,270 @@
       "species": "Hydrocotyle sibthorpioides",
       "release_date": "2026-11-18",
       "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090757.1",
+      "species": "Maclura tricuspidata",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090759.1",
+      "species": "Loepa katinka",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090765.1",
+      "species": "Allium roylei",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090769.1",
+      "species": "Anser cygnoides",
+      "release_date": "2026-11-18",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062090770.1",
+      "species": "Cistugo seabrae",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090771.1",
+      "species": "Macrobrachium rosenbergii",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090802.1",
+      "species": "Linum usitatissimum",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090803.1",
+      "species": "Linum usitatissimum",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090804.1",
+      "species": "Linum usitatissimum",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090805.1",
+      "species": "Liolophura sinensis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090806.1",
+      "species": "Acanthochitona rubrolineata",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090808.1",
+      "species": "Pycnodontochiton sinensis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090812.1",
+      "species": "Strongyloides stercoralis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090813.1",
+      "species": "Nasonia vitripennis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090814.1",
+      "species": "Euproctis pseudoconspersa",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090815.1",
+      "species": "Phyllonycteris poeyi",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090816.1",
+      "species": "Phyllonycteris poeyi",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090817.1",
+      "species": "Apis cerana",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090818.1",
+      "species": "Salix alba",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090819.1",
+      "species": "Salix alba",
+      "release_date": "2026-11-18",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062090820.1",
+      "species": "Salix alba",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090821.1",
+      "species": "Salix alba",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090822.1",
+      "species": "Sialia sialis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090823.1",
+      "species": "Sialia sialis",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090824.1",
+      "species": "Tupaia belangeri",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090825.1",
+      "species": "Tupaia belangeri",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090826.1",
+      "species": "Astyanax lacustris",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090827.1",
+      "species": "Etheostoma caeruleum",
+      "release_date": "2026-11-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090885.1",
+      "species": "Rhodotorula glutinis",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090886.1",
+      "species": "Rhodotorula sphaerocarpa",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090887.1",
+      "species": "Rhodosporidiobolus azoricus",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090888.1",
+      "species": "Rhodosporidiobolus lusitaniae",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062090889.1",
+      "species": "Rhodosporidiobolus microsporus",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062090890.1",
+      "species": "Rhodosporidiobolus odoratus",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090891.1",
+      "species": "Rhodosporidiobolus ruineniae",
+      "release_date": "2026-10-15",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062090892.1",
+      "species": "Sporobolomyces johnsonii",
+      "release_date": "2026-10-15",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090893.1",
+      "species": "Marcus-kochia littorea",
+      "release_date": "2026-10-18",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062090907.1",
+      "species": "Raphanus sativus",
+      "release_date": "2026-10-08",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062091627.1",
+      "species": "Scomber australasicus",
+      "release_date": "2026-07-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062091653.1",
+      "species": "Scomber japonicus",
+      "release_date": "2026-07-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062091672.1",
+      "species": "Scomber japonicus",
+      "release_date": "2026-07-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062091701.1",
+      "species": "Scomber australasicus",
+      "release_date": "2026-07-03",
+      "level": "Chromosome"
+    },
+    {
+      "accession": "GCA_062093095.1",
+      "species": "Vespa velutina",
+      "release_date": "2026-11-19",
+      "level": "Complete Genome"
+    },
+    {
+      "accession": "GCA_062093096.1",
+      "species": "Xenos yangi",
+      "release_date": "2026-11-19",
+      "level": "Complete Genome"
     },
     {
       "accession": "GCA_978846395.1",
