@@ -4,6 +4,9 @@ name: Full genome history audit (manual)
 # Read-only: generates a report/artifact, never commits or deploys data.
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/full-history-audit.yml'
 
 permissions:
   contents: read
@@ -54,6 +57,56 @@ jobs:
               writer.writeheader()
               writer.writerows({"rank": i, **r} for i, r in enumerate(species, 1))
           print(json.dumps(result, indent=2))
+          PY
+      - name: Identify published 11000th species using dashboard first-seen records
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          from collections import defaultdict
+          from pathlib import Path
+
+          dashboard = json.loads(Path("data/dashboard.json").read_text(encoding="utf-8"))
+          first_seen = dashboard.get("species_first_seen") or {}
+          published_count = int(dashboard["summary"]["all"]["species"])
+          if len(first_seen) != published_count:
+              raise RuntimeError(f"First-seen records ({len(first_seen)}) differ from published species total ({published_count})")
+          if published_count < 11000:
+              raise RuntimeError("Published count has not reached 11000")
+          date_rank = sorted(first_seen.values())
+          target_day = date_rank[10999]
+          before = sum(day < target_day for day in first_seen.values())
+          tied_names = {name for name, day in first_seen.items() if day == target_day}
+          by_name = defaultdict(list)
+          for r in dashboard.get("recent_assemblies", []):
+              if r.get("organism_name") in tied_names and str(r.get("release_date", ""))[:10] == target_day and r.get("accession"):
+                  by_name[r["organism_name"]].append({"organism_name":r["organism_name"],"release_date":target_day,"accession":r["accession"],"tax_id":str(r.get("tax_id") or "")})
+          with Path("audit-results/ncbi_full_inventory.csv").open(newline="", encoding="utf-8") as fh:
+              for r in csv.DictReader(fh):
+                  if r.get("organism_name") in tied_names and r.get("release_date") == target_day and r.get("accession"):
+                      by_name[r["organism_name"]].append(r)
+          unresolved = sorted(tied_names - by_name.keys())
+          if unresolved:
+              raise RuntimeError(f"Cannot verify first-assembly accessions on milestone date: {unresolved}")
+          first_rows = [min(by_name[name], key=lambda r:r["accession"]) for name in tied_names]
+          first_rows.sort(key=lambda r:r["accession"])
+          within_day_rank = 11000 - before
+          result = {
+              "source":"Published data/dashboard.json species_first_seen, with dashboard recent assemblies and NCBI accession verification",
+              "generated_at":dashboard.get("generated_at"),
+              "published_species":published_count,
+              "milestone_rank":11000,
+              "milestone_day":target_day,
+              "species_before_day":before,
+              "species_first_seen_on_day":len(first_rows),
+              "within_day_rank":within_day_rank,
+              "milestone":first_rows[within_day_rank - 1],
+              "milestone_day_order": [{"overall_rank":before+i, **r} for i,r in enumerate(first_rows,1)]
+          }
+          Path("audit-results/published_species_milestone_11000.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8")
+          print("PUBLISHED_SPECIES_MILESTONE_BEGIN")
+          print(json.dumps(result,indent=2))
+          print("PUBLISHED_SPECIES_MILESTONE_END")
           PY
       - name: Add audit report to job summary
         if: always()
