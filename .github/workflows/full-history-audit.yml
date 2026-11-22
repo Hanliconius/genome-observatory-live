@@ -28,6 +28,33 @@ jobs:
           datasets version
       - name: Full NCBI versus dashboard reconciliation
         run: python scripts/audit_full_history.py --output-dir audit-results
+      - name: Identify 11000th distinct species from full inventory
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          from pathlib import Path
+          rows = list(csv.DictReader(Path("audit-results/ncbi_full_inventory.csv").open(newline="", encoding="utf-8")))
+          rows = [r for r in rows if all(r.get(k) for k in ("release_date", "accession", "organism_name"))]
+          rows.sort(key=lambda r: (r["release_date"], r["accession"]))
+          first = {}
+          for row in rows:
+              first.setdefault(row["organism_name"], row)
+          species = sorted(first.values(), key=lambda r: (r["release_date"], r["accession"]))
+          result = {
+              "method": "First qualifying GenBank eukaryote chromosome/complete assembly per organism_name, ordered by release_date and accession",
+              "species_count": len(species),
+              "milestone_rank": 11000,
+              "milestone": species[10999] if len(species) >= 11000 else None,
+              "neighbors": [{"rank": i + 1, **species[i]} for i in range(max(0, 10996), min(len(species), 11003))]
+          }
+          Path("audit-results/species_milestone_11000.json").write_text(json.dumps(result, indent=2) + "\n")
+          with Path("audit-results/species_first_assembly_order.csv").open("w", newline="") as fh:
+              writer = csv.DictWriter(fh, fieldnames=["rank", "organism_name", "accession", "release_date", "tax_id"])
+              writer.writeheader()
+              writer.writerows({"rank": i, **r} for i, r in enumerate(species, 1))
+          print(json.dumps(result, indent=2))
+          PY
       - name: Add audit report to job summary
         if: always()
         run: |
