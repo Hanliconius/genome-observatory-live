@@ -4858,5 +4858,11 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Juniperus_scopulorum_tree.jpg",
     "credit": "USDA-NRCS PLANTS Database / Herman, D.E. et al. 1996. North Dakota tree handbook. USDA NRCS ND State Soil Conservation Committee; NDSU Extension and Western Area Power Admin., Bismarck, ND. \u00b7 Public domain",
     "matched_name": "Juniperus scopulorum"
+  },
+  "Oryza sativa Indica Group": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gealypic5.JPG/960px-Gealypic5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
+    "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist \u00b7 Public domain",
+    "matched_name": "Oryza"
   }
 }

@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-22T12:35:05.586048+00:00",
+  "generated_at": "2026-11-23T14:36:38.186177+00:00",
   "metadata_schema_version": 2,
   "summary": {
     "week": {
-      "assemblies": 105,
-      "species": 86,
-      "first_time_species": 60
+      "assemblies": 90,
+      "species": 74,
+      "first_time_species": 50
     },
     "year": {
-      "assemblies": 6387,
+      "assemblies": 6388,
       "species": 3881,
       "first_time_species": 3298
     },
     "all": {
-      "assemblies": 19691,
+      "assemblies": 19692,
       "species": 11015,
       "first_time_species": 11015
     }
@@ -56061,12 +56061,18 @@
     },
     {
       "date": "2026-11-21",
+      "assemblies": 1,
+      "species": 1,
+      "first_time_species": 0
+    },
+    {
+      "date": "2026-11-22",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "assemblies": 0,
       "species": 0,
       "first_time_species": 0
@@ -56225,23 +56231,23 @@
     },
     {
       "year": "2026",
-      "assemblies": 6070,
-      "species": 4106,
+      "assemblies": 6071,
+      "species": 4107,
       "first_time_species": 3140
     }
   ],
   "groups_week": [
     {
       "group": "Animals",
-      "count": 75
+      "count": 64
     },
     {
       "group": "Plants",
-      "count": 26
+      "count": 23
     },
     {
       "group": "Fungi",
-      "count": 3
+      "count": 2
     },
     {
       "group": "Other",
@@ -56255,7 +56261,7 @@
     },
     {
       "group": "Plants",
-      "count": 1657
+      "count": 1658
     },
     {
       "group": "Fungi",
@@ -56273,7 +56279,7 @@
     },
     {
       "group": "Plants",
-      "count": 5468
+      "count": 5469
     },
     {
       "group": "Fungi",
@@ -56308,32 +56314,65 @@
         "assembly_index"
       ],
       "metadata_pending": true,
-      "assembly_uid": "38256121",
+      "assembly_uid": "38332701",
       "group": "Plants",
-      "sequence_release_date": "2026-11-20",
-      "assembly_publication_date": "2026-11-20"
+      "sequence_release_date": "2026-11-21",
+      "assembly_publication_date": "2026-11-21",
+      "biosample_enriched": true
     },
     "group": "Plants",
-    "accession": "GCA_990203674.1",
-    "organism_name": "Juniperus scopulorum",
-    "common_name": "seed plants",
-    "tax_id": 466205,
-    "release_date": "2026-11-20",
+    "accession": "GCA_062097531.1",
+    "organism_name": "Oryza sativa Indica Group",
+    "common_name": "long-grained rice",
+    "tax_id": 39946,
+    "release_date": "2026-11-21",
     "assembly_level": "Chromosome",
-    "assembly_name": "vpJunScop1.hap1.1",
-    "total_sequence_length": 11097282884,
-    "chromosome_count": 11,
-    "genus": "Juniperus",
-    "family": "Cupressaceae",
+    "assembly_name": "ASM62097531v1",
+    "total_sequence_length": 401749111,
+    "chromosome_count": 12,
+    "genus": "Oryza",
+    "family": "Poaceae",
     "phylum": "Streptophyta",
     "image": {
-      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Juniperus_scopulorum_tree.jpg/960px-Juniperus_scopulorum_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "page_url": "https://commons.wikimedia.org/wiki/File:Juniperus_scopulorum_tree.jpg",
-      "credit": "USDA-NRCS PLANTS Database / Herman, D.E. et al. 1996. North Dakota tree handbook. USDA NRCS ND State Soil Conservation Committee; NDSU Extension and Western Area Power Admin., Bismarck, ND. · Public domain",
-      "matched_name": "Juniperus scopulorum"
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gealypic5.JPG/960px-Gealypic5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
+      "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist · Public domain",
+      "matched_name": "Oryza"
     }
   },
   "recent_assemblies": [
+    {
+      "source_provenance": {
+        "sources": [
+          "assembly_index"
+        ],
+        "metadata_pending": true,
+        "assembly_uid": "38332701",
+        "group": "Plants",
+        "sequence_release_date": "2026-11-21",
+        "assembly_publication_date": "2026-11-21",
+        "biosample_enriched": true
+      },
+      "group": "Plants",
+      "accession": "GCA_062097531.1",
+      "organism_name": "Oryza sativa Indica Group",
+      "common_name": "long-grained rice",
+      "tax_id": 39946,
+      "release_date": "2026-11-21",
+      "assembly_level": "Chromosome",
+      "assembly_name": "ASM62097531v1",
+      "total_sequence_length": 401749111,
+      "chromosome_count": 12,
+      "genus": "Oryza",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "image": {
+        "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gealypic5.JPG/960px-Gealypic5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
+        "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist · Public domain",
+        "matched_name": "Oryza"
+      }
+    },
     {
       "source_provenance": {
         "sources": [
@@ -56812,7 +56851,8 @@
         "assembly_uid": "38251191",
         "group": "Animals",
         "sequence_release_date": "2026-11-20",
-        "assembly_publication_date": "2026-11-20"
+        "assembly_publication_date": "2026-11-20",
+        "biosample_enriched": true
       },
       "group": "Animals",
       "accession": "GCA_062094831.1",
@@ -69585,15 +69625,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36811221",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-23",
-        "assembly_publication_date": "2026-10-23"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988427175.1",
@@ -69617,15 +69653,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36825541",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-23",
-        "assembly_publication_date": "2026-10-23"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_062055664.1",
@@ -69649,15 +69681,11 @@
     },
     {
       "source_provenance": {
+        "group": "Plants",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36811121",
-        "group": "Plants",
-        "sequence_release_date": "2026-10-22",
-        "assembly_publication_date": "2026-10-23"
+        "metadata_pending": false
       },
       "group": "Plants",
       "accession": "GCA_988427195.1",
@@ -85008,15 +85036,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36014061",
-        "group": "Animals",
-        "sequence_release_date": "2026-09-22",
-        "assembly_publication_date": "2026-09-22"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_061535455.1",
@@ -193308,15 +193332,11 @@
     },
     {
       "source_provenance": {
+        "group": "Animals",
         "sources": [
-          "assembly_index",
           "datasets"
         ],
-        "metadata_pending": false,
-        "assembly_uid": "36779081",
-        "group": "Animals",
-        "sequence_release_date": "2025-11-21",
-        "assembly_publication_date": "2026-10-21"
+        "metadata_pending": false
       },
       "group": "Animals",
       "accession": "GCA_053574225.2",
@@ -194702,6 +194722,18 @@
   "annotations": {
     "in_progress": [
       {
+        "species": "Myotis daubentonii",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-11-16",
+        "assembly": "mMyoDau2.hap1.2 (GCF_963259705.2)"
+      },
+      {
+        "species": "Microtus ochrogaster",
+        "status": "In sequence databases In Gene On the FTP",
+        "freeze_date": "2026-11-12",
+        "assembly": "mMicOch_UCD_v1_hap1 (GCF_984569965.1)"
+      },
+      {
         "species": "Cyprinus carpio",
         "status": "Automated processing in progress",
         "freeze_date": "2026-11-20",
@@ -194738,22 +194770,10 @@
         "assembly": "mPhoVit2.hap1.1 (GCF_988265205.1)"
       },
       {
-        "species": "Microtus ochrogaster",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-12",
-        "assembly": "mMicOch_UCD_v1_hap1 (GCF_984569965.1)"
-      },
-      {
         "species": "Brasenia schreberi",
         "status": "In sequence databases On the FTP",
         "freeze_date": "2026-11-18",
         "assembly": "ASM5751222v1 (GCF_057512225.1)"
-      },
-      {
-        "species": "Myotis daubentonii",
-        "status": "In sequence databases On the FTP",
-        "freeze_date": "2026-11-16",
-        "assembly": "mMyoDau2.hap1.2 (GCF_963259705.2)"
       },
       {
         "species": "Nomascus leucogenys",
@@ -211130,6 +211150,12 @@
       "page_url": "https://commons.wikimedia.org/wiki/File:Juniperus_scopulorum_tree.jpg",
       "credit": "USDA-NRCS PLANTS Database / Herman, D.E. et al. 1996. North Dakota tree handbook. USDA NRCS ND State Soil Conservation Committee; NDSU Extension and Western Area Power Admin., Bismarck, ND. · Public domain",
       "matched_name": "Juniperus scopulorum"
+    },
+    "Oryza sativa Indica Group": {
+      "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gealypic5.JPG/960px-Gealypic5.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
+      "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist · Public domain",
+      "matched_name": "Oryza"
     }
   },
   "taxonomy_cache": {
@@ -220427,7 +220453,6 @@
       "phylum": "Chordata",
       "kingdom": "Metazoa"
     },
-    "3591738": {},
     "9825": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "domestic pig",
@@ -220581,7 +220606,6 @@
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
     },
-    "3570203": {},
     "1230847": {
       "_source": "datasets_taxonomy_v1",
       "fallback_common_name": "insects",
@@ -220680,18 +220704,24 @@
       "family": "Cupressaceae",
       "phylum": "Streptophyta",
       "kingdom": "Viridiplantae"
-    }
+    },
+    "3591738": {},
+    "39946": {
+      "_source": "datasets_taxonomy_v1",
+      "fallback_common_name": "long-grained rice",
+      "fallback_common_name_source": "curator_common_name",
+      "genus": "Oryza",
+      "family": "Poaceae",
+      "phylum": "Streptophyta",
+      "kingdom": "Viridiplantae"
+    },
+    "3570203": {}
   },
   "assembly_sources": {
-    "overlapping_or_superseded_rows_removed": 1091,
+    "overlapping_or_superseded_rows_removed": 1061,
     "date_conflicts": [
       {
         "accession": "GCA_061535395.1",
-        "index_date": "2026-09-22",
-        "datasets_date": "2026-09-21"
-      },
-      {
-        "accession": "GCA_061535455.1",
         "index_date": "2026-09-22",
         "datasets_date": "2026-09-21"
       },
@@ -220706,14 +220736,14 @@
         "datasets_date": "2026-08-03"
       }
     ],
-    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/23\"[GRLS]:\"2026/11/22\"[GRLS] OR \"2026/10/23\"[SRDT]:\"2026/11/22\"[SRDT] OR \"2026/10/23\"[UPDT]:\"2026/11/22\"[UPDT])",
-    "matched_uids": 1198,
-    "held_uids_rechecked": 75,
-    "generated_at": "2026-11-22T12:34:37.866131+00:00",
+    "query": "txid2759[Organism:exp] AND latest_genbank[filter] AND (\"chromosome level\"[filter] OR \"complete genome\"[filter]) AND (\"2026/10/24\"[GRLS]:\"2026/11/23\"[GRLS] OR \"2026/10/24\"[SRDT]:\"2026/11/23\"[SRDT] OR \"2026/10/24\"[UPDT]:\"2026/11/23\"[UPDT])",
+    "matched_uids": 1169,
+    "held_uids_rechecked": 115,
+    "generated_at": "2026-11-23T14:36:24.424888+00:00",
     "datasets_rows": 19584,
-    "assembly_index_rows": 1198,
-    "merged_assemblies": 19691,
-    "unique_accession_stems": 19691,
+    "assembly_index_rows": 1169,
+    "merged_assemblies": 19692,
+    "unique_accession_stems": 19692,
     "pending_metadata_accessions": [
       "GCA_020800215.3",
       "GCA_024500445.2",
@@ -220793,6 +220823,7 @@
       "GCA_062094861.1",
       "GCA_062094867.1",
       "GCA_062094868.1",
+      "GCA_062097531.1",
       "GCA_949315975.2",
       "GCA_978846395.1",
       "GCA_978850055.1",
@@ -221301,6 +221332,12 @@
         "level": "Chromosome"
       },
       {
+        "accession": "GCA_062097531.1",
+        "species": "Oryza sativa Indica Group",
+        "release_date": "2026-11-21",
+        "level": "Chromosome"
+      },
+      {
         "accession": "GCA_949315975.2",
         "species": "Eudonia truncicolella",
         "release_date": "2026-11-20",
@@ -221523,6 +221560,6 @@
         "level": "Chromosome"
       }
     ],
-    "previous_dashboard_assemblies": 19655
+    "previous_dashboard_assemblies": 19691
   }
 }
