@@ -4864,5 +4864,29 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Gealypic5.JPG",
     "credit": "Dr. David Gealy, USDA ARS, Research Plant Physiologist \u00b7 Public domain",
     "matched_name": "Oryza"
+  },
+  "Perisoreus canadensis canadensis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Corvus_corax_principalis_Perisoreus_canadensis_canadensis_Agassiz_Fuertes.jpg/960px-Corvus_corax_principalis_Perisoreus_canadensis_canadensis_Agassiz_Fuertes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Corvus_corax_principalis_Perisoreus_canadensis_canadensis_Agassiz_Fuertes.jpg",
+    "credit": "Louis Agassiz Fuertes \u00b7 Public domain",
+    "matched_name": "Perisoreus canadensis canadensis"
+  },
+  "Jinshaia sinensis": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jisin_u0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Jisin_u0.jpg",
+    "credit": "Frank M. Greco \u00b7 CC BY 3.0",
+    "matched_name": "Jinshaia sinensis"
+  },
+  "Platycarya strobilacea": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Platycarya_strobilacea1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Platycarya_strobilacea1.jpg",
+    "credit": "Kurt St\u00fcber [1] \u00b7 CC BY-SA 3.0",
+    "matched_name": "Platycarya strobilacea"
+  },
+  "Huso dauricus": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Huso_sturgeon.JPG/960px-Huso_sturgeon.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Huso_sturgeon.JPG",
+    "credit": "\u3042\u304a\u3082\u308a\u304f\u307e\uff08Aomorikuma\uff09 \u00b7 CC BY-SA 3.0",
+    "matched_name": "Huso dauricus"
   }
 }
