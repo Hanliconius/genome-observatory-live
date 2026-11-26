@@ -336,10 +336,10 @@
     "matched_name": "Frenulina sanguinolenta"
   },
   "Fusarium graminearum": {
-    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg/960px-Banana_%28Variety-_Koa_e_Kea%29-_Fusarium_wilt_%28Panama_disease%29_-_26445953438.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Banana_(Variety-_Koa_e_Kea)-_Fusarium_wilt_(Panama_disease)_-_26445953438.jpg",
-    "credit": "Plant pests and diseases \u00b7 CC0",
-    "matched_name": "Fusarium"
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/F.graminearum.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:F.graminearum.JPG",
+    "credit": "fk \u00b7 CC BY-SA 3.0",
+    "matched_name": "Fusarium graminearum"
   },
   "Fusarium oxysporum f. sp. elaeidis": {
     "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Fusarium_verticillioides_01.jpg/960px-Fusarium_verticillioides_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -4888,5 +4888,11 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Huso_sturgeon.JPG",
     "credit": "\u3042\u304a\u3082\u308a\u304f\u307e\uff08Aomorikuma\uff09 \u00b7 CC BY-SA 3.0",
     "matched_name": "Huso dauricus"
+  },
+  "Gymnodiptychus pachycheilus": {
+    "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Stamp_of_Kyrgyzstan_046.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Stamp_of_Kyrgyzstan_046.jpg",
+    "credit": "Post of Kyrgyzstan \u00b7 Public domain",
+    "matched_name": "Gymnodiptychus"
   }
 }
