@@ -5086,5 +5086,11 @@
     "page_url": "https://commons.wikimedia.org/wiki/File:Parapropus_sericeus.jpg",
     "credit": "Ren\u00e9 Jeannel \u00b7 Public domain",
     "matched_name": "Parapropus sericeus"
+  },
+  "Mactra chinensis": {
+    "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Mactra_chinensis.jpg/960px-Mactra_chinensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Mactra_chinensis.jpg",
+    "credit": "self \u00b7 CC BY-SA 3.0",
+    "matched_name": "Mactra chinensis"
   }
 }
